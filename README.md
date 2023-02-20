@@ -2,7 +2,7 @@
 
 <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/thumbs/teal.png">
 
-A gallery of sample apps based on the Teal framework.
+A gallery of sample apps based on the [Teal framework](https://github.com/insightsengineering/teal).
 
 ## Usage
 
