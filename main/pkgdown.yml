@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   sources: sources.html
   teal.gallery: teal.gallery.html
-last_built: 2023-02-20T02:59Z
+last_built: 2023-02-20T12:02Z
 urls:
   reference: https://insightsengineering.github.io/teal.gallery/main/reference
   article: https://insightsengineering.github.io/teal.gallery/main/articles
