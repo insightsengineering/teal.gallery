@@ -1,7 +1,7 @@
 Type: Package
 Package: teal.gallery
 Title: Sample shiny apps based on the teal framework
-Version: 0.1.0.9000
+Version: 0.1.0.9001
 Date: 2023-02-20
 Authors@R: c(
     person("Dony", "Unardi", , "unardid@gene.com", role = c("aut", "cre")),
