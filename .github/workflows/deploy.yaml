@@ -1,0 +1,73 @@
+---
+name: Deploy Apps 🚀
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "*"
+  workflow_dispatch:
+  schedule:
+    - cron: '12 3 * * *'
+
+concurrency:
+  group: publish-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  SHINYAPPSIO_ACCOUNT: genentech
+
+jobs:
+  deploy:
+    defaults:
+      run:
+        shell: bash
+    name: Publish 🗞
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/insightsengineering/rstudio_4.2.2_bioc_3.16:latest
+    if: >
+      !contains(github.event.commits[0].message, '[skip deploy]')
+    steps:
+      - name: Checkout repo 🛎
+        uses: actions/checkout@v3
+        with:
+          path: ${{ github.event.repository.name }}
+
+      - name: Overwrite the global Rprofile ✍️
+        run: |
+          cat > /usr/local/lib/R/etc/Rprofile.site <<RPROFILE
+           options(
+            repos = c(
+              Pharmaverse = "https://pharmaverse.r-universe.dev",
+              CRAN = "https://cloud.r-project.org",
+              BioC = BiocManager::repositories()
+            ),
+            download.file.method = 'libcurl',
+            HTTPUserAgent = sprintf(
+              "R/%s R (%s)",
+              getRversion(),
+              paste(getRversion(), R.version["platform"], R.version["arch"], R.version["os"])
+            )
+          )
+          RPROFILE
+
+      - name: Deploy apps 🖨 ${{ github.event.repository.name }} 🎨
+        run: |
+          Sys.setenv(GITHUB_PAT="${{ secrets.GITHUB_TOKEN }}")
+          devtools::install_local(
+            ".",
+            upgrade = "never",
+            dependencies = TRUE
+          )
+          teal.gallery::deploy_all_apps(
+            api_key = "${{ secrets.SHINYAPPSIO_TOKEN }}",
+            api_secret = "${{ secrets.SHINYAPPSIO_SECRET }}",
+            title_prefix = "NEST",
+            title_suffix = "${{ github.ref_name }}",
+            server = "https://${{ env.SHINYAPPSIO_ACCOUNT }}.shinyapps.io",
+            create_manifest = TRUE
+          )
+        working-directory: ${{ github.event.repository.name }}
+        shell: Rscript {0}

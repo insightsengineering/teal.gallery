@@ -1,0 +1,23 @@
+url: https://insightsengineering.github.io/teal.gallery
+
+template:
+  package: nesttemplate
+
+navbar:
+  right:
+    - icon: fa-github
+      href: https://github.com/insightsengineering/teal.gallery
+
+reference:
+  - title: Sample Shiny apps based on the Teal framework
+    desc: A package to run and extract the source code of a suite of `teal` sample apps
+    contents:
+      - get_app_code
+      - launch_app
+      - list_apps
+
+  - title: Deployment of Shiny apps
+    desc: Helper functions to deploy Shiny apps to Posit Connect or shinyapps.io
+    contents:
+      - deploy_app
+      - deploy_all_apps
