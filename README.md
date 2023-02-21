@@ -2,7 +2,21 @@
 
 <img align="right" width="100" height="100" src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/thumbs/teal.png">
 
-A gallery of sample apps based on the [Teal framework](https://github.com/insightsengineering/teal).
+A gallery of sample apps based on the [`teal` framework](https://github.com/insightsengineering/teal).
+
+## Links to apps on `shinyapps.io`
+
+### Development version
+
+- [RNA-seq](https://genentech.shinyapps.io/NEST_RNA-seq_main/)
+- [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_main/)
+- [efficacy](https://genentech.shinyapps.io/NEST_efficacy_main/)
+- [exploratory](https://genentech.shinyapps.io/NEST_exploratory_main/)
+- [longitudinal](https://genentech.shinyapps.io/NEST_longitudinal_main/)
+- [early-dev](https://genentech.shinyapps.io/NEST_early-dev_main/)
+- [patient-profile](https://genentech.shinyapps.io/NEST_patient-profile_main/)
+- [python](https://genentech.shinyapps.io/NEST_python_main/)
+- [safety](https://genentech.shinyapps.io/NEST_safety_main/)
 
 ## Usage
 
@@ -91,17 +105,3 @@ Adding a sample app involves the following steps:
 1. Update the first test in the package to list all the app names (i.e. populate the `expected_apps` vector with the new app name)
 1. Add into the package *Suggests* in the [`DESCRIPTION`](DESCRIPTION) file any dependencies that were explicitly used in `app.R` for the sample app. To do so, invoke `renv::dependencies("path_to_file")`) to see a list of dependencies.
 1. Update the upstream dependencies of the `staged_dependencies.yaml` file of this package and the downstream dependencies of the packages that were added in the previous step.
-
-### Links to teal apps on shinyapps.io
-
-#### Main (development)
-
-- [RNA-seq](https://genentech.shinyapps.io/NEST_RNA-seq_main/)
-- [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_main/)
-- [efficacy](https://genentech.shinyapps.io/NEST_efficacy_main/)
-- [exploratory](https://genentech.shinyapps.io/NEST_exploratory_main/)
-- [longitudinal](https://genentech.shinyapps.io/NEST_longitudinal_main/)
-- [early-dev](https://genentech.shinyapps.io/NEST_early-dev_main/)
-- [patient-profile](https://genentech.shinyapps.io/NEST_patient-profile_main/)
-- [python](https://genentech.shinyapps.io/NEST_python_main/)
-- [safety](https://genentech.shinyapps.io/NEST_safety_main/)
