@@ -1,8 +1,8 @@
 Type: Package
 Package: teal.gallery
 Title: Sample shiny apps based on the teal framework
-Version: 0.1.0.9001
-Date: 2023-02-20
+Version: 0.1.0.9002
+Date: 2023-02-21
 Authors@R: c(
     person("Dony", "Unardi", , "unardid@gene.com", role = c("aut", "cre")),
     person("Nikolas", "Burkoff", , "nikolas.burkoff@roche.com", role = "aut"),
@@ -32,12 +32,12 @@ Suggests:
     ggpmisc (>= 0.4.3),
     ggpp,
     goftest,
-    gridExtra,
     goshawk (>= 0.1.14),
+    gridExtra,
     hermes (>= 1.0.1),
     knitr,
-    MASS,
     magrittr,
+    MASS,
     mockery,
     nestcolor,
     reticulate,
