@@ -7,7 +7,7 @@ library(dplyr)
 library(tidyr)
 library(nestcolor)
 library(sparkline)
-library(ggpmisc)
+
 
 options(shiny.useragg = FALSE)
 
