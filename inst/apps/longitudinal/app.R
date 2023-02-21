@@ -1,6 +1,7 @@
 options(shiny.sanitize.errors = FALSE)
 
 # attach required packages
+library(DescTools)
 library(magrittr)
 library(dplyr)
 library(scda)
