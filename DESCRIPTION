@@ -53,7 +53,7 @@ Suggests:
     teal.modules.clinical (>= 0.8.14.9015),
     teal.modules.general (>= 0.2.15.9013),
     teal.modules.hermes (>= 0.1.4),
-    teal.osprey (>= 0.1.15.9016),
+    teal.osprey (>= 0.1.15.9008),
     teal.transform (>= 0.2.0.9008),
     teal.widgets (>= 0.2.0),
     testthat (>= 2.0),
