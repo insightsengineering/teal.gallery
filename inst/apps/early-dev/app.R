@@ -5,6 +5,7 @@ library(teal.modules.clinical)
 library(teal.modules.general)
 library(teal.osprey)
 library(nestcolor)
+# optional libraries
 library(sparkline)
 
 options(shiny.useragg = FALSE)

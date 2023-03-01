@@ -10,6 +10,7 @@ library(stringr)
 library(teal.goshawk)
 library(teal.modules.clinical)
 library(teal.modules.general)
+# optional libraries
 library(sparkline)
 
 options(shiny.useragg = FALSE)

@@ -4,6 +4,7 @@ library(scda.2022)
 library(teal.modules.general)
 library(teal.modules.clinical)
 library(nestcolor)
+# optional libraries
 library(sparkline)
 
 options(shiny.useragg = FALSE)
