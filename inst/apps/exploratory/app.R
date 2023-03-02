@@ -30,8 +30,8 @@ ADRS <- synthetic_cdisc_data("latest")$adrs
 ADLB <- synthetic_cdisc_data("latest")$adlb
 
 ADLBPCA <- ADLB %>%
-  select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
-  pivot_wider(
+  dplyr::select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
+  tidyr::pivot_wider(
     values_from = "AVAL",
     names_from = c("PARAMCD", "AVISIT"),
     names_sep = " - "
@@ -44,10 +44,12 @@ adlbpca <- cdisc_dataset(
   "ADLBPCA",
   ADLBPCA,
   code = 'ADLBPCA <- ADLB %>%
-    select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
-    pivot_wider(values_from = "AVAL",
-                names_from = c("PARAMCD", "AVISIT"),
-                names_sep = " - ")',
+    dplyr::select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
+    tidyr::pivot_wider(
+      values_from = "AVAL",
+      names_from = c("PARAMCD", "AVISIT"),
+      names_sep = " - "
+    )',
   keys = c("STUDYID", "USUBJID"),
   label = "ADLB reshaped",
   vars = list(ADLB = adlb)
