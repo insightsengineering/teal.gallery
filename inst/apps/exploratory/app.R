@@ -9,6 +9,7 @@ library(nestcolor)
 # optional libraries
 library(broom)
 library(colourpicker)
+library(ggExtra)
 library(ggpmisc)
 library(ggpp)
 library(goftest)
@@ -17,9 +18,9 @@ library(htmlwidgets)
 library(jsonlite)
 library(lattice)
 library(MASS)
-library(sparkline)
 library(rlang)
 library(rtables)
+library(sparkline)
 
 
 options(shiny.useragg = FALSE)
