@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="utils" timestamp="2023-03-02T14:39:50Z" hostname="9afe787b35e7" tests="11" skipped="0" failures="0" errors="0" time="0.992">
-    <testcase time="0.038" classname="utils" name="package_environment_is_setup_as_expected"/>
-    <testcase time="0.072" classname="utils" name="get_app_code_throws_error_if_app_name_is_not_string"/>
-    <testcase time="0.00700000000000001" classname="utils" name="get_app_code_throws_error_if_app_name_is_not_string"/>
-    <testcase time="0.017" classname="utils" name="get_app_code_throws_error_if_no_app_exists"/>
-    <testcase time="0.01" classname="utils" name="get_app_code_throws_error_if_app.R_file_does_not_exist_or_cannot_be_read_"/>
+  <testsuite name="utils" timestamp="2023-03-03T12:19:02Z" hostname="bbd79dd54be7" tests="11" skipped="0" failures="0" errors="0" time="0.967">
+    <testcase time="0.037" classname="utils" name="package_environment_is_setup_as_expected"/>
+    <testcase time="0.071" classname="utils" name="get_app_code_throws_error_if_app_name_is_not_string"/>
+    <testcase time="0.00600000000000001" classname="utils" name="get_app_code_throws_error_if_app_name_is_not_string"/>
+    <testcase time="0.016" classname="utils" name="get_app_code_throws_error_if_no_app_exists"/>
+    <testcase time="0.011" classname="utils" name="get_app_code_throws_error_if_app.R_file_does_not_exist_or_cannot_be_read_"/>
     <testcase time="0.00700000000000001" classname="utils" name="get_app_code_throws_error_if_app.R_file_does_not_exist_or_cannot_be_read_"/>
-    <testcase time="0.00800000000000001" classname="utils" name="launch_app_throws_error_if_app_name_is_not_a_string"/>
+    <testcase time="0.00700000000000001" classname="utils" name="launch_app_throws_error_if_app_name_is_not_a_string"/>
     <testcase time="0.00600000000000001" classname="utils" name="launch_app_throws_error_if_app_name_is_not_a_string"/>
-    <testcase time="0.496" classname="utils" name="launch_app_throws_error_if_app_directory_does_not_exist"/>
-    <testcase time="0.0069999999999999" classname="utils" name="launch_app_throws_error_if_app_dependencies_do_not_exist"/>
-    <testcase time="0.324" classname="utils" name="launch_app_launches_the_app_if_dependencies_exist"/>
+    <testcase time="0.489" classname="utils" name="launch_app_throws_error_if_app_directory_does_not_exist"/>
+    <testcase time="0.00700000000000012" classname="utils" name="launch_app_throws_error_if_app_dependencies_do_not_exist"/>
+    <testcase time="0.31" classname="utils" name="launch_app_launches_the_app_if_dependencies_exist"/>
   </testsuite>
 </testsuites>
