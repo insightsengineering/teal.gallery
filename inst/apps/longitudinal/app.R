@@ -1,6 +1,7 @@
 options(shiny.sanitize.errors = FALSE)
 
 # attach required packages
+library(DescTools)
 library(magrittr)
 library(dplyr)
 library(scda)
@@ -9,6 +10,7 @@ library(stringr)
 library(teal.goshawk)
 library(teal.modules.clinical)
 library(teal.modules.general)
+# optional libraries
 library(sparkline)
 
 options(shiny.useragg = FALSE)

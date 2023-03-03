@@ -2,8 +2,11 @@ library(reticulate)
 library(teal)
 library(teal.modules.general)
 library(nestcolor)
-library(sparkline)
+# optional libraries
+library(colourpicker)
+library(ggExtra)
 library(ggpmisc)
+library(sparkline)
 
 options(shiny.useragg = FALSE)
 

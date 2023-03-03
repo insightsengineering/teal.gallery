@@ -6,8 +6,22 @@ library(scda.2022)
 library(dplyr)
 library(tidyr)
 library(nestcolor)
-library(sparkline)
+# optional libraries
+library(broom)
+library(colourpicker)
+library(ggExtra)
 library(ggpmisc)
+library(ggpp)
+library(goftest)
+library(gridExtra)
+library(htmlwidgets)
+library(jsonlite)
+library(lattice)
+library(MASS)
+library(rlang)
+library(rtables)
+library(sparkline)
+
 
 options(shiny.useragg = FALSE)
 
@@ -17,8 +31,8 @@ ADRS <- synthetic_cdisc_data("latest")$adrs
 ADLB <- synthetic_cdisc_data("latest")$adlb
 
 ADLBPCA <- ADLB %>%
-  select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
-  pivot_wider(
+  dplyr::select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
+  tidyr::pivot_wider(
     values_from = "AVAL",
     names_from = c("PARAMCD", "AVISIT"),
     names_sep = " - "
@@ -31,10 +45,12 @@ adlbpca <- cdisc_dataset(
   "ADLBPCA",
   ADLBPCA,
   code = 'ADLBPCA <- ADLB %>%
-    select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
-    pivot_wider(values_from = "AVAL",
-                names_from = c("PARAMCD", "AVISIT"),
-                names_sep = " - ")',
+    dplyr::select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
+    tidyr::pivot_wider(
+      values_from = "AVAL",
+      names_from = c("PARAMCD", "AVISIT"),
+      names_sep = " - "
+    )',
   keys = c("STUDYID", "USUBJID"),
   label = "ADLB reshaped",
   vars = list(ADLB = adlb)

@@ -1,8 +1,8 @@
 Type: Package
 Package: teal.gallery
 Title: Sample shiny apps based on the teal framework
-Version: 0.1.0.9000
-Date: 2023-02-20
+Version: 0.1.0.9007
+Date: 2023-03-03
 Authors@R: c(
     person("Dony", "Unardi", , "unardid@gene.com", role = c("aut", "cre")),
     person("Nikolas", "Burkoff", , "nikolas.burkoff@roche.com", role = "aut"),
@@ -21,15 +21,23 @@ Imports:
     shiny,
     utils
 Suggests:
+    broom,
+    colourpicker,
     connectapi,
+    DescTools,
     docopt,
     dplyr,
     formatters (>= 0.3.4),
-    ggpmisc,
+    ggExtra,
+    ggpmisc (>= 0.4.3),
+    ggpp,
+    goftest,
     goshawk (>= 0.1.14),
+    gridExtra,
     hermes (>= 1.0.1),
     knitr,
     magrittr,
+    MASS,
     mockery,
     nestcolor,
     reticulate,
@@ -39,14 +47,15 @@ Suggests:
     scda.2022 (>= 0.1.3),
     sparkline,
     stringr,
-    teal (>= 0.12.0),
+    teal (>= 0.12.0.9023),
     teal.data (>= 0.1.2),
-    teal.goshawk (>= 0.1.14),
-    teal.modules.clinical (>= 0.8.14),
-    teal.modules.general (>= 0.2.15),
+    teal.goshawk (>= 0.1.14.9009),
+    teal.modules.clinical (>= 0.8.14.9021),
+    teal.modules.general (>= 0.2.15.9017),
     teal.modules.hermes (>= 0.1.4),
-    teal.osprey (>= 0.1.15),
-    teal.transform (>= 0.2.0),
+    teal.osprey (>= 0.1.15.9009),
+    teal.slice (>= 0.2.0.9024),
+    teal.transform (>= 0.2.0.9011),
     teal.widgets (>= 0.2.0),
     testthat (>= 2.0),
     tidyr
