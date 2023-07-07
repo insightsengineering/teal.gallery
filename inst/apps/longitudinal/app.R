@@ -6,7 +6,6 @@ library(magrittr)
 library(dplyr)
 library(scda)
 library(scda.2022)
-library(stringr)
 library(teal.goshawk)
 library(teal.modules.clinical)
 library(teal.modules.general)
@@ -174,7 +173,7 @@ ADLB_SUBSET <- ADLB %>%
     AVISITCD = case_when(
       toupper(AVISIT) == "SCREENING" ~ "SCR",
       toupper(AVISIT) == "BASELINE" ~ "BL",
-      grepl("WEEK", toupper(AVISIT)) ~ paste("W", trimws(substr(AVISIT, start = 6, stop = stringr::str_locate(AVISIT, "DAY") - 1))),
+      grepl("WEEK", toupper(AVISIT)) ~ paste("W", trimws(substr(AVISIT, start = 6, stop = regexpr("DAY", AVISIT) - 1))),
       grepl("FOLLOW", toupper(AVISIT)) ~ "FU",
       TRUE ~ as.character(NA)
     ),
