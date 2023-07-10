@@ -10,7 +10,7 @@ library(sparkline)
 
 options(shiny.useragg = FALSE)
 
-reticulate::use_python(Sys.getenv("RETICULATE_PYTHON", unset = "/usr/bin/python3"))
+reticulate::use_virtualenv("python3_env", required = TRUE)
 iris_raw <- cbind(id = 1:nrow(iris), iris)
 
 python_code <- "import pandas as pd

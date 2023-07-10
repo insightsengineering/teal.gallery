@@ -17,7 +17,12 @@ Depends:
     R (>= 3.6)
 Imports:
     renv,
-    shiny
+    checkmate,
+    shiny,
+    httr
+Suggests:
+    testthat (>= 2.0),
+    mockery
 VignetteBuilder:
     knitr
 Config/Needs/website: insightsengineering/nesttemplate
