@@ -10,7 +10,12 @@ library(sparkline)
 
 options(shiny.useragg = FALSE)
 
-reticulate::use_python(Sys.getenv("RETICULATE_PYTHON", unset = "/usr/bin/python3"))
+PYTHON_DEPENDENCIES <- c("pip", "numpy", "pandas")
+virtualenv_dir <- Sys.getenv("VIRTUALENV_NAME")
+python_path <- Sys.getenv("PYTHON_PATH")
+reticulate::virtualenv_create(envname = virtualenv_dir, python = python_path)
+reticulate::virtualenv_install(virtualenv_dir, packages = PYTHON_DEPENDENCIES, ignore_installed = TRUE)
+reticulate::use_virtualenv(virtualenv_dir, required = T)
 iris_raw <- cbind(id = 1:nrow(iris), iris)
 
 python_code <- "import pandas as pd
