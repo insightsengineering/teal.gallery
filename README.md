@@ -111,7 +111,7 @@ All `teal` sample apps are wrapped into this package for the sake of portability
 
 Adding a sample app involves the following steps:
 
-1. Copy each sample app into a file named `app.R` into a sensible folder name inside the [`inst/apps`](inst/apps) directory
-1. Update the first test in the package to list all the app names (i.e. populate the `expected_apps` vector with the new app name)
-1. Add into the package *Suggests* in the [`DESCRIPTION`](DESCRIPTION) file any dependencies that were explicitly used in `app.R` for the sample app. To do so, invoke `renv::dependencies("path_to_file")`) to see a list of dependencies.
-1. Update the upstream dependencies of the `staged_dependencies.yaml` file of this package and the downstream dependencies of the packages that were added in the previous step.
+1. Copy each sample app into a file named `app.R` into a sensible folder name inside the `inst/apps` directory
+2. Update the first test in the package to list all the app names (i.e. populate the `expected_apps` vector with the new app name)
+3. Make sure to add do a `renv::snapshot()` in the app directory so that it is also populated with `renv.lock` and `renv` directory with the components of `renv`.
+4. Create a GIF recording ([KAP](https://getkap.co/) is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. (It can be done by recording using KAP in 1470x840 px and rendering 5fps and downsizing 33%). Place the GIF with the same name as the app inside the `vignettes` directory.
