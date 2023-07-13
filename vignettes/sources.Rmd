@@ -41,7 +41,7 @@ if (nest_release == "") nest_release <- "main"
 x <- lapply(
   list_apps(),
   function(app) {
-    deployed_app_link <- paste(posit_connect_url, "NEST", nest_release, app, sep = "/")
+    deployed_app_link <- paste(posit_connect_url, paste("NEST", app, nest_release, sep = "_"), sep = "/")
     cat(paste("###", app, "\n"))
     cat(paste("Deployed app:", deployed_app_link, "\n"))
     cat("```r")

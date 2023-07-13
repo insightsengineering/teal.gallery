@@ -27,6 +27,7 @@ Suggests:
     DescTools,
     docopt,
     dplyr,
+    glue,
     formatters (>= 0.3.4),
     ggExtra,
     ggpmisc (>= 0.4.3),

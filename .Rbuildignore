@@ -18,3 +18,10 @@ TODO\.md
 ^doc$
 ^Meta$
 ^\.pre-commit-config\.yaml$
+^inst/apps/.+/renv/library/
+^inst/apps/.+/renvlocal/
+^inst/apps/.+/renvcellar/
+^inst/apps/.+/renvlock/
+^inst/apps/.+/renvpython/
+^inst/apps/.+/renvsandbox/
+^inst/apps/.+/renvstaging/
