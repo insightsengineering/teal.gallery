@@ -8,6 +8,8 @@ A gallery of sample apps based on the [`teal` framework](https://github.com/insi
 
 ### Development version
 
+Preview the [Teal Gallery apps](https://insightsengineering.github.io/teal.gallery/main/articles/demo.html)
+
 - [RNA-seq](https://genentech.shinyapps.io/NEST_RNA-seq_main/)
 - [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_main/)
 - [efficacy](https://genentech.shinyapps.io/NEST_efficacy_main/)
@@ -20,37 +22,17 @@ A gallery of sample apps based on the [`teal` framework](https://github.com/insi
 
 ## Usage
 
-### Installation
+### Installation (optional)
 
-After you've cloned this repository locally, simply run the following commands in an R session with your current working directory set to the base of the cloned repository.
-
-Feel free to check out any branch after you've cloned this repository. Dependencies will be automatically installed in the steps provided below.
+For releases from August 2022 it is recommended that you [create and use a Github PAT](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) to install the latest version of this package. Once you have the PAT, run the following:
 
 ```R
-# Set your Github and Gitlab PATs
-# You might have already set these. If not, do so here.
-Sys.setenv("GITHUB_PAT" = "<token>")
-Sys.setenv("GITLAB_PAT" = "<token>")
-
-# Install staged.dependencies
-remotes::install_github(
-  "openpharma/staged.dependencies",
-  upgrade = "never"
-)
-
-# Set token mappings
-options(
-  staged.dependencies.token_mapping = c(
-    "https://github.com" = "GITHUB_PAT",
-    "https://gitlab.com" = "GITLAB_PAT"
-  )
-)
-
-# Install deps and this project
-staged.dependencies::install_deps(
-  staged.dependencies::dependency_table()
-)
+Sys.setenv(GITHUB_PAT = "your_access_token_here")
+if (!require("remotes")) install.packages("remotes")
+remotes::install_github("insightsengineering/teal.gallery")
 ```
+
+Note that this does not install the R package dependencies of individual teal gallery apps. Individual app dependencies are managed by [renv](https://rstudio.github.io/renv/) within their [own app directory](https://github.com/insightsengineering/teal.gallery/tree/main/inst/apps).
 
 ### Listing Apps
 
@@ -60,14 +42,42 @@ You can list all available apps by running:
 teal.gallery::list_apps()
 ```
 
-### Running an app
+### Running an app locally
 
-Launch an app by running:
+#### Method 1: Using `shiny::runGitHub` (no need to install `teal.gallery`)
+
+Note that in order for this method to work, you would have to make sure that all the required packages for the app are installed.
+
+Launch an app by running the shiny::runGitHub by replacing the `subdir = "inst/apps/<APP_NAME>"`
 
 ```R
 # Say you want to run the `basic-teal` app
+shiny::runGitHub(
+  username = "insightsengineering",
+  repo = "teal.gallery",
+  subdir = "inst/apps/basic-teal"
+)
+```
+
+#### Method 2: Using the `teal.gallery` package
+
+You can run the sample app using the `teal.gallery::launch_app` function. This automatically restores the packages by calling `renv::restore()`
+
+```R
 teal.gallery::launch_app("basic-teal")
 ```
+
+#### Method 3: By downloading the contents of the `teal.gallery` GitHub repository
+
+It is recommended that you clone the teal.gallery repository using git. Alternatively, you can download the contents as zip and unzip them.
+
+```sh
+git clone https://github.com/insightsengineering/teal.gallery.git
+```
+
+Now you can open any RStudio project for your preferred sample app inside the `inst/apps` directory and run it just like how you would run any normal shiny app.
+
+If promted by renv to run `renv::restore()` run it to ensure that the R package dependencies are installed.
 
 ### Deployments
 
