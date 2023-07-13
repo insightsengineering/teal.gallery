@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="utils" timestamp="2023-07-13T07:31:46Z" hostname="c66bb98629fc" tests="11" skipped="0" failures="1" errors="1" time="91.611">
+    <testcase time="0.013" classname="utils" name="package_environment_is_setup_as_expected"/>
+    <testcase time="0.147" classname="utils" name="get_app_code_throws_error_if_app_name_is_not_string"/>
+    <testcase time="0.00800000000000001" classname="utils" name="get_app_code_throws_error_if_app_name_is_not_string"/>
+    <testcase time="0.029" classname="utils" name="get_app_code_throws_error_if_no_app_exists"/>
+    <testcase time="0.0159999999999999" classname="utils" name="get_app_code_throws_error_if_app.R_file_does_not_exist_or_cannot_be_read_"/>
+    <testcase time="0.00700000000000001" classname="utils" name="get_app_code_throws_error_if_app.R_file_does_not_exist_or_cannot_be_read_"/>
+    <testcase time="0.011" classname="utils" name="launch_app_throws_error_if_app_name_is_not_a_string"/>
+    <testcase time="0.00700000000000001" classname="utils" name="launch_app_throws_error_if_app_name_is_not_a_string"/>
+    <testcase time="0.014" classname="utils" name="launch_app_throws_error_if_app_directory_does_not_exist"/>
+    <testcase time="52.289" classname="utils" name="launch_app_throws_error_if_app_dependencies_do_not_exist">
+      <failure type="failure" message="`launch_app(&quot;basic-teal&quot;)` threw an error with unexpected message. ('test-utils.R:55:3')">`launch_app("basic-teal")` threw an error with unexpected message.
+Expected match: "Unable to run app as package not_a_real_package is not installed. Please ensure the following packages are installed: teal.gallery, not_a_real_package"
+Actual message: "object of type 'closure' is not subsettable"
+Backtrace:
+     ▆
+  1. ├─testthat::expect_error(...) at test-utils.R:55:2
+  2. │ └─testthat:::quasi_capture(...)
+  3. │   ├─testthat (local) .capture(...)
+  4. │   │ └─base::withCallingHandlers(...)
+  5. │   └─rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
+  6. └─teal.gallery::launch_app("basic-teal")
+  7.   └─renv::restore(clean = TRUE, prompt = FALSE)
+  8.     └─renv:::renv_restore_run_actions(...)
+  9.       └─renv:::retrieve(packages)
+ 10.         ├─renv (local) handler(package, renv_retrieve_impl(package))
+ 11.         └─renv:::renv_retrieve_impl(package)
+ 12.           └─renv:::renv_retrieve_github(record)
+ 13.             └─renv:::renv_retrieve_package(record, url, path)
+ 14.               └─renv:::renv_retrieve_successful(record, path)
+ 15.                 └─renv:::renv_retrieve_successful_recurse(deps)
+ 16.                   └─renv:::renv_retrieve_successful_recurse_impl(remote)
+ 17.                     ├─renv:::dynamic(key = list(remote = remote), value = renv_retrieve_successful_recurse_impl_one(remote))
+ 18.                     │ └─`_renv_dynamic_objects`[[id]] %??% ...
+ 19.                     └─renv:::renv_retrieve_successful_recurse_impl_one(remote)
+ 20.                       └─renv:::renv_retrieve_impl(remote)
+ 21.                         └─renv:::renv_retrieve_github(record)
+ 22.                           └─renv:::renv_retrieve_package(record, url, path)
+ 23.                             └─renv:::renv_retrieve_successful(record, path)
+ 24.                               └─renv:::renv_retrieve_handle_remotes(record, subdir = subdir)
+ 25.                                 └─renv:::renv_retrieve_handle_remotes_impl(remote)
+ 26.                                   ├─renv:::dynamic(key = list(remote = remote), value = renv_retrieve_handle_remotes_impl_one(remote))
+ 27.                                   │ └─`_renv_dynamic_objects`[[id]] %??% ...
+ 28.                                   └─renv:::renv_retrieve_handle_remotes_impl_one(remote)
+ 29.                                     └─renv:::warningf(fmt, remote, record$Package)
+ 30.                                       ├─base::warning(sprintf(fmt, ...), call. = call., immediate. = immediate.)
+ 31.                                       └─renv:::sprintf(fmt, ...)
+ 32.                                         └─base::sprintf(fmt, ...)</failure>
+    </testcase>
+    <testcase time="39.07" classname="utils" name="launch_app_launches_the_app_if_dependencies_exist">
+      <error type="error" message="&lt;notSubsettableError/error/condition&gt; ('test-utils.R:69:3')">&lt;notSubsettableError/error/condition&gt;
+Error in `record$Package`: object of type 'closure' is not subsettable
+Backtrace:
+     ▆
+  1. ├─testthat::expect_equal(...) at test-utils.R:69:2
+  2. │ └─testthat::quasi_label(enquo(object), label, arg = "object")
+  3. │   └─rlang::eval_bare(expr, quo_get_env(quo))
+  4. ├─testthat::capture_output(launch_app("basic-teal"))
+  5. │ └─testthat::capture_output_lines(code, print, width = width)
+  6. │   └─testthat:::eval_with_output(code, print = print, width = width)
+  7. │     ├─withr::with_output_sink(path, withVisible(code))
+  8. │     │ └─base::force(code)
+  9. │     └─base::withVisible(code)
+ 10. └─teal.gallery::launch_app("basic-teal")
+ 11.   └─renv::restore(clean = TRUE, prompt = FALSE)
+ 12.     └─renv:::renv_restore_run_actions(...)
+ 13.       └─renv:::retrieve(packages)
+ 14.         ├─renv (local) handler(package, renv_retrieve_impl(package))
+ 15.         └─renv:::renv_retrieve_impl(package)
+ 16.           └─renv:::renv_retrieve_github(record)
+ 17.             └─renv:::renv_retrieve_package(record, url, path)
+ 18.               └─renv:::renv_retrieve_successful(record, path)
+ 19.                 └─renv:::renv_retrieve_handle_remotes(record, subdir = subdir)
+ 20.                   └─renv:::renv_retrieve_handle_remotes_impl(remote)
+ 21.                     ├─renv:::dynamic(key = list(remote = remote), value = renv_retrieve_handle_remotes_impl_one(remote))
+ 22.                     │ └─`_renv_dynamic_objects`[[id]] %??% ...
+ 23.                     └─renv:::renv_retrieve_handle_remotes_impl_one(remote)
+ 24.                       └─renv:::warningf(fmt, remote, record$Package)
+ 25.                         ├─base::warning(sprintf(fmt, ...), call. = call., immediate. = immediate.)
+ 26.                         └─renv:::sprintf(fmt, ...)
+ 27.                           └─base::sprintf(fmt, ...)</error>
+    </testcase>
+  </testsuite>
+</testsuites>
