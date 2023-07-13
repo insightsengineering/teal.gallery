@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="utils" timestamp="2023-07-13T07:31:46Z" hostname="c66bb98629fc" tests="11" skipped="0" failures="1" errors="1" time="91.611">
-    <testcase time="0.013" classname="utils" name="package_environment_is_setup_as_expected"/>
-    <testcase time="0.147" classname="utils" name="get_app_code_throws_error_if_app_name_is_not_string"/>
-    <testcase time="0.00800000000000001" classname="utils" name="get_app_code_throws_error_if_app_name_is_not_string"/>
-    <testcase time="0.029" classname="utils" name="get_app_code_throws_error_if_no_app_exists"/>
-    <testcase time="0.0159999999999999" classname="utils" name="get_app_code_throws_error_if_app.R_file_does_not_exist_or_cannot_be_read_"/>
-    <testcase time="0.00700000000000001" classname="utils" name="get_app_code_throws_error_if_app.R_file_does_not_exist_or_cannot_be_read_"/>
-    <testcase time="0.011" classname="utils" name="launch_app_throws_error_if_app_name_is_not_a_string"/>
-    <testcase time="0.00700000000000001" classname="utils" name="launch_app_throws_error_if_app_name_is_not_a_string"/>
-    <testcase time="0.014" classname="utils" name="launch_app_throws_error_if_app_directory_does_not_exist"/>
-    <testcase time="52.289" classname="utils" name="launch_app_throws_error_if_app_dependencies_do_not_exist">
+  <testsuite name="utils" timestamp="2023-07-13T07:48:52Z" hostname="547cf5392738" tests="11" skipped="0" failures="1" errors="1" time="86.785">
+    <testcase time="0.012" classname="utils" name="package_environment_is_setup_as_expected"/>
+    <testcase time="0.146" classname="utils" name="get_app_code_throws_error_if_app_name_is_not_string"/>
+    <testcase time="0.00700000000000001" classname="utils" name="get_app_code_throws_error_if_app_name_is_not_string"/>
+    <testcase time="0.025" classname="utils" name="get_app_code_throws_error_if_no_app_exists"/>
+    <testcase time="0.013" classname="utils" name="get_app_code_throws_error_if_app.R_file_does_not_exist_or_cannot_be_read_"/>
+    <testcase time="0.00600000000000001" classname="utils" name="get_app_code_throws_error_if_app.R_file_does_not_exist_or_cannot_be_read_"/>
+    <testcase time="0.00900000000000001" classname="utils" name="launch_app_throws_error_if_app_name_is_not_a_string"/>
+    <testcase time="0.00599999999999989" classname="utils" name="launch_app_throws_error_if_app_name_is_not_a_string"/>
+    <testcase time="0.01" classname="utils" name="launch_app_throws_error_if_app_directory_does_not_exist"/>
+    <testcase time="49.814" classname="utils" name="launch_app_throws_error_if_app_dependencies_do_not_exist">
       <failure type="failure" message="`launch_app(&quot;basic-teal&quot;)` threw an error with unexpected message. ('test-utils.R:55:3')">`launch_app("basic-teal")` threw an error with unexpected message.
 Expected match: "Unable to run app as package not_a_real_package is not installed. Please ensure the following packages are installed: teal.gallery, not_a_real_package"
 Actual message: "object of type 'closure' is not subsettable"
@@ -49,7 +49,7 @@ Backtrace:
  31.                                       └─renv:::sprintf(fmt, ...)
  32.                                         └─base::sprintf(fmt, ...)</failure>
     </testcase>
-    <testcase time="39.07" classname="utils" name="launch_app_launches_the_app_if_dependencies_exist">
+    <testcase time="36.737" classname="utils" name="launch_app_launches_the_app_if_dependencies_exist">
       <error type="error" message="&lt;notSubsettableError/error/condition&gt; ('test-utils.R:69:3')">&lt;notSubsettableError/error/condition&gt;
 Error in `record$Package`: object of type 'closure' is not subsettable
 Backtrace:
