@@ -58,19 +58,6 @@ get_app_code <- function(app_name) {
 launch_app <- function(app_name, ...) {
   checkmate::assert_string(app_name)
 
-  required_deps <- get_app_dependencies(app_name)
-
-  for (dep in required_deps) {
-    if (!requireNamespace(dep, quietly = TRUE)) {
-      stop(
-        "Unable to run app as package ",
-        dep,
-        " is not installed. Please ensure the following packages are installed: ",
-        paste(required_deps, collapse = ", ")
-      )
-    }
-  }
-
   # copy application to temporary directory
   tryCatch(
     expr = {
@@ -81,7 +68,9 @@ launch_app <- function(app_name, ...) {
     error = function(cond) stop("Unable to copy app to temporary location: ", cond$message)
   )
 
-  # run application
+  # Load and restore renv packages and run application
+  renv::load(file.path(temp_location, app_name))
+  renv::restore(clean = TRUE, prompt = FALSE)
   shiny::runApp(file.path(temp_location, app_name), ...)
 }
 
@@ -92,9 +81,4 @@ get_app_dir <- function(app_name) {
     stop("Cannot find app '", app_name, "'. Please choose from ", paste(list_apps(), collapse = ", "))
   }
   app_dir
-}
-
-# check the dependencies of the chosen app are available
-get_app_dependencies <- function(app_name) {
-  renv::dependencies(get_app_dir(app_name))$Package
 }
