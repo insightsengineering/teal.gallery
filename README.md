@@ -24,7 +24,7 @@ Preview the [Teal Gallery apps](https://insightsengineering.github.io/teal.galle
 
 ### Installation (optional)
 
-For releases from August 2022 it is recommended that you [create and use a Github PAT](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) to install the latest version of this package. Once you have the PAT, run the following:
+For releases from August 2022 it is recommended that you [create and use a GitHub PAT](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) to install the latest version of this package. Once you have the PAT, run the following:
 
 ```R
 Sys.setenv(GITHUB_PAT = "your_access_token_here")
@@ -77,7 +77,7 @@ git clone https://github.com/insightsengineering/teal.gallery.git
 
 Now you can open any RStudio project for your preferred sample app inside the `inst/apps` directory and run it just like how you would run any normal shiny app.
 
-If promted by renv to run `renv::restore()` run it to ensure that the R package dependencies are installed.
+If prompted by renv to run `renv::restore()` run it to ensure that the R package dependencies are installed.
 
 ### Deployments
 
