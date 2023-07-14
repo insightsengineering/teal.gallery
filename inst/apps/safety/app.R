@@ -584,13 +584,13 @@ app <- teal::init(
   ),
   footer = tags$p(class = "text-muted", "Source: teal.gallery package"),
   # Set initial filter state as safety-evaluable population
-  filter = list(
-    ADSL = list(SAFFL = "Y"),
-    ADLB = list(AVAL = list()),
+  filter = teal_slices(
+    teal_slice(dataname = "ADSL", varname = "SAFFL", selected = "Y"),
+    teal_slice(dataname = "ADLB", varname = "AVAL"),
     # default filter
-    ADEX = list(AVAL = list()),
+    teal_slice(dataname = "ADEX", varname = "AVAL"),
     # default filter
-    ADEG = list(AVAL = list()) # default filter
+    teal_slice(dataname = "ADEG", varname = "AVAL")
   )
 )
 
