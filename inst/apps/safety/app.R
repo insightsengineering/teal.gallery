@@ -586,11 +586,11 @@ app <- teal::init(
   # Set initial filter state as safety-evaluable population
   filter = teal_slices(
     teal_slice(dataname = "ADSL", varname = "SAFFL", selected = "Y"),
-    teal.slice(dataname = "ADLB", varname = "AVAL"),
+    teal_slice(dataname = "ADLB", varname = "AVAL"),
     # default filter
-    teal.slice(dataname = "ADEX", varname = "AVAL"),
+    teal_slice(dataname = "ADEX", varname = "AVAL"),
     # default filter
-    teal.slice(dataname = "ADEG", varname = "AVAL")
+    teal_slice(dataname = "ADEG", varname = "AVAL")
   )
 )
 
