@@ -68,6 +68,6 @@ testthat::test_that("launch_app launches the app if dependencies exist", {
 
   testthat::expect_equal(
     testthat::capture_output(launch_app("basic-teal")),
-    "Finding R package dependencies ... Done!\n[1] \"launching application\""
+    "[1] \"launching application\""
   )
 })
