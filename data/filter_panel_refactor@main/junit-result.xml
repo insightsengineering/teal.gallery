@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="utils" timestamp="2023-07-12T15:49:56Z" hostname="0c5023afd7ab" tests="11" skipped="0" failures="0" errors="0" time="1.715">
-    <testcase time="0.012" classname="utils" name="package_environment_is_setup_as_expected"/>
-    <testcase time="0.152" classname="utils" name="get_app_code_throws_error_if_app_name_is_not_string"/>
-    <testcase time="0.00700000000000001" classname="utils" name="get_app_code_throws_error_if_app_name_is_not_string"/>
-    <testcase time="0.0259999999999999" classname="utils" name="get_app_code_throws_error_if_no_app_exists"/>
-    <testcase time="0.014" classname="utils" name="get_app_code_throws_error_if_app.R_file_does_not_exist_or_cannot_be_read_"/>
-    <testcase time="0.00600000000000001" classname="utils" name="get_app_code_throws_error_if_app.R_file_does_not_exist_or_cannot_be_read_"/>
-    <testcase time="0.01" classname="utils" name="launch_app_throws_error_if_app_name_is_not_a_string"/>
-    <testcase time="0.00600000000000001" classname="utils" name="launch_app_throws_error_if_app_name_is_not_a_string"/>
-    <testcase time="0.963" classname="utils" name="launch_app_throws_error_if_app_directory_does_not_exist"/>
-    <testcase time="0.0109999999999999" classname="utils" name="launch_app_throws_error_if_app_dependencies_do_not_exist"/>
-    <testcase time="0.508" classname="utils" name="launch_app_launches_the_app_if_dependencies_exist"/>
+  <testsuite name="utils" timestamp="2023-07-14T06:50:08Z" hostname="f0b9566446c1" tests="11" skipped="0" failures="1" errors="0" time="1.831">
+    <testcase time="0.019" classname="utils" name="package_environment_is_setup_as_expected"/>
+    <testcase time="0.189" classname="utils" name="get_app_code_throws_error_if_app_name_is_not_string"/>
+    <testcase time="0.012" classname="utils" name="get_app_code_throws_error_if_app_name_is_not_string"/>
+    <testcase time="0.0359999999999999" classname="utils" name="get_app_code_throws_error_if_no_app_exists"/>
+    <testcase time="0.016" classname="utils" name="get_app_code_throws_error_if_app.R_file_does_not_exist_or_cannot_be_read_"/>
+    <testcase time="0.00700000000000001" classname="utils" name="get_app_code_throws_error_if_app.R_file_does_not_exist_or_cannot_be_read_"/>
+    <testcase time="0.012" classname="utils" name="launch_app_throws_error_if_app_name_is_not_a_string"/>
+    <testcase time="0.00700000000000001" classname="utils" name="launch_app_throws_error_if_app_name_is_not_a_string"/>
+    <testcase time="1.101" classname="utils" name="launch_app_throws_error_if_app_directory_does_not_exist"/>
+    <testcase time="0.012" classname="utils" name="launch_app_throws_error_if_app_dependencies_do_not_exist"/>
+    <testcase time="0.42" classname="utils" name="launch_app_launches_the_app_if_dependencies_exist">
+      <failure type="failure" message="testthat::capture_output(launch_app(&quot;basic-teal&quot;)) not equal to &quot;Finding R package dependencies ... Done!\n[1] \&quot;launching application\&quot;&quot;. ('test-utils.R:69:3')">testthat::capture_output(launch_app("basic-teal")) not equal to "Finding R package dependencies ... Done!\n[1] \"launching application\"".
+1/1 mismatches
+x[1]: "[1] \"launching application\""
+y[1]: "Finding R package dependencies ... Done!\n[1] \"launching application\""</failure>
+    </testcase>
   </testsuite>
 </testsuites>
