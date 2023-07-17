@@ -144,6 +144,16 @@
       ],
       "Hash": "74a64813f17b492da9c6afda6b128e3d"
     },
+    "askpass": {
+      "Package": "askpass",
+      "Version": "1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "sys"
+      ],
+      "Hash": "e8a22846fff485f0be3770c2da758713"
+    },
     "backports": {
       "Package": "backports",
       "Version": "1.4.1",
@@ -257,6 +267,40 @@
         "utils"
       ],
       "Hash": "e8a1e41acf02548751f45c718d55aa6a"
+    },
+    "crosstalk": {
+      "Package": "crosstalk",
+      "Version": "1.2.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R6",
+        "htmltools",
+        "jsonlite",
+        "lazyeval"
+      ],
+      "Hash": "6aa54f69598c32177e920eb3402e8293"
+    },
+    "curl": {
+      "Package": "curl",
+      "Version": "5.0.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "2118af9cb164c8d2dddc7b89eaf732d9"
+    },
+    "data.table": {
+      "Package": "data.table",
+      "Version": "1.14.8",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "methods"
+      ],
+      "Hash": "b4c06e554f33344e044ccd7fdca750a9"
     },
     "digest": {
       "Package": "digest",
@@ -467,6 +511,21 @@
       ],
       "Hash": "ba0240784ad50a62165058a27459304a"
     },
+    "htmlwidgets": {
+      "Package": "htmlwidgets",
+      "Version": "1.6.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "grDevices",
+        "htmltools",
+        "jsonlite",
+        "knitr",
+        "rmarkdown",
+        "yaml"
+      ],
+      "Hash": "a865aa85bcb2697f47505bfd70422471"
+    },
     "httpuv": {
       "Package": "httpuv",
       "Version": "1.6.11",
@@ -481,6 +540,21 @@
         "utils"
       ],
       "Hash": "838602f54e32c1a0f8cc80708cefcefa"
+    },
+    "httr": {
+      "Package": "httr",
+      "Version": "1.4.6",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "R6",
+        "curl",
+        "jsonlite",
+        "mime",
+        "openssl"
+      ],
+      "Hash": "7e5e3cbd2a7bc07880c94e22348fb661"
     },
     "isoband": {
       "Package": "isoband",
@@ -565,6 +639,16 @@
         "utils"
       ],
       "Hash": "0b8a6d63c8770f02a8b5635f3c431e6b"
+    },
+    "lazyeval": {
+      "Package": "lazyeval",
+      "Version": "0.2.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "d908914ae53b04d4c0c0fd72ecc35370"
     },
     "lifecycle": {
       "Package": "lifecycle",
@@ -662,6 +746,16 @@
       ],
       "Hash": "0984ce8da8da9ead8643c5cbbb60f83e"
     },
+    "openssl": {
+      "Package": "openssl",
+      "Version": "2.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "askpass"
+      ],
+      "Hash": "273a6bb4a9844c296a459d2176673270"
+    },
     "pillar": {
       "Package": "pillar",
       "Version": "1.9.0",
@@ -688,6 +782,38 @@
         "utils"
       ],
       "Hash": "01f28d4278f15c76cddbea05899c5d6f"
+    },
+    "plotly": {
+      "Package": "plotly",
+      "Version": "4.10.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "RColorBrewer",
+        "base64enc",
+        "crosstalk",
+        "data.table",
+        "digest",
+        "dplyr",
+        "ggplot2",
+        "htmltools",
+        "htmlwidgets",
+        "httr",
+        "jsonlite",
+        "lazyeval",
+        "magrittr",
+        "promises",
+        "purrr",
+        "rlang",
+        "scales",
+        "tibble",
+        "tidyr",
+        "tools",
+        "vctrs",
+        "viridisLite"
+      ],
+      "Hash": "6c00a09ba7d34917d9a3e28b15dd74e3"
     },
     "promises": {
       "Package": "promises",
@@ -868,6 +994,20 @@
       ],
       "Hash": "fd889b32caa37b8ed9b1e9e7ef1564bc"
     },
+    "shinycssloaders": {
+      "Package": "shinycssloaders",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "digest",
+        "glue",
+        "grDevices",
+        "shiny"
+      ],
+      "Hash": "f39bb3c44a9b496723ec7e86f9a771d8"
+    },
     "shinyjs": {
       "Package": "shinyjs",
       "Version": "2.1.0",
@@ -953,30 +1093,34 @@
       ],
       "Hash": "b0911fdb2c682f526f6e9c131fd40a1f"
     },
+    "sys": {
+      "Package": "sys",
+      "Version": "3.4.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "3a1be13d68d47a8cd0bfd74739ca1555"
+    },
     "teal": {
       "Package": "teal",
-      "Version": "0.13.0",
+      "Version": "0.13.0.9007",
       "Source": "GitHub",
-      "Remotes": "insightsengineering/scda.2022@*release, insightsengineering/scda@*release, insightsengineering/teal.code@*release, insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.reporter@*release, insightsengineering/teal.slice@*release, insightsengineering/teal.transform@*release, insightsengineering/teal.widgets@*release",
+      "Remotes": "insightsengineering/teal.code@*release, insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.reporter@*release, insightsengineering/teal.slice@*release, insightsengineering/teal.transform@*release, insightsengineering/teal.widgets@*release",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "teal",
       "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.13.0",
-      "RemoteSha": "9b5498d6a776b54c731f36f2b95eee5cbc346755",
+      "RemoteRef": "70e900b9dcbcbedb8df142ad2f7ee09668736bd9",
+      "RemoteSha": "70e900b9dcbcbedb8df142ad2f7ee09668736bd9",
       "Requirements": [
         "R",
         "checkmate",
         "lifecycle",
         "logger",
         "magrittr",
-        "methods",
         "rlang",
         "shiny",
         "shinyjs",
         "stats",
-        "styler",
-        "teal.code",
         "teal.data",
         "teal.logger",
         "teal.reporter",
@@ -985,7 +1129,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "b745f79aff7848311a1ad77e5db2ee02"
+      "Hash": "0048281e690ebc3c5d876649d8fa44ea"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -1089,34 +1233,37 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.3.0",
+      "Version": "0.3.0.9007",
       "Source": "GitHub",
-      "Remotes": "insightsengineering/scda.2022@*release, insightsengineering/scda@*release, insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.widgets@*release",
+      "Remotes": "insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.widgets@*release",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "teal.slice",
       "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.3.0",
-      "RemoteSha": "e239912fd21d340680a4334f6ca87c48c8e81fab",
+      "RemoteRef": "5c54123b89d685bc04059fbd567b8ea7e8943d3e",
+      "RemoteSha": "5c54123b89d685bc04059fbd567b8ea7e8943d3e",
       "Requirements": [
         "R",
         "R6",
+        "bslib",
         "checkmate",
         "dplyr",
-        "ggplot2",
         "grDevices",
+        "htmltools",
+        "jsonlite",
         "lifecycle",
         "logger",
         "methods",
+        "plotly",
         "shiny",
         "shinyWidgets",
+        "shinycssloaders",
         "shinyjs",
-        "stats",
         "teal.data",
         "teal.logger",
         "teal.widgets"
       ],
-      "Hash": "321f06738f011380a71e739a043de007"
+      "Hash": "dda9900cf1d826ef171c79e870cea99f"
     },
     "teal.transform": {
       "Package": "teal.transform",

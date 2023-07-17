@@ -2088,6 +2088,20 @@
       ],
       "Hash": "fd889b32caa37b8ed9b1e9e7ef1564bc"
     },
+    "shinycssloaders": {
+      "Package": "shinycssloaders",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "digest",
+        "glue",
+        "grDevices",
+        "shiny"
+      ],
+      "Hash": "f39bb3c44a9b496723ec7e86f9a771d8"
+    },
     "shinyjs": {
       "Package": "shinyjs",
       "Version": "2.1.0",
@@ -2220,28 +2234,25 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.13.0",
+      "Version": "0.13.0.9007",
       "Source": "GitHub",
-      "Remotes": "insightsengineering/scda.2022@*release, insightsengineering/scda@*release, insightsengineering/teal.code@*release, insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.reporter@*release, insightsengineering/teal.slice@*release, insightsengineering/teal.transform@*release, insightsengineering/teal.widgets@*release",
+      "Remotes": "insightsengineering/teal.code@*release, insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.reporter@*release, insightsengineering/teal.slice@*release, insightsengineering/teal.transform@*release, insightsengineering/teal.widgets@*release",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "teal",
       "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.13.0",
-      "RemoteSha": "9b5498d6a776b54c731f36f2b95eee5cbc346755",
+      "RemoteRef": "70e900b9dcbcbedb8df142ad2f7ee09668736bd9",
+      "RemoteSha": "70e900b9dcbcbedb8df142ad2f7ee09668736bd9",
       "Requirements": [
         "R",
         "checkmate",
         "lifecycle",
         "logger",
         "magrittr",
-        "methods",
         "rlang",
         "shiny",
         "shinyjs",
         "stats",
-        "styler",
-        "teal.code",
         "teal.data",
         "teal.logger",
         "teal.reporter",
@@ -2250,7 +2261,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "b745f79aff7848311a1ad77e5db2ee02"
+      "Hash": "0048281e690ebc3c5d876649d8fa44ea"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2331,8 +2342,8 @@
       "Package": "teal.modules.clinical",
       "Version": "0.8.15.9006",
       "Source": "GitHub",
-      "Remotes": "insightsengineering/teal.code@*release, insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.reporter@*release, insightsengineering/teal.transform@*release, insightsengineering/teal.widgets@*release, insightsengineering/teal@*release, insightsengineering/tern.gee@*release, insightsengineering/tern.mmrm@*release, insightsengineering/tern@*release",
       "RemoteType": "github",
+      "Remotes": "insightsengineering/teal.code@*release, insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.reporter@*release, insightsengineering/teal.transform@*release, insightsengineering/teal.widgets@*release, insightsengineering/teal@*release, insightsengineering/tern.gee@*release, insightsengineering/tern.mmrm@*release, insightsengineering/tern@*release",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteUsername": "insightsengineering",
@@ -2449,34 +2460,37 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.3.0",
+      "Version": "0.3.0.9007",
       "Source": "GitHub",
-      "Remotes": "insightsengineering/scda.2022@*release, insightsengineering/scda@*release, insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.widgets@*release",
+      "Remotes": "insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.widgets@*release",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "teal.slice",
       "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.3.0",
-      "RemoteSha": "e239912fd21d340680a4334f6ca87c48c8e81fab",
+      "RemoteRef": "5c54123b89d685bc04059fbd567b8ea7e8943d3e",
+      "RemoteSha": "5c54123b89d685bc04059fbd567b8ea7e8943d3e",
       "Requirements": [
         "R",
         "R6",
+        "bslib",
         "checkmate",
         "dplyr",
-        "ggplot2",
         "grDevices",
+        "htmltools",
+        "jsonlite",
         "lifecycle",
         "logger",
         "methods",
+        "plotly",
         "shiny",
         "shinyWidgets",
+        "shinycssloaders",
         "shinyjs",
-        "stats",
         "teal.data",
         "teal.logger",
         "teal.widgets"
       ],
-      "Hash": "321f06738f011380a71e739a043de007"
+      "Hash": "dda9900cf1d826ef171c79e870cea99f"
     },
     "teal.transform": {
       "Package": "teal.transform",
