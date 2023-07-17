@@ -1,0 +1,55 @@
+project:
+  type: website
+  preview:
+    port: 4200
+    browser: true
+    watch-inputs: true
+    navigate: true
+    timeout: 300
+
+format:
+  html:
+    search: false
+    theme:
+      light: [flatly, quarto/assets/style.scss]
+    anchor-sections: true
+    smooth-scroll: true
+    code-link: true
+    code-fold: false
+    code-overflow: scroll
+    code-line-numbers: true
+    code-copy: true
+    code-tools:
+      source: true
+      toggle: false
+      caption: none
+    code-block-bg: true
+    toc: false
+    number-sections: false
+    lang: en-US
+    page-layout: full
+
+website:
+  title: Teal Gallery
+  open-graph: true
+  search:
+    location: navbar
+    type: overlay
+    copy-button: true
+  page-navigation: true
+  site-url: https://insightsengineering.github.io/teal.gallery
+  repo-url: https://github.com/insightsengineering/teal.gallery
+  repo-branch: main
+  page-footer:
+    center:
+      - text: "This website as well as code examples are licensed under the Apache License, Version 2.0."
+    right:
+      - aria-label: Slack
+        href: https://app.slack.com/client/T028PB489D3/C04NN28V3NJ
+        icon: slack
+      - aria-label: GitHub
+        href: https://github.com/insightsengineering/teal.gallery
+        icon: github
+  navbar:
+    pinned: false
+    collapse: true
