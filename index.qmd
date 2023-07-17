@@ -1,0 +1,13 @@
+---
+pagetitle: "Teal Gallery"
+format: html
+listing:
+  - id: apps-demo
+    template: quarto/demo-template.ejs
+    contents: quarto/demo-apps.yml
+---
+
+
+::: {#apps-demo .column-page}
+:::
+

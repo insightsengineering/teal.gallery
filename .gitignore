@@ -53,3 +53,8 @@ docs/
 
 # VSCode
 .VSCode
+
+# Quarto and markdown files
+/.quarto/
+_site
+*/README.html

@@ -1,0 +1,22 @@
+
+```{=html}
+<% for (const item of items) { %>
+<h4><%= item.category %></h4>
+<div class="cards-container" style="column-gap: 10px;">
+<% for (const app of item.apps) { %>
+  <div class="card" <%= metadataAttrs(app) %>>
+    <div class="app-details">
+      <a href="<%= item.deployment_server %>NEST_<%= app.title %>_main" class="listing-title"><%= app.title %></a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/<%= app.title %>" title="View source code" 
+        class="source-code card-text float-end inline-block">
+        <i class="bi-code-slash"></i>
+      </a>
+    </div>
+    <a href="<%= item.deployment_server %>NEST_<%= app.title %>_main">
+      <img src="<%= app.title %>/assets/img/<%= app.title %>.gif" alt="Animation of the <%= app.title %> app"/>
+    </a>    
+  </div>
+<% } %>
+</div>
+<% } %>
+```
