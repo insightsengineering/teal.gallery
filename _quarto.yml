@@ -11,7 +11,7 @@ format:
   html:
     search: false
     theme:
-      light: [flatly, quarto/assets/style.scss]
+      light: [flatly, _quarto/assets/style.scss]
     anchor-sections: true
     smooth-scroll: true
     code-link: true

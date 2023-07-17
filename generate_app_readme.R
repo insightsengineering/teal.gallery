@@ -1,7 +1,7 @@
 # Run this file to generate the readme inside each app directory
 library(yaml)
 
-app_names <- unlist(lapply(yaml::read_yaml("quarto/demo-apps.yml"), function(x) x$apps))
+app_names <- unlist(lapply(yaml::read_yaml("_quarto/demo-apps.yml"), function(x) x$apps))
 
 for (app_name in app_names) {
   rmarkdown::render(

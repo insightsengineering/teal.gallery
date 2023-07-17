@@ -3,8 +3,8 @@ pagetitle: "Teal Gallery"
 format: html
 listing:
   - id: apps-demo
-    template: quarto/demo-template.ejs
-    contents: quarto/demo-apps.yml
+    template: _quarto/demo-template.ejs
+    contents: _quarto/demo-apps.yml
 ---
 
 
