@@ -55,7 +55,7 @@ load_and_run_app <- function(app_directory, ...) {
 #'
 #' This function downloads a Shiny app from the teal.gallery repository by calling
 #' `download_apps_repo()` function and runs the specified app using `load_and_run_app()`.
-#' This function is a wrapper around
+#' This function is a wrapper around `shiny::runGitHub()`
 #'
 #' @param app_name The name of the app to run.
 #' @param username The GitHub username or organization name.
