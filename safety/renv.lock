@@ -2391,15 +2391,15 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.2.15",
+      "Version": "0.2.15.9027",
       "Source": "GitHub",
-      "Remotes": "insightsengineering/scda.2021@*release, insightsengineering/scda@*release, insightsengineering/teal.code@*release, insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.reporter@*release, insightsengineering/teal.slice@*release, insightsengineering/teal.transform@*release, insightsengineering/teal.widgets@*release, insightsengineering/teal@*release, insightsengineering/tern@*release",
+      "Remotes": "insightsengineering/teal.code@*release, insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.reporter@*release, insightsengineering/teal.slice@*release, insightsengineering/teal.transform@*release, insightsengineering/teal.widgets@*release, insightsengineering/teal@*release, insightsengineering/tern@*release",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "teal.modules.general",
       "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.2.15",
-      "RemoteSha": "dc82c3267caa779467f5b11a353fc809f1dce245",
+      "RemoteRef": "b6733366c09aa6f7b990ddacb34fd121f5445fd6",
+      "RemoteSha": "b6733366c09aa6f7b990ddacb34fd121f5445fd6",
       "Requirements": [
         "DT",
         "R",
@@ -2416,6 +2416,7 @@
         "shinyTree",
         "shinyWidgets",
         "shinyjs",
+        "shinyvalidate",
         "stats",
         "stringr",
         "teal",
@@ -2431,7 +2432,7 @@
         "tidyselect",
         "utils"
       ],
-      "Hash": "643c0c804b291c065ed3deee1263c037"
+      "Hash": "abcb441fccd49374f5d2d3bd9d380f9d"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
