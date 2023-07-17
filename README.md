@@ -27,7 +27,7 @@ By sourcing the [\_utils.R](https://github.com/insightsengineering/teal.gallery/
 Running the `run_teal_gallery("APP_NAME")` will run the `APP_NAME` by restoring the packages using [renv](https://rstudio.github.io/renv/)
 
 ```R
-source("https://raw.github.com/insightsengineering/teal.gallery/main/_utils.R")
+source("https://raw.github.com/insightsengineering/teal.gallery/main/sourceme.R")
 # Assuming you want to run the "basic-teal" app. Refer to the list above to know which apps are possible
 run_teal_gallery("basic-teal")
 ```

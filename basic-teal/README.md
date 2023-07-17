@@ -5,7 +5,7 @@
 
 ### Run the app yourself
 
-    source("https://raw.github.com/insightsengineering/teal.gallery/main/_utils.R")
+    source("https://raw.github.com/insightsengineering/teal.gallery/main/sourceme.R")
     run_teal_gallery("basic-teal")
 
 ### View the deployed app

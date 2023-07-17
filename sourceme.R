@@ -4,7 +4,7 @@
 #' as the options adhere to a certain set of requirements
 #'
 #' @param app_name (`character(1)`) name of the the teal app - technically, name of the app
-#'  directory in the `inst/`. Do not confuse with the `name` argument in the [connectapi::deploy()] .
+#'  directory in the root directory. Do not confuse with the `name` argument in the [connectapi::deploy()] .
 #' @param app_title (`character(1)`, optional) The title to be used for the content on the server.
 #'  Unique app name deployed on the `server` is generated from `app_title` by removing
 #' @param api_key (`character(1)`) API key/token.
@@ -37,13 +37,13 @@ deploy_app <- function(app_name,
   checkmate::assert_string(api_key)
   checkmate::assert_string(server)
   checkmate::assert_flag(overwrite)
-  checkmate::assert(app_name %in% list_apps())
+  checkmate::assert(app_name %in% list_apps()) # TODO: change the way we get the app_names
 
   if (!requireNamespace("rsconnect", quietly = TRUE) || !requireNamespace("connectapi", quietly = TRUE)) {
     stop("deploy_app requires packages 'rsconnect' and 'connectapi' to be installed")
   }
 
-  app_dir <- get_app_dir(app_name)
+  app_dir <- get_app_dir(app_name) # TODO: change the way to get the app dir
 
   # Init client
   if (endsWith(server, "shinyapps.io")) {
