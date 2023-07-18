@@ -50,11 +50,10 @@ manifest.json
 /doc/
 /Meta/
 docs/
+rsconnect/
 
 # VSCode
 .VSCode
 
-# Quarto and markdown files
-/.quarto/
-_site
+# Markdown generated files
 */README.html
