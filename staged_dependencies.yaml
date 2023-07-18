@@ -26,9 +26,6 @@ upstream_repos:
   insightsengineering/teal.widgets:
     repo: insightsengineering/teal.widgets
     host: https://github.com
-  insightsengineering/formatters:
-    repo: insightsengineering/formatters
-    host: https://github.com
   insightsengineering/scda:
     repo: insightsengineering/scda
     host: https://github.com

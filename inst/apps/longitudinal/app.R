@@ -121,7 +121,7 @@ ADSL <- ADSL %>%
   )
 
 # capture state of variable labels to apply back onto variables after data filtering
-adsl_labels <- formatters::var_labels(ADSL)
+adsl_labels <- teal.widgets::formatters_var_labels(ADSL)
 date_vars_adsl <- names(ADSL)[vapply(ADSL, function(x) inherits(x, c("Date", "POSIXct", "POSIXlt")), logical(1))]
 char_vars_adsl <- names(Filter(isTRUE, sapply(ADSL, is.character)))
 
