@@ -9,9 +9,13 @@
   <div class="card" <%= metadataAttrs(app) %>>
     <div class="app-details">
       <a href="<%= item.deployment_server %>NEST_<%= app.title %>_main" class="listing-title"><%= app.title %></a>
-      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/<%= app.title %>" title="View source code" 
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/<%= app.title %>/app.R" title="View source code" 
         class="source-code card-text float-end inline-block">
         <i class="bi-code-slash"></i>
+      </a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/<%= app.title %>/README.md" title="View readme file" 
+        class="readme-file card-text float-end inline-block" style="margin-right: 5px;">
+        <i class="bi-file-earmark-text"></i>
       </a>
     </div>
     <a href="<%= item.deployment_server %>NEST_<%= app.title %>_main">
