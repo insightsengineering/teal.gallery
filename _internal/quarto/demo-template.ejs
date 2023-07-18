@@ -3,6 +3,8 @@
 <% for (const item of items) { %>
 <h4><%= item.category %></h4>
 <div class="cards-container" style="column-gap: 10px;">
+<!-- Adding the missing image so that quarto will copy it inside _site -->
+<div style="display:none"><img src="assets/www/missing.png"></div>
 <% for (const app of item.apps) { %>
   <div class="card" <%= metadataAttrs(app) %>>
     <div class="app-details">
@@ -13,7 +15,7 @@
       </a>
     </div>
     <a href="<%= item.deployment_server %>NEST_<%= app.title %>_main">
-      <img src="assets/img/<%= app.title %>.gif" alt="Animation of the <%= app.title %> app"/>
+      <img src="assets/img/<%= app.title %>.gif" alt="Animation of the <%= app.title %> app" onerror="this.src='assets/www/missing.png'"/>
     </a>    
   </div>
 <% } %>
