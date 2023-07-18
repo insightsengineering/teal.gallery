@@ -32,6 +32,7 @@ format:
 website:
   title: Teal Gallery
   open-graph: true
+  favicon: assets/www/logo-nest.png
   search:
     location: navbar
     type: overlay
@@ -53,3 +54,9 @@ website:
   navbar:
     pinned: false
     collapse: true
+    logo: assets/www/logo-nest.png
+    left:
+      - text: Home
+        file: index.qmd
+      - text: Demo
+        file: demo.qmd

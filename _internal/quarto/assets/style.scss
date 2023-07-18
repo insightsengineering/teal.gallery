@@ -1,9 +1,10 @@
 /*-- scss:defaults --*/
 
-$primary: #3f51b5 !default;
-$secondary: #12a105 !default;
+$primary: #0b41cd !default;
+$secondary: #426fe1 !default;
 $dark: #212529 !default;
-$light: #f8f9fa !default;
+$light: #ececec !default;
+$navbar-bg: #2c3d4f !default;
 
 /*-- scss:rules --*/
 html {
@@ -11,9 +12,9 @@ html {
 }
 
 .navbar {
-  background-color: $light;
+  background-color: $navbar-bg;
   .navbar-title {
-    color: $dark;
+    color: $light;
     &:hover {
       color: $secondary;
     }
