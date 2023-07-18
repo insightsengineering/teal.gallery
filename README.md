@@ -27,7 +27,7 @@ By sourcing the [\_utils.R](https://github.com/insightsengineering/teal.gallery/
 Running the `run_teal_gallery("APP_NAME")` will run the `APP_NAME` by restoring the packages using [renv](https://rstudio.github.io/renv/)
 
 ```R
-source("https://raw.github.com/insightsengineering/teal.gallery/main/sourceme.R")
+source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
 # Assuming you want to run the "basic-teal" app. Refer to the list above to know which apps are possible
 run_teal_gallery("basic-teal")
 ```
@@ -43,5 +43,5 @@ Adding a sample app involves the following steps:
 1. Copy each sample app into a file named `app.R` into a sensible folder name inside it's own directory. The directory is also the `APP_NAME`.
 2. Make sure that `{renv}` is used for the teal app.
 3. Create a GIF recording ([KAP](https://getkap.co/) is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. (It can be done by recording using KAP in 1470x840 px and rendering 5fps and downsizing 33%). Place the GIF inside the `APP_NAME/assets/img` directory. Also, make sure that the name of the GIF is `APP_NAME.gif`
-4. Update the `_quarto/demo-apps.yml` with a new `app/title`. This should be the `APP_NAME`.
+4. Update the `_internal/_quarto/demo-apps.yml` with a new `app/title`. This should be the `APP_NAME`.
 5. Run the `generate_app_readme.R` to generate the readme for the app inside it's own directory.

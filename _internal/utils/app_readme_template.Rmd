@@ -14,7 +14,7 @@ x <- cat(paste0("# ", params$app_name, " app"))
 ### Run the app yourself
 
 ```
-source("https://raw.github.com/insightsengineering/teal.gallery/main/sourceme.R")
+source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
 run_teal_gallery("`r params$app_name`")
 ```
 
