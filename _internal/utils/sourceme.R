@@ -160,8 +160,8 @@ deploy_all_apps <- function(api_key,
 #' @param ... Additional arguments passed to `shiny::runApp()`.
 #'
 #' @examples
-#' run_teal_gallery("app1", username = "insightsengineering", repo = "teal.gallery", ref = "HEAD")
-run_teal_gallery <- function(app_name, username = "insightsengineering", repo = "teal.gallery", ref = "HEAD", ...) {
+#' restore_and_run("app1", username = "insightsengineering", repo = "teal.gallery", ref = "HEAD")
+restore_and_run <- function(app_name, username = "insightsengineering", repo = "teal.gallery", ref = "HEAD", ...) {
   #' Download a GitHub repository, unzip it, and return the repository directory.
   #'
   #' This function downloads a given GitHub repository as a tar.gz file, unzips it,
@@ -195,7 +195,7 @@ run_teal_gallery <- function(app_name, username = "insightsengineering", repo = 
   #'
   #' @return A character vector of available app directories.
   get_available_apps <- function(repo_root) {
-    ignore_dirs <- c(".github", "_quarto")
+    ignore_dirs <- c(".github", "_internal")
     dirs_present <- list.dirs(repo_root, full.names = FALSE, recursive = FALSE)
     setdiff(dirs_present, ignore_dirs)
   }
@@ -206,9 +206,6 @@ run_teal_gallery <- function(app_name, username = "insightsengineering", repo = 
   #'
   #' @param app_directory The directory path of the Shiny app.
   #' @param ... Additional arguments passed to `shiny::runApp()`.
-  #'
-  #' @examples
-  #' load_and_run_app("~/repos/teal.gallery/app1/")
   load_and_run_app <- function(app_directory, ...) {
     renv::load(app_directory)
     renv::restore(clean = TRUE, prompt = FALSE)

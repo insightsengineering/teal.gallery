@@ -15,7 +15,7 @@ x <- cat(paste0("# ", params$app_name, " app"))
 
 ```
 source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
-run_teal_gallery("`r params$app_name`")
+restore_and_run("`r params$app_name`")
 ```
 
 ### View the deployed app
@@ -27,5 +27,5 @@ x <- cat(paste0("Deployed app: https://genentech.shinyapps.io/NEST_", params$app
 ### Preview the app
 
 ```{r gif, echo=FALSE}
-knitr::include_graphics(paste0("assets/img/", params$app_name, ".gif"))
+knitr::include_graphics(paste0("../_internal/quarto/assets/img/", params$app_name, ".gif"))
 ```

@@ -6,7 +6,7 @@
 ### Run the app yourself
 
     source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
-    run_teal_gallery("longitudinal")
+    restore_and_run("longitudinal")
 
 ### View the deployed app
 
@@ -14,4 +14,4 @@ Deployed app: <https://genentech.shinyapps.io/NEST_longitudinal_main>
 
 ### Preview the app
 
-![](assets/img/longitudinal.gif)<!-- -->
+![](../_internal/quarto/assets/img/longitudinal.gif)<!-- -->

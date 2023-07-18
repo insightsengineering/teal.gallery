@@ -6,7 +6,7 @@
 ### Run the app yourself
 
     source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
-    run_teal_gallery("RNA-seq")
+    restore_and_run("RNA-seq")
 
 ### View the deployed app
 
@@ -14,4 +14,4 @@ Deployed app: <https://genentech.shinyapps.io/NEST_RNA-seq_main>
 
 ### Preview the app
 
-![](assets/img/RNA-seq.gif)<!-- -->
+![](../_internal/quarto/assets/img/RNA-seq.gif)<!-- -->

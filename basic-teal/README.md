@@ -6,7 +6,7 @@
 ### Run the app yourself
 
     source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
-    run_teal_gallery("basic-teal")
+    restore_and_run("basic-teal")
 
 ### View the deployed app
 
@@ -14,4 +14,4 @@ Deployed app: <https://genentech.shinyapps.io/NEST_basic-teal_main>
 
 ### Preview the app
 
-![](assets/img/basic-teal.gif)<!-- -->
+![](../_internal/quarto/assets/img/basic-teal.gif)<!-- -->
