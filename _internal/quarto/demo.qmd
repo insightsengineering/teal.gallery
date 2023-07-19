@@ -1,0 +1,13 @@
+---
+pagetitle: "Teal Demo Apps"
+format: html
+listing:
+  - id: apps-demo
+    template: demo-template.ejs
+    contents: demo-apps.yml
+---
+
+
+::: {#apps-demo .column-page}
+:::
+

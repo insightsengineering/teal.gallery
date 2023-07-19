@@ -1,0 +1,7 @@
+---
+pagetitle: "Teal Gallery"
+format: html
+---
+
+
+{{< include ../../README.md >}}

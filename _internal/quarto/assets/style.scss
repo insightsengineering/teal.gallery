@@ -1,0 +1,74 @@
+/*-- scss:defaults --*/
+
+$primary: #0b41cd !default;
+$secondary: #426fe1 !default;
+$dark: #212529 !default;
+$light: #ececec !default;
+$navbar-bg: #2c3d4f !default;
+
+/*-- scss:rules --*/
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: $navbar-bg;
+  .navbar-title {
+    color: $light;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  &:hover {
+    color: $secondary;
+  }
+}
+
+#quarto-document-content {
+  display: flex;
+  margin: 20px;
+}
+
+#quarto-content {
+  margin-top: -50px;
+}
+
+.quarto-title-block {
+  display: none;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card {
+  flex: 1 1 auto;
+  max-width: calc(33.33% - 20px);
+  min-width: 450px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  transition: box-shadow 0.1s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Apply shadow effect on hover */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.app-details {
+  margin-bottom: 5px;
+}

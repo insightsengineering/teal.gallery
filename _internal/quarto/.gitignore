@@ -1,0 +1,10 @@
+/.quarto/
+site_libs/
+_site
+_freeze
+_cache
+cache
+*_cache
+*_data
+*_files
+figures
