@@ -1,0 +1,57 @@
+---
+name: Publish Teal Gallery 📰
+
+on:
+  workflow_call:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+    branches:
+      - main
+  schedule:
+    - cron: "17 17 * * 3,6"
+
+jobs:
+  publish:
+    name: Build & Deploy Gallery 📖
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/insightsengineering/rstudio_4.3.1_bioc_3.17:latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repo 🛎
+        uses: actions/checkout@v3
+
+      - name: Cache artifacts 📀
+        uses: actions/cache@v3
+        with:
+          path: |
+            _internal/quarto/_freeze
+          key: ${{ runner.os }}-teal-gallery
+
+      - name: Render Gallery 🖨
+        shell: bash
+        run: |
+          cd _internal/quarto
+          quarto render
+
+      - name: Create artifact 📂
+        run: |
+          pushd _internal/quarto/_site
+          zip -r9 $OLDPWD/site.zip *
+          popd
+        shell: bash
+
+      - name: Upload docs ⬆
+        uses: actions/upload-artifact@v3
+        with:
+          name: site.zip
+          path: site.zip
+
+      - name: Publish docs
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_internal/quarto/_site
