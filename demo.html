@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Teal Gallery</title>
+<title>Teal Demo Apps</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,6 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./assets/www/logo-nest.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -94,13 +96,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-apps-demo .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-category','listing-deployment_server','listing-apps',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-category","listing-deployment_server","listing-apps"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-apps-demo'] = new List('listing-apps-demo', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Teal Gallery">
-<meta property="og:description" content="">
-<meta property="og:image" content="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/thumbs/teal.png">
+<meta property="og:title" content="Teal Demo Apps">
+<meta property="og:image" content="https://insightsengineering.github.io/teal.gallery/assets/www/missing.png">
 <meta property="og:site-name" content="Teal Gallery">
+<meta property="og:image:height" content="555">
+<meta property="og:image:width" content="970">
 </head>
 
 <body class="nav-fixed">
@@ -124,11 +158,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./demo.html" rel="" target="">
+    <a class="nav-link active" href="./demo.html" rel="" target="" aria-current="page">
  <span class="menu-text">Demo</span></a>
   </li>  
 </ul>
@@ -144,60 +178,151 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><div class="quarto-title-block"><div class="quarto-title-tools-only"><h1></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
+<main class="content page-columns page-full column-body" id="quarto-document-content"><div class="quarto-title-block"><div class="quarto-title-tools-only"><h1></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i></button></div></div>
 
 
 
-<section id="teal.gallery" class="level1">
-<h1>teal.gallery</h1>
-<p><img align="right" width="100" height="100" src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/thumbs/teal.png"></p>
-<p>A gallery of sample apps based on the <a href="https://github.com/insightsengineering/teal"><code>teal</code> framework</a>.</p>
-<section id="links-to-apps-on-shinyapps.io" class="level2">
-<h2 class="anchored" data-anchor-id="links-to-apps-on-shinyapps.io">Links to apps on <code>shinyapps.io</code></h2>
-<section id="development-version" class="level3">
-<h3 class="anchored" data-anchor-id="development-version">Development version</h3>
-<ul>
-<li><a href="https://genentech.shinyapps.io/NEST_RNA-seq_main/">RNA-seq</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_basic-teal_main/">basic-teal</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_efficacy_main/">efficacy</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_exploratory_main/">exploratory</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_longitudinal_main/">longitudinal</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_early-dev_main/">early-dev</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_patient-profile_main/">patient-profile</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_python_main/">python</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_safety_main/">safety</a></li>
-</ul>
-</section>
-</section>
-<section id="running-the-apps" class="level2">
-<h2 class="anchored" data-anchor-id="running-the-apps">Running the apps</h2>
-<p>You can run any of these apps by just executing these two lines of code in your R console.</p>
-<p>By sourcing the <a href="https://github.com/insightsengineering/teal.gallery/blob/main/utils/sourceme.R">.R</a> file you make sure that you have access to the <code>restore_and_run()</code></p>
-<p>Running the <code>restore_and_run("APP_NAME")</code> will run the <code>APP_NAME</code> by restoring the packages using <a href="https://rstudio.github.io/renv/">renv</a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">source</span>(<span class="st">"https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="co"># Assuming you want to run the "basic-teal" app. Refer to the list above to know which apps are possible</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">restore_and_run</span>(<span class="st">"basic-teal"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="development" class="level2">
-<h2 class="anchored" data-anchor-id="development">Development</h2>
-<p>All <code>teal</code> sample apps are wrapped into this package for the sake of portability. All development standards and practices that we currently use for teal app development also apply to this repository.</p>
-<section id="adding-a-sample-app-to-teal.gallery" class="level3">
-<h3 class="anchored" data-anchor-id="adding-a-sample-app-to-teal.gallery">Adding a sample app to <code>teal.gallery</code></h3>
-<p>Adding a sample app involves the following steps:</p>
-<ol type="1">
-<li>Copy each sample app into a file named <code>app.R</code> into a sensible folder name inside it’s own directory. The directory is also the <code>APP_NAME</code>.</li>
-<li>Make sure that <code>{renv}</code> is used for the teal app.</li>
-<li>Create a GIF recording (<a href="https://getkap.co/">KAP</a> is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. (It can be done by recording using KAP in 1470x840 px and rendering 5fps and downsizing 33%). Place the GIF inside the <code>_internal/quarto/assets/img</code> direcxtory. Also, make sure that the name of the GIF is <code>APP_NAME.gif</code></li>
-<li>Update the <code>_internal/quarto/demo-apps.yml</code> with a new <code>app/title</code>. This should be the <code>APP_NAME</code>.</li>
-<li>Run the <code>_internal/utils/generate_app_readme.R</code> to generate the readme for the app inside it’s own directory.</li>
-</ol>
+<div id="listing-apps-demo" class="column-page quarto-listing quarto-listing-container-custom">
+<h4 class="anchored">Teal Gallery Demo</h4>
+<div class="cards-container" style="column-gap: 10px;">
+<!-- Adding the missing image so that quarto will copy it inside _site -->
+<div style="display:none"><img src="assets/www/missing.png"></div>
+  <div class="card" data-index="0">
+    <div class="app-details">
+      <a href="https://genentech.shinyapps.io/NEST_RNA-seq_main" class="listing-title">RNA-seq</a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/RNA-seq/app.R" title="View source code" class="source-code card-text float-end inline-block">
+        <i class="bi-code-slash"></i>
+      </a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/RNA-seq/README.md" title="View readme file" class="readme-file card-text float-end inline-block" style="margin-right: 5px;">
+        <i class="bi-file-earmark-text"></i>
+      </a>
+    </div>
+    <a href="https://genentech.shinyapps.io/NEST_RNA-seq_main">
+      <img src="assets/img/RNA-seq.gif" alt="Animation of the RNA-seq app" onerror="this.src='assets/www/missing.png'">
+    </a>    
+  </div>
+  <div class="card" data-index="1">
+    <div class="app-details">
+      <a href="https://genentech.shinyapps.io/NEST_basic-teal_main" class="listing-title">basic-teal</a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/basic-teal/app.R" title="View source code" class="source-code card-text float-end inline-block">
+        <i class="bi-code-slash"></i>
+      </a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/basic-teal/README.md" title="View readme file" class="readme-file card-text float-end inline-block" style="margin-right: 5px;">
+        <i class="bi-file-earmark-text"></i>
+      </a>
+    </div>
+    <a href="https://genentech.shinyapps.io/NEST_basic-teal_main">
+      <img src="assets/img/basic-teal.gif" alt="Animation of the basic-teal app" onerror="this.src='assets/www/missing.png'">
+    </a>    
+  </div>
+  <div class="card" data-index="2">
+    <div class="app-details">
+      <a href="https://genentech.shinyapps.io/NEST_efficacy_main" class="listing-title">efficacy</a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/efficacy/app.R" title="View source code" class="source-code card-text float-end inline-block">
+        <i class="bi-code-slash"></i>
+      </a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/efficacy/README.md" title="View readme file" class="readme-file card-text float-end inline-block" style="margin-right: 5px;">
+        <i class="bi-file-earmark-text"></i>
+      </a>
+    </div>
+    <a href="https://genentech.shinyapps.io/NEST_efficacy_main">
+      <img src="assets/img/efficacy.gif" alt="Animation of the efficacy app" onerror="this.src='assets/www/missing.png'">
+    </a>    
+  </div>
+  <div class="card" data-index="3">
+    <div class="app-details">
+      <a href="https://genentech.shinyapps.io/NEST_exploratory_main" class="listing-title">exploratory</a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/exploratory/app.R" title="View source code" class="source-code card-text float-end inline-block">
+        <i class="bi-code-slash"></i>
+      </a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/exploratory/README.md" title="View readme file" class="readme-file card-text float-end inline-block" style="margin-right: 5px;">
+        <i class="bi-file-earmark-text"></i>
+      </a>
+    </div>
+    <a href="https://genentech.shinyapps.io/NEST_exploratory_main">
+      <img src="assets/img/exploratory.gif" alt="Animation of the exploratory app" onerror="this.src='assets/www/missing.png'">
+    </a>    
+  </div>
+  <div class="card" data-index="4">
+    <div class="app-details">
+      <a href="https://genentech.shinyapps.io/NEST_longitudinal_main" class="listing-title">longitudinal</a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/longitudinal/app.R" title="View source code" class="source-code card-text float-end inline-block">
+        <i class="bi-code-slash"></i>
+      </a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/longitudinal/README.md" title="View readme file" class="readme-file card-text float-end inline-block" style="margin-right: 5px;">
+        <i class="bi-file-earmark-text"></i>
+      </a>
+    </div>
+    <a href="https://genentech.shinyapps.io/NEST_longitudinal_main">
+      <img src="assets/img/longitudinal.gif" alt="Animation of the longitudinal app" onerror="this.src='assets/www/missing.png'">
+    </a>    
+  </div>
+  <div class="card" data-index="5">
+    <div class="app-details">
+      <a href="https://genentech.shinyapps.io/NEST_early-dev_main" class="listing-title">early-dev</a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/early-dev/app.R" title="View source code" class="source-code card-text float-end inline-block">
+        <i class="bi-code-slash"></i>
+      </a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/early-dev/README.md" title="View readme file" class="readme-file card-text float-end inline-block" style="margin-right: 5px;">
+        <i class="bi-file-earmark-text"></i>
+      </a>
+    </div>
+    <a href="https://genentech.shinyapps.io/NEST_early-dev_main">
+      <img src="assets/img/early-dev.gif" alt="Animation of the early-dev app" onerror="this.src='assets/www/missing.png'">
+    </a>    
+  </div>
+  <div class="card" data-index="6">
+    <div class="app-details">
+      <a href="https://genentech.shinyapps.io/NEST_patient-profile_main" class="listing-title">patient-profile</a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/patient-profile/app.R" title="View source code" class="source-code card-text float-end inline-block">
+        <i class="bi-code-slash"></i>
+      </a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/patient-profile/README.md" title="View readme file" class="readme-file card-text float-end inline-block" style="margin-right: 5px;">
+        <i class="bi-file-earmark-text"></i>
+      </a>
+    </div>
+    <a href="https://genentech.shinyapps.io/NEST_patient-profile_main">
+      <img src="assets/img/patient-profile.gif" alt="Animation of the patient-profile app" onerror="this.src='assets/www/missing.png'">
+    </a>    
+  </div>
+  <div class="card" data-index="7">
+    <div class="app-details">
+      <a href="https://genentech.shinyapps.io/NEST_python_main" class="listing-title">python</a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/python/app.R" title="View source code" class="source-code card-text float-end inline-block">
+        <i class="bi-code-slash"></i>
+      </a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/python/README.md" title="View readme file" class="readme-file card-text float-end inline-block" style="margin-right: 5px;">
+        <i class="bi-file-earmark-text"></i>
+      </a>
+    </div>
+    <a href="https://genentech.shinyapps.io/NEST_python_main">
+      <img src="assets/img/python.gif" alt="Animation of the python app" onerror="this.src='assets/www/missing.png'">
+    </a>    
+  </div>
+  <div class="card" data-index="8">
+    <div class="app-details">
+      <a href="https://genentech.shinyapps.io/NEST_safety_main" class="listing-title">safety</a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/safety/app.R" title="View source code" class="source-code card-text float-end inline-block">
+        <i class="bi-code-slash"></i>
+      </a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/safety/README.md" title="View readme file" class="readme-file card-text float-end inline-block" style="margin-right: 5px;">
+        <i class="bi-file-earmark-text"></i>
+      </a>
+    </div>
+    <a href="https://genentech.shinyapps.io/NEST_safety_main">
+      <img src="assets/img/safety.gif" alt="Animation of the safety app" onerror="this.src='assets/www/missing.png'">
+    </a>    
+  </div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+
 
 
 <!-- -->
 
-</section>
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -484,13 +609,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="an">pagetitle:</span><span class="co"> "Teal Gallery"</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="co">---</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a></span>
-<span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-7"><a href="#cb2-7"></a>{{&lt; include ../../README.md &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="an">pagetitle:</span><span class="co"> "Teal Demo Apps"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="an">listing:</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co">  - id: apps-demo</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="co">    template: demo-template.ejs</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co">    contents: demo-apps.yml</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">---</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a>::: {#apps-demo .column-page}</span>
+<span id="cb1-12"><a href="#cb1-12"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
