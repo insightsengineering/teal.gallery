@@ -61,26 +61,29 @@ jobs:
         with:
           r-version: "release"
 
-      - name: Deploy apps 🖨 ${{ matrix.directory }} 🎨
+      - name: Install app dependencies
         shell: Rscript {0}
         run: |
           setwd("${{ github.event.repository.name }}/${{ matrix.directory }}")
-          install.packages(c('renv', 'rsconnect'))
+          install.packages('remotes')
+          remotes::install_version("rsconnect", "0.8.29")
+          remotes::install_version("renv", "1.0.0")
           install.packages(
             renv::dependencies()$Package,
             repos = c('https://pharmaverse.r-universe.dev', 'https://cloud.r-project.org')
           )
+      - name: Deploy 🖨 ${{ matrix.directory }} 🎨
+        shell: Rscript {0}
+        run: |
+          options(repos = c("pharmaverse"="https://pharmaverse.r-universe.dev", "CRAN"="https://cloud.r-project.org"))
           rsconnect::setAccountInfo(
             name = "${{ env.SHINYAPPSIO_ACCOUNT }}",
             token = "${{ secrets.SHINYAPPSIO_TOKEN }}",
             secret = "${{ secrets.SHINYAPPSIO_SECRET }}",
             server = "shinyapps.io"
           )
-          rsconnect::writeManifest(
-            appFiles = "app.R"
-          )
           rsconnect::deployApp(
-            appFileManifest = "manifest.json",
+            appDir = "./${{ github.event.repository.name }}/${{ matrix.directory }}",
             appName = rsconnect::generateAppName("${{ matrix.directory }}"),
             appTitle = "${{ matrix.directory }}",
             account = "${{ env.SHINYAPPSIO_ACCOUNT }}",
