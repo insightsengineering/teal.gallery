@@ -29,6 +29,9 @@ jobs:
       image: ghcr.io/insightsengineering/rstudio_4.3.1_bioc_3.17:latest
     if: >
       !contains(github.event.commits[0].message, '[skip deploy]')
+    strategy:
+      matrix:
+        directory: ["exploratory"]
     steps:
       - name: Checkout repo 🛎
         uses: actions/checkout@v3
@@ -53,21 +56,49 @@ jobs:
           )
           RPROFILE
 
-      - name: Deploy apps 🖨 ${{ github.event.repository.name }} 🎨
+      - name: Extract R version from lockfile
+        run: printf 'R_VERSION=%s\n' "$(jq --raw-output .R.Version ${{ matrix.directory }}/renv.lock)" >> $GITHUB_ENV
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: ${{ env.R_VERSION }}
+
+      - name: Setup system dependencies
         run: |
-          Sys.setenv(GITHUB_PAT="${{ secrets.GITHUB_TOKEN }}")
-          devtools::install_local(
-            ".",
-            upgrade = "never",
-            dependencies = TRUE
-          )
-          teal.gallery::deploy_all_apps(
-            api_key = "${{ secrets.SHINYAPPSIO_TOKEN }}",
-            api_secret = "${{ secrets.SHINYAPPSIO_SECRET }}",
-            title_prefix = "NEST",
-            title_suffix = "${{ github.ref_name }}",
-            server = "https://${{ env.SHINYAPPSIO_ACCOUNT }}.shinyapps.io",
-            create_manifest = TRUE
-          )
-        working-directory: ${{ github.event.repository.name }}
+          sudo apt-get update
+          sudo apt-get install --yes \
+            libcurl4-openssl-dev \
+            libgdal-dev \
+            libproj-dev \
+            libudunits2-dev
+
+      - name: Deploy apps 🖨 ${{ matrix.directory }} 🎨
         shell: Rscript {0}
+        run: |
+          install.packages(c('renv', 'rsconnect'))
+          install.packages(
+            renv::dependencies("${{ matrix.directory }}")$Package,
+            repos = c('https://pharmaverse.r-universe.dev', 'https://cloud.r-project.org')
+          )
+          rsconnect::setAccountInfo(
+            name = "${{ env.SHINYAPPSIO_ACCOUNT }}",
+            token = "${{ secrets.SHINYAPPSIO_TOKEN }}",
+            secret = "${{ secrets.SHINYAPPSIO_SECRET }}",
+            server = "shinyapps.io"
+          )
+          rsconnect::writeManifest(
+            appDir = "${{ matrix.directory }}",
+            appFiles = "app.R"
+          )
+          rsconnect::deployApp(
+            appDir = "${{ matrix.directory }}",
+            appFileManifest = "manifest.json",
+            appName = rsconnect::generateAppName("${{ matrix.directory }}"),
+            appTitle = "${{ matrix.directory }}",
+            account = "${{ env.SHINYAPPSIO_ACCOUNT }}",
+            upload = TRUE,
+            logLevel = "normal",
+            lint = FALSE,
+            forceUpdate = TRUE
+          )
