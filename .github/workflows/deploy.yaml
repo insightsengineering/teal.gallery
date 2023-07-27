@@ -17,6 +17,7 @@ concurrency:
 
 env:
   SHINYAPPSIO_ACCOUNT: genentech
+  APP_PREFIX: NEST
 
 jobs:
   deploy:
@@ -30,29 +31,63 @@ jobs:
     if: >
       !contains(github.event.commits[0].message, '[skip deploy]')
     strategy:
+      fail-fast: false
       matrix:
         directory:
           [
             "RNA-seq",
-            "basic-teal"
+            "basic-teal",
+            "efficacy",
+            "exploratory",
+            "longitudinal",
+            "early-dev",
+            "patient-profile",
+            "python",
+            "safety",
+          ]
+        repository:
+          [
+            "https://insightsengineering.r-universe.dev",
+            "https://pharmaverse.r-universe.dev"
           ]
     steps:
+      - name: Set APP_SUFFIX
+        run: |
+          if [ "${{ matrix.repository }}" = "https://insightsengineering.r-universe.dev" ]; then
+            echo "APP_SUFFIX=release" >> $GITHUB_ENV
+          else
+            echo "APP_SUFFIX=main" >> $GITHUB_ENV
+          fi
+
       - name: Checkout repo 🛎
         uses: actions/checkout@v3
         with:
           path: ${{ github.event.repository.name }}
 
+      - name: Check if cypress test exists
+        id: find-cypress
+        run: |
+          if [ -d ${{ github.event.repository.name }}/${{ matrix.directory }}/tests/cypress ]; then
+            echo "has-cypress-tests=true" >> $GITHUB_OUTPUT
+          else
+            echo "Skipping frontend tests because cypress directory does not exist."
+            echo "has-cypress-tests=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Setup system dependencies for cypress
+        if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         run: >
           apt-get update && apt-get install --yes
           libgtk2.0-0 libgbm-dev libnotify-dev libgconf-2-4 xvfb
 
       - name: Setup Node
         uses: actions/setup-node@v3
+        if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         with:
           node-version: 16
 
-      - name: Set-up npm packages
+      - name: Setup npm packages
+        if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         shell: bash
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}/js
         run: |
@@ -68,14 +103,14 @@ jobs:
           install.packages(
             renv::dependencies()$Package,
             repos = c(
-              Pharmaverse = "https://pharmaverse.r-universe.dev",
+              Pharmaverse = "${{ matrix.repository }}",
               CRAN = "https://cloud.r-project.org",
               BioC = BiocManager::repositories()
             )
           )
 
       - name: Front end test to check if the app works fine
-        if: always()
+        if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         uses: cypress-io/github-action@v2
         with:
           working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}/js
@@ -88,7 +123,7 @@ jobs:
         run: |
           options(
             repos = c(
-              Pharmaverse = "https://pharmaverse.r-universe.dev",
+              Pharmaverse = "${{ matrix.repository }}",
               CRAN = "https://cloud.r-project.org",
               BioC = BiocManager::repositories()
             )
@@ -101,8 +136,8 @@ jobs:
           )
           rsconnect::deployApp(
             appDir = "./${{ github.event.repository.name }}/${{ matrix.directory }}",
-            appName = rsconnect::generateAppName("${{ matrix.directory }}"),
-            appTitle = "${{ matrix.directory }}",
+            appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.APP_SUFFIX }}"),
+            appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.APP_SUFFIX }}",
             account = "${{ env.SHINYAPPSIO_ACCOUNT }}",
             upload = TRUE,
             logLevel = "normal",
