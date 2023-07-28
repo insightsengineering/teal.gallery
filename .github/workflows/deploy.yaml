@@ -115,7 +115,8 @@ jobs:
         with:
           working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}/js
           start: npm run run-app
-          wait-on-timeout: 240
+          wait-on: 'http://localhost:3333'
+          wait-on-timeout: 500
           project: ../tests
 
       - name: Deploy 🖨 ${{ matrix.directory }} 🎨
