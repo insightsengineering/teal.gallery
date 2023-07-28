@@ -50,6 +50,10 @@ manifest.json
 /doc/
 /Meta/
 docs/
+rsconnect/
 
 # VSCode
 .VSCode
+
+# Markdown generated files
+*/README.html

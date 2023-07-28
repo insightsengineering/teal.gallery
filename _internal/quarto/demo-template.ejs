@@ -1,0 +1,29 @@
+
+```{=html}
+Click on the card to open it. Click on the icon <i class="bi-file-earmark-text"></i> to see further instructions. Click on the icon <i class="bi-code-slash"></i> to see the source code.
+<% for (const item of items) { %>
+<h4><%= item.category %></h4>
+<div class="cards-container" style="column-gap: 10px;">
+<!-- Adding the missing image so that quarto will copy it inside _site -->
+<div style="display:none"><img src="assets/www/missing.png"></div>
+<% for (const app of item.apps) { %>
+  <div class="card" <%= metadataAttrs(app) %>>
+    <div class="app-details">
+      <a href="<%= item.deployment_server %>NEST_<%= app.title %>_main" class="listing-title"><%= app.title %></a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/<%= app.title %>/app.R" title="View source code" 
+        class="source-code card-text float-end inline-block">
+        <i class="bi-code-slash"></i>
+      </a>
+      <a href="https://github.com/insightsengineering/teal.gallery/blob/main/<%= app.title %>/README.md" title="View readme file" 
+        class="readme-file card-text float-end inline-block" style="margin-right: 5px;">
+        <i class="bi-file-earmark-text"></i>
+      </a>
+    </div>
+    <a href="<%= item.deployment_server %>NEST_<%= app.title %>_main">
+      <img src="assets/img/<%= app.title %>.gif" alt="Animation of the <%= app.title %> app" onerror="this.src='assets/www/missing.png'"/>
+    </a>    
+  </div>
+<% } %>
+</div>
+<% } %>
+```
