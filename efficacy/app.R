@@ -12,7 +12,7 @@ options(shiny.useragg = FALSE)
 # code>
 ## Generate Data
 ADSL <- synthetic_cdisc_data("latest")$adsl
-adsl_labels <- teal.widgets::formatters_var_labels(ADSL, fill = FALSE)
+adsl_labels <- teal.data::formatters_var_labels(ADSL, fill = FALSE)
 
 char_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.character)))
 
@@ -29,17 +29,17 @@ ADSL <- ADSL %>%
   ) %>%
   mutate_at(char_vars_asl, factor)
 
-teal.widgets::formatters_var_labels(ADSL) <- adsl_labels
+teal.data::formatters_var_labels(ADSL) <- adsl_labels
 
 ADTTE <- synthetic_cdisc_data("latest")$adtte
 
 ADRS <- synthetic_cdisc_data("latest")$adrs
-adrs_labels <- teal.widgets::formatters_var_labels(ADRS, fill = FALSE)
+adrs_labels <- teal.data::formatters_var_labels(ADRS, fill = FALSE)
 ADRS <- filter(ADRS, PARAMCD == "BESRSPI" | AVISIT == "FOLLOW UP")
-teal.widgets::formatters_var_labels(ADRS) <- adrs_labels
+teal.data::formatters_var_labels(ADRS) <- adrs_labels
 
 ADQS <- synthetic_cdisc_data("latest")$adqs
-adqs_labels <- teal.widgets::formatters_var_labels(ADQS, fill = FALSE)
+adqs_labels <- teal.data::formatters_var_labels(ADQS, fill = FALSE)
 ADQS <- ADQS %>%
   filter(ABLFL != "Y" & ABLFL2 != "Y") %>%
   filter(AVISIT %in% c("WEEK 1 DAY 8", "WEEK 2 DAY 15", "WEEK 3 DAY 22")) %>%
@@ -50,7 +50,7 @@ ADQS <- ADQS %>%
       as.numeric() %>%
       as.factor()
   )
-teal.widgets::formatters_var_labels(ADQS) <- adqs_labels
+teal.data::formatters_var_labels(ADQS) <- adqs_labels
 
 # <code
 
@@ -123,7 +123,7 @@ app <- init(
   data = cdisc_data(
     cdisc_dataset("ADSL", ADSL,
       code = 'ADSL <- synthetic_cdisc_data("latest")$adsl
-                                        adsl_labels <- teal.widgets::formatters_var_labels(ADSL, fill = FALSE)
+                                        adsl_labels <- teal.data::formatters_var_labels(ADSL, fill = FALSE)
                                         adsl_labels <- c(adsl_labels,
                                           AGEGR1 = "Age Group"
                                         )
@@ -134,16 +134,16 @@ app <- init(
                                           ))
                                         ) %>%
                                         mutate_at(char_vars_asl, factor)
-                                        teal.widgets::formatters_var_labels(ADSL) <- adsl_labels',
+                                        teal.data::formatters_var_labels(ADSL) <- adsl_labels',
       vars = list(char_vars_asl = char_vars_asl)
     ),
     cdisc_dataset("ADRS", ADRS, code = 'ADRS <- synthetic_cdisc_data("latest")$adrs
-                                        adrs_labels <- teal.widgets::formatters_var_labels(ADRS, fill = FALSE)
+                                        adrs_labels <- teal.data::formatters_var_labels(ADRS, fill = FALSE)
                                         ADRS <- filter(ADRS, PARAMCD == "BESRSPI" | AVISIT == "FOLLOW UP")
-                                        teal.widgets::formatters_var_labels(ADRS) <- adrs_labels'),
+                                        teal.data::formatters_var_labels(ADRS) <- adrs_labels'),
     cdisc_dataset("ADTTE", ADTTE, code = "ADTTE <- synthetic_cdisc_data(\"latest\")$adtte"),
     cdisc_dataset("ADQS", ADQS, code = 'ADQS <- synthetic_cdisc_data("latest")$adqs
-                                        adqs_labels <- teal.widgets::formatters_var_labels(ADQS, fill = FALSE)
+                                        adqs_labels <- teal.data::formatters_var_labels(ADQS, fill = FALSE)
                                         ADQS <- ADQS %>%
                                           filter(ABLFL != "Y" & ABLFL2 != "Y") %>%
                                           filter(AVISIT %in% c("WEEK 1 DAY 8", "WEEK 2 DAY 15", "WEEK 3 DAY 22")) %>%
@@ -154,7 +154,7 @@ app <- init(
                                               as.numeric() %>%
                                               as.factor()
                                           )
-                                        teal.widgets::formatters_var_labels(ADQS) <- adqs_labels')
+                                        teal.data::formatters_var_labels(ADQS) <- adqs_labels')
   ),
   modules = modules(
     tm_front_page(

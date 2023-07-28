@@ -13,26 +13,26 @@ options(shiny.useragg = FALSE)
 ADSL <- synthetic_cdisc_data("latest")$adsl
 
 # derive ADSL treatment duration
-adsl_labels <- teal.widgets::formatters_var_labels(ADSL, fill = FALSE)
+adsl_labels <- teal.data::formatters_var_labels(ADSL, fill = FALSE)
 ADSL <- ADSL %>%
   mutate(
     TRTDURD = as.numeric(as.Date(TRTEDTM) - as.Date(TRTSDTM)) + 1,
     DTHFL = ifelse(!is.na(DTHDT), "Y", NA),
     EOSSTT = factor(EOSSTT, levels = c("COMPLETED", "ONGOING", "DISCONTINUED"))
   ) %>%
-  teal.widgets::formatters_var_relabel(
+  teal.data::formatters_var_relabel(
     TRTDURD = "Treatment Duration in Days",
     DTHFL = "Death Flag",
     DCSREAS = "Reason for Study Discontinuation",
     EOSSTT = "End of Study Status"
   ) %>%
   droplevels()
-teal.widgets::formatters_var_labels(ADSL)[c(names(adsl_labels))] <- adsl_labels
+teal.data::formatters_var_labels(ADSL)[c(names(adsl_labels))] <- adsl_labels
 
 ADAE <- synthetic_cdisc_data("latest")$adae
 
 # derive common flags for AEs
-adae_labels <- teal.widgets::formatters_var_labels(ADAE, fill = FALSE)
+adae_labels <- teal.data::formatters_var_labels(ADAE, fill = FALSE)
 ADAE <- ADAE %>%
   mutate_at(c("AESOC", "AEBODSYS", "AEHLT", "AEDECOD", "AETERM", "AELLT"), as.character) %>%
   mutate(
@@ -45,7 +45,7 @@ ADAE <- ADAE %>%
     ASTDT = as.Date(ASTDTM),
     AENDT = as.Date(AENDTM)
   ) %>%
-  teal.widgets::formatters_var_relabel(
+  teal.data::formatters_var_relabel(
     RELFL = "Related AE",
     CTC35FL = "Grade >=3 AE",
     SERFL = "Serious AE",
@@ -70,7 +70,7 @@ ADCM <- ADCM %>%
     ASTDT = as.Date(ASTDTM),
     AENDT = as.Date(AENDTM)
   ) %>%
-  teal.widgets::formatters_var_relabel(
+  teal.data::formatters_var_relabel(
     ASTDT = "Analysis Start Date",
     AENDT = "Analysis End Date"
   )
@@ -83,7 +83,7 @@ ADEX <- ADEX %>%
     ASTDT = as.Date(ASTDTM),
     AENDT = as.Date(AENDTM)
   ) %>%
-  teal.widgets::formatters_var_relabel(
+  teal.data::formatters_var_relabel(
     ASTDT = "Analysis Start Date",
     AENDT = "Analysis End Date"
   )
@@ -91,7 +91,7 @@ ADEX <- ADEX %>%
 ADTR <- synthetic_cdisc_data("latest")$adtr
 
 # process ADTR
-adtr_labels <- teal.widgets::formatters_var_labels(ADTR, fill = FALSE)
+adtr_labels <- teal.data::formatters_var_labels(ADTR, fill = FALSE)
 ADTR <- ADTR %>%
   mutate(
     PCHG = ifelse(AVISIT == "BASELINE", 0, PCHG),
@@ -100,11 +100,11 @@ ADTR <- ADTR %>%
     AVALC = ifelse(AVISIT == "BASELINE", as.character(BASE), AVALC)
   ) %>%
   filter(AVISIT != "SCREENING")
-teal.widgets::formatters_var_labels(ADTR) <- adtr_labels
+teal.data::formatters_var_labels(ADTR) <- adtr_labels
 
 ADTRWF <- ADTR %>%
   filter(AVISIT != "BASELINE")
-teal.widgets::formatters_var_labels(ADTRWF) <- teal.widgets::formatters_var_labels(ADTR, fill = FALSE)
+teal.data::formatters_var_labels(ADTRWF) <- teal.data::formatters_var_labels(ADTR, fill = FALSE)
 
 
 # process ADRS
@@ -113,12 +113,12 @@ ADRSSWIM <- synthetic_cdisc_data("latest")$adrs %>%
   arrange(USUBJID)
 
 ADRS <- synthetic_cdisc_data("latest")$adrs
-adrs_labels <- teal.widgets::formatters_var_labels(ADRS, fill = FALSE)
+adrs_labels <- teal.data::formatters_var_labels(ADRS, fill = FALSE)
 ADRS <- ADRS %>%
   filter(PARAMCD %in% c("BESRSPI", "INVET")) %>%
   mutate(ADT = as.Date(ADTM)) %>%
   droplevels()
-teal.widgets::formatters_var_labels(ADRS) <- c(adrs_labels, "Analysis Date")
+teal.data::formatters_var_labels(ADRS) <- c(adrs_labels, "Analysis Date")
 
 ADLB <- synthetic_cdisc_data("latest")$adlb
 
@@ -128,7 +128,7 @@ ADLB <- ADLB %>%
     ADT = as.Date(ADTM),
     LBSTRESN = as.numeric(LBSTRESC)
   ) %>%
-  teal.widgets::formatters_var_relabel(
+  teal.data::formatters_var_relabel(
     ADT = "Analysis Date",
     LBSTRESN = "Numeric Result/Finding in Standard Units"
   )
@@ -179,7 +179,7 @@ cs_paramcd_tr <- choices_selected(
   selected = "SLDINV"
 )
 
-adsl_labels <- teal.widgets::formatters_var_labels(ADSL)
+adsl_labels <- teal.data::formatters_var_labels(ADSL)
 fact_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.factor)))
 
 date_vars_asl <- names(ADSL)[vapply(ADSL, function(x) inherits(x, c("Date", "POSIXct", "POSIXlt")), logical(1))]
@@ -245,21 +245,21 @@ adsl <- cdisc_dataset(
   dataname = "ADSL",
   x = ADSL,
   code = 'ADSL <- synthetic_cdisc_data("latest")$adsl
-          adsl_labels <- teal.widgets::formatters_var_labels(ADSL, fill = FALSE)
+          adsl_labels <- teal.data::formatters_var_labels(ADSL, fill = FALSE)
           ADSL <- ADSL %>%
               mutate(
                 TRTDURD = as.numeric(as.Date(TRTEDTM) - as.Date(TRTSDTM)) + 1,
                 DTHFL = ifelse(!is.na(DTHDT), "Y", NA),
                 EOSSTT = factor(EOSSTT, levels = c("COMPLETED", "ONGOING", "DISCONTINUED"))
               ) %>%
-              teal.widgets::formatters_var_relabel(
+              teal.data::formatters_var_relabel(
                 TRTDURD = "Treatment Duration in Days",
                 DTHFL = "Death Flag",
                 DCSREAS = "Reason for Study Discontinuation",
                 EOSSTT = "End of Study Status"
               ) %>%
               droplevels()
-          teal.widgets::formatters_var_labels(ADSL)[c(names(adsl_labels))] <- adsl_labels'
+          teal.data::formatters_var_labels(ADSL)[c(names(adsl_labels))] <- adsl_labels'
 )
 
 adae <- cdisc_dataset(
@@ -283,7 +283,7 @@ adae <- cdisc_dataset(
               ASTDT = as.Date(ASTDTM),
               AENDT = as.Date(AENDTM)
             ) %>%
-            teal.widgets::formatters_var_relabel(
+            teal.data::formatters_var_relabel(
               RELFL = "Related AE",
               CTC35FL = "Grade >=3 AE",
               SERFL = "Serious AE",
@@ -311,7 +311,7 @@ adcm <- cdisc_dataset(
               ASTDT = as.Date(ASTDTM),
               AENDT = as.Date(AENDTM)
             ) %>%
-            teal.widgets::formatters_var_relabel(
+            teal.data::formatters_var_relabel(
               ASTDT = "Analysis Start Date",
               AENDT = "Analysis End Date"
             )',
@@ -327,7 +327,7 @@ adex <- cdisc_dataset(
               ASTDT = as.Date(ASTDTM),
               AENDT = as.Date(AENDTM)
             ) %>%
-            teal.widgets::formatters_var_relabel(
+            teal.data::formatters_var_relabel(
               ASTDT = "Analysis Start Date",
               AENDT = "Analysis End Date"
             )',
@@ -339,7 +339,7 @@ adtr <- cdisc_dataset(
   x = ADTR,
   keys = c("STUDYID", "USUBJID", "PARAMCD", "AVISIT"),
   code = 'ADTR <- synthetic_cdisc_data("latest")$adtr
-          adtr_labels <- teal.widgets::formatters_var_labels(ADTR, fill = FALSE)
+          adtr_labels <- teal.data::formatters_var_labels(ADTR, fill = FALSE)
           ADTR <- ADTR %>%
             mutate(
               PCHG = ifelse(AVISIT == "BASELINE", 0, PCHG),
@@ -348,7 +348,7 @@ adtr <- cdisc_dataset(
               AVALC = ifelse(AVISIT == "BASELINE", as.character(BASE), AVALC)
             ) %>%
             dplyr::filter(AVISIT != "SCREENING")
-          teal.widgets::formatters_var_labels(ADTR) <- adtr_labels',
+          teal.data::formatters_var_labels(ADTR) <- adtr_labels',
   var = list(ADSL = adsl)
 )
 
@@ -358,7 +358,7 @@ adtrwf <- cdisc_dataset(
   keys = c("STUDYID", "USUBJID", "PARAMCD", "AVISIT"),
   code = 'ADTRWF <- ADTR %>%
             dplyr::filter(AVISIT != "BASELINE")
-          teal.widgets::formatters_var_labels(ADTRWF) <- teal.widgets::formatters_var_labels(ADTR, fill = FALSE)',
+          teal.data::formatters_var_labels(ADTRWF) <- teal.data::formatters_var_labels(ADTR, fill = FALSE)',
   vars = list(ADTR = adtr)
 )
 
@@ -366,12 +366,12 @@ adrs <- cdisc_dataset(
   dataname = "ADRS",
   x = ADRS,
   code = 'ADRS <- synthetic_cdisc_data("latest")$adrs
-          adrs_labels <- teal.widgets::formatters_var_labels(ADRS, fill = FALSE)
+          adrs_labels <- teal.data::formatters_var_labels(ADRS, fill = FALSE)
           ADRS <- ADRS %>%
             filter(PARAMCD %in% c("BESRSPI", "INVET"))  %>%
             mutate(ADT = as.Date(ADTM)) %>%
             droplevels()
-        teal.widgets::formatters_var_labels(ADRS) <- c(adrs_labels, "Analysis Date")',
+        teal.data::formatters_var_labels(ADRS) <- c(adrs_labels, "Analysis Date")',
   vars = list(ADSL = adsl)
 )
 
@@ -394,7 +394,7 @@ adlb <- cdisc_dataset(
               ADT = as.Date(ADTM),
               LBSTRESN = as.numeric(LBSTRESC)
             ) %>%
-            teal.widgets::formatters_var_relabel(
+            teal.data::formatters_var_relabel(
               ADT = "Analysis Date",
               LBSTRESN = "Numeric Result/Finding in Standard Units"
             )',
