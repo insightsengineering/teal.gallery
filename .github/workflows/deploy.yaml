@@ -74,11 +74,11 @@ jobs:
             echo "has-cypress-tests=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Setup system dependencies for cypress
+      - name: Setup system dependencies for cypress and python app
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         run: >
           apt-get update && apt-get install --yes
-          libgtk2.0-0 libgbm-dev libnotify-dev libgconf-2-4 xvfb
+          libgtk2.0-0 libgbm-dev libnotify-dev libgconf-2-4 xvfb python3.10-venv
 
       - name: Setup Node
         uses: actions/setup-node@v3
