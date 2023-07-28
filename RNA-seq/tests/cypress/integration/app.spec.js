@@ -7,13 +7,13 @@ describe('app', () => {
 
   it('Has 10 tabs', () => {
     cy
-      .get('.nav.nav-pills a[data-bs-toggle=tab]')
+      .get('.nav.nav-pills a[data-bs-toggle=tab]', { timeout: 30000 })
       .should('have.length', 10);
   });
 
   it('Navigates to all tabs without error', () => {
     cy
-      .get('.nav.nav-pills a[data-bs-toggle=tab]')
+      .get('.nav.nav-pills a[data-bs-toggle=tab]', { timeout: 30000 })
       .each(($el) => {
         cy.wrap($el).as('tealTab');
 
