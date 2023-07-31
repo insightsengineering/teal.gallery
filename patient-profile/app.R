@@ -23,7 +23,7 @@ ADCM$CMDOSFRQ <- "CMDOSFRQ"
 ADCM$CMASTDTM <- ADCM$ASTDTM
 ADCM$CMAENDTM <- ADCM$AENDTM
 
-formatters::var_labels(
+teal.data::col_labels(
   ADCM[c("CMINDC", "CMTRT", "ASTDY", "AENDY")]
 ) <- c(
   "Indication",
@@ -34,7 +34,7 @@ formatters::var_labels(
 
 ## Modify ADHM
 ADMH[["MHDISTAT"]] <- "ONGOING"
-formatters::var_labels(ADMH[c("MHDISTAT")]) <- c("Status of Disease")
+teal.data::col_labels(ADMH[c("MHDISTAT")]) <- c("Status of Disease")
 
 ## Define variable inputs
 aeterm_input <- data_extract_spec(
@@ -93,7 +93,7 @@ app <- init(
     cdisc_dataset("ADAE", ADAE, code = "ADAE <- synthetic_cdisc_data(\"latest\")$adae"),
     cdisc_dataset("ADMH", ADMH, code = "ADMH <- synthetic_cdisc_data(\"latest\")$admh
       ADMH[['MHDISTAT']] <- 'ONGOING'
-      formatters::var_labels(ADMH[c('MHDISTAT')]) <- c('Status of Disease')"),
+      teal.data::col_labels(ADMH[c('MHDISTAT')]) <- c('Status of Disease')"),
     cdisc_dataset("ADCM", ADCM, code = 'ADCM <- synthetic_cdisc_data(\"latest\")$adcm
       ADCM$CMINDC <- paste0("Indication_", as.numeric(ADCM$CMDECOD))
       ADCM$CMDOSE <- 1
@@ -103,7 +103,7 @@ app <- init(
       ADCM$CMDOSFRQ <- "CMDOSFRQ"
       ADCM$CMASTDTM <- ADCM$ASTDTM
       ADCM$CMAENDTM <- ADCM$AENDTM
-      formatters::var_labels(
+      teal.data::col_labels(
         ADCM[c("CMINDC", "CMTRT", "ASTDY", "AENDY")]) <- c(
           "Indication",
           "Reported Name of Drug, Med, or Therapy",
