@@ -31,8 +31,8 @@ ADAETTE <- ADAETTE %>%
     grepl("TOT", .data$PARAMCD, fixed = TRUE) ~ as.integer(.data$AVAL),
     TRUE ~ as.integer(is_event)
   )) %>%
-  teal.data::formatters_var_relabel(is_event = "Is an Event") %>%
-  teal.data::formatters_var_relabel(n_events = "Number of Events")
+  teal.data::col_relabel(is_event = "Is an Event") %>%
+  teal.data::col_relabel(n_events = "Number of Events")
 ADAETTE_AE <-
   filter(ADAETTE, grepl("TOT", .data$PARAMCD, fixed = TRUE)) %>% select(-"AVAL")
 ADAETTE_OTH <-
@@ -47,7 +47,7 @@ ADAETTE_AE <-
 ADAETTE <- rbind(ADAETTE_AE, ADAETTE_OTH)
 
 ADEX <- synthetic_cdisc_data("latest")$adex
-ADEX_labels <- teal.data::formatters_var_labels(ADEX, fill = FALSE)
+ADEX_labels <- teal.data::col_labels(ADEX, fill = FALSE)
 # Below steps are done to simulate data with TDURD parameter as it is not in the ADEX data from scda package
 set.seed(1, kind = "Mersenne-Twister")
 ADEX <- ADEX %>%
@@ -67,7 +67,7 @@ ADEX <- ADEX %>%
 ADEX <- ADEX %>%
   filter(PARCAT1 == "OVERALL" &
     PARAMCD %in% c("TDOSE", "TNDOSE", "TDURD"))
-teal.data::formatters_var_labels(ADEX) <- ADEX_labels
+teal.data::col_labels(ADEX) <- ADEX_labels
 
 ADLB <- synthetic_cdisc_data("latest")$adlb
 
@@ -76,7 +76,7 @@ ADEG <- synthetic_cdisc_data("latest")$adeg
 # For real data, ADVS needs some preprocessing like group different ANRIND and BNRIND into abnormal
 ADVS <- synthetic_cdisc_data("latest")$advs %>%
   mutate(ONTRTFL = ifelse(AVISIT %in% c("SCREENING", "BASELINE"), "", "Y")) %>%
-  teal.data::formatters_var_relabel(ONTRTFL = "On Treatment Record Flag") %>%
+  teal.data::col_relabel(ONTRTFL = "On Treatment Record Flag") %>%
   mutate(ANRIND = as.character(ANRIND), BNRIND = as.character(BNRIND)) %>%
   mutate(
     ANRIND = case_when(
@@ -114,7 +114,7 @@ add_event_flags <- function(dat) {
       TMP_SMQ02 = !is.na(SMQ02NAM),
       TMP_CQ01 = !is.na(CQ01NAM)
     ) %>%
-    teal.data::formatters_var_relabel(
+    teal.data::col_relabel(
       TMPFL_SER = "Serious AE",
       TMPFL_REL = "Related AE",
       TMPFL_GR5 = "Grade 5 AE",
@@ -159,7 +159,7 @@ ADAE_code <- paste(
   "      TMP_SMQ02 = !is.na(SMQ02NAM),",
   "      TMP_CQ01 = !is.na(CQ01NAM)",
   "    ) %>%",
-  "    teal.data::formatters_var_relabel(",
+  "    teal.data::col_relabel(",
   '      TMPFL_SER = "Serious AE",',
   '      TMPFL_REL = "Related AE",',
   '      TMPFL_GR5 = "Grade 5 AE",',
@@ -186,8 +186,8 @@ ADAETTE_code <-
     '    grepl("TOT", .data$PARAMCD, fixed = TRUE) ~ as.integer(.data$AVAL),',
     "    TRUE ~ as.integer(is_event)",
     "  )) %>%",
-    '  teal.data::formatters_var_relabel(is_event = "Is an Event") %>%',
-    '  teal.data::formatters_var_relabel(n_events = "Number of Events")',
+    '  teal.data::col_relabel(is_event = "Is an Event") %>%',
+    '  teal.data::col_relabel(n_events = "Number of Events")',
     "ADAETTE_AE <-",
     '  filter(ADAETTE, grepl("TOT", .data$PARAMCD, fixed = TRUE)) %>% select(-"AVAL")',
     "ADAETTE_OTH <-",
@@ -206,7 +206,7 @@ ADAETTE_code <-
 
 ADEX_code <- paste(
   'ADEX <- synthetic_cdisc_data("latest")$adex',
-  "ADEX_labels <- teal.data::formatters_var_labels(ADEX, fill = FALSE)",
+  "ADEX_labels <- teal.data::col_labels(ADEX, fill = FALSE)",
   'set.seed(1, kind = "Mersenne-Twister")',
   "ADEX <- ADEX %>%",
   "  distinct(USUBJID, .keep_all = TRUE) %>%",
@@ -225,7 +225,7 @@ ADEX_code <- paste(
   "ADEX <- ADEX %>%",
   '  filter(PARCAT1 == "OVERALL" &',
   '    PARAMCD %in% c("TDOSE", "TNDOSE", "TDURD"))',
-  "teal.data::formatters_var_labels(ADEX) <- ADEX_labels",
+  "teal.data::col_labels(ADEX) <- ADEX_labels",
   sep = "\n",
   collapse = "\n"
 )
@@ -234,7 +234,7 @@ ADVS_code <-
   paste(
     'ADVS <- synthetic_cdisc_data("latest")$advs %>%',
     '  mutate(ONTRTFL = ifelse(AVISIT %in% c("SCREENING", "BASELINE"), "", "Y")) %>%',
-    '  teal.data::formatters_var_relabel(ONTRTFL = "On Treatment Record Flag") %>%',
+    '  teal.data::col_relabel(ONTRTFL = "On Treatment Record Flag") %>%',
     "  mutate(ANRIND = as.character(ANRIND), BNRIND = as.character(BNRIND)) %>%",
     "  mutate(",
     "    ANRIND = case_when(",
