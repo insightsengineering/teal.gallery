@@ -140,17 +140,6 @@ jobs:
           echo $status > ${{ github.event.repository.name }}/${{ matrix.directory }}_${{ env.APP_SUFFIX }}.json
           cat ${{ github.event.repository.name }}/${{ matrix.directory }}_${{ env.APP_SUFFIX }}.json
 
-      - name: Commit test status files
-        uses: EndBug/add-and-commit@v7
-        with:
-          author_name: GitHub Actions
-          author_email: actions@github.com
-          branch: test-stats
-          message: "Update test status for ${{ matrix.directory }}_${{ env.APP_SUFFIX }}"
-          add: "*${{ env.APP_SUFFIX }}.json"
-          cwd: ${{ github.event.repository.name }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Deploy 🖨 ${{ matrix.directory }} 🎨
         shell: Rscript {0}
         run: |
@@ -178,3 +167,15 @@ jobs:
             lint = FALSE,
             forceUpdate = TRUE
           )
+
+      - name: Commit test status files
+        uses: EndBug/add-and-commit@v7
+        continue-on-error: true
+        with:
+          author_name: GitHub Actions
+          author_email: actions@github.com
+          branch: test-stats
+          message: "Update test status for ${{ matrix.directory }}_${{ env.APP_SUFFIX }}"
+          add: "*${{ env.APP_SUFFIX }}.json"
+          cwd: ${{ github.event.repository.name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
