@@ -6,7 +6,12 @@
 ### Run the app yourself
 
     source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
-    restore_and_run("safety")
+
+    # Run the app after installing all the stable versions of teal dependencies from https://insightsengineering.r-universe.dev
+    restore_and_run("safety", package_repo = "https://insightsengineering.r-universe.dev")
+
+    # Run the app after installing all the beta versions of teal dependencies from https://pharmaverse.r-universe.dev
+    restore_and_run("safety", package_repo = "https://pharmaverse.r-universe.dev")
 
 ### View the deployed app
 
