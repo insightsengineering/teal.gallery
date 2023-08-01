@@ -9,7 +9,7 @@ on:
       - "*"
   workflow_dispatch:
   schedule:
-    - cron: '12 3 * * *'
+    - cron: "12 3 * * *"
 
 concurrency:
   group: publish-${{ github.event.pull_request.number || github.ref }}
@@ -48,7 +48,7 @@ jobs:
         repository:
           [
             "https://insightsengineering.r-universe.dev",
-            "https://pharmaverse.r-universe.dev"
+            "https://pharmaverse.r-universe.dev",
           ]
     steps:
       - name: Set APP_SUFFIX
@@ -115,7 +115,7 @@ jobs:
         with:
           working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}/js
           start: npm run run-app
-          wait-on: 'http://localhost:3333'
+          wait-on: "http://localhost:3333"
           wait-on-timeout: 500
           project: ../tests
 
@@ -137,6 +137,7 @@ jobs:
           )
           rsconnect::deployApp(
             appDir = "./${{ github.event.repository.name }}/${{ matrix.directory }}",
+            appFiles = "app.R",
             appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.APP_SUFFIX }}"),
             appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.APP_SUFFIX }}",
             account = "${{ env.SHINYAPPSIO_ACCOUNT }}",
