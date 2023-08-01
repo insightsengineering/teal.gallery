@@ -403,6 +403,18 @@ adlb <- cdisc_dataset(
 
 ## Setup App
 app <- teal::init(
+  data = cdisc_data(
+    adsl,
+    adae,
+    adex,
+    adcm,
+    adtr,
+    adtrwf,
+    adrs,
+    adrsswim,
+    adlb,
+    check = TRUE
+  ),
   modules = modules(
     module(
       label = "App Information",
