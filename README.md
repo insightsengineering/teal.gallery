@@ -28,8 +28,12 @@ Running the `restore_and_run("APP_NAME")` will run the `APP_NAME` by restoring t
 
 ```R
 source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
-# Assuming you want to run the "basic-teal" app. Refer to the list above to know which apps are possible
-restore_and_run("basic-teal")
+
+# Run the basic-teal app after installing all the stable versions of teal dependencies from https://insightsengineering.r-universe.dev
+restore_and_run("basic-teal", package_repo = "https://pharmaverse.r-universe.dev")
+
+# Run the basic-teal app after installing all the beta versions of teal dependencies from https://pharmaverse.r-universe.dev
+restore_and_run("basic-teal", package_repo = "https://pharmaverse.r-universe.dev")
 ```
 
 ## Development
@@ -40,8 +44,13 @@ All `teal` sample apps are wrapped into this package for the sake of portability
 
 Adding a sample app involves the following steps:
 
-1. Copy each sample app into a file named `app.R` into a sensible folder name inside it's own directory. The directory is also the `APP_NAME`.
-2. Make sure that `{renv}` is used for the teal app.
-3. Create a GIF recording ([KAP](https://getkap.co/) is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. (It can be done by recording using KAP in 1470x840 px and rendering 5fps and downsizing 33%). Place the GIF inside the `_internal/quarto/assets/img` direcxtory. Also, make sure that the name of the GIF is `APP_NAME.gif`
-4. Update the `_internal/quarto/demo-apps.yml` with a new `app/title`. This should be the `APP_NAME`.
-5. Run the `_internal/utils/generate_app_readme.R` to generate the readme for the app inside it's own directory.
+#### Hard requirements
+
+1. Copy each sample app into a file named `app.R` into a sensible folder name inside it's own directory. The directory has to be named with the `APP_NAME`.
+2. Update the `_internal/quarto/demo-apps.yml` with a new `app/title`. This should be the `APP_NAME`.
+3. Run the `_internal/utils/generate_app_readme.R` to generate the readme for the app inside it's own directory.
+
+#### Optional/Soft requirements
+
+1. Create a GIF recording ([KAP](https://getkap.co/) is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. (It can be done by recording using KAP in 1470x840 px and rendering 5fps and downsizing 33%). Place the GIF inside the `_internal/quarto/assets/img` direcxtory. Also, make sure that the name of the GIF is `APP_NAME.gif`
+2. Add front-end tests with the help of cypress. Copy the contents of the `js` directory within some other app's directory inside your app directory to get the node dependencies. Place the cypress tests inside the `tests/cypress` inside your app's directory. Please refer to an existing app's tests so that the `.github/deploy.yaml` will automaticall run the cypress tests.
