@@ -8,15 +8,15 @@ A gallery of sample apps based on the [`teal` framework](https://github.com/insi
 
 ### Development version
 
-- [RNA-seq](https://genentech.shinyapps.io/NEST_RNA-seq_main/)
-- [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_main/)
-- [efficacy](https://genentech.shinyapps.io/NEST_efficacy_main/)
-- [exploratory](https://genentech.shinyapps.io/NEST_exploratory_main/)
-- [longitudinal](https://genentech.shinyapps.io/NEST_longitudinal_main/)
-- [early-dev](https://genentech.shinyapps.io/NEST_early-dev_main/)
-- [patient-profile](https://genentech.shinyapps.io/NEST_patient-profile_main/)
-- [python](https://genentech.shinyapps.io/NEST_python_main/)
-- [safety](https://genentech.shinyapps.io/NEST_safety_main/)
+- [RNA-seq](https://genentech.shinyapps.io/NEST_RNA-seq_main/) ![Frontend Test Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/insightsengineering/teal.gallery/test-stats/RNA-seq_main.json)
+- [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_main/) ![Frontend Test Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/insightsengineering/teal.gallery/test-stats/basic-teal_main.json)
+- [efficacy](https://genentech.shinyapps.io/NEST_efficacy_main/) ![Frontend Test Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/insightsengineering/teal.gallery/test-stats/efficacy_main.json)
+- [exploratory](https://genentech.shinyapps.io/NEST_exploratory_main/) ![Frontend Test Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/insightsengineering/teal.gallery/test-stats/exploratory_main.json)
+- [longitudinal](https://genentech.shinyapps.io/NEST_longitudinal_main/) ![Frontend Test Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/insightsengineering/teal.gallery/test-stats/longitudinal_main.json)
+- [early-dev](https://genentech.shinyapps.io/NEST_early-dev_main/) ![Frontend Test Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/insightsengineering/teal.gallery/test-stats/early-dev_main.json)
+- [patient-profile](https://genentech.shinyapps.io/NEST_patient-profile_main/) ![Frontend Test Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/insightsengineering/teal.gallery/test-stats/patient-profile_main.json)
+- [python](https://genentech.shinyapps.io/NEST_python_main/) ![Frontend Test Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/insightsengineering/teal.gallery/test-stats/python_main.json)
+- [safety](https://genentech.shinyapps.io/NEST_safety_main/) ![Frontend Test Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/insightsengineering/teal.gallery/test-stats/safety_main.json)
 
 ## Running the apps
 

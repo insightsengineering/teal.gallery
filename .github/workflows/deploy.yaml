@@ -9,7 +9,7 @@ on:
       - "*"
   workflow_dispatch:
   schedule:
-    - cron: '12 3 * * *'
+    - cron: "12 3 * * *"
 
 concurrency:
   group: publish-${{ github.event.pull_request.number || github.ref }}
@@ -48,7 +48,7 @@ jobs:
         repository:
           [
             "https://insightsengineering.r-universe.dev",
-            "https://pharmaverse.r-universe.dev"
+            "https://pharmaverse.r-universe.dev",
           ]
     steps:
       - name: Set APP_SUFFIX
@@ -110,14 +110,46 @@ jobs:
           )
 
       - name: Front end test to check if the app works fine
+        id: front-end-test
+        continue-on-error: true
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         uses: cypress-io/github-action@v2
         with:
           working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}/js
           start: npm run run-app
-          wait-on: 'http://localhost:3333'
+          wait-on: "http://localhost:3333"
           wait-on-timeout: 500
           project: ../tests
+
+      - name: Generate skip status file
+        if: steps.find-cypress.outputs.has-cypress-tests == 'false'
+        run: |
+          echo '{"schemaVersion": 1, "label": "Tests", "message": "skip", "color": "blue"}' > ${{ github.event.repository.name }}/${{ matrix.directory }}_${{ env.APP_SUFFIX }}.json
+          cat ${{ github.event.repository.name }}/${{ matrix.directory }}_${{ env.APP_SUFFIX }}.json
+
+      - name: Generate test status file
+        if: steps.find-cypress.outputs.has-cypress-tests == 'true'
+        run: |
+          # Checks if the 'Front end test to check if the app works fine' step failed or succeed
+          if [[ "${{ steps.front-end-test.outcome }}" == "success" ]]; then
+            status='{"schemaVersion": 1, "label": "Tests", "message": "success", "color": "green"}'
+          else
+            status='{"schemaVersion": 1, "label": "Tests", "message": "fail", "color": "red"}'
+          fi
+          # echo the status into a json file associated with the directory name
+          echo $status > ${{ github.event.repository.name }}/${{ matrix.directory }}_${{ env.APP_SUFFIX }}.json
+          cat ${{ github.event.repository.name }}/${{ matrix.directory }}_${{ env.APP_SUFFIX }}.json
+
+      - name: Commit test status files
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: GitHub Actions
+          author_email: actions@github.com
+          branch: test-stats
+          message: "Update test status for ${{ matrix.directory }}_${{ env.APP_SUFFIX }}"
+          add: "*${{ env.APP_SUFFIX }}.json"
+          cwd: ${{ github.event.repository.name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy 🖨 ${{ matrix.directory }} 🎨
         shell: Rscript {0}
