@@ -427,10 +427,8 @@ x <- teal::init(
       ui = function(id, ...) {
         div(
           h5(
-            strong("Analysis Variable Legend"), actionLink("showAnlVarLegendModal", tags$img(
-              height = 15, width = 15,
-              src = "img/qmark.png"
-            ))
+            strong("Analysis Variable Legend"),
+            actionLink("showAnlVarLegendModal", label = NULL, icon = icon("fas fa-question-circle"), title = "Show help")
           ),
           h5(
             strong("Key Variables:")
