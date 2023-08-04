@@ -62,14 +62,18 @@ restore_and_run <- function(
   #' @param app_directory The directory path of the Shiny app.
   #' @param ... Additional arguments passed to `shiny::runApp()`.
   load_and_run_app <- function(app_directory, package_repo, ...) {
-    install.packages(
-      renv::dependencies(app_directory)$Package,
-      repos = c(
-        Pharmaverse = package_repo,
-        CRAN = "https://cloud.r-project.org",
-        BioC = BiocManager::repositories()
+    renv::dependencies()$Package |>
+      tools::package_dependencies() |>
+      unlist() |>
+      unname() |>
+      unique() |>
+      install.packages(
+        repos = c(
+          Pharmaverse = package_repo,
+          CRAN = "https://cloud.r-project.org",
+          BioC = BiocManager::repositories()
+        )
       )
-    )
     shiny::runApp(app_directory, ...)
   }
 

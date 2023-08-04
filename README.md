@@ -30,7 +30,7 @@ Running the `restore_and_run("APP_NAME")` will run the `APP_NAME` by restoring t
 source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
 
 # Run the basic-teal app after installing all the stable versions of teal dependencies from https://insightsengineering.r-universe.dev
-restore_and_run("basic-teal", package_repo = "https://pharmaverse.r-universe.dev")
+restore_and_run("basic-teal", package_repo = "https://insightsengineering.r-universe.dev")
 
 # Run the basic-teal app after installing all the beta versions of teal dependencies from https://pharmaverse.r-universe.dev
 restore_and_run("basic-teal", package_repo = "https://pharmaverse.r-universe.dev")
