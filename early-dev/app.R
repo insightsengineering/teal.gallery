@@ -420,7 +420,7 @@ app <- teal::init(
       label = "App Information",
       server = srv_front_page,
       ui = ui_front_page,
-      filters = "all"
+      datanames = NULL
     ),
     tm_data_table("Data Table"),
     tm_variable_browser("Variable Browser"),
