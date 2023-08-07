@@ -154,6 +154,9 @@ var_labels(ADSL) <- c(adsl_labels)
 # other values can be adjusted for as well of course but this is study specific pre-processing that needs to be done
 
 # adjust select based on your study specifics
+
+set.seed(1, kind = "Mersenne-Twister") # Reproducible code due to `sample` calls
+
 ADLB_SUBSET <- ADLB %>%
   filter(!is.na(AVAL)) %>%
   filter(ITTFL == "Y" & toupper(AVISIT) %like any% c("SCREEN%", "BASE%", "%WEEK%", "%FOLLOW%")) %>%
@@ -572,7 +575,7 @@ x <- teal::init(
           ))
         )
       },
-      filters = NULL
+      datanames = NULL
     ),
     module(
       "Source Data",
@@ -624,7 +627,7 @@ x <- teal::init(
           )
         )
       },
-      filters = NULL
+      datanames = NULL
     ),
     tm_variable_browser(label = "View Variables"),
     tm_data_table(label = "View Data"),
