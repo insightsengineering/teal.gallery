@@ -62,7 +62,7 @@ restore_and_run <- function(
   #' @param app_directory The directory path of the Shiny app.
   #' @param ... Additional arguments passed to `shiny::runApp()`.
   load_and_run_app <- function(app_directory, package_repo, ...) {
-    renv::dependencies()$Package |>
+    renv::dependencies(app_directory)$Package |>
       tools::package_dependencies(
         db = available.packages(
           repos = c(
