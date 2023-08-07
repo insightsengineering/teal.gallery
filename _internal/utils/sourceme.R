@@ -63,7 +63,15 @@ restore_and_run <- function(
   #' @param ... Additional arguments passed to `shiny::runApp()`.
   load_and_run_app <- function(app_directory, package_repo, ...) {
     renv::dependencies()$Package |>
-      tools::package_dependencies() |>
+      tools::package_dependencies(
+        db = available.packages(
+          repos = c(
+            Pharmaverse = package_repo,
+            CRAN = "https://cloud.r-project.org",
+            BioC = BiocManager::repositories()
+          )
+        )
+      ) |>
       unlist() |>
       unname() |>
       unique() |>
