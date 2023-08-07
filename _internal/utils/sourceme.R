@@ -5,18 +5,18 @@
 #' This function is a wrapper around `shiny::runGitHub()`
 #'
 #' @param app_name The name of the app to run.
-#' @param username The GitHub username or organization name.
-#' @param repo The name of the repository.
 #' @param ref The reference (commit, branch, or tag) to download from the repository. (default: "HEAD")
 #' @param package_repo The R-Universe mirror where the teal packages would be instealled from.
 #' Main version: https://pharmaverse.r-universe.dev and Release version: https://insightsengineering.r-universe.dev
 #' @param ... Additional arguments passed to `shiny::runApp()`.
 #'
 #' @examples
-#' restore_and_run("app1", username = "insightsengineering", repo = "teal.gallery", ref = "HEAD")
+#' restore_and_run("app1", ref = "HEAD")
 restore_and_run <- function(
-    app_name, username = "insightsengineering", repo = "teal.gallery", ref = "HEAD",
+    app_name, ref = "HEAD",
     package_repo = "https://pharmaverse.r-universe.dev", ...) {
+  username <- "insightsengineering"
+  repo <- "teal.gallery"
   #' Download a GitHub repository, unzip it, and return the repository directory.
   #'
   #' This function downloads a given GitHub repository as a tar.gz file, unzips it,
