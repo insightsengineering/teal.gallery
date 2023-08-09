@@ -116,16 +116,12 @@ jobs:
           wait-on-timeout: 500
           project: ../tests
 
-      - name: Install rsconnect
-        shell: Rscript {0}
-        run: |
-          install.packages('remotes')
-          remotes::install_version("rsconnect", "0.8.29")
-
       - name: Deploy 🖨 ${{ matrix.directory }} 🎨
         shell: Rscript {0}
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
         run: |
+          install.packages('remotes')
+          remotes::install_version("rsconnect", "0.8.29")
           rsconnect::setAccountInfo(
             name = "${{ env.SHINYAPPSIO_ACCOUNT }}",
             token = "${{ secrets.SHINYAPPSIO_TOKEN }}",
