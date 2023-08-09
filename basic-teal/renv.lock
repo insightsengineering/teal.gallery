@@ -1255,7 +1255,7 @@
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.3.0.9007",
+      "Version": "0.3.0.9009",
       "Source": "Repository",
       "Repository": "https://pharmaverse.r-universe.dev",
       "Requirements": [
@@ -1272,7 +1272,7 @@
         "shinyjs",
         "styler"
       ],
-      "Hash": "54cb0a8c0ff109a6769382085763a27e"
+      "Hash": "eee49fd791c1eb5cfaef060414c56e18"
     },
     "tibble": {
       "Package": "tibble",
