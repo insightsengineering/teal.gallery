@@ -124,14 +124,8 @@ jobs:
 
       - name: Deploy 🖨 ${{ matrix.directory }} 🎨
         shell: Rscript {0}
+        working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
         run: |
-          options(
-            repos = c(
-              Pharmaverse = "${{ matrix.repository }}",
-              CRAN = "https://cloud.r-project.org",
-              BioC = BiocManager::repositories()
-            )
-          )
           rsconnect::setAccountInfo(
             name = "${{ env.SHINYAPPSIO_ACCOUNT }}",
             token = "${{ secrets.SHINYAPPSIO_TOKEN }}",
@@ -139,7 +133,6 @@ jobs:
             server = "shinyapps.io"
           )
           rsconnect::deployApp(
-            appDir = "./${{ github.event.repository.name }}/${{ matrix.directory }}",
             appFiles = "app.R",
             appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.APP_SUFFIX }}"),
             appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.APP_SUFFIX }}",
