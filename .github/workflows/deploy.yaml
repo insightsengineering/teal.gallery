@@ -54,6 +54,24 @@ jobs:
         with:
           path: ${{ github.event.repository.name }}
 
+      - name: Overwrite the global Rprofile ✍️
+        run: |
+          cat > /usr/local/lib/R/etc/Rprofile.site <<RPROFILE
+           options(
+            repos = c(
+              Pharmaverse = "${{ matrix.repository }}",
+              CRAN = "https://cloud.r-project.org",
+              BioC = BiocManager::repositories()
+            ),
+            download.file.method = 'libcurl',
+            HTTPUserAgent = sprintf(
+              "R/%s R (%s)",
+              getRversion(),
+              paste(getRversion(), R.version["platform"], R.version["arch"], R.version["os"])
+            )
+          )
+          RPROFILE
+
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
@@ -98,8 +116,9 @@ jobs:
           key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/{1}/renv.lock', github.event.repository.name, matrix.directory)) }}
           restore-keys: ${{ env.CACHE_KEY }}-
 
-      - name: Install app dependencies
+      - name: Install app dependencies using renv.lock
         shell: Rscript {0}
+        if: ${{ env.APP_SUFFIX == 'main' }}
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
         run: |
           options(renv.config.cache.symlinks = FALSE)
@@ -108,8 +127,25 @@ jobs:
           renv::snapshot(update = TRUE)
 
       - name: Print the new renv.lock file for ${{ matrix.directory }}
+        if: ${{ env.APP_SUFFIX == 'main' }}
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
         run: cat renv.lock
+
+      - name: Remove renv
+        shell: Rscript {0}
+        if: ${{ env.APP_SUFFIX != 'main' }}
+        run: |
+          setwd("${{ github.event.repository.name }}/${{ matrix.directory }}")
+          remotes::install_version("renv", "1.0.0")
+          renv::deactivate()
+          unlink(c("renv", "renv.lock", ".Rprofile"), force = TRUE, recursive = TRUE)
+
+      - name: Install packages without renv
+        shell: Rscript {0}
+        if: ${{ env.APP_SUFFIX != 'main' }}
+        working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
+        run: |
+          install.packages(renv::dependencies()$Package)
 
       - name: Front end test to check if the app works fine
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
