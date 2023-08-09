@@ -155,6 +155,7 @@ jobs:
           )
 
       - name: Commit updated renv.lock file
+        if: ${{ env.APP_SUFFIX == 'main' }} #TODO: Will change this to release before merging
         uses: stefanzweifel/git-auto-commit-action@v4
         continue-on-error: true
         with:
