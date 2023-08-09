@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - dev
     tags:
       - "*"
   workflow_dispatch:
@@ -33,18 +34,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        directory:
-          [
-            "RNA-seq",
-            "basic-teal",
-            "efficacy",
-            "exploratory",
-            "longitudinal",
-            "early-dev",
-            "patient-profile",
-            "python",
-            "safety",
-          ]
+        directory: ["RNA-seq", "basic-teal"]
         repository:
           [
             "https://insightsengineering.r-universe.dev",
@@ -114,7 +104,7 @@ jobs:
         run: |
           options(renv.config.cache.symlinks = FALSE)
           renv::restore(clean = TRUE)
-          install.packages(renv::dependencies()$Package)
+          renv::update()
           renv::snapshot(update = TRUE)
 
       - name: Print the new renv.lock file for ${{ matrix.directory }}
