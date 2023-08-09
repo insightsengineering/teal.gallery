@@ -1200,7 +1200,7 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.3.0.9029",
+      "Version": "0.3.0.9030",
       "Source": "Repository",
       "Repository": "https://pharmaverse.r-universe.dev",
       "Requirements": [
@@ -1224,7 +1224,7 @@
         "teal.logger",
         "teal.widgets"
       ],
-      "Hash": "42a9a229c1cfb9cb9d829f6c7c9f800d"
+      "Hash": "e82f73bfa78c3fb1b768e2c469332f32"
     },
     "teal.transform": {
       "Package": "teal.transform",
