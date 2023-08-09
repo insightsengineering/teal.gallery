@@ -1118,7 +1118,7 @@
       "Package": "teal",
       "Version": "0.13.0.9025",
       "Source": "Repository",
-      "Repository": "Pharmaverse",
+      "Repository": "https://pharmaverse.r-universe.dev",
       "Requirements": [
         "R",
         "checkmate",
