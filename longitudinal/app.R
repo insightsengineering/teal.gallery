@@ -630,7 +630,7 @@ x <- teal::init(
       datanames = NULL
     ),
     tm_variable_browser(label = "View Variables"),
-    tm_data_table(label = "View Data"),
+    tm_data_table(label = "View Data", dt_args = list(filter = list(position = 'top'))),
     tm_t_summary(
       label = "Demographics",
       dataname = "ADSL",
