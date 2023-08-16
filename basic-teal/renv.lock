@@ -4,11 +4,11 @@
     "Repositories": [
       {
         "Name": "Pharmaverse",
-        "URL": "https://pharmaverse.r-universe.dev"
+        "URL": "https://insightsengineering.r-universe.dev"
       },
       {
         "Name": "CRAN",
-        "URL": "https://packagemanager.posit.co/cran/latest"
+        "URL": "https://cloud.r-project.org"
       },
       {
         "Name": "BioC.BioCsoft",
@@ -63,7 +63,7 @@
       "Package": "Matrix",
       "Version": "1.6-0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "grDevices",
@@ -713,7 +713,7 @@
       "Package": "mgcv",
       "Version": "1.9-0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "Matrix",
         "R",
@@ -765,7 +765,7 @@
       "Package": "openssl",
       "Version": "2.1.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "askpass"
       ],
@@ -1117,9 +1117,9 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.13.0.9025",
+      "Version": "0.14.0",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "checkmate",
@@ -1138,13 +1138,13 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "3c19f0d569f68140c8ebcb25129b19c6"
+      "Hash": "404f9b53d5212ae28e4911d62d3a09d8"
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.2.0.9007",
+      "Version": "0.3.0",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "R6",
@@ -1161,13 +1161,13 @@
         "utils",
         "yaml"
       ],
-      "Hash": "6cccbcc1b555b2cd41441837808b52d2"
+      "Hash": "2f1e3270eb58d01f53b52b0f56625a25"
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.1.1.9009",
+      "Version": "0.1.1",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "glue",
@@ -1176,13 +1176,13 @@
         "shiny",
         "withr"
       ],
-      "Hash": "15ec32832564c0ab28233b3c54bd45ee"
+      "Hash": "82bdd798040e2a3731d0f4f23ef6ad53"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.1.1.9020",
+      "Version": "0.2.0",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R6",
         "bslib",
@@ -1197,13 +1197,13 @@
         "yaml",
         "zip"
       ],
-      "Hash": "9ec21ca110a5d5a5e707579cc167e084"
+      "Hash": "57479129ef12c4a3bcaa47cf97cbeef1"
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.3.0.9030",
+      "Version": "0.4.0",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "R6",
@@ -1225,13 +1225,13 @@
         "teal.logger",
         "teal.widgets"
       ],
-      "Hash": "e82f73bfa78c3fb1b768e2c469332f32"
+      "Hash": "31bf42079affad82082cf2bd92ed4da2"
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.3.0.9009",
+      "Version": "0.4.0",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "checkmate",
@@ -1252,13 +1252,13 @@
         "tidyr",
         "tidyselect"
       ],
-      "Hash": "d25bb8c02d78aa9e67b9e6a890d58419"
+      "Hash": "c7887305e42dd13c94d2df2d14ea8ca6"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.3.0.9009",
+      "Version": "0.4.0",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "bslib",
@@ -1273,7 +1273,7 @@
         "shinyjs",
         "styler"
       ],
-      "Hash": "eee49fd791c1eb5cfaef060414c56e18"
+      "Hash": "00c70d4fe01ef4e2c4dac416021ca1fb"
     },
     "tibble": {
       "Package": "tibble",
