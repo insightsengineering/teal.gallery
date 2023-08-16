@@ -34,7 +34,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        directory: ["basic-teal"]
+        directory: ["RNA-seq", "basic-teal"]
         repository:
           [
             "https://insightsengineering.r-universe.dev",
@@ -107,14 +107,20 @@ jobs:
         run: |
           npm i
 
-      - name: Install R packages using renv and update the renv snapshot
+      - name: Remove renv
+        shell: Rscript {0}
+        run: |
+          setwd("${{ github.event.repository.name }}/${{ matrix.directory }}")
+          remotes::install_version("renv", "1.0.0")
+          renv::deactivate()
+          unlink(c("renv", "renv.lock", ".Rprofile"), force = TRUE, recursive = TRUE)
+
+      - name: Install packages without renv
         shell: Rscript {0}
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
         run: |
-          options(renv.config.cache.symlinks = FALSE)
-          renv::update()
-          renv::restore(clean = TRUE)
-          renv::snapshot(update = TRUE)
+          install.packages(renv::dependencies()$Package)
+          renv::snapshot()
 
       - name: Print the new renv.lock file for ${{ matrix.directory }}
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
