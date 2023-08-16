@@ -41,12 +41,12 @@ jobs:
             "https://pharmaverse.r-universe.dev",
           ]
     steps:
-      - name: Set APP_SUFFIX
+      - name: Set CHANNEL
         run: |
           if [ "${{ matrix.repository }}" = "https://insightsengineering.r-universe.dev" ]; then
-            echo "APP_SUFFIX=release" >> $GITHUB_ENV
+            echo "CHANNEL=stable" >> $GITHUB_ENV
           else
-            echo "APP_SUFFIX=main" >> $GITHUB_ENV
+            echo "CHANNEL=release" >> $GITHUB_ENV
           fi
 
       - name: Checkout repo 🛎
@@ -110,7 +110,7 @@ jobs:
       - name: Restore renv from cache
         uses: actions/cache@v2
         env:
-          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ env.R_VERSION }}-${{ matrix.directory }}-${{ env.APP_SUFFIX }}
+          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ env.R_VERSION }}-${{ matrix.directory }}-${{ env.CHANNEL }}
         with:
           path: ${{ github.event.repository.name }}/${{ matrix.directory }}/renv/library
           key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/{1}/renv.lock', github.event.repository.name, matrix.directory)) }}
@@ -118,7 +118,7 @@ jobs:
 
       - name: Install app dependencies using renv.lock
         shell: Rscript {0}
-        if: ${{ env.APP_SUFFIX == 'main' }}
+        if: ${{ env.CHANNEL == 'stable' }}
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
         run: |
           options(renv.config.cache.symlinks = FALSE)
@@ -127,13 +127,13 @@ jobs:
           renv::snapshot(update = TRUE)
 
       - name: Print the new renv.lock file for ${{ matrix.directory }}
-        if: ${{ env.APP_SUFFIX == 'main' }}
+        if: ${{ env.CHANNEL == 'stable' }}
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
         run: cat renv.lock
 
       - name: Remove renv
         shell: Rscript {0}
-        if: ${{ env.APP_SUFFIX != 'main' }}
+        if: ${{ env.CHANNEL != 'stable' }}
         run: |
           setwd("${{ github.event.repository.name }}/${{ matrix.directory }}")
           remotes::install_version("renv", "1.0.0")
@@ -142,7 +142,7 @@ jobs:
 
       - name: Install packages without renv
         shell: Rscript {0}
-        if: ${{ env.APP_SUFFIX != 'main' }}
+        if: ${{ env.CHANNEL != 'stable' }}
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
         run: |
           install.packages(renv::dependencies()$Package)
@@ -171,8 +171,8 @@ jobs:
           )
           rsconnect::deployApp(
             appFiles = "app.R",
-            appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.APP_SUFFIX }}"),
-            appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.APP_SUFFIX }}",
+            appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.CHANNEL }}"),
+            appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.CHANNEL }}",
             account = "${{ env.SHINYAPPSIO_ACCOUNT }}",
             upload = TRUE,
             logLevel = "normal",
@@ -181,7 +181,7 @@ jobs:
           )
 
       - name: Commit updated renv.lock file
-        if: ${{ env.APP_SUFFIX == 'main' }} #TODO: Will change this to release before merging
+        if: ${{ env.CHANNEL == 'stable' }} #TODO: Will change this to release before merging
         uses: stefanzweifel/git-auto-commit-action@v4
         continue-on-error: true
         with:
