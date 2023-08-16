@@ -107,20 +107,23 @@ jobs:
         run: |
           npm i
 
-      - name: Remove renv
-        shell: Rscript {0}
-        run: |
-          setwd("${{ github.event.repository.name }}/${{ matrix.directory }}")
-          remotes::install_version("renv", "1.0.0")
-          renv::deactivate()
-          unlink(c("renv", "renv.lock", ".Rprofile"), force = TRUE, recursive = TRUE)
+      - name: Restore renv from cache
+        uses: actions/cache@v2
+        env:
+          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ env.R_VERSION }}-${{ matrix.directory }}-${{ env.CHANNEL }}
+        with:
+          path: ${{ github.event.repository.name }}/${{ matrix.directory }}/renv/library
+          key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/{1}/renv.lock', github.event.repository.name, matrix.directory)) }}
+          restore-keys: ${{ env.CACHE_KEY }}-
 
-      - name: Install packages without renv
+      - name: Install app dependencies using renv.lock
         shell: Rscript {0}
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
         run: |
-          install.packages(renv::dependencies()$Package)
-          renv::snapshot()
+          options(renv.config.cache.symlinks = FALSE)
+          renv::update()
+          renv::restore(clean = TRUE)
+          renv::snapshot(update = TRUE)
 
       - name: Print the new renv.lock file for ${{ matrix.directory }}
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
