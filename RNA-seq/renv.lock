@@ -3,32 +3,12 @@
     "Version": "4.3.1",
     "Repositories": [
       {
-        "Name": "BioCsoft",
-        "URL": "https://bioconductor.org/packages/3.17/bioc"
-      },
-      {
-        "Name": "BioCann",
-        "URL": "https://bioconductor.org/packages/3.17/data/annotation"
-      },
-      {
-        "Name": "BioCexp",
-        "URL": "https://bioconductor.org/packages/3.17/data/experiment"
-      },
-      {
-        "Name": "BioCworkflows",
-        "URL": "https://bioconductor.org/packages/3.17/workflows"
-      },
-      {
-        "Name": "BioCbooks",
-        "URL": "https://bioconductor.org/packages/3.17/books"
-      },
-      {
         "Name": "Pharmaverse",
-        "URL": "https://pharmaverse.r-universe.dev"
+        "URL": "https://insightsengineering.r-universe.dev"
       },
       {
         "Name": "CRAN",
-        "URL": "https://packagemanager.posit.co/cran/latest"
+        "URL": "https://cloud.r-project.org"
       },
       {
         "Name": "BioC.BioCsoft",
@@ -100,14 +80,20 @@
     },
     "BiocBaseUtils": {
       "Package": "BiocBaseUtils",
-      "Version": "1.2.0",
-      "Source": "Bioconductor",
+      "Version": "1.3.2",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "BiocBaseUtils",
+      "RemoteUsername": "Bioconductor",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "e227da50c5b4ca0b2436dba7b9fa6e5278afb84c",
       "Requirements": [
         "R",
         "methods",
         "utils"
       ],
-      "Hash": "c8cc4cd1547d993182624cb6e25f4c3b"
+      "Hash": "2a181c95e9572391bbf428cfe6bbe876"
     },
     "BiocFileCache": {
       "Package": "BiocFileCache",
@@ -143,13 +129,13 @@
     },
     "BiocManager": {
       "Package": "BiocManager",
-      "Version": "1.30.22",
+      "Version": "1.30.21.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
-      "Hash": "d57e43105a1aa9cb54fdb4629725acb1"
+      "Hash": "85afdfb6010b8eb074f8d28ce4596bd7"
     },
     "BiocParallel": {
       "Package": "BiocParallel",
@@ -296,7 +282,7 @@
       "Package": "EnvStats",
       "Version": "2.8.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "MASS",
         "R",
@@ -423,7 +409,7 @@
       "Package": "Matrix",
       "Version": "1.6-0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "grDevices",
@@ -450,7 +436,7 @@
       "Package": "MatrixModels",
       "Version": "0.5-2",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "Matrix",
         "R",
@@ -1152,7 +1138,7 @@
       "Package": "dbplyr",
       "Version": "2.3.3",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "DBI",
         "R",
@@ -1404,9 +1390,9 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.1.9002",
+      "Version": "0.5.1",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "checkmate",
@@ -1414,7 +1400,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "48ff03ef72a12fbaa82a5cf62b4fc41a"
+      "Hash": "a68b4771f14ae9e662fc22f96ced77d3"
     },
     "fs": {
       "Package": "fs",
@@ -1932,7 +1918,7 @@
       "Package": "mgcv",
       "Version": "1.9-0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "Matrix",
         "R",
@@ -1989,16 +1975,16 @@
     },
     "nestcolor": {
       "Package": "nestcolor",
-      "Version": "0.1.2.9001",
+      "Version": "0.1.2",
       "Source": "Bioconductor",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "checkmate",
         "ggplot2",
         "lifecycle"
       ],
-      "Hash": "38aa39d4bbe1e1d9d69b881a0c6c31c3"
+      "Hash": "1b54abe1a145b4df499a273baaea4475"
     },
     "nlme": {
       "Package": "nlme",
@@ -2060,7 +2046,7 @@
       "Package": "openssl",
       "Version": "2.1.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "askpass"
       ],
@@ -2115,7 +2101,7 @@
       "Package": "pkgload",
       "Version": "1.3.2.1",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "cli",
@@ -2287,7 +2273,7 @@
       "Package": "quantreg",
       "Version": "5.96",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "MASS",
         "Matrix",
@@ -2315,7 +2301,7 @@
       "Package": "rbibutils",
       "Version": "2.2.14",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "tools",
@@ -2400,9 +2386,9 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.2.9001",
+      "Version": "0.6.2",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "formatters",
@@ -2412,7 +2398,7 @@
         "methods",
         "stats"
       ],
-      "Hash": "66b7780af096f4d6a71fe659d5472be8"
+      "Hash": "85fe6fcebbfb3dc8cbce39b49b2b7634"
     },
     "sass": {
       "Package": "sass",
@@ -2448,24 +2434,24 @@
     },
     "scda": {
       "Package": "scda",
-      "Version": "0.1.6.9010",
+      "Version": "0.1.6",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "d6b20e30df73f2e6e19cb7baed357d3d"
+      "Hash": "bf70e1415684b9ec33d661672a111657"
     },
     "scda.2022": {
       "Package": "scda.2022",
-      "Version": "0.1.5.9000",
+      "Version": "0.1.5",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R"
       ],
-      "Hash": "fc231bd90aa0fb3a219af80feff6470a"
+      "Hash": "425e70a2ce4a6ec7c5ec3a774190ccc2"
     },
     "shape": {
       "Package": "shape",
@@ -2529,7 +2515,7 @@
       "Package": "shinyTree",
       "Version": "0.3.1",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "htmlwidgets",
@@ -2694,9 +2680,9 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.13.0.9025",
+      "Version": "0.14.0",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "checkmate",
@@ -2715,13 +2701,13 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "3c19f0d569f68140c8ebcb25129b19c6"
+      "Hash": "404f9b53d5212ae28e4911d62d3a09d8"
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.3.0.9009",
+      "Version": "0.4.0",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "checkmate",
@@ -2732,13 +2718,13 @@
         "shiny",
         "styler"
       ],
-      "Hash": "ad3502d98b2b8b2b635785fdb41af612"
+      "Hash": "05bbdc13cf5440c53e94bf0f70b41c6b"
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.2.0.9007",
+      "Version": "0.3.0",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "R6",
@@ -2755,13 +2741,13 @@
         "utils",
         "yaml"
       ],
-      "Hash": "6cccbcc1b555b2cd41441837808b52d2"
+      "Hash": "2f1e3270eb58d01f53b52b0f56625a25"
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.1.1.9009",
+      "Version": "0.1.1",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "glue",
@@ -2770,13 +2756,13 @@
         "shiny",
         "withr"
       ],
-      "Hash": "15ec32832564c0ab28233b3c54bd45ee"
+      "Hash": "82bdd798040e2a3731d0f4f23ef6ad53"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.2.15.9037",
+      "Version": "0.2.16",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "DT",
         "R",
@@ -2809,13 +2795,13 @@
         "tidyselect",
         "utils"
       ],
-      "Hash": "3da72ca35095a524973b9dd3b49835d8"
+      "Hash": "70b3f00b57a2a2e6ad69bb32f4c5eaa2"
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.4.9017",
+      "Version": "0.1.5",
       "Source": "Bioconductor",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -2842,13 +2828,13 @@
         "teal.widgets",
         "tern"
       ],
-      "Hash": "93f15b6cc79bc85ae40e9685b58317dd"
+      "Hash": "fcad1a2ebebfd51ffaad9a259dddc516"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.1.1.9020",
+      "Version": "0.2.0",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R6",
         "bslib",
@@ -2863,13 +2849,13 @@
         "yaml",
         "zip"
       ],
-      "Hash": "9ec21ca110a5d5a5e707579cc167e084"
+      "Hash": "57479129ef12c4a3bcaa47cf97cbeef1"
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.3.0.9030",
+      "Version": "0.4.0",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "R6",
@@ -2891,13 +2877,13 @@
         "teal.logger",
         "teal.widgets"
       ],
-      "Hash": "e82f73bfa78c3fb1b768e2c469332f32"
+      "Hash": "31bf42079affad82082cf2bd92ed4da2"
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.3.0.9009",
+      "Version": "0.4.0",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "checkmate",
@@ -2918,13 +2904,13 @@
         "tidyr",
         "tidyselect"
       ],
-      "Hash": "d25bb8c02d78aa9e67b9e6a890d58419"
+      "Hash": "c7887305e42dd13c94d2df2d14ea8ca6"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.3.0.9009",
+      "Version": "0.4.0",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "bslib",
@@ -2939,13 +2925,13 @@
         "shinyjs",
         "styler"
       ],
-      "Hash": "eee49fd791c1eb5cfaef060414c56e18"
+      "Hash": "00c70d4fe01ef4e2c4dac416021ca1fb"
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.8.5.9006",
+      "Version": "0.8.5",
       "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "Rdpack",
@@ -2974,13 +2960,13 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "97c3725958c20e58eed424c6ca8a44e7"
+      "Hash": "f386494470e7cdc4f8a817afcff342ff"
     },
     "testthat": {
       "Package": "testthat",
       "Version": "3.1.10",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -3153,7 +3139,7 @@
       "Package": "xml2",
       "Version": "1.3.5",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "methods"
