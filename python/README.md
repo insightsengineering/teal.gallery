@@ -15,7 +15,7 @@
 
 ### View the deployed app
 
-Deployed app: <https://genentech.shinyapps.io/NEST_python_main>
+Deployed app: <https://genentech.shinyapps.io/NEST_python_stable>
 
 ### Preview the app
 

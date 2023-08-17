@@ -15,7 +15,7 @@
 
 ### View the deployed app
 
-Deployed app: <https://genentech.shinyapps.io/NEST_basic-teal_main>
+Deployed app: <https://genentech.shinyapps.io/NEST_basic-teal_stable>
 
 ### Preview the app
 

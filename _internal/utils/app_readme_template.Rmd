@@ -26,7 +26,7 @@ restore_and_run("`r params$app_name`", package_repo = "https://pharmaverse.r-uni
 ### View the deployed app
 
 ```{r, echo=FALSE, results='asis'}
-x <- cat(paste0("Deployed app: https://genentech.shinyapps.io/NEST_", params$app_name, "_main"))
+x <- cat(paste0("Deployed app: https://genentech.shinyapps.io/NEST_", params$app_name, "_stable"))
 ```
 
 ### Preview the app

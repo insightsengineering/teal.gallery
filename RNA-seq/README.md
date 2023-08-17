@@ -15,7 +15,7 @@
 
 ### View the deployed app
 
-Deployed app: <https://genentech.shinyapps.io/NEST_RNA-seq_main>
+Deployed app: <https://genentech.shinyapps.io/NEST_RNA-seq_stable>
 
 ### Preview the app
 

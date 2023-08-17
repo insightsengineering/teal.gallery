@@ -15,7 +15,7 @@
 
 ### View the deployed app
 
-Deployed app: <https://genentech.shinyapps.io/NEST_longitudinal_main>
+Deployed app: <https://genentech.shinyapps.io/NEST_longitudinal_stable>
 
 ### Preview the app
 

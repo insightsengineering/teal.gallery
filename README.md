@@ -8,15 +8,15 @@ A gallery of sample apps based on the [`teal` framework](https://github.com/insi
 
 ### Development version
 
-- [RNA-seq](https://genentech.shinyapps.io/NEST_RNA-seq_main/)
-- [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_main/)
-- [efficacy](https://genentech.shinyapps.io/NEST_efficacy_main/)
-- [exploratory](https://genentech.shinyapps.io/NEST_exploratory_main/)
-- [longitudinal](https://genentech.shinyapps.io/NEST_longitudinal_main/)
-- [early-dev](https://genentech.shinyapps.io/NEST_early-dev_main/)
-- [patient-profile](https://genentech.shinyapps.io/NEST_patient-profile_main/)
-- [python](https://genentech.shinyapps.io/NEST_python_main/)
-- [safety](https://genentech.shinyapps.io/NEST_safety_main/)
+- [RNA-seq](https://genentech.shinyapps.io/NEST_RNA-seq_stable_/)
+- [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_stable_/)
+- [efficacy](https://genentech.shinyapps.io/NEST_efficacy_stable_/)
+- [exploratory](https://genentech.shinyapps.io/NEST_exploratory_stable_/)
+- [longitudinal](https://genentech.shinyapps.io/NEST_longitudinal_stable_/)
+- [early-dev](https://genentech.shinyapps.io/NEST_early-dev_stable_/)
+- [patient-profile](https://genentech.shinyapps.io/NEST_patient-profile_stable_/)
+- [python](https://genentech.shinyapps.io/NEST_python_stable_/)
+- [safety](https://genentech.shinyapps.io/NEST_safety_stable_/)
 
 ## Running the apps
 
