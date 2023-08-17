@@ -690,9 +690,9 @@
     },
     "mgcv": {
       "Package": "mgcv",
-      "Version": "1.9-0",
+      "Version": "1.8-42",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "Matrix",
         "R",
@@ -703,7 +703,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "086028ca0460d0c368028d3bda58f31b"
+      "Hash": "3460beba7ccc8946249ba35327ba902a"
     },
     "mime": {
       "Package": "mime",
@@ -728,7 +728,7 @@
     },
     "nlme": {
       "Package": "nlme",
-      "Version": "3.1-163",
+      "Version": "3.1-162",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -738,7 +738,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "8d1938040a05566f4f7a14af4feadd6b"
+      "Hash": "0984ce8da8da9ead8643c5cbbb60f83e"
     },
     "openssl": {
       "Package": "openssl",
@@ -939,7 +939,7 @@
     },
     "shiny": {
       "Package": "shiny",
-      "Version": "1.7.5",
+      "Version": "1.7.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -969,7 +969,7 @@
         "withr",
         "xtable"
       ],
-      "Hash": "438b99792adbe82a8329ad8697d45afe"
+      "Hash": "00344c227c7bd0ab5d78052c5d736c44"
     },
     "shinyWidgets": {
       "Package": "shinyWidgets",
@@ -1094,166 +1094,6 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "3a1be13d68d47a8cd0bfd74739ca1555"
-    },
-    "teal": {
-      "Package": "teal",
-      "Version": "0.14.0",
-      "Source": "Repository",
-      "Repository": "https://insightsengineering.r-universe.dev",
-      "Requirements": [
-        "R",
-        "checkmate",
-        "lifecycle",
-        "logger",
-        "magrittr",
-        "rlang",
-        "shiny",
-        "shinyjs",
-        "stats",
-        "teal.data",
-        "teal.logger",
-        "teal.reporter",
-        "teal.slice",
-        "teal.transform",
-        "teal.widgets",
-        "utils"
-      ],
-      "Hash": "404f9b53d5212ae28e4911d62d3a09d8"
-    },
-    "teal.data": {
-      "Package": "teal.data",
-      "Version": "0.3.0",
-      "Source": "Repository",
-      "Repository": "https://insightsengineering.r-universe.dev",
-      "Requirements": [
-        "R",
-        "R6",
-        "checkmate",
-        "digest",
-        "lifecycle",
-        "logger",
-        "methods",
-        "rlang",
-        "shiny",
-        "shinyjs",
-        "stats",
-        "teal.logger",
-        "utils",
-        "yaml"
-      ],
-      "Hash": "2f1e3270eb58d01f53b52b0f56625a25"
-    },
-    "teal.logger": {
-      "Package": "teal.logger",
-      "Version": "0.1.1",
-      "Source": "Repository",
-      "Repository": "https://insightsengineering.r-universe.dev",
-      "Requirements": [
-        "R",
-        "glue",
-        "lifecycle",
-        "logger",
-        "shiny",
-        "withr"
-      ],
-      "Hash": "82bdd798040e2a3731d0f4f23ef6ad53"
-    },
-    "teal.reporter": {
-      "Package": "teal.reporter",
-      "Version": "0.2.0",
-      "Source": "Repository",
-      "Repository": "https://insightsengineering.r-universe.dev",
-      "Requirements": [
-        "R6",
-        "bslib",
-        "checkmate",
-        "grid",
-        "htmltools",
-        "knitr",
-        "lifecycle",
-        "rmarkdown",
-        "shiny",
-        "shinyWidgets",
-        "yaml",
-        "zip"
-      ],
-      "Hash": "57479129ef12c4a3bcaa47cf97cbeef1"
-    },
-    "teal.slice": {
-      "Package": "teal.slice",
-      "Version": "0.4.0",
-      "Source": "Repository",
-      "Repository": "https://insightsengineering.r-universe.dev",
-      "Requirements": [
-        "R",
-        "R6",
-        "bslib",
-        "checkmate",
-        "dplyr",
-        "grDevices",
-        "htmltools",
-        "jsonlite",
-        "lifecycle",
-        "logger",
-        "methods",
-        "plotly",
-        "shiny",
-        "shinyWidgets",
-        "shinycssloaders",
-        "shinyjs",
-        "teal.data",
-        "teal.logger",
-        "teal.widgets"
-      ],
-      "Hash": "31bf42079affad82082cf2bd92ed4da2"
-    },
-    "teal.transform": {
-      "Package": "teal.transform",
-      "Version": "0.4.0",
-      "Source": "Repository",
-      "Repository": "https://insightsengineering.r-universe.dev",
-      "Requirements": [
-        "R",
-        "checkmate",
-        "dplyr",
-        "lifecycle",
-        "logger",
-        "magrittr",
-        "methods",
-        "rlang",
-        "shiny",
-        "shinyjs",
-        "shinyvalidate",
-        "stats",
-        "teal.data",
-        "teal.logger",
-        "teal.slice",
-        "teal.widgets",
-        "tidyr",
-        "tidyselect"
-      ],
-      "Hash": "c7887305e42dd13c94d2df2d14ea8ca6"
-    },
-    "teal.widgets": {
-      "Package": "teal.widgets",
-      "Version": "0.4.0",
-      "Source": "Repository",
-      "Repository": "https://insightsengineering.r-universe.dev",
-      "Requirements": [
-        "R",
-        "bslib",
-        "checkmate",
-        "ggplot2",
-        "graphics",
-        "htmltools",
-        "lifecycle",
-        "methods",
-        "shiny",
-        "shinyWidgets",
-        "shinyjs",
-        "styler"
-      ],
-      "Hash": "00c70d4fe01ef4e2c4dac416021ca1fb"
     },
     "tibble": {
       "Package": "tibble",
