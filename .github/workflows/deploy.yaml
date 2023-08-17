@@ -121,8 +121,8 @@ jobs:
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
         run: |
           options(renv.config.cache.symlinks = FALSE)
+          renv::restore()
           renv::update()
-          renv::restore(clean = TRUE)
           renv::snapshot(update = TRUE)
 
       - name: Print the new renv.lock file for ${{ matrix.directory }}
@@ -139,12 +139,17 @@ jobs:
           wait-on-timeout: 500
           project: ../tests
 
-      - name: Deploy 🖨 ${{ matrix.directory }} 🎨
+      - name: Install deploy R package dependencies
         shell: Rscript {0}
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
         run: |
           install.packages('remotes')
           remotes::install_version("rsconnect", "0.8.29")
+
+      - name: Deploy 🖨 ${{ matrix.directory }} 🎨
+        shell: Rscript {0}
+        working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
+        run: |
           rsconnect::setAccountInfo(
             name = "${{ env.SHINYAPPSIO_ACCOUNT }}",
             token = "${{ secrets.SHINYAPPSIO_TOKEN }}",
