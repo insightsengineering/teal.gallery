@@ -7,14 +7,14 @@
 #' @param app_name The name of the app to run.
 #' @param ref The reference (commit, branch, or tag) to download from the repository. (default: "HEAD")
 #' @param package_repo The R-Universe mirror where the teal packages would be instealled from.
-#' Main version: https://pharmaverse.r-universe.dev and Release version: https://insightsengineering.r-universe.dev
+#' Stable version: https://insightsengineering.r-universe.dev and Release version: https://pharmaverse.r-universe.dev
 #' @param ... Additional arguments passed to `shiny::runApp()`.
 #'
 #' @examples
 #' restore_and_run("app1", ref = "HEAD")
 restore_and_run <- function(
     app_name, ref = "HEAD",
-    package_repo = "https://pharmaverse.r-universe.dev", ...) {
+    package_repo = "https://insightsengineering.r-universe.dev", ...) {
   username <- "insightsengineering"
   repo <- "teal.gallery"
   #' Download a GitHub repository, unzip it, and return the repository directory.
@@ -62,26 +62,8 @@ restore_and_run <- function(
   #' @param app_directory The directory path of the Shiny app.
   #' @param ... Additional arguments passed to `shiny::runApp()`.
   load_and_run_app <- function(app_directory, package_repo, ...) {
-    renv::dependencies(app_directory)$Package |>
-      tools::package_dependencies(
-        db = available.packages(
-          repos = c(
-            Pharmaverse = package_repo,
-            CRAN = "https://cloud.r-project.org",
-            BioC = BiocManager::repositories()
-          )
-        )
-      ) |>
-      unlist() |>
-      unname() |>
-      unique() |>
-      install.packages(
-        repos = c(
-          Pharmaverse = package_repo,
-          CRAN = "https://cloud.r-project.org",
-          BioC = BiocManager::repositories()
-        )
-      )
+    setwd(app_directory)
+    source(".Rprofile")
     shiny::runApp(app_directory, ...)
   }
 
