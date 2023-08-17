@@ -122,10 +122,13 @@ jobs:
         shell: Rscript {0}
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
         run: |
+          options(renv.config.auto.snapshot = FALSE)
           options(renv.config.cache.symlinks = FALSE)
-          lockfile_packages <- renv::lockfile_read()$Packages |> names()
-          renv::update(lockfile_packages)
-          renv::snapshot(packages = lockfile_packages, update = TRUE)
+          dependant_packages <- renv::dependencies()$Package
+          all_channel_packages <- available.packages(repos = ${{ matrix.directory }})[,1]
+          channel_packages <- dependant_packages[dependant_packages %in% all_channel_packages]
+          renv::update(exclude = channel_packages)
+          renv::snapshot(exclude = channel_packages)
 
       - name: Print the new renv.lock file for ${{ matrix.directory }}
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
@@ -179,7 +182,7 @@ jobs:
           )
 
       - name: Commit updated renv.lock file
-        if: ${{ env.CHANNEL == 'stable' }} #TODO: Will change this to release before merging
+        if: ${{ env.CHANNEL == 'stable' }}
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           repository: ${{ github.event.repository.name }}
