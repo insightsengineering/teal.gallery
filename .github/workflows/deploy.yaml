@@ -34,8 +34,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        directory: ["basic-teal"]
-        repository: ["https://insightsengineering.r-universe.dev"]
+        directory: ["basic-teal", "RNA-seq"]
+        repository:
+          [
+            "https://insightsengineering.r-universe.dev",
+            "https://pharmaverse.r-universe.dev",
+          ]
     steps:
       - name: Set CHANNEL
         run: |
