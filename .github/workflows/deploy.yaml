@@ -94,15 +94,21 @@ jobs:
           key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/{1}/renv.lock', github.event.repository.name, matrix.directory)) }}
           restore-keys: ${{ env.CACHE_KEY }}-
 
+      - name: Update renv lock file with repo channel
+        shell: Rscript {0}
+        working-directory: ${{ github.event.repository.name }}
+        run: |
+          setwd("${{ matrix.directory }}")
+          repos <- renv::lockfile_read()$R$Repositories
+          repos$Pharmaverse <- "${{ matrix.repository }}"
+          renv::lockfile_modify(repos = repos) |> renv::lockfile_write()
+
       - name: Install R packages using renv and update the renv snapshot
         shell: Rscript {0}
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
         run: |
           options(renv.config.cache.symlinks = FALSE)
           lockfile_packages <- renv::lockfile_read()$Packages |> names()
-          repos <- renv::lockfile_read()$R$Repositories
-          repos$Pharmaverse <- "${{ matrix.repository }}"
-          renv::lockfile_modify(repos = repos) |> renv::lockfile_write()
           renv::update(lockfile_packages)
           renv::snapshot(packages = lockfile_packages, update = TRUE)
 
