@@ -125,7 +125,7 @@ jobs:
           options(renv.config.auto.snapshot = FALSE)
           options(renv.config.cache.symlinks = FALSE)
           dependant_packages <- renv::dependencies()$Package
-          all_channel_packages <- available.packages(repos = ${{ matrix.directory }})[,1]
+          all_channel_packages <- available.packages(repos = "${{ matrix.repository }}")[,1]
           channel_packages <- dependant_packages[dependant_packages %in% all_channel_packages]
           renv::update(exclude = channel_packages)
           renv::snapshot(exclude = channel_packages)
