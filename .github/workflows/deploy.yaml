@@ -34,7 +34,18 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        directory: ["basic-teal", "RNA-seq"]
+        directory:
+          [
+            "RNA-seq",
+            "basic-teal",
+            "efficacy",
+            "exploratory",
+            "longitudinal",
+            "early-dev",
+            "patient-profile",
+            "python",
+            "safety",
+          ]
         repository:
           [
             "https://insightsengineering.r-universe.dev",

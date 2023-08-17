@@ -4,11 +4,11 @@
     "Repositories": [
       {
         "Name": "Pharmaverse",
-        "URL": "https://pharmaverse.r-universe.dev"
+        "URL": "https://insightsengineering.r-universe.dev"
       },
       {
         "Name": "CRAN",
-        "URL": "https://packagemanager.posit.co/cran/latest"
+        "URL": "https://cloud.r-project.org"
       },
       {
         "Name": "BioC.BioCsoft",
@@ -864,20 +864,6 @@
       ],
       "Hash": "618609b42c9406731ead03adf5379850"
     },
-    "formatters": {
-      "Package": "formatters",
-      "Version": "0.5.1.9001",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "R",
-        "checkmate",
-        "grid",
-        "htmltools",
-        "methods"
-      ],
-      "Hash": "3a36d0d7ea8fd8bae16a0ce472350d57"
-    },
     "fs": {
       "Package": "fs",
       "Version": "1.6.3",
@@ -1555,19 +1541,6 @@
       ],
       "Hash": "ef6270cb713747aa8211620d6a47188d"
     },
-    "nestcolor": {
-      "Package": "nestcolor",
-      "Version": "0.1.2.9001",
-      "Source": "Bioconductor",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "R",
-        "checkmate",
-        "ggplot2",
-        "lifecycle"
-      ],
-      "Hash": "38aa39d4bbe1e1d9d69b881a0c6c31c3"
-    },
     "nlme": {
       "Package": "nlme",
       "Version": "3.1-162",
@@ -1984,22 +1957,6 @@
       ],
       "Hash": "1de7ab598047a87bba48434ba35d497d"
     },
-    "rtables": {
-      "Package": "rtables",
-      "Version": "0.6.2.9001",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "R",
-        "formatters",
-        "grid",
-        "htmltools",
-        "magrittr",
-        "methods",
-        "stats"
-      ],
-      "Hash": "66b7780af096f4d6a71fe659d5472be8"
-    },
     "sass": {
       "Package": "sass",
       "Version": "0.4.7",
@@ -2031,27 +1988,6 @@
         "viridisLite"
       ],
       "Hash": "906cb23d2f1c5680b8ce439b44c6fa63"
-    },
-    "scda": {
-      "Package": "scda",
-      "Version": "0.1.6.9010",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "R",
-        "utils"
-      ],
-      "Hash": "d6b20e30df73f2e6e19cb7baed357d3d"
-    },
-    "scda.2022": {
-      "Package": "scda.2022",
-      "Version": "0.1.5.9000",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "fc231bd90aa0fb3a219af80feff6470a"
     },
     "shape": {
       "Package": "shape",
@@ -2277,347 +2213,6 @@
         "cpp11"
       ],
       "Hash": "90b28393209827327de889f49935140a"
-    },
-    "teal": {
-      "Package": "teal",
-      "Version": "0.13.0.9025",
-      "Source": "Repository",
-      "Repository": "Pharmaverse",
-      "Requirements": [
-        "R",
-        "checkmate",
-        "lifecycle",
-        "logger",
-        "magrittr",
-        "rlang",
-        "shiny",
-        "shinyjs",
-        "stats",
-        "teal.data",
-        "teal.logger",
-        "teal.reporter",
-        "teal.slice",
-        "teal.transform",
-        "teal.widgets",
-        "utils"
-      ],
-      "Hash": "3c19f0d569f68140c8ebcb25129b19c6"
-    },
-    "teal.code": {
-      "Package": "teal.code",
-      "Version": "0.3.0.9009",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "R",
-        "checkmate",
-        "grDevices",
-        "lifecycle",
-        "methods",
-        "rlang",
-        "shiny",
-        "styler"
-      ],
-      "Hash": "ad3502d98b2b8b2b635785fdb41af612"
-    },
-    "teal.data": {
-      "Package": "teal.data",
-      "Version": "0.2.0.9007",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "R",
-        "R6",
-        "checkmate",
-        "digest",
-        "lifecycle",
-        "logger",
-        "methods",
-        "rlang",
-        "shiny",
-        "shinyjs",
-        "stats",
-        "teal.logger",
-        "utils",
-        "yaml"
-      ],
-      "Hash": "6cccbcc1b555b2cd41441837808b52d2"
-    },
-    "teal.logger": {
-      "Package": "teal.logger",
-      "Version": "0.1.1.9009",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "R",
-        "glue",
-        "lifecycle",
-        "logger",
-        "shiny",
-        "withr"
-      ],
-      "Hash": "15ec32832564c0ab28233b3c54bd45ee"
-    },
-    "teal.modules.clinical": {
-      "Package": "teal.modules.clinical",
-      "Version": "0.8.15.9016",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "DT",
-        "R",
-        "assertthat",
-        "broom",
-        "checkmate",
-        "dplyr",
-        "formatters",
-        "ggplot2",
-        "ggrepel",
-        "grid",
-        "lifecycle",
-        "logger",
-        "magrittr",
-        "methods",
-        "rlang",
-        "rmarkdown",
-        "rtables",
-        "scales",
-        "shiny",
-        "shinyWidgets",
-        "shinyjs",
-        "shinyvalidate",
-        "stats",
-        "styler",
-        "teal",
-        "teal.code",
-        "teal.logger",
-        "teal.reporter",
-        "teal.transform",
-        "teal.widgets",
-        "tern",
-        "tern.gee",
-        "tern.mmrm",
-        "tidyr",
-        "utils",
-        "vistime"
-      ],
-      "Hash": "02c966d10c60cf0e5101d125587eba6c"
-    },
-    "teal.modules.general": {
-      "Package": "teal.modules.general",
-      "Version": "0.2.15.9037",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "DT",
-        "R",
-        "checkmate",
-        "dplyr",
-        "forcats",
-        "ggmosaic",
-        "ggplot2",
-        "grid",
-        "logger",
-        "magrittr",
-        "scales",
-        "shiny",
-        "shinyTree",
-        "shinyWidgets",
-        "shinyjs",
-        "shinyvalidate",
-        "stats",
-        "stringr",
-        "teal",
-        "teal.code",
-        "teal.logger",
-        "teal.reporter",
-        "teal.slice",
-        "teal.transform",
-        "teal.widgets",
-        "tern",
-        "tibble",
-        "tidyr",
-        "tidyselect",
-        "utils"
-      ],
-      "Hash": "3da72ca35095a524973b9dd3b49835d8"
-    },
-    "teal.reporter": {
-      "Package": "teal.reporter",
-      "Version": "0.1.1.9020",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "R6",
-        "bslib",
-        "checkmate",
-        "grid",
-        "htmltools",
-        "knitr",
-        "lifecycle",
-        "rmarkdown",
-        "shiny",
-        "shinyWidgets",
-        "yaml",
-        "zip"
-      ],
-      "Hash": "9ec21ca110a5d5a5e707579cc167e084"
-    },
-    "teal.slice": {
-      "Package": "teal.slice",
-      "Version": "0.3.0.9030",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "R",
-        "R6",
-        "bslib",
-        "checkmate",
-        "dplyr",
-        "grDevices",
-        "htmltools",
-        "jsonlite",
-        "lifecycle",
-        "logger",
-        "methods",
-        "plotly",
-        "shiny",
-        "shinyWidgets",
-        "shinycssloaders",
-        "shinyjs",
-        "teal.data",
-        "teal.logger",
-        "teal.widgets"
-      ],
-      "Hash": "e82f73bfa78c3fb1b768e2c469332f32"
-    },
-    "teal.transform": {
-      "Package": "teal.transform",
-      "Version": "0.3.0.9009",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "R",
-        "checkmate",
-        "dplyr",
-        "lifecycle",
-        "logger",
-        "magrittr",
-        "methods",
-        "rlang",
-        "shiny",
-        "shinyjs",
-        "shinyvalidate",
-        "stats",
-        "teal.data",
-        "teal.logger",
-        "teal.slice",
-        "teal.widgets",
-        "tidyr",
-        "tidyselect"
-      ],
-      "Hash": "d25bb8c02d78aa9e67b9e6a890d58419"
-    },
-    "teal.widgets": {
-      "Package": "teal.widgets",
-      "Version": "0.3.0.9009",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "R",
-        "bslib",
-        "checkmate",
-        "ggplot2",
-        "graphics",
-        "htmltools",
-        "lifecycle",
-        "methods",
-        "shiny",
-        "shinyWidgets",
-        "shinyjs",
-        "styler"
-      ],
-      "Hash": "eee49fd791c1eb5cfaef060414c56e18"
-    },
-    "tern": {
-      "Package": "tern",
-      "Version": "0.8.5.9004",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "R",
-        "Rdpack",
-        "broom",
-        "car",
-        "checkmate",
-        "cowplot",
-        "dplyr",
-        "emmeans",
-        "forcats",
-        "formatters",
-        "ggplot2",
-        "grid",
-        "gridExtra",
-        "gtable",
-        "labeling",
-        "lifecycle",
-        "magrittr",
-        "methods",
-        "rlang",
-        "rtables",
-        "scales",
-        "stats",
-        "survival",
-        "tibble",
-        "tidyr",
-        "utils"
-      ],
-      "Hash": "e32c2e26d206f426ecfb12d27240850a"
-    },
-    "tern.gee": {
-      "Package": "tern.gee",
-      "Version": "0.1.0.9006",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "R",
-        "checkmate",
-        "emmeans",
-        "formatters",
-        "geeasy",
-        "geepack",
-        "nlme",
-        "rtables",
-        "stats",
-        "tern"
-      ],
-      "Hash": "3b9a2ae459c6817e8bb9c9e7af42b1f9"
-    },
-    "tern.mmrm": {
-      "Package": "tern.mmrm",
-      "Version": "0.2.2.9005",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
-      "Requirements": [
-        "R",
-        "checkmate",
-        "cowplot",
-        "dplyr",
-        "emmeans",
-        "formatters",
-        "generics",
-        "ggplot2",
-        "lifecycle",
-        "magrittr",
-        "mmrm",
-        "parallelly",
-        "rlang",
-        "rtables",
-        "stats",
-        "tern",
-        "tidyr"
-      ],
-      "Hash": "2b0fd451071c90052fc14e96c856ba72"
     },
     "testthat": {
       "Package": "testthat",
