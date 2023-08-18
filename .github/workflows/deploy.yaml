@@ -100,12 +100,12 @@ jobs:
               }
           }
 
-      # - name: Install R packages using renv and update the renv snapshot
-      #   shell: Rscript {0}
-      #   working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
-      #   run: |
-      #     options(renv.config.cache.symlinks = FALSE)
-      #     renv::restore(clean = TRUE)
+      - name: Install R packages using renv and update the renv snapshot
+        shell: Rscript {0}
+        working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
+        run: |
+          options(renv.config.cache.symlinks = FALSE)
+          renv::restore(clean = TRUE)
 
       - name: Print the new renv.lock file for ${{ matrix.directory }}
         working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
@@ -158,12 +158,12 @@ jobs:
       #       forceUpdate = TRUE
       #     )
 
-      # - name: Commit updated renv.lock file
-      #   if: ${{ matrix.channel == 'stable' }}
-      #   uses: stefanzweifel/git-auto-commit-action@v4
-      #   with:
-      #     repository: ${{ github.event.repository.name }}
-      #     branch: deploy-apps@main # TODO: switch to the release branch before merging.
-      #     commit_message: "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
-      #     file_pattern: "${{ matrix.directory }}/renv.lock"
-      #     commit_user_name: insights-engineering-bot
+      - name: Commit updated renv.lock file
+        if: ${{ matrix.channel == 'stable' }}
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          repository: ${{ github.event.repository.name }}
+          branch: deploy-apps@main # TODO: switch to the release branch before merging.
+          commit_message: "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
+          file_pattern: "${{ matrix.directory }}/renv.lock"
+          commit_user_name: insights-engineering-bot
