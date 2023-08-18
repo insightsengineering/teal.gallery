@@ -3,11 +3,6 @@ name: Deploy Apps 🚀
 
 on:
   push:
-    branches:
-      - main
-      - dev
-    tags:
-      - "*"
   workflow_dispatch:
   schedule:
     - cron: "12 3 * * *"
