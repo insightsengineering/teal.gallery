@@ -35,19 +35,17 @@ jobs:
     steps:
       - name: Checkout repo 🛎
         uses: actions/checkout@v3
-        with:
-          path: ${{ github.event.repository.name }}
 
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
       - name: Extract R version from lockfile
-        run: printf 'R_VERSION=%s\n' "$(jq --raw-output .R.Version ${{ github.event.repository.name }}/${{ matrix.directory }}/renv.lock)" >> $GITHUB_ENV
+        run: printf 'R_VERSION=%s\n' "$(jq --raw-output .R.Version ${{ matrix.directory }}/renv.lock)" >> $GITHUB_ENV
 
       - name: Check if cypress test exists
         id: find-cypress
         run: |
-          if [ -d ${{ github.event.repository.name }}/${{ matrix.directory }}/tests/cypress ]; then
+          if [ -d ${{ matrix.directory }}/tests/cypress ]; then
             echo "has-cypress-tests=true" >> $GITHUB_OUTPUT
           else
             echo "Skipping frontend tests because cypress directory does not exist."
@@ -69,7 +67,7 @@ jobs:
       - name: Setup npm packages
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         shell: bash
-        working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}/js
+        working-directory: ${{ matrix.directory }}/js
         run: |
           npm i
 
@@ -78,13 +76,12 @@ jobs:
         env:
           CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ env.R_VERSION }}-${{ matrix.directory }}-${{ matrix.channel }}
         with:
-          path: ${{ github.event.repository.name }}/${{ matrix.directory }}/renv/library
-          key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/{1}/renv.lock', github.event.repository.name, matrix.directory)) }}
+          path: ${{ matrix.directory }}/renv/library
+          key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/renv.lock', matrix.directory)) }}
           restore-keys: ${{ env.CACHE_KEY }}-
 
       - name: Update renv.lock file with updated GitHub packages
         shell: Rscript {0}
-        working-directory: ${{ github.event.repository.name }}
         run: |
           setwd("${{ matrix.directory }}")
           lockfile <- renv::lockfile_read()
@@ -97,13 +94,13 @@ jobs:
 
       - name: Install R packages using renv and update the renv snapshot
         shell: Rscript {0}
-        working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
+        working-directory: ${{ matrix.directory }}
         run: |
           options(renv.config.cache.symlinks = FALSE)
           renv::restore(clean = TRUE)
 
       - name: Print the new renv.lock file for ${{ matrix.directory }}
-        working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
+        working-directory: ${{ matrix.directory }}
         run: cat renv.lock
 
       - name: Front end test to check if the app works fine
@@ -111,7 +108,7 @@ jobs:
         continue-on-error: true
         uses: cypress-io/github-action@v2
         with:
-          working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}/js
+          working-directory: ${{ matrix.directory }}/js
           start: npm run run-app
           wait-on: "http://localhost:3333"
           wait-on-timeout: 500
@@ -119,7 +116,7 @@ jobs:
 
       - name: Install deploy R package dependencies
         shell: Rscript {0}
-        working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
+        working-directory: ${{ matrix.directory }}
         run: |
           install.packages(c("BiocManager", "remotes"))
           remotes::install_version("rsconnect", "0.8.29")
@@ -127,7 +124,7 @@ jobs:
       - name: Deploy 🖨 ${{ matrix.directory }} 🎨
         shell: Rscript {0}
         continue-on-error: true
-        working-directory: ${{ github.event.repository.name }}/${{ matrix.directory }}
+        working-directory: ${{ matrix.directory }}
         run: |
           rsconnect::setAccountInfo(
             name = "${{ env.SHINYAPPSIO_ACCOUNT }}",
@@ -150,7 +147,7 @@ jobs:
         if: ${{ matrix.channel == 'stable' }}
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          repository: ${{ github.event.repository.name }}
+          repository: "."
           branch: deploy-apps@main # TODO: switch to the release branch before merging.
           commit_message: "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
           file_pattern: "${{ matrix.directory }}/renv.lock"
