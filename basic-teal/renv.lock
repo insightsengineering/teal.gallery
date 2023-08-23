@@ -33,7 +33,7 @@
     },
     "Matrix": {
       "Package": "Matrix",
-      "Version": "1.6-0",
+      "Version": "1.6-1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -46,7 +46,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "31262fd18481fab05c5e7258dac163ca"
+      "Hash": "cb6855ac711958ca734b75e631b2035d"
     },
     "R.cache": {
       "Package": "R.cache",
@@ -390,7 +390,7 @@
     },
     "fontawesome": {
       "Package": "fontawesome",
-      "Version": "0.5.1",
+      "Version": "0.5.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -398,7 +398,7 @@
         "htmltools",
         "rlang"
       ],
-      "Hash": "1e22b8cabbad1eae951a75e9f8b52378"
+      "Hash": "c2efdd5f0bcd1ea861c2d4e2a883a67d"
     },
     "fs": {
       "Package": "fs",
@@ -460,7 +460,7 @@
     },
     "gtable": {
       "Package": "gtable",
-      "Version": "0.3.3",
+      "Version": "0.3.4",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -471,7 +471,7 @@
         "lifecycle",
         "rlang"
       ],
-      "Hash": "b44addadb528a0d227794121c00572a0"
+      "Hash": "b29cf3031f49b04ab9c852c912547eef"
     },
     "highr": {
       "Package": "highr",
@@ -724,7 +724,7 @@
     },
     "nlme": {
       "Package": "nlme",
-      "Version": "3.1-162",
+      "Version": "3.1-163",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -734,7 +734,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "0984ce8da8da9ead8643c5cbbb60f83e"
+      "Hash": "8d1938040a05566f4f7a14af4feadd6b"
     },
     "openssl": {
       "Package": "openssl",
@@ -1100,7 +1100,26 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "v0.14.0",
-      "RemoteSha": "bf6262bf7f3383966b5148aac5059929a0f2bdfd"
+      "RemoteSha": "bf6262bf7f3383966b5148aac5059929a0f2bdfd",
+      "Requirements": [
+        "R",
+        "checkmate",
+        "lifecycle",
+        "logger",
+        "magrittr",
+        "rlang",
+        "shiny",
+        "shinyjs",
+        "stats",
+        "teal.data",
+        "teal.logger",
+        "teal.reporter",
+        "teal.slice",
+        "teal.transform",
+        "teal.widgets",
+        "utils"
+      ],
+      "Hash": "191cbb46baf9607dd6493cf5cb5b587b"
     },
     "teal.data": {
       "Package": "teal.data",
@@ -1111,7 +1130,24 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "v0.3.0",
-      "RemoteSha": "f437944ffd6e06426d8336420cf80596d94a2798"
+      "RemoteSha": "f437944ffd6e06426d8336420cf80596d94a2798",
+      "Requirements": [
+        "R",
+        "R6",
+        "checkmate",
+        "digest",
+        "lifecycle",
+        "logger",
+        "methods",
+        "rlang",
+        "shiny",
+        "shinyjs",
+        "stats",
+        "teal.logger",
+        "utils",
+        "yaml"
+      ],
+      "Hash": "4a3a59cab2af17e565976d52ca2b1325"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -1122,7 +1158,16 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "v0.1.1",
-      "RemoteSha": "2adf290cb04f06c113e9c5ea8506b0b63d5e68f5"
+      "RemoteSha": "2adf290cb04f06c113e9c5ea8506b0b63d5e68f5",
+      "Requirements": [
+        "R",
+        "glue",
+        "lifecycle",
+        "logger",
+        "shiny",
+        "withr"
+      ],
+      "Hash": "f81a2d2efd48331d5fb58754582139d9"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -1133,7 +1178,22 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "v0.2.0",
-      "RemoteSha": "2d51e7392fe15c295899d9b45ec0e9355144818f"
+      "RemoteSha": "2d51e7392fe15c295899d9b45ec0e9355144818f",
+      "Requirements": [
+        "R6",
+        "bslib",
+        "checkmate",
+        "grid",
+        "htmltools",
+        "knitr",
+        "lifecycle",
+        "rmarkdown",
+        "shiny",
+        "shinyWidgets",
+        "yaml",
+        "zip"
+      ],
+      "Hash": "27b77d973378b8899fbea77a4a7aa01b"
     },
     "teal.slice": {
       "Package": "teal.slice",
@@ -1144,7 +1204,29 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "v0.4.0",
-      "RemoteSha": "fa00471f62ace0894cfb48877f67ec96713c9098"
+      "RemoteSha": "fa00471f62ace0894cfb48877f67ec96713c9098",
+      "Requirements": [
+        "R",
+        "R6",
+        "bslib",
+        "checkmate",
+        "dplyr",
+        "grDevices",
+        "htmltools",
+        "jsonlite",
+        "lifecycle",
+        "logger",
+        "methods",
+        "plotly",
+        "shiny",
+        "shinyWidgets",
+        "shinycssloaders",
+        "shinyjs",
+        "teal.data",
+        "teal.logger",
+        "teal.widgets"
+      ],
+      "Hash": "5b5b4840d3e3583250877f04d75e35bf"
     },
     "teal.transform": {
       "Package": "teal.transform",
@@ -1155,7 +1237,28 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.transform",
       "RemoteRef": "v0.4.0",
-      "RemoteSha": "5e7acf73f9023459a39d1f88279ed72005521219"
+      "RemoteSha": "5e7acf73f9023459a39d1f88279ed72005521219",
+      "Requirements": [
+        "R",
+        "checkmate",
+        "dplyr",
+        "lifecycle",
+        "logger",
+        "magrittr",
+        "methods",
+        "rlang",
+        "shiny",
+        "shinyjs",
+        "shinyvalidate",
+        "stats",
+        "teal.data",
+        "teal.logger",
+        "teal.slice",
+        "teal.widgets",
+        "tidyr",
+        "tidyselect"
+      ],
+      "Hash": "06fc9d71fa927cf6e05932269cdcb47b"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
@@ -1166,7 +1269,22 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "v0.4.0",
-      "RemoteSha": "9c17fbcd1658dac2e5a43602f9e67e2ce25a8e5c"
+      "RemoteSha": "9c17fbcd1658dac2e5a43602f9e67e2ce25a8e5c",
+      "Requirements": [
+        "R",
+        "bslib",
+        "checkmate",
+        "ggplot2",
+        "graphics",
+        "htmltools",
+        "lifecycle",
+        "methods",
+        "shiny",
+        "shinyWidgets",
+        "shinyjs",
+        "styler"
+      ],
+      "Hash": "4f8e6ab164fa28ed9421f6c147b82cfb"
     },
     "tibble": {
       "Package": "tibble",
