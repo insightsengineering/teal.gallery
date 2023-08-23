@@ -1305,16 +1305,21 @@
     },
     "nestcolor": {
       "Package": "nestcolor",
-      "Version": "0.1.2.9001",
-      "Source": "Bioconductor",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Version": "0.1.2.9003",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "nestcolor",
+      "RemoteUsername": "insightsengineering",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "65754d89cb5fc4739469bc939ceef808a2f50a04",
       "Requirements": [
         "R",
         "checkmate",
         "ggplot2",
         "lifecycle"
       ],
-      "Hash": "38aa39d4bbe1e1d9d69b881a0c6c31c3"
+      "Hash": "2c48d7e4195825b5f1e0d212752aff1a"
     },
     "nlme": {
       "Package": "nlme",
