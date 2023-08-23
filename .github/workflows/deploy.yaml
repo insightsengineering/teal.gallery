@@ -31,13 +31,21 @@ jobs:
       fail-fast: false
       matrix:
         directory: ["basic-teal"]
-        channel: ["stable", "devel"]
+        channel: ["stable"] # TODO: add deval to the channel
     steps:
       - name: Checkout repo 🛎
         uses: actions/checkout@v3
 
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Set channel related constants
+        run: |
+          if [ "${{ matrix.channel }}" = "stable" ]; then
+            echo "BRANCH_NAME=deploy-apps@main" >> $GITHUB_ENV # TODO: Change the branch name to main
+          else
+            echo "BRANCH_NAME=deploy-apps@main" >> $GITHUB_ENV # TODO: Change the branch name to deval
+          fi
 
       - name: Extract R version from lockfile
         run: printf 'R_VERSION=%s\n' "$(jq --raw-output .R.Version ${{ matrix.directory }}/renv.lock)" >> $GITHUB_ENV
@@ -66,7 +74,6 @@ jobs:
 
       - name: Setup npm packages
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
-        shell: bash
         working-directory: ${{ matrix.directory }}/js
         run: |
           npm i
@@ -148,11 +155,12 @@ jobs:
           )
 
       - name: Commit updated renv.lock file
-        if: ${{ matrix.channel == 'stable' }}
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          repository: "."
-          branch: deploy-apps@main # TODO: switch to the release branch before merging.
-          commit_message: "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
-          file_pattern: "${{ matrix.directory }}/renv.lock"
-          commit_user_name: insights-engineering-bot
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git config --global --add safe.directory /__w/teal.gallery/teal.gallery
+          git checkout ${{ env.BRANCH_NAME }}
+          git pull
+          git add ${{ matrix.directory }}/renv.lock
+          git commit -m "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
+          git push origin ${{ env.BRANCH_NAME }}
