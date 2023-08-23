@@ -30,7 +30,18 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        directory: ["basic-teal"]
+        directory:
+          [
+            "RNA-seq",
+            "basic-teal",
+            "efficacy",
+            "exploratory",
+            "longitudinal",
+            "early-dev",
+            "patient-profile",
+            "python",
+            "safety",
+          ]
         channel: ["stable"] # TODO: add deval to the channel
     steps:
       - name: Checkout repo 🛎
