@@ -97,7 +97,11 @@ jobs:
         working-directory: ${{ matrix.directory }}
         run: |
           options(renv.config.cache.symlinks = FALSE)
+          lockfile_pkgs <- renv::lockfile_read()$Package
+          github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
           renv::restore(clean = TRUE)
+          renv::update(exclude = github_pkgs)
+          renv::snapshot()
 
       - name: Print the new renv.lock file for ${{ matrix.directory }}
         working-directory: ${{ matrix.directory }}
