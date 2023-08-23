@@ -71,23 +71,23 @@ jobs:
             echo "has-cypress-tests=false" >> $GITHUB_OUTPUT
           fi
 
-      # - name: Setup system dependencies for cypress and python app
-      #   if: steps.find-cypress.outputs.has-cypress-tests == 'true'
-      #   run: >
-      #     apt-get update && apt-get install --yes
-      #     libgtk2.0-0 libgbm-dev libnotify-dev libgconf-2-4 xvfb python3.10-venv
+      - name: Setup system dependencies for cypress and python app
+        if: steps.find-cypress.outputs.has-cypress-tests == 'true'
+        run: >
+          apt-get update && apt-get install --yes
+          libgtk2.0-0 libgbm-dev libnotify-dev libgconf-2-4 xvfb python3.10-venv
 
-      # - name: Setup Node
-      #   uses: actions/setup-node@v3
-      #   if: steps.find-cypress.outputs.has-cypress-tests == 'true'
-      #   with:
-      #     node-version: 16
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        if: steps.find-cypress.outputs.has-cypress-tests == 'true'
+        with:
+          node-version: 16
 
-      # - name: Setup npm packages
-      #   if: steps.find-cypress.outputs.has-cypress-tests == 'true'
-      #   working-directory: ${{ matrix.directory }}/js
-      #   run: |
-      #     npm i
+      - name: Setup npm packages
+        if: steps.find-cypress.outputs.has-cypress-tests == 'true'
+        working-directory: ${{ matrix.directory }}/js
+        run: |
+          npm i
 
       - name: Restore renv from cache
         uses: actions/cache@v2
@@ -125,53 +125,53 @@ jobs:
         working-directory: ${{ matrix.directory }}
         run: cat renv.lock
 
-      # - name: Front end test to check if the app works fine
-      #   if: steps.find-cypress.outputs.has-cypress-tests == 'true'
-      #   continue-on-error: true
-      #   uses: cypress-io/github-action@v2
-      #   with:
-      #     working-directory: ${{ matrix.directory }}/js
-      #     start: npm run run-app
-      #     wait-on: "http://localhost:3333"
-      #     wait-on-timeout: 500
-      #     project: ../tests
+      - name: Front end test to check if the app works fine
+        if: steps.find-cypress.outputs.has-cypress-tests == 'true'
+        continue-on-error: true
+        uses: cypress-io/github-action@v2
+        with:
+          working-directory: ${{ matrix.directory }}/js
+          start: npm run run-app
+          wait-on: "http://localhost:3333"
+          wait-on-timeout: 500
+          project: ../tests
 
-      # - name: Install deploy R package dependencies
-      #   shell: Rscript {0}
-      #   working-directory: ${{ matrix.directory }}
-      #   run: |
-      #     install.packages(c("BiocManager", "remotes"))
-      #     remotes::install_version("rsconnect", "0.8.29")
+      - name: Install deploy R package dependencies
+        shell: Rscript {0}
+        working-directory: ${{ matrix.directory }}
+        run: |
+          install.packages(c("BiocManager", "remotes"))
+          remotes::install_version("rsconnect", "0.8.29")
 
-      # - name: Deploy 🖨 ${{ matrix.directory }} 🎨
-      #   shell: Rscript {0}
-      #   continue-on-error: true
-      #   working-directory: ${{ matrix.directory }}
-      #   run: |
-      #     rsconnect::setAccountInfo(
-      #       name = "${{ env.SHINYAPPSIO_ACCOUNT }}",
-      #       token = "${{ secrets.SHINYAPPSIO_TOKEN }}",
-      #       secret = "${{ secrets.SHINYAPPSIO_SECRET }}",
-      #       server = "shinyapps.io"
-      #     )
-      #     rsconnect::deployApp(
-      #       appFiles = "app.R",
-      #       appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}"),
-      #       appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}",
-      #       account = "${{ env.SHINYAPPSIO_ACCOUNT }}",
-      #       upload = TRUE,
-      #       logLevel = "normal",
-      #       lint = FALSE,
-      #       forceUpdate = TRUE
-      #     )
+      - name: Deploy 🖨 ${{ matrix.directory }} 🎨
+        shell: Rscript {0}
+        continue-on-error: true
+        working-directory: ${{ matrix.directory }}
+        run: |
+          rsconnect::setAccountInfo(
+            name = "${{ env.SHINYAPPSIO_ACCOUNT }}",
+            token = "${{ secrets.SHINYAPPSIO_TOKEN }}",
+            secret = "${{ secrets.SHINYAPPSIO_SECRET }}",
+            server = "shinyapps.io"
+          )
+          rsconnect::deployApp(
+            appFiles = "app.R",
+            appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}"),
+            appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}",
+            account = "${{ env.SHINYAPPSIO_ACCOUNT }}",
+            upload = TRUE,
+            logLevel = "normal",
+            lint = FALSE,
+            forceUpdate = TRUE
+          )
 
-      # - name: Commit updated renv.lock file
-      #   run: |
-      #     git config --global user.email "action@github.com"
-      #     git config --global user.name "GitHub Action"
-      #     git config --global --add safe.directory /__w/teal.gallery/teal.gallery
-      #     git checkout ${{ env.BRANCH_NAME }}
-      #     git pull
-      #     git add ${{ matrix.directory }}/renv.lock
-      #     git commit -m "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
-      #     git push origin ${{ env.BRANCH_NAME }}
+      - name: Commit updated renv.lock file
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git config --global --add safe.directory /__w/teal.gallery/teal.gallery
+          git checkout ${{ env.BRANCH_NAME }}
+          git pull
+          git add ${{ matrix.directory }}/renv.lock
+          git commit -m "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
+          git push origin ${{ env.BRANCH_NAME }}

@@ -1756,9 +1756,14 @@
     },
     "osprey": {
       "Package": "osprey",
-      "Version": "0.1.15.9015",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Version": "0.1.16.9001",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "osprey",
+      "RemoteUsername": "insightsengineering",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "6da00e75c00e81a52b8d11fe89a5b63f1f7de353",
       "Requirements": [
         "DescTools",
         "R",
@@ -1777,7 +1782,7 @@
         "tibble",
         "tidyr"
       ],
-      "Hash": "e8b2f1de064ff74af48f98dc5d6e043e"
+      "Hash": "b7e340aaf34fa260bd3082b0929adde8"
     },
     "parallelly": {
       "Package": "parallelly",
@@ -2700,9 +2705,14 @@
     },
     "teal.osprey": {
       "Package": "teal.osprey",
-      "Version": "0.1.15.9019",
-      "Source": "Repository",
-      "Repository": "https://pharmaverse.r-universe.dev",
+      "Version": "0.1.16.9001",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "teal.osprey",
+      "RemoteUsername": "insightsengineering",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "523ea6b9f664426d3f367d0c944618d2c30e4d96",
       "Requirements": [
         "R",
         "checkmate",
@@ -2723,7 +2733,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "c634613fad3d47aaab1b3a357ab11443"
+      "Hash": "cf3ac1c2e14a43db10cae6787abdb1c5"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
