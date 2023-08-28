@@ -6,15 +6,11 @@
 #'
 #' @param app_name The name of the app to run.
 #' @param ref The reference (commit, branch, or tag) to download from the repository. (default: "HEAD")
-#' @param package_repo The R-Universe mirror where the teal packages would be instealled from.
-#' Stable version: https://insightsengineering.r-universe.dev and Release version: https://pharmaverse.r-universe.dev
 #' @param ... Additional arguments passed to `shiny::runApp()`.
 #'
 #' @examples
 #' restore_and_run("app1", ref = "HEAD")
-restore_and_run <- function(
-    app_name, ref = "HEAD",
-    package_repo = "https://insightsengineering.r-universe.dev", ...) {
+restore_and_run <- function(app_name, ref = "HEAD", ...) {
   username <- "insightsengineering"
   repo <- "teal.gallery"
   #' Download a GitHub repository, unzip it, and return the repository directory.
@@ -61,7 +57,7 @@ restore_and_run <- function(
   #'
   #' @param app_directory The directory path of the Shiny app.
   #' @param ... Additional arguments passed to `shiny::runApp()`.
-  load_and_run_app <- function(app_directory, package_repo, ...) {
+  load_and_run_app <- function(app_directory, ...) {
     setwd(app_directory)
     source(".Rprofile")
     renv::restore(prompt = FALSE)
@@ -84,5 +80,5 @@ restore_and_run <- function(
   }
   current_dir <- getwd()
   on.exit(setwd(current_dir))
-  load_and_run_app(file.path(file_dir, repo_directory, app_name), package_repo, ...)
+  load_and_run_app(file.path(file_dir, repo_directory, app_name), ...)
 }

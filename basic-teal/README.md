@@ -7,11 +7,8 @@
 
     source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
 
-    # Run the app after installing all the stable versions of teal dependencies
+    # Run the app
     restore_and_run("basic-teal", package_repo = "https://insightsengineering.r-universe.dev")
-
-    # Run the app after installing all the beta versions of teal dependencies
-    restore_and_run("basic-teal", package_repo = "https://pharmaverse.r-universe.dev")
 
 ### View the deployed app
 
