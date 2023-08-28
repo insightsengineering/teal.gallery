@@ -63,6 +63,8 @@ restore_and_run <- function(
   #' @param ... Additional arguments passed to `shiny::runApp()`.
   load_and_run_app <- function(app_directory, package_repo, ...) {
     setwd(app_directory)
+    source(".Rprofile")
+    renv::restore(prompt = FALSE)
     shiny::runApp(app_directory, ...)
   }
 
@@ -80,5 +82,7 @@ restore_and_run <- function(
       )
     )
   }
+  current_dir <- getwd()
+  on.exit(setwd(current_dir))
   load_and_run_app(file.path(file_dir, repo_directory, app_name), package_repo, ...)
 }
