@@ -157,15 +157,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="development-version" class="level3">
 <h3 class="anchored" data-anchor-id="development-version">Development version</h3>
 <ul>
-<li><a href="https://genentech.shinyapps.io/NEST_RNA-seq_main/">RNA-seq</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_basic-teal_main/">basic-teal</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_efficacy_main/">efficacy</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_exploratory_main/">exploratory</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_longitudinal_main/">longitudinal</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_early-dev_main/">early-dev</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_patient-profile_main/">patient-profile</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_python_main/">python</a></li>
-<li><a href="https://genentech.shinyapps.io/NEST_safety_main/">safety</a></li>
+<li><a href="https://genentech.shinyapps.io/NEST_RNA-seq_stable/">RNA-seq</a></li>
+<li><a href="https://genentech.shinyapps.io/NEST_basic-teal_stable/">basic-teal</a></li>
+<li><a href="https://genentech.shinyapps.io/NEST_efficacy_stable/">efficacy</a></li>
+<li><a href="https://genentech.shinyapps.io/NEST_exploratory_stable/">exploratory</a></li>
+<li><a href="https://genentech.shinyapps.io/NEST_longitudinal_stable/">longitudinal</a></li>
+<li><a href="https://genentech.shinyapps.io/NEST_early-dev_stable/">early-dev</a></li>
+<li><a href="https://genentech.shinyapps.io/NEST_patient-profile_stable/">patient-profile</a></li>
+<li><a href="https://genentech.shinyapps.io/NEST_python_stable/">python</a></li>
+<li><a href="https://genentech.shinyapps.io/NEST_safety_stable/">safety</a></li>
 </ul>
 </section>
 </section>
@@ -175,8 +175,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>By sourcing the <a href="https://github.com/insightsengineering/teal.gallery/blob/main/utils/sourceme.R">.R</a> file you make sure that you have access to the <code>restore_and_run()</code></p>
 <p>Running the <code>restore_and_run("APP_NAME")</code> will run the <code>APP_NAME</code> by restoring the packages using <a href="https://rstudio.github.io/renv/">renv</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">source</span>(<span class="st">"https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="co"># Assuming you want to run the "basic-teal" app. Refer to the list above to know which apps are possible</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">restore_and_run</span>(<span class="st">"basic-teal"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># Run the basic-teal app after installing all the stable versions of teal dependencies from https://insightsengineering.r-universe.dev</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">restore_and_run</span>(<span class="st">"basic-teal"</span>, <span class="at">package_repo =</span> <span class="st">"https://insightsengineering.r-universe.dev"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="co"># Run the basic-teal app after installing all the beta versions of teal dependencies from https://pharmaverse.r-universe.dev</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="fu">restore_and_run</span>(<span class="st">"basic-teal"</span>, <span class="at">package_repo =</span> <span class="st">"https://pharmaverse.r-universe.dev"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="development" class="level2">
 <h2 class="anchored" data-anchor-id="development">Development</h2>
@@ -184,17 +188,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="adding-a-sample-app-to-teal.gallery" class="level3">
 <h3 class="anchored" data-anchor-id="adding-a-sample-app-to-teal.gallery">Adding a sample app to <code>teal.gallery</code></h3>
 <p>Adding a sample app involves the following steps:</p>
+<section id="hard-requirements" class="level4">
+<h4 class="anchored" data-anchor-id="hard-requirements">Hard requirements</h4>
 <ol type="1">
-<li>Copy each sample app into a file named <code>app.R</code> into a sensible folder name inside it’s own directory. The directory is also the <code>APP_NAME</code>.</li>
-<li>Make sure that <code>{renv}</code> is used for the teal app.</li>
-<li>Create a GIF recording (<a href="https://getkap.co/">KAP</a> is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. (It can be done by recording using KAP in 1470x840 px and rendering 5fps and downsizing 33%). Place the GIF inside the <code>_internal/quarto/assets/img</code> direcxtory. Also, make sure that the name of the GIF is <code>APP_NAME.gif</code></li>
+<li>Copy each sample app into a file named <code>app.R</code> into a sensible folder name inside it’s own directory. The directory has to be named with the <code>APP_NAME</code>.</li>
 <li>Update the <code>_internal/quarto/demo-apps.yml</code> with a new <code>app/title</code>. This should be the <code>APP_NAME</code>.</li>
 <li>Run the <code>_internal/utils/generate_app_readme.R</code> to generate the readme for the app inside it’s own directory.</li>
+</ol>
+</section>
+<section id="optionalsoft-requirements" class="level4">
+<h4 class="anchored" data-anchor-id="optionalsoft-requirements">Optional/Soft requirements</h4>
+<ol type="1">
+<li>Create a GIF recording (<a href="https://getkap.co/">KAP</a> is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. (It can be done by recording using KAP in 1470x840 px and rendering 5fps and downsizing 33%). Place the GIF inside the <code>_internal/quarto/assets/img</code> direcxtory. Also, make sure that the name of the GIF is <code>APP_NAME.gif</code></li>
+<li>Add front-end tests with the help of cypress. Copy the contents of the <code>js</code> directory within some other app’s directory inside your app directory to get the node dependencies. Place the cypress tests inside the <code>tests/cypress</code> inside your app’s directory. Please refer to an existing app’s tests so that the <code>.github/deploy.yaml</code> will automaticall run the cypress tests.</li>
 </ol>
 
 
 <!-- -->
 
+</section>
 </section>
 </section>
 </section>
