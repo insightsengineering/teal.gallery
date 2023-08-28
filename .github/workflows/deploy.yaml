@@ -85,7 +85,7 @@ jobs:
           npm i
 
       - name: Restore renv from cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         env:
           CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ matrix.directory }}-${{ matrix.channel }}
         with:
