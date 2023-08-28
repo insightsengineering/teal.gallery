@@ -11,22 +11,22 @@
 #' @examples
 #' restore_and_run("app1", ref = "HEAD")
 restore_and_run <- function(app_name, ref = "HEAD", ...) {
-  username <- "insightsengineering"
+  owner <- "insightsengineering"
   repo <- "teal.gallery"
   #' Download a GitHub repository, unzip it, and return the repository directory.
   #'
   #' This function downloads a given GitHub repository as a tar.gz file, unzips it,
   #' and returns the directory where the repository is extracted.
   #'
-  #' @param username The GitHub username or organization name.
+  #' @param owner The GitHub username or organization name of the owner of the repository.
   #' @param repo The name of the GitHub repository.
   #' @param ref The reference (commit, branch, or tag) to download from the repository.
   #' @param file_dir The directory where the downloaded file will be saved.
   #' @param file_path The file path of the downloaded tar.gz file.
   #'
   #' @return The directory path of the extracted repository.
-  download_apps_repo <- function(username, repo, ref, file_dir, file_path) {
-    url <- paste("https://github.com/", username, "/", repo, "/archive/", ref, ".tar.gz", sep = "")
+  download_apps_repo <- function(owner, repo, ref, file_dir, file_path) {
+    url <- paste("https://github.com/", owner, "/", repo, "/archive/", ref, ".tar.gz", sep = "")
     message("Downloading ", url)
     dir.create(file_dir, showWarnings = FALSE)
     if (download.file(url, file_path, mode = "wb", quiet = TRUE) != 0) {
@@ -68,7 +68,7 @@ restore_and_run <- function(app_name, ref = "HEAD", ...) {
   file_dir <- tempfile("shinyapp")
   on.exit(unlink(file_path))
   on.exit(unlink(file_dir, recursive = TRUE), add = TRUE)
-  repo_directory <- download_apps_repo(username, repo, ref, file_dir, file_path)
+  repo_directory <- download_apps_repo(owner, repo, ref, file_dir, file_path)
   available_apps <- get_available_apps(file.path(file_dir, repo_directory))
   if (!app_name %in% available_apps) {
     stop(
