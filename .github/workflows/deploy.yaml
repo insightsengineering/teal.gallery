@@ -163,6 +163,7 @@ jobs:
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git config --global --add safe.directory /__w/teal.gallery/teal.gallery
+          git fetch
           git checkout ${{ env.BRANCH_NAME }}
           git pull
           if [ -n "$(git diff --staged)" ]; then
