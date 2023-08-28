@@ -1,11 +1,5 @@
 source("renv/activate.R")
 
-for (package in renv::dependencies()$Package) {
-  if (!requireNamespace(package)) {
-    renv::install(package, prompt = FALSE)
-  }
-}
-
 # Solution of using python packages in shinyapps.io deployment from: https://github.com/ranikay/shiny-reticulate-app
 if (Sys.info()[["user"]] == "shiny") {
   # Running on shinyapps.io

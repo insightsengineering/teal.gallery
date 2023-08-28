@@ -47,9 +47,6 @@ jobs:
       - name: Checkout repo 🛎
         uses: actions/checkout@v3
 
-      - name: Install jq
-        run: sudo apt-get update && sudo apt-get install -y jq
-
       - name: Set channel related constants
         run: |
           if [ "${{ matrix.channel }}" = "stable" ]; then
@@ -57,9 +54,6 @@ jobs:
           else
             echo "BRANCH_NAME=deploy-apps@main" >> $GITHUB_ENV # TODO: Change the branch name to deval
           fi
-
-      - name: Extract R version from lockfile
-        run: printf 'R_VERSION=%s\n' "$(jq --raw-output .R.Version ${{ matrix.directory }}/renv.lock)" >> $GITHUB_ENV
 
       - name: Check if cypress test exists
         id: find-cypress
@@ -92,7 +86,7 @@ jobs:
       - name: Restore renv from cache
         uses: actions/cache@v2
         env:
-          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ env.R_VERSION }}-${{ matrix.directory }}-${{ matrix.channel }}
+          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ matrix.directory }}-${{ matrix.channel }}
         with:
           path: ${{ matrix.directory }}/renv/library
           key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/renv.lock', matrix.directory)) }}
@@ -140,8 +134,7 @@ jobs:
         shell: Rscript {0}
         working-directory: ${{ matrix.directory }}
         run: |
-          install.packages(c("BiocManager", "remotes"))
-          remotes::install_version("rsconnect", "0.8.29")
+          install.packages(c("BiocManager", "rsconnect"))
 
       - name: Deploy 🖨 ${{ matrix.directory }} 🎨
         shell: Rscript {0}
@@ -172,6 +165,10 @@ jobs:
           git config --global --add safe.directory /__w/teal.gallery/teal.gallery
           git checkout ${{ env.BRANCH_NAME }}
           git pull
-          git add ${{ matrix.directory }}/renv.lock
-          git commit -m "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
-          git push origin ${{ env.BRANCH_NAME }}
+          if [ -n "$(git diff --staged)" ]; then
+            git add ${{ matrix.directory }}/renv.lock
+            git commit -m "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
+            git push origin ${{ env.BRANCH_NAME }}
+          else
+            echo "renv.lock was not modified. Nothing to commit.";
+          fi
