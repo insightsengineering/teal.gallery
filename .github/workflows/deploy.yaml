@@ -42,7 +42,7 @@ jobs:
             "python",
             "safety",
           ]
-        channel: ["stable"] # TODO: add deval to the channel
+        channel: ["stable", "dev"]
     steps:
       - name: Checkout repo 🛎
         uses: actions/checkout@v3
@@ -52,7 +52,7 @@ jobs:
           if [ "${{ matrix.channel }}" = "stable" ]; then
             echo "BRANCH_NAME=deploy-apps@main" >> $GITHUB_ENV # TODO: Change the branch name to main
           else
-            echo "BRANCH_NAME=deploy-apps@main" >> $GITHUB_ENV # TODO: Change the branch name to deval
+            echo "BRANCH_NAME=deploy-apps@dev" >> $GITHUB_ENV # TODO: Change the branch name to deval
           fi
 
       - name: Check if cypress test exists
