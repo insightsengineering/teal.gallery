@@ -24,6 +24,12 @@ You can run any of these apps by just executing these two lines of code in your 
 
 By sourcing the [\sourceme.R](https://github.com/insightsengineering/teal.gallery/blob/main/utils/sourceme.R) file you make sure that you have access to the `restore_and_run()`
 
+Note: Make sure to install [renv](https://rstudio.github.io/renv/index.html) before you do this. Also, it is recommended that you create and use a Github PAT. Once you have the PAT, run the following:
+
+```R
+Sys.setenv(GITHUB_PAT = "your_access_token_here")
+```
+
 Running the `restore_and_run("APP_NAME")` will run the `APP_NAME` by restoring the packages using [renv](https://rstudio.github.io/renv/)
 
 ```R
