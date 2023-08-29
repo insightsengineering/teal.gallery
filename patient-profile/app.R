@@ -473,10 +473,14 @@ app <- init(
       )
     )
   ),
-  header = div(
-    class = "",
-    style = "margin-bottom: 2px;",
-    tags$h1("Example Patient Profile App", tags$span("SPA", class = "pull-right"))
+  header = tags$span(
+    style = "display: flex; align-items: center; justify-content: space-between;",
+    tags$h2("Example teal app focusing on patient-level analysis of clinical trial data with teal.modules.clinical"),
+    tags$span(
+      style = "display: flex; align-items: center;",
+      tags$img(src = "nest.png", alt = "NEST logo", height = "60px"),
+      tags$h3("NEST @ Roche")
+    )
   ),
   footer = tags$p(class = "text-muted", "Source: teal.gallery package")
 )

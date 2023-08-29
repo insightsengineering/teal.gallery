@@ -606,10 +606,14 @@ app <- teal::init(
       plot_height = c(1200, 400, 5000)
     )
   ),
-  header = div(
-    class = "",
-    style = "margin-bottom: 2px;",
-    tags$h1("Demo ED Onco teal app with random ADaM data", tags$span("ED SPA", class = "pull-right"))
+  header = tags$span(
+    style = "display: flex; align-items: center; justify-content: space-between;",
+    tags$h2("Example teal app focusing on analysis of early-phase clinical trial data with teal.osprey"),
+    tags$span(
+      style = "display: flex; align-items: center;",
+      tags$img(src = "nest.png", alt = "NEST logo", height = "60px"),
+      tags$h3("NEST @ Roche")
+    )
   ),
   footer = tags$p(class = "text-muted", "Source: teal.gallery package")
 )

@@ -745,7 +745,15 @@ x <- teal::init(
       )
     )
   ),
-  header = tags$h1("Longitudinal Visualizations: ", trimws(MOLECULE), "-", trimws(INDICATION), "-", trimws(STUDY)),
+  header = tags$span(
+    style = "display: flex; align-items: center; justify-content: space-between;",
+    tags$h2("Example teal app focusing on analysis of longitudinal clinical trial data with teal.goshawk"),
+    tags$span(
+      style = "display: flex; align-items: center;",
+      tags$img(src = "nest.png", alt = "NEST logo", height = "60px"),
+      tags$h3("NEST @ Roche")
+    )
+  ),
   footer = tags$p(actionLink("showAboutModal", "About,"),
     tags$a("Issues", href = "https://github.com/insightsengineering/teal.gallery/issues", target = "_blank"),
     p("Packages: teal.goshawk, goshawk"),

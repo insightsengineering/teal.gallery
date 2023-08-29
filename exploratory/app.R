@@ -322,10 +322,14 @@ app <- init(
       plot_width = c(600L, 200L, 2000L)
     )
   ),
-  header = div(
-    class = "",
-    style = "margin-bottom: 2px;",
-    tags$h1("Example App with teal.modules.general modules", tags$span("SPA", class = "pull-right"))
+  header = tags$span(
+    style = "display: flex; align-items: center; justify-content: space-between;",
+    tags$h2("Example teal app for general dataset exploration with teal.modules.general"),
+    tags$span(
+      style = "display: flex; align-items: center;",
+      tags$img(src = "nest.png", alt = "NEST logo", height = "60px"),
+      tags$h3("NEST @ Roche")
+    )
   ),
   footer = tags$p(class = "text-muted", "Source: teal.gallery package")
 )
