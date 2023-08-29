@@ -156,6 +156,11 @@ app <- init(
                                           )
                                         teal.data::col_labels(ADQS) <- adqs_labels')
   ),
+  filter = teal_slices(
+    count_type = "all",
+    teal_slice(dataname = "ADSL", varname = "SEX"),
+    teal_slice(dataname = "ADSL", varname = "AGE")
+  ),
   modules = modules(
     tm_front_page(
       label = "Study Information",

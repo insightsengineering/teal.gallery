@@ -423,6 +423,11 @@ x <- teal::init(
     ),
     check = FALSE
   ),
+  filter = teal_slices(
+    count_type = "all",
+    teal_slice(dataname = "ADSL", varname = "SEX"),
+    teal_slice(dataname = "ADSL", varname = "AGE")
+  ),
   modules = modules(
     module(
       "User Guide",

@@ -271,6 +271,18 @@ app <- teal::init(
     # code = get_code("app.R")),
     check = TRUE
   ),
+  # Set initial filter state as safety-evaluable population
+  filter = teal_slices(
+    count_type = "all",
+    teal_slice(dataname = "ADSL", varname = "SAFFL", selected = "Y"),
+    teal_slice(dataname = "ADSL", varname = "SEX"),
+    teal_slice(dataname = "ADSL", varname = "AGE"),
+    teal_slice(dataname = "ADLB", varname = "AVAL"),
+    # default filter
+    teal_slice(dataname = "ADEX", varname = "AVAL"),
+    # default filter
+    teal_slice(dataname = "ADEG", varname = "AVAL")
+  ),
   modules = modules(
     tm_front_page(
       label = "Study Information",
@@ -582,16 +594,7 @@ app <- teal::init(
       tags$span("SPA", class = "pull-right")
     )
   ),
-  footer = tags$p(class = "text-muted", "Source: teal.gallery package"),
-  # Set initial filter state as safety-evaluable population
-  filter = teal_slices(
-    teal_slice(dataname = "ADSL", varname = "SAFFL", selected = "Y"),
-    teal_slice(dataname = "ADLB", varname = "AVAL"),
-    # default filter
-    teal_slice(dataname = "ADEX", varname = "AVAL"),
-    # default filter
-    teal_slice(dataname = "ADEG", varname = "AVAL")
-  )
+  footer = tags$p(class = "text-muted", "Source: teal.gallery package")
 )
 
 shinyApp(app$ui, app$server)

@@ -113,6 +113,11 @@ app <- init(
     cdisc_dataset("ADLB", ADLB, code = "ADLB <- synthetic_cdisc_data(\"latest\")$adlb"),
     check = TRUE
   ),
+  filter = teal_slices(
+    count_type = "all",
+    teal_slice(dataname = "ADSL", varname = "SEX"),
+    teal_slice(dataname = "ADSL", varname = "AGE")
+  ),
   modules = modules(
     tm_front_page(
       label = "Study Information",

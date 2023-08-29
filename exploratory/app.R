@@ -211,6 +211,11 @@ distr_filter_spec <- filter_spec(
 )
 app <- init(
   data = cdisc_data(adsl, adrs, adlb, adlbpca),
+  filter = teal_slices(
+    count_type = "all",
+    teal_slice(dataname = "ADSL", varname = "SEX"),
+    teal_slice(dataname = "ADSL", varname = "AGE")
+  ),
   modules = modules(
     tm_front_page(
       label = "Study Information",
