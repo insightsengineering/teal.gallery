@@ -315,7 +315,6 @@ app <- init(
 body(app$server)[[length(body(app$server)) + 1]] <- quote(
   observeEvent(input$showAboutModal, {
     showModal(modalDialog(
-      title = "About this shiny app: Efficacy",
       tags$p("This teal app is brought to you by the NEST Team at Roche/Genentech. For more information, please visit:"),
       tags$ul(
         tags$li(tags$a(
