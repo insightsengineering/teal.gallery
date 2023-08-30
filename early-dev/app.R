@@ -417,6 +417,7 @@ app <- teal::init(
   ),
   filter = teal_slices(
     count_type = "all",
+    teal_slice(dataname = "ADSL", varname = "SAFFL", selected = "Y"),
     teal_slice(dataname = "ADSL", varname = "SEX"),
     teal_slice(dataname = "ADSL", varname = "AGE")
   ),
