@@ -1,12 +1,12 @@
 - category: Teal Gallery Demo
   deployment_server: https://genentech.shinyapps.io/
   apps:
-    - title: RNA-seq
     - title: basic-teal
-    - title: efficacy
     - title: exploratory
-    - title: longitudinal
-    - title: early-dev
-    - title: patient-profile
-    - title: python
     - title: safety
+    - title: efficacy
+    - title: patient-profile
+    - title: early-dev
+    - title: longitudinal
+    - title: RNA-seq
+    - title: python
