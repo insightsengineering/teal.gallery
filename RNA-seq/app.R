@@ -65,12 +65,15 @@ app <- init(
     )
   ),
   header = tags$span(
-    style = "display: flex; align-items: center; justify-content: space-between;",
-    tags$h2("Example teal app focusing on analysis of RNA-seq data with teal.modules.hermes"),
+    style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
+    tags$span(
+      style = "font-size: 30px;",
+      "Example teal app focusing on analysis of RNA-seq data with teal.modules.hermes"
+    ),
     tags$span(
       style = "display: flex; align-items: center;",
-      tags$img(src = "nest.png", alt = "NEST logo", height = "60px"),
-      tags$h3("NEST @ Roche")
+      tags$img(src = "nest.png", alt = "NEST logo", height = "45px"),
+      tags$span(style = "font-size: 24px;", "NEST @ Roche")
     )
   ),
   footer = tags$p(class = "text-muted", "Source: teal.gallery package")
