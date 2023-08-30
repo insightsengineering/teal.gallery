@@ -1,10 +1,10 @@
 library(teal)
 
 app <- init(
-  filter = teal_slices(
-    teal_slice(dataname = "IRIS", varname = "Species", multiple = FALSE, locked = TRUE)
-  ),
   data = list(IRIS = iris, MTCARS = mtcars),
+  filter = teal_slices(
+    teal_slice(dataname = "IRIS", varname = "Species", multiple = FALSE)
+  ),
   modules = modules(example_module()),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
