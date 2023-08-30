@@ -187,7 +187,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>Copy each sample app into a file named <code>app.R</code> into a sensible folder name inside it’s own directory. The directory is also the <code>APP_NAME</code>.</li>
 <li>Make sure that <code>{renv}</code> is used for the teal app.</li>
-<li>Create a GIF recording (<a href="https://getkap.co/">KAP</a> is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. (It can be done by recording using KAP in 1470x840 px and rendering 5fps and downsizing 33%). Place the GIF inside the <code>_internal/quarto/assets/img</code> directory. Also, make sure that the name of the GIF is <code>APP_NAME.gif</code>. Also, make sure to place a static image with the name dimention called <code>APP_NAME.png</code> that will be displayed in the demo page when the card is not hovered.</li>
+<li>Create a GIF recording (<a href="https://getkap.co/">KAP</a> is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. (It can be done by recording using KAP in 1470x840 px and rendering 5fps and downsizing 33%). Place the GIF inside the <code>_internal/quarto/assets/img</code> direcxtory. Also, make sure that the name of the GIF is <code>APP_NAME.gif</code></li>
 <li>Update the <code>_internal/quarto/demo-apps.yml</code> with a new <code>app/title</code>. This should be the <code>APP_NAME</code>.</li>
 <li>Run the <code>_internal/utils/generate_app_readme.R</code> to generate the readme for the app inside it’s own directory.</li>
 </ol>
