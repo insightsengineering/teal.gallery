@@ -8,15 +8,15 @@ A gallery of sample apps based on the [`teal` framework](https://github.com/insi
 
 ### Development version
 
-- [RNA-seq](https://genentech.shinyapps.io/NEST_RNA-seq_main/)
 - [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_main/)
-- [efficacy](https://genentech.shinyapps.io/NEST_efficacy_main/)
 - [exploratory](https://genentech.shinyapps.io/NEST_exploratory_main/)
-- [longitudinal](https://genentech.shinyapps.io/NEST_longitudinal_main/)
-- [early-dev](https://genentech.shinyapps.io/NEST_early-dev_main/)
-- [patient-profile](https://genentech.shinyapps.io/NEST_patient-profile_main/)
-- [python](https://genentech.shinyapps.io/NEST_python_main/)
 - [safety](https://genentech.shinyapps.io/NEST_safety_main/)
+- [efficacy](https://genentech.shinyapps.io/NEST_efficacy_main/)
+- [patient-profile](https://genentech.shinyapps.io/NEST_patient-profile_main/)
+- [early-dev](https://genentech.shinyapps.io/NEST_early-dev_main/)
+- [longitudinal](https://genentech.shinyapps.io/NEST_longitudinal_main/)
+- [RNA-seq](https://genentech.shinyapps.io/NEST_RNA-seq_main/)
+- [python](https://genentech.shinyapps.io/NEST_python_main/)
 
 ## Running the apps
 
