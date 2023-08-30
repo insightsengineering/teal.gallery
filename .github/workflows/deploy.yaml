@@ -147,7 +147,6 @@ jobs:
             server = "shinyapps.io"
           )
           rsconnect::deployApp(
-            appFiles = "app.R",
             appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}"),
             appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}",
             account = "${{ env.SHINYAPPSIO_ACCOUNT }}",
