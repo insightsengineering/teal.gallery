@@ -21,8 +21,8 @@ TA <- "I2ON"
 MOLECULE <- "Demo Molecule"
 INDICATION <- "Demo Indication"
 STUDY <- "Demo Study"
-lead_spa_name <- "John Doe"
-lead_spa_uid <- "John_Doe"
+lead_analyst_name <- "John Doe"
+lead_analyst_uid <- "John_Doe"
 app_owner_name <- "John Doe"
 app_owner_uid <- "John_Doe"
 
@@ -37,7 +37,7 @@ ADSL <- synthetic_cdisc_data("latest")$adsl
 ADLB <- synthetic_cdisc_data("latest")$adlb
 
 ################################################################################
-# BEGIN: SPA Input Required To Modify Values Below To Reflect Study Specifics
+# BEGIN: Analyst Input Required To Modify Values Below To Reflect Study Specifics
 ################################################################################
 
 # assign LOQ flag symbols: circles for "N" and triangles for "Y", squares for "NA"
@@ -602,8 +602,8 @@ app <- teal::init(
             h6(
               p(strong("Subject Level Data Set:"), adsl_source),
               p(strong("Data Set Label:"), sdsl_label),
-              p(strong("Data Set Owner:"), a(lead_spa_name,
-                href = paste0("https://en.wikipedia.org/wiki/", lead_spa_uid),
+              p(strong("Data Set Owner:"), a(lead_analyst_name,
+                href = paste0("https://en.wikipedia.org/wiki/", lead_analyst_uid),
                 title = "Click here for detailed user contact",
                 target = "blank"
               )),
@@ -614,8 +614,8 @@ app <- teal::init(
               br(),
               p(strong("Biomarker Data Set (Identified as ADLB in app):"), adlb_source),
               p(strong("Data Set Label:"), sdlb_label),
-              p(strong("Data Set Owner:"), a(lead_spa_name,
-                href = paste0("https://en.wikipedia.org/wiki/", lead_spa_uid),
+              p(strong("Data Set Owner:"), a(lead_analyst_name,
+                href = paste0("https://en.wikipedia.org/wiki/", lead_analyst_uid),
                 title = "Click here for detailed user contact",
                 target = "blank"
               )),
