@@ -42,6 +42,6 @@ Adding a sample app involves the following steps:
 
 1. Copy each sample app into a file named `app.R` into a sensible folder name inside it's own directory. The directory is also the `APP_NAME`.
 2. Make sure that `{renv}` is used for the teal app.
-3. Create a GIF recording ([KAP](https://getkap.co/) is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. (It can be done by recording using KAP in 1470x840 px and rendering 5fps and downsizing 33%). Place the GIF inside the `_internal/quarto/assets/img` direcxtory. Also, make sure that the name of the GIF is `APP_NAME.gif`
+3. Create a GIF recording ([KAP](https://getkap.co/) is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. (It can be done by recording using KAP in 1470x840 px and rendering 5fps and downsizing 33%). Place the GIF inside the `_internal/quarto/assets/img` directory. Also, make sure that the name of the GIF is `APP_NAME.gif`. Also, make sure to place a static image with the name dimention called `APP_NAME.png` that will be displayed in the demo page when the card is not hovered.
 4. Update the `_internal/quarto/demo-apps.yml` with a new `app/title`. This should be the `APP_NAME`.
 5. Run the `_internal/utils/generate_app_readme.R` to generate the readme for the app inside it's own directory.

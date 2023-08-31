@@ -76,3 +76,13 @@ a {
 .app-details {
   margin-bottom: 5px;
 }
+
+.static {
+  position: absolute;
+  width: 95.5% !important; // To make sure that the overlay static image fits perfectly on top of the gif
+  background: white;
+}
+
+.static:hover {
+  opacity: 0;
+}
