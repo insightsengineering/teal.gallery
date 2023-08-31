@@ -20,7 +20,8 @@ Click on the card to open it. Click on the icon <i class="bi-file-earmark-text">
       </a>
     </div>
     <a href="<%= item.deployment_server %>NEST_<%= app.title %>_stable">
-      <img src="assets/img/<%= app.title %>.gif" alt="Animation of the <%= app.title %> app" onerror="this.src='assets/www/missing.png'"/>
+      <img class="static" src="assets/img/<%= app.title %>.png" alt="Animation of the <%= app.title %> app" onerror="this.src='assets/www/missing.png'"/>
+      <img class="active" src="assets/img/<%= app.title %>.gif" alt="Animation of the <%= app.title %> app" onerror="this.src='assets/www/missing.png'"/>
     </a>    
   </div>
 <% } %>
