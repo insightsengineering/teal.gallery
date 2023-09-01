@@ -1,4 +1,4 @@
-# source("renv/activate.R")
+source("renv/activate.R")
 
 # Solution of using python packages in shinyapps.io deployment from: https://github.com/ranikay/shiny-reticulate-app
 if (Sys.info()[["user"]] == "shiny") {

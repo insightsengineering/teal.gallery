@@ -1377,6 +1377,18 @@
       ],
       "Hash": "273a6bb4a9844c296a459d2176673270"
     },
+    "packrat": {
+      "Package": "packrat",
+      "Version": "0.9.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "tools",
+        "utils"
+      ],
+      "Hash": "481428983c19a7c443f7ea1beff0a2de"
+    },
     "pbkrtest": {
       "Package": "pbkrtest",
       "Version": "0.5.2",
@@ -1706,6 +1718,35 @@
       ],
       "Hash": "1de7ab598047a87bba48434ba35d497d"
     },
+    "rsconnect": {
+      "Package": "rsconnect",
+      "Version": "1.0.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "cli",
+        "curl",
+        "digest",
+        "jsonlite",
+        "lifecycle",
+        "openssl",
+        "packrat",
+        "renv",
+        "rlang",
+        "rstudioapi",
+        "tools",
+        "yaml"
+      ],
+      "Hash": "1f82a3e9e7e52f095b0f57869d957246"
+    },
+    "rstudioapi": {
+      "Package": "rstudioapi",
+      "Version": "0.15.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "5564500e25cffad9e22244ced1379887"
+    },
     "rtables": {
       "Package": "rtables",
       "Version": "0.6.2.9005",
@@ -1973,14 +2014,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.14.0.9003",
+      "Version": "0.14.0.9004",
       "Source": "GitHub",
       "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "teal",
       "RemoteRef": "HEAD",
-      "RemoteSha": "eed93d796ab2e97957c592e6f202950811130924",
+      "RemoteSha": "54c683b92f845075a787e2aeef582640769ccf61",
+      "RemoteHost": "api.github.com",
       "Requirements": [
         "R",
         "checkmate",
@@ -1999,7 +2040,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "4cb3fb0165bad2092f835bdda3251ca8"
+      "Hash": "6b504aa8807dfbd77026f74e53641d0d"
     },
     "teal.code": {
       "Package": "teal.code",
