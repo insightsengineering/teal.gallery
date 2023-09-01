@@ -480,7 +480,7 @@ app <- init(
   ),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$head(tags$link(rel = "shortcut icon", href = "nest.png"), tags$title("Patient Profile")),
+    tags$head(tags$link(rel = "shortcut icon", href = "nest.png"), tags$title("Patient Profile Analysis Teal Demo App")),
     tags$span(
       style = "font-size: 30px;",
       "Example teal app focusing on patient-level analysis of clinical trial data with teal.modules.clinical"
