@@ -8,6 +8,7 @@ app <- init(
   modules = modules(example_module()),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
+    tags$head(tags$link(rel = "shortcut icon", href = "nest.png"), tags$title("Basic Teal Demo App")),
     tags$span(
       style = "font-size: 30px;",
       "My first teal app"
