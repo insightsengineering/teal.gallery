@@ -69,6 +69,7 @@ app <- init(
   ),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
+    tags$head(tags$link(rel = "shortcut icon", href = "nest.png"), tags$title("RNA-Seq Analysis Teal Demo App")),
     tags$span(
       style = "font-size: 30px;",
       "Example teal app focusing on analysis of RNA-seq data with teal.modules.hermes"
