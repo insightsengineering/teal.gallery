@@ -54,7 +54,7 @@ website:
   navbar:
     pinned: false
     collapse: true
-    logo: assets/www/logo-nest.png
+    logo: https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png
     left:
       - text: Home
         file: index.qmd
