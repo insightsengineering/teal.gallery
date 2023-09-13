@@ -15,6 +15,8 @@ library(sparkline)
 
 options(shiny.useragg = FALSE)
 
+nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
+
 # study information: used to label app and in "Example Info Page" module
 ATYPE <- "Exploratory" # define here and in the "# code >" section below
 TA <- "I2ON"
@@ -759,14 +761,14 @@ app <- teal::init(
   ),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$head(tags$link(rel = "shortcut icon", href = "nest.png"), tags$title("Longitudinal Analysis Teal Demo App")),
+    tags$head(tags$link(rel = "shortcut icon", href = nest_logo), tags$title("Longitudinal Analysis Teal Demo App")),
     tags$span(
       style = "font-size: 30px;",
       "Example teal app focusing on analysis of longitudinal clinical trial data with teal.goshawk"
     ),
     tags$span(
       style = "display: flex; align-items: center;",
-      tags$img(src = "nest.png", alt = "NEST logo", height = "45px"),
+      tags$img(src = nest_logo, alt = "NEST logo", height = "45px", style = "margin-right:10px;"),
       tags$span(style = "font-size: 24px;", "NEST @ Roche")
     )
   ),

@@ -1,6 +1,6 @@
 # teal.gallery
 
-<img align="right" width="100" height="100" src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/thumbs/teal.png">
+<img align="right" width=auto height="100" src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/teal.png">
 
 A gallery of sample apps based on the [`teal` framework](https://github.com/insightsengineering/teal).
 
