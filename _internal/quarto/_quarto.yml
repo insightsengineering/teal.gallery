@@ -32,7 +32,7 @@ format:
 website:
   title: Teal Gallery
   open-graph: true
-  favicon: assets/www/logo-nest.png
+  favicon: assets/www/teal.gallery.png
   search:
     location: navbar
     type: overlay
@@ -54,7 +54,7 @@ website:
   navbar:
     pinned: false
     collapse: true
-    logo: https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png
+    logo: https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/teal.gallery.png
     left:
       - text: Home
         file: index.qmd
