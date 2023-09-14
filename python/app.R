@@ -10,6 +10,8 @@ library(sparkline)
 
 options(shiny.useragg = FALSE)
 
+nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
+
 python_dependencies <- c("pip", "numpy", "pandas")
 virtualenv_dir <- Sys.getenv("VIRTUALENV_NAME", "example_env_name")
 python_path <- Sys.getenv("PYTHON_PATH")
@@ -100,14 +102,14 @@ app <- teal::init(
   ),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$head(tags$link(rel = "shortcut icon", href = "nest.png"), tags$title("Python Dataset Teal Demo App")),
+    tags$head(tags$link(rel = "shortcut icon", href = nest_logo), tags$title("Python Dataset Teal Demo App")),
     tags$span(
       style = "font-size: 30px;",
       "Example teal app using python dataset connector"
     ),
     tags$span(
       style = "display: flex; align-items: center;",
-      tags$img(src = "nest.png", alt = "NEST logo", height = "45px"),
+      tags$img(src = nest_logo, alt = "NEST logo", height = "45px", style = "margin-right:10px;"),
       tags$span(style = "font-size: 24px;", "NEST @ Roche")
     )
   ),

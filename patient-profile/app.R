@@ -6,6 +6,8 @@ library(nestcolor)
 
 options(shiny.useragg = FALSE)
 
+nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
+
 ADSL <- synthetic_cdisc_data("latest")$adsl
 ADMH <- synthetic_cdisc_data("latest")$admh
 ADAE <- synthetic_cdisc_data("latest")$adae
@@ -480,14 +482,14 @@ app <- init(
   ),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$head(tags$link(rel = "shortcut icon", href = "nest.png"), tags$title("Patient Profile Analysis Teal Demo App")),
+    tags$head(tags$link(rel = "shortcut icon", href = nest_logo), tags$title("Patient Profile Analysis Teal Demo App")),
     tags$span(
       style = "font-size: 30px;",
       "Example teal app focusing on patient-level analysis of clinical trial data with teal.modules.clinical"
     ),
     tags$span(
       style = "display: flex; align-items: center;",
-      tags$img(src = "nest.png", alt = "NEST logo", height = "45px"),
+      tags$img(src = nest_logo, alt = "NEST logo", height = "45px", style = "margin-right:10px;"),
       tags$span(style = "font-size: 24px;", "NEST @ Roche")
     )
   ),
