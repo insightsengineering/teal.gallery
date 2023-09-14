@@ -4,7 +4,7 @@
 <img align="right" width=auto height="100" src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/teal.gallery.png">
 
 
-A gallery of sample apps based on the [`teal` framework](https://github.com/insightsengineering/teal).
+A gallery of sample apps based on the [`teal`](https://github.com/insightsengineering/teal) framework.
 
 ## Links to apps on `shinyapps.io`
 
