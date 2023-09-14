@@ -24,7 +24,7 @@ A gallery of sample apps based on the [`teal` framework](https://github.com/insi
 
 You can run any of these apps by just executing these two lines of code in your R console.
 
-By sourcing the [\sourceme.R](https://github.com/insightsengineering/teal.gallery/blob/main/utils/sourceme.R) file you make sure that you have access to the `restore_and_run()`
+By sourcing the [sourceme.R](https://github.com/insightsengineering/teal.gallery/blob/main/utils/sourceme.R) file you make sure that you have access to the `restore_and_run()`
 
 Running the `restore_and_run("APP_NAME")` will run the `APP_NAME` by restoring the packages using [renv](https://rstudio.github.io/renv/)
 
