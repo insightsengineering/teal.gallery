@@ -1,7 +1,12 @@
 # teal.gallery
 
-<img align="right" width=auto height="100" src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/teal.png" style="margin-left:10px;">
-<img align="right" width=auto height="100" src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/teal.gallery.png">
+<a href="https://github.com/insightsengineering/teal" target="_blank">
+  <img align="right" width=auto height="100" src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/teal.png" style="margin-left:10px;">
+</a>
+<a href="https://github.com/insightsengineering/teal.gallery" target="_blank">
+  <img align="right" width=auto height="100" src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/teal.gallery.png">
+</a>
+
 
 
 A gallery of sample apps based on the [`teal`](https://github.com/insightsengineering/teal) framework.
