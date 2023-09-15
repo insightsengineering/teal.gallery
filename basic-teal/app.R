@@ -1,5 +1,7 @@
 library(teal)
 
+nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
+
 app <- init(
   data = list(IRIS = iris, MTCARS = mtcars),
   filter = teal_slices(
@@ -8,14 +10,14 @@ app <- init(
   modules = modules(example_module()),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$head(tags$link(rel = "shortcut icon", href = "nest.png"), tags$title("Basic Teal Demo App")),
+    tags$head(tags$link(rel = "shortcut icon", href = nest_logo), tags$title("Basic Teal Demo App")),
     tags$span(
       style = "font-size: 30px;",
       "My first teal app"
     ),
     tags$span(
       style = "display: flex; align-items: center;",
-      tags$img(src = "nest.png", alt = "NEST logo", height = "45px"),
+      tags$img(src = nest_logo, alt = "NEST logo", height = "45px", style = "margin-right:10px;"),
       tags$span(style = "font-size: 24px;", "NEST @ Roche")
     )
   ),

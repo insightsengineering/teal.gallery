@@ -1,8 +1,15 @@
 # teal.gallery
 
-<img align="right" width="100" height="100" src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/thumbs/teal.png">
+<a href="https://github.com/insightsengineering/teal" target="_blank">
+  <img align="right" width=auto height="100" src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/teal.png" style="margin-left:10px;">
+</a>
+<a href="https://github.com/insightsengineering/teal.gallery" target="_blank">
+  <img align="right" width=auto height="100" src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/teal.gallery.png">
+</a>
 
-A gallery of sample apps based on the [`teal` framework](https://github.com/insightsengineering/teal).
+
+
+A gallery of sample apps based on the [`teal`](https://github.com/insightsengineering/teal) framework.
 
 ## Links to apps on `shinyapps.io`
 
@@ -22,7 +29,7 @@ A gallery of sample apps based on the [`teal` framework](https://github.com/insi
 
 You can run any of these apps by just executing these two lines of code in your R console.
 
-By sourcing the [\sourceme.R](https://github.com/insightsengineering/teal.gallery/blob/main/utils/sourceme.R) file you make sure that you have access to the `restore_and_run()`
+By sourcing the [sourceme.R](https://github.com/insightsengineering/teal.gallery/blob/main/utils/sourceme.R) file you make sure that you have access to the `restore_and_run()`
 
 Note: Make sure to install [renv](https://rstudio.github.io/renv/index.html) before you do this. Also, it is recommended that you create and use a Github PAT. Once you have the PAT, run the following:
 
