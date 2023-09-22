@@ -81,7 +81,6 @@ jobs:
         working-directory: ${{ matrix.directory }}/js
         run: |
           npm i
-          npm install cypress
 
       - name: Restore renv from cache
         uses: actions/cache@v3
@@ -124,6 +123,7 @@ jobs:
         continue-on-error: true
         uses: cypress-io/github-action@v6
         with:
+          build: npm install cypress
           working-directory: ${{ matrix.directory }}/js
           start: npm run run-app
           wait-on: "http://localhost:3333"
