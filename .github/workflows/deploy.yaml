@@ -81,6 +81,7 @@ jobs:
         working-directory: ${{ matrix.directory }}/js
         run: |
           npm i
+          npm install cypress
 
       - name: Restore renv from cache
         uses: actions/cache@v3
