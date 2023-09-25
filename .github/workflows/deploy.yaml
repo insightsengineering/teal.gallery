@@ -138,7 +138,6 @@ jobs:
 
       - name: Deploy 🖨 ${{ matrix.directory }} 🎨
         shell: Rscript {0}
-        continue-on-error: true
         working-directory: ${{ matrix.directory }}
         run: |
           rsconnect::setAccountInfo(
