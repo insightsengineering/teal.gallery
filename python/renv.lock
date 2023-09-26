@@ -32,8 +32,7 @@
       }
     ]
   },
-  "Packages": {
-    "Bioconductor": {
+  "Bioconductor": {
     "Version": "3.17"
   },
   "Packages": {
