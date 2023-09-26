@@ -50,7 +50,7 @@ jobs:
       - name: Set channel related constants
         run: |
           if [ "${{ matrix.channel }}" = "stable" ]; then
-            echo "BRANCH_NAME=deploy-apps@main" >> $GITHUB_ENV # TODO: Change the branch name to main
+            echo "BRANCH_NAME=69-fix-false-positive-icon" >> $GITHUB_ENV # TODO: Change the branch name to main
           else
             echo "BRANCH_NAME=deploy-apps@dev" >> $GITHUB_ENV # TODO: Change the branch name to deval
           fi
