@@ -76,12 +76,6 @@ jobs:
         with:
           node-version: 16
 
-      - name: Setup npm packages
-        if: steps.find-cypress.outputs.has-cypress-tests == 'true'
-        working-directory: ${{ matrix.directory }}/js
-        run: |
-          npm i
-
       - name: Restore renv from cache
         uses: actions/cache@v3
         env:
@@ -124,11 +118,10 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           build: npm install cypress --save-dev
-          working-directory: ${{ matrix.directory }}/js
+          working-directory: ${{ matrix.directory }}/tests
           start: npm run run-app
           wait-on: "http://localhost:3333"
           wait-on-timeout: 500
-          project: ../tests
 
       - name: Install deploy R package dependencies
         shell: Rscript {0}
@@ -138,7 +131,6 @@ jobs:
 
       - name: Deploy 🖨 ${{ matrix.directory }} 🎨
         shell: Rscript {0}
-        continue-on-error: true
         working-directory: ${{ matrix.directory }}
         run: |
           rsconnect::setAccountInfo(
@@ -148,7 +140,7 @@ jobs:
             server = "shinyapps.io"
           )
           rsconnect::deployApp(
-            appFiles = c("app.R", list.files("www", full.names = TRUE)),
+            appFiles = c("app.R"),
             appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}"),
             appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}",
             account = "${{ env.SHINYAPPSIO_ACCOUNT }}",
