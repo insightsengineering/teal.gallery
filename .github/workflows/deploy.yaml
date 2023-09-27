@@ -8,8 +8,8 @@ on:
     tags:
       - "*"
   workflow_dispatch:
-  schedule:
-    - cron: '12 3 * * *'
+  #schedule:
+  #  - cron: '12 3 * * *'
 
 concurrency:
   group: publish-${{ github.event.pull_request.number || github.ref }}
