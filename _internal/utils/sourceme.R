@@ -59,6 +59,13 @@ restore_and_run <- function(app_name, ref = "HEAD", ...) {
   #' @param ... Additional arguments passed to `shiny::runApp()`.
   load_and_run_app <- function(app_directory, ...) {
     setwd(app_directory)
+    lockfile <- renv::lockfile_read()
+    pkg_name_structure <- ifelse(ref %in% c("HEAD", "main"), "%s/%s@*release", "%s/%s")
+    for (package in lockfile$Packages) {
+      if (package$Source == "GitHub") {
+        renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
+      }
+    }
     source(".Rprofile")
     renv::restore(prompt = FALSE)
     shiny::runApp(app_directory, ...)
