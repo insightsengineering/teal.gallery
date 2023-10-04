@@ -26,7 +26,6 @@ options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 
-# code>
 ADSL <- synthetic_cdisc_data("latest")$adsl
 ADRS <- synthetic_cdisc_data("latest")$adrs
 ADLB <- synthetic_cdisc_data("latest")$adlb
@@ -38,25 +37,6 @@ ADLBPCA <- ADLB %>%
     names_from = c("PARAMCD", "AVISIT"),
     names_sep = " - "
   )
-
-adsl <- cdisc_dataset("ADSL", ADSL, code = "ADSL <- synthetic_cdisc_data(\"latest\")$adsl")
-adrs <- cdisc_dataset("ADRS", ADRS, code = "ADRS <- synthetic_cdisc_data(\"latest\")$adrs")
-adlb <- cdisc_dataset("ADLB", ADLB, code = "ADLB <- synthetic_cdisc_data(\"latest\")$adlb")
-adlbpca <- cdisc_dataset(
-  "ADLBPCA",
-  ADLBPCA,
-  code = 'ADLBPCA <- ADLB %>%
-    dplyr::select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
-    tidyr::pivot_wider(
-      values_from = "AVAL",
-      names_from = c("PARAMCD", "AVISIT"),
-      names_sep = " - "
-    )',
-  keys = c("STUDYID", "USUBJID"),
-  label = "ADLB reshaped",
-  vars = list(ADLB = adlb)
-)
-# <code
 
 adsl_extracted_num <- data_extract_spec(
   dataname = "ADSL",
@@ -210,8 +190,38 @@ distr_filter_spec <- filter_spec(
   ),
   multiple = TRUE
 )
+
+data <- cdisc_data(
+  ADSL = ADSL,
+  ADRS = ADRS,
+  ADLB = ADLB,
+  ADLBPCA = ADLBPCA,
+  code = quote({
+    ADSL <- synthetic_cdisc_data("latest")$adsl
+    ADRS <- synthetic_cdisc_data("latest")$adrs
+    ADLB <- synthetic_cdisc_data("latest")$adlb
+
+    ADLBPCA <- ADLB %>%
+      dplyr::select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
+      tidyr::pivot_wider(
+        values_from = "AVAL",
+        names_from = c("PARAMCD", "AVISIT"),
+        names_sep = " - "
+      )
+  }),
+  join_keys = teal.data::join_keys(
+    teal.data::join_key("ADSL", "ADSL", keys = get_cdisc_keys("ADSL")),
+    teal.data::join_key("ADRS", "ADRS", keys = get_cdisc_keys("ADRS")),
+    teal.data::join_key("ADLB", "ADLB", keys = get_cdisc_keys("ADLB")),
+    teal.data::join_key("ADLBPCA", "ADLBPCA", keys = get_cdisc_keys("ADLB")),
+    teal.data::join_key("ADRS", default_cdisc_keys[["ADRS"]]$parent, keys = default_cdisc_keys[["ADRS"]]$foreign),
+    teal.data::join_key("ADLB", default_cdisc_keys[["ADRS"]]$parent, keys = default_cdisc_keys[["ADLB"]]$foreign),
+    teal.data::join_key("ADLBPCA", default_cdisc_keys[["ADRS"]]$parent, keys = default_cdisc_keys[["ADLB"]]$foreign)
+  )
+)
+
 app <- init(
-  data = cdisc_data(adsl, adrs, adlb, adlbpca),
+  data = data,
   filter = teal_slices(
     count_type = "all",
     teal_slice(dataname = "ADSL", varname = "SEX"),
