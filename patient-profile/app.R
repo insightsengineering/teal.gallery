@@ -89,32 +89,57 @@ cmdecod_input <- data_extract_spec(
   )
 )
 
+keys_list <- teal.data:::default_cdisc_keys
+jk <- teal.data::join_keys(
+  teal.data::join_key("ADSL", "ADSL", keys = get_cdisc_keys("ADSL")),
+  teal.data::join_key("ADMH", "ADMH", keys = get_cdisc_keys("ADMH")),
+  teal.data::join_key("ADAE", "ADAE", keys = get_cdisc_keys("ADAE")),
+  teal.data::join_key("ADCM", "ADCM", keys = get_cdisc_keys("ADCM")),
+  teal.data::join_key("ADVS", "ADVS", keys = get_cdisc_keys("ADVS")),
+  teal.data::join_key("ADLB", "ADLB", keys = get_cdisc_keys("ADLB")),
+  teal.data::join_key("ADMH", keys_list[["ADMH"]]$parent, keys = keys_list[["ADMH"]]$foreign),
+  teal.data::join_key("ADAE", keys_list[["ADAE"]]$parent, keys = keys_list[["ADAE"]]$foreign),
+  teal.data::join_key("ADCM", keys_list[["ADCM"]]$parent, keys = keys_list[["ADCM"]]$foreign),
+  teal.data::join_key("ADVS", keys_list[["ADVS"]]$parent, keys = keys_list[["ADVS"]]$foreign),
+  teal.data::join_key("ADLB", keys_list[["ADLB"]]$parent, keys = keys_list[["ADLB"]]$foreign)
+)
+data <- cdisc_data(
+  ADSL = ADSL, ADMH = ADMH, ADAE = ADAE, ADCM = ADCM, ADVS = ADVS, ADLB = ADLB,
+  code = quote({
+    ADSL <- synthetic_cdisc_data("latest")$adsl
+    ADMH <- synthetic_cdisc_data("latest")$admh
+    ADAE <- synthetic_cdisc_data("latest")$adae
+    ADCM <- synthetic_cdisc_data("latest")$adcm
+    ADVS <- synthetic_cdisc_data("latest")$advs
+    ADLB <- synthetic_cdisc_data("latest")$adlb
+
+    ## Modify ADCM
+    ADCM$CMINDC <- paste0("Indication_", as.numeric(ADCM$CMDECOD))
+    ADCM$CMDOSE <- 1
+    ADCM$CMTRT <- ADCM$CMCAT
+    ADCM$CMDOSU <- "U"
+    ADCM$CMROUTE <- "CMROUTE"
+    ADCM$CMDOSFRQ <- "CMDOSFRQ"
+    ADCM$CMASTDTM <- ADCM$ASTDTM
+    ADCM$CMAENDTM <- ADCM$AENDTM
+
+    teal.data::col_labels(
+      ADCM[c("CMINDC", "CMTRT", "ASTDY", "AENDY")]
+    ) <- c(
+      "Indication",
+      "Reported Name of Drug, Med, or Therapy",
+      "Study Day of Start of Medication",
+      "Study Day of End of Medication"
+    )
+
+    ## Modify ADHM
+    ADMH[["MHDISTAT"]] <- "ONGOING"
+    teal.data::col_labels(ADMH[c("MHDISTAT")]) <- c("Status of Disease")
+  })
+)
+
 app <- init(
-  data = cdisc_data(
-    cdisc_dataset("ADSL", ADSL, code = "ADSL <- synthetic_cdisc_data(\"latest\")$adsl"),
-    cdisc_dataset("ADAE", ADAE, code = "ADAE <- synthetic_cdisc_data(\"latest\")$adae"),
-    cdisc_dataset("ADMH", ADMH, code = "ADMH <- synthetic_cdisc_data(\"latest\")$admh
-      ADMH[['MHDISTAT']] <- 'ONGOING'
-      teal.data::col_labels(ADMH[c('MHDISTAT')]) <- c('Status of Disease')"),
-    cdisc_dataset("ADCM", ADCM, code = 'ADCM <- synthetic_cdisc_data(\"latest\")$adcm
-      ADCM$CMINDC <- paste0("Indication_", as.numeric(ADCM$CMDECOD))
-      ADCM$CMDOSE <- 1
-      ADCM$CMTRT <- ADCM$CMCAT
-      ADCM$CMDOSU <- "U"
-      ADCM$CMROUTE <- "CMROUTE"
-      ADCM$CMDOSFRQ <- "CMDOSFRQ"
-      ADCM$CMASTDTM <- ADCM$ASTDTM
-      ADCM$CMAENDTM <- ADCM$AENDTM
-      teal.data::col_labels(
-        ADCM[c("CMINDC", "CMTRT", "ASTDY", "AENDY")]) <- c(
-          "Indication",
-          "Reported Name of Drug, Med, or Therapy",
-          "Study Day of Start of Medication",
-          "Study Day of End of Medication")'),
-    cdisc_dataset("ADVS", ADVS, code = "ADVS <- synthetic_cdisc_data(\"latest\")$advs"),
-    cdisc_dataset("ADLB", ADLB, code = "ADLB <- synthetic_cdisc_data(\"latest\")$adlb"),
-    check = TRUE
-  ),
+  data = data,
   filter = teal_slices(
     count_type = "all",
     teal_slice(dataname = "ADSL", varname = "SEX"),
