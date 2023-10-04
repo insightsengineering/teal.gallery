@@ -148,131 +148,139 @@ aesi_vars <-
   names(ADAE)[startsWith(names(ADAE), "TMP_SMQ") |
     startsWith(names(ADAE), "TMP_CQ")]
 
-## Define code needed to produce the required data sets
-ADAE_code <- paste(
-  'ADAE <- synthetic_cdisc_data("latest")$adae',
-  "add_event_flags <- function(dat) {",
-  "  dat %>%",
-  "    dplyr::mutate(",
-  '      TMPFL_SER = AESER == "Y",',
-  '      TMPFL_REL = AEREL == "Y",',
-  '      TMPFL_GR5 = AETOXGR == "5",',
-  "      TMP_SMQ01 = !is.na(SMQ01NAM),",
-  "      TMP_SMQ02 = !is.na(SMQ02NAM),",
-  "      TMP_CQ01 = !is.na(CQ01NAM)",
-  "    ) %>%",
-  "    teal.data::col_relabel(",
-  '      TMPFL_SER = "Serious AE",',
-  '      TMPFL_REL = "Related AE",',
-  '      TMPFL_GR5 = "Grade 5 AE",',
-  "      TMP_SMQ01 = aesi_label(dat$SMQ01NAM, dat$SMQ01SC),",
-  "      TMP_SMQ02 = aesi_label(dat$SMQ02NAM, dat$SMQ02SC),",
-  "      TMP_CQ01 = aesi_label(dat$CQ01NAM)",
-  "    )",
-  "}",
-  "ADAE <- ADAE %>%",
-  "  add_event_flags()",
-  sep = "\n",
-  collapse = "\n"
+keys_list <- teal.data:::default_cdisc_keys
+jk <- join_keys(
+  teal.data::join_key("ADSL", "ADSL", keys = get_cdisc_keys("ADSL")),
+  teal.data::join_key("ADAE", "ADAE", keys = get_cdisc_keys("ADAE")),
+  teal.data::join_key("ADAETTE", "ADAETTE", keys = get_cdisc_keys("ADAETTE")),
+  teal.data::join_key("ADEX", "ADEX", keys = get_cdisc_keys("ADEX")),
+  teal.data::join_key("ADLB", "ADLB", keys = get_cdisc_keys("ADLB")),
+  teal.data::join_key("ADEG", "ADEG", keys = get_cdisc_keys("ADEG")),
+  teal.data::join_key("ADVS", "ADVS", keys = get_cdisc_keys("ADVS")),
+  teal.data::join_key("ADCM", "ADCM", keys = get_cdisc_keys("ADCM")),
+  teal.data::join_key("ADAE", keys_list[["ADAE"]]$parent, keys = keys_list[["ADAE"]]$foreign),
+  teal.data::join_key("ADAETTE", keys_list[["ADAETTE"]]$parent, keys = keys_list[["ADAETTE"]]$foreign),
+  teal.data::join_key("ADEX", keys_list[["ADEX"]]$parent, keys = keys_list[["ADEX"]]$foreign),
+  teal.data::join_key("ADLB", keys_list[["ADLB"]]$parent, keys = keys_list[["ADLB"]]$foreign),
+  teal.data::join_key("ADEG", keys_list[["ADEG"]]$parent, keys = keys_list[["ADEG"]]$foreign),
+  teal.data::join_key("ADVS", keys_list[["ADVS"]]$parent, keys = keys_list[["ADVS"]]$foreign),
+  teal.data::join_key("ADCM", keys_list[["ADCM"]]$parent, keys = keys_list[["ADCM"]]$foreign)
 )
 
-ADAETTE_code <-
-  paste(
-    'ADAETTE <- synthetic_cdisc_data("latest")$adaette',
-    "ADAETTE <- ADAETTE %>%",
-    "  mutate(is_event = case_when(",
-    '    grepl("TOT", .data$PARAMCD, fixed = TRUE) ~ TRUE,',
-    "    TRUE ~ CNSR == 0",
-    "  )) %>%",
-    "  mutate(n_events = case_when(",
-    '    grepl("TOT", .data$PARAMCD, fixed = TRUE) ~ as.integer(.data$AVAL),',
-    "    TRUE ~ as.integer(is_event)",
-    "  )) %>%",
-    '  teal.data::col_relabel(is_event = "Is an Event") %>%',
-    '  teal.data::col_relabel(n_events = "Number of Events")',
-    "ADAETTE_AE <-",
-    '  filter(ADAETTE, grepl("TOT", .data$PARAMCD, fixed = TRUE)) %>% select(-"AVAL")',
-    "ADAETTE_OTH <-",
-    '  filter(ADAETTE, !(grepl("TOT", .data$PARAMCD, fixed = TRUE)))',
-    "",
-    "ADAETTE_TTE <- ADAETTE %>%",
-    '  filter(PARAMCD == "AEREPTTE") %>%',
-    "  select(USUBJID, ARM, ARMCD, AVAL)",
-    "",
-    "ADAETTE_AE <-",
-    '  full_join(ADAETTE_AE, ADAETTE_TTE, by = c("USUBJID", "ARM", "ARMCD"))',
-    "ADAETTE <- rbind(ADAETTE_AE, ADAETTE_OTH)",
-    sep = "\n",
-    collapse = "\n"
-  )
+data <- cdisc_data(
+  ADSL = ADSL,
+  ADAE = ADAE,
+  ADAETTE = ADAETTE,
+  ADEX = ADEX,
+  ADLB = ADLB,
+  ADEG = ADEG,
+  ADVS = ADVS,
+  ADCM = ADCM,
+  code = bquote({
+    ADSL <- synthetic_cdisc_data("latest")$adsl
+    date_vars_adsl <-
+      names(ADSL)[vapply(ADSL, function(x) {
+        inherits(x, c("Date", "POSIXct", "POSIXlt"))
+      }, logical(1))]
+    char_vars_adsl <- names(Filter(isTRUE, sapply(ADSL, is.character)))
 
-ADEX_code <- paste(
-  'ADEX <- synthetic_cdisc_data("latest")$adex',
-  "ADEX_labels <- teal.data::col_labels(ADEX, fill = FALSE)",
-  'set.seed(1, kind = "Mersenne-Twister")',
-  "ADEX <- ADEX %>%",
-  "  distinct(USUBJID, .keep_all = TRUE) %>%",
-  "  mutate(",
-  '    PARAMCD = "TDURD",',
-  '    PARAM = "Overall duration (days)",',
-  "    AVAL = sample(",
-  "      x = seq(1, 200),",
-  "      size = n(),",
-  "      replace = TRUE",
-  "    ),",
-  '    AVALU = "Days",',
-  '    PARCAT1 = "OVERALL"',
-  "  ) %>%",
-  "  bind_rows(ADEX)",
-  "ADEX <- ADEX %>%",
-  '  filter(PARCAT1 == "OVERALL" &',
-  '    PARAMCD %in% c("TDOSE", "TNDOSE", "TDURD"))',
-  "teal.data::col_labels(ADEX) <- ADEX_labels",
-  sep = "\n",
-  collapse = "\n"
+    ADAE <- synthetic_cdisc_data("latest")$adae
+    ADAETTE <- synthetic_cdisc_data("latest")$adaette
+    ADAETTE <- ADAETTE %>%
+      mutate(is_event = case_when(
+        grepl("TOT", .data$PARAMCD, fixed = TRUE) ~ TRUE,
+        TRUE ~ CNSR == 0
+      )) %>%
+      mutate(n_events = case_when(
+        grepl("TOT", .data$PARAMCD, fixed = TRUE) ~ as.integer(.data$AVAL),
+        TRUE ~ as.integer(is_event)
+      )) %>%
+      teal.data::col_relabel(is_event = "Is an Event") %>%
+      teal.data::col_relabel(n_events = "Number of Events")
+    ADAETTE_AE <- filter(ADAETTE, grepl("TOT", .data$PARAMCD, fixed = TRUE)) %>% select(-"AVAL")
+    ADAETTE_OTH <- filter(ADAETTE, !(grepl("TOT", .data$PARAMCD, fixed = TRUE)))
+
+    ADAETTE_TTE <- ADAETTE %>%
+      filter(PARAMCD == "AEREPTTE") %>%
+      select(USUBJID, ARM, ARMCD, AVAL)
+
+    ADAETTE_AE <- full_join(ADAETTE_AE, ADAETTE_TTE, by = c("USUBJID", "ARM", "ARMCD"))
+    ADAETTE <- rbind(ADAETTE_AE, ADAETTE_OTH)
+
+    ADEX <- synthetic_cdisc_data("latest")$adex
+    ADEX_labels <- teal.data::col_labels(ADEX, fill = FALSE)
+
+    set.seed(1, kind = "Mersenne-Twister")
+    ADEX <- ADEX %>%
+      distinct(USUBJID, .keep_all = TRUE) %>%
+      mutate(
+        PARAMCD = "TDURD",
+        PARAM = "Overall duration (days)",
+        AVAL = sample(
+          x = seq(1, 200),
+          size = n(),
+          replace = TRUE
+        ),
+        AVALU = "Days",
+        PARCAT1 = "OVERALL"
+      ) %>%
+      bind_rows(ADEX)
+
+    ADEX <- ADEX %>%
+      filter(PARCAT1 == "OVERALL" &
+        PARAMCD %in% c("TDOSE", "TNDOSE", "TDURD"))
+    teal.data::col_labels(ADEX) <- ADEX_labels
+
+    ADLB <- synthetic_cdisc_data("latest")$adlb
+    ADEG <- synthetic_cdisc_data("latest")$adeg
+
+    ADVS <- synthetic_cdisc_data("latest")$advs %>%
+      mutate(ONTRTFL = ifelse(AVISIT %in% c("SCREENING", "BASELINE"), "", "Y")) %>%
+      teal.data::col_relabel(ONTRTFL = "On Treatment Record Flag") %>%
+      mutate(ANRIND = as.character(ANRIND), BNRIND = as.character(BNRIND)) %>%
+      mutate(
+        ANRIND = case_when(
+          ANRIND == "HIGH HIGH" ~ "HIGH",
+          ANRIND == "LOW LOW" ~ "LOW",
+          TRUE ~ ANRIND
+        ),
+        BNRIND = case_when(
+          BNRIND == "HIGH HIGH" ~ "HIGH",
+          BNRIND == "LOW LOW" ~ "LOW",
+          TRUE ~ BNRIND
+        )
+      )
+
+    ADCM <- synthetic_cdisc_data("latest")$adcm %>% mutate(CMSEQ = as.integer(CMSEQ))
+
+    add_event_flags <- function(dat) {
+      dat %>%
+        dplyr::mutate(
+          TMPFL_SER = AESER == "Y",
+          TMPFL_REL = AEREL == "Y",
+          TMPFL_GR5 = AETOXGR == "5",
+          TMP_SMQ01 = !is.na(SMQ01NAM),
+          TMP_SMQ02 = !is.na(SMQ02NAM),
+          TMP_CQ01 = !is.na(CQ01NAM)
+        ) %>%
+        teal.data::col_relabel(
+          TMPFL_SER = "Serious AE",
+          TMPFL_REL = "Related AE",
+          TMPFL_GR5 = "Grade 5 AE",
+          TMP_SMQ01 = aesi_label(dat$SMQ01NAM, dat$SMQ01SC),
+          TMP_SMQ02 = aesi_label(dat$SMQ02NAM, dat$SMQ02SC),
+          TMP_CQ01 = aesi_label(dat$CQ01NAM)
+        )
+    }
+
+    ADAE <- ADAE %>% add_event_flags()
+  }),
+  join_keys = jk
 )
-
-ADVS_code <-
-  paste(
-    'ADVS <- synthetic_cdisc_data("latest")$advs %>%',
-    '  mutate(ONTRTFL = ifelse(AVISIT %in% c("SCREENING", "BASELINE"), "", "Y")) %>%',
-    '  teal.data::col_relabel(ONTRTFL = "On Treatment Record Flag") %>%',
-    "  mutate(ANRIND = as.character(ANRIND), BNRIND = as.character(BNRIND)) %>%",
-    "  mutate(",
-    "    ANRIND = case_when(",
-    '      ANRIND == "HIGH HIGH" ~ "HIGH",',
-    '      ANRIND == "LOW LOW" ~ "LOW",',
-    "      TRUE ~ ANRIND",
-    "    ),",
-    "    BNRIND = case_when(",
-    '      BNRIND == "HIGH HIGH" ~ "HIGH",',
-    '      BNRIND == "LOW LOW" ~ "LOW",',
-    "      TRUE ~ BNRIND",
-    "    )",
-    "  )",
-    sep = "\n",
-    collapse = "\n"
-  )
 
 ## Setup App
 app <- teal::init(
-  data = cdisc_data(
-    cdisc_dataset(
-      "ADSL",
-      ADSL,
-      code = 'ADSL <- synthetic_cdisc_data("latest")$adsl',
-      vars = list(char_vars_adsl = char_vars_adsl)
-    ),
-    cdisc_dataset("ADAE", ADAE, code = ADAE_code),
-    cdisc_dataset("ADAETTE", ADAETTE, code = ADAETTE_code),
-    cdisc_dataset("ADEX", ADEX, code = ADEX_code),
-    cdisc_dataset("ADLB", ADLB, code = "ADLB <- synthetic_cdisc_data(\"latest\")$adlb"),
-    cdisc_dataset("ADEG", ADEG, code = "ADEG <- synthetic_cdisc_data(\"latest\")$adeg"),
-    cdisc_dataset("ADVS", ADVS, code = ADVS_code),
-    cdisc_dataset("ADCM", ADCM, code = 'ADCM <- synthetic_cdisc_data("latest")$adcm %>% mutate(CMSEQ = as.integer(CMSEQ))'),
-    # code = get_code("app.R")),
-    check = TRUE
-  ),
+  data = data,
   # Set initial filter state as safety-evaluable population
   filter = teal_slices(
     count_type = "all",
