@@ -188,7 +188,7 @@ fact_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.factor)))
 date_vars_asl <- names(ADSL)[vapply(ADSL, function(x) inherits(x, c("Date", "POSIXct", "POSIXlt")), logical(1))]
 demog_vars_asl <- names(ADSL)[!(names(ADSL) %in% c("USUBJID", "STUDYID", date_vars_asl))]
 
-
+keys_list <- teal.data:::default_cdisc_keys
 jk <- teal.data::join_keys(
   teal.data::join_key("ADSL", "ADSL", keys = get_cdisc_keys("ADSL")),
   teal.data::join_key("ADAE", "ADAE", keys = get_cdisc_keys("ADAE")),
@@ -199,14 +199,14 @@ jk <- teal.data::join_keys(
   teal.data::join_key("ADTR", "ADTR", keys = c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")),
   teal.data::join_key("ADTRWF", "ADTRWF", keys = c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")),
   teal.data::join_key("ADRSSWIM", "ADRSSWIM", keys = get_cdisc_keys("ADRS")),
-  teal.data::join_key("ADAE", default_cdisc_keys[["ADAE"]]$parent, keys = default_cdisc_keys[["ADAE"]]$foreign),
-  teal.data::join_key("ADCM", default_cdisc_keys[["ADCM"]]$parent, keys = default_cdisc_keys[["ADCM"]]$foreign),
-  teal.data::join_key("ADEX", default_cdisc_keys[["ADEX"]]$parent, keys = default_cdisc_keys[["ADEX"]]$foreign),
-  teal.data::join_key("ADRS", default_cdisc_keys[["ADRS"]]$parent, keys = default_cdisc_keys[["ADRS"]]$foreign),
-  teal.data::join_key("ADLB", default_cdisc_keys[["ADLB"]]$parent, keys = default_cdisc_keys[["ADLB"]]$foreign),
+  teal.data::join_key("ADAE", keys_list[["ADAE"]]$parent, keys = keys_list[["ADAE"]]$foreign),
+  teal.data::join_key("ADCM", keys_list[["ADCM"]]$parent, keys = keys_list[["ADCM"]]$foreign),
+  teal.data::join_key("ADEX", keys_list[["ADEX"]]$parent, keys = keys_list[["ADEX"]]$foreign),
+  teal.data::join_key("ADRS", keys_list[["ADRS"]]$parent, keys = keys_list[["ADRS"]]$foreign),
+  teal.data::join_key("ADLB", keys_list[["ADLB"]]$parent, keys = keys_list[["ADLB"]]$foreign),
   teal.data::join_key("ADTR", "ADSL", keys = c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")),
   teal.data::join_key("ADTRWF", "ADSL", keys = c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")),
-  teal.data::join_key("ADRSSWIM", default_cdisc_keys[["ADRS"]]$parent, keys = default_cdisc_keys[["ADRS"]]$foreign)
+  teal.data::join_key("ADRSSWIM", keys_list[["ADRS"]]$parent, keys = keys_list[["ADRS"]]$foreign)
 )
 
 ## Setup App

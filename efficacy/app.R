@@ -120,44 +120,65 @@ arm_ref_comp <- list(
   ARM = list(ref = "A: Drug X", comp = c("B: Placebo", "C: Combination"))
 )
 
+keys_list <- teal.data:::default_cdisc_keys
+data <- cdisc_data(
+  ADSL = ADSL,
+  ADRS = ADRS,
+  ADTTE = ADTTE,
+  ADQS = ADQS,
+  code = quote({
+    ADSL <- synthetic_cdisc_data("latest")$adsl
+    adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
+
+    char_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.character)))
+
+    adsl_labels <- c(adsl_labels, AGEGR1 = "Age Group")
+    ADSL <- ADSL %>%
+      mutate(
+        AGEGR1 = factor(case_when(
+          AGE < 45 ~ "<45",
+          AGE >= 45 ~ ">=45"
+        ))
+      ) %>%
+      mutate_at(char_vars_asl, factor)
+
+    teal.data::col_labels(ADSL) <- adsl_labels
+
+    ADTTE <- synthetic_cdisc_data("latest")$adtte
+
+    ADRS <- synthetic_cdisc_data("latest")$adrs
+    adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
+    ADRS <- filter(ADRS, PARAMCD == "BESRSPI" | AVISIT == "FOLLOW UP")
+    teal.data::col_labels(ADRS) <- adrs_labels
+
+    ADQS <- synthetic_cdisc_data("latest")$adqs
+    adqs_labels <- teal.data::col_labels(ADQS, fill = FALSE)
+    ADQS <- ADQS %>%
+      filter(ABLFL != "Y" & ABLFL2 != "Y") %>%
+      filter(AVISIT %in% c("WEEK 1 DAY 8", "WEEK 2 DAY 15", "WEEK 3 DAY 22")) %>%
+      mutate(
+        AVISIT = as.factor(AVISIT),
+        AVISITN = rank(AVISITN) %>%
+          as.factor() %>%
+          as.numeric() %>%
+          as.factor()
+      )
+    teal.data::col_labels(ADQS) <- adqs_labels
+  }),
+  join_keys = join_keys(
+    teal.data::join_key("ADSL", "ADSL", keys = get_cdisc_keys("ADSL")),
+    teal.data::join_key("ADRS", "ADRS", keys = get_cdisc_keys("ADRS")),
+    teal.data::join_key("ADTTE", "ADTTE", keys = get_cdisc_keys("ADTTE")),
+    teal.data::join_key("ADQS", "ADQS", keys = get_cdisc_keys("ADQS")),
+    teal.data::join_key("ADRS", keys_list[["ADRS"]]$parent, keys = keys_list[["ADRS"]]$foreign),
+    teal.data::join_key("ADTTE", keys_list[["ADTTE"]]$parent, keys = keys_list[["ADTTE"]]$foreign),
+    teal.data::join_key("ADQS", keys_list[["ADQS"]]$parent, keys = keys_list[["ADQS"]]$foreign)
+  )
+)
+
 ## Setup App
 app <- init(
-  data = cdisc_data(
-    cdisc_dataset("ADSL", ADSL,
-      code = 'ADSL <- synthetic_cdisc_data("latest")$adsl
-                                        adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
-                                        adsl_labels <- c(adsl_labels,
-                                          AGEGR1 = "Age Group"
-                                        )
-                                        ADSL <- ADSL %>% mutate(
-                                          AGEGR1 = factor(case_when(
-                                            AGE < 45 ~ "<45",
-                                            AGE >= 45 ~ ">=45"
-                                          ))
-                                        ) %>%
-                                        mutate_at(char_vars_asl, factor)
-                                        teal.data::col_labels(ADSL) <- adsl_labels',
-      vars = list(char_vars_asl = char_vars_asl)
-    ),
-    cdisc_dataset("ADRS", ADRS, code = 'ADRS <- synthetic_cdisc_data("latest")$adrs
-                                        adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
-                                        ADRS <- filter(ADRS, PARAMCD == "BESRSPI" | AVISIT == "FOLLOW UP")
-                                        teal.data::col_labels(ADRS) <- adrs_labels'),
-    cdisc_dataset("ADTTE", ADTTE, code = "ADTTE <- synthetic_cdisc_data(\"latest\")$adtte"),
-    cdisc_dataset("ADQS", ADQS, code = 'ADQS <- synthetic_cdisc_data("latest")$adqs
-                                        adqs_labels <- teal.data::col_labels(ADQS, fill = FALSE)
-                                        ADQS <- ADQS %>%
-                                          filter(ABLFL != "Y" & ABLFL2 != "Y") %>%
-                                          filter(AVISIT %in% c("WEEK 1 DAY 8", "WEEK 2 DAY 15", "WEEK 3 DAY 22")) %>%
-                                          mutate(
-                                            AVISIT = as.factor(AVISIT),
-                                            AVISITN = rank(AVISITN) %>%
-                                              as.factor() %>%
-                                              as.numeric() %>%
-                                              as.factor()
-                                          )
-                                        teal.data::col_labels(ADQS) <- adqs_labels')
-  ),
+  data = data,
   filter = teal_slices(
     count_type = "all",
     teal_slice(dataname = "ADSL", varname = "ITTFL", selected = "Y"),

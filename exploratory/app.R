@@ -191,6 +191,7 @@ distr_filter_spec <- filter_spec(
   multiple = TRUE
 )
 
+keys_list <- teal.data:::default_cdisc_keys
 data <- cdisc_data(
   ADSL = ADSL,
   ADRS = ADRS,
@@ -214,9 +215,9 @@ data <- cdisc_data(
     teal.data::join_key("ADRS", "ADRS", keys = get_cdisc_keys("ADRS")),
     teal.data::join_key("ADLB", "ADLB", keys = get_cdisc_keys("ADLB")),
     teal.data::join_key("ADLBPCA", "ADLBPCA", keys = get_cdisc_keys("ADLB")),
-    teal.data::join_key("ADRS", default_cdisc_keys[["ADRS"]]$parent, keys = default_cdisc_keys[["ADRS"]]$foreign),
-    teal.data::join_key("ADLB", default_cdisc_keys[["ADRS"]]$parent, keys = default_cdisc_keys[["ADLB"]]$foreign),
-    teal.data::join_key("ADLBPCA", default_cdisc_keys[["ADRS"]]$parent, keys = default_cdisc_keys[["ADLB"]]$foreign)
+    teal.data::join_key("ADRS", keys_list[["ADRS"]]$parent, keys = keys_list[["ADRS"]]$foreign),
+    teal.data::join_key("ADLB", keys_list[["ADRS"]]$parent, keys = keys_list[["ADLB"]]$foreign),
+    teal.data::join_key("ADLBPCA", keys_list[["ADRS"]]$parent, keys = keys_list[["ADLB"]]$foreign)
   )
 )
 
