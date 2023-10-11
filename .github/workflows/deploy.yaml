@@ -50,9 +50,9 @@ jobs:
       - name: Set channel related constants
         run: |
           if [ "${{ matrix.channel }}" = "stable" ]; then
-            echo "BRANCH_NAME=deploy-apps@main" >> $GITHUB_ENV # TODO: Change the branch name to main
+            echo "BRANCH_NAME=main" >> $GITHUB_ENV # TODO: Change the branch name to main
           else
-            echo "BRANCH_NAME=deploy-apps@dev" >> $GITHUB_ENV # TODO: Change the branch name to deval
+            echo "BRANCH_NAME=dev" >> $GITHUB_ENV # TODO: Change the branch name to deval
           fi
 
       - name: Check if cypress test exists
