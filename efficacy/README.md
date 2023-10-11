@@ -6,11 +6,13 @@
 ### Run the app yourself
 
     source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
-    restore_and_run("efficacy")
+
+    # Run the app
+    restore_and_run("efficacy", package_repo = "https://insightsengineering.r-universe.dev")
 
 ### View the deployed app
 
-Deployed app: <https://genentech.shinyapps.io/NEST_efficacy_main>
+Deployed app: <https://genentech.shinyapps.io/NEST_efficacy_stable>
 
 ### Preview the app
 

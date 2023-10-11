@@ -9,7 +9,7 @@ Click on the card to open it. Click on the icon <i class="bi-file-earmark-text">
 <% for (const app of item.apps) { %>
   <div class="card" <%= metadataAttrs(app) %>>
     <div class="app-details">
-      <a href="<%= item.deployment_server %>NEST_<%= app.title %>_main" class="listing-title"><%= app.title %></a>
+      <a href="<%= item.deployment_server %>NEST_<%= app.title %>_stable" class="listing-title"><%= app.title %></a>
       <a href="https://github.com/insightsengineering/teal.gallery/blob/main/<%= app.title %>/app.R" title="View source code" 
         class="source-code card-text float-end inline-block">
         <i class="bi-code-slash"></i>
@@ -19,7 +19,7 @@ Click on the card to open it. Click on the icon <i class="bi-file-earmark-text">
         <i class="bi-file-earmark-text"></i>
       </a>
     </div>
-    <a href="<%= item.deployment_server %>NEST_<%= app.title %>_main">
+    <a href="<%= item.deployment_server %>NEST_<%= app.title %>_stable">
       <img class="static" src="assets/img/<%= app.title %>.png" alt="Animation of the <%= app.title %> app" onerror="this.src='assets/www/missing.png'"/>
       <img class="active" src="assets/img/<%= app.title %>.gif" alt="Animation of the <%= app.title %> app" onerror="this.src='assets/www/missing.png'"/>
     </a>    
