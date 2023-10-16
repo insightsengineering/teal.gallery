@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - update-renv-lock@main
   workflow_dispatch:
   schedule:
     - cron: "12 3 * * *"
@@ -52,9 +53,9 @@ jobs:
       - name: Set channel related constants
         run: |
           if [ "${{ matrix.channel }}" = "stable" ]; then
-            echo "BRANCH_NAME=main" >> $GITHUB_ENV # TODO: Change the branch name to main
+            echo "BRANCH_NAME=update-renv-lock@main" >> $GITHUB_ENV # TODO: Change the branch name to main
           else
-            echo "BRANCH_NAME=dev" >> $GITHUB_ENV # TODO: Change the branch name to deval
+            echo "BRANCH_NAME=update-renv-lock@dev" >> $GITHUB_ENV # TODO: Change the branch name to dev
           fi
 
       - name: Check if cypress test exists
@@ -87,7 +88,7 @@ jobs:
           key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/renv.lock', matrix.directory)) }}
           restore-keys: ${{ env.CACHE_KEY }}-
 
-      - name: Update renv.lock file with updated GitHub packages
+      - name: Update renv.lock file with updated packages
         shell: Rscript {0}
         run: |
           setwd("${{ matrix.directory }}")
@@ -98,16 +99,16 @@ jobs:
                   renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
               }
           }
+          lockfile_pkgs <- renv::lockfile_read()$Package
+          github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
+          renv::update(exclude = github_pkgs)
 
-      - name: Install R packages using renv and update the renv snapshot
+      - name: Restore R packages using renv and update the renv snapshot
         shell: Rscript {0}
         working-directory: ${{ matrix.directory }}
         run: |
           options(renv.config.cache.symlinks = FALSE)
-          lockfile_pkgs <- renv::lockfile_read()$Package
-          github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
-          renv::restore(clean = TRUE)
-          renv::update(exclude = github_pkgs)
+          renv::restore()
           renv::snapshot()
 
       - name: Print the new renv.lock file for ${{ matrix.directory }}
@@ -160,10 +161,10 @@ jobs:
           git fetch
           git stash
           git checkout ${{ env.BRANCH_NAME }}
-          git stash apply
           git pull
+          git stash apply
+          git add ${{ matrix.directory }}/renv.lock
           if [ -n "$(git diff --staged)" ]; then
-            git add ${{ matrix.directory }}/renv.lock
             git commit -m "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
             git push origin ${{ env.BRANCH_NAME }}
           else
