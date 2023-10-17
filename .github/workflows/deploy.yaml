@@ -156,6 +156,7 @@ jobs:
           )
 
       - name: Commit updated renv.lock file
+        continue-on-error: true
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
@@ -166,6 +167,7 @@ jobs:
           git pull
           git stash apply
           git add ${{ matrix.directory }}/renv.lock
+          git add ${{ matrix.directory }}/renv/activate.R
           if [ -n "$(git diff --staged)" ]; then
             git commit -m "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
             git push origin ${{ env.BRANCH_NAME }}
