@@ -49,6 +49,8 @@ jobs:
     steps:
       - name: Checkout repo 🛎
         uses: actions/checkout@v3
+        with:
+          ref: ${{ matrix.channel == 'stable' && 'update-renv-lock@main' || 'update-renv-lock@dev' }} # TODO: Change the ref with main and dev
 
       - name: Set channel related constants
         run: |
