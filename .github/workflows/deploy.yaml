@@ -88,7 +88,7 @@ jobs:
           key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/renv.lock', matrix.directory)) }}
           restore-keys: ${{ env.CACHE_KEY }}-
 
-      - name: Update renv.lock file with updated packages
+      - name: Update renv.lock file with updated GitHub packages
         shell: Rscript {0}
         run: |
           setwd("${{ matrix.directory }}")
@@ -99,16 +99,16 @@ jobs:
                   renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
               }
           }
-          lockfile_pkgs <- renv::lockfile_read()$Package
-          github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
-          renv::update(exclude = github_pkgs)
 
-      - name: Restore R packages using renv and update the renv snapshot
+      - name: Install R packages using renv and update the renv snapshot
         shell: Rscript {0}
         working-directory: ${{ matrix.directory }}
         run: |
           options(renv.config.cache.symlinks = FALSE)
-          renv::restore()
+          lockfile_pkgs <- renv::lockfile_read()$Package
+          github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
+          renv::restore(clean = TRUE)
+          renv::update(exclude = github_pkgs)
           renv::snapshot()
 
       - name: Print the new renv.lock file for ${{ matrix.directory }}
