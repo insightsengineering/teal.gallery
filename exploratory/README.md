@@ -6,11 +6,13 @@
 ### Run the app yourself
 
     source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
-    restore_and_run("exploratory")
+
+    # Run the app
+    restore_and_run("exploratory", package_repo = "https://insightsengineering.r-universe.dev")
 
 ### View the deployed app
 
-Deployed app: <https://genentech.shinyapps.io/NEST_exploratory_main>
+Deployed app: <https://genentech.shinyapps.io/NEST_exploratory_stable>
 
 ### Preview the app
 

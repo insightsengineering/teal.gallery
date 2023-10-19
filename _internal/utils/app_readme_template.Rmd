@@ -15,13 +15,15 @@ x <- cat(paste0("# ", params$app_name, " app"))
 
 ```
 source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
-restore_and_run("`r params$app_name`")
+
+# Run the app
+restore_and_run("`r params$app_name`", package_repo = "https://insightsengineering.r-universe.dev")
 ```
 
 ### View the deployed app
 
 ```{r, echo=FALSE, results='asis'}
-x <- cat(paste0("Deployed app: https://genentech.shinyapps.io/NEST_", params$app_name, "_main"))
+x <- cat(paste0("Deployed app: https://genentech.shinyapps.io/NEST_", params$app_name, "_stable"))
 ```
 
 ### Preview the app

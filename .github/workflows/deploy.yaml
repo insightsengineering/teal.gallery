@@ -5,11 +5,9 @@ on:
   push:
     branches:
       - main
-    tags:
-      - "*"
   workflow_dispatch:
-  #schedule:
-  #  - cron: '12 3 * * *'
+  schedule:
+    - cron: "12 3 * * *"
 
 concurrency:
   group: publish-${{ github.event.pull_request.number || github.ref }}
@@ -17,6 +15,8 @@ concurrency:
 
 env:
   SHINYAPPSIO_ACCOUNT: genentech
+  APP_PREFIX: NEST
+  GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   deploy:
@@ -29,45 +29,143 @@ jobs:
       image: ghcr.io/insightsengineering/rstudio_4.3.1_bioc_3.17:latest
     if: >
       !contains(github.event.commits[0].message, '[skip deploy]')
+    strategy:
+      fail-fast: false
+      matrix:
+        directory:
+          [
+            "RNA-seq",
+            "basic-teal",
+            "efficacy",
+            "exploratory",
+            "longitudinal",
+            "early-dev",
+            "patient-profile",
+            "python",
+            "safety",
+          ]
+        channel: ["stable", "dev"]
     steps:
       - name: Checkout repo 🛎
         uses: actions/checkout@v3
+
+      - name: Set channel related constants
+        run: |
+          if [ "${{ matrix.channel }}" = "stable" ]; then
+            echo "BRANCH_NAME=main" >> $GITHUB_ENV # TODO: Change the branch name to main
+          else
+            echo "BRANCH_NAME=dev" >> $GITHUB_ENV # TODO: Change the branch name to deval
+          fi
+
+      - name: Check if cypress test exists
+        id: find-cypress
+        run: |
+          if [ -d ${{ matrix.directory }}/tests/cypress ]; then
+            echo "has-cypress-tests=true" >> $GITHUB_OUTPUT
+          else
+            echo "Skipping frontend tests because cypress directory does not exist."
+            echo "has-cypress-tests=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup system dependencies for cypress and python app
+        run: >
+          apt-get update && apt-get install --yes
+          libgtk2.0-0 libgbm-dev libnotify-dev libgconf-2-4 xvfb python3.10-venv
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         with:
-          path: ${{ github.event.repository.name }}
+          node-version: 16
 
-      - name: Overwrite the global Rprofile ✍️
-        run: |
-          cat > /usr/local/lib/R/etc/Rprofile.site <<RPROFILE
-           options(
-            repos = c(
-              Pharmaverse = "https://pharmaverse.r-universe.dev",
-              CRAN = "https://cloud.r-project.org",
-              BioC = BiocManager::repositories()
-            ),
-            download.file.method = 'libcurl',
-            HTTPUserAgent = sprintf(
-              "R/%s R (%s)",
-              getRversion(),
-              paste(getRversion(), R.version["platform"], R.version["arch"], R.version["os"])
-            )
-          )
-          RPROFILE
+      - name: Restore renv from cache
+        uses: actions/cache@v3
+        env:
+          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ matrix.directory }}-${{ matrix.channel }}
+        with:
+          path: ${{ matrix.directory }}/renv/library
+          key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/renv.lock', matrix.directory)) }}
+          restore-keys: ${{ env.CACHE_KEY }}-
 
-      - name: Deploy apps 🖨 ${{ github.event.repository.name }} 🎨
-        run: |
-          Sys.setenv(GITHUB_PAT="${{ secrets.GITHUB_TOKEN }}")
-          devtools::install_local(
-            ".",
-            upgrade = "never",
-            dependencies = TRUE
-          )
-          teal.gallery::deploy_all_apps(
-            api_key = "${{ secrets.SHINYAPPSIO_TOKEN }}",
-            api_secret = "${{ secrets.SHINYAPPSIO_SECRET }}",
-            title_prefix = "NEST",
-            title_suffix = "${{ github.ref_name }}",
-            server = "https://${{ env.SHINYAPPSIO_ACCOUNT }}.shinyapps.io",
-            create_manifest = TRUE
-          )
-        working-directory: ${{ github.event.repository.name }}
+      - name: Update renv.lock file with updated GitHub packages
         shell: Rscript {0}
+        run: |
+          setwd("${{ matrix.directory }}")
+          lockfile <- renv::lockfile_read()
+          pkg_name_structure <- ifelse("${{ matrix.channel }}" == "stable", "%s/%s@*release", "%s/%s")
+          for (package in lockfile$Packages) {
+              if (package$Source == "GitHub") {
+                  renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
+              }
+          }
+
+      - name: Install R packages using renv and update the renv snapshot
+        shell: Rscript {0}
+        working-directory: ${{ matrix.directory }}
+        run: |
+          options(renv.config.cache.symlinks = FALSE)
+          lockfile_pkgs <- renv::lockfile_read()$Package
+          github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
+          renv::restore(clean = TRUE)
+          renv::update(exclude = github_pkgs)
+          renv::snapshot()
+
+      - name: Print the new renv.lock file for ${{ matrix.directory }}
+        working-directory: ${{ matrix.directory }}
+        run: cat renv.lock
+
+      - name: Front end test to check if the app works fine
+        if: steps.find-cypress.outputs.has-cypress-tests == 'true'
+        continue-on-error: true
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm install cypress --save-dev
+          working-directory: ${{ matrix.directory }}/tests
+          start: npm run run-app
+          wait-on: "http://localhost:3333"
+          wait-on-timeout: 500
+
+      - name: Install deploy R package dependencies
+        shell: Rscript {0}
+        working-directory: ${{ matrix.directory }}
+        run: |
+          install.packages(c("BiocManager", "rsconnect"))
+
+      - name: Deploy 🖨 ${{ matrix.directory }} 🎨
+        shell: Rscript {0}
+        working-directory: ${{ matrix.directory }}
+        run: |
+          rsconnect::setAccountInfo(
+            name = "${{ env.SHINYAPPSIO_ACCOUNT }}",
+            token = "${{ secrets.SHINYAPPSIO_TOKEN }}",
+            secret = "${{ secrets.SHINYAPPSIO_SECRET }}",
+            server = "shinyapps.io"
+          )
+          rsconnect::deployApp(
+            appFiles = c("app.R"),
+            appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}"),
+            appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}",
+            account = "${{ env.SHINYAPPSIO_ACCOUNT }}",
+            upload = TRUE,
+            logLevel = "normal",
+            lint = FALSE,
+            forceUpdate = TRUE
+          )
+
+      - name: Commit updated renv.lock file
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git config --global --add safe.directory /__w/teal.gallery/teal.gallery
+          git fetch
+          git stash
+          git checkout ${{ env.BRANCH_NAME }}
+          git stash apply
+          git pull
+          if [ -n "$(git diff --staged)" ]; then
+            git add ${{ matrix.directory }}/renv.lock
+            git commit -m "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
+            git push origin ${{ env.BRANCH_NAME }}
+          else
+            echo "renv.lock was not modified. Nothing to commit.";
+          fi
