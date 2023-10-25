@@ -211,16 +211,6 @@ data <- cdisc_data(
   })
 )
 
-teal.data::join_keys(
-    teal.data::join_key("ADSL", "ADSL", keys = get_cdisc_keys("ADSL")),
-    teal.data::join_key("ADRS", "ADRS", keys = get_cdisc_keys("ADRS")),
-    teal.data::join_key("ADLB", "ADLB", keys = get_cdisc_keys("ADLB")),
-    teal.data::join_key("ADLBPCA", "ADLBPCA", keys = get_cdisc_keys("ADLB")),
-    teal.data::join_key("ADRS", keys_list[["ADRS"]]$parent, keys = keys_list[["ADRS"]]$foreign),
-    teal.data::join_key("ADLB", keys_list[["ADRS"]]$parent, keys = keys_list[["ADLB"]]$foreign),
-    teal.data::join_key("ADLBPCA", keys_list[["ADRS"]]$parent, keys = keys_list[["ADLB"]]$foreign)
-  )
-
 app <- init(
   data = data,
   filter = teal_slices(
