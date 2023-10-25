@@ -148,25 +148,6 @@ aesi_vars <-
   names(ADAE)[startsWith(names(ADAE), "TMP_SMQ") |
     startsWith(names(ADAE), "TMP_CQ")]
 
-keys_list <- teal.data:::default_cdisc_keys
-jk <- join_keys(
-  teal.data::join_key("ADSL", "ADSL", keys = get_cdisc_keys("ADSL")),
-  teal.data::join_key("ADAE", "ADAE", keys = get_cdisc_keys("ADAE")),
-  teal.data::join_key("ADAETTE", "ADAETTE", keys = get_cdisc_keys("ADAETTE")),
-  teal.data::join_key("ADEX", "ADEX", keys = get_cdisc_keys("ADEX")),
-  teal.data::join_key("ADLB", "ADLB", keys = get_cdisc_keys("ADLB")),
-  teal.data::join_key("ADEG", "ADEG", keys = get_cdisc_keys("ADEG")),
-  teal.data::join_key("ADVS", "ADVS", keys = get_cdisc_keys("ADVS")),
-  teal.data::join_key("ADCM", "ADCM", keys = get_cdisc_keys("ADCM")),
-  teal.data::join_key("ADAE", keys_list[["ADAE"]]$parent, keys = keys_list[["ADAE"]]$foreign),
-  teal.data::join_key("ADAETTE", keys_list[["ADAETTE"]]$parent, keys = keys_list[["ADAETTE"]]$foreign),
-  teal.data::join_key("ADEX", keys_list[["ADEX"]]$parent, keys = keys_list[["ADEX"]]$foreign),
-  teal.data::join_key("ADLB", keys_list[["ADLB"]]$parent, keys = keys_list[["ADLB"]]$foreign),
-  teal.data::join_key("ADEG", keys_list[["ADEG"]]$parent, keys = keys_list[["ADEG"]]$foreign),
-  teal.data::join_key("ADVS", keys_list[["ADVS"]]$parent, keys = keys_list[["ADVS"]]$foreign),
-  teal.data::join_key("ADCM", keys_list[["ADCM"]]$parent, keys = keys_list[["ADCM"]]$foreign)
-)
-
 data <- cdisc_data(
   ADSL = ADSL,
   ADAE = ADAE,
@@ -274,8 +255,7 @@ data <- cdisc_data(
     }
 
     ADAE <- ADAE %>% add_event_flags()
-  }),
-  join_keys = jk
+  })
 )
 
 ## Setup App

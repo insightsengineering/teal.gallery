@@ -89,20 +89,7 @@ cmdecod_input <- data_extract_spec(
   )
 )
 
-keys_list <- teal.data:::default_cdisc_keys
-jk <- teal.data::join_keys(
-  teal.data::join_key("ADSL", "ADSL", keys = get_cdisc_keys("ADSL")),
-  teal.data::join_key("ADMH", "ADMH", keys = get_cdisc_keys("ADMH")),
-  teal.data::join_key("ADAE", "ADAE", keys = get_cdisc_keys("ADAE")),
-  teal.data::join_key("ADCM", "ADCM", keys = get_cdisc_keys("ADCM")),
-  teal.data::join_key("ADVS", "ADVS", keys = get_cdisc_keys("ADVS")),
-  teal.data::join_key("ADLB", "ADLB", keys = get_cdisc_keys("ADLB")),
-  teal.data::join_key("ADMH", keys_list[["ADMH"]]$parent, keys = keys_list[["ADMH"]]$foreign),
-  teal.data::join_key("ADAE", keys_list[["ADAE"]]$parent, keys = keys_list[["ADAE"]]$foreign),
-  teal.data::join_key("ADCM", keys_list[["ADCM"]]$parent, keys = keys_list[["ADCM"]]$foreign),
-  teal.data::join_key("ADVS", keys_list[["ADVS"]]$parent, keys = keys_list[["ADVS"]]$foreign),
-  teal.data::join_key("ADLB", keys_list[["ADLB"]]$parent, keys = keys_list[["ADLB"]]$foreign)
-)
+
 data <- cdisc_data(
   ADSL = ADSL, ADMH = ADMH, ADAE = ADAE, ADCM = ADCM, ADVS = ADVS, ADLB = ADLB,
   code = quote({

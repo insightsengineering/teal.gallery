@@ -6,6 +6,7 @@ library(teal.modules.clinical)
 library(nestcolor)
 # optional libraries
 library(sparkline)
+pkgload::load_all("teal.data")
 
 options(shiny.useragg = FALSE)
 
@@ -120,7 +121,6 @@ arm_ref_comp <- list(
   ARM = list(ref = "A: Drug X", comp = c("B: Placebo", "C: Combination"))
 )
 
-keys_list <- teal.data:::default_cdisc_keys
 data <- cdisc_data(
   ADSL = ADSL,
   ADRS = ADRS,
@@ -164,16 +164,7 @@ data <- cdisc_data(
           as.factor()
       )
     teal.data::col_labels(ADQS) <- adqs_labels
-  }),
-  join_keys = join_keys(
-    teal.data::join_key("ADSL", "ADSL", keys = get_cdisc_keys("ADSL")),
-    teal.data::join_key("ADRS", "ADRS", keys = get_cdisc_keys("ADRS")),
-    teal.data::join_key("ADTTE", "ADTTE", keys = get_cdisc_keys("ADTTE")),
-    teal.data::join_key("ADQS", "ADQS", keys = get_cdisc_keys("ADQS")),
-    teal.data::join_key("ADRS", keys_list[["ADRS"]]$parent, keys = keys_list[["ADRS"]]$foreign),
-    teal.data::join_key("ADTTE", keys_list[["ADTTE"]]$parent, keys = keys_list[["ADTTE"]]$foreign),
-    teal.data::join_key("ADQS", keys_list[["ADQS"]]$parent, keys = keys_list[["ADQS"]]$foreign)
-  )
+  })
 )
 
 ## Setup App

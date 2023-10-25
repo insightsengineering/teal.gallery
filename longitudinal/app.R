@@ -415,14 +415,8 @@ paramexcldDict <- paramDict %>%
 paramexcld_list <- paramexcldDict$PARAM
 paramcdexcld_list <- paramexcldDict$PARAMCD
 
-keys_list <- teal.data:::default_cdisc_keys
-jk <- teal.data::join_keys(
-  teal.data::join_key("ADSL", "ADSL", keys = get_cdisc_keys("ADSL")),
-  teal.data::join_key("ADLB", "ADLB", keys = get_cdisc_keys("ADLB")),
-  teal.data::join_key("ADLB", keys_list[["ADLB"]]$parent, keys = keys_list[["ADLB"]]$foreign)
-)
-
 data <- cdisc_data(
+  ADSL = ADSL, ADLB = ADLB,
   code = quote({
     ADSL <- synthetic_cdisc_data("latest")$adsl
     ADLB <- synthetic_cdisc_data("latest")$adlb
@@ -599,8 +593,7 @@ data <- cdisc_data(
 
     ADLB_LOQS <- goshawk:::h_identify_loq_values(ADLB)
     ADLB <- left_join(ADLB, ADLB_LOQS, by = "PARAM")
-  }),
-  join_keys = jk
+  })
 )
 
 app <- teal::init(
