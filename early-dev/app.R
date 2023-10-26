@@ -137,6 +137,19 @@ data <- within(data, {
     )
 })
 
+## Set Data Set Names
+datanames(data) <- c("ADSL", "ADAE", "ADCM", "ADEX", "ADTR", "ADTRWF", "ADRS", "ADRSSWIM", "ADLB")
+
+## Join Keys
+{
+  get_join_keys(data)["ADTR"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
+  get_join_keys(data)["ADTRWF"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
+  get_join_keys(data)["ADRSSWIM"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
+  get_join_keys(data)["ADTR", "ADSL"] <- c("STUDYID", "USUBJID")
+  get_join_keys(data)["ADTRWF", "ADSL"] <- c("STUDYID", "USUBJID")
+  get_join_keys(data)["ADRSSWIM", "ADSL"] <- c("STUDYID", "USUBJID")
+}
+
 ##
 {
   adsl_labels <- teal.data::col_labels(data[["ADSL"]])
@@ -194,19 +207,6 @@ data <- within(data, {
     selected = "SLDINV"
   )
 }
-
-## Join Keys
-{
-  get_join_keys(data)["ADTR"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
-  get_join_keys(data)["ADTRWF"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
-  get_join_keys(data)["ADRSSWIM"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
-  get_join_keys(data)["ADTR", "ADSL"] <- c("STUDYID", "USUBJID")
-  get_join_keys(data)["ADTRWF", "ADSL"] <- c("STUDYID", "USUBJID")
-  get_join_keys(data)["ADRSSWIM", "ADSL"] <- c("STUDYID", "USUBJID")
-}
-
-## Set Data Set Names
-datanames(data) <- c("ADSL", "ADAE", "ADCM", "ADEX", "ADTR", "ADTRWF", "ADRS", "ADRSSWIM", "ADLB")
 
 ## Setup App
 

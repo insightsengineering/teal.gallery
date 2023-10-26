@@ -195,6 +195,9 @@ data <- within(data, {
   ) |> with(data, expr = _)
 }
 
+## Set Data Set Names
+datanames(data) <- c("ADSL", "ADAE", "ADCM", "ADEX", "ADTR", "ADTRWF", "ADRS", "ADRSSWIM", "ADLB")
+
 ## Join Keys
 {
   get_join_keys(data)["ADTR"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
@@ -205,8 +208,6 @@ data <- within(data, {
   get_join_keys(data)["ADRSSWIM", "ADSL"] <- c("STUDYID", "USUBJID")
 }
 
-## Set Data Set Names
-datanames(data) <- c("ADSL", "ADAE", "ADCM", "ADEX", "ADTR", "ADTRWF", "ADRS", "ADRSSWIM", "ADLB")
 
 ## Setup App
 
