@@ -1,7 +1,8 @@
 library(teal)
-data <- cdisc_data()
+library(rlang)
 
-## Pre-processing
+## Data reproducible code ----
+data <- cdisc_data()
 data <- within(data, {
   library(scda)
   library(scda.2022)
@@ -137,76 +138,82 @@ data <- within(data, {
     )
 })
 
-## Set Data Set Names
-datanames(data) <- c("ADSL", "ADAE", "ADCM", "ADEX", "ADTR", "ADTRWF", "ADRS", "ADRSSWIM", "ADLB")
+# set datanames
+datanames <- c("ADSL", "ADAE", "ADCM", "ADEX", "ADTR", "ADTRWF", "ADRS", "ADRSSWIM", "ADLB")
+datanames(data) <- datanames
 
-## Join Keys
-{
-  get_join_keys(data)["ADTR"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
-  get_join_keys(data)["ADTRWF"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
-  get_join_keys(data)["ADRSSWIM"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
-  get_join_keys(data)["ADTR", "ADSL"] <- c("STUDYID", "USUBJID")
-  get_join_keys(data)["ADTRWF", "ADSL"] <- c("STUDYID", "USUBJID")
-  get_join_keys(data)["ADRSSWIM", "ADSL"] <- c("STUDYID", "USUBJID")
-}
+# set join keys
+join_keys <- cdisc_join_keys(!!!datanames) # get default keys by name
+get_join_keys(join_keys)["ADTR"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
+get_join_keys(join_keys)["ADTRWF"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
+get_join_keys(join_keys)["ADRSSWIM"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
+get_join_keys(join_keys)["ADTR", "ADSL"] <- c("STUDYID", "USUBJID")
+get_join_keys(join_keys)["ADTRWF", "ADSL"] <- c("STUDYID", "USUBJID")
+get_join_keys(join_keys)["ADRSSWIM", "ADSL"] <- c("STUDYID", "USUBJID")
+data@join_keys <- join_keys
 
-##
-{
-  adsl_labels <- teal.data::col_labels(data[["ADSL"]])
-  fact_vars_asl <- names(Filter(isTRUE, sapply(data[["ADSL"]], is.factor)))
+## App configuration ----
+# reuse object from teal_data
+ADSL <- data[["ADSL"]]
+ADAE <- data[["ADAE"]]
+ADRS <- data[["ADRS"]]
+ADTR <- data[["ADTR"]]
+ADEX <- data[["ADEX"]]
+ADCM <- data[["ADCM"]]
+ADTRWF <- data[["ADTRWF"]]
 
-  date_vars_asl <-
-    names(data[["ADSL"]])[vapply(data[["ADSL"]], function(x) inherits(x, c("Date", "POSIXct", "POSIXlt")), logical(1))]
-  demog_vars_asl <- names(data[["ADSL"]])[!(names(data[["ADSL"]]) %in% c("USUBJID", "STUDYID", date_vars_asl))]
-}
 
-## Reusable Configuration For Modules
-{
-  arm_vars <- c("ARMCD", "ARM", "ACTARMCD", "ACTARM", "EOSSTT")
-  aeflag_vars <- c("RELFL", "CTC35FL", "SERFL", "RELSERFL")
-  facet_vars <- c("SEX", "BMRKR2", "RACE", "STRATA1", "STRATA2")
-  ds_vars <- c("EOSSTT", "DCSREAS")
+adsl_labels <- teal.data::col_labels(ADSL)
+fact_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.factor)))
 
-  cs_arm_var <- choices_selected(
-    choices = variable_choices(data[["ADSL"]], subset = arm_vars),
-    selected = "ARM"
-  )
+date_vars_asl <-
+  names(ADSL)[vapply(ADSL, function(x) inherits(x, c("Date", "POSIXct", "POSIXlt")), logical(1))]
+demog_vars_asl <- names(ADSL)[!(names(ADSL) %in% c("USUBJID", "STUDYID", date_vars_asl))]
 
-  cs_aeflag_var <- choices_selected(
-    choices = variable_choices(data[["ADAE"]], subset = aeflag_vars),
-    selected = NULL
-  )
+arm_vars <- c("ARMCD", "ARM", "ACTARMCD", "ACTARM", "EOSSTT")
+aeflag_vars <- c("RELFL", "CTC35FL", "SERFL", "RELSERFL")
+facet_vars <- c("SEX", "BMRKR2", "RACE", "STRATA1", "STRATA2")
+ds_vars <- c("EOSSTT", "DCSREAS")
 
-  cs_aeterm_var <- choices_selected(
-    choices = variable_choices(data[["ADAE"]], subset = c("AEDECOD", "AETERM", "AELLT", "AESOC", "AEBODSYS", "AEHLT")),
-    selected = "AEDECOD"
-  )
+cs_arm_var <- choices_selected(
+  choices = variable_choices(ADSL, subset = arm_vars),
+  selected = "ARM"
+)
 
-  cs_facet_var <- choices_selected(
-    choices = variable_choices(data[["ADSL"]], subset = facet_vars),
-    selected = NULL
-  )
+cs_aeflag_var <- choices_selected(
+  choices = variable_choices(ADAE, subset = aeflag_vars),
+  selected = NULL
+)
 
-  cs_ds_var <- choices_selected(
-    choices = variable_choices(data[["ADSL"]], ds_vars),
-    selected = ds_vars
-  )
+cs_aeterm_var <- choices_selected(
+  choices = variable_choices(ADAE, subset = c("AEDECOD", "AETERM", "AELLT", "AESOC", "AEBODSYS", "AEHLT")),
+  selected = "AEDECOD"
+)
 
-  cs_bar_var <- choices_selected(
-    choices = variable_choices(data[["ADSL"]], c("TRTDURD", "EOSDY")),
-    selected = "TRTDURD"
-  )
+cs_facet_var <- choices_selected(
+  choices = variable_choices(ADSL, subset = facet_vars),
+  selected = NULL
+)
 
-  cs_paramcd_rsp <- choices_selected(
-    choices = value_choices(data[["ADRS"]], "PARAMCD", "PARAM", subset = c("BESRSPI", "INVET")),
-    selected = "BESRSPI"
-  )
+cs_ds_var <- choices_selected(
+  choices = variable_choices(ADSL, ds_vars),
+  selected = ds_vars
+)
 
-  cs_paramcd_tr <- choices_selected(
-    choices = value_choices(data[["ADTR"]], "PARAMCD", "PARAM", subset = "SLDINV"),
-    selected = "SLDINV"
-  )
-}
+cs_bar_var <- choices_selected(
+  choices = variable_choices(ADSL, c("TRTDURD", "EOSDY")),
+  selected = "TRTDURD"
+)
+
+cs_paramcd_rsp <- choices_selected(
+  choices = value_choices(ADRS, "PARAMCD", "PARAM", subset = c("BESRSPI", "INVET")),
+  selected = "BESRSPI"
+)
+
+cs_paramcd_tr <- choices_selected(
+  choices = value_choices(ADTR, "PARAMCD", "PARAM", subset = "SLDINV"),
+  selected = "SLDINV"
+)
 
 ## Setup App
 
@@ -243,7 +250,7 @@ app <- init(
         dataname = "ADAE",
         arm_var = cs_arm_var,
         flag_var_anl = choices_selected(
-          choices = variable_choices(data[["ADAE"]], c("AEREL1", "AEREL2")),
+          choices = variable_choices(ADAE, c("AEREL1", "AEREL2")),
           selected = NULL
         ),
         plot_height = c(800, 200, 2000)
@@ -255,11 +262,11 @@ app <- init(
         right_var = cs_arm_var,
         left_var = cs_arm_var,
         category_var = choices_selected(
-          choices = variable_choices(data[["ADAE"]], subset = c("AEDECOD", "AETERM", "AESOC", "AEBODSYS")),
+          choices = variable_choices(ADAE, subset = c("AEDECOD", "AETERM", "AESOC", "AEBODSYS")),
           selected = "AEBODSYS"
         ),
         color_by_var = choices_selected(
-          choices = c(variable_choices(data[["ADAE"]], "AETOXGR"), "None"),
+          choices = c(variable_choices(ADAE, "AETOXGR"), "None"),
           selected = "AETOXGR"
         ),
         count_by_var = choices_selected(
@@ -296,13 +303,13 @@ app <- init(
       label = "Spider plot",
       dataname = "ADTR",
       paramcd = cs_paramcd_tr,
-      x_var = choices_selected(choices = variable_choices(data[["ADTR"]], "ADY"), selected = "ADY"),
+      x_var = choices_selected(choices = variable_choices(ADTR, "ADY"), selected = "ADY"),
       y_var = choices_selected(
-        choices = variable_choices(data[["ADTR"]], c("PCHG", "CHG", "AVAL")),
+        choices = variable_choices(ADTR, c("PCHG", "CHG", "AVAL")),
         selected = "PCHG"
       ),
       marker_var = choices_selected(
-        choices = variable_choices(data[["ADSL"]], c("SEX", "RACE")),
+        choices = variable_choices(ADSL, c("SEX", "RACE")),
         selected = "SEX"
       ),
       line_colorby_var = cs_arm_var,
@@ -319,23 +326,23 @@ app <- init(
       dataname = "ADRSSWIM",
       bar_var = cs_bar_var,
       bar_color_var = choices_selected(
-        choices = variable_choices(data[["ADSL"]], fact_vars_asl),
+        choices = variable_choices(ADSL, fact_vars_asl),
         selected = "EOSSTT"
       ),
       sort_var = choices_selected(
-        choices = variable_choices(data[["ADSL"]], c(arm_vars, "TRTDURD")),
+        choices = variable_choices(ADSL, c(arm_vars, "TRTDURD")),
         selected = arm_vars[1]
       ),
       marker_pos_var = choices_selected(
-        choices = c(variable_choices(data[["ADRS"]], "ADY")),
+        choices = c(variable_choices(ADRS, "ADY")),
         selected = "ADY"
       ),
-      marker_shape_var = choices_selected(c(variable_choices(data[["ADRS"]], c("AVALC", "AVISIT"))),
+      marker_shape_var = choices_selected(c(variable_choices(ADRS, c("AVALC", "AVISIT"))),
                                           selected = "AVALC"
       ),
       marker_shape_opt = c("CR" = 16, "PR" = 17, "SD" = 18, "PD" = 15, "Death" = 8),
       marker_color_var = choices_selected(
-        choices = c(variable_choices(data[["ADRS"]], c("AVALC", "AVISIT"))),
+        choices = c(variable_choices(ADRS, c("AVALC", "AVISIT"))),
         selected = "AVALC"
       ),
       marker_color_opt = c(
@@ -344,7 +351,7 @@ app <- init(
       ),
       vref_line = c(30, 60),
       anno_txt_var = choices_selected(
-        choices = variable_choices(data[["ADSL"]], intersect(arm_vars, fact_vars_asl)),
+        choices = variable_choices(ADSL, intersect(arm_vars, fact_vars_asl)),
         selected = arm_vars[1]
       )
     ),
@@ -353,12 +360,12 @@ app <- init(
       dataname_tr = "ADTRWF",
       dataname_rs = "ADRS",
       bar_paramcd = cs_paramcd_tr,
-      bar_var = choices_selected(variable_choices(data[["ADTRWF"]], "PCHG"), "PCHG"),
-      bar_color_var = choices_selected(variable_choices(data[["ADSL"]], fact_vars_asl), "ARMCD"),
-      sort_var = choices_selected(variable_choices(data[["ADSL"]], fact_vars_asl), NULL),
-      add_label_var_sl = choices_selected(variable_choices(data[["ADSL"]], fact_vars_asl), NULL),
+      bar_var = choices_selected(variable_choices(ADTRWF, "PCHG"), "PCHG"),
+      bar_color_var = choices_selected(variable_choices(ADSL, fact_vars_asl), "ARMCD"),
+      sort_var = choices_selected(variable_choices(ADSL, fact_vars_asl), NULL),
+      add_label_var_sl = choices_selected(variable_choices(ADSL, fact_vars_asl), NULL),
       add_label_paramcd_rs = cs_paramcd_rsp,
-      anno_txt_var_sl = choices_selected(variable_choices(data[["ADSL"]], fact_vars_asl), NULL),
+      anno_txt_var_sl = choices_selected(variable_choices(ADSL, fact_vars_asl), NULL),
       anno_txt_paramcd_rs = cs_paramcd_rsp,
       facet_var = cs_facet_var,
       ytick_at = 20,
@@ -369,8 +376,8 @@ app <- init(
     tm_g_patient_profile(
       label = "Patient Profile Plot",
       patient_id = choices_selected(
-        choices = unique(data[["ADSL"]]$USUBJID),
-        selected = unique(data[["ADSL"]]$USUBJID)[1]
+        choices = unique(ADSL$USUBJID),
+        selected = unique(ADSL$USUBJID)[1]
       ),
       sl_dataname = "ADSL",
       ex_dataname = "ADEX",
@@ -380,28 +387,28 @@ app <- init(
       lb_dataname = "ADLB",
       sl_start_date = choices_selected(
         selected = "TRTSDTM",
-        choices = variable_choices(data[["ADSL"]], subset = c("TRTSDTM", "RANDDT"))
+        choices = variable_choices(ADSL, subset = c("TRTSDTM", "RANDDT"))
       ),
       ex_var = choices_selected(
         selected = "PARCAT2",
-        choices = variable_choices(data[["ADEX"]], "PARCAT2")
+        choices = variable_choices(ADEX, "PARCAT2")
       ),
       ae_var = choices_selected(
         selected = "AEDECOD",
-        choices = variable_choices(data[["ADAE"]], c("AEDECOD", "AESOC"))
+        choices = variable_choices(ADAE, c("AEDECOD", "AESOC"))
       ),
       ae_line_col_var = choices_selected(
         selected = "AESER",
-        choices = variable_choices(data[["ADAE"]], c("AESER", "AEREL"))
+        choices = variable_choices(ADAE, c("AESER", "AEREL"))
       ),
       ae_line_col_opt = c("Y" = "red", "N" = "blue"),
       rs_var = choices_selected(
         selected = "PARAMCD",
-        choices = variable_choices(data[["ADRS"]], c("PARAMCD", "PARAM"))
+        choices = variable_choices(ADRS, c("PARAMCD", "PARAM"))
       ),
       cm_var = choices_selected(
         selected = "CMDECOD",
-        choices = variable_choices(data[["ADCM"]], c("CMDECOD", "CMCAT"))
+        choices = variable_choices(ADCM, c("CMDECOD", "CMCAT"))
       ),
       lb_var = choices_selected(
         selected = "PARAMCD",
