@@ -7,19 +7,18 @@ options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 
-ADTTE <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+## Data reproducible code ----
+data <- teal_data()
+data <- within(data, {
+  ADTTE <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
   dplyr::mutate(is_event = CNSR == 0)
-MAE <- hermes::multi_assay_experiment
+  MAE <- hermes::multi_assay_experiment
+})
+datanames(data) <- c("ADTTE", "MAE")
+
 
 app <- init(
-  data = teal_data(
-    ADTTE = ADTTE, MAE = MAE,
-    code = quote({
-      ADTTE <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
-        dplyr::mutate(is_event = CNSR == 0)
-      MAE <- hermes::multi_assay_experiment
-    })
-  ),
+  data = data,
   modules = modules(
     tm_front_page(
       label = "App Info",
