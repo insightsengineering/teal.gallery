@@ -11,130 +11,143 @@ library(sparkline)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 
-# code>
-## Generate Data
-ADSL <- synthetic_cdisc_data("latest")$adsl
+## Data reproducible code ----
+data <- teal_data()
+data <- within(data, {
+  ADSL <- synthetic_cdisc_data("latest")$adsl
+  ADAE <- synthetic_cdisc_data("latest")$adae
+  ADAETTE <- synthetic_cdisc_data("latest")$adaette
+  ADAETTE <- ADAETTE %>%
+    mutate(is_event = case_when(
+      grepl("TOT", .data$PARAMCD, fixed = TRUE) ~ TRUE,
+      TRUE ~ CNSR == 0
+    )) %>%
+    mutate(n_events = case_when(
+      grepl("TOT", .data$PARAMCD, fixed = TRUE) ~ as.integer(.data$AVAL),
+      TRUE ~ as.integer(is_event)
+    )) %>%
+    teal.data::col_relabel(is_event = "Is an Event") %>%
+    teal.data::col_relabel(n_events = "Number of Events")
+  ADAETTE_AE <-
+    filter(ADAETTE, grepl("TOT", .data$PARAMCD, fixed = TRUE)) %>% select(-"AVAL")
+  ADAETTE_OTH <-
+    filter(ADAETTE, !(grepl("TOT", .data$PARAMCD, fixed = TRUE)))
+
+  ADAETTE_TTE <- ADAETTE %>%
+    filter(PARAMCD == "AEREPTTE") %>%
+    select(USUBJID, ARM, ARMCD, AVAL)
+
+  ADAETTE_AE <-
+    full_join(ADAETTE_AE, ADAETTE_TTE, by = c("USUBJID", "ARM", "ARMCD"))
+  ADAETTE <- rbind(ADAETTE_AE, ADAETTE_OTH)
+
+  ADEX <- synthetic_cdisc_data("latest")$adex
+  ADEX_labels <- teal.data::col_labels(ADEX, fill = FALSE)
+  # Below steps are done to simulate data with TDURD parameter as it is not in the ADEX data from scda package
+  set.seed(1, kind = "Mersenne-Twister")
+  ADEX <- ADEX %>%
+    distinct(USUBJID, .keep_all = TRUE) %>%
+    mutate(
+      PARAMCD = "TDURD",
+      PARAM = "Overall duration (days)",
+      AVAL = sample(
+        x = seq(1, 200),
+        size = n(),
+        replace = TRUE
+      ),
+      AVALU = "Days",
+      PARCAT1 = "OVERALL"
+    ) %>%
+    bind_rows(ADEX)
+  ADEX <- ADEX %>%
+    filter(PARCAT1 == "OVERALL" &
+      PARAMCD %in% c("TDOSE", "TNDOSE", "TDURD"))
+  teal.data::col_labels(ADEX) <- ADEX_labels
+
+  ADLB <- synthetic_cdisc_data("latest")$adlb
+
+  ADEG <- synthetic_cdisc_data("latest")$adeg
+
+  # For real data, ADVS needs some preprocessing like group different ANRIND and BNRIND into abnormal
+  ADVS <- synthetic_cdisc_data("latest")$advs %>%
+    mutate(ONTRTFL = ifelse(AVISIT %in% c("SCREENING", "BASELINE"), "", "Y")) %>%
+    teal.data::col_relabel(ONTRTFL = "On Treatment Record Flag") %>%
+    mutate(ANRIND = as.character(ANRIND), BNRIND = as.character(BNRIND)) %>%
+    mutate(
+      ANRIND = case_when(
+        ANRIND == "HIGH HIGH" ~ "HIGH",
+        ANRIND == "LOW LOW" ~ "LOW",
+        TRUE ~ ANRIND
+      ),
+      BNRIND = case_when(
+        BNRIND == "HIGH HIGH" ~ "HIGH",
+        BNRIND == "LOW LOW" ~ "LOW",
+        TRUE ~ BNRIND
+      )
+    )
+
+  ADCM <-
+    synthetic_cdisc_data("latest")$adcm %>% mutate(CMSEQ = as.integer(CMSEQ))
+
+  # Add study-specific pre-processing: convert arm, param and visit variables to factors
+  # Sample code:
+  # ADSL$ACTARM <- factor(ADSL$ACTARM)
+  # ADAE$AETOXGR <- factor(ADAE$AETOXGR)
+  # ADLB <- ADLB %>%
+  #   tern::df_explicit_na(omit_columns = setdiff(names(ADLB), c("PARAM", "PARAMCD", "AVISIT") ))
+  # ADEX <- ADEX %>%
+  #   tern::df_explicit_na(omit_columns = setdiff(names(ADEX), c("PARAM", "PARAMCD", "PARCAT2") ))
+
+  # define study-specific analysis subgroups and baskets from ADAE
+  add_event_flags <- function(dat) {
+    dat %>%
+      dplyr::mutate(
+        TMPFL_SER = AESER == "Y",
+        TMPFL_REL = AEREL == "Y",
+        TMPFL_GR5 = AETOXGR == "5",
+        TMP_SMQ01 = !is.na(SMQ01NAM),
+        TMP_SMQ02 = !is.na(SMQ02NAM),
+        TMP_CQ01 = !is.na(CQ01NAM)
+      ) %>%
+      teal.data::col_relabel(
+        TMPFL_SER = "Serious AE",
+        TMPFL_REL = "Related AE",
+        TMPFL_GR5 = "Grade 5 AE",
+        TMP_SMQ01 = aesi_label(dat$SMQ01NAM, dat$SMQ01SC),
+        TMP_SMQ02 = aesi_label(dat$SMQ02NAM, dat$SMQ02SC),
+        TMP_CQ01 = aesi_label(dat$CQ01NAM)
+      )
+  }
+
+  ADAE <- ADAE %>%
+    add_event_flags()
+})
+
+datanames <- c("ADSL", "ADAE", "ADAETTE", "ADEX", "ADLB", "ADEG", "ADVS", "ADCM")
+datanames(data) <- datanames
+data@join_keys <- cdisc_join_keys(!!!datanames)
+
+## App configuration ----
+ADSL <- data[["ADSL"]]
+ADAE <- data[["ADAE"]]
+ADAETTE <- data[["ADAETTE"]]
+ADEX <- data[["ADEX"]]
+ADLB <- data[["ADLB"]]
+ADEG <- data[["ADEG"]]
+ADVS <- data[["ADVS"]]
+ADCM <- data[["ADCM"]]
+
+arm_vars <- c("ACTARMCD", "ACTARM")
 
 ## Create variable type lists
 date_vars_adsl <-
   names(ADSL)[vapply(ADSL, function(x) {
     inherits(x, c("Date", "POSIXct", "POSIXlt"))
   }, logical(1))]
-char_vars_adsl <- names(Filter(isTRUE, sapply(ADSL, is.character)))
-
-ADAE <- synthetic_cdisc_data("latest")$adae
-ADAETTE <- synthetic_cdisc_data("latest")$adaette
-ADAETTE <- ADAETTE %>%
-  mutate(is_event = case_when(
-    grepl("TOT", .data$PARAMCD, fixed = TRUE) ~ TRUE,
-    TRUE ~ CNSR == 0
-  )) %>%
-  mutate(n_events = case_when(
-    grepl("TOT", .data$PARAMCD, fixed = TRUE) ~ as.integer(.data$AVAL),
-    TRUE ~ as.integer(is_event)
-  )) %>%
-  teal.data::col_relabel(is_event = "Is an Event") %>%
-  teal.data::col_relabel(n_events = "Number of Events")
-ADAETTE_AE <-
-  filter(ADAETTE, grepl("TOT", .data$PARAMCD, fixed = TRUE)) %>% select(-"AVAL")
-ADAETTE_OTH <-
-  filter(ADAETTE, !(grepl("TOT", .data$PARAMCD, fixed = TRUE)))
-
-ADAETTE_TTE <- ADAETTE %>%
-  filter(PARAMCD == "AEREPTTE") %>%
-  select(USUBJID, ARM, ARMCD, AVAL)
-
-ADAETTE_AE <-
-  full_join(ADAETTE_AE, ADAETTE_TTE, by = c("USUBJID", "ARM", "ARMCD"))
-ADAETTE <- rbind(ADAETTE_AE, ADAETTE_OTH)
-
-ADEX <- synthetic_cdisc_data("latest")$adex
-ADEX_labels <- teal.data::col_labels(ADEX, fill = FALSE)
-# Below steps are done to simulate data with TDURD parameter as it is not in the ADEX data from scda package
-set.seed(1, kind = "Mersenne-Twister")
-ADEX <- ADEX %>%
-  distinct(USUBJID, .keep_all = TRUE) %>%
-  mutate(
-    PARAMCD = "TDURD",
-    PARAM = "Overall duration (days)",
-    AVAL = sample(
-      x = seq(1, 200),
-      size = n(),
-      replace = TRUE
-    ),
-    AVALU = "Days",
-    PARCAT1 = "OVERALL"
-  ) %>%
-  bind_rows(ADEX)
-ADEX <- ADEX %>%
-  filter(PARCAT1 == "OVERALL" &
-    PARAMCD %in% c("TDOSE", "TNDOSE", "TDURD"))
-teal.data::col_labels(ADEX) <- ADEX_labels
-
-ADLB <- synthetic_cdisc_data("latest")$adlb
-
-ADEG <- synthetic_cdisc_data("latest")$adeg
-
-# For real data, ADVS needs some preprocessing like group different ANRIND and BNRIND into abnormal
-ADVS <- synthetic_cdisc_data("latest")$advs %>%
-  mutate(ONTRTFL = ifelse(AVISIT %in% c("SCREENING", "BASELINE"), "", "Y")) %>%
-  teal.data::col_relabel(ONTRTFL = "On Treatment Record Flag") %>%
-  mutate(ANRIND = as.character(ANRIND), BNRIND = as.character(BNRIND)) %>%
-  mutate(
-    ANRIND = case_when(
-      ANRIND == "HIGH HIGH" ~ "HIGH",
-      ANRIND == "LOW LOW" ~ "LOW",
-      TRUE ~ ANRIND
-    ),
-    BNRIND = case_when(
-      BNRIND == "HIGH HIGH" ~ "HIGH",
-      BNRIND == "LOW LOW" ~ "LOW",
-      TRUE ~ BNRIND
-    )
-  )
-
-ADCM <-
-  synthetic_cdisc_data("latest")$adcm %>% mutate(CMSEQ = as.integer(CMSEQ))
-
-# Add study-specific pre-processing: convert arm, param and visit variables to factors
-# Sample code:
-# ADSL$ACTARM <- factor(ADSL$ACTARM)
-# ADAE$AETOXGR <- factor(ADAE$AETOXGR)
-# ADLB <- ADLB %>%
-#   tern::df_explicit_na(omit_columns = setdiff(names(ADLB), c("PARAM", "PARAMCD", "AVISIT") ))
-# ADEX <- ADEX %>%
-#   tern::df_explicit_na(omit_columns = setdiff(names(ADEX), c("PARAM", "PARAMCD", "PARCAT2") ))
-
-# define study-specific analysis subgroups and baskets from ADAE
-add_event_flags <- function(dat) {
-  dat %>%
-    dplyr::mutate(
-      TMPFL_SER = AESER == "Y",
-      TMPFL_REL = AEREL == "Y",
-      TMPFL_GR5 = AETOXGR == "5",
-      TMP_SMQ01 = !is.na(SMQ01NAM),
-      TMP_SMQ02 = !is.na(SMQ02NAM),
-      TMP_CQ01 = !is.na(CQ01NAM)
-    ) %>%
-    teal.data::col_relabel(
-      TMPFL_SER = "Serious AE",
-      TMPFL_REL = "Related AE",
-      TMPFL_GR5 = "Grade 5 AE",
-      TMP_SMQ01 = aesi_label(dat$SMQ01NAM, dat$SMQ01SC),
-      TMP_SMQ02 = aesi_label(dat$SMQ02NAM, dat$SMQ02SC),
-      TMP_CQ01 = aesi_label(dat$CQ01NAM)
-    )
-}
-
-ADAE <- ADAE %>%
-  add_event_flags()
-# <code
-
-## Reusable Configuration For Modules
-arm_vars <- c("ACTARMCD", "ACTARM")
-
 demog_vars_adsl <-
   names(ADSL)[!(names(ADSL) %in% c("USUBJID", "STUDYID", date_vars_adsl))]
+
+
 
 cs_arm_var <-
   choices_selected(
@@ -147,116 +160,6 @@ ae_anl_vars <- names(ADAE)[startsWith(names(ADAE), "TMPFL_")]
 aesi_vars <-
   names(ADAE)[startsWith(names(ADAE), "TMP_SMQ") |
     startsWith(names(ADAE), "TMP_CQ")]
-
-data <- cdisc_data(
-  ADSL = ADSL,
-  ADAE = ADAE,
-  ADAETTE = ADAETTE,
-  ADEX = ADEX,
-  ADLB = ADLB,
-  ADEG = ADEG,
-  ADVS = ADVS,
-  ADCM = ADCM,
-  code = bquote({
-    ADSL <- synthetic_cdisc_data("latest")$adsl
-    date_vars_adsl <-
-      names(ADSL)[vapply(ADSL, function(x) {
-        inherits(x, c("Date", "POSIXct", "POSIXlt"))
-      }, logical(1))]
-    char_vars_adsl <- names(Filter(isTRUE, sapply(ADSL, is.character)))
-
-    ADAE <- synthetic_cdisc_data("latest")$adae
-    ADAETTE <- synthetic_cdisc_data("latest")$adaette
-    ADAETTE <- ADAETTE %>%
-      mutate(is_event = case_when(
-        grepl("TOT", .data$PARAMCD, fixed = TRUE) ~ TRUE,
-        TRUE ~ CNSR == 0
-      )) %>%
-      mutate(n_events = case_when(
-        grepl("TOT", .data$PARAMCD, fixed = TRUE) ~ as.integer(.data$AVAL),
-        TRUE ~ as.integer(is_event)
-      )) %>%
-      teal.data::col_relabel(is_event = "Is an Event") %>%
-      teal.data::col_relabel(n_events = "Number of Events")
-    ADAETTE_AE <- filter(ADAETTE, grepl("TOT", .data$PARAMCD, fixed = TRUE)) %>% select(-"AVAL")
-    ADAETTE_OTH <- filter(ADAETTE, !(grepl("TOT", .data$PARAMCD, fixed = TRUE)))
-
-    ADAETTE_TTE <- ADAETTE %>%
-      filter(PARAMCD == "AEREPTTE") %>%
-      select(USUBJID, ARM, ARMCD, AVAL)
-
-    ADAETTE_AE <- full_join(ADAETTE_AE, ADAETTE_TTE, by = c("USUBJID", "ARM", "ARMCD"))
-    ADAETTE <- rbind(ADAETTE_AE, ADAETTE_OTH)
-
-    ADEX <- synthetic_cdisc_data("latest")$adex
-    ADEX_labels <- teal.data::col_labels(ADEX, fill = FALSE)
-
-    set.seed(1, kind = "Mersenne-Twister")
-    ADEX <- ADEX %>%
-      distinct(USUBJID, .keep_all = TRUE) %>%
-      mutate(
-        PARAMCD = "TDURD",
-        PARAM = "Overall duration (days)",
-        AVAL = sample(
-          x = seq(1, 200),
-          size = n(),
-          replace = TRUE
-        ),
-        AVALU = "Days",
-        PARCAT1 = "OVERALL"
-      ) %>%
-      bind_rows(ADEX)
-
-    ADEX <- ADEX %>%
-      filter(PARCAT1 == "OVERALL" &
-        PARAMCD %in% c("TDOSE", "TNDOSE", "TDURD"))
-    teal.data::col_labels(ADEX) <- ADEX_labels
-
-    ADLB <- synthetic_cdisc_data("latest")$adlb
-    ADEG <- synthetic_cdisc_data("latest")$adeg
-
-    ADVS <- synthetic_cdisc_data("latest")$advs %>%
-      mutate(ONTRTFL = ifelse(AVISIT %in% c("SCREENING", "BASELINE"), "", "Y")) %>%
-      teal.data::col_relabel(ONTRTFL = "On Treatment Record Flag") %>%
-      mutate(ANRIND = as.character(ANRIND), BNRIND = as.character(BNRIND)) %>%
-      mutate(
-        ANRIND = case_when(
-          ANRIND == "HIGH HIGH" ~ "HIGH",
-          ANRIND == "LOW LOW" ~ "LOW",
-          TRUE ~ ANRIND
-        ),
-        BNRIND = case_when(
-          BNRIND == "HIGH HIGH" ~ "HIGH",
-          BNRIND == "LOW LOW" ~ "LOW",
-          TRUE ~ BNRIND
-        )
-      )
-
-    ADCM <- synthetic_cdisc_data("latest")$adcm %>% mutate(CMSEQ = as.integer(CMSEQ))
-
-    add_event_flags <- function(dat) {
-      dat %>%
-        dplyr::mutate(
-          TMPFL_SER = AESER == "Y",
-          TMPFL_REL = AEREL == "Y",
-          TMPFL_GR5 = AETOXGR == "5",
-          TMP_SMQ01 = !is.na(SMQ01NAM),
-          TMP_SMQ02 = !is.na(SMQ02NAM),
-          TMP_CQ01 = !is.na(CQ01NAM)
-        ) %>%
-        teal.data::col_relabel(
-          TMPFL_SER = "Serious AE",
-          TMPFL_REL = "Related AE",
-          TMPFL_GR5 = "Grade 5 AE",
-          TMP_SMQ01 = aesi_label(dat$SMQ01NAM, dat$SMQ01SC),
-          TMP_SMQ02 = aesi_label(dat$SMQ02NAM, dat$SMQ02SC),
-          TMP_CQ01 = aesi_label(dat$CQ01NAM)
-        )
-    }
-
-    ADAE <- ADAE %>% add_event_flags()
-  })
-)
 
 ## Setup App
 app <- teal::init(
