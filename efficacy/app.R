@@ -6,7 +6,6 @@ library(teal.modules.clinical)
 library(nestcolor)
 # optional libraries
 library(sparkline)
-pkgload::load_all("teal.data")
 
 options(shiny.useragg = FALSE)
 
