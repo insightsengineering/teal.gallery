@@ -8,35 +8,52 @@ options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 
-ADSL <- synthetic_cdisc_data("latest")$adsl
-ADMH <- synthetic_cdisc_data("latest")$admh
-ADAE <- synthetic_cdisc_data("latest")$adae
-ADCM <- synthetic_cdisc_data("latest")$adcm
-ADVS <- synthetic_cdisc_data("latest")$advs
-ADLB <- synthetic_cdisc_data("latest")$adlb
+## Data reproducible code ----
+data <- teal_data()
+data <- within(data, {
+  ADSL <- synthetic_cdisc_data("latest")$adsl
+  ADMH <- synthetic_cdisc_data("latest")$admh
+  ADAE <- synthetic_cdisc_data("latest")$adae
+  ADCM <- synthetic_cdisc_data("latest")$adcm
+  ADVS <- synthetic_cdisc_data("latest")$advs
+  ADLB <- synthetic_cdisc_data("latest")$adlb
 
-## Modify ADCM
-ADCM$CMINDC <- paste0("Indication_", as.numeric(ADCM$CMDECOD))
-ADCM$CMDOSE <- 1
-ADCM$CMTRT <- ADCM$CMCAT
-ADCM$CMDOSU <- "U"
-ADCM$CMROUTE <- "CMROUTE"
-ADCM$CMDOSFRQ <- "CMDOSFRQ"
-ADCM$CMASTDTM <- ADCM$ASTDTM
-ADCM$CMAENDTM <- ADCM$AENDTM
+  ## Modify ADCM
+  ADCM$CMINDC <- paste0("Indication_", as.numeric(ADCM$CMDECOD))
+  ADCM$CMDOSE <- 1
+  ADCM$CMTRT <- ADCM$CMCAT
+  ADCM$CMDOSU <- "U"
+  ADCM$CMROUTE <- "CMROUTE"
+  ADCM$CMDOSFRQ <- "CMDOSFRQ"
+  ADCM$CMASTDTM <- ADCM$ASTDTM
+  ADCM$CMAENDTM <- ADCM$AENDTM
 
-teal.data::col_labels(
-  ADCM[c("CMINDC", "CMTRT", "ASTDY", "AENDY")]
-) <- c(
-  "Indication",
-  "Reported Name of Drug, Med, or Therapy",
-  "Study Day of Start of Medication",
-  "Study Day of End of Medication"
-)
+  teal.data::col_labels(
+    ADCM[c("CMINDC", "CMTRT", "ASTDY", "AENDY")]
+  ) <- c(
+    "Indication",
+    "Reported Name of Drug, Med, or Therapy",
+    "Study Day of Start of Medication",
+    "Study Day of End of Medication"
+  )
 
-## Modify ADHM
-ADMH[["MHDISTAT"]] <- "ONGOING"
-teal.data::col_labels(ADMH[c("MHDISTAT")]) <- c("Status of Disease")
+  ## Modify ADHM
+  ADMH[["MHDISTAT"]] <- "ONGOING"
+  teal.data::col_labels(ADMH[c("MHDISTAT")]) <- c("Status of Disease")
+})
+
+datanames <- c("ADSL", "ADMH", "ADAE", "ADCM", "ADVS", "ADLB")
+datanames(data) <- datanames
+data@join_keys <- cdisc_join_keys(!!!datanames)
+
+## App configuration ----
+ADSL <- data[["ADSL"]]
+ADMH <- data[["ADMH"]]
+ADAE <- data[["ADAE"]]
+ADCM <- data[["ADCM"]]
+ADVS <- data[["ADVS"]]
+ADLB <- data[["ADLB"]]
+
 
 ## Define variable inputs
 aeterm_input <- data_extract_spec(
@@ -87,42 +104,6 @@ cmdecod_input <- data_extract_spec(
     multiple = FALSE,
     fixed = FALSE
   )
-)
-
-
-data <- cdisc_data(
-  ADSL = ADSL, ADMH = ADMH, ADAE = ADAE, ADCM = ADCM, ADVS = ADVS, ADLB = ADLB,
-  code = quote({
-    ADSL <- synthetic_cdisc_data("latest")$adsl
-    ADMH <- synthetic_cdisc_data("latest")$admh
-    ADAE <- synthetic_cdisc_data("latest")$adae
-    ADCM <- synthetic_cdisc_data("latest")$adcm
-    ADVS <- synthetic_cdisc_data("latest")$advs
-    ADLB <- synthetic_cdisc_data("latest")$adlb
-
-    ## Modify ADCM
-    ADCM$CMINDC <- paste0("Indication_", as.numeric(ADCM$CMDECOD))
-    ADCM$CMDOSE <- 1
-    ADCM$CMTRT <- ADCM$CMCAT
-    ADCM$CMDOSU <- "U"
-    ADCM$CMROUTE <- "CMROUTE"
-    ADCM$CMDOSFRQ <- "CMDOSFRQ"
-    ADCM$CMASTDTM <- ADCM$ASTDTM
-    ADCM$CMAENDTM <- ADCM$AENDTM
-
-    teal.data::col_labels(
-      ADCM[c("CMINDC", "CMTRT", "ASTDY", "AENDY")]
-    ) <- c(
-      "Indication",
-      "Reported Name of Drug, Med, or Therapy",
-      "Study Day of Start of Medication",
-      "Study Day of End of Medication"
-    )
-
-    ## Modify ADHM
-    ADMH[["MHDISTAT"]] <- "ONGOING"
-    teal.data::col_labels(ADMH[c("MHDISTAT")]) <- c("Status of Disease")
-  })
 )
 
 app <- init(
