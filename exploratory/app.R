@@ -209,26 +209,6 @@ distr_filter_spec <- filter_spec(
   multiple = TRUE
 )
 
-data <- cdisc_data(
-  ADSL = ADSL,
-  ADRS = ADRS,
-  ADLB = ADLB,
-  ADLBPCA = ADLBPCA,
-  code = quote({
-    ADSL <- synthetic_cdisc_data("latest")$adsl
-    ADRS <- synthetic_cdisc_data("latest")$adrs
-    ADLB <- synthetic_cdisc_data("latest")$adlb
-
-    ADLBPCA <- ADLB %>%
-      dplyr::select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
-      tidyr::pivot_wider(
-        values_from = "AVAL",
-        names_from = c("PARAMCD", "AVISIT"),
-        names_sep = " - "
-      )
-  })
-)
-
 app <- init(
   data = data,
   filter = teal_slices(
