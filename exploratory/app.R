@@ -26,17 +26,35 @@ options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 
-ADSL <- synthetic_cdisc_data("latest")$adsl
-ADRS <- synthetic_cdisc_data("latest")$adrs
-ADLB <- synthetic_cdisc_data("latest")$adlb
+## Data reproducible code ----
+data <- teal_data()
+data <- within(data, {
+  ADSL <- synthetic_cdisc_data("latest")$adsl
+  ADRS <- synthetic_cdisc_data("latest")$adrs
+  ADLB <- synthetic_cdisc_data("latest")$adlb
 
-ADLBPCA <- ADLB %>%
-  dplyr::select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
-  tidyr::pivot_wider(
-    values_from = "AVAL",
-    names_from = c("PARAMCD", "AVISIT"),
-    names_sep = " - "
-  )
+  ADLBPCA <- ADLB %>%
+    dplyr::select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
+    tidyr::pivot_wider(
+      values_from = "AVAL",
+      names_from = c("PARAMCD", "AVISIT"),
+      names_sep = " - "
+    )
+})
+
+datanames <- c("ADSL", "ADRS", "ADLB", "ADLBPCA")
+datanames(data) <- datanames
+
+join_keys <- cdisc_join_keys(!!!datanames)
+join_keys["ADLBPCA"] <- c("USUBJID", "STUDYID", "PARAMCD", "AVISIT")
+join_keys["ADLBPCA", "ADSL"] <- c("USUBJID", "STUDYID")
+data@join_keys <- join_keys
+
+## Reusable Configuration For Modules
+ADSL <- data[["ADSL"]]
+ADRS <- data[["ADRS"]]
+ADLB <- data[["ADLB"]]
+ADLBPCA <- data[["ADLBPCA"]]
 
 adsl_extracted_num <- data_extract_spec(
   dataname = "ADSL",
