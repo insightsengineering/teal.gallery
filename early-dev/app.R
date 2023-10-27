@@ -412,7 +412,7 @@ app <- init(
       ),
       lb_var = choices_selected(
         selected = "PARAMCD",
-        choices = variable_choices(data[["ADLB"]], c("PARAMCD", "PARAM"))
+        choices = variable_choices(ADLB, c("PARAMCD", "PARAM"))
       ),
       x_limit = "-28, 750",
       plot_height = c(1200, 400, 5000)
