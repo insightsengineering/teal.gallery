@@ -1,7 +1,5 @@
 library(teal.modules.hermes)
 library(teal.modules.general)
-library(scda.2022)
-library(nestcolor)
 
 options(shiny.useragg = FALSE)
 
@@ -10,8 +8,10 @@ nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
+  library(scda.2022)
+  library(nestcolor)
   ADTTE <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
-  dplyr::mutate(is_event = CNSR == 0)
+    dplyr::mutate(is_event = CNSR == 0)
   MAE <- hermes::multi_assay_experiment
 })
 datanames(data) <- c("ADTTE", "MAE")

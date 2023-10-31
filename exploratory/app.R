@@ -1,27 +1,6 @@
 options("teal.ggplot2_args" = teal.widgets::ggplot2_args(labs = list(caption = "NEST PROJECT")))
 
 library(teal.modules.general)
-library(scda)
-library(scda.2022)
-library(dplyr)
-library(tidyr)
-library(nestcolor)
-# optional libraries
-library(broom)
-library(colourpicker)
-library(ggExtra)
-library(ggpmisc)
-library(ggpp)
-library(goftest)
-library(gridExtra)
-library(htmlwidgets)
-library(jsonlite)
-library(lattice)
-library(MASS)
-library(rlang)
-library(rtables)
-library(sparkline)
-
 options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
@@ -29,6 +8,27 @@ nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
+  library(scda)
+  library(scda.2022)
+  library(dplyr)
+  library(tidyr)
+  library(ggExtra)
+  library(ggpmisc)
+  library(ggpp)
+  library(goftest)
+  library(gridExtra)
+  library(htmlwidgets)
+  library(jsonlite)
+  library(lattice)
+  library(MASS)
+  library(rlang)
+  library(rtables)
+  library(nestcolor)
+  library(broom)
+  library(colourpicker)
+  library(sparkline)
+
+
   ADSL <- synthetic_cdisc_data("latest")$adsl
   ADRS <- synthetic_cdisc_data("latest")$adrs
   ADLB <- synthetic_cdisc_data("latest")$adlb

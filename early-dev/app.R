@@ -161,6 +161,8 @@ ADTR <- data[["ADTR"]]
 ADEX <- data[["ADEX"]]
 ADCM <- data[["ADCM"]]
 ADTRWF <- data[["ADTRWF"]]
+ADRSSWIM <- data[["ADRSSWIM"]]
+ADLB <- data[["ADLB"]]
 
 
 adsl_labels <- teal.data::col_labels(ADSL)
@@ -338,7 +340,7 @@ app <- init(
         selected = "ADY"
       ),
       marker_shape_var = choices_selected(c(variable_choices(ADRS, c("AVALC", "AVISIT"))),
-                                          selected = "AVALC"
+        selected = "AVALC"
       ),
       marker_shape_opt = c("CR" = 16, "PR" = 17, "SD" = 18, "PD" = 15, "Death" = 8),
       marker_color_var = choices_selected(

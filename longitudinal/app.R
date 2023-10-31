@@ -1,17 +1,9 @@
 options(shiny.sanitize.errors = FALSE)
 
 # attach required packages
-library(DescTools)
-library(magrittr)
-library(dplyr)
-library(scda)
-library(scda.2022)
-library(stringr)
 library(teal.goshawk)
 library(teal.modules.clinical)
 library(teal.modules.general)
-# optional libraries
-library(sparkline)
 
 options(shiny.useragg = FALSE)
 
@@ -20,6 +12,15 @@ nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
+  library(DescTools)
+  library(magrittr)
+  library(dplyr)
+  library(scda)
+  library(scda.2022)
+  library(stringr)
+  # optional libraries
+  library(sparkline)
+
   # expected data are ADSL and ADLB
   # other data can be included but needs to be added to ADSL or ADLB as appropriate
   # depending on if the data are SUBJECT LEVEL ANALYSIS DATASET or BASIC DATA STRUCTURE
