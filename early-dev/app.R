@@ -1,6 +1,9 @@
 library(teal)
 library(rlang)
 
+options(shiny.useragg = FALSE)
+nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
+
 ## Data reproducible code ----
 data <- cdisc_data()
 data <- within(data, {
@@ -218,10 +221,6 @@ cs_paramcd_tr <- choices_selected(
 )
 
 ## Setup App
-
-options(shiny.useragg = FALSE)
-nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
-
 app <- init(
   data = data,
   filter = teal_slices(
