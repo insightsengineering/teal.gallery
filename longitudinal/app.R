@@ -1,11 +1,8 @@
-options(shiny.sanitize.errors = FALSE)
-
 # attach required packages
 library(teal.goshawk)
 library(teal.modules.clinical)
 library(teal.modules.general)
-
-options(shiny.useragg = FALSE)
+options(shiny.useragg = FALSE, shiny.sanitize.errors = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 

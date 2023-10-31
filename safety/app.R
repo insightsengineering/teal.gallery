@@ -1,5 +1,3 @@
-options(shiny.useragg = FALSE)
-
 library(dplyr)
 library(scda)
 library(scda.2022)
@@ -8,6 +6,7 @@ library(teal.modules.clinical)
 library(nestcolor)
 # optional libraries
 library(sparkline)
+options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 

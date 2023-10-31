@@ -1,7 +1,8 @@
-options("teal.ggplot2_args" = teal.widgets::ggplot2_args(labs = list(caption = "NEST PROJECT")))
-
 library(teal.modules.general)
-options(shiny.useragg = FALSE)
+options(
+  shiny.useragg = FALSE,
+  teal.ggplot2_args = teal.widgets::ggplot2_args(labs = list(caption = "NEST PROJECT"))
+)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 

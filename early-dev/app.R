@@ -1,7 +1,6 @@
 library(teal)
-library(rlang)
-
 options(shiny.useragg = FALSE)
+
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 
 ## Data reproducible code ----
