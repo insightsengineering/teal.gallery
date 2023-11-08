@@ -3,7 +3,7 @@ library(teal)
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 
 app <- init(
-  data = list(IRIS = iris, MTCARS = mtcars),
+  data = teal_data(IRIS = iris, MTCARS = mtcars),
   filter = teal_slices(
     teal_slice(dataname = "IRIS", varname = "Species", multiple = FALSE)
   ),
@@ -39,7 +39,10 @@ app <- init(
 body(app$server)[[length(body(app$server)) + 1]] <- quote(
   observeEvent(input$showAboutModal, {
     showModal(modalDialog(
-      tags$p("This teal app is brought to you by the NEST Team at Roche/Genentech. For more information, please visit:"),
+      tags$p(
+        "This teal app is brought to you by the NEST Team at Roche/Genentech.
+        For more information, please visit:"
+      ),
       tags$ul(
         tags$li(tags$a(
           href = "https://github.com/insightsengineering", "Insights Engineering",

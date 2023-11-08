@@ -46,10 +46,9 @@ data <- within(data, {
 datanames <- c("ADSL", "ADRS", "ADLB", "ADLBPCA")
 datanames(data) <- datanames
 
-join_keys <- cdisc_join_keys(!!!datanames)
-join_keys["ADLBPCA"] <- c("USUBJID", "STUDYID", "PARAMCD", "AVISIT")
-join_keys["ADLBPCA", "ADSL"] <- c("USUBJID", "STUDYID")
-data@join_keys <- join_keys
+join_keys(data) <- cdisc_join_keys(!!!datanames)
+join_keys(data)["ADLBPCA"] <- c("USUBJID", "STUDYID", "PARAMCD", "AVISIT")
+join_keys(data)["ADLBPCA", "ADSL"] <- c("USUBJID", "STUDYID")
 
 ## Reusable Configuration For Modules
 ADSL <- data[["ADSL"]]
@@ -359,7 +358,10 @@ app <- init(
 body(app$server)[[length(body(app$server)) + 1]] <- quote(
   observeEvent(input$showAboutModal, {
     showModal(modalDialog(
-      tags$p("This teal app is brought to you by the NEST Team at Roche/Genentech. For more information, please visit:"),
+      tags$p(
+        "This teal app is brought to you by the NEST Team at Roche/Genentech.
+        For more information, please visit:"
+      ),
       tags$ul(
         tags$li(tags$a(
           href = "https://github.com/insightsengineering", "Insights Engineering",

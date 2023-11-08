@@ -287,7 +287,7 @@ data <- within(data, {
 
 datanames <- c("ADSL", "ADLB")
 datanames(data) <- datanames
-data@join_keys <- cdisc_join_keys(!!!datanames)
+join_keys(data) <- cdisc_join_keys(!!!datanames)
 
 ## App configuration ----
 ADSL <- data[["ADSL"]]
@@ -810,7 +810,10 @@ body(app$server)[[length(body(app$server)) + 1]] <- quote(
 body(app$server)[[length(body(app$server)) + 1]] <- quote(
   observeEvent(input$showAboutModal, {
     showModal(modalDialog(
-      tags$p("This teal app is brought to you by the NEST Team at Roche/Genentech. For more information, please visit:"),
+      tags$p(
+        "This teal app is brought to you by the NEST Team at Roche/Genentech.
+        For more information, please visit:"
+      ),
       tags$ul(
         tags$li(tags$a(
           href = "https://github.com/insightsengineering", "Insights Engineering",
