@@ -9,9 +9,9 @@ data <- within(data, {
   library(scda)
   library(scda.2022)
   library(dplyr)
-  devtools::load_all("../../../NEST/teal.modules.clinical")
-  devtools::load_all("../../../NEST/teal.modules.general")
-  devtools::load_all("../../../NEST/teal.osprey")
+  library(teal.modules.clinical)
+  library(teal.modules.general)
+  library(teal.osprey)
   library(nestcolor)
   # optional libraries
   library(sparkline)
