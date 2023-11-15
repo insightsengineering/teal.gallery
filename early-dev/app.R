@@ -145,7 +145,7 @@ datanames <- c("ADSL", "ADAE", "ADCM", "ADEX", "ADTR", "ADTRWF", "ADRS", "ADRSSW
 datanames(data) <- datanames
 
 # set join keys
-join_keys(data) <- cdisc_join_keys(!!!datanames) # get default keys by name
+join_keys(data) <- default_cdisc_join_keys[datanames] # get default keys by name
 join_keys(data)["ADTR"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
 join_keys(data)["ADTRWF"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
 join_keys(data)["ADRSSWIM"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")

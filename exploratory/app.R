@@ -46,7 +46,7 @@ data <- within(data, {
 datanames <- c("ADSL", "ADRS", "ADLB", "ADLBPCA")
 datanames(data) <- datanames
 
-join_keys(data) <- cdisc_join_keys(!!!datanames)
+join_keys(data) <- default_cdisc_join_keys[datanames]
 join_keys(data)["ADLBPCA"] <- c("USUBJID", "STUDYID", "PARAMCD", "AVISIT")
 join_keys(data)["ADLBPCA", "ADSL"] <- c("USUBJID", "STUDYID")
 

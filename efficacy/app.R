@@ -59,7 +59,7 @@ datanames <- c("ADSL", "ADTTE", "ADRS", "ADQS")
 datanames(data) <- datanames
 
 # set join_keys
-join_keys(data) <- cdisc_join_keys(!!!datanames)
+join_keys(data) <- default_cdisc_join_keys[datanames]
 
 ## Reusable Configuration For Modules
 ADSL <- data[["ADSL"]]

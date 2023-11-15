@@ -124,7 +124,7 @@ data <- within(data, {
 
 datanames <- c("ADSL", "ADAE", "ADAETTE", "ADEX", "ADLB", "ADEG", "ADVS", "ADCM")
 datanames(data) <- datanames
-join_keys(data) <- cdisc_join_keys(!!!datanames)
+join_keys(data) <- default_cdisc_join_keys[datanames]
 
 ## App configuration ----
 ADSL <- data[["ADSL"]]
