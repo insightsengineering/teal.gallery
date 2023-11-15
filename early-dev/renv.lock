@@ -1642,27 +1642,14 @@
     },
     "mmrm": {
       "Package": "mmrm",
-      "Version": "0.2.2",
-      "Source": "Bioconductor",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "Rcpp",
-        "RcppEigen",
-        "Rdpack",
-        "TMB",
-        "checkmate",
-        "lifecycle",
-        "methods",
-        "nlme",
-        "numDeriv",
-        "parallel",
-        "stats",
-        "stringr",
-        "testthat",
-        "utils"
-      ],
-      "Hash": "cb4cddcde5482069a9afdcb4e246b5c3"
+      "Version": "0.3.5.9003",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "openpharma",
+      "RemoteRepo": "mmrm",
+      "RemoteRef": "main",
+      "RemoteSha": "9ba41f1458fb97e42615cb78103babd9ec836e6d"
     },
     "mosaicCore": {
       "Package": "mosaicCore",

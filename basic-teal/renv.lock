@@ -1276,17 +1276,18 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.14.0.9009",
+      "Version": "0.14.0.9018",
       "Source": "GitHub",
       "RemoteType": "github",
-      "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "329f7f982cc343a464f6c7cc634bc1052b0d0db5",
+      "RemoteSha": "5e989f92beffa9981bf2b5ba9ca6280993b112cb",
+      "RemoteHost": "api.github.com",
       "Requirements": [
         "R",
         "checkmate",
+        "jsonlite",
         "lifecycle",
         "logger",
         "magrittr",
@@ -1302,18 +1303,40 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "c109e7e14a9a5b6821866100c77e3df6"
+      "Hash": "b7cde27e5d9af919ef36f718ea8b65c5"
     },
-    "teal.data": {
-      "Package": "teal.data",
-      "Version": "0.3.0.9005",
+    "teal.code": {
+      "Package": "teal.code",
+      "Version": "0.4.1.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "teal.code",
+      "RemoteRef": "main",
+      "RemoteSha": "cbfb89f1488c39d24f406b453ecb6a7959580f90",
+      "Requirements": [
+        "R",
+        "checkmate",
+        "grDevices",
+        "lifecycle",
+        "methods",
+        "rlang",
+        "shiny",
+        "styler"
+      ],
+      "Hash": "029d13c6b8f08b6f65c96cfe820bc6dc"
+    },
+    "teal.data": {
+      "Package": "teal.data",
+      "Version": "0.3.0.9009",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "49b59f17967199d4d66a52c011b1abab380ff1cf",
+      "RemoteSha": "9aae01c613bb889eed0a6898faf93e99d42ba0ef",
+      "RemoteHost": "api.github.com",
       "Requirements": [
         "R",
         "R6",
@@ -1326,11 +1349,12 @@
         "shiny",
         "shinyjs",
         "stats",
+        "teal.code",
         "teal.logger",
         "utils",
         "yaml"
       ],
-      "Hash": "4a69318ce2afea71627f82f42f62f511"
+      "Hash": "7275cf2b2c44afa85d61d32799e915e5"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -1381,14 +1405,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.4.0.9014",
+      "Version": "0.4.0.9022",
       "Source": "GitHub",
       "RemoteType": "github",
-      "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "0a48af85052285f81f608fe519c1682a5a7048f8",
+      "RemoteSha": "631e619415dbe7fdf3742a672706dffc1fa6f674",
+      "RemoteHost": "api.github.com",
       "Requirements": [
         "R",
         "R6",
@@ -1408,20 +1432,21 @@
         "shinyjs",
         "teal.data",
         "teal.logger",
-        "teal.widgets"
+        "teal.widgets",
+        "utils"
       ],
-      "Hash": "da5bf873fb4e1ccb7ee5229ee1947975"
+      "Hash": "8c3fceab4e5f05712be34ebd79676dc3"
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.4.0.9004",
+      "Version": "0.4.0.9006",
       "Source": "GitHub",
       "RemoteType": "github",
-      "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.transform",
       "RemoteRef": "main",
-      "RemoteSha": "73c8b4822c91a9128974990e540f3f3c03a8adcc",
+      "RemoteSha": "26e47182948126a6dc75e2dfc86c2c87b6416bf4",
+      "RemoteHost": "api.github.com",
       "Requirements": [
         "R",
         "checkmate",
@@ -1442,7 +1467,7 @@
         "tidyr",
         "tidyselect"
       ],
-      "Hash": "1c14c786ee47d785e97a62a803cae45d"
+      "Hash": "7bc2d936478ff52de98ff230afca7f29"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
