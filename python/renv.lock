@@ -979,7 +979,7 @@
     },
     "ggpmisc": {
       "Package": "ggpmisc",
-      "Version": "0.5.4-1",
+      "Version": "0.5.5",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1004,7 +1004,7 @@
         "stats",
         "tibble"
       ],
-      "Hash": "806576f1da4b5f1fa9d51ddbfd9bcfca"
+      "Hash": "452c0d99316404696676e64d4118f6fb"
     },
     "ggpp": {
       "Package": "ggpp",
