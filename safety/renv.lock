@@ -2110,14 +2110,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.5.9011",
+      "Version": "0.6.5.9012",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "e329e7556fbe871dd0636a5c0a7dbb550d5ad413",
+      "RemoteSha": "4a445e72e303a403b2ac7ab5585ce14f211b2f7a",
       "Requirements": [
         "R",
         "formatters",
@@ -2127,7 +2127,7 @@
         "methods",
         "stats"
       ],
-      "Hash": "c91ea27e644bdc0473c108be105679fc"
+      "Hash": "1028fad179e11416ff0cfdacf4a44789"
     },
     "sass": {
       "Package": "sass",
@@ -2522,14 +2522,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.8.16.9010",
+      "Version": "0.8.16.9011",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "f858e5d7b83217f2c08ad3a2301c97b8440eb5ab",
+      "RemoteSha": "21d2ede4dc31568f34de9953a4767934ef2b4a31",
       "Requirements": [
         "DT",
         "R",
@@ -2558,6 +2558,7 @@
         "styler",
         "teal",
         "teal.code",
+        "teal.data",
         "teal.logger",
         "teal.reporter",
         "teal.transform",
@@ -2569,7 +2570,7 @@
         "utils",
         "vistime"
       ],
-      "Hash": "f8d0fdb1e88ebafc92e1308d81e90ca9"
+      "Hash": "71f909aa93ef8edafb3e424651f1b202"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
