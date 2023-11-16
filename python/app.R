@@ -11,7 +11,6 @@ library(sparkline)
 options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
-iris_raw <- cbind(id = 1:nrow(iris), iris)
 
 data <- teal_data_module(
   ui = function(id) {
@@ -34,6 +33,7 @@ data <- teal_data_module(
             reticulate::virtualenv_create(envname = virtualenv_dir, python = python_path)
             reticulate::virtualenv_install(virtualenv_dir, packages = python_dependencies, ignore_installed = TRUE)
             reticulate::use_virtualenv(virtualenv_dir, required = TRUE)
+            iris_raw <- cbind(id = seq_len(nrow(iris)), iris)
             python_code <- "import pandas as pd
 data = r.iris_raw
 def svd_whiten(dat):
@@ -54,7 +54,10 @@ data_new.columns = list(data_columns) + [i + '.whiten' for i in numeric_cols]
 data_new = data_new.round(10)
 data_new
 "
-            py_run_string(python_code)
+            withr::with_options(
+              list(reticulate.engine.environment = environment()),
+              py_run_string(python_code)
+            )
             IRIS <- py$data_new
           }
         )
