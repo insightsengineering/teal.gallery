@@ -146,12 +146,12 @@ datanames(data) <- datanames
 
 # set join keys
 join_keys(data) <- default_cdisc_join_keys[datanames] # get default keys by name
-join_keys(data)[["ADTR"]][["ADTR"]] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
-join_keys(data)[["ADTRWF"]][["ADTRWF"]] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
-join_keys(data)[["ADRSSWIM"]][["ADRSSWIM"]] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
-join_keys(data)[["ADTR"]][["ADSL"]] <- c("STUDYID", "USUBJID")
-join_keys(data)[["ADTRWF"]][["ADSL"]] <- c("STUDYID", "USUBJID")
-join_keys(data)[["ADRSSWIM"]][["ADSL"]] <- c("STUDYID", "USUBJID")
+join_keys(data)["ADTR", "ADTR"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
+join_keys(data)["ADTRWF", "ADTRWF"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
+join_keys(data)["ADRSSWIM", "ADRSSWIM"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
+join_keys(data)["ADTR", "ADSL"] <- c("STUDYID", "USUBJID")
+join_keys(data)["ADTRWF", "ADSL"] <- c("STUDYID", "USUBJID")
+join_keys(data)["ADRSSWIM", "ADSL"] <- c("STUDYID", "USUBJID")
 
 ## App configuration ----
 # reuse object from teal_data
