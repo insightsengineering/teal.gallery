@@ -1548,14 +1548,14 @@
     },
     "mmrm": {
       "Package": "mmrm",
-      "Version": "0.3.5.9003",
+      "Version": "0.3.6.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "9ba41f1458fb97e42615cb78103babd9ec836e6d",
+      "RemoteSha": "5a15e9a4df7f50a753ef94ef186597b5719b02a8",
       "Requirements": [
         "Matrix",
         "R",
@@ -1575,7 +1575,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "b3dd4849ea67bc80b794ac3deb349ad8"
+      "Hash": "080c7fee4bcdf083c986ec94134f5808"
     },
     "mosaicCore": {
       "Package": "mosaicCore",
