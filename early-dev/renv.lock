@@ -101,17 +101,17 @@
     },
     "DescTools": {
       "Package": "DescTools",
-      "Version": "0.99.50",
+      "Version": "0.99.51",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
-        "BH",
         "Exact",
         "MASS",
         "R",
         "Rcpp",
         "base",
         "boot",
+        "cli",
         "data.table",
         "expm",
         "gld",
@@ -126,7 +126,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "ca7382e6be11685fb4e4680485568860"
+      "Hash": "2782990fd2baf2d716c50c638ef9235e"
     },
     "Exact": {
       "Package": "Exact",
