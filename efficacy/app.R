@@ -1,5 +1,6 @@
 library(teal.modules.general)
 library(teal.modules.clinical)
+library(sparkline)
 options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"

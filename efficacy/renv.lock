@@ -2324,6 +2324,17 @@
       ],
       "Hash": "5f5a7629f956619d519205ec475fe647"
     },
+    "sparkline": {
+      "Package": "sparkline",
+      "Version": "2.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "htmltools",
+        "htmlwidgets"
+      ],
+      "Hash": "06e5e4017ecb00fd142bada4b380c59a"
+    },
     "stringi": {
       "Package": "stringi",
       "Version": "1.8.1",
