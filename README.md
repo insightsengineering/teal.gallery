@@ -7,8 +7,6 @@
   <img align="right" width=auto height="100" src="https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/teal.gallery.png">
 </a>
 
-
-
 A gallery of sample apps based on the [`teal`](https://github.com/insightsengineering/teal) framework.
 
 ## Links to apps on `shinyapps.io`
@@ -48,7 +46,16 @@ restore_and_run("basic-teal")
 
 ## Development
 
-All `teal` sample apps are wrapped into this package for the sake of portability. All development standards and practices that we currently use for teal app development also apply to this repository.
+All `teal` sample apps are wrapped into this repository into it's own sub-directory. All development standards and practices that we currently use for teal app development also apply to this repository.
+
+### Auto-deployment
+
+All the sample apps are automatically deployed every day using the CI in two channels:
+
+- `stable` channel: The code for the Teal apps is taken from the `main` branch of `teal.gallery`, and the NEST packages are installed from the `main` branch of GitHub. This is done using the `deploy_stable.yaml`.
+- `dev` channel: The code for the Teal apps is taken from the `dev` branch of `teal.gallery` and the NEST packages are installed from the last `release tag` of GitHub. This is done using the `deploy_dev.yaml`.
+
+_IMPORTANT_: Although we can now test the unreleased features of the NEST packages in deployments, currently, the divergent `dev` and `main` branches must be managed and merged manually as needed to ensure that the apps work fine in both deployment channels, i.e., making sure to merge the app changes from `dev` to `main` by creating a PR.
 
 ### Adding a sample app to `teal.gallery`
 
