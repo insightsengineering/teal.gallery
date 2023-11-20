@@ -52,8 +52,8 @@ All `teal` sample apps are wrapped into this repository into it's own sub-direct
 
 All the sample apps are automatically deployed every day using the CI in two channels:
 
-- `stable` channel - The code for the Teal apps are taken from the `main` branch of `teal.gallery` and the NEST packages are installed from the `main` branch of GitHub are installed. Done using the `deploy_stable.yaml`.
-- `dev` channel - The code for the Teal apps are taken from the `dev` branch of `teal.gallery` and the NEST packages are installed from the last `release tag` branch of GitHub are installed. Done using the `deploy_dev.yaml`.
+- `stable` channel: The code for the Teal apps is taken from the `main` branch of `teal.gallery`, and the NEST packages are installed from the `main` branch of GitHub. This is done using the `deploy_stable.yaml`.
+- `dev` channel: The code for the Teal apps is taken from the `dev` branch of `teal.gallery` and the NEST packages are installed from the last `release tag` of GitHub. This is done using the `deploy_dev.yaml`.
 
 _IMPORTANT_: Although we can now test the unreleased features of the NEST packages in deployments, currently, the divergent `dev` and `main` branches must be managed and merged manually as needed to ensure that the apps work fine in both deployment channels, i.e., making sure to merge the app changes from `dev` to `main` by creating a PR.
 
