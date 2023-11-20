@@ -1,62 +1,73 @@
-library(dplyr)
-library(scda)
-library(scda.2022)
 library(teal.modules.general)
 library(teal.modules.clinical)
-library(nestcolor)
-# optional libraries
-library(sparkline)
-
 options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 
-# code>
-## Generate Data
-ADSL <- synthetic_cdisc_data("latest")$adsl
-adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
+## Data reproducible code ----
+data <- teal_data()
+data <- within(data, {
+  library(dplyr)
+  library(scda)
+  library(scda.2022)
+  library(nestcolor)
 
-char_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.character)))
+  ADSL <- synthetic_cdisc_data("latest")$adsl
+  adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
 
-adsl_labels <- c(
-  adsl_labels,
-  AGEGR1 = "Age Group"
-)
-ADSL <- ADSL %>%
-  mutate(
-    AGEGR1 = factor(case_when(
-      AGE < 45 ~ "<45",
-      AGE >= 45 ~ ">=45"
-    ))
-  ) %>%
-  mutate_at(char_vars_asl, factor)
+  char_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.character)))
 
-teal.data::col_labels(ADSL) <- adsl_labels
-
-ADTTE <- synthetic_cdisc_data("latest")$adtte
-
-ADRS <- synthetic_cdisc_data("latest")$adrs
-adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
-ADRS <- filter(ADRS, PARAMCD == "BESRSPI" | AVISIT == "FOLLOW UP")
-teal.data::col_labels(ADRS) <- adrs_labels
-
-ADQS <- synthetic_cdisc_data("latest")$adqs
-adqs_labels <- teal.data::col_labels(ADQS, fill = FALSE)
-ADQS <- ADQS %>%
-  filter(ABLFL != "Y" & ABLFL2 != "Y") %>%
-  filter(AVISIT %in% c("WEEK 1 DAY 8", "WEEK 2 DAY 15", "WEEK 3 DAY 22")) %>%
-  mutate(
-    AVISIT = as.factor(AVISIT),
-    AVISITN = rank(AVISITN) %>%
-      as.factor() %>%
-      as.numeric() %>%
-      as.factor()
+  adsl_labels <- c(
+    adsl_labels,
+    AGEGR1 = "Age Group"
   )
-teal.data::col_labels(ADQS) <- adqs_labels
+  ADSL <- ADSL %>%
+    mutate(
+      AGEGR1 = factor(case_when(
+        AGE < 45 ~ "<45",
+        AGE >= 45 ~ ">=45"
+      ))
+    ) %>%
+    mutate_at(char_vars_asl, factor)
 
-# <code
+  teal.data::col_labels(ADSL) <- adsl_labels
+
+  ADTTE <- synthetic_cdisc_data("latest")$adtte
+
+  ADRS <- synthetic_cdisc_data("latest")$adrs
+  adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
+  ADRS <- filter(ADRS, PARAMCD == "BESRSPI" | AVISIT == "FOLLOW UP")
+  teal.data::col_labels(ADRS) <- adrs_labels
+
+  ADQS <- synthetic_cdisc_data("latest")$adqs
+  adqs_labels <- teal.data::col_labels(ADQS, fill = FALSE)
+  ADQS <- ADQS %>%
+    filter(ABLFL != "Y" & ABLFL2 != "Y") %>%
+    filter(AVISIT %in% c("WEEK 1 DAY 8", "WEEK 2 DAY 15", "WEEK 3 DAY 22")) %>%
+    mutate(
+      AVISIT = as.factor(AVISIT),
+      AVISITN = rank(AVISITN) %>%
+        as.factor() %>%
+        as.numeric() %>%
+        as.factor()
+    )
+  teal.data::col_labels(ADQS) <- adqs_labels
+})
+
+# set datanames
+datanames <- c("ADSL", "ADTTE", "ADRS", "ADQS")
+datanames(data) <- datanames
+
+# set join_keys
+join_keys(data) <- default_cdisc_join_keys[datanames]
 
 ## Reusable Configuration For Modules
+ADSL <- data[["ADSL"]]
+ADTTE <- data[["ADTTE"]]
+ADRS <- data[["ADRS"]]
+ADQS <- data[["ADQS"]]
+char_vars_asl <- data[["char_vars_asl"]]
+
 arm_vars <- c("ARMCD", "ARM")
 strata_vars <- c("STRATA1", "STRATA2")
 facet_vars <- c("AGEGR1", "BMRKR2", "SEX", "COUNTRY")
@@ -122,42 +133,7 @@ arm_ref_comp <- list(
 
 ## Setup App
 app <- init(
-  data = cdisc_data(
-    cdisc_dataset("ADSL", ADSL,
-      code = 'ADSL <- synthetic_cdisc_data("latest")$adsl
-                                        adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
-                                        adsl_labels <- c(adsl_labels,
-                                          AGEGR1 = "Age Group"
-                                        )
-                                        ADSL <- ADSL %>% mutate(
-                                          AGEGR1 = factor(case_when(
-                                            AGE < 45 ~ "<45",
-                                            AGE >= 45 ~ ">=45"
-                                          ))
-                                        ) %>%
-                                        mutate_at(char_vars_asl, factor)
-                                        teal.data::col_labels(ADSL) <- adsl_labels',
-      vars = list(char_vars_asl = char_vars_asl)
-    ),
-    cdisc_dataset("ADRS", ADRS, code = 'ADRS <- synthetic_cdisc_data("latest")$adrs
-                                        adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
-                                        ADRS <- filter(ADRS, PARAMCD == "BESRSPI" | AVISIT == "FOLLOW UP")
-                                        teal.data::col_labels(ADRS) <- adrs_labels'),
-    cdisc_dataset("ADTTE", ADTTE, code = "ADTTE <- synthetic_cdisc_data(\"latest\")$adtte"),
-    cdisc_dataset("ADQS", ADQS, code = 'ADQS <- synthetic_cdisc_data("latest")$adqs
-                                        adqs_labels <- teal.data::col_labels(ADQS, fill = FALSE)
-                                        ADQS <- ADQS %>%
-                                          filter(ABLFL != "Y" & ABLFL2 != "Y") %>%
-                                          filter(AVISIT %in% c("WEEK 1 DAY 8", "WEEK 2 DAY 15", "WEEK 3 DAY 22")) %>%
-                                          mutate(
-                                            AVISIT = as.factor(AVISIT),
-                                            AVISITN = rank(AVISITN) %>%
-                                              as.factor() %>%
-                                              as.numeric() %>%
-                                              as.factor()
-                                          )
-                                        teal.data::col_labels(ADQS) <- adqs_labels')
-  ),
+  data = data,
   filter = teal_slices(
     count_type = "all",
     teal_slice(dataname = "ADSL", varname = "ITTFL", selected = "Y"),
@@ -331,7 +307,10 @@ app <- init(
 body(app$server)[[length(body(app$server)) + 1]] <- quote(
   observeEvent(input$showAboutModal, {
     showModal(modalDialog(
-      tags$p("This teal app is brought to you by the NEST Team at Roche/Genentech. For more information, please visit:"),
+      tags$p(
+        "This teal app is brought to you by the NEST Team at Roche/Genentech.
+        For more information, please visit:"
+      ),
       tags$ul(
         tags$li(tags$a(
           href = "https://github.com/insightsengineering", "Insights Engineering",

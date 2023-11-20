@@ -1,62 +1,61 @@
-options("teal.ggplot2_args" = teal.widgets::ggplot2_args(labs = list(caption = "NEST PROJECT")))
-
 library(teal.modules.general)
-library(scda)
-library(scda.2022)
-library(dplyr)
-library(tidyr)
-library(nestcolor)
-# optional libraries
-library(broom)
-library(colourpicker)
-library(ggExtra)
-library(ggpmisc)
-library(ggpp)
-library(goftest)
-library(gridExtra)
-library(htmlwidgets)
-library(jsonlite)
-library(lattice)
-library(MASS)
-library(rlang)
-library(rtables)
-library(sparkline)
-
-options(shiny.useragg = FALSE)
+options(
+  shiny.useragg = FALSE,
+  teal.ggplot2_args = teal.widgets::ggplot2_args(labs = list(caption = "NEST PROJECT"))
+)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 
-# code>
-ADSL <- synthetic_cdisc_data("latest")$adsl
-ADRS <- synthetic_cdisc_data("latest")$adrs
-ADLB <- synthetic_cdisc_data("latest")$adlb
+## Data reproducible code ----
+data <- teal_data()
+data <- within(data, {
+  library(scda)
+  library(scda.2022)
+  library(dplyr)
+  library(tidyr)
+  library(ggExtra)
+  library(ggpmisc)
+  library(ggpp)
+  library(goftest)
+  library(gridExtra)
+  library(htmlwidgets)
+  library(jsonlite)
+  library(lattice)
+  library(MASS)
+  library(rlang)
+  library(rtables)
+  library(nestcolor)
+  library(broom)
+  library(colourpicker)
+  library(sparkline)
 
-ADLBPCA <- ADLB %>%
-  dplyr::select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
-  tidyr::pivot_wider(
-    values_from = "AVAL",
-    names_from = c("PARAMCD", "AVISIT"),
-    names_sep = " - "
-  )
 
-adsl <- cdisc_dataset("ADSL", ADSL, code = "ADSL <- synthetic_cdisc_data(\"latest\")$adsl")
-adrs <- cdisc_dataset("ADRS", ADRS, code = "ADRS <- synthetic_cdisc_data(\"latest\")$adrs")
-adlb <- cdisc_dataset("ADLB", ADLB, code = "ADLB <- synthetic_cdisc_data(\"latest\")$adlb")
-adlbpca <- cdisc_dataset(
-  "ADLBPCA",
-  ADLBPCA,
-  code = 'ADLBPCA <- ADLB %>%
+  ADSL <- synthetic_cdisc_data("latest")$adsl
+  ADRS <- synthetic_cdisc_data("latest")$adrs
+  ADLB <- synthetic_cdisc_data("latest")$adlb
+
+  ADLBPCA <- ADLB %>%
     dplyr::select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
     tidyr::pivot_wider(
       values_from = "AVAL",
       names_from = c("PARAMCD", "AVISIT"),
       names_sep = " - "
-    )',
-  keys = c("STUDYID", "USUBJID"),
-  label = "ADLB reshaped",
-  vars = list(ADLB = adlb)
-)
-# <code
+    )
+})
+
+datanames <- c("ADSL", "ADRS", "ADLB", "ADLBPCA")
+datanames(data) <- datanames
+
+join_keys(data) <- default_cdisc_join_keys[datanames]
+adlbpca_keys <- default_cdisc_join_keys["ADLB"]
+names(adlbpca_keys)[1] <- "ADLBPCA"
+join_keys(data) <- c(join_keys(data), adlbpca_keys)
+
+## Reusable Configuration For Modules
+ADSL <- data[["ADSL"]]
+ADRS <- data[["ADRS"]]
+ADLB <- data[["ADLB"]]
+ADLBPCA <- data[["ADLBPCA"]]
 
 adsl_extracted_num <- data_extract_spec(
   dataname = "ADSL",
@@ -210,8 +209,9 @@ distr_filter_spec <- filter_spec(
   ),
   multiple = TRUE
 )
+
 app <- init(
-  data = cdisc_data(adsl, adrs, adlb, adlbpca),
+  data = data,
   filter = teal_slices(
     count_type = "all",
     teal_slice(dataname = "ADSL", varname = "SEX"),
@@ -359,7 +359,10 @@ app <- init(
 body(app$server)[[length(body(app$server)) + 1]] <- quote(
   observeEvent(input$showAboutModal, {
     showModal(modalDialog(
-      tags$p("This teal app is brought to you by the NEST Team at Roche/Genentech. For more information, please visit:"),
+      tags$p(
+        "This teal app is brought to you by the NEST Team at Roche/Genentech.
+        For more information, please visit:"
+      ),
       tags$ul(
         tags$li(tags$a(
           href = "https://github.com/insightsengineering", "Insights Engineering",

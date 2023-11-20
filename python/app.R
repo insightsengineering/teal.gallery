@@ -12,26 +12,37 @@ options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 
-python_dependencies <- c("pip", "numpy", "pandas")
-virtualenv_dir <- Sys.getenv("VIRTUALENV_NAME", "example_env_name")
-python_path <- Sys.getenv("PYTHON_PATH")
-if (python_path == "") {
-  python_path <- NULL
-}
-reticulate::virtualenv_create(envname = virtualenv_dir, python = python_path)
-reticulate::virtualenv_install(virtualenv_dir, packages = python_dependencies, ignore_installed = TRUE)
-reticulate::use_virtualenv(virtualenv_dir, required = TRUE)
-
-iris_raw <- cbind(id = 1:nrow(iris), iris)
-
-python_code <- "import pandas as pd
-data = r.data_raw
+data <- teal_data_module(
+  ui = function(id) {
+    ns <- NS(id)
+    actionButton(ns("submit"), label = "Load data")
+  },
+  server = function(id) {
+    moduleServer(id, function(input, output, session, python_code) {
+      eventReactive(input$submit, {
+        data <- within(
+          teal_data(),
+          {
+            library(reticulate)
+            python_dependencies <- c("pip", "numpy", "pandas")
+            virtualenv_dir <- Sys.getenv("VIRTUALENV_NAME", "example_env_name")
+            python_path <- Sys.getenv("PYTHON_PATH")
+            if (python_path == "") {
+              python_path <- NULL
+            }
+            reticulate::virtualenv_create(envname = virtualenv_dir, python = python_path)
+            reticulate::virtualenv_install(virtualenv_dir, packages = python_dependencies, ignore_installed = TRUE)
+            reticulate::use_virtualenv(virtualenv_dir, required = TRUE)
+            iris_raw <- cbind(id = seq_len(nrow(iris)), iris)
+            python_code <- "import pandas as pd
+data = r.iris_raw
 def svd_whiten(dat):
   import numpy as np
   X = np.matrix(dat)
   U, s, Vt = np.linalg.svd(X, full_matrices=False)
   X_white = np.dot(U, Vt)
   return X_white
+
 data_columns = data.columns
 global numeric_cols_ix
 global numeric_cols
@@ -43,15 +54,22 @@ data_new.columns = list(data_columns) + [i + '.whiten' for i in numeric_cols]
 data_new = data_new.round(10)
 data_new
 "
+            withr::with_options(
+              list(reticulate.engine.environment = environment()),
+              py_run_string(python_code)
+            )
+            IRIS <- py$data_new
+          }
+        )
+        datanames(data) <- c("IRIS")
+        data
+      })
+    })
+  }
+)
 
 app <- teal::init(
-  data = teal_data(python_dataset_connector(
-    "IRIS",
-    code = python_code,
-    object = "data_new",
-    keys = "id",
-    vars = list(data_raw = iris_raw)
-  )) %>% mutate_data("IRIS$id <- as.integer(IRIS$id)"),
+  data = data,
   title = "Example teal app using python connector",
   modules = modules(
     tm_data_table("Data Table"),
@@ -131,7 +149,10 @@ app <- teal::init(
 body(app$server)[[length(body(app$server)) + 1]] <- quote(
   observeEvent(input$showAboutModal, {
     showModal(modalDialog(
-      tags$p("This teal app is brought to you by the NEST Team at Roche/Genentech. For more information, please visit:"),
+      tags$p(
+        "This teal app is brought to you by the NEST Team at Roche/Genentech.
+        For more information, please visit:"
+      ),
       tags$ul(
         tags$li(tags$a(
           href = "https://github.com/insightsengineering", "Insights Engineering",

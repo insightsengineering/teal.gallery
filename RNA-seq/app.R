@@ -1,28 +1,20 @@
 library(teal.modules.hermes)
 library(teal.modules.general)
-library(scda.2022)
-library(nestcolor)
-
 options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 
-# code>
-mae <- hermes::multi_assay_experiment
-mae_data <- dataset("MAE", mae)
+## Data reproducible code ----
+data <- teal_data()
+data <- within(data, {
+  library(scda.2022)
+  library(nestcolor)
+  ADTTE <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
+    dplyr::mutate(is_event = CNSR == 0)
+  MAE <- hermes::multi_assay_experiment
+})
+datanames(data) <- c("ADTTE", "MAE")
 
-adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
-  dplyr::mutate(is_event = CNSR == 0)
-
-data <- teal_data(
-  dataset(
-    "ADTTE",
-    adtte,
-    code = 'adtte <- scda::synthetic_cdisc_data("rcd_2022_06_27")$adtte %>%
-      dplyr::mutate(is_event = CNSR == 0)'
-  ),
-  dataset("MAE", mae)
-)
 
 app <- init(
   data = data,
@@ -100,7 +92,10 @@ app <- init(
 body(app$server)[[length(body(app$server)) + 1]] <- quote(
   observeEvent(input$showAboutModal, {
     showModal(modalDialog(
-      tags$p("This teal app is brought to you by the NEST Team at Roche/Genentech. For more information, please visit:"),
+      tags$p(
+        "This teal app is brought to you by the NEST Team at Roche/Genentech.
+        For more information, please visit:"
+      ),
       tags$ul(
         tags$li(tags$a(
           href = "https://github.com/insightsengineering", "Insights Engineering",

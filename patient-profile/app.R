@@ -1,42 +1,59 @@
 library(teal.modules.clinical)
 library(teal.modules.general)
-library(scda)
-library(scda.2022)
-library(nestcolor)
-
 options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 
-ADSL <- synthetic_cdisc_data("latest")$adsl
-ADMH <- synthetic_cdisc_data("latest")$admh
-ADAE <- synthetic_cdisc_data("latest")$adae
-ADCM <- synthetic_cdisc_data("latest")$adcm
-ADVS <- synthetic_cdisc_data("latest")$advs
-ADLB <- synthetic_cdisc_data("latest")$adlb
+## Data reproducible code ----
+data <- teal_data()
+data <- within(data, {
+  library(scda)
+  library(scda.2022)
+  library(nestcolor)
 
-## Modify ADCM
-ADCM$CMINDC <- paste0("Indication_", as.numeric(ADCM$CMDECOD))
-ADCM$CMDOSE <- 1
-ADCM$CMTRT <- ADCM$CMCAT
-ADCM$CMDOSU <- "U"
-ADCM$CMROUTE <- "CMROUTE"
-ADCM$CMDOSFRQ <- "CMDOSFRQ"
-ADCM$CMASTDTM <- ADCM$ASTDTM
-ADCM$CMAENDTM <- ADCM$AENDTM
+  ADSL <- synthetic_cdisc_data("latest")$adsl
+  ADMH <- synthetic_cdisc_data("latest")$admh
+  ADAE <- synthetic_cdisc_data("latest")$adae
+  ADCM <- synthetic_cdisc_data("latest")$adcm
+  ADVS <- synthetic_cdisc_data("latest")$advs
+  ADLB <- synthetic_cdisc_data("latest")$adlb
 
-teal.data::col_labels(
-  ADCM[c("CMINDC", "CMTRT", "ASTDY", "AENDY")]
-) <- c(
-  "Indication",
-  "Reported Name of Drug, Med, or Therapy",
-  "Study Day of Start of Medication",
-  "Study Day of End of Medication"
-)
+  ## Modify ADCM
+  ADCM$CMINDC <- paste0("Indication_", as.numeric(ADCM$CMDECOD))
+  ADCM$CMDOSE <- 1
+  ADCM$CMTRT <- ADCM$CMCAT
+  ADCM$CMDOSU <- "U"
+  ADCM$CMROUTE <- "CMROUTE"
+  ADCM$CMDOSFRQ <- "CMDOSFRQ"
+  ADCM$CMASTDTM <- ADCM$ASTDTM
+  ADCM$CMAENDTM <- ADCM$AENDTM
 
-## Modify ADHM
-ADMH[["MHDISTAT"]] <- "ONGOING"
-teal.data::col_labels(ADMH[c("MHDISTAT")]) <- c("Status of Disease")
+  teal.data::col_labels(
+    ADCM[c("CMINDC", "CMTRT", "ASTDY", "AENDY")]
+  ) <- c(
+    "Indication",
+    "Reported Name of Drug, Med, or Therapy",
+    "Study Day of Start of Medication",
+    "Study Day of End of Medication"
+  )
+
+  ## Modify ADHM
+  ADMH[["MHDISTAT"]] <- "ONGOING"
+  teal.data::col_labels(ADMH[c("MHDISTAT")]) <- c("Status of Disease")
+})
+
+datanames <- c("ADSL", "ADMH", "ADAE", "ADCM", "ADVS", "ADLB")
+datanames(data) <- datanames
+join_keys(data) <- default_cdisc_join_keys[datanames]
+
+## App configuration ----
+ADSL <- data[["ADSL"]]
+ADMH <- data[["ADMH"]]
+ADAE <- data[["ADAE"]]
+ADCM <- data[["ADCM"]]
+ADVS <- data[["ADVS"]]
+ADLB <- data[["ADLB"]]
+
 
 ## Define variable inputs
 aeterm_input <- data_extract_spec(
@@ -90,31 +107,7 @@ cmdecod_input <- data_extract_spec(
 )
 
 app <- init(
-  data = cdisc_data(
-    cdisc_dataset("ADSL", ADSL, code = "ADSL <- synthetic_cdisc_data(\"latest\")$adsl"),
-    cdisc_dataset("ADAE", ADAE, code = "ADAE <- synthetic_cdisc_data(\"latest\")$adae"),
-    cdisc_dataset("ADMH", ADMH, code = "ADMH <- synthetic_cdisc_data(\"latest\")$admh
-      ADMH[['MHDISTAT']] <- 'ONGOING'
-      teal.data::col_labels(ADMH[c('MHDISTAT')]) <- c('Status of Disease')"),
-    cdisc_dataset("ADCM", ADCM, code = 'ADCM <- synthetic_cdisc_data(\"latest\")$adcm
-      ADCM$CMINDC <- paste0("Indication_", as.numeric(ADCM$CMDECOD))
-      ADCM$CMDOSE <- 1
-      ADCM$CMTRT <- ADCM$CMCAT
-      ADCM$CMDOSU <- "U"
-      ADCM$CMROUTE <- "CMROUTE"
-      ADCM$CMDOSFRQ <- "CMDOSFRQ"
-      ADCM$CMASTDTM <- ADCM$ASTDTM
-      ADCM$CMAENDTM <- ADCM$AENDTM
-      teal.data::col_labels(
-        ADCM[c("CMINDC", "CMTRT", "ASTDY", "AENDY")]) <- c(
-          "Indication",
-          "Reported Name of Drug, Med, or Therapy",
-          "Study Day of Start of Medication",
-          "Study Day of End of Medication")'),
-    cdisc_dataset("ADVS", ADVS, code = "ADVS <- synthetic_cdisc_data(\"latest\")$advs"),
-    cdisc_dataset("ADLB", ADLB, code = "ADLB <- synthetic_cdisc_data(\"latest\")$adlb"),
-    check = TRUE
-  ),
+  data = data,
   filter = teal_slices(
     count_type = "all",
     teal_slice(dataname = "ADSL", varname = "SEX"),
@@ -511,7 +504,10 @@ app <- init(
 body(app$server)[[length(body(app$server)) + 1]] <- quote(
   observeEvent(input$showAboutModal, {
     showModal(modalDialog(
-      tags$p("This teal app is brought to you by the NEST Team at Roche/Genentech. For more information, please visit:"),
+      tags$p(
+        "This teal app is brought to you by the NEST Team at Roche/Genentech.
+        For more information, please visit:"
+      ),
       tags$ul(
         tags$li(tags$a(
           href = "https://github.com/insightsengineering", "Insights Engineering",
