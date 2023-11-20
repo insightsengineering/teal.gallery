@@ -183,7 +183,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="development" class="level2">
 <h2 class="anchored" data-anchor-id="development">Development</h2>
-<p>All <code>teal</code> sample apps are wrapped into this package for the sake of portability. All development standards and practices that we currently use for teal app development also apply to this repository.</p>
+<p>All <code>teal</code> sample apps are wrapped into this repository into it’s own sub-directory. All development standards and practices that we currently use for teal app development also apply to this repository.</p>
+<section id="auto-deployment" class="level3">
+<h3 class="anchored" data-anchor-id="auto-deployment">Auto-deployment</h3>
+<p>All the sample apps are automatically deployed every day using the CI in two channels:</p>
+<ul>
+<li><code>stable</code> channel: The code for the Teal apps is taken from the <code>main</code> branch of <code>teal.gallery</code>, and the NEST packages are installed from the <code>main</code> branch of GitHub. This is done using the <code>deploy_stable.yaml</code>.</li>
+<li><code>dev</code> channel: The code for the Teal apps is taken from the <code>dev</code> branch of <code>teal.gallery</code> and the NEST packages are installed from the last <code>release tag</code> of GitHub. This is done using the <code>deploy_dev.yaml</code>.</li>
+</ul>
+<p><em>IMPORTANT</em>: Although we can now test the unreleased features of the NEST packages in deployments, currently, the divergent <code>dev</code> and <code>main</code> branches must be managed and merged manually as needed to ensure that the apps work fine in both deployment channels, i.e., making sure to merge the app changes from <code>dev</code> to <code>main</code> by creating a PR.</p>
+</section>
 <section id="adding-a-sample-app-to-teal.gallery" class="level3">
 <h3 class="anchored" data-anchor-id="adding-a-sample-app-to-teal.gallery">Adding a sample app to <code>teal.gallery</code></h3>
 <p>Adding a sample app involves the following steps:</p>
