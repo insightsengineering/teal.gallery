@@ -47,9 +47,6 @@ datanames <- c("ADSL", "ADRS", "ADLB", "ADLBPCA")
 datanames(data) <- datanames
 
 join_keys(data) <- default_cdisc_join_keys[datanames]
-adlbpca_keys <- default_cdisc_join_keys["ADLB"]
-names(adlbpca_keys)[1] <- "ADLBPCA"
-join_keys(data) <- c(join_keys(data), adlbpca_keys)
 
 ## Reusable Configuration For Modules
 ADSL <- data[["ADSL"]]

@@ -1620,6 +1620,7 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
+      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "nestcolor",
       "RemoteRef": "main",
       "RemoteSha": "03d0b1e84bfbda25d1431bdd45d4ab281422d8d2",
@@ -2326,7 +2327,13 @@
     "sparkline": {
       "Package": "sparkline",
       "Version": "2.0",
-      "Source": "Repository"
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "htmltools",
+        "htmlwidgets"
+      ],
+      "Hash": "06e5e4017ecb00fd142bada4b380c59a"
     },
     "stringi": {
       "Package": "stringi",
