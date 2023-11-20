@@ -1,10 +1,10 @@
 ---
-name: Deploy Apps 🚀
+name: Deploy Dev Apps 🚀
 
 on:
   push:
     branches:
-      - main
+      - dev
   workflow_dispatch:
   schedule:
     - cron: "12 3 * * *"
@@ -16,7 +16,9 @@ concurrency:
 env:
   SHINYAPPSIO_ACCOUNT: genentech
   APP_PREFIX: NEST
-  GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+  APP_SUFFIX: dev
+  GITHUB_PAT: ${{ secrets.REPO_GITHUB_TOKEN }}
+  BRANCH: dev
 
 jobs:
   deploy:
@@ -44,18 +46,9 @@ jobs:
             "python",
             "safety",
           ]
-        channel: ["stable", "dev"]
     steps:
       - name: Checkout repo 🛎
         uses: actions/checkout@v3
-
-      - name: Set channel related constants
-        run: |
-          if [ "${{ matrix.channel }}" = "stable" ]; then
-            echo "BRANCH_NAME=main" >> $GITHUB_ENV # TODO: Change the branch name to main
-          else
-            echo "BRANCH_NAME=dev" >> $GITHUB_ENV # TODO: Change the branch name to deval
-          fi
 
       - name: Check if cypress test exists
         id: find-cypress
@@ -81,7 +74,7 @@ jobs:
       - name: Restore renv from cache
         uses: actions/cache@v3
         env:
-          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ matrix.directory }}-${{ matrix.channel }}
+          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ matrix.directory }}-${{ env.APP_SUFFIX }}
         with:
           path: ${{ matrix.directory }}/renv/library
           key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/renv.lock', matrix.directory)) }}
@@ -92,10 +85,9 @@ jobs:
         run: |
           setwd("${{ matrix.directory }}")
           lockfile <- renv::lockfile_read()
-          pkg_name_structure <- ifelse("${{ matrix.channel }}" == "stable", "%s/%s@*release", "%s/%s")
           for (package in lockfile$Packages) {
               if (package$Source == "GitHub") {
-                  renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
+                  renv::record(paste0(package$RemoteUsername, "/", package$Package))
               }
           }
 
@@ -143,8 +135,8 @@ jobs:
           )
           rsconnect::deployApp(
             appFiles = c("app.R"),
-            appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}"),
-            appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}",
+            appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.APP_SUFFIX }}"),
+            appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.APP_SUFFIX }}",
             account = "${{ env.SHINYAPPSIO_ACCOUNT }}",
             upload = TRUE,
             logLevel = "normal",
@@ -153,6 +145,7 @@ jobs:
           )
 
       - name: Commit updated renv.lock file
+        continue-on-error: true
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
@@ -160,10 +153,11 @@ jobs:
           git fetch
           git stash
           git checkout ${{ env.BRANCH_NAME }}
-          git stash apply
           git pull
+          git stash apply
+          git add ${{ matrix.directory }}/renv.lock
+          git add ${{ matrix.directory }}/renv/activate.R
           if [ -n "$(git diff --staged)" ]; then
-            git add ${{ matrix.directory }}/renv.lock
             git commit -m "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
             git push origin ${{ env.BRANCH_NAME }}
           else
