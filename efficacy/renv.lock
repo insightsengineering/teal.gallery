@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.3.1",
+    "Version": "4.3.0",
     "Repositories": [
       {
         "Name": "BioCsoft",
@@ -1620,7 +1620,6 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "nestcolor",
       "RemoteRef": "main",
       "RemoteSha": "03d0b1e84bfbda25d1431bdd45d4ab281422d8d2",
@@ -2166,8 +2165,8 @@
       "Version": "0.1.6.9013",
       "Source": "GitHub",
       "RemoteType": "github",
+      "Remotes": "insightsengineering/scda.2022@*release",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "scda",
       "RemoteRef": "main",
       "RemoteSha": "b6cd961a2efd310036be888aee8627c67d87924c",
@@ -2323,6 +2322,11 @@
         "R"
       ],
       "Hash": "5f5a7629f956619d519205ec475fe647"
+    },
+    "sparkline": {
+      "Package": "sparkline",
+      "Version": "2.0",
+      "Source": "Repository"
     },
     "stringi": {
       "Package": "stringi",
@@ -2495,7 +2499,6 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
       "RemoteSha": "35360631408442ff81803b8e30c8582db03936ba",
