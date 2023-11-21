@@ -18,7 +18,7 @@ concurrency:
 env:
   SHINYAPPSIO_ACCOUNT: genentech
   APP_PREFIX: NEST
-  GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_PAT: ${{ secrets.REPO_GITHUB_TOKEN }}
 
 jobs:
   deploy:
