@@ -6,6 +6,7 @@ on:
     branches:
       - main
       - dev
+      - update_workflow
   workflow_dispatch:
   schedule:
     - cron: "12 3 * * *"
@@ -21,6 +22,8 @@ env:
 
 jobs:
   deploy:
+    permissions:
+      contents: write
     defaults:
       run:
         shell: bash
