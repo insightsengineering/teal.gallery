@@ -161,9 +161,9 @@ jobs:
       - name: Commit updated renv.lock file
         continue-on-error: true
         run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-          git config --global --add safe.directory /__w/deploy/deploy
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions"
+          git config --global --add safe.directory /__w/teal.gallery/teal.gallery
           git fetch
           git stash
           git checkout ${{ env.BRANCH_NAME }}
