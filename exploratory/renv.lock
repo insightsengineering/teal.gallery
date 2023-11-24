@@ -558,7 +558,7 @@
     },
     "crosstalk": {
       "Package": "crosstalk",
-      "Version": "1.2.0",
+      "Version": "1.2.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -567,7 +567,7 @@
         "jsonlite",
         "lazyeval"
       ],
-      "Hash": "6aa54f69598c32177e920eb3402e8293"
+      "Hash": "ab12c7b080a57475248a30f4db6298c0"
     },
     "crul": {
       "Package": "crul",
@@ -829,14 +829,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.4.9002",
+      "Version": "0.5.4.9003",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "3178e6573d5e583e5c06846d00322392f6222131",
+      "RemoteSha": "cb5426f9b266083f4cfc046d005b2c5dc3cb0c8b",
       "Requirements": [
         "R",
         "checkmate",
@@ -844,7 +844,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "40fb3f600305af83b50888b053072dac"
+      "Hash": "d996fe3b98fe2ace115f60cf8c4592d1"
     },
     "fs": {
       "Package": "fs",
@@ -1886,14 +1886,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.5.9012",
+      "Version": "0.6.5.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "4a445e72e303a403b2ac7ab5585ce14f211b2f7a",
+      "RemoteSha": "3de3da7e8b4711a7b826b26ecaeaec403fcaa9b4",
       "Requirements": [
         "R",
         "formatters",
@@ -1903,7 +1903,7 @@
         "methods",
         "stats"
       ],
-      "Hash": "1028fad179e11416ff0cfdacf4a44789"
+      "Hash": "14efe4eb043ede97c6da6e1c817201e4"
     },
     "sandwich": {
       "Package": "sandwich",
@@ -2124,16 +2124,16 @@
     },
     "stringi": {
       "Package": "stringi",
-      "Version": "1.8.1",
+      "Version": "1.8.2",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "stats",
         "tools",
         "utils"
       ],
-      "Hash": "12bf57fdcb9b7068bea39b32f87ecac9"
+      "Hash": "e68c45f81639001af5f1b15cd3599bbd"
     },
     "stringr": {
       "Package": "stringr",
@@ -2474,14 +2474,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.2.9016",
+      "Version": "0.9.2.9017",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "01af0b0591ff74f5d3a2b3743126855e86f6f335",
+      "RemoteSha": "649f0f282403c03b7306bb3e85c066f174032d2b",
       "Requirements": [
         "R",
         "Rdpack",
@@ -2510,7 +2510,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "6fbb2e061e0e425ac9ac0f2b1163f4f6"
+      "Hash": "fbc0f0bb7f8e22dd26ffd29431b18a9e"
     },
     "testthat": {
       "Package": "testthat",
