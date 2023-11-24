@@ -920,14 +920,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.4.9003",
+      "Version": "0.5.4.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "cb5426f9b266083f4cfc046d005b2c5dc3cb0c8b",
+      "RemoteSha": "ae3bf55be1fa7d4e9218fa2a6250895a6888d2e7",
       "Requirements": [
         "R",
         "checkmate",
@@ -935,7 +935,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "d996fe3b98fe2ace115f60cf8c4592d1"
+      "Hash": "526b786a4af764b87584471efb0f4d86"
     },
     "fs": {
       "Package": "fs",
@@ -2111,14 +2111,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.5.9013",
+      "Version": "0.6.5.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "3de3da7e8b4711a7b826b26ecaeaec403fcaa9b4",
+      "RemoteSha": "b1977a0de2aa62f6c949b09833a95c825a1f387a",
       "Requirements": [
         "R",
         "formatters",
@@ -2128,7 +2128,7 @@
         "methods",
         "stats"
       ],
-      "Hash": "14efe4eb043ede97c6da6e1c817201e4"
+      "Hash": "f80b608148cc84e343bd974ac9a91204"
     },
     "sass": {
       "Package": "sass",
@@ -2523,14 +2523,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.8.16.9012",
+      "Version": "0.8.16.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "10b4cdea2516b12a39ba70c0beb0fb5124af99c1",
+      "RemoteSha": "17f205caa9c4767137f2739b5d10d78616f30296",
       "Requirements": [
         "DT",
         "R",
@@ -2571,7 +2571,7 @@
         "utils",
         "vistime"
       ],
-      "Hash": "0871b645350d408b4447d9a2a29b3be5"
+      "Hash": "da6e10df4c8db1230e65e40b9dab96ab"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
