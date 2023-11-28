@@ -1,9 +1,10 @@
 ---
-name: Deploy Dev Apps 🚀
+name: Deploy Apps 🚀
 
 on:
   push:
     branches:
+      - main
       - dev
   workflow_dispatch:
   schedule:
@@ -16,12 +17,12 @@ concurrency:
 env:
   SHINYAPPSIO_ACCOUNT: genentech
   APP_PREFIX: NEST
-  APP_SUFFIX: dev
   GITHUB_PAT: ${{ secrets.REPO_GITHUB_TOKEN }}
-  BRANCH: dev
 
 jobs:
   deploy:
+    permissions:
+      contents: write
     defaults:
       run:
         shell: bash
@@ -46,9 +47,20 @@ jobs:
             "python",
             "safety",
           ]
+        channel: ["stable", "dev"]
     steps:
+      - name: Set channel related constants
+        run: |
+          if [ "${{ matrix.channel }}" = "stable" ]; then
+            echo "BRANCH_NAME=main" >> $GITHUB_ENV
+          else
+            echo "BRANCH_NAME=dev" >> $GITHUB_ENV
+          fi
+
       - name: Checkout repo 🛎
         uses: actions/checkout@v3
+        with:
+          ref: "${{ env.BRANCH_NAME }}"
 
       - name: Check if cypress test exists
         id: find-cypress
@@ -74,7 +86,7 @@ jobs:
       - name: Restore renv from cache
         uses: actions/cache@v3
         env:
-          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ matrix.directory }}-${{ env.APP_SUFFIX }}
+          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ matrix.directory }}-${{ matrix.channel }}
         with:
           path: ${{ matrix.directory }}/renv/library
           key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/renv.lock', matrix.directory)) }}
@@ -85,9 +97,15 @@ jobs:
         run: |
           setwd("${{ matrix.directory }}")
           lockfile <- renv::lockfile_read()
+          pkg_name_structure <- ifelse("${{ matrix.channel }}" == "stable", "%s/%s@*release", "%s/%s")
           for (package in lockfile$Packages) {
               if (package$Source == "GitHub") {
-                  renv::record(paste0(package$RemoteUsername, "/", package$Package))
+                  # TODO: After teal.slice is released we have to remove this change. This workaround is because update to {bslib} breaks current release of teal.slice
+                  if (package$Package == "teal.slice" && "${{ matrix.channel }}" == "stable") {
+                    renv::record("insightsengineering/teal.slice@103491c67e26a9a85d636bd105a806904a0111ec")
+                  } else {
+                    renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
+                  }
               }
           }
 
@@ -135,8 +153,8 @@ jobs:
           )
           rsconnect::deployApp(
             appFiles = c("app.R"),
-            appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.APP_SUFFIX }}"),
-            appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.APP_SUFFIX }}",
+            appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}"),
+            appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}",
             account = "${{ env.SHINYAPPSIO_ACCOUNT }}",
             upload = TRUE,
             logLevel = "normal",
@@ -147,8 +165,8 @@ jobs:
       - name: Commit updated renv.lock file
         continue-on-error: true
         run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions"
           git config --global --add safe.directory /__w/teal.gallery/teal.gallery
           git fetch
           git stash
