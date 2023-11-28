@@ -1090,21 +1090,23 @@
     },
     "scales": {
       "Package": "scales",
-      "Version": "1.2.1",
+      "Version": "1.3.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
         "RColorBrewer",
+        "cli",
         "farver",
+        "glue",
         "labeling",
         "lifecycle",
         "munsell",
         "rlang",
         "viridisLite"
       ],
-      "Hash": "906cb23d2f1c5680b8ce439b44c6fa63"
+      "Hash": "c19df082ba346b0ffa6f833e92de34d1"
     },
     "shiny": {
       "Package": "shiny",
@@ -1308,14 +1310,14 @@
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.4.1.9009",
+      "Version": "0.4.1.9010",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
       "RemoteRef": "main",
-      "RemoteSha": "067f7a5277dcecd33942bf5ea316ac8f6fd86487",
+      "RemoteSha": "00094f20c2e765eff9d6ae6ababeec295b88decd",
       "Requirements": [
         "R",
         "checkmate",
@@ -1326,7 +1328,7 @@
         "shiny",
         "styler"
       ],
-      "Hash": "514f6b143262e53537d646e9e2dd6b53"
+      "Hash": "85f1c88f5c8b16a0846a713f7060f61f"
     },
     "teal.data": {
       "Package": "teal.data",
