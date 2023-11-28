@@ -2361,14 +2361,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.5.9016",
+      "Version": "0.6.5.9017",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "6329f92b71201a71bf0218de98488ebfd923f762",
+      "RemoteSha": "478e637a7ca2912c57c3b8f2532375c906a90331",
       "Requirements": [
         "R",
         "formatters",
@@ -2378,7 +2378,7 @@
         "methods",
         "stats"
       ],
-      "Hash": "50264f225cca0befb4ceae51dff8572d"
+      "Hash": "ae10bcd409283577306703dc55fef5bd"
     },
     "sass": {
       "Package": "sass",
@@ -2396,21 +2396,23 @@
     },
     "scales": {
       "Package": "scales",
-      "Version": "1.2.1",
+      "Version": "1.3.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
         "RColorBrewer",
+        "cli",
         "farver",
+        "glue",
         "labeling",
         "lifecycle",
         "munsell",
         "rlang",
         "viridisLite"
       ],
-      "Hash": "906cb23d2f1c5680b8ce439b44c6fa63"
+      "Hash": "c19df082ba346b0ffa6f833e92de34d1"
     },
     "scda": {
       "Package": "scda",
@@ -2702,14 +2704,14 @@
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.4.1.9009",
+      "Version": "0.4.1.9010",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
       "RemoteRef": "main",
-      "RemoteSha": "067f7a5277dcecd33942bf5ea316ac8f6fd86487",
+      "RemoteSha": "00094f20c2e765eff9d6ae6ababeec295b88decd",
       "Requirements": [
         "R",
         "checkmate",
@@ -2720,7 +2722,7 @@
         "shiny",
         "styler"
       ],
-      "Hash": "514f6b143262e53537d646e9e2dd6b53"
+      "Hash": "85f1c88f5c8b16a0846a713f7060f61f"
     },
     "teal.data": {
       "Package": "teal.data",
@@ -3027,14 +3029,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.2.9019",
+      "Version": "0.9.2.9020",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "2203bc7325492c9f8bd1835b88a55c51f9173c73",
+      "RemoteSha": "e47722f53323c5de2d369773022a128fcaaf4c40",
       "Requirements": [
         "R",
         "Rdpack",
@@ -3063,18 +3065,18 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "d543904b50a3be201a4db9b8944e650c"
+      "Hash": "fb039bf62b95f464a339d9986228030c"
     },
     "tern.gee": {
       "Package": "tern.gee",
-      "Version": "0.1.0.9008",
+      "Version": "0.1.0.9009",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.gee",
       "RemoteRef": "main",
-      "RemoteSha": "9a73bc90360125c63be9ce6d9765d61e7a605eaa",
+      "RemoteSha": "1b9e628bd3c481cba3c2cd2988221d7706d644d6",
       "Remotes": "insightsengineering/tern@*release",
       "Requirements": [
         "R",
@@ -3088,18 +3090,18 @@
         "stats",
         "tern"
       ],
-      "Hash": "d8847e84c8921b6509e221bd18545fea"
+      "Hash": "e51a1e084e8de4125d7f35b19c359013"
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
-      "Version": "0.2.2.9007",
+      "Version": "0.2.2.9008",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "bde2b8edd675e324d359f3c8ee78b8d9ee4d29d0",
+      "RemoteSha": "751f6fcc39e4d230befdb3de012f10341b8e41b8",
       "Remotes": "insightsengineering/tern@*release",
       "Requirements": [
         "R",
@@ -3120,7 +3122,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "7dd8a771620b5e1e5b9922143cf1e4be"
+      "Hash": "d478b19f0107fb2d315a9be6a1001c30"
     },
     "testthat": {
       "Package": "testthat",
