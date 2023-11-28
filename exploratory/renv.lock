@@ -829,14 +829,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.4.9005",
+      "Version": "0.5.4.9006",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "21f1aaee21c7f09bc994f112b1f987a17189532d",
+      "RemoteSha": "8c6cbbf39fa15dedd3bd1a29cfe3ec51100b6039",
       "Requirements": [
         "R",
         "checkmate",
@@ -844,7 +844,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "33c15701db95156f95c910c1088e10d6"
+      "Hash": "b207e073ca52d3b0ffafb78b0e620e1c"
     },
     "fs": {
       "Package": "fs",
@@ -2380,14 +2380,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.4.0.9024",
+      "Version": "0.4.0.9025",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "b0266f11c05041520381b4e2b94ffcae62dd8f91",
+      "RemoteSha": "e6f78795154282c507871d1d40762719258372d4",
       "Requirements": [
         "R",
         "R6",
@@ -2410,7 +2410,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "cd9280ee3b7ea5df3441aa0cfb6fd427"
+      "Hash": "7de5610b8fd19d03166135539ef770c5"
     },
     "teal.transform": {
       "Package": "teal.transform",
