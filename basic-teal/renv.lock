@@ -1406,14 +1406,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.4.0.9024",
+      "Version": "0.4.0.9025",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "b0266f11c05041520381b4e2b94ffcae62dd8f91",
+      "RemoteSha": "e6f78795154282c507871d1d40762719258372d4",
       "Requirements": [
         "R",
         "R6",
@@ -1436,7 +1436,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "cd9280ee3b7ea5df3441aa0cfb6fd427"
+      "Hash": "7de5610b8fd19d03166135539ef770c5"
     },
     "teal.transform": {
       "Package": "teal.transform",
