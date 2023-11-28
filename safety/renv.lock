@@ -310,7 +310,7 @@
     },
     "TMB": {
       "Package": "TMB",
-      "Version": "1.9.7",
+      "Version": "1.9.8",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -322,7 +322,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "52ad7ad73633befcbf4aa92dde4eabb8"
+      "Hash": "5b2290e94f4fda8a873533e243b9e0c9"
     },
     "abind": {
       "Package": "abind",
@@ -920,14 +920,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.4.9004",
+      "Version": "0.5.4.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "ae3bf55be1fa7d4e9218fa2a6250895a6888d2e7",
+      "RemoteSha": "21f1aaee21c7f09bc994f112b1f987a17189532d",
       "Requirements": [
         "R",
         "checkmate",
@@ -935,7 +935,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "526b786a4af764b87584471efb0f4d86"
+      "Hash": "33c15701db95156f95c910c1088e10d6"
     },
     "fs": {
       "Package": "fs",
@@ -1606,14 +1606,14 @@
     },
     "mvtnorm": {
       "Package": "mvtnorm",
-      "Version": "1.2-3",
+      "Version": "1.2-4",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "stats"
       ],
-      "Hash": "463b268710930f7bffef33147400966a"
+      "Hash": "17e96668f44a28aef0981d9e17c49b59"
     },
     "nestcolor": {
       "Package": "nestcolor",
@@ -1635,9 +1635,9 @@
     },
     "nlme": {
       "Package": "nlme",
-      "Version": "3.1-163",
+      "Version": "3.1-164",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "graphics",
@@ -1645,7 +1645,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "8d1938040a05566f4f7a14af4feadd6b"
+      "Hash": "a623a2239e642806158bc4dc3f51565d"
     },
     "nloptr": {
       "Package": "nloptr",
@@ -2111,14 +2111,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.5.9014",
+      "Version": "0.6.5.9016",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "b1977a0de2aa62f6c949b09833a95c825a1f387a",
+      "RemoteSha": "6329f92b71201a71bf0218de98488ebfd923f762",
       "Requirements": [
         "R",
         "formatters",
@@ -2128,7 +2128,7 @@
         "methods",
         "stats"
       ],
-      "Hash": "f80b608148cc84e343bd974ac9a91204"
+      "Hash": "50264f225cca0befb4ceae51dff8572d"
     },
     "sass": {
       "Package": "sass",
@@ -2740,14 +2740,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.2.9017",
+      "Version": "0.9.2.9019",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "649f0f282403c03b7306bb3e85c066f174032d2b",
+      "RemoteSha": "2203bc7325492c9f8bd1835b88a55c51f9173c73",
       "Requirements": [
         "R",
         "Rdpack",
@@ -2776,7 +2776,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "fbc0f0bb7f8e22dd26ffd29431b18a9e"
+      "Hash": "d543904b50a3be201a4db9b8944e650c"
     },
     "tern.gee": {
       "Package": "tern.gee",
