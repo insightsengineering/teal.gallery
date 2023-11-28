@@ -6,6 +6,7 @@ on:
     branches:
       - main
       - dev
+      - test_teal_slice_version@main
   workflow_dispatch:
   schedule:
     - cron: "12 3 * * *"
@@ -100,7 +101,12 @@ jobs:
           pkg_name_structure <- ifelse("${{ matrix.channel }}" == "stable", "%s/%s@*release", "%s/%s")
           for (package in lockfile$Packages) {
               if (package$Source == "GitHub") {
-                  renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
+                  # TODO: After teal.slice is released we have to remove this change. This workaround is because update to {bslib} breaks current release of teal.slice
+                  if (package$Package == "teal.slice") {
+                    renv::record("insightsengineering/teal.slice@103491c67e26a9a85d636bd105a806904a0111ec")
+                  } else {
+                    renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
+                  }
               }
           }
 
