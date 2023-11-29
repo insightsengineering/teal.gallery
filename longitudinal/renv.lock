@@ -497,7 +497,7 @@
     },
     "bslib": {
       "Package": "bslib",
-      "Version": "0.6.0",
+      "Version": "0.6.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -514,7 +514,7 @@
         "rlang",
         "sass"
       ],
-      "Hash": "fac047b773ad75cea6e2a25214b09ca0"
+      "Hash": "c0d8599494bc7fb408cd206bbdd9cab0"
     },
     "cachem": {
       "Package": "cachem",
@@ -2673,14 +2673,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.14.0.9024",
+      "Version": "0.14.0.9025",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "edfe9125cf96bdd90cef2faba6617c466b0036c8",
+      "RemoteSha": "8ab74927a9a603ea1fe5da6398e5d0a228ccfb46",
       "Requirements": [
         "R",
         "checkmate",
@@ -2700,18 +2700,18 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "456b208e0e00f9bfa22bd82dedffa62e"
+      "Hash": "417b557c05d94cc5ba317624494eb707"
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.4.1.9010",
+      "Version": "0.4.1.9011",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
       "RemoteRef": "main",
-      "RemoteSha": "00094f20c2e765eff9d6ae6ababeec295b88decd",
+      "RemoteSha": "284af13111360fb77f96ba5e2dde760ab4020743",
       "Requirements": [
         "R",
         "checkmate",
@@ -2722,18 +2722,18 @@
         "shiny",
         "styler"
       ],
-      "Hash": "85f1c88f5c8b16a0846a713f7060f61f"
+      "Hash": "3fcdbe4b2d2f30ea9a06c7e64b9fa670"
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.3.0.9015",
+      "Version": "0.3.0.9016",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "820d7f4193c9f80cff63b9e99e164024126ff999",
+      "RemoteSha": "778a23c1d869dd1abd4e2c82e50b285c94993b92",
       "Requirements": [
         "R",
         "R6",
@@ -2751,7 +2751,7 @@
         "utils",
         "yaml"
       ],
-      "Hash": "b0cb73d2d9296684b0e9d5d281e6efa4"
+      "Hash": "65adec293f4b2e8bb0731965f17b37b8"
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
@@ -2792,14 +2792,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.1.3.9007",
+      "Version": "0.1.3.9008",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "35360631408442ff81803b8e30c8582db03936ba",
+      "RemoteSha": "cb7aafdbaaf6a2c4193da47b6380e5640c2d54de",
       "Requirements": [
         "R",
         "glue",
@@ -2808,7 +2808,7 @@
         "shiny",
         "withr"
       ],
-      "Hash": "25d29af35cbfada869b8bdaae8b359f1"
+      "Hash": "1ac3ac4eacda10d82d2278690e3dddce"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
@@ -2908,14 +2908,14 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.2.1.9012",
+      "Version": "0.2.1.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "ae2ec261fd113d9200e148994bc8cf4bda2c0ab1",
+      "RemoteSha": "e5ae2ddaf4047fe754dbcd6a5fe27b9456cc2440",
       "Requirements": [
         "R6",
         "bslib",
@@ -2931,18 +2931,18 @@
         "yaml",
         "zip"
       ],
-      "Hash": "0b4d5ba377395c893b739f5beb481065"
+      "Hash": "5fcd01335a260ada2d71bbfc54cbf5ed"
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.4.0.9025",
+      "Version": "0.4.0.9026",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "e6f78795154282c507871d1d40762719258372d4",
+      "RemoteSha": "b356a8ed5e8308f34709e5f40d1b32de38db43a5",
       "Requirements": [
         "R",
         "R6",
@@ -2965,18 +2965,18 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "7de5610b8fd19d03166135539ef770c5"
+      "Hash": "0fd28f78efcc197fac5e2383f5c2e374"
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.4.0.9007",
+      "Version": "0.4.0.9008",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.transform",
       "RemoteRef": "main",
-      "RemoteSha": "0c2b8cd752c67468d715116c8a3a099e0e9d8cb2",
+      "RemoteSha": "849f9bee603f4fe5cafaf278d40befb1f4c0cef0",
       "Requirements": [
         "R",
         "checkmate",
@@ -2997,18 +2997,18 @@
         "tidyr",
         "tidyselect"
       ],
-      "Hash": "ab327ef3768b91e6a04b99e97ebb69a1"
+      "Hash": "be66cba86f6f659c299bdb0c5e763e33"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.1.9008",
+      "Version": "0.4.1.9009",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "ffcd88e3fbf005468edd3ae12cb11380aaafa4ef",
+      "RemoteSha": "ae173a0339a153a413e846430411085b2bb8c979",
       "Requirements": [
         "R",
         "bslib",
@@ -3025,7 +3025,7 @@
         "shinyjs",
         "styler"
       ],
-      "Hash": "046e005b497761fabd3bf856fe78648a"
+      "Hash": "60606acc2155ed121c2b6b76da7a980f"
     },
     "tern": {
       "Package": "tern",
