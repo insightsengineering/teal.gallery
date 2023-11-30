@@ -63,7 +63,7 @@ jobs:
         run: |
           echo "BRANCH_NAME=dev" >> $GITHUB_ENV
           if [ "${{ matrix.channel }}" == "stable" ]; then
-            echo "BRANCH_NAME=stable" >> $GITHUB_ENV
+            echo "BRANCH_NAME=main" >> $GITHUB_ENV
           fi
 
       - name: Setup job token 🔑
