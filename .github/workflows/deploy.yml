@@ -6,6 +6,16 @@ on:
     branches:
       - main
       - dev
+    paths:
+      - RNA-seq/**
+      - basic-teal/**
+      - efficacy/**
+      - exploratory/**
+      - longitudinal/**
+      - early-dev/**
+      - patient-profile/**
+      - python/**
+      - safety/**
   workflow_dispatch:
   schedule:
     - cron: "12 3 * * *"
@@ -29,40 +39,56 @@ jobs:
     name: Publish 🗞
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/insightsengineering/rstudio_4.3.1_bioc_3.17:latest
+      image: ghcr.io/insightsengineering/rstudio:latest
     if: >
       !contains(github.event.commits[0].message, '[skip deploy]')
     strategy:
       fail-fast: false
       matrix:
         directory:
-          [
-            "RNA-seq",
-            "basic-teal",
-            "efficacy",
-            "exploratory",
-            "longitudinal",
-            "early-dev",
-            "patient-profile",
-            "python",
-            "safety",
-          ]
-        channel: ["stable", "dev"]
+          - RNA-seq
+          - basic-teal
+          - efficacy
+          - exploratory
+          - longitudinal
+          - early-dev
+          - patient-profile
+          - python
+          - safety
+        channel:
+          - stable
+          - dev
     steps:
       - name: Set channel related constants
         run: |
-          if [ "${{ matrix.channel }}" = "stable" ]; then
+          echo "BRANCH_NAME=dev" >> $GITHUB_ENV
+          if [ "${{ matrix.channel }}" == "stable" ]; then
             echo "BRANCH_NAME=main" >> $GITHUB_ENV
-          else
-            echo "BRANCH_NAME=dev" >> $GITHUB_ENV
           fi
 
+      - name: Setup job token 🔑
+        id: github-token
+        run: |
+          if [ "${{ secrets.REPO_GITHUB_TOKEN }}" == "" ]; then
+            echo "REPO_GITHUB_TOKEN is empty. Substituting it with GITHUB_TOKEN."
+            echo "token=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_OUTPUT
+          else
+            echo "Using REPO_GITHUB_TOKEN."
+            echo "token=${{ secrets.REPO_GITHUB_TOKEN }}" >> $GITHUB_OUTPUT
+          fi
+        shell: bash
+
       - name: Checkout repo 🛎
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: "${{ env.BRANCH_NAME }}"
+          token: "${{ steps.github-token.outputs.token }}"
 
-      - name: Check if cypress test exists
+      - name: Add safe directory in git config
+        run: |
+          git config --global --add safe.directory $(pwd)
+
+      - name: Check if Cypress tests exist
         id: find-cypress
         run: |
           if [ -d ${{ matrix.directory }}/tests/cypress ]; then
@@ -72,16 +98,26 @@ jobs:
             echo "has-cypress-tests=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Setup system dependencies for cypress and python app
-        run: >
-          apt-get update && apt-get install --yes
-          libgtk2.0-0 libgbm-dev libnotify-dev libgconf-2-4 xvfb python3.10-venv
+      - name: Install additional system dependencies
+        run: |
+          apt-get update
+          apt-get install --yes \
+            libgtk2.0-0 \
+            libgbm-dev \
+            libnotify-dev \
+            libgconf-2-4 \
+            xvfb
+          if [ " ${{ matrix.directory }}" == "python" ]
+          then {
+            apt-get install --yes python3.10-venv
+          }
+          fi
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         with:
-          node-version: 16
+          node-version: 20
 
       - name: Restore renv from cache
         uses: actions/cache@v3
@@ -100,7 +136,13 @@ jobs:
           pkg_name_structure <- ifelse("${{ matrix.channel }}" == "stable", "%s/%s@*release", "%s/%s")
           for (package in lockfile$Packages) {
               if (package$Source == "GitHub") {
-                  renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
+                  # TODO: After teal.slice is released we have to remove this change.
+                  # This workaround is because update to {bslib} breaks current release of teal.slice
+                  if (package$Package == "teal.slice" && "${{ matrix.channel }}" == "stable") {
+                    renv::record("insightsengineering/teal.slice@103491c67e26a9a85d636bd105a806904a0111ec")
+                  } else {
+                    renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
+                  }
               }
           }
 
@@ -130,7 +172,7 @@ jobs:
           wait-on: "http://localhost:3333"
           wait-on-timeout: 500
 
-      - name: Install deploy R package dependencies
+      - name: Install deployment-related R package dependencies
         shell: Rscript {0}
         working-directory: ${{ matrix.directory }}
         run: |
@@ -157,22 +199,12 @@ jobs:
             forceUpdate = TRUE
           )
 
-      - name: Commit updated renv.lock file
+      - name: Commit and push changes 📌
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
+          file_pattern: "${{ matrix.directory }}/renv/activate.R ${{ matrix.directory }}/renv.lock"
+          commit_user_name: github-actions
+          commit_user_email: >-
+            41898282+github-actions[bot]@users.noreply.github.com
         continue-on-error: true
-        run: |
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions"
-          git config --global --add safe.directory /__w/teal.gallery/teal.gallery
-          git fetch
-          git stash
-          git checkout ${{ env.BRANCH_NAME }}
-          git pull
-          git stash apply
-          git add ${{ matrix.directory }}/renv.lock
-          git add ${{ matrix.directory }}/renv/activate.R
-          if [ -n "$(git diff --staged)" ]; then
-            git commit -m "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
-            git push origin ${{ env.BRANCH_NAME }}
-          else
-            echo "renv.lock was not modified. Nothing to commit.";
-          fi
