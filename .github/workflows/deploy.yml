@@ -84,6 +84,10 @@ jobs:
           ref: "${{ env.BRANCH_NAME }}"
           token: "${{ steps.github-token.outputs.token }}"
 
+      - name: Add safe directory in git config
+        run: |
+          git config --global --add safe.directory $(pwd)
+
       - name: Check if Cypress tests exist
         id: find-cypress
         run: |
