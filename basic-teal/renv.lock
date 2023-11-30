@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.3.1",
+    "Version": "4.3.2",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -1310,25 +1310,23 @@
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.4.1.9011",
+      "Version": "0.4.1.9012",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
       "RemoteRef": "main",
-      "RemoteSha": "284af13111360fb77f96ba5e2dde760ab4020743",
+      "RemoteSha": "588c6a0c3824812717f3666ab426f0d4382d2dac",
       "Requirements": [
         "R",
         "checkmate",
         "grDevices",
         "lifecycle",
         "methods",
-        "rlang",
-        "shiny",
-        "styler"
+        "rlang"
       ],
-      "Hash": "3fcdbe4b2d2f30ea9a06c7e64b9fa670"
+      "Hash": "8f8e4ce65a43b29fb167d57c4589366c"
     },
     "teal.data": {
       "Package": "teal.data",
