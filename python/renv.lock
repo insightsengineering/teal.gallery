@@ -94,9 +94,9 @@
     },
     "Matrix": {
       "Package": "Matrix",
-      "Version": "1.6-3",
+      "Version": "1.6-4",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "grDevices",
@@ -107,7 +107,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "1d1b6901cf9b6b1b446bc56a7d47efa4"
+      "Hash": "d9c655b30a2edc6bb2244c1d1e8d549d"
     },
     "MatrixModels": {
       "Package": "MatrixModels",
@@ -547,13 +547,13 @@
     },
     "cpp11": {
       "Package": "cpp11",
-      "Version": "0.4.6",
+      "Version": "0.4.7",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "707fae4bbf73697ec8d85f9d7076c061"
+      "Hash": "5a295d7d963cc5035284dcdbaf334f4e"
     },
     "crayon": {
       "Package": "crayon",
@@ -840,14 +840,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.4.9006",
+      "Version": "0.5.4.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "8c6cbbf39fa15dedd3bd1a29cfe3ec51100b6039",
+      "RemoteSha": "afcaaac87eea648e60045b89f5f0bcebec8f0a2a",
       "Requirements": [
         "R",
         "checkmate",
@@ -855,7 +855,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "b207e073ca52d3b0ffafb78b0e620e1c"
+      "Hash": "4e2a0c28d21ce0bcddd9acdd33bc1308"
     },
     "fs": {
       "Package": "fs",
@@ -1928,14 +1928,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.5.9019",
+      "Version": "0.6.5.9020",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "59921c42e68ee3be262bc6199284016b430bb0f4",
+      "RemoteSha": "0c39cc7f36a1286f55b2bb83b9b0a80f12efe946",
       "Requirements": [
         "R",
         "checkmate",
@@ -1947,7 +1947,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "cbcab94b8d3732a701547a7b93adc904"
+      "Hash": "1a18728407e17a0554ed060d910ac625"
     },
     "sandwich": {
       "Package": "sandwich",
@@ -2486,14 +2486,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.2.9020",
+      "Version": "0.9.2.9023",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "e47722f53323c5de2d369773022a128fcaaf4c40",
+      "RemoteSha": "50a56a75545f57792ab99f5bc6a44cb7dbcf8af8",
       "Requirements": [
         "R",
         "Rdpack",
@@ -2522,13 +2522,13 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "fb039bf62b95f464a339d9986228030c"
+      "Hash": "c588b9ea6e0493e45a3311a279439f48"
     },
     "testthat": {
       "Package": "testthat",
-      "Version": "3.2.0",
+      "Version": "3.2.1",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -2537,7 +2537,6 @@
         "cli",
         "desc",
         "digest",
-        "ellipsis",
         "evaluate",
         "jsonlite",
         "lifecycle",
@@ -2552,7 +2551,7 @@
         "waldo",
         "withr"
       ],
-      "Hash": "877508719fcb8c9525eccdadf07a5102"
+      "Hash": "4767a686ebe986e6cb01d075b3f09729"
     },
     "textshaping": {
       "Package": "textshaping",
@@ -2690,9 +2689,9 @@
     },
     "vctrs": {
       "Package": "vctrs",
-      "Version": "0.6.4",
+      "Version": "0.6.5",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "cli",
@@ -2700,7 +2699,7 @@
         "lifecycle",
         "rlang"
       ],
-      "Hash": "266c1ca411266ba8f365fcc726444b87"
+      "Hash": "c03fa420630029418f7e6da3667aac4a"
     },
     "viridisLite": {
       "Package": "viridisLite",
