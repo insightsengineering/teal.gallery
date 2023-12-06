@@ -209,7 +209,7 @@
     },
     "checkmate": {
       "Package": "checkmate",
-      "Version": "2.3.0",
+      "Version": "2.3.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -217,7 +217,7 @@
         "backports",
         "utils"
       ],
-      "Hash": "ed4275b13c6ab74b89a31def0b6bf835"
+      "Hash": "c01cab1cb0f9125211a6fc99d540e315"
     },
     "cli": {
       "Package": "cli",
@@ -696,13 +696,13 @@
     },
     "jsonlite": {
       "Package": "jsonlite",
-      "Version": "1.8.7",
+      "Version": "1.8.8",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "methods"
       ],
-      "Hash": "266a20443ca13c65688b2116d5220f76"
+      "Hash": "e1b9c55281c5adc4dd113652d9e26768"
     },
     "knitr": {
       "Package": "knitr",
@@ -1279,14 +1279,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.14.0.9025",
+      "Version": "0.14.0.9026",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "8ab74927a9a603ea1fe5da6398e5d0a228ccfb46",
+      "RemoteSha": "ac443fe4bf3c0d408df0a530e01aee8475ea2fd8",
       "Requirements": [
         "R",
         "checkmate",
@@ -1294,10 +1294,12 @@
         "lifecycle",
         "logger",
         "magrittr",
+        "methods",
         "rlang",
         "shiny",
         "shinyjs",
         "stats",
+        "teal.code",
         "teal.data",
         "teal.logger",
         "teal.reporter",
@@ -1306,18 +1308,18 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "417b557c05d94cc5ba317624494eb707"
+      "Hash": "37e6ca080599bc22fd626b6673a1dccd"
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.4.1.9012",
+      "Version": "0.4.1.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
       "RemoteRef": "main",
-      "RemoteSha": "588c6a0c3824812717f3666ab426f0d4382d2dac",
+      "RemoteSha": "06107dbd2ef46547f003bdae72ae6323427232b5",
       "Requirements": [
         "R",
         "checkmate",
@@ -1326,18 +1328,18 @@
         "methods",
         "rlang"
       ],
-      "Hash": "8f8e4ce65a43b29fb167d57c4589366c"
+      "Hash": "713bc3673b29416fdabab512a681604c"
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.3.0.9016",
+      "Version": "0.3.0.9017",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "778a23c1d869dd1abd4e2c82e50b285c94993b92",
+      "RemoteSha": "b78d214206bd28787173b37c9fe03fed3c5ef556",
       "Requirements": [
         "R",
         "R6",
@@ -1355,7 +1357,7 @@
         "utils",
         "yaml"
       ],
-      "Hash": "65adec293f4b2e8bb0731965f17b37b8"
+      "Hash": "679a5ef082a69637f5194de7350fcc90"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -1440,14 +1442,14 @@
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.4.0.9008",
+      "Version": "0.4.0.9009",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.transform",
       "RemoteRef": "main",
-      "RemoteSha": "849f9bee603f4fe5cafaf278d40befb1f4c0cef0",
+      "RemoteSha": "bd1804842f9fa4d69c5095bb18d7c6ed0766e3e4",
       "Requirements": [
         "R",
         "checkmate",
@@ -1468,7 +1470,7 @@
         "tidyr",
         "tidyselect"
       ],
-      "Hash": "be66cba86f6f659c299bdb0c5e763e33"
+      "Hash": "2bcf74a1830f5caacaaf4f2b5d5ee6ed"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
@@ -1671,14 +1673,16 @@
     },
     "xml2": {
       "Package": "xml2",
-      "Version": "1.3.5",
+      "Version": "1.3.6",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
-        "methods"
+        "cli",
+        "methods",
+        "rlang"
       ],
-      "Hash": "6c40e5cfcc6aefd88110666e18c31f40"
+      "Hash": "1d0336142f4cd25d8d23cd3ba7a8fb61"
     },
     "xtable": {
       "Package": "xtable",
