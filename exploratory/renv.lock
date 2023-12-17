@@ -544,7 +544,7 @@
     },
     "cowplot": {
       "Package": "cowplot",
-      "Version": "1.1.1",
+      "Version": "1.1.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -557,7 +557,7 @@
         "rlang",
         "scales"
       ],
-      "Hash": "b418e8423699d11c7f2087c2bfd07da2"
+      "Hash": "ef28211987921217c61b4f4068068dac"
     },
     "cpp11": {
       "Package": "cpp11",
@@ -2304,14 +2304,14 @@
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.1",
+      "Version": "0.4.2",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
-      "RemoteRef": "v0.4.1",
-      "RemoteSha": "82dbfddca13dff5d39b773c479a44f430fda971d",
+      "RemoteRef": "v0.4.2",
+      "RemoteSha": "76e780cc3b8b24ac5a0e8d18e7b27169d52d475e",
       "Requirements": [
         "R",
         "bslib",
@@ -2328,7 +2328,7 @@
         "shinyjs",
         "styler"
       ],
-      "Hash": "498ebd85ad5b2cba1115a0778061b1be"
+      "Hash": "0aedbb7064883e31e5217cf76d96ada6"
     },
     "tern": {
       "Package": "tern",
