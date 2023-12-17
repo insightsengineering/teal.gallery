@@ -533,7 +533,7 @@
     },
     "cowplot": {
       "Package": "cowplot",
-      "Version": "1.1.1",
+      "Version": "1.1.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -546,7 +546,7 @@
         "rlang",
         "scales"
       ],
-      "Hash": "b418e8423699d11c7f2087c2bfd07da2"
+      "Hash": "ef28211987921217c61b4f4068068dac"
     },
     "cpp11": {
       "Package": "cpp11",
@@ -2209,14 +2209,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.14.0.9030",
+      "Version": "0.14.0.9032",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "e98eab0a2465a00e05957cefc408ee10185440aa",
+      "RemoteSha": "65022848e524e65bedd795b672f0abf18fc3df58",
       "Requirements": [
         "R",
         "checkmate",
@@ -2237,18 +2237,18 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "090dd3c5209cb0eaf6cefc13fb295d55"
+      "Hash": "5eb1ee013205faf4564c43132f098744"
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.4.1.9017",
+      "Version": "0.4.1.9022",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
       "RemoteRef": "main",
-      "RemoteSha": "8ad27b9a30f06a93a0fad187cea4e13f05e76692",
+      "RemoteSha": "eddd95583c9ad38543976a4be0fa77fd14cf322e",
       "Requirements": [
         "R",
         "checkmate",
@@ -2257,18 +2257,18 @@
         "methods",
         "rlang"
       ],
-      "Hash": "26189b277bc6fee70e7b01c67aeaebb3"
+      "Hash": "305a946703a5179cf8e887b362a547c0"
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.3.0.9022",
+      "Version": "0.3.0.9024",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "cb823a98bc46fd0c4a179a3888232e0f3883f6d5",
+      "RemoteSha": "5903c532cc2ec167d74423909ecce01e3ad1808f",
       "Requirements": [
         "R",
         "checkmate",
@@ -2280,7 +2280,7 @@
         "utils",
         "yaml"
       ],
-      "Hash": "a18aa50fc4aaa4ab1cfa9a15b15adda6"
+      "Hash": "431919ad420178fe068abd5065f17641"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -2375,14 +2375,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.4.0.9030",
+      "Version": "0.4.0.9031",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "5760e6254bae09ff725111b24d025daa60dfb6d4",
+      "RemoteSha": "e21f16b33e7cef2c430cd75a58d0463d099157fa",
       "Requirements": [
         "R",
         "R6",
@@ -2405,7 +2405,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "eec1cfdacd97e5354bb32502f456b772"
+      "Hash": "a7292db9b67b9bc5abf9524c2df1c24e"
     },
     "teal.transform": {
       "Package": "teal.transform",
@@ -2440,14 +2440,14 @@
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.1.9011",
+      "Version": "0.4.2.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "b1c0f997eeff41f319197a3f4b16ec21a0e1eb07",
+      "RemoteSha": "e59ba815781604af411ac6c88ed96d5acbfa49a2",
       "Requirements": [
         "R",
         "bslib",
@@ -2464,7 +2464,7 @@
         "shinyjs",
         "styler"
       ],
-      "Hash": "329fbb1afce063b61f3fcc35762e432b"
+      "Hash": "24e6e905e851e3a2410354fef85311e6"
     },
     "tern": {
       "Package": "tern",
