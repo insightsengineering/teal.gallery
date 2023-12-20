@@ -694,7 +694,7 @@
     },
     "emmeans": {
       "Package": "emmeans",
-      "Version": "1.8.9",
+      "Version": "1.9.0",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -707,7 +707,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "6b4662535108aae877533198d72a2318"
+      "Hash": "2960b19684148775d90817224324afd3"
     },
     "estimability": {
       "Package": "estimability",
@@ -2209,14 +2209,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.14.0.9032",
+      "Version": "0.14.0.9034",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "65022848e524e65bedd795b672f0abf18fc3df58",
+      "RemoteSha": "0204dd156d56b901bfa1756d4fdb0d327fbc9dfe",
       "Requirements": [
         "R",
         "checkmate",
@@ -2237,7 +2237,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "5eb1ee013205faf4564c43132f098744"
+      "Hash": "4673461fc089b07ef56c13d64b9bf424"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2261,14 +2261,14 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.3.0.9024",
+      "Version": "0.3.0.9025",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "5903c532cc2ec167d74423909ecce01e3ad1808f",
+      "RemoteSha": "be1e84ee26350217251ae7ac9863aec9bc2c7c7a",
       "Requirements": [
         "R",
         "checkmate",
@@ -2280,7 +2280,7 @@
         "utils",
         "yaml"
       ],
-      "Hash": "431919ad420178fe068abd5065f17641"
+      "Hash": "7ac28f0b5bc4e0b9f634a1c1935ef903"
     },
     "teal.logger": {
       "Package": "teal.logger",
