@@ -2209,14 +2209,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.14.0.9034",
+      "Version": "0.14.0.9035",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "0204dd156d56b901bfa1756d4fdb0d327fbc9dfe",
+      "RemoteSha": "3d69c6081c353aed7958e8a920fa837862d23133",
       "Requirements": [
         "R",
         "checkmate",
@@ -2237,7 +2237,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "4673461fc089b07ef56c13d64b9bf424"
+      "Hash": "4dd90c791fe2824b21a3fce6c819e004"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2261,14 +2261,14 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.3.0.9026",
+      "Version": "0.3.0.9030",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "e7bf6390b1bca99dfcfe3eee814b1b086f300fa3",
+      "RemoteSha": "da4fe5374b2c5bbf27cc5b4f9027dedd396566da",
       "Requirements": [
         "R",
         "checkmate",
@@ -2280,7 +2280,7 @@
         "utils",
         "yaml"
       ],
-      "Hash": "9d10e2f450b39331cb5bba28cd95c411"
+      "Hash": "cc53ca22a5fef88ee43753e15238c1a3"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -2375,14 +2375,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.4.0.9031",
+      "Version": "0.4.0.9032",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "e21f16b33e7cef2c430cd75a58d0463d099157fa",
+      "RemoteSha": "e22b1e59b120f9224ca77792ce02a728ed6246af",
       "Requirements": [
         "R",
         "R6",
@@ -2405,7 +2405,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "a7292db9b67b9bc5abf9524c2df1c24e"
+      "Hash": "055b44504f56dcbc9dc3181aa2d771d9"
     },
     "teal.transform": {
       "Package": "teal.transform",
