@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.3.1",
+    "Version": "4.3.2",
     "Repositories": [
       {
         "Name": "BioCsoft",
@@ -84,7 +84,7 @@
     },
     "DT": {
       "Package": "DT",
-      "Version": "0.30",
+      "Version": "0.31",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -97,7 +97,7 @@
         "magrittr",
         "promises"
       ],
-      "Hash": "dffb4d94a00be1b4a4507e53ab95bd90"
+      "Hash": "77b5189f5272ae2b21e3ac2175ad107c"
     },
     "MASS": {
       "Package": "MASS",
@@ -140,9 +140,9 @@
     },
     "Matrix": {
       "Package": "Matrix",
-      "Version": "1.6-3",
+      "Version": "1.6-4",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "grDevices",
@@ -153,7 +153,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "1d1b6901cf9b6b1b446bc56a7d47efa4"
+      "Hash": "d9c655b30a2edc6bb2244c1d1e8d549d"
     },
     "MatrixModels": {
       "Package": "MatrixModels",
@@ -255,7 +255,7 @@
     },
     "RcppArmadillo": {
       "Package": "RcppArmadillo",
-      "Version": "0.12.6.6.0",
+      "Version": "0.12.6.6.1",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -265,7 +265,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "aabc6cb0f0953d0442d3c82d8a9d2610"
+      "Hash": "d2b60e0a15d73182a3a766ff0a7d0d7f"
     },
     "RcppEigen": {
       "Package": "RcppEigen",
@@ -310,9 +310,9 @@
     },
     "TMB": {
       "Package": "TMB",
-      "Version": "1.9.9",
+      "Version": "1.9.10",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "Matrix",
         "R",
@@ -322,7 +322,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "e966ec410c7da11164afa063c35fbf6a"
+      "Hash": "061ba6d7509e7148871b31b44e47c69b"
     },
     "abind": {
       "Package": "abind",
@@ -426,10 +426,13 @@
     },
     "brio": {
       "Package": "brio",
-      "Version": "1.1.3",
+      "Version": "1.1.4",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "976cf154dfb043c012d87cddd8bca363"
+      "Repository": "RSPM",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "68bd2b066e1fe780bbf62fc8bcc36de3"
     },
     "broom": {
       "Package": "broom",
@@ -533,7 +536,7 @@
     },
     "checkmate": {
       "Package": "checkmate",
-      "Version": "2.3.0",
+      "Version": "2.3.1",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -541,18 +544,18 @@
         "backports",
         "utils"
       ],
-      "Hash": "ed4275b13c6ab74b89a31def0b6bf835"
+      "Hash": "c01cab1cb0f9125211a6fc99d540e315"
     },
     "cli": {
       "Package": "cli",
-      "Version": "3.6.1",
+      "Version": "3.6.2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "89e6d8219950eac806ae0c489052048a"
+      "Hash": "1216ac65ac55ec0058a6f75d7ca0fd52"
     },
     "clipr": {
       "Package": "clipr",
@@ -597,9 +600,9 @@
     },
     "cowplot": {
       "Package": "cowplot",
-      "Version": "1.1.1",
+      "Version": "1.1.2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "ggplot2",
@@ -610,17 +613,17 @@
         "rlang",
         "scales"
       ],
-      "Hash": "b418e8423699d11c7f2087c2bfd07da2"
+      "Hash": "ef28211987921217c61b4f4068068dac"
     },
     "cpp11": {
       "Package": "cpp11",
-      "Version": "0.4.6",
+      "Version": "0.4.7",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R"
       ],
-      "Hash": "707fae4bbf73697ec8d85f9d7076c061"
+      "Hash": "5a295d7d963cc5035284dcdbaf334f4e"
     },
     "crayon": {
       "Package": "crayon",
@@ -664,38 +667,37 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "5.1.0",
+      "Version": "5.2.0",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
         "R"
       ],
-      "Hash": "9123f3ef96a2c1a93927d828b2fe7d4c"
+      "Hash": "ce88d13c0b10fe88a37d9c59dba2d7f9"
     },
     "data.table": {
       "Package": "data.table",
-      "Version": "1.14.8",
+      "Version": "1.14.10",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "methods"
       ],
-      "Hash": "b4c06e554f33344e044ccd7fdca750a9"
+      "Hash": "6ea17a32294d8ca00455825ab0cf71b9"
     },
     "desc": {
       "Package": "desc",
-      "Version": "1.4.2",
+      "Version": "1.4.3",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "R6",
         "cli",
-        "rprojroot",
         "utils"
       ],
-      "Hash": "6b9602c7ebbe87101a9c8edb6e8b6d21"
+      "Hash": "99b79fcbd6c4d1ce087f5c5c758b384f"
     },
     "diffobj": {
       "Package": "diffobj",
@@ -759,7 +761,7 @@
     },
     "emmeans": {
       "Package": "emmeans",
-      "Version": "1.8.9",
+      "Version": "1.9.0",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -772,7 +774,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "6b4662535108aae877533198d72a2318"
+      "Hash": "2960b19684148775d90817224324afd3"
     },
     "estimability": {
       "Package": "estimability",
@@ -797,7 +799,7 @@
     },
     "fansi": {
       "Package": "fansi",
-      "Version": "1.0.5",
+      "Version": "1.0.6",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -805,7 +807,7 @@
         "grDevices",
         "utils"
       ],
-      "Hash": "3e8583a60163b4bc1a80016e63b9959e"
+      "Hash": "962174cf2aeb5b9eea581522286a911f"
     },
     "farver": {
       "Package": "farver",
@@ -920,14 +922,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.4.9006",
+      "Version": "0.5.5.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "8c6cbbf39fa15dedd3bd1a29cfe3ec51100b6039",
+      "RemoteSha": "066faeb9d95d54b4065cf0c9b112a3dc96ac542b",
       "Requirements": [
         "R",
         "checkmate",
@@ -935,7 +937,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "b207e073ca52d3b0ffafb78b0e620e1c"
+      "Hash": "03d365e4f1c690061bb7b752fae37846"
     },
     "fs": {
       "Package": "fs",
@@ -950,7 +952,7 @@
     },
     "gdtools": {
       "Package": "gdtools",
-      "Version": "0.3.4",
+      "Version": "0.3.5",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -963,7 +965,7 @@
         "systemfonts",
         "tools"
       ],
-      "Hash": "dcbec937764c19774f6f719e6bf45c69"
+      "Hash": "9df1d2b4f6cbc92ce6961d3f10156125"
     },
     "geeM": {
       "Package": "geeM",
@@ -1117,9 +1119,9 @@
     },
     "ggridges": {
       "Package": "ggridges",
-      "Version": "0.5.4",
+      "Version": "0.5.5",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "ggplot2",
@@ -1127,7 +1129,7 @@
         "scales",
         "withr"
       ],
-      "Hash": "c76ee8fe60939384b9726128e38caea0"
+      "Hash": "8123fbe049b06f9417ad2ada58d20b61"
     },
     "glmnet": {
       "Package": "glmnet",
@@ -1189,9 +1191,9 @@
     },
     "haven": {
       "Package": "haven",
-      "Version": "2.5.3",
+      "Version": "2.5.4",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "cli",
@@ -1206,7 +1208,7 @@
         "tidyselect",
         "vctrs"
       ],
-      "Hash": "9b302fe352f9cfc5dcf0a4139af3a565"
+      "Hash": "9171f898db9d9c4c1b2c745adc2c1ef1"
     },
     "highr": {
       "Package": "highr",
@@ -1252,9 +1254,9 @@
     },
     "htmlwidgets": {
       "Package": "htmlwidgets",
-      "Version": "1.6.3",
+      "Version": "1.6.4",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "grDevices",
         "htmltools",
@@ -1263,7 +1265,7 @@
         "rmarkdown",
         "yaml"
       ],
-      "Hash": "a4040b08269c9af64554e55f514d002c"
+      "Hash": "04291cc45198225444a397606810ac37"
     },
     "httpcode": {
       "Package": "httpcode",
@@ -1274,7 +1276,7 @@
     },
     "httpuv": {
       "Package": "httpuv",
-      "Version": "1.6.12",
+      "Version": "1.6.13",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -1285,7 +1287,7 @@
         "promises",
         "utils"
       ],
-      "Hash": "c992f75861325961c29a188b45e549f7"
+      "Hash": "d23d2879001f3d82ee9dc38a9ef53c4c"
     },
     "httr": {
       "Package": "httr",
@@ -1336,13 +1338,13 @@
     },
     "jsonlite": {
       "Package": "jsonlite",
-      "Version": "1.8.7",
+      "Version": "1.8.8",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "methods"
       ],
-      "Hash": "266a20443ca13c65688b2116d5220f76"
+      "Hash": "e1b9c55281c5adc4dd113652d9e26768"
     },
     "kinship2": {
       "Package": "kinship2",
@@ -1406,14 +1408,14 @@
     },
     "later": {
       "Package": "later",
-      "Version": "1.3.1",
+      "Version": "1.3.2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "Rcpp",
         "rlang"
       ],
-      "Hash": "40401c9cf2bc2259dfe83311c9384710"
+      "Hash": "a3e051d405326b8b0012377434c62b37"
     },
     "lattice": {
       "Package": "lattice",
@@ -1512,7 +1514,7 @@
     },
     "mgcv": {
       "Package": "mgcv",
-      "Version": "1.9-0",
+      "Version": "1.9-1",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -1525,7 +1527,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "086028ca0460d0c368028d3bda58f31b"
+      "Hash": "110ee9d83b496279960e162ac97764ce"
     },
     "mime": {
       "Package": "mime",
@@ -1549,14 +1551,14 @@
     },
     "mmrm": {
       "Package": "mmrm",
-      "Version": "0.3.6.9000",
+      "Version": "0.3.7.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "5a15e9a4df7f50a753ef94ef186597b5719b02a8",
+      "RemoteSha": "a401521a69c624df5a9e081014814e5f19149860",
       "Requirements": [
         "Matrix",
         "R",
@@ -1576,7 +1578,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "080c7fee4bcdf083c986ec94134f5808"
+      "Hash": "e16763d2a256ed1c80ca2abee769d1ca"
     },
     "mosaicCore": {
       "Package": "mosaicCore",
@@ -1617,21 +1619,21 @@
     },
     "nestcolor": {
       "Package": "nestcolor",
-      "Version": "0.1.2.9006",
+      "Version": "0.1.2.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "nestcolor",
       "RemoteRef": "main",
-      "RemoteSha": "03d0b1e84bfbda25d1431bdd45d4ab281422d8d2",
+      "RemoteSha": "c122d1b246195bd5d5d83e00b19a5972826e9bae",
       "Requirements": [
         "R",
         "checkmate",
         "ggplot2",
         "lifecycle"
       ],
-      "Hash": "7096c1653ec62e9a8a212c4423612c82"
+      "Hash": "6a8422817b606d859a65304203780f82"
     },
     "nlme": {
       "Package": "nlme",
@@ -1757,7 +1759,7 @@
     },
     "pkgbuild": {
       "Package": "pkgbuild",
-      "Version": "1.4.2",
+      "Version": "1.4.3",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -1765,13 +1767,10 @@
         "R6",
         "callr",
         "cli",
-        "crayon",
         "desc",
-        "prettyunits",
-        "processx",
-        "rprojroot"
+        "processx"
       ],
-      "Hash": "beb25b32a957a22a5c301a9e441190b3"
+      "Hash": "c0143443203205e6a2760ce553dafc24"
     },
     "pkgconfig": {
       "Package": "pkgconfig",
@@ -1866,16 +1865,16 @@
     },
     "processx": {
       "Package": "processx",
-      "Version": "3.8.2",
+      "Version": "3.8.3",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "R6",
         "ps",
         "utils"
       ],
-      "Hash": "3efbd8ac1be0296a46c55387aeace0f3"
+      "Hash": "82d48b1aec56084d9438dbf98087a7e9"
     },
     "productplots": {
       "Package": "productplots",
@@ -1890,16 +1889,17 @@
     },
     "progress": {
       "Package": "progress",
-      "Version": "1.2.2",
+      "Version": "1.2.3",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
+        "R",
         "R6",
         "crayon",
         "hms",
         "prettyunits"
       ],
-      "Hash": "14dc9f7a3c91ebb14ec5bb9208a07061"
+      "Hash": "f4625e061cb2865f111b47ff163a5ca6"
     },
     "promises": {
       "Package": "promises",
@@ -1973,14 +1973,14 @@
     },
     "ragg": {
       "Package": "ragg",
-      "Version": "1.2.6",
+      "Version": "1.2.7",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
         "systemfonts",
         "textshaping"
       ],
-      "Hash": "6ba2fa8740abdc2cc148407836509901"
+      "Hash": "90a1b8b7e518d7f90480d56453b4d062"
     },
     "rappdirs": {
       "Package": "rappdirs",
@@ -2060,7 +2060,7 @@
     },
     "rlistings": {
       "Package": "rlistings",
-      "Version": "0.2.4",
+      "Version": "0.2.7",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -2073,7 +2073,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "f78bcba4dfbe3cc1eba6285448ad1a4f"
+      "Hash": "0067db34ea36369eeba83d344af7c14e"
     },
     "rmarkdown": {
       "Package": "rmarkdown",
@@ -2111,30 +2111,31 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.5.9017",
+      "Version": "0.6.6.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "478e637a7ca2912c57c3b8f2532375c906a90331",
+      "RemoteSha": "82c6c6e2e3b4c8e7a527dbaba17049bcf4597ffa",
       "Requirements": [
         "R",
+        "checkmate",
         "formatters",
-        "grid",
         "htmltools",
         "magrittr",
         "methods",
-        "stats"
+        "stats",
+        "stringi"
       ],
-      "Hash": "ae10bcd409283577306703dc55fef5bd"
+      "Hash": "15cb0223e268345a296a0ca2caffbcd2"
     },
     "sass": {
       "Package": "sass",
-      "Version": "0.4.7",
+      "Version": "0.4.8",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R6",
         "fs",
@@ -2142,7 +2143,7 @@
         "rappdirs",
         "rlang"
       ],
-      "Hash": "6bd4d33b50ff927191ec9acbf52fd056"
+      "Hash": "168f9353c76d4c4b0a0bbf72e2c2d035"
     },
     "scales": {
       "Package": "scales",
@@ -2166,35 +2167,35 @@
     },
     "scda": {
       "Package": "scda",
-      "Version": "0.1.6.9013",
+      "Version": "0.1.6.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "scda",
       "RemoteRef": "main",
-      "RemoteSha": "b6cd961a2efd310036be888aee8627c67d87924c",
+      "RemoteSha": "4b513065367e083c966ad26a70956758c64d45de",
       "Remotes": "insightsengineering/scda.2022@*release",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "e025780be509137d8b770d5603b09901"
+      "Hash": "eb9a967c8bb06211d9b7d6f13710eb78"
     },
     "scda.2022": {
       "Package": "scda.2022",
-      "Version": "0.1.5.9003",
+      "Version": "0.1.5.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "scda.2022",
       "RemoteRef": "main",
-      "RemoteSha": "75b1289bb9b85d5d9ea56fa738525f560798d98f",
+      "RemoteSha": "bb9017b710d586f994f040071f3f87a62f2a9bd5",
       "Requirements": [
         "R"
       ],
-      "Hash": "9eaa41a853cf7e6cd9dc7a286c2b2e61"
+      "Hash": "7c877ac58cb30423829308063dfcf84e"
     },
     "shape": {
       "Package": "shape",
@@ -2329,16 +2330,16 @@
     },
     "stringi": {
       "Package": "stringi",
-      "Version": "1.8.2",
+      "Version": "1.8.3",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "stats",
         "tools",
         "utils"
       ],
-      "Hash": "e68c45f81639001af5f1b15cd3599bbd"
+      "Hash": "058aebddea264f4c99401515182e656a"
     },
     "stringr": {
       "Package": "stringr",
@@ -2412,14 +2413,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.14.0.9025",
+      "Version": "0.14.0.9035",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "8ab74927a9a603ea1fe5da6398e5d0a228ccfb46",
+      "RemoteSha": "3d69c6081c353aed7958e8a920fa837862d23133",
       "Requirements": [
         "R",
         "checkmate",
@@ -2427,81 +2428,74 @@
         "lifecycle",
         "logger",
         "magrittr",
-        "rlang",
-        "shiny",
-        "shinyjs",
-        "stats",
-        "teal.data",
-        "teal.logger",
-        "teal.reporter",
-        "teal.slice",
-        "teal.transform",
-        "teal.widgets",
-        "utils"
-      ],
-      "Hash": "417b557c05d94cc5ba317624494eb707"
-    },
-    "teal.code": {
-      "Package": "teal.code",
-      "Version": "0.4.1.9011",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRepo": "teal.code",
-      "RemoteRef": "main",
-      "RemoteSha": "284af13111360fb77f96ba5e2dde760ab4020743",
-      "Requirements": [
-        "R",
-        "checkmate",
-        "grDevices",
-        "lifecycle",
-        "methods",
-        "rlang",
-        "shiny",
-        "styler"
-      ],
-      "Hash": "3fcdbe4b2d2f30ea9a06c7e64b9fa670"
-    },
-    "teal.data": {
-      "Package": "teal.data",
-      "Version": "0.3.0.9016",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRepo": "teal.data",
-      "RemoteRef": "main",
-      "RemoteSha": "778a23c1d869dd1abd4e2c82e50b285c94993b92",
-      "Requirements": [
-        "R",
-        "R6",
-        "checkmate",
-        "digest",
-        "lifecycle",
-        "logger",
         "methods",
         "rlang",
         "shiny",
         "shinyjs",
         "stats",
         "teal.code",
+        "teal.data",
         "teal.logger",
+        "teal.reporter",
+        "teal.slice",
+        "teal.widgets",
+        "utils"
+      ],
+      "Hash": "4dd90c791fe2824b21a3fce6c819e004"
+    },
+    "teal.code": {
+      "Package": "teal.code",
+      "Version": "0.4.1.9022",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "teal.code",
+      "RemoteRef": "main",
+      "RemoteSha": "eddd95583c9ad38543976a4be0fa77fd14cf322e",
+      "Requirements": [
+        "R",
+        "checkmate",
+        "grDevices",
+        "lifecycle",
+        "methods",
+        "rlang"
+      ],
+      "Hash": "305a946703a5179cf8e887b362a547c0"
+    },
+    "teal.data": {
+      "Package": "teal.data",
+      "Version": "0.3.0.9030",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "teal.data",
+      "RemoteRef": "main",
+      "RemoteSha": "da4fe5374b2c5bbf27cc5b4f9027dedd396566da",
+      "Requirements": [
+        "R",
+        "checkmate",
+        "lifecycle",
+        "methods",
+        "rlang",
+        "stats",
+        "teal.code",
         "utils",
         "yaml"
       ],
-      "Hash": "65adec293f4b2e8bb0731965f17b37b8"
+      "Hash": "cc53ca22a5fef88ee43753e15238c1a3"
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.1.3.9008",
+      "Version": "0.1.3.9009",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "cb7aafdbaaf6a2c4193da47b6380e5640c2d54de",
+      "RemoteSha": "adba7dbda21545cada4de5bc85b9a19d9d318505",
       "Requirements": [
         "R",
         "glue",
@@ -2510,18 +2504,18 @@
         "shiny",
         "withr"
       ],
-      "Hash": "1ac3ac4eacda10d82d2278690e3dddce"
+      "Hash": "e246f066a441c4fca51f51f7a479caeb"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.8.16.9013",
+      "Version": "0.8.16.9023",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "17f205caa9c4767137f2739b5d10d78616f30296",
+      "RemoteSha": "3839434f24f9e319cd2c20d7c815b1d952fee5fa",
       "Requirements": [
         "DT",
         "R",
@@ -2562,18 +2556,18 @@
         "utils",
         "vistime"
       ],
-      "Hash": "da6e10df4c8db1230e65e40b9dab96ab"
+      "Hash": "fe284df319d68d7149fef5e822ce04c9"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.2.16.9013",
+      "Version": "0.2.16.9017",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "bed61193814587b29bb947b0790ba5e8606544f4",
+      "RemoteSha": "38ff2b0e06afa226d2507bc0100801bd7a663a99",
       "Requirements": [
         "DT",
         "R",
@@ -2606,18 +2600,18 @@
         "tidyselect",
         "utils"
       ],
-      "Hash": "0f8448ea63d315fb2db00b870d09056d"
+      "Hash": "cc0956672b4a5920512ddc207442d1fe"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.2.1.9013",
+      "Version": "0.2.1.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "e5ae2ddaf4047fe754dbcd6a5fe27b9456cc2440",
+      "RemoteSha": "0053f5e26f413f8f3214784747dd6beded140b3f",
       "Requirements": [
         "R6",
         "bslib",
@@ -2633,18 +2627,18 @@
         "yaml",
         "zip"
       ],
-      "Hash": "5fcd01335a260ada2d71bbfc54cbf5ed"
+      "Hash": "d17c10b0256cbed780ed532e438288b1"
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.4.0.9026",
+      "Version": "0.4.0.9032",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "b356a8ed5e8308f34709e5f40d1b32de38db43a5",
+      "RemoteSha": "e22b1e59b120f9224ca77792ce02a728ed6246af",
       "Requirements": [
         "R",
         "R6",
@@ -2667,18 +2661,18 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "0fd28f78efcc197fac5e2383f5c2e374"
+      "Hash": "055b44504f56dcbc9dc3181aa2d771d9"
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.4.0.9008",
+      "Version": "0.4.0.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.transform",
       "RemoteRef": "main",
-      "RemoteSha": "849f9bee603f4fe5cafaf278d40befb1f4c0cef0",
+      "RemoteSha": "fd1c3717a3a98982d936e7410dd976c5edcfbc1f",
       "Requirements": [
         "R",
         "checkmate",
@@ -2694,23 +2688,22 @@
         "stats",
         "teal.data",
         "teal.logger",
-        "teal.slice",
         "teal.widgets",
         "tidyr",
         "tidyselect"
       ],
-      "Hash": "be66cba86f6f659c299bdb0c5e763e33"
+      "Hash": "8fdc8eddd36b79d0bd656c44595c4fbc"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.1.9009",
+      "Version": "0.4.2.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "ae173a0339a153a413e846430411085b2bb8c979",
+      "RemoteSha": "e59ba815781604af411ac6c88ed96d5acbfa49a2",
       "Requirements": [
         "R",
         "bslib",
@@ -2727,18 +2720,18 @@
         "shinyjs",
         "styler"
       ],
-      "Hash": "60606acc2155ed121c2b6b76da7a980f"
+      "Hash": "24e6e905e851e3a2410354fef85311e6"
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.2.9020",
+      "Version": "0.9.3.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "e47722f53323c5de2d369773022a128fcaaf4c40",
+      "RemoteSha": "1bfc3c950c339adcf232cbb81a30dcecb8868f75",
       "Requirements": [
         "R",
         "Rdpack",
@@ -2767,19 +2760,18 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "fb039bf62b95f464a339d9986228030c"
+      "Hash": "6b309c7cf92197ef25197021dc2045b8"
     },
     "tern.gee": {
       "Package": "tern.gee",
-      "Version": "0.1.0.9009",
+      "Version": "0.1.3.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.gee",
       "RemoteRef": "main",
-      "RemoteSha": "1b9e628bd3c481cba3c2cd2988221d7706d644d6",
-      "Remotes": "insightsengineering/tern@*release",
+      "RemoteSha": "fa46b83a37aa26bf54ad2d635919fa18e0db0617",
       "Requirements": [
         "R",
         "checkmate",
@@ -2792,19 +2784,18 @@
         "stats",
         "tern"
       ],
-      "Hash": "e51a1e084e8de4125d7f35b19c359013"
+      "Hash": "e994ef88fc9f82acb1aa3c97583a41ca"
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
-      "Version": "0.2.2.9008",
+      "Version": "0.3.0.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "751f6fcc39e4d230befdb3de012f10341b8e41b8",
-      "Remotes": "insightsengineering/tern@*release",
+      "RemoteSha": "e717bb51981306db4ab54a62c9ff2d38dcf331bf",
       "Requirements": [
         "R",
         "checkmate",
@@ -2824,11 +2815,11 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "d478b19f0107fb2d315a9be6a1001c30"
+      "Hash": "31daf004a6339ff218f1937865e9cd2a"
     },
     "testthat": {
       "Package": "testthat",
-      "Version": "3.2.0",
+      "Version": "3.2.1",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -2839,7 +2830,6 @@
         "cli",
         "desc",
         "digest",
-        "ellipsis",
         "evaluate",
         "jsonlite",
         "lifecycle",
@@ -2854,7 +2844,7 @@
         "waldo",
         "withr"
       ],
-      "Hash": "877508719fcb8c9525eccdadf07a5102"
+      "Hash": "4767a686ebe986e6cb01d075b3f09729"
     },
     "textshaping": {
       "Package": "textshaping",
@@ -2992,7 +2982,7 @@
     },
     "vctrs": {
       "Package": "vctrs",
-      "Version": "0.6.4",
+      "Version": "0.6.5",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -3002,7 +2992,7 @@
         "lifecycle",
         "rlang"
       ],
-      "Hash": "266c1ca411266ba8f365fcc726444b87"
+      "Hash": "c03fa420630029418f7e6da3667aac4a"
     },
     "viridisLite": {
       "Package": "viridisLite",
@@ -3032,7 +3022,7 @@
     },
     "vroom": {
       "Package": "vroom",
-      "Version": "1.6.4",
+      "Version": "1.6.5",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -3054,7 +3044,7 @@
         "vctrs",
         "withr"
       ],
-      "Hash": "9db52c1656cf19c124f93124ea57f0fd"
+      "Hash": "390f9315bc0025be03012054103d227c"
     },
     "waldo": {
       "Package": "waldo",
@@ -3100,14 +3090,16 @@
     },
     "xml2": {
       "Package": "xml2",
-      "Version": "1.3.5",
+      "Version": "1.3.6",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
         "R",
-        "methods"
+        "cli",
+        "methods",
+        "rlang"
       ],
-      "Hash": "6c40e5cfcc6aefd88110666e18c31f40"
+      "Hash": "1d0336142f4cd25d8d23cd3ba7a8fb61"
     },
     "xtable": {
       "Package": "xtable",
@@ -3123,10 +3115,10 @@
     },
     "yaml": {
       "Package": "yaml",
-      "Version": "2.3.7",
+      "Version": "2.3.8",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "0d0056cc5383fbc240ccd0cb584bf436"
+      "Repository": "RSPM",
+      "Hash": "29240487a071f535f5e5d5a323b7afbd"
     },
     "zip": {
       "Package": "zip",
