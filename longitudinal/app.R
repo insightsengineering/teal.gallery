@@ -754,9 +754,9 @@ app <- teal::init(
       )
     )
   ),
+  title = build_app_title("Longitudinal Analysis Teal Demo App", nest_logo),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$head(tags$link(rel = "shortcut icon", href = nest_logo), tags$title("Longitudinal Analysis Teal Demo App")),
     tags$span(
       style = "font-size: 30px;",
       "Example teal app focusing on analysis of longitudinal clinical trial data with teal.goshawk"

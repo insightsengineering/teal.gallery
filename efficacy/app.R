@@ -277,9 +277,9 @@ app <- init(
       paramcd = cs_paramcd_qs
     )
   ),
+  title = build_app_title("Efficacy Analysis Teal Demo App", nest_logo),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$head(tags$link(rel = "shortcut icon", href = nest_logo), tags$title("Efficacy Analysis Teal Demo App")),
     tags$span(
       style = "font-size: 30px;",
       "Example teal app focusing on efficacy analysis of clinical trial data with teal.modules.clinical"

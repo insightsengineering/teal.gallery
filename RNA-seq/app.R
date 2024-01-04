@@ -61,9 +61,9 @@ app <- init(
       mae_name = "MAE"
     )
   ),
+  title = build_app_title("RNA-Seq Analysis Teal Demo App", nest_logo),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$head(tags$link(rel = "shortcut icon", href = nest_logo), tags$title("RNA-Seq Analysis Teal Demo App")),
     tags$span(
       style = "font-size: 30px;",
       "Example teal app focusing on analysis of RNA-seq data with teal.modules.hermes"
