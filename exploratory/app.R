@@ -325,9 +325,9 @@ app <- init(
       plot_width = c(600L, 200L, 2000L)
     )
   ),
+  title = build_app_title("Exploratory Analysis Teal Demo App", nest_logo),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$head(tags$link(rel = "shortcut icon", href = nest_logo), tags$title("Exploratory Analysis Teal Demo App")),
     tags$span(
       style = "font-size: 30px;",
       "Example teal app for general dataset exploration with teal.modules.general"

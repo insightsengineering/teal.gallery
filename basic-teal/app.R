@@ -8,9 +8,9 @@ app <- init(
     teal_slice(dataname = "IRIS", varname = "Species", multiple = FALSE)
   ),
   modules = modules(example_module()),
+  title = build_app_title("Basic Teal Demo App", nest_logo),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$head(tags$link(rel = "shortcut icon", href = nest_logo), tags$title("Basic Teal Demo App")),
     tags$span(
       style = "font-size: 30px;",
       "My first teal app"

@@ -423,12 +423,9 @@ app <- init(
       plot_height = c(1200, 400, 5000)
     )
   ),
+  title = build_app_title("Early Development Analysis Teal Demo App", nest_logo),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$head(
-      tags$link(rel = "shortcut icon", href = nest_logo),
-      tags$title("Early Development Analysis Teal Demo App")
-    ),
     tags$span(
       style = "font-size: 30px;",
       "Example teal app focusing on analysis of early-phase clinical trial data with teal.osprey"

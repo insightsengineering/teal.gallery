@@ -478,9 +478,9 @@ app <- teal::init(
       plot_height = c(1000L, 200L, 4000L)
     )
   ),
+  title = build_app_title("Safety Analysis Teal Demo App", nest_logo),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$head(tags$link(rel = "shortcut icon", href = nest_logo), tags$title("Safety Analysis Teal Demo App")),
     tags$span(
       style = "font-size: 30px;",
       "Example teal app focusing on safety analysis of clinical trial data with teal.modules.clinical"
