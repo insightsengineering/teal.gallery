@@ -2209,14 +2209,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.14.0.9036",
+      "Version": "0.14.0.9037",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "a3236820b8b8031de137f97004737d21846b21ea",
+      "RemoteSha": "a257bd795194f41a68db5339547230cbeeb22d97",
       "Requirements": [
         "R",
         "checkmate",
@@ -2237,7 +2237,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "5bcfe3506e814c2546d4d615c5603f37"
+      "Hash": "a44c17b3c7d88c3f678abab1fc4d4176"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2261,14 +2261,14 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.3.0.9031",
+      "Version": "0.3.0.9032",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "052480a38911c47b3f8763a4f0564403ac9933b7",
+      "RemoteSha": "79d37932d21b52e21d69681de82ae156e55d307f",
       "Requirements": [
         "R",
         "checkmate",
@@ -2280,7 +2280,7 @@
         "utils",
         "yaml"
       ],
-      "Hash": "c3c6c4de582b39e36260b0f586ffb514"
+      "Hash": "eb60b2967d6adc3cf641ef8ac796f671"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -2468,15 +2468,16 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.3.9004",
+      "Version": "0.9.3.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "0c2daebb055496aa03b67b0ce2c595af40956f7b",
+      "RemoteSha": "5a48c7eb7d56d8617776901538cd2d70e56a21a7",
       "Requirements": [
+        "MASS",
         "R",
         "Rdpack",
         "broom",
@@ -2504,7 +2505,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "c08f2ceb0ba03e31b53b8ed6ecdd0468"
+      "Hash": "5e18496355cb78ce126168aea28d15ac"
     },
     "testthat": {
       "Package": "testthat",
