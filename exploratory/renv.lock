@@ -831,14 +831,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.5.9003",
+      "Version": "0.5.5.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "58706b88f1b2d4250282569c67a9c4f170ea5aa9",
+      "RemoteSha": "76838a3b218e0ad320a7f0b38fa80e03d70628c4",
       "Requirements": [
         "R",
         "checkmate",
@@ -846,7 +846,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "7afa117f81da8b5709e6f87832a756d5"
+      "Hash": "b868384f2e2ac4d5bc734ab09c0a2058"
     },
     "fs": {
       "Package": "fs",
@@ -2199,14 +2199,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.14.0.9036",
+      "Version": "0.14.0.9037",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "a3236820b8b8031de137f97004737d21846b21ea",
+      "RemoteSha": "a257bd795194f41a68db5339547230cbeeb22d97",
       "Requirements": [
         "R",
         "checkmate",
@@ -2227,7 +2227,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "5bcfe3506e814c2546d4d615c5603f37"
+      "Hash": "a44c17b3c7d88c3f678abab1fc4d4176"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2251,14 +2251,14 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.3.0.9031",
+      "Version": "0.3.0.9032",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "052480a38911c47b3f8763a4f0564403ac9933b7",
+      "RemoteSha": "79d37932d21b52e21d69681de82ae156e55d307f",
       "Requirements": [
         "R",
         "checkmate",
@@ -2270,7 +2270,7 @@
         "utils",
         "yaml"
       ],
-      "Hash": "c3c6c4de582b39e36260b0f586ffb514"
+      "Hash": "eb60b2967d6adc3cf641ef8ac796f671"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -2458,15 +2458,16 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.3.9003",
+      "Version": "0.9.3.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "1a125691dceb91b9fad51de30f8abcf2b6050a24",
+      "RemoteSha": "5a48c7eb7d56d8617776901538cd2d70e56a21a7",
       "Requirements": [
+        "MASS",
         "R",
         "Rdpack",
         "broom",
@@ -2494,7 +2495,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "299530d56dec44720b9f040faeb6b462"
+      "Hash": "5e18496355cb78ce126168aea28d15ac"
     },
     "testthat": {
       "Package": "testthat",
