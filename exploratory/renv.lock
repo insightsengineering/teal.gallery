@@ -1875,14 +1875,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.6.9001",
+      "Version": "0.6.6.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "82c6c6e2e3b4c8e7a527dbaba17049bcf4597ffa",
+      "RemoteSha": "25e762d6493adad35d5f6c15babbb5e8031892f3",
       "Requirements": [
         "R",
         "checkmate",
@@ -1893,7 +1893,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "15cb0223e268345a296a0ca2caffbcd2"
+      "Hash": "7c74fdfd0b7a931c8d91dc032593f042"
     },
     "sandwich": {
       "Package": "sandwich",
@@ -2458,14 +2458,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.3.9005",
+      "Version": "0.9.3.9006",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "5a48c7eb7d56d8617776901538cd2d70e56a21a7",
+      "RemoteSha": "58d4c40e2b4d7ac912aeb85542f4fce401a22c28",
       "Requirements": [
         "MASS",
         "R",
@@ -2495,7 +2495,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "5e18496355cb78ce126168aea28d15ac"
+      "Hash": "4ff04c6e34c655974b71a0506d348cda"
     },
     "testthat": {
       "Package": "testthat",
