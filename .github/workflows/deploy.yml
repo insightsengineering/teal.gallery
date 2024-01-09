@@ -6,6 +6,7 @@ on:
     branches:
       - main
       - dev
+      - deploy
     paths:
       - RNA-seq/**
       - basic-teal/**
@@ -22,7 +23,6 @@ on:
 
 concurrency:
   group: publish-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
 
 env:
   SHINYAPPSIO_ACCOUNT: genentech
