@@ -101,7 +101,7 @@
     },
     "MASS": {
       "Package": "MASS",
-      "Version": "7.3-60",
+      "Version": "7.3-60.0.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -112,7 +112,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "a56a6365b3fa73293ea8d084be0d9bb0"
+      "Hash": "b765b28387acc8ec9e9c1530713cb19c"
     },
     "Matrix": {
       "Package": "Matrix",
@@ -1533,9 +1533,9 @@
     },
     "plotly": {
       "Package": "plotly",
-      "Version": "4.10.3",
+      "Version": "4.10.4",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "RColorBrewer",
@@ -1561,7 +1561,7 @@
         "vctrs",
         "viridisLite"
       ],
-      "Hash": "56914cc61df53f2d0283d5498680867e"
+      "Hash": "a1ac5c03ad5ad12b9d1597e00e23c3dd"
     },
     "plyr": {
       "Package": "plyr",
