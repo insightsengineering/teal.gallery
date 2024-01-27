@@ -212,7 +212,7 @@ app <- init(
           fixed = FALSE
         )
       ),
-      aval = data_extract_spec(
+      aval_var = data_extract_spec(
         dataname = "ADVS",
         select = select_spec(
           choices = variable_choices(ADVS, "AVAL"),
@@ -379,7 +379,7 @@ app <- init(
           fixed = FALSE
         )
       ),
-      aval = data_extract_spec(
+      aval_var = data_extract_spec(
         dataname = "ADLB",
         select = select_spec(
           choices = variable_choices(ADLB, "AVAL"),
