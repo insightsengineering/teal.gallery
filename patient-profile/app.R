@@ -388,7 +388,7 @@ app <- init(
           fixed = FALSE
         )
       ),
-      avalu = data_extract_spec(
+      avalu_var = data_extract_spec(
         dataname = "ADLB",
         select = select_spec(
           choices = variable_choices(ADLB, "AVALU"),
