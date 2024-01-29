@@ -124,7 +124,7 @@ data <- within(data, {
     filter(PARAMCD %in% c("BESRSPI", "INVET")) %>%
     mutate(ADT = as.Date(ADTM)) %>%
     droplevels()
-  teal.data::col_labels(ADRS) <- c(adrs_labels, "Analysis Date")
+  teal.data::col_labels(ADRS)["ADT"] <- "Analysis Date"
 
   ADLB <- synthetic_cdisc_data("latest")$adlb
 
@@ -132,7 +132,7 @@ data <- within(data, {
   ADLB <- ADLB %>%
     mutate(
       ADT = as.Date(ADTM),
-      LBSTRESN = as.numeric(LBSTRESC)
+      LBSTRESN = as.numeric(gsub("[^0-9]", "", LBSTRESC))
     ) %>%
     teal.data::col_relabel(
       ADT = "Analysis Date",
