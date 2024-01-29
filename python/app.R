@@ -70,7 +70,7 @@ data_new
 
 app <- teal::init(
   data = data,
-  title = "Example teal app using python connector",
+  title = build_app_title("Python Dataset Teal Demo App", nest_logo),
   modules = modules(
     tm_data_table("Data Table"),
     tm_variable_browser("Variable Browser"),
@@ -118,7 +118,6 @@ app <- teal::init(
       )
     )
   ),
-  title = build_app_title("Python Dataset Teal Demo App", nest_logo),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
     tags$span(
