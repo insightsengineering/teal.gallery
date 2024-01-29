@@ -474,9 +474,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.2",
-      "Source": "Repository",
-      "Repository": "RSPM",
+      "Version": "0.5.5.9006",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "formatters",
+      "RemoteRef": "main",
+      "RemoteSha": "11eef394ae54a1bc7b118358564b1a54b6f13697",
       "Requirements": [
         "R",
         "checkmate",
@@ -484,7 +489,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "66e3699796095d886233708c59bd10ea"
+      "Hash": "2b8097115d81e3922ecf96544aae7ba2"
     },
     "fs": {
       "Package": "fs",
