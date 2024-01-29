@@ -21,9 +21,6 @@ on:
   schedule:
     - cron: "12 3 * * *"
 
-concurrency:
-  group: publish-${{ github.event.pull_request.number || github.ref }}
-
 env:
   SHINYAPPSIO_ACCOUNT: genentech
   APP_PREFIX: NEST
