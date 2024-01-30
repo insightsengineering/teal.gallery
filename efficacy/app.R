@@ -1,6 +1,5 @@
 library(teal.modules.general)
 library(teal.modules.clinical)
-library(sparkline)
 options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
@@ -12,6 +11,8 @@ data <- within(data, {
   library(scda)
   library(scda.2022)
   library(nestcolor)
+  # optional libraries
+  library(sparkline)
 
   ADSL <- synthetic_cdisc_data("latest")$adsl
   adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
