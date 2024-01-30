@@ -1,11 +1,5 @@
-library(dplyr)
-library(scda)
-library(scda.2022)
 library(teal.modules.general)
 library(teal.modules.clinical)
-library(nestcolor)
-# optional libraries
-library(sparkline)
 options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
@@ -13,6 +7,13 @@ nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
+  library(scda)
+  library(scda.2022)
+  library(dplyr)
+  library(nestcolor)
+  # optional libraries
+  library(sparkline)
+
   ADSL <- synthetic_cdisc_data("latest")$adsl
   ADAE <- synthetic_cdisc_data("latest")$adae
   ADAETTE <- synthetic_cdisc_data("latest")$adaette

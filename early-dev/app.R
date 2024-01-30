@@ -1,4 +1,6 @@
-library(teal)
+library(teal.modules.clinical)
+library(teal.modules.general)
+library(teal.osprey)
 options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
@@ -9,9 +11,6 @@ data <- within(data, {
   library(scda)
   library(scda.2022)
   library(dplyr)
-  library(teal.modules.clinical)
-  library(teal.modules.general)
-  library(teal.osprey)
   library(nestcolor)
   # optional libraries
   library(sparkline)
@@ -149,9 +148,9 @@ join_keys(data) <- default_cdisc_join_keys[datanames] # get default keys by name
 join_keys(data)["ADTR", "ADTR"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
 join_keys(data)["ADTRWF", "ADTRWF"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
 join_keys(data)["ADRSSWIM", "ADRSSWIM"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
-join_keys(data)["ADTR", "ADSL"] <- c("STUDYID", "USUBJID")
-join_keys(data)["ADTRWF", "ADSL"] <- c("STUDYID", "USUBJID")
-join_keys(data)["ADRSSWIM", "ADSL"] <- c("STUDYID", "USUBJID")
+join_keys(data)["ADSL", "ADTR"] <- c("STUDYID", "USUBJID")
+join_keys(data)["ADSL", "ADTRWF"] <- c("STUDYID", "USUBJID")
+join_keys(data)["ADSL", "ADRSSWIM"] <- c("STUDYID", "USUBJID")
 
 ## App configuration ----
 # reuse object from teal_data
