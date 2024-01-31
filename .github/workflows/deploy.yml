@@ -117,7 +117,7 @@ jobs:
           node-version: 20
 
       - name: Restore renv from cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ matrix.directory }}-${{ matrix.channel }}
         with:
