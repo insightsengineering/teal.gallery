@@ -459,7 +459,7 @@ app <- teal::init(
         selected = "ANRIND",
         fixed = TRUE
       ),
-      base_var = choices_selected(
+      baseline_var = choices_selected(
         variable_choices(ADEG, subset = "BNRIND"),
         selected = "BNRIND",
         fixed = TRUE
