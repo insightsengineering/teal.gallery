@@ -2128,31 +2128,25 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.3.0",
+      "Version": "0.4.0",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
-      "RemoteRef": "v0.3.0",
-      "RemoteSha": "f437944ffd6e06426d8336420cf80596d94a2798",
+      "RemoteRef": "v0.4.0",
+      "RemoteSha": "7106fa8f1e16c89b52b769de8db436afe27e92da",
       "Requirements": [
         "R",
-        "R6",
         "checkmate",
-        "digest",
         "lifecycle",
-        "logger",
         "methods",
         "rlang",
-        "shiny",
-        "shinyjs",
         "stats",
-        "teal.logger",
-        "utils",
-        "yaml"
+        "teal.code",
+        "utils"
       ],
-      "Hash": "4a3a59cab2af17e565976d52ca2b1325"
+      "Hash": "af6cee71240824258633d61bf2d5a314"
     },
     "teal.logger": {
       "Package": "teal.logger",
