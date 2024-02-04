@@ -1850,7 +1850,7 @@
     },
     "reticulate": {
       "Package": "reticulate",
-      "Version": "1.34.0",
+      "Version": "1.35.0",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -1868,7 +1868,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "a69f815bcba8a055de0b08339b943f9e"
+      "Hash": "90be16b53b955990db4aa355c03d85eb"
     },
     "rlang": {
       "Package": "rlang",
@@ -2209,14 +2209,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.14.0.9041",
+      "Version": "0.14.0.9042",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "364016cea8480ae2b1d6b59366ebd822af3c19c5",
+      "RemoteSha": "db0a420b84feaa9d9e59d1b5923e0bae79cb4ca5",
       "Requirements": [
         "R",
         "checkmate",
@@ -2237,18 +2237,18 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "ff03dfea23d0700f621c7699b9f8e0ac"
+      "Hash": "8fd94e1f71eb8d13b39ee0b3f77bdfce"
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.5.0.9001",
+      "Version": "0.5.0.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
       "RemoteRef": "main",
-      "RemoteSha": "4e8afeaf6012ad71f3a516f8ca2a8fc890299daa",
+      "RemoteSha": "05dee4111881c8650a2218e38ca87478015cfed8",
       "Requirements": [
         "R",
         "checkmate",
@@ -2257,18 +2257,18 @@
         "methods",
         "rlang"
       ],
-      "Hash": "e564cc46608fc3d2c4db2b8bfdda43c8"
+      "Hash": "29c733bacc3a35ed5297e3a843743340"
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.3.0.9042",
+      "Version": "0.4.0.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "98f5631af1de4e38f105bcf9d588ac22d198f13d",
+      "RemoteSha": "602da85076a25103dd4a59d626fd82ebdad9ec8c",
       "Requirements": [
         "R",
         "checkmate",
@@ -2277,10 +2277,9 @@
         "rlang",
         "stats",
         "teal.code",
-        "utils",
-        "yaml"
+        "utils"
       ],
-      "Hash": "4da7a448d28953a4fdf78952f5e648c9"
+      "Hash": "4553a332fa0d3ff8d4d7bad0e81c1edc"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -2347,14 +2346,14 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.2.1.9016",
+      "Version": "0.2.1.9017",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "1d30b0f33e5bf323753a3b09f878d896146d4d2c",
+      "RemoteSha": "684723274d1ef74e6dd40dbf2c8c5b1b1338a336",
       "Requirements": [
         "R6",
         "bslib",
@@ -2370,18 +2369,18 @@
         "yaml",
         "zip"
       ],
-      "Hash": "dd8402b572588304497d71a16dff8376"
+      "Hash": "db311d0f1bc667fe63f6fd582f1bdccf"
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.4.0.9036",
+      "Version": "0.4.0.9040",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "5c99ef2f27b98c3841292423cd4273c4cc0ccbd8",
+      "RemoteSha": "d2f895d8dcede0cc4fad5f0c8367f39733f93da6",
       "Requirements": [
         "R",
         "R6",
@@ -2404,7 +2403,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "10e864f8304e068abc1bb043025ac1ed"
+      "Hash": "f2fbdfb4a4eb82b7917b192871986e94"
     },
     "teal.transform": {
       "Package": "teal.transform",
