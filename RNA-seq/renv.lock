@@ -2915,8 +2915,8 @@
       "RemoteHost": "api.github.com",
       "RemoteRepo": "teal",
       "RemoteUsername": "insightsengineering",
-      "RemoteRef": "1076_reorder_formals@pre-release-cleanup@main",
-      "RemoteSha": "1e4f8dba0c061c413985351dae15cf835cecdc24",
+      "RemoteRef": "1077_stable_hashes@pre-release-cleanup@main",
+      "RemoteSha": "437655ff9c8204471e19379d15cf40cb156b723a",
       "Requirements": [
         "R",
         "checkmate",
