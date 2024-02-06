@@ -101,7 +101,7 @@
     },
     "DescTools": {
       "Package": "DescTools",
-      "Version": "0.99.53",
+      "Version": "0.99.54",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -126,7 +126,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "13295e6586ffc892aaa6345a4b7e5d42"
+      "Hash": "cdd76cdd712d77020083cf669af8b3f3"
     },
     "Exact": {
       "Package": "Exact",
@@ -1005,9 +1005,9 @@
     },
     "geepack": {
       "Package": "geepack",
-      "Version": "1.3.9",
+      "Version": "1.3.10",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "MASS",
         "R",
@@ -1015,7 +1015,7 @@
         "magrittr",
         "methods"
       ],
-      "Hash": "a17ce69e254ef2539f6e420c3cce830f"
+      "Hash": "d4bb3188c4196b3fa2dc52fe13a11e71"
     },
     "generics": {
       "Package": "generics",
@@ -2503,31 +2503,25 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.3.0",
+      "Version": "0.4.0",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
-      "RemoteRef": "v0.3.0",
-      "RemoteSha": "f437944ffd6e06426d8336420cf80596d94a2798",
+      "RemoteRef": "v0.4.0",
+      "RemoteSha": "7106fa8f1e16c89b52b769de8db436afe27e92da",
       "Requirements": [
         "R",
-        "R6",
         "checkmate",
-        "digest",
         "lifecycle",
-        "logger",
         "methods",
         "rlang",
-        "shiny",
-        "shinyjs",
         "stats",
-        "teal.logger",
-        "utils",
-        "yaml"
+        "teal.code",
+        "utils"
       ],
-      "Hash": "4a3a59cab2af17e565976d52ca2b1325"
+      "Hash": "af6cee71240824258633d61bf2d5a314"
     },
     "teal.logger": {
       "Package": "teal.logger",
