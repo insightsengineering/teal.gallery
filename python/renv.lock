@@ -1532,9 +1532,9 @@
     },
     "officer": {
       "Package": "officer",
-      "Version": "0.6.3",
+      "Version": "0.6.4",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R6",
         "grDevices",
@@ -1547,7 +1547,7 @@
         "xml2",
         "zip"
       ],
-      "Hash": "8bf043833d27228a38e0be2517230bcd"
+      "Hash": "59cf253b0daa7e2962d8fe9da7b235c5"
     },
     "openssl": {
       "Package": "openssl",
@@ -2261,14 +2261,14 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.4.0.9001",
+      "Version": "0.4.0.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "602da85076a25103dd4a59d626fd82ebdad9ec8c",
+      "RemoteSha": "ba5258f1a0485625654e920dba3eb43d2031b063",
       "Requirements": [
         "R",
         "checkmate",
@@ -2279,7 +2279,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "4553a332fa0d3ff8d4d7bad0e81c1edc"
+      "Hash": "80f6f6584f6187a669eaf9720962dc60"
     },
     "teal.logger": {
       "Package": "teal.logger",
