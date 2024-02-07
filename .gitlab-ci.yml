@@ -1,0 +1,27 @@
+stages:
+  - deploy
+
+rsconnect-deploy:
+  stage: deploy
+  trigger:
+    include:
+      - project: 'nest/automation/gitlab-shared-library'
+        ref: main
+        file: '/R/Jobs/RSConnect.gitlab-ci.yml'
+  parallel:
+    matrix:
+      - APP_DIRECTORY:
+        - "RNA-seq"
+        - "basic-teal"
+        - "early-dev"
+        - "efficacy"
+        - "exploratory"
+        - "longitudinal"
+        - "patient-profile"
+        - "python"
+        - "safety"
+        UPDATE_RENV_LOCK: "false"
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+
