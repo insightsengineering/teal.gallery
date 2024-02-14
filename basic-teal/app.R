@@ -3,7 +3,7 @@ library(teal)
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 
 app <- init(
-  data = teal_data(IRIS = iris, MTCARS = mtcars),
+  data = teal_data::teal_data(IRIS = iris, MTCARS = mtcars, code = c("IRIS <- iris;MTCARS <- mtcars")),
   filter = teal_slices(
     teal_slice(dataname = "IRIS", varname = "Species", multiple = FALSE)
   ),
