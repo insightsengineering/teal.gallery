@@ -1272,14 +1272,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.0.9000",
+      "Version": "0.15.0.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "33ebb42b197252b8e26157d64dd2704705d6125a",
+      "RemoteSha": "edfa9b459602563b99b3be3e7275fa9393e2a989",
       "Requirements": [
         "R",
         "checkmate",
@@ -1300,7 +1300,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "619b2b7281ca295b80ae32a9bc6da83e"
+      "Hash": "f99391fa119757edf05542a195ef77cf"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -1324,14 +1324,14 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.4.0.9005",
+      "Version": "0.5.0.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "4e921da365dd72fdd26c732375328f4efc2183fb",
+      "RemoteSha": "0b154de9a4b3d3ca834d8381b41edc2aecdbc508",
       "Requirements": [
         "R",
         "checkmate",
@@ -1342,7 +1342,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "8b846a64975e1073766dfb6c4764cf62"
+      "Hash": "8cab7411a28897af7ad2c0036612efde"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -1427,14 +1427,14 @@
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.2.9003",
+      "Version": "0.4.2.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "59733d0f515085e88a8e75d99c07d2bdfd82d286",
+      "RemoteSha": "81d0136fddc36dc358691b7b805e089609160e01",
       "Requirements": [
         "R",
         "bslib",
@@ -1451,7 +1451,7 @@
         "shinyjs",
         "styler"
       ],
-      "Hash": "8575c1f608b2cf100e128deeea80c8e0"
+      "Hash": "9290fea5c0fae8e0920540c22fabc730"
     },
     "textshaping": {
       "Package": "textshaping",
