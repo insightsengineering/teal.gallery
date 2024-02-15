@@ -127,7 +127,7 @@ app <- init(
       tables = list(`NEST packages used in this demo app` = data.frame(Packages = c("teal.modules.general", "teal.modules.clinical", "scda", "scda.2022")))
     ),
     tm_t_pp_basic_info(
-      label = "Basic info",
+      label = "Basic Info",
       dataname = "ADSL",
       patient_col = "USUBJID",
       vars = data_extract_spec(
@@ -141,7 +141,7 @@ app <- init(
       )
     ),
     tm_t_pp_medical_history(
-      label = "Medical history",
+      label = "Medical History",
       parentname = "ADSL",
       patient_col = "USUBJID",
       mhterm = data_extract_spec(
@@ -173,7 +173,7 @@ app <- init(
       )
     ),
     tm_t_pp_prior_medication(
-      label = "Prior medication",
+      label = "Prior Medication",
       parentname = "ADSL",
       patient_col = "USUBJID",
       atirel = atirel_input,
@@ -287,7 +287,7 @@ app <- init(
       )
     ),
     tm_g_pp_adverse_events(
-      label = "Adverse events",
+      label = "Adverse Events",
       parentname = "ADSL",
       patient_col = "USUBJID",
       plot_height = c(600L, 200L, 2000L),
@@ -340,7 +340,7 @@ app <- init(
       decod = NULL
     ),
     tm_t_pp_laboratory(
-      label = "Lab values",
+      label = "Lab Values",
       parentname = "ADSL",
       patient_col = "USUBJID",
       paramcd = data_extract_spec(
@@ -399,7 +399,7 @@ app <- init(
       )
     ),
     tm_g_pp_patient_timeline(
-      label = "Patient timeline",
+      label = "Patient Timeline",
       parentname = "ADSL",
       patient_col = "USUBJID",
       plot_height = c(600L, 200L, 2000L),
