@@ -1712,15 +1712,15 @@
     },
     "parallelly": {
       "Package": "parallelly",
-      "Version": "1.36.0",
+      "Version": "1.37.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "parallel",
         "tools",
         "utils"
       ],
-      "Hash": "bca377e1c87ec89ebed77bba00635b2e"
+      "Hash": "8da17de8b15c89b574269fc414ff4e20"
     },
     "pbkrtest": {
       "Package": "pbkrtest",
@@ -2507,14 +2507,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.8.16.9087",
+      "Version": "0.8.16.9088",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "16d65b218d002e3f0ed9485a9fa3ffc1f7b0a59c",
+      "RemoteSha": "c804c8e979ae57b3e5a08fc9445b5c49cce72440",
       "Requirements": [
         "DT",
         "R",
@@ -2550,7 +2550,7 @@
         "utils",
         "vistime"
       ],
-      "Hash": "5588193beb6814337f6938066cbbe1f5"
+      "Hash": "89987e04a0f9ce63eb2a20cc749943c8"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
