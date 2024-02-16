@@ -278,7 +278,7 @@ data <- within(data, {
   #  - value assigned to AVAL is x/2 and y respectively. LOQFL is assigned "Y"
   #  - other LBSTRESC value formats will need to be pre-pocessed so that AVAL and LOQFL are assigned as desired
   # LBSTRESC is required in order to use the h_identify_loq_values function. if this is not available then LBSTRESC <- AVAL
-  ADLB_LOQS <- goshawk:::h_identify_loq_values(ADLB)
+  ADLB_LOQS <- goshawk:::h_identify_loq_values(ADLB, flag_var = "LOQFL")
   ADLB <- left_join(ADLB, ADLB_LOQS, by = "PARAM")
   ################################################################################
   # END: Generic Data Post Processing
