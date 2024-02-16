@@ -2805,14 +2805,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.8.16.9088",
+      "Version": "0.8.16.9089",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "c804c8e979ae57b3e5a08fc9445b5c49cce72440",
+      "RemoteSha": "846954354fa2c7f5dc0e704359de681ecb11678b",
       "Requirements": [
         "DT",
         "R",
@@ -2848,18 +2848,18 @@
         "utils",
         "vistime"
       ],
-      "Hash": "89987e04a0f9ce63eb2a20cc749943c8"
+      "Hash": "312ee76b2e6bd082d505af7f31205d3f"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.2.16.9020",
+      "Version": "0.2.16.9021",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "2507e36302c9f882be049c1ed3e88645328a353e",
+      "RemoteSha": "d497977d202dc8c594d13b880b8296ab494b6461",
       "Requirements": [
         "DT",
         "R",
@@ -2891,7 +2891,7 @@
         "tidyselect",
         "utils"
       ],
-      "Hash": "2d3e6c163e103ebed90e545d3c32be42"
+      "Hash": "ce2df531dd0a60447caf2e03fb41a72b"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -2956,14 +2956,14 @@
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.4.0.9018",
+      "Version": "0.4.0.9019",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.transform",
       "RemoteRef": "main",
-      "RemoteSha": "4ed61900b92eaee1816fbba33ff2e27ed3987f6f",
+      "RemoteSha": "da7e7e990342b42fa4e1c489d266c5f60adf604c",
       "Requirements": [
         "R",
         "checkmate",
@@ -2983,7 +2983,7 @@
         "tidyr",
         "tidyselect"
       ],
-      "Hash": "aacc3b36b14361907b88be5997c6e904"
+      "Hash": "00014701cfa77df3c6bc76f5b5285508"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
