@@ -104,9 +104,6 @@ data <- within(data, {
   ADSL <- ADSL %>%
     mutate_at(char_vars_adsl, factor)
 
-  # add labels back onto variables
-  var_labels(ADSL) <- c(adsl_labels)
-
   # post process the ADLB data to subset records per specification
   # goshawk expects the following variables: AVISITCD, AVALU, BASE2, CHG2, LBSTRESC, LOQFL, PCHG2
   # AVISITCD is assigned abbreviated values of AVISIT. this allows for more efficient use of plot real estate for the plot itself
