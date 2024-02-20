@@ -1547,9 +1547,15 @@
     },
     "mmrm": {
       "Package": "mmrm",
-      "Version": "0.3.10",
-      "Source": "Bioconductor",
-      "Repository": "RSPM",
+      "Version": "0.3.10.9004",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "mmrm",
+      "RemoteUsername": "openpharma",
+      "RemotePkgRef": "openpharma/mmrm",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "5fb18c632da1c6434ec1349cc5c62630a2eead22",
       "Requirements": [
         "Matrix",
         "R",
@@ -1569,7 +1575,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "c84f8a54bca395a7f663e7d0bb08f799"
+      "Hash": "1ea75e1c674e1ae63ca310bffe4e64e4"
     },
     "mosaicCore": {
       "Package": "mosaicCore",
