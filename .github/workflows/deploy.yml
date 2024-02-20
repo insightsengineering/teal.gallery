@@ -152,7 +152,8 @@ jobs:
           options(renv.config.cache.symlinks = FALSE)
           lockfile_pkgs <- renv::lockfile_read()$Package
           github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source %in% c("GitHub", "Bioconductor"))]
-          renv::restore()
+          print(github_pkgs)
+          renv::restore(exclude = github_pkgs)
           renv::update(exclude = github_pkgs)
           renv::snapshot()
 
