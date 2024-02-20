@@ -17,8 +17,6 @@ data <- teal_data_module(
     ns <- NS(id)
     actionButton(ns("submit"), label = "Load data")
   },
-
-
   server = function(id) {
     moduleServer(id, function(input, output, session, python_code) {
       eventReactive(input$submit, {
