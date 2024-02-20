@@ -20,21 +20,37 @@ data <- teal_data_module(
   server = function(id) {
     moduleServer(id, function(input, output, session, python_code) {
       eventReactive(input$submit, {
-        data <- within(
+        # Prepare the Python environment by installing virtualenvironment
+        # Tags lines of code with comment "# @linksto py_dict" to hint the code
+        # parser on eval_code as these lines are necessary
+        data <- teal.code::eval_code(
           teal_data(),
-          {
+          "
             library(reticulate)
-            python_dependencies <- c("pip", "numpy", "pandas")
-            virtualenv_dir <- Sys.getenv("VIRTUALENV_NAME", "example_env_name")
-            python_path <- Sys.getenv("PYTHON_PATH")
-            if (python_path == "") {
-              python_path <- NULL
-            }
-            reticulate::virtualenv_create(envname = virtualenv_dir, python = python_path)
-            reticulate::virtualenv_install(virtualenv_dir, packages = python_dependencies, ignore_installed = TRUE)
-            reticulate::use_virtualenv(virtualenv_dir, required = TRUE)
-            iris_raw <- cbind(id = seq_len(nrow(iris)), iris)
-            python_code <- "import pandas as pd
+            python_dependencies <- c(\"pip\", \"numpy\", \"pandas\") # @linksto py_dict
+            virtualenv_dir <- Sys.getenv(\"VIRTUALENV_NAME\", \"example_env_name\") # @linksto py_dict
+            python_path <- Sys.getenv(\"PYTHON_PATH\") # @linksto py_dict
+            if (python_path == \"\") python_path <- NULL
+            reticulate::virtualenv_create(
+              envname = virtualenv_dir, python = python_path
+            ) # @linksto py_dict
+            reticulate::virtualenv_install(
+              virtualenv_dir,
+              packages = python_dependencies,
+              ignore_installed = TRUE
+            ) # @linksto py_dict
+            reticulate::use_virtualenv(virtualenv_dir, required = TRUE) # @linksto py_dict
+            iris_raw <- cbind(id = seq_len(nrow(iris)), iris) # @linksto py_dict
+          "
+        )
+
+        # Run python code to generate the IRIS dataset
+        data <- within(
+          data,
+          {
+            # python code needs to be un-indented
+            python_code <- "
+import pandas as pd
 data = r.iris_raw
 def svd_whiten(dat):
   import numpy as np
@@ -53,12 +69,12 @@ data_new = pd.concat([data, pd.DataFrame(svd_res)], axis = 1)
 data_new.columns = list(data_columns) + [i + '.whiten' for i in numeric_cols]
 data_new = data_new.round(10)
 data_new
-"
+            "
             withr::with_options(
               list(reticulate.engine.environment = environment()),
-              py_run_string(python_code)
+              py_dict <- py_run_string(python_code)
             )
-            IRIS <- py$data_new
+            IRIS <- py_dict$data_new
           }
         )
         datanames(data) <- c("IRIS")
