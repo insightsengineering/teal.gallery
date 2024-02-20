@@ -154,7 +154,7 @@ jobs:
           github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
           renv::purge("mmrm")
           renv::install('mmrm')
-          renv::restore(clean = TRUE)
+          renv::restore()
           renv::update(exclude = github_pkgs)
           renv::snapshot()
 
