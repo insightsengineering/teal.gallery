@@ -53,7 +53,7 @@ jobs:
           - python
           - safety
         channel:
-          # - stable
+          - stable
           - dev
     steps:
       - name: Set channel related constants
