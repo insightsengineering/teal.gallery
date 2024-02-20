@@ -119,7 +119,7 @@ jobs:
       - name: Restore renv from cache
         uses: actions/cache@v4
         env:
-          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ matrix.directory }}-${{ matrix.channel }}
+          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ matrix.directory }}--${{ matrix.channel }}
         with:
           path: ${{ matrix.directory }}/renv/library
           key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/renv.lock', matrix.directory)) }}
@@ -152,7 +152,7 @@ jobs:
           options(renv.config.cache.symlinks = FALSE)
           lockfile_pkgs <- renv::lockfile_read()$Package
           github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
-          renv::restore(exclude = github_pkgs)
+          renv::restore()
           renv::update(exclude = github_pkgs)
           renv::snapshot()
 
