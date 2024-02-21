@@ -2143,7 +2143,7 @@
     "nestcolor": {
       "Package": "nestcolor",
       "Version": "0.1.2",
-      "Source": "Bioconductor",
+      "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
         "R",

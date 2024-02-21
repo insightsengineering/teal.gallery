@@ -11,7 +11,7 @@
         "URL": "https://cloud.r-project.org"
       }
     ]
-  }
+  },
   "Packages": {
     "BH": {
       "Package": "BH",
