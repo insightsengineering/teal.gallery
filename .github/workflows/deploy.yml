@@ -138,9 +138,12 @@ jobs:
           )
           for (package in lockfile$Packages) {
               if (package$Source == "GitHub") {
+                print(package$Package)
                   if (package$Package %in% unreleased_packages) {
+                    print("Recording main")
                     renv::record(sprintf("%s/%s", package$RemoteUsername, package$Package))
                   } else {
+                    print("Recording stable")
                     renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
                   }
               }
