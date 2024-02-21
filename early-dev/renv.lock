@@ -3,6 +3,26 @@
     "Version": "4.3.2",
     "Repositories": [
       {
+        "Name": "BioCsoft",
+        "URL": "https://bioconductor.org/packages/3.17/bioc"
+      },
+      {
+        "Name": "BioCann",
+        "URL": "https://bioconductor.org/packages/3.17/data/annotation"
+      },
+      {
+        "Name": "BioCexp",
+        "URL": "https://bioconductor.org/packages/3.17/data/experiment"
+      },
+      {
+        "Name": "BioCworkflows",
+        "URL": "https://bioconductor.org/packages/3.17/workflows"
+      },
+      {
+        "Name": "BioCbooks",
+        "URL": "https://bioconductor.org/packages/3.17/books"
+      },
+      {
         "Name": "RSPM",
         "URL": "https://packagemanager.posit.co/cran/latest"
       },
@@ -1694,10 +1714,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "nestcolor",
       "RemoteUsername": "insightsengineering",
-      "RemotePkgRef": "insightsengineering/nestcolor",
-      "RemoteRef": "HEAD",
+      "RemoteRepo": "nestcolor",
+      "RemoteRef": "main",
       "RemoteSha": "9ad1ed4f7e62f2f1dd30cb43ae77a7e506108de7",
       "Requirements": [
         "R",
@@ -1705,7 +1724,7 @@
         "ggplot2",
         "lifecycle"
       ],
-      "Hash": "5671a1f1420e40d5f2a06c8cccc9b0ee"
+      "Hash": "b950b201267181a06284fa78a66a4367"
     },
     "nlme": {
       "Package": "nlme",
