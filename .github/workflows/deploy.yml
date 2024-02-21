@@ -149,6 +149,10 @@ jobs:
               }
           }
 
+      - name: Print the new renv.lock file for ${{ matrix.directory }}
+        working-directory: ${{ matrix.directory }}
+        run: cat renv.lock
+
       - name: Install R packages using renv and update the renv snapshot
         shell: Rscript {0}
         working-directory: ${{ matrix.directory }}
