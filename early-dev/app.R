@@ -1,141 +1,177 @@
-library(scda)
-library(scda.2022)
-library(dplyr)
 library(teal.modules.clinical)
 library(teal.modules.general)
 library(teal.osprey)
-library(nestcolor)
-# optional libraries
-library(sparkline)
-
 options(shiny.useragg = FALSE)
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 
-ADSL <- synthetic_cdisc_data("latest")$adsl
+## Data reproducible code ----
+data <- teal_data()
+data <- within(data, {
+  library(scda)
+  library(scda.2022)
+  library(dplyr)
+  library(nestcolor)
+  # optional libraries
+  library(sparkline)
 
-# derive ADSL treatment duration
-adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
-ADSL <- ADSL %>%
-  mutate(
-    TRTDURD = as.numeric(as.Date(TRTEDTM) - as.Date(TRTSDTM)) + 1,
-    DTHFL = ifelse(!is.na(DTHDT), "Y", NA),
-    EOSSTT = factor(EOSSTT, levels = c("COMPLETED", "ONGOING", "DISCONTINUED"))
-  ) %>%
-  teal.data::col_relabel(
-    TRTDURD = "Treatment Duration in Days",
-    DTHFL = "Death Flag",
-    DCSREAS = "Reason for Study Discontinuation",
-    EOSSTT = "End of Study Status"
-  ) %>%
-  droplevels()
-teal.data::col_labels(ADSL)[c(names(adsl_labels))] <- adsl_labels
+  ADSL <- synthetic_cdisc_data("latest")$adsl
 
-ADAE <- synthetic_cdisc_data("latest")$adae
+  # derive ADSL treatment duration
+  adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
+  ADSL <- ADSL %>%
+    mutate(
+      TRTDURD = as.numeric(as.Date(TRTEDTM) - as.Date(TRTSDTM)) + 1,
+      DTHFL = ifelse(!is.na(DTHDT), "Y", NA),
+      EOSSTT = factor(EOSSTT, levels = c("COMPLETED", "ONGOING", "DISCONTINUED"))
+    ) %>%
+    teal.data::col_relabel(
+      TRTDURD = "Treatment Duration in Days",
+      DTHFL = "Death Flag",
+      DCSREAS = "Reason for Study Discontinuation",
+      EOSSTT = "End of Study Status"
+    ) %>%
+    droplevels()
+  teal.data::col_labels(ADSL)[c(names(adsl_labels))] <- adsl_labels
 
-# derive common flags for AEs
-adae_labels <- teal.data::col_labels(ADAE, fill = FALSE)
-ADAE <- ADAE %>%
-  mutate_at(c("AESOC", "AEBODSYS", "AEHLT", "AEDECOD", "AETERM", "AELLT"), as.character) %>%
-  mutate(
-    RELFL = ifelse(AEREL == "Y", "Y", "N"),
-    CTC35FL = ifelse(AETOXGR %in% c("3", "4", "5"), "Y", "N"),
-    SERFL = ifelse(AESER == "Y", "Y", "N"),
-    RELSERFL = ifelse(AEREL == "Y" & AESER == "Y", "Y", "N"),
-    AEREL1 = (AEREL == "Y" & ACTARM == "A: Drug X"),
-    AEREL2 = (AEREL == "Y" & ACTARM == "B: Placebo"),
-    ASTDT = as.Date(ASTDTM),
-    AENDT = as.Date(AENDTM)
-  ) %>%
-  teal.data::col_relabel(
-    RELFL = "Related AE",
-    CTC35FL = "Grade >=3 AE",
-    SERFL = "Serious AE",
-    RELSERFL = "Related Serious AE",
-    AEREL1 = "AE related to A: Drug X",
-    AEREL2 = "AE related to B: Placebo",
-    ASTDT = "Analysis Start Date",
-    AENDT = "Analysis End Date",
-    AESOC = "Primary System Organ Class",
-    AEBODSYS = "Body System or Organ Class",
-    AEHLT = "High Level Term",
-    AEDECOD = "Dictionary-Derived Term",
-    AETERM = "Reported Term for the Adverse Event",
-    AELLT = "Lowest Level Term"
-  )
+  ADAE <- synthetic_cdisc_data("latest")$adae
 
-ADCM <- synthetic_cdisc_data("latest")$adcm
+  # derive common flags for AEs
+  adae_labels <- teal.data::col_labels(ADAE, fill = FALSE)
+  ADAE <- ADAE %>%
+    mutate_at(c("AESOC", "AEBODSYS", "AEHLT", "AEDECOD", "AETERM", "AELLT"), as.character) %>%
+    mutate(
+      RELFL = ifelse(AEREL == "Y", "Y", "N"),
+      CTC35FL = ifelse(AETOXGR %in% c("3", "4", "5"), "Y", "N"),
+      SERFL = ifelse(AESER == "Y", "Y", "N"),
+      RELSERFL = ifelse(AEREL == "Y" & AESER == "Y", "Y", "N"),
+      AEREL1 = (AEREL == "Y" & ACTARM == "A: Drug X"),
+      AEREL2 = (AEREL == "Y" & ACTARM == "B: Placebo"),
+      ASTDT = as.Date(ASTDTM),
+      AENDT = as.Date(AENDTM)
+    ) %>%
+    teal.data::col_relabel(
+      RELFL = "Related AE",
+      CTC35FL = "Grade >=3 AE",
+      SERFL = "Serious AE",
+      RELSERFL = "Related Serious AE",
+      AEREL1 = "AE related to A: Drug X",
+      AEREL2 = "AE related to B: Placebo",
+      ASTDT = "Analysis Start Date",
+      AENDT = "Analysis End Date",
+      AESOC = "Primary System Organ Class",
+      AEBODSYS = "Body System or Organ Class",
+      AEHLT = "High Level Term",
+      AEDECOD = "Dictionary-Derived Term",
+      AETERM = "Reported Term for the Adverse Event",
+      AELLT = "Lowest Level Term"
+    )
 
-# process ADCM
-ADCM <- ADCM %>%
-  mutate(
-    ASTDT = as.Date(ASTDTM),
-    AENDT = as.Date(AENDTM)
-  ) %>%
-  teal.data::col_relabel(
-    ASTDT = "Analysis Start Date",
-    AENDT = "Analysis End Date"
-  )
+  ADCM <- synthetic_cdisc_data("latest")$adcm
 
-ADEX <- synthetic_cdisc_data("latest")$adex
+  # process ADCM
+  ADCM <- ADCM %>%
+    mutate(
+      ASTDT = as.Date(ASTDTM),
+      AENDT = as.Date(AENDTM)
+    ) %>%
+    teal.data::col_relabel(
+      ASTDT = "Analysis Start Date",
+      AENDT = "Analysis End Date"
+    )
 
-# process ADEX
-ADEX <- ADEX %>%
-  mutate(
-    ASTDT = as.Date(ASTDTM),
-    AENDT = as.Date(AENDTM)
-  ) %>%
-  teal.data::col_relabel(
-    ASTDT = "Analysis Start Date",
-    AENDT = "Analysis End Date"
-  )
+  ADEX <- synthetic_cdisc_data("latest")$adex
 
-ADTR <- synthetic_cdisc_data("latest")$adtr
+  # process ADEX
+  ADEX <- ADEX %>%
+    mutate(
+      ASTDT = as.Date(ASTDTM),
+      AENDT = as.Date(AENDTM)
+    ) %>%
+    teal.data::col_relabel(
+      ASTDT = "Analysis Start Date",
+      AENDT = "Analysis End Date"
+    )
 
-# process ADTR
-adtr_labels <- teal.data::col_labels(ADTR, fill = FALSE)
-ADTR <- ADTR %>%
-  mutate(
-    PCHG = ifelse(AVISIT == "BASELINE", 0, PCHG),
-    CHG = ifelse(AVISIT == "BASELINE", 0, CHG),
-    AVAL = ifelse(AVISIT == "BASELINE", BASE, AVAL),
-    AVALC = ifelse(AVISIT == "BASELINE", as.character(BASE), AVALC)
-  ) %>%
-  filter(AVISIT != "SCREENING")
-teal.data::col_labels(ADTR) <- adtr_labels
+  ADTR <- synthetic_cdisc_data("latest")$adtr
 
-ADTRWF <- ADTR %>%
-  filter(AVISIT != "BASELINE")
-teal.data::col_labels(ADTRWF) <- teal.data::col_labels(ADTR, fill = FALSE)
+  # process ADTR
+  adtr_labels <- teal.data::col_labels(ADTR, fill = FALSE)
+  ADTR <- ADTR %>%
+    mutate(
+      PCHG = ifelse(AVISIT == "BASELINE", 0, PCHG),
+      CHG = ifelse(AVISIT == "BASELINE", 0, CHG),
+      AVAL = ifelse(AVISIT == "BASELINE", BASE, AVAL),
+      AVALC = ifelse(AVISIT == "BASELINE", as.character(BASE), AVALC)
+    ) %>%
+    filter(AVISIT != "SCREENING")
+  teal.data::col_labels(ADTR) <- adtr_labels
+
+  ADTRWF <- ADTR %>%
+    filter(AVISIT != "BASELINE")
+  teal.data::col_labels(ADTRWF) <- teal.data::col_labels(ADTR, fill = FALSE)
 
 
-# process ADRS
-ADRSSWIM <- synthetic_cdisc_data("latest")$adrs %>%
-  filter(PARAMCD == "OVRINV") %>%
-  arrange(USUBJID)
+  # process ADRS
+  ADRSSWIM <- synthetic_cdisc_data("latest")$adrs %>%
+    filter(PARAMCD == "OVRINV") %>%
+    arrange(USUBJID)
 
-ADRS <- synthetic_cdisc_data("latest")$adrs
-adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
-ADRS <- ADRS %>%
-  filter(PARAMCD %in% c("BESRSPI", "INVET")) %>%
-  mutate(ADT = as.Date(ADTM)) %>%
-  droplevels()
-teal.data::col_labels(ADRS) <- c(adrs_labels, "Analysis Date")
+  ADRS <- synthetic_cdisc_data("latest")$adrs
+  adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
+  ADRS <- ADRS %>%
+    filter(PARAMCD %in% c("BESRSPI", "INVET")) %>%
+    mutate(ADT = as.Date(ADTM)) %>%
+    droplevels()
+  teal.data::col_labels(ADRS)["ADT"] <- "Analysis Date"
 
-ADLB <- synthetic_cdisc_data("latest")$adlb
+  ADLB <- synthetic_cdisc_data("latest")$adlb
 
-# process ADLB
-ADLB <- ADLB %>%
-  mutate(
-    ADT = as.Date(ADTM),
-    LBSTRESN = as.numeric(LBSTRESC)
-  ) %>%
-  teal.data::col_relabel(
-    ADT = "Analysis Date",
-    LBSTRESN = "Numeric Result/Finding in Standard Units"
-  )
+  # process ADLB
+  ADLB <- ADLB %>%
+    mutate(
+      ADT = as.Date(ADTM),
+      LBSTRESN = as.numeric(gsub("[^0-9]", "", LBSTRESC))
+    ) %>%
+    teal.data::col_relabel(
+      ADT = "Analysis Date",
+      LBSTRESN = "Numeric Result/Finding in Standard Units"
+    )
+})
 
-## Reusable Configuration For Modules
+# set datanames
+datanames <- c("ADSL", "ADAE", "ADCM", "ADEX", "ADTR", "ADTRWF", "ADRS", "ADRSSWIM", "ADLB")
+datanames(data) <- datanames
+
+# set join keys
+join_keys(data) <- default_cdisc_join_keys[datanames] # get default keys by name
+join_keys(data)["ADTR", "ADTR"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
+join_keys(data)["ADTRWF", "ADTRWF"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
+join_keys(data)["ADRSSWIM", "ADRSSWIM"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
+join_keys(data)["ADSL", "ADTR"] <- c("STUDYID", "USUBJID")
+join_keys(data)["ADSL", "ADTRWF"] <- c("STUDYID", "USUBJID")
+join_keys(data)["ADSL", "ADRSSWIM"] <- c("STUDYID", "USUBJID")
+
+## App configuration ----
+# reuse object from teal_data
+ADSL <- data[["ADSL"]]
+ADAE <- data[["ADAE"]]
+ADRS <- data[["ADRS"]]
+ADTR <- data[["ADTR"]]
+ADEX <- data[["ADEX"]]
+ADCM <- data[["ADCM"]]
+ADTRWF <- data[["ADTRWF"]]
+ADRSSWIM <- data[["ADRSSWIM"]]
+ADLB <- data[["ADLB"]]
+
+
+adsl_labels <- teal.data::col_labels(ADSL)
+fact_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.factor)))
+
+date_vars_asl <-
+  names(ADSL)[vapply(ADSL, function(x) inherits(x, c("Date", "POSIXct", "POSIXlt")), logical(1))]
+demog_vars_asl <- names(ADSL)[!(names(ADSL) %in% c("USUBJID", "STUDYID", date_vars_asl))]
+
 arm_vars <- c("ARMCD", "ARM", "ACTARMCD", "ACTARM", "EOSSTT")
 aeflag_vars <- c("RELFL", "CTC35FL", "SERFL", "RELSERFL")
 facet_vars <- c("SEX", "BMRKR2", "RACE", "STRATA1", "STRATA2")
@@ -181,188 +217,9 @@ cs_paramcd_tr <- choices_selected(
   selected = "SLDINV"
 )
 
-adsl_labels <- teal.data::col_labels(ADSL)
-fact_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.factor)))
-
-date_vars_asl <- names(ADSL)[vapply(ADSL, function(x) inherits(x, c("Date", "POSIXct", "POSIXlt")), logical(1))]
-demog_vars_asl <- names(ADSL)[!(names(ADSL) %in% c("USUBJID", "STUDYID", date_vars_asl))]
-
-# create cdisc_dataset objects to pass into app
-
-adsl <- cdisc_dataset(
-  dataname = "ADSL",
-  x = ADSL,
-  code = 'ADSL <- synthetic_cdisc_data("latest")$adsl
-          adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
-          ADSL <- ADSL %>%
-              mutate(
-                TRTDURD = as.numeric(as.Date(TRTEDTM) - as.Date(TRTSDTM)) + 1,
-                DTHFL = ifelse(!is.na(DTHDT), "Y", NA),
-                EOSSTT = factor(EOSSTT, levels = c("COMPLETED", "ONGOING", "DISCONTINUED"))
-              ) %>%
-              teal.data::col_relabel(
-                TRTDURD = "Treatment Duration in Days",
-                DTHFL = "Death Flag",
-                DCSREAS = "Reason for Study Discontinuation",
-                EOSSTT = "End of Study Status"
-              ) %>%
-              droplevels()
-          teal.data::col_labels(ADSL)[c(names(adsl_labels))] <- adsl_labels'
-)
-
-adae <- cdisc_dataset(
-  dataname = "ADAE",
-  x = ADAE,
-  keys = c("STUDYID", "USUBJID", "AETERM", "AESEQ"),
-  code = 'ADAE <- synthetic_cdisc_data("latest")$adae
-          # derive common flags for AEs
-          ADAE <- ADAE %>%
-            mutate_at(
-              c("AESOC", "AEBODSYS", "AEHLT", "AEDECOD", "AETERM", "AELLT"),
-              as.character
-            ) %>%
-            mutate(
-              RELFL = ifelse(AEREL == "Y", "Y", "N"),
-              CTC35FL = ifelse(AETOXGR %in% c("3", "4", "5"), "Y", "N"),
-              SERFL = ifelse(AESER == "Y", "Y", "N"),
-              RELSERFL = ifelse(AEREL == "Y" & AESER == "Y", "Y", "N"),
-              AEREL1 = (AEREL == "Y" & ACTARM == "A: Drug X"),
-              AEREL2 = (AEREL == "Y" & ACTARM == "B: Placebo"),
-              ASTDT = as.Date(ASTDTM),
-              AENDT = as.Date(AENDTM)
-            ) %>%
-            teal.data::col_relabel(
-              RELFL = "Related AE",
-              CTC35FL = "Grade >=3 AE",
-              SERFL = "Serious AE",
-              RELSERFL = "Related Serious AE",
-              AEREL1 = "AE related to A: Drug X",
-              AEREL2 = "AE related to B: Placebo",
-              ASTDT = "Analysis Start Date",
-              AENDT = "Analysis End Date",
-              AESOC = "Primary System Organ Class",
-              AEBODSYS = "Body System or Organ Class",
-              AEHLT = "High Level Term",
-              AEDECOD = "Dictionary-Derived Term",
-              AETERM = "Reported Term for the Adverse Event",
-              AELLT = "Lowest Level Term"
-            )',
-  vars = list(ADSL = adsl)
-)
-
-adcm <- cdisc_dataset(
-  dataname = "ADCM",
-  x = ADCM,
-  code = 'ADCM <- synthetic_cdisc_data("latest")$adcm
-          ADCM <- ADCM %>%
-            mutate(
-              ASTDT = as.Date(ASTDTM),
-              AENDT = as.Date(AENDTM)
-            ) %>%
-            teal.data::col_relabel(
-              ASTDT = "Analysis Start Date",
-              AENDT = "Analysis End Date"
-            )',
-  vars = list(ADSL = adsl)
-)
-
-adex <- cdisc_dataset(
-  dataname = "ADEX",
-  x = ADEX,
-  code = 'ADEX <- synthetic_cdisc_data("latest")$adex
-          ADEX <- ADEX %>%
-            mutate(
-              ASTDT = as.Date(ASTDTM),
-              AENDT = as.Date(AENDTM)
-            ) %>%
-            teal.data::col_relabel(
-              ASTDT = "Analysis Start Date",
-              AENDT = "Analysis End Date"
-            )',
-  vars = list(ADSL = adsl)
-)
-
-adtr <- cdisc_dataset(
-  dataname = "ADTR",
-  x = ADTR,
-  keys = c("STUDYID", "USUBJID", "PARAMCD", "AVISIT"),
-  code = 'ADTR <- synthetic_cdisc_data("latest")$adtr
-          adtr_labels <- teal.data::col_labels(ADTR, fill = FALSE)
-          ADTR <- ADTR %>%
-            mutate(
-              PCHG = ifelse(AVISIT == "BASELINE", 0, PCHG),
-              CHG = ifelse(AVISIT == "BASELINE", 0, CHG),
-              AVAL = ifelse(AVISIT == "BASELINE", BASE, AVAL),
-              AVALC = ifelse(AVISIT == "BASELINE", as.character(BASE), AVALC)
-            ) %>%
-            dplyr::filter(AVISIT != "SCREENING")
-          teal.data::col_labels(ADTR) <- adtr_labels',
-  var = list(ADSL = adsl)
-)
-
-adtrwf <- cdisc_dataset(
-  dataname = "ADTRWF",
-  x = ADTRWF,
-  keys = c("STUDYID", "USUBJID", "PARAMCD", "AVISIT"),
-  code = 'ADTRWF <- ADTR %>%
-            dplyr::filter(AVISIT != "BASELINE")
-          teal.data::col_labels(ADTRWF) <- teal.data::col_labels(ADTR, fill = FALSE)',
-  vars = list(ADTR = adtr)
-)
-
-adrs <- cdisc_dataset(
-  dataname = "ADRS",
-  x = ADRS,
-  code = 'ADRS <- synthetic_cdisc_data("latest")$adrs
-          adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
-          ADRS <- ADRS %>%
-            filter(PARAMCD %in% c("BESRSPI", "INVET"))  %>%
-            mutate(ADT = as.Date(ADTM)) %>%
-            droplevels()
-        teal.data::col_labels(ADRS) <- c(adrs_labels, "Analysis Date")',
-  vars = list(ADSL = adsl)
-)
-
-adrsswim <- cdisc_dataset(
-  dataname = "ADRSSWIM",
-  x = ADRSSWIM,
-  keys = c("STUDYID", "USUBJID", "PARAMCD", "AVISIT"),
-  code = 'ADRSSWIM <- synthetic_cdisc_data("latest")$adrs %>%
-            dplyr::filter(PARAMCD == "OVRINV") %>%
-            arrange(USUBJID)',
-  vars = list(ADSL = adsl)
-)
-
-adlb <- cdisc_dataset(
-  dataname = "ADLB",
-  x = ADLB,
-  code = 'ADLB <- synthetic_cdisc_data("latest")$adlb
-          ADLB <- ADLB %>%
-            mutate(
-              ADT = as.Date(ADTM),
-              LBSTRESN = as.numeric(LBSTRESC)
-            ) %>%
-            teal.data::col_relabel(
-              ADT = "Analysis Date",
-              LBSTRESN = "Numeric Result/Finding in Standard Units"
-            )',
-  vars = list(ADSL = adsl)
-)
-
 ## Setup App
-app <- teal::init(
-  data = cdisc_data(
-    adsl,
-    adae,
-    adex,
-    adcm,
-    adtr,
-    adtrwf,
-    adrs,
-    adrsswim,
-    adlb,
-    check = TRUE
-  ),
+app <- init(
+  data = data,
   filter = teal_slices(
     count_type = "all",
     teal_slice(dataname = "ADSL", varname = "SAFFL", selected = "Y"),
@@ -372,8 +229,14 @@ app <- teal::init(
   modules = modules(
     tm_front_page(
       label = "App Info",
-      header_text = c("Info about input data source" = "This app uses CDISC ADaM datasets randomly generated by `scda` & `scda.2022` R packages"),
-      tables = list(`NEST packages used in this demo app` = data.frame(Packages = c("teal.modules.general", "teal.modules.clinical", "teal.osprey", "scda", "scda.2022")))
+      header_text = c(
+        "Info about input data source" =
+          "This app uses CDISC ADaM datasets randomly generated by `scda` & `scda.2022` R packages"
+      ),
+      tables = list(
+        `NEST packages used in this demo app` =
+          data.frame(Packages = c("teal.modules.general", "teal.modules.clinical", "teal.osprey", "scda", "scda.2022"))
+      )
     ),
     tm_data_table("Data Table"),
     tm_variable_browser("Variable Browser"),
@@ -559,9 +422,9 @@ app <- teal::init(
       plot_height = c(1200, 400, 5000)
     )
   ),
+  title = build_app_title("Early Development Analysis Teal Demo App", nest_logo),
   header = tags$span(
     style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$head(tags$link(rel = "shortcut icon", href = nest_logo), tags$title("Early Development Analysis Teal Demo App")),
     tags$span(
       style = "font-size: 30px;",
       "Example teal app focusing on analysis of early-phase clinical trial data with teal.osprey"
@@ -587,10 +450,14 @@ app <- teal::init(
   )
 )
 
+
 body(app$server)[[length(body(app$server)) + 1]] <- quote(
   observeEvent(input$showAboutModal, {
     showModal(modalDialog(
-      tags$p("This teal app is brought to you by the NEST Team at Roche/Genentech. For more information, please visit:"),
+      tags$p(
+        "This teal app is brought to you by the NEST Team at Roche/Genentech.
+        For more information, please visit:"
+      ),
       tags$ul(
         tags$li(tags$a(
           href = "https://github.com/insightsengineering", "Insights Engineering",
@@ -605,6 +472,7 @@ body(app$server)[[length(body(app$server)) + 1]] <- quote(
     ))
   })
 )
+
 
 ## Start Teal Shiny App ----
 shinyApp(app$ui, app$server)

@@ -6,6 +6,7 @@ on:
     branches:
       - main
       - dev
+      - deploy
     paths:
       - RNA-seq/**
       - basic-teal/**
@@ -19,10 +20,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "12 3 * * *"
-
-concurrency:
-  group: publish-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
 
 env:
   SHINYAPPSIO_ACCOUNT: genentech
@@ -120,7 +117,7 @@ jobs:
           node-version: 20
 
       - name: Restore renv from cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ matrix.directory }}-${{ matrix.channel }}
         with:
@@ -134,13 +131,18 @@ jobs:
           setwd("${{ matrix.directory }}")
           lockfile <- renv::lockfile_read()
           pkg_name_structure <- ifelse("${{ matrix.channel }}" == "stable", "%s/%s@*release", "%s/%s")
+          unreleased_packages <- c(
+            "osprey", "hermes", "goshawk", "teal.modules.general", "teal.modules.clinical",
+            "teal.osprey", "teal.modules.hermes", "teal.goshawk", "nestcolor"
+          )
           for (package in lockfile$Packages) {
               if (package$Source == "GitHub") {
-                  # TODO: After teal.slice is released we have to remove this change.
-                  # This workaround is because update to {bslib} breaks current release of teal.slice
-                  if (package$Package == "teal.slice" && "${{ matrix.channel }}" == "stable") {
-                    renv::record("insightsengineering/teal.slice@103491c67e26a9a85d636bd105a806904a0111ec")
+                print(package$Package)
+                  if (package$Package %in% unreleased_packages) {
+                    print(paste0("Recording ", package$Package, " from main"))
+                    renv::record(sprintf("%s/%s", package$RemoteUsername, package$Package))
                   } else {
+                    print(paste0("Recording ", package$Package, " from stable"))
                     renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
                   }
               }
@@ -200,11 +202,24 @@ jobs:
           )
 
       - name: Commit and push changes 📌
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
-          file_pattern: "${{ matrix.directory }}/renv/activate.R ${{ matrix.directory }}/renv.lock"
-          commit_user_name: github-actions
-          commit_user_email: >-
-            41898282+github-actions[bot]@users.noreply.github.com
-        continue-on-error: true
+        run: |
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions"
+          git config --global --add safe.directory /__w/teal.gallery/teal.gallery
+          git fetch
+          git stash
+          git checkout ${{ env.BRANCH_NAME }}
+          git pull
+          if [ -n "$(git stash list)" ]; then
+            git stash apply
+          else
+            echo "No stash entries found."
+          fi
+          git add ${{ matrix.directory }}/renv.lock
+          git add ${{ matrix.directory }}/renv/activate.R
+          if [ -n "$(git diff --staged)" ]; then
+            git commit -m "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
+            git push origin ${{ env.BRANCH_NAME }}
+          else
+            echo "renv.lock was not modified. Nothing to commit."
+          fi
