@@ -48,11 +48,11 @@ jobs:
           # - basic-teal
           - efficacy
           # - exploratory
-          # - longitudinal
+          - longitudinal
           # - early-dev
-          # - patient-profile
+          - patient-profile
           # - python
-          # - safety
+          - safety
         channel:
           - stable
           # - dev
@@ -160,11 +160,7 @@ jobs:
           options(renv.config.cache.symlinks = FALSE)
           lockfile_pkgs <- renv::lockfile_read()$Package
           github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
-          print(github_pkgs)
-          renv::install('mmrm')
-          packageVersion('mmrm')
           renv::restore()
-          packageVersion('mmrm')
           renv::update(exclude = github_pkgs)
           renv::snapshot()
 
