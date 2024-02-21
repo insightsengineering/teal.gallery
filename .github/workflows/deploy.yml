@@ -140,18 +140,14 @@ jobs:
               if (package$Source == "GitHub") {
                 print(package$Package)
                   if (package$Package %in% unreleased_packages) {
-                    print("Recording main")
-                    #renv::record(sprintf("%s/%s", package$RemoteUsername, package$Package))
+                    print(paste0("Recording ", package$Package, " from main"))
+                    renv::record(sprintf("%s/%s", package$RemoteUsername, package$Package))
                   } else {
-                    print("Recording stable")
-                    #renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
+                    print(paste0("Recording ", package$Package, " from stable"))
+                    renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
                   }
               }
           }
-
-      - name: Print the new renv.lock file for ${{ matrix.directory }}
-        working-directory: ${{ matrix.directory }}
-        run: cat renv.lock
 
       - name: Install R packages using renv and update the renv snapshot
         shell: Rscript {0}
