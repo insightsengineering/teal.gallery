@@ -12,6 +12,9 @@
       }
     ]
   },
+  "Bioconductor": {
+    "Version": "3.18"
+  },
   "Packages": {
     "BH": {
       "Package": "BH",
@@ -19,6 +22,25 @@
       "Source": "Repository",
       "Repository": "RSPM",
       "Hash": "a8235afbcd6316e6e91433ea47661013"
+    },
+    "BiocManager": {
+      "Package": "BiocManager",
+      "Version": "1.30.22",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "utils"
+      ],
+      "Hash": "d57e43105a1aa9cb54fdb4629725acb1"
+    },
+    "BiocVersion": {
+      "Package": "BiocVersion",
+      "Version": "3.18.1",
+      "Source": "Bioconductor",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "2ecaed86684f5fae76ed5530f9d29c4a"
     },
     "DT": {
       "Package": "DT",
@@ -1415,7 +1437,7 @@
     "nestcolor": {
       "Package": "nestcolor",
       "Version": "0.1.2",
-      "Source": "Repository",
+      "Source": "Bioconductor",
       "Repository": "RSPM",
       "Requirements": [
         "R",
