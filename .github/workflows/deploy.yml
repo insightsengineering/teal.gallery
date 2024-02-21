@@ -163,8 +163,6 @@ jobs:
           print(github_pkgs)
           renv::install('mmrm')
           packageVersion('mmrm')
-          renv::install('tern.mmrm')
-          packageVersion('mmrm')
           renv::restore()
           packageVersion('mmrm')
           renv::update(exclude = github_pkgs)
