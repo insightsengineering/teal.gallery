@@ -117,6 +117,10 @@ jobs:
         with:
           node-version: 20
 
+      - name: Print the new renv.lock file for ${{ matrix.directory }}
+        working-directory: ${{ matrix.directory }}
+        run: cat renv.lock
+
       - name: Restore renv from cache
         uses: actions/cache@v4
         env:
@@ -125,6 +129,10 @@ jobs:
           path: ${{ matrix.directory }}/renv/library
           key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/renv.lock', matrix.directory)) }}
           restore-keys: ${{ env.CACHE_KEY }}-
+
+      - name: Print the new renv.lock file for ${{ matrix.directory }}
+        working-directory: ${{ matrix.directory }}
+        run: cat renv.lock
 
       - name: Update renv.lock file with updated GitHub packages
         shell: Rscript {0}
@@ -148,6 +156,10 @@ jobs:
                   }
               }
           }
+
+      - name: Print the new renv.lock file for ${{ matrix.directory }}
+        working-directory: ${{ matrix.directory }}
+        run: cat renv.lock
 
       - name: Install R packages using renv and update the renv snapshot
         shell: Rscript {0}
