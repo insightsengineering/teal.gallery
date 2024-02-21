@@ -3,57 +3,14 @@
     "Version": "4.3.2",
     "Repositories": [
       {
-        "Name": "BioCsoft",
-        "URL": "https://bioconductor.org/packages/3.18/bioc"
-      },
-      {
-        "Name": "BioCann",
-        "URL": "https://bioconductor.org/packages/3.18/data/annotation"
-      },
-      {
-        "Name": "BioCexp",
-        "URL": "https://bioconductor.org/packages/3.18/data/experiment"
-      },
-      {
-        "Name": "BioCworkflows",
-        "URL": "https://bioconductor.org/packages/3.18/workflows"
-      },
-      {
-        "Name": "BioCbooks",
-        "URL": "https://bioconductor.org/packages/3.18/books"
-      },
-      {
-        "Name": "CRAN",
+        "Name": "RSPM",
         "URL": "https://packagemanager.posit.co/cran/latest"
       },
       {
-        "Name": "BioC.BioCsoft",
-        "URL": "https://bioconductor.org/packages/3.17/bioc"
-      },
-      {
-        "Name": "BioC.BioCann",
-        "URL": "https://bioconductor.org/packages/3.17/data/annotation"
-      },
-      {
-        "Name": "BioC.BioCexp",
-        "URL": "https://bioconductor.org/packages/3.17/data/experiment"
-      },
-      {
-        "Name": "BioC.BioCworkflows",
-        "URL": "https://bioconductor.org/packages/3.17/workflows"
-      },
-      {
-        "Name": "BioC.BioCbooks",
-        "URL": "https://bioconductor.org/packages/3.17/books"
-      },
-      {
-        "Name": "BioC.CRAN",
+        "Name": "CRAN",
         "URL": "https://cloud.r-project.org"
       }
     ]
-  },
-  "Bioconductor": {
-    "Version": "3.18"
   },
   "Packages": {
     "BH": {
@@ -62,25 +19,6 @@
       "Source": "Repository",
       "Repository": "RSPM",
       "Hash": "a8235afbcd6316e6e91433ea47661013"
-    },
-    "BiocManager": {
-      "Package": "BiocManager",
-      "Version": "1.30.22",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "utils"
-      ],
-      "Hash": "d57e43105a1aa9cb54fdb4629725acb1"
-    },
-    "BiocVersion": {
-      "Package": "BiocVersion",
-      "Version": "3.18.1",
-      "Source": "Bioconductor",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "2ecaed86684f5fae76ed5530f9d29c4a"
     },
     "DT": {
       "Package": "DT",
@@ -1616,7 +1554,7 @@
     "nestcolor": {
       "Package": "nestcolor",
       "Version": "0.1.2",
-      "Source": "Bioconductor",
+      "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
         "R",
