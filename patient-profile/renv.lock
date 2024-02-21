@@ -1547,15 +1547,14 @@
     },
     "mmrm": {
       "Package": "mmrm",
-      "Version": "0.3.10.9004",
+      "Version": "0.3.10",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "mmrm",
       "RemoteUsername": "openpharma",
-      "RemotePkgRef": "openpharma/mmrm",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "5fb18c632da1c6434ec1349cc5c62630a2eead22",
+      "RemoteRepo": "mmrm",
+      "RemoteRef": "v0.3.10",
+      "RemoteSha": "8d2a7d8281af91ae85dca358e9f716340895c1a0",
       "Requirements": [
         "Matrix",
         "R",
@@ -1575,7 +1574,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "1ea75e1c674e1ae63ca310bffe4e64e4"
+      "Hash": "b82e133e8bb78a88842c692d6270fb55"
     },
     "mosaicCore": {
       "Package": "mosaicCore",
@@ -2154,37 +2153,35 @@
     },
     "scda": {
       "Package": "scda",
-      "Version": "0.1.6.9016",
+      "Version": "0.1.6",
       "Source": "GitHub",
       "RemoteType": "github",
-      "Remotes": "insightsengineering/scda.2022@*release",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "scda",
       "RemoteUsername": "insightsengineering",
-      "RemotePkgRef": "insightsengineering/scda",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "cc80ede41d08b3a7da20679dbe1306ea44e531da",
+      "RemoteRepo": "scda",
+      "RemoteRef": "v0.1.6",
+      "RemoteSha": "665d4540a8f3c9e8d9271c33b5dd70296b49636c",
+      "Remotes": "insightsengineering/scda.2022@*release",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "29c1eaf90a1d648ff715306cde7abe9f"
+      "Hash": "050ae235c739506fb50990d8e03518bb"
     },
     "scda.2022": {
       "Package": "scda.2022",
-      "Version": "0.1.5.9006",
+      "Version": "0.1.5",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "scda.2022",
       "RemoteUsername": "insightsengineering",
-      "RemotePkgRef": "insightsengineering/scda.2022",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "3ec4b1d6805d3d31d02d531bdc7e1bedb4494df4",
+      "RemoteRepo": "scda.2022",
+      "RemoteRef": "v0.1.5",
+      "RemoteSha": "5b08051312fababe15476f21323d17bcbb0543cf",
       "Requirements": [
         "R"
       ],
-      "Hash": "6553402bdd4af4562cbe77540e9255f5"
+      "Hash": "0e04543b6e8a5f658699c9cdc50534c8"
     },
     "shape": {
       "Package": "shape",
@@ -2476,15 +2473,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.8.16.9093",
+      "Version": "0.8.16.9095",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.modules.clinical",
       "RemoteUsername": "insightsengineering",
-      "RemotePkgRef": "insightsengineering/teal.modules.clinical",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "db6fbae506cd010a8317747d63af681581bcbf01",
+      "RemoteRepo": "teal.modules.clinical",
+      "RemoteRef": "main",
+      "RemoteSha": "3e178512646a37bf62a26e5d74ea28587c6b4944",
       "Requirements": [
         "DT",
         "R",
@@ -2520,7 +2516,7 @@
         "utils",
         "vistime"
       ],
-      "Hash": "51e58fa9731bd2f131696763ea6154ab"
+      "Hash": "c8c9fcd9f547490cc2159e010fe311de"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
@@ -2528,10 +2524,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.modules.general",
       "RemoteUsername": "insightsengineering",
-      "RemotePkgRef": "insightsengineering/teal.modules.general",
-      "RemoteRef": "HEAD",
+      "RemoteRepo": "teal.modules.general",
+      "RemoteRef": "main",
       "RemoteSha": "244d2fa4cb4f39f547de6e1161b49e761022a476",
       "Requirements": [
         "DT",
@@ -2564,7 +2559,7 @@
         "tidyselect",
         "utils"
       ],
-      "Hash": "0424726d51a1e927667271a8dab8ab91"
+      "Hash": "599f3cccd02664d82dcc5d4213a14e90"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
