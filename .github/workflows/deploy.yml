@@ -44,15 +44,15 @@ jobs:
       fail-fast: false
       matrix:
         directory:
-          # - RNA-seq
-          # - basic-teal
-          # - efficacy
-          # - exploratory
-          # - longitudinal
-          # - early-dev
-          # - patient-profile
+          - RNA-seq
+          - basic-teal
+          - efficacy
+          - exploratory
+          - longitudinal
+          - early-dev
+          - patient-profile
           - python
-          # - safety
+          - safety
         channel:
           - stable
           - dev
