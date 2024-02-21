@@ -843,14 +843,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.5.9009",
+      "Version": "0.5.5.9010",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "cc6a67f258b3b5701050ceb6f59a15770af5c446",
+      "RemoteSha": "9e98d8bb272b083eed1d343863c9d0927586c8db",
       "Requirements": [
         "R",
         "checkmate",
@@ -858,7 +858,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "3c24fbaac44fae15591fb566c874d6dc"
+      "Hash": "356ee355f253efc5da436eaff4fadeca"
     },
     "fs": {
       "Package": "fs",
@@ -1918,14 +1918,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.6.9007",
+      "Version": "0.6.6.9008",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "ded6b868d23661d7af12c4d09748664e3beda5f2",
+      "RemoteSha": "65cd1da736fcb73ac50baeec30fe5fceab4da3fd",
       "Requirements": [
         "R",
         "checkmate",
@@ -1936,7 +1936,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "ad8e5fdeea45be99a4eb786417f494cf"
+      "Hash": "ac3a4f2b5563584b706bfce884d66c84"
     },
     "sandwich": {
       "Package": "sandwich",
