@@ -499,7 +499,7 @@
     },
     "gdtools": {
       "Package": "gdtools",
-      "Version": "0.3.5",
+      "Version": "0.3.6",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -512,7 +512,7 @@
         "systemfonts",
         "tools"
       ],
-      "Hash": "9df1d2b4f6cbc92ce6961d3f10156125"
+      "Hash": "39634ca05ad46d90c56087a92a314a3b"
     },
     "generics": {
       "Package": "generics",
@@ -1267,7 +1267,7 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.0",
+      "Version": "0.15.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1290,7 +1290,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "437c904eeedca366c358518e60000a38"
+      "Hash": "a7ce753398ba84b10386b4393c2040b6"
     },
     "teal.code": {
       "Package": "teal.code",
