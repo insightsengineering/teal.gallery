@@ -504,7 +504,7 @@
     },
     "gdtools": {
       "Package": "gdtools",
-      "Version": "0.3.5",
+      "Version": "0.3.6",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -517,7 +517,7 @@
         "systemfonts",
         "tools"
       ],
-      "Hash": "9df1d2b4f6cbc92ce6961d3f10156125"
+      "Hash": "39634ca05ad46d90c56087a92a314a3b"
     },
     "generics": {
       "Package": "generics",
@@ -1272,14 +1272,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.0.9005",
+      "Version": "0.15.1.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "7ff08400f09b8cf8c7384542bd90a5b62d08d831",
+      "RemoteSha": "2fa047a21fb24502e497a0728a1476acefbe2a81",
       "Requirements": [
         "R",
         "checkmate",
@@ -1300,7 +1300,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "54310d04e01ba20d5357187175c5ac7d"
+      "Hash": "0aa502c032dbacfc849e5a4257537b44"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -1366,14 +1366,14 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.0.9001",
+      "Version": "0.3.0.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "ad09cf34de38fbaf1bafba7322bef0b70ba5e745",
+      "RemoteSha": "329e29e7270d637cdc2593a0089aa17301b51127",
       "Requirements": [
         "R6",
         "bslib",
@@ -1389,7 +1389,7 @@
         "yaml",
         "zip"
       ],
-      "Hash": "64684a3c574c20d22607348068adcc83"
+      "Hash": "2bdfe81ff152019ee000a0ab9b075edf"
     },
     "teal.slice": {
       "Package": "teal.slice",
