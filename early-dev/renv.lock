@@ -1152,9 +1152,9 @@
     },
     "ggplot2": {
       "Package": "ggplot2",
-      "Version": "3.4.4",
+      "Version": "3.5.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "MASS",
         "R",
@@ -1173,7 +1173,7 @@
         "vctrs",
         "withr"
       ],
-      "Hash": "313d31eff2274ecf4c1d3581db7241f9"
+      "Hash": "52ef83f93f74833007f193b2d4c159a2"
     },
     "ggrepel": {
       "Package": "ggrepel",
@@ -2294,14 +2294,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.6.9009",
+      "Version": "0.6.6.9011",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "2177e1587292807f5cad81c0ab4c6474fac77f95",
+      "RemoteSha": "c8a217669d07f5a185ca8d65d2e230c041ec29d2",
       "Requirements": [
         "R",
         "checkmate",
@@ -2312,7 +2312,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "93e0ef14f164884b454fc28261bb2435"
+      "Hash": "308f6d36a7d1eb01c174fc043b1a0b31"
     },
     "sass": {
       "Package": "sass",
@@ -2382,16 +2382,16 @@
     },
     "shape": {
       "Package": "shape",
-      "Version": "1.4.6",
+      "Version": "1.4.6.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "grDevices",
         "graphics",
         "stats"
       ],
-      "Hash": "9067f962730f58b14d8ae54ca885509f"
+      "Hash": "5c47e84dc0a3ca761ae1d307889e796d"
     },
     "shiny": {
       "Package": "shiny",
@@ -2823,14 +2823,14 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.0.9002",
+      "Version": "0.3.0.9003",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "329e29e7270d637cdc2593a0089aa17301b51127",
+      "RemoteSha": "642083225b7577174aff3d7dcbc9624b7f6106a5",
       "Requirements": [
         "R6",
         "bslib",
@@ -2846,7 +2846,7 @@
         "yaml",
         "zip"
       ],
-      "Hash": "2bdfe81ff152019ee000a0ab9b075edf"
+      "Hash": "1256822f4b94d80702ffcba3b21ac93d"
     },
     "teal.slice": {
       "Package": "teal.slice",
@@ -2942,14 +2942,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.3.9016",
+      "Version": "0.9.3.9018",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "2b034a893c18c8f48693c103e9c5e08d30798cd5",
+      "RemoteSha": "cd58cb885b882144d6d64171c750a3018f54de5c",
       "Requirements": [
         "MASS",
         "R",
@@ -2979,7 +2979,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "4758fd39426e8c44946ac5b735a1c691"
+      "Hash": "0b44a2c7a998c277b12826ff18191687"
     },
     "tern.gee": {
       "Package": "tern.gee",
