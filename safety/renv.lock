@@ -1662,9 +1662,9 @@
     },
     "officer": {
       "Package": "officer",
-      "Version": "0.6.4",
+      "Version": "0.6.5",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R6",
         "grDevices",
@@ -1677,7 +1677,7 @@
         "xml2",
         "zip"
       ],
-      "Hash": "59cf253b0daa7e2962d8fe9da7b235c5"
+      "Hash": "3a71a529237487233ead151cba12be3f"
     },
     "openssl": {
       "Package": "openssl",
