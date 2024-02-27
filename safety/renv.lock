@@ -2469,21 +2469,20 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.0.9000",
+      "Version": "0.9.0.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "3de6f016ac717fcb23716b8ce0da64da8bd4d5c5",
+      "RemoteSha": "9b1f80adbbb731ab6fb4d24255e14031b5f11509",
       "Requirements": [
         "DT",
         "R",
         "broom",
         "checkmate",
         "dplyr",
-        "formatters",
         "ggplot2",
         "ggrepel",
         "grid",
@@ -2512,7 +2511,7 @@
         "utils",
         "vistime"
       ],
-      "Hash": "9b25a5f38fb0c44525254bfc0a01b1bd"
+      "Hash": "ab457a5eed1e0acb8de6af57f4a1ad57"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
