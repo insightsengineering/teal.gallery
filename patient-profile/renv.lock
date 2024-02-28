@@ -1530,14 +1530,14 @@
     },
     "mmrm": {
       "Package": "mmrm",
-      "Version": "0.3.10.9004",
+      "Version": "0.3.10.9006",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "5fb18c632da1c6434ec1349cc5c62630a2eead22",
+      "RemoteSha": "765070bf1afee434e632de54c3c13cca66c24148",
       "Requirements": [
         "Matrix",
         "R",
@@ -1557,7 +1557,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "0f3be97c32fc7e8fb30948a770f5a23c"
+      "Hash": "56b6d13e523a386d6be4c3c715fda13e"
     },
     "mosaicCore": {
       "Package": "mosaicCore",
@@ -2486,19 +2486,20 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.0.9001",
+      "Version": "0.9.0.9003",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "9b1f80adbbb731ab6fb4d24255e14031b5f11509",
+      "RemoteSha": "89ae995554b17965628c120a5074629f0ea03a10",
       "Requirements": [
         "DT",
         "R",
         "broom",
         "checkmate",
+        "cowplot",
         "dplyr",
         "ggplot2",
         "ggrepel",
@@ -2528,18 +2529,18 @@
         "utils",
         "vistime"
       ],
-      "Hash": "ab457a5eed1e0acb8de6af57f4a1ad57"
+      "Hash": "82d9f314203f562e37649819148fb63f"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.2.16.9023",
+      "Version": "0.2.16.9026",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "09ccfc191f50343d3cbcf3a3705699ff65900772",
+      "RemoteSha": "c9f87bf8b8ecc4b3176481c2ef252a676c998b33",
       "Requirements": [
         "DT",
         "R",
@@ -2571,7 +2572,7 @@
         "tidyselect",
         "utils"
       ],
-      "Hash": "fa8c6e7546118959e63640f8dece07c0"
+      "Hash": "71ea7e7b231126585310ab30781a488a"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -2759,14 +2760,14 @@
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
-      "Version": "0.3.0.9004",
+      "Version": "0.3.0.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "c23e68282581a80af58f381eb7b7f8bec19f7929",
+      "RemoteSha": "ec14b2b6473e9c5902a56b5cbb7b58965ed13401",
       "Requirements": [
         "R",
         "checkmate",
@@ -2786,7 +2787,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "707073b6dbb1d122ef10fcc17a8ecaa8"
+      "Hash": "5fd8c547d3920ea381694d5d6dfe41e2"
     },
     "testthat": {
       "Package": "testthat",
