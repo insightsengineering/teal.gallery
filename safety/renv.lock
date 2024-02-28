@@ -2497,14 +2497,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.0.9003",
+      "Version": "0.9.0.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "89ae995554b17965628c120a5074629f0ea03a10",
+      "RemoteSha": "e8c098cc2fc6b2a6f6720e2c4a3eab91e44f180b",
       "Requirements": [
         "DT",
         "R",
@@ -2540,7 +2540,7 @@
         "utils",
         "vistime"
       ],
-      "Hash": "82d9f314203f562e37649819148fb63f"
+      "Hash": "81807f7236973e8f8ae66c40657821a6"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
