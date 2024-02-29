@@ -189,16 +189,16 @@
     },
     "RcppEigen": {
       "Package": "RcppEigen",
-      "Version": "0.3.3.9.4",
+      "Version": "0.3.4.0.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "Rcpp",
         "stats",
         "utils"
       ],
-      "Hash": "acb0a5bf38490f26ab8661b467f4f53a"
+      "Hash": "df49e3306f232ec28f1604e36a202847"
     },
     "Rdpack": {
       "Package": "Rdpack",
@@ -1796,13 +1796,13 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.0.4",
+      "Version": "1.0.5",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
-      "Hash": "11abaf7c540ff33f94514d50f929bfd1"
+      "Hash": "32c3f93e8360f667ca5863272ec8ba6a"
     },
     "rlang": {
       "Package": "rlang",
@@ -2244,14 +2244,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.2.16.9026",
+      "Version": "0.2.16.9029",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "c9f87bf8b8ecc4b3176481c2ef252a676c998b33",
+      "RemoteSha": "5357b8b45d7b917d7e6d04a21a6ebcbbd1b9bbc7",
       "Requirements": [
         "DT",
         "R",
@@ -2283,7 +2283,7 @@
         "tidyselect",
         "utils"
       ],
-      "Hash": "71ea7e7b231126585310ab30781a488a"
+      "Hash": "a8092b58cca5fe2ed2676d008c16f618"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
