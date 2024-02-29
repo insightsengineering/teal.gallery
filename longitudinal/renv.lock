@@ -290,16 +290,16 @@
     },
     "RcppEigen": {
       "Package": "RcppEigen",
-      "Version": "0.3.3.9.4",
+      "Version": "0.3.4.0.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "Rcpp",
         "stats",
         "utils"
       ],
-      "Hash": "acb0a5bf38490f26ab8661b467f4f53a"
+      "Hash": "df49e3306f232ec28f1604e36a202847"
     },
     "Rdpack": {
       "Package": "Rdpack",
@@ -1014,14 +1014,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.5.9010",
+      "Version": "0.5.5.9011",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "9e98d8bb272b083eed1d343863c9d0927586c8db",
+      "RemoteSha": "3d347e40ae0de77a7f3ef1ce32b21a6184dcefc6",
       "Requirements": [
         "R",
         "checkmate",
@@ -1029,7 +1029,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "356ee355f253efc5da436eaff4fadeca"
+      "Hash": "472e3c578420faf59f695c7c436e4f8b"
     },
     "fs": {
       "Package": "fs",
@@ -2237,13 +2237,13 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.0.4",
+      "Version": "1.0.5",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "utils"
       ],
-      "Hash": "11abaf7c540ff33f94514d50f929bfd1"
+      "Hash": "32c3f93e8360f667ca5863272ec8ba6a"
     },
     "rlang": {
       "Package": "rlang",
@@ -2506,6 +2506,19 @@
         "shiny"
       ],
       "Hash": "96bb249d21b7473dbeb0311702ef5288"
+    },
+    "shinybusy": {
+      "Package": "shinybusy",
+      "Version": "0.3.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "htmltools",
+        "htmlwidgets",
+        "jsonlite",
+        "shiny"
+      ],
+      "Hash": "cfb1edf0a7b334747556da1598ef67b1"
     },
     "shinycssloaders": {
       "Package": "shinycssloaders",
@@ -2784,14 +2797,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.0.9004",
+      "Version": "0.9.0.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "e8c098cc2fc6b2a6f6720e2c4a3eab91e44f180b",
+      "RemoteSha": "c5f45fb3c521933adcd239fa36f63c0c2dd1abfc",
       "Requirements": [
         "DT",
         "R",
@@ -2827,18 +2840,18 @@
         "utils",
         "vistime"
       ],
-      "Hash": "81807f7236973e8f8ae66c40657821a6"
+      "Hash": "d00f06a73194998616e8ffc2a9d3eaed"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.2.16.9026",
+      "Version": "0.2.16.9029",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "c9f87bf8b8ecc4b3176481c2ef252a676c998b33",
+      "RemoteSha": "5357b8b45d7b917d7e6d04a21a6ebcbbd1b9bbc7",
       "Requirements": [
         "DT",
         "R",
@@ -2870,18 +2883,18 @@
         "tidyselect",
         "utils"
       ],
-      "Hash": "71ea7e7b231126585310ab30781a488a"
+      "Hash": "a8092b58cca5fe2ed2676d008c16f618"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.0.9004",
+      "Version": "0.3.0.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "685cc155152367c7e9a5441d358c54ef316a5b92",
+      "RemoteSha": "bf2cbcf490f422dd575b111d296d3676d7f33450",
       "Requirements": [
         "R6",
         "bslib",
@@ -2894,10 +2907,11 @@
         "rmarkdown",
         "shiny",
         "shinyWidgets",
+        "shinybusy",
         "yaml",
         "zip"
       ],
-      "Hash": "68940cd6af97026f24f22361346476d3"
+      "Hash": "e825c1dcce3ec81116b3d61270223097"
     },
     "teal.slice": {
       "Package": "teal.slice",
