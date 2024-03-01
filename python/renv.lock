@@ -211,7 +211,7 @@
       "Package": "RcppEigen",
       "Version": "0.3.4.0.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "Rcpp",
@@ -610,14 +610,14 @@
     },
     "data.table": {
       "Package": "data.table",
-      "Version": "1.15.0",
+      "Version": "1.15.2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "methods"
       ],
-      "Hash": "cfbbb4aed6e78cd45f17123a9ec9981a"
+      "Hash": "536dfe4ac4093b5d115caed7a1a7223b"
     },
     "desc": {
       "Package": "desc",
@@ -1843,7 +1843,7 @@
       "Package": "renv",
       "Version": "1.0.5",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
@@ -2223,14 +2223,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.1.9002",
+      "Version": "0.15.1.9003",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "9b0e3fb581bf191196438c1d06fff85331b230d0",
+      "RemoteSha": "3be2e94caeba4c551e1f1071c57730fe3969a000",
       "Requirements": [
         "R",
         "checkmate",
@@ -2251,7 +2251,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "eb01ffc4c48632f12e106ecb2a308c7b"
+      "Hash": "9757f89b1b903f8d90bb10579af51ac9"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2388,14 +2388,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.0.9003",
+      "Version": "0.5.0.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "93938f4e485b6b1728e48c982eaeb604c9f3c77d",
+      "RemoteSha": "255283d4bbf3ea62427b862a85820782a48bc64d",
       "Requirements": [
         "R",
         "R6",
@@ -2418,7 +2418,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "497a611af9f8f0578fc864ed989c5e95"
+      "Hash": "2602d26cded911fc36112995a04bd001"
     },
     "teal.transform": {
       "Package": "teal.transform",
