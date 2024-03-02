@@ -733,13 +733,13 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "5.2.0",
+      "Version": "5.2.1",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "ce88d13c0b10fe88a37d9c59dba2d7f9"
+      "Hash": "411ca2c03b1ce5f548345d2fc2685f7a"
     },
     "data.table": {
       "Package": "data.table",
@@ -2483,9 +2483,9 @@
     },
     "shinyWidgets": {
       "Package": "shinyWidgets",
-      "Version": "0.8.1",
+      "Version": "0.8.2",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "anytime",
@@ -2497,7 +2497,7 @@
         "sass",
         "shiny"
       ],
-      "Hash": "96bb249d21b7473dbeb0311702ef5288"
+      "Hash": "88289640c8206dc810ea9cb87bd58ffc"
     },
     "shinycssloaders": {
       "Package": "shinycssloaders",
@@ -2798,14 +2798,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.2.16.9029",
+      "Version": "0.2.16.9030",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "5357b8b45d7b917d7e6d04a21a6ebcbbd1b9bbc7",
+      "RemoteSha": "5285fccd0583d3398b89cc7c042c709175578f1c",
       "Requirements": [
         "DT",
         "R",
@@ -2816,7 +2816,6 @@
         "ggplot2",
         "grid",
         "logger",
-        "magrittr",
         "scales",
         "shiny",
         "shinyTree",
@@ -2827,6 +2826,7 @@
         "stringr",
         "teal",
         "teal.code",
+        "teal.data",
         "teal.logger",
         "teal.reporter",
         "teal.transform",
@@ -2834,10 +2834,10 @@
         "tern",
         "tibble",
         "tidyr",
-        "tidyselect",
+        "tools",
         "utils"
       ],
-      "Hash": "a8092b58cca5fe2ed2676d008c16f618"
+      "Hash": "b5935405bfed17c9a98d6d2c7497c006"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
