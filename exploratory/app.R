@@ -30,10 +30,9 @@ data <- within(data, {
   library(sparkline)
 
 
-  ADSL <- synthetic_cdisc_data("latest")$adsl
-  ADRS <- synthetic_cdisc_data("latest")$adrs
-  ADLB <- synthetic_cdisc_data("latest")$adlb
-
+  ADSL <- synthetic_cdisc_dataset("latest", "adsl")
+  ADRS <- synthetic_cdisc_dataset("latest", "adrs")
+  ADLB <- synthetic_cdisc_dataset("latest", "adlb")
   ADLBPCA <- ADLB %>%
     dplyr::select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
     tidyr::pivot_wider(
