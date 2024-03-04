@@ -233,9 +233,9 @@
     },
     "RcppArmadillo": {
       "Package": "RcppArmadillo",
-      "Version": "0.12.8.0.0",
+      "Version": "0.12.8.1.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "Rcpp",
@@ -243,7 +243,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "847fc78bd9f83f55696b4b016482f7ed"
+      "Hash": "e78bbbb81a5dcd71a4bd3268d6ede0b1"
     },
     "RcppEigen": {
       "Package": "RcppEigen",
@@ -2146,20 +2146,20 @@
     },
     "scda": {
       "Package": "scda",
-      "Version": "0.1.6.9016",
+      "Version": "0.1.6.9017",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "scda",
       "RemoteRef": "main",
-      "RemoteSha": "cc80ede41d08b3a7da20679dbe1306ea44e531da",
+      "RemoteSha": "54515f7efe296d03221a1338421aad8fdec5a2e7",
       "Remotes": "insightsengineering/scda.2022@*release",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "afb5a260e870566145a04bf455a9b054"
+      "Hash": "1179680c55d796335bf815da617cf4c3"
     },
     "scda.2022": {
       "Package": "scda.2022",
@@ -2750,14 +2750,14 @@
     },
     "tern.gee": {
       "Package": "tern.gee",
-      "Version": "0.1.3.9003",
+      "Version": "0.1.3.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.gee",
       "RemoteRef": "main",
-      "RemoteSha": "12fa84c107a94984b8e0592306025e2581ffbc2a",
+      "RemoteSha": "7c0e8edcb70f300da014245d0f224233d986672a",
       "Requirements": [
         "R",
         "checkmate",
@@ -2770,7 +2770,7 @@
         "stats",
         "tern"
       ],
-      "Hash": "a04f099c5ab656f8c9af6422bebadc9f"
+      "Hash": "2386f1d8811e7d3582b97b2620ae27c4"
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
