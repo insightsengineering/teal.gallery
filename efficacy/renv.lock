@@ -235,7 +235,7 @@
       "Package": "RcppArmadillo",
       "Version": "0.12.8.1.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "Rcpp",
@@ -901,14 +901,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.5.9012",
+      "Version": "0.5.5.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "a1bedbbd318d9f693eb6bf88d13d0484e789d73a",
+      "RemoteSha": "b39124016460a0c16f8231b3c869046547fb513f",
       "Requirements": [
         "R",
         "checkmate",
@@ -916,7 +916,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "946ead67ebb4abbdbb1b5d426b6e7e6f"
+      "Hash": "feb725075c260d13c908321b52b739f6"
     },
     "fs": {
       "Package": "fs",
@@ -1537,7 +1537,7 @@
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "765070bf1afee434e632de54c3c13cca66c24148",
+      "RemoteSha": "41b21ff0455b2c7097ad8945667d0363ffdf217a",
       "Requirements": [
         "Matrix",
         "R",
@@ -1557,7 +1557,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "56b6d13e523a386d6be4c3c715fda13e"
+      "Hash": "4357514a879409aefa3e101463e01eed"
     },
     "mosaicCore": {
       "Package": "mosaicCore",
