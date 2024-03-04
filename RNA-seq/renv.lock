@@ -601,7 +601,7 @@
       "Package": "RcppArmadillo",
       "Version": "0.12.8.1.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "Rcpp",
