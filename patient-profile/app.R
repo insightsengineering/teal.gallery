@@ -11,12 +11,12 @@ data <- within(data, {
   library(scda.2022)
   library(nestcolor)
 
-  ADSL <- synthetic_cdisc_data("latest")$adsl
-  ADMH <- synthetic_cdisc_data("latest")$admh
-  ADAE <- synthetic_cdisc_data("latest")$adae
-  ADCM <- synthetic_cdisc_data("latest")$adcm
-  ADVS <- synthetic_cdisc_data("latest")$advs
-  ADLB <- synthetic_cdisc_data("latest")$adlb
+  ADSL <- synthetic_cdisc_dataset("latest", "adsl")
+  ADMH <- synthetic_cdisc_dataset("latest", "admh")
+  ADAE <- synthetic_cdisc_dataset("latest", "adae")
+  ADCM <- synthetic_cdisc_dataset("latest", "adcm")
+  ADVS <- synthetic_cdisc_dataset("latest", "advs")
+  ADLB <- synthetic_cdisc_dataset("latest", "adlb")
 
   ## Modify ADCM
   ADCM$CMINDC <- paste0("Indication_", as.numeric(ADCM$CMDECOD))
