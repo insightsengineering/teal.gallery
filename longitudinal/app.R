@@ -23,8 +23,8 @@ data <- within(data, {
   # depending on if the data are SUBJECT LEVEL ANALYSIS DATASET or BASIC DATA STRUCTURE
   # if for example outcome variables are added to ADSL then do also add them as columns to ADLB
   # this is needed to be able to use plot splitting by outcome functionality
-  ADSL <- synthetic_cdisc_data("latest")$adsl
-  ADLB <- synthetic_cdisc_data("latest")$adlb
+  ADSL <- synthetic_cdisc_data("latest", "adsl")
+  ADLB <- synthetic_cdisc_data("latest", "adlb")
 
   ################################################################################
   # BEGIN: Analyst Input Required To Modify Values Below To Reflect Study Specifics
