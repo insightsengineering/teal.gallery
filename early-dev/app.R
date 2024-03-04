@@ -15,7 +15,7 @@ data <- within(data, {
   # optional libraries
   library(sparkline)
 
-  ADSL <- synthetic_cdisc_data("latest", "adsl")
+  ADSL <- synthetic_cdisc_dataset("latest", "adsl")
 
   # derive ADSL treatment duration
   adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
@@ -34,7 +34,7 @@ data <- within(data, {
     droplevels()
   teal.data::col_labels(ADSL)[c(names(adsl_labels))] <- adsl_labels
 
-  ADAE <- synthetic_cdisc_data("latest", "adae")
+  ADAE <- synthetic_cdisc_dataset("latest", "adae")
 
   # derive common flags for AEs
   adae_labels <- teal.data::col_labels(ADAE, fill = FALSE)
@@ -67,7 +67,7 @@ data <- within(data, {
       AELLT = "Lowest Level Term"
     )
 
-  ADCM <- synthetic_cdisc_data("latest", "adcm")
+  ADCM <- synthetic_cdisc_dataset("latest", "adcm")
 
   # process ADCM
   ADCM <- ADCM %>%
@@ -80,7 +80,7 @@ data <- within(data, {
       AENDT = "Analysis End Date"
     )
 
-  ADEX <- synthetic_cdisc_data("latest", "adex")
+  ADEX <- synthetic_cdisc_dataset("latest", "adex")
 
   # process ADEX
   ADEX <- ADEX %>%
@@ -93,7 +93,7 @@ data <- within(data, {
       AENDT = "Analysis End Date"
     )
 
-  ADTR <- synthetic_cdisc_data("latest", "adtr")
+  ADTR <- synthetic_cdisc_dataset("latest", "adtr")
 
   # process ADTR
   adtr_labels <- teal.data::col_labels(ADTR, fill = FALSE)
@@ -113,11 +113,11 @@ data <- within(data, {
 
 
   # process ADRS
-  ADRSSWIM <- synthetic_cdisc_data("latest", "adrs") %>%
+  ADRSSWIM <- synthetic_cdisc_dataset("latest", "adrs") %>%
     filter(PARAMCD == "OVRINV") %>%
     arrange(USUBJID)
 
-  ADRS <- synthetic_cdisc_data("latest", "adrs")
+  ADRS <- synthetic_cdisc_dataset("latest", "adrs")
   adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
   ADRS <- ADRS %>%
     filter(PARAMCD %in% c("BESRSPI", "INVET")) %>%
@@ -125,7 +125,7 @@ data <- within(data, {
     droplevels()
   teal.data::col_labels(ADRS)["ADT"] <- "Analysis Date"
 
-  ADLB <- synthetic_cdisc_data("latest", "adlb")
+  ADLB <- synthetic_cdisc_dataset("latest", "adlb")
 
   # process ADLB
   ADLB <- ADLB %>%

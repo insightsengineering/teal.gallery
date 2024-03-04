@@ -14,7 +14,7 @@ data <- within(data, {
   # optional libraries
   library(sparkline)
 
-  ADSL <- synthetic_cdisc_data("latest", "adsl")
+  ADSL <- synthetic_cdisc_dataset("latest", "adsl")
   adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
 
   char_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.character)))
@@ -34,14 +34,14 @@ data <- within(data, {
 
   teal.data::col_labels(ADSL) <- adsl_labels
 
-  ADTTE <- synthetic_cdisc_data("latest", "adtte")
+  ADTTE <- synthetic_cdisc_dataset("latest", "adtte")
 
-  ADRS <- synthetic_cdisc_data("latest", "adrs")
+  ADRS <- synthetic_cdisc_dataset("latest", "adrs")
   adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
   ADRS <- filter(ADRS, PARAMCD == "BESRSPI" | AVISIT == "FOLLOW UP")
   teal.data::col_labels(ADRS) <- adrs_labels
 
-  ADQS <- synthetic_cdisc_data("latest", "adqs")
+  ADQS <- synthetic_cdisc_dataset("latest", "adqs")
   adqs_labels <- teal.data::col_labels(ADQS, fill = FALSE)
   ADQS <- ADQS %>%
     filter(ABLFL != "Y" & ABLFL2 != "Y") %>%

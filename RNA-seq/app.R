@@ -9,7 +9,7 @@ data <- teal_data()
 data <- within(data, {
   library(scda.2022)
   library(nestcolor)
-  ADTTE <- scda::synthetic_cdisc_data("rcd_2022_06_27", "adtte") %>%
+  ADTTE <- scda::synthetic_cdisc_dataset("rcd_2022_06_27", "adtte") %>%
     dplyr::mutate(is_event = CNSR == 0)
   MAE <- hermes::multi_assay_experiment
 })
