@@ -14,9 +14,9 @@ data <- within(data, {
   # optional libraries
   library(sparkline)
 
-  ADSL <- synthetic_cdisc_data("latest")$adsl
-  ADAE <- synthetic_cdisc_data("latest")$adae
-  ADAETTE <- synthetic_cdisc_data("latest")$adaette
+  ADSL <- synthetic_cdisc_dataset("latest", "adsl")
+  ADAE <- synthetic_cdisc_dataset("latest", "adae")
+  ADAETTE <- synthetic_cdisc_dataset("latest", "adaette")
   ADAETTE <- ADAETTE %>%
     mutate(is_event = case_when(
       grepl("TOT", .data$PARAMCD, fixed = TRUE) ~ TRUE,
@@ -41,7 +41,7 @@ data <- within(data, {
     full_join(ADAETTE_AE, ADAETTE_TTE, by = c("USUBJID", "ARM", "ARMCD"))
   ADAETTE <- rbind(ADAETTE_AE, ADAETTE_OTH)
 
-  ADEX <- synthetic_cdisc_data("latest")$adex
+  ADEX <- synthetic_cdisc_dataset("latest", "adex")
   ADEX_labels <- teal.data::col_labels(ADEX, fill = FALSE)
   # Below steps are done to simulate data with TDURD parameter as it is not in the ADEX data from scda package
   set.seed(1, kind = "Mersenne-Twister")
@@ -64,12 +64,12 @@ data <- within(data, {
       PARAMCD %in% c("TDOSE", "TNDOSE", "TDURD"))
   teal.data::col_labels(ADEX) <- ADEX_labels
 
-  ADLB <- synthetic_cdisc_data("latest")$adlb
+  ADLB <- synthetic_cdisc_dataset("latest", "adlb")
 
-  ADEG <- synthetic_cdisc_data("latest")$adeg
+  ADEG <- synthetic_cdisc_dataset("latest", "adeg")
 
   # For real data, ADVS needs some preprocessing like group different ANRIND and BNRIND into abnormal
-  ADVS <- synthetic_cdisc_data("latest")$advs %>%
+  ADVS <- synthetic_cdisc_dataset("latest", "advs") %>%
     mutate(ONTRTFL = ifelse(AVISIT %in% c("SCREENING", "BASELINE"), "", "Y")) %>%
     teal.data::col_relabel(ONTRTFL = "On Treatment Record Flag") %>%
     mutate(ANRIND = as.character(ANRIND), BNRIND = as.character(BNRIND)) %>%
@@ -87,7 +87,7 @@ data <- within(data, {
     )
 
   ADCM <-
-    synthetic_cdisc_data("latest")$adcm %>% mutate(CMSEQ = as.integer(CMSEQ))
+    synthetic_cdisc_dataset("latest", "adcm") %>% mutate(CMSEQ = as.integer(CMSEQ))
 
   # Add study-specific pre-processing: convert arm, param and visit variables to factors
   # Sample code:
