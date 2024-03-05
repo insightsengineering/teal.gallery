@@ -2097,7 +2097,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "c8a217669d07f5a185ca8d65d2e230c041ec29d2",
+      "RemoteSha": "a9850246d9cb2480ccfc6fc59e1e8152d37a4ed2",
       "Requirements": [
         "R",
         "checkmate",
@@ -2108,7 +2108,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "308f6d36a7d1eb01c174fc043b1a0b31"
+      "Hash": "25d703c1858ddaea48beaa2176c8cacc"
     },
     "sass": {
       "Package": "sass",
