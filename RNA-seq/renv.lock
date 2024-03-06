@@ -640,8 +640,9 @@
     },
     "S4Arrays": {
       "Package": "S4Arrays",
-      "Version": "1.2.0",
+      "Version": "1.2.1",
       "Source": "Bioconductor",
+      "Repository": "Bioconductor 3.18",
       "Requirements": [
         "BiocGenerics",
         "IRanges",
@@ -653,7 +654,7 @@
         "methods",
         "stats"
       ],
-      "Hash": "b92a69b0bc7bce3d22f201c3b1126664"
+      "Hash": "3213a9826adb8f48e51af1e7b30fa568"
     },
     "S4Vectors": {
       "Package": "S4Vectors",
@@ -1557,9 +1558,9 @@
     },
     "gdtools": {
       "Package": "gdtools",
-      "Version": "0.3.6",
+      "Version": "0.3.7",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "Rcpp",
@@ -1570,7 +1571,7 @@
         "systemfonts",
         "tools"
       ],
-      "Hash": "39634ca05ad46d90c56087a92a314a3b"
+      "Hash": "b53e23731a5946448ad888efca14d2df"
     },
     "generics": {
       "Package": "generics",
@@ -2042,13 +2043,13 @@
     },
     "logger": {
       "Package": "logger",
-      "Version": "0.2.2",
+      "Version": "0.3.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "utils"
       ],
-      "Hash": "c269b06beb2bbadb0d058c0e6fa4ec3d"
+      "Hash": "c145edf05cc128e6ffcfa5d872c46329"
     },
     "magrittr": {
       "Package": "magrittr",
@@ -2575,9 +2576,9 @@
     },
     "rmarkdown": {
       "Package": "rmarkdown",
-      "Version": "2.25",
+      "Version": "2.26",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "bslib",
@@ -2588,14 +2589,13 @@
         "jsonlite",
         "knitr",
         "methods",
-        "stringr",
         "tinytex",
         "tools",
         "utils",
         "xfun",
         "yaml"
       ],
-      "Hash": "d65e35823c817f09f4de424fcdfa812a"
+      "Hash": "9b148e7f95d33aac01f31282d49e4f44"
     },
     "rprojroot": {
       "Package": "rprojroot",
@@ -3014,14 +3014,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.2.16.9030",
+      "Version": "0.3.0.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "5285fccd0583d3398b89cc7c042c709175578f1c",
+      "RemoteSha": "da9dfc285157af93f366896e61895a173357c216",
       "Requirements": [
         "DT",
         "R",
@@ -3053,7 +3053,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "b5935405bfed17c9a98d6d2c7497c006"
+      "Hash": "04c9585b79935e464bf149c35515212e"
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
