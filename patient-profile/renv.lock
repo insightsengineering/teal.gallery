@@ -32,9 +32,6 @@
       }
     ]
   },
-  "Bioconductor": {
-    "Version": "3.17"
-  },
   "Packages": {
     "BH": {
       "Package": "BH",
@@ -42,25 +39,6 @@
       "Source": "Repository",
       "Repository": "RSPM",
       "Hash": "a8235afbcd6316e6e91433ea47661013"
-    },
-    "BiocManager": {
-      "Package": "BiocManager",
-      "Version": "1.30.22",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "utils"
-      ],
-      "Hash": "d57e43105a1aa9cb54fdb4629725acb1"
-    },
-    "BiocVersion": {
-      "Package": "BiocVersion",
-      "Version": "3.17.1",
-      "Source": "Bioconductor",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "f7c0d5521799b7b0d0a211143ed0bfcb"
     },
     "DT": {
       "Package": "DT",
@@ -806,9 +784,9 @@
     },
     "flextable": {
       "Package": "flextable",
-      "Version": "0.9.4",
+      "Version": "0.9.5",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "data.table",
         "gdtools",
@@ -826,7 +804,7 @@
         "uuid",
         "xml2"
       ],
-      "Hash": "db48820af2b3e5afa64726cf5615da27"
+      "Hash": "703b952d6be3f841274df7831ec95e5d"
     },
     "fontBitstreamVera": {
       "Package": "fontBitstreamVera",
@@ -1527,14 +1505,14 @@
     },
     "mmrm": {
       "Package": "mmrm",
-      "Version": "0.3.10",
+      "Version": "0.3.11",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
-      "RemoteRef": "v0.3.10",
-      "RemoteSha": "8d2a7d8281af91ae85dca358e9f716340895c1a0",
+      "RemoteRef": "v0.3.11",
+      "RemoteSha": "a21054eacaf15164c5d10328e061db6a35d3aa5f",
       "Requirements": [
         "Matrix",
         "R",
@@ -1554,7 +1532,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "b82e133e8bb78a88842c692d6270fb55"
+      "Hash": "a472c3c5a2b00475f00af065ff518320"
     },
     "mosaicCore": {
       "Package": "mosaicCore",
