@@ -804,9 +804,9 @@
     },
     "flextable": {
       "Package": "flextable",
-      "Version": "0.9.4",
+      "Version": "0.9.5",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "data.table",
         "gdtools",
@@ -824,7 +824,7 @@
         "uuid",
         "xml2"
       ],
-      "Hash": "db48820af2b3e5afa64726cf5615da27"
+      "Hash": "703b952d6be3f841274df7831ec95e5d"
     },
     "fontBitstreamVera": {
       "Package": "fontBitstreamVera",
@@ -1530,14 +1530,14 @@
     },
     "mmrm": {
       "Package": "mmrm",
-      "Version": "0.3.10.9006",
+      "Version": "0.3.11",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "41b21ff0455b2c7097ad8945667d0363ffdf217a",
+      "RemoteSha": "a21054eacaf15164c5d10328e061db6a35d3aa5f",
       "Requirements": [
         "Matrix",
         "R",
@@ -1557,7 +1557,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "4357514a879409aefa3e101463e01eed"
+      "Hash": "685c3c735e052e61c207e4b3390a33b7"
     },
     "mosaicCore": {
       "Package": "mosaicCore",
@@ -2404,14 +2404,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.1.9005",
+      "Version": "0.15.1.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "bfc4a04396585dfb47669694aa134d2aebb1631a",
+      "RemoteSha": "f606cb9e0fef9aab767a3f09b7f36f10d2a9e2c9",
       "Requirements": [
         "R",
         "checkmate",
@@ -2432,7 +2432,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "ea20b6472cb382a7ed6b0bb324de7050"
+      "Hash": "0410b48dfa08bc34deb94cdebc8f91a4"
     },
     "teal.code": {
       "Package": "teal.code",
