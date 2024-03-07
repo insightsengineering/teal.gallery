@@ -406,7 +406,7 @@
     },
     "flextable": {
       "Package": "flextable",
-      "Version": "0.9.4",
+      "Version": "0.9.5",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -426,7 +426,7 @@
         "uuid",
         "xml2"
       ],
-      "Hash": "db48820af2b3e5afa64726cf5615da27"
+      "Hash": "703b952d6be3f841274df7831ec95e5d"
     },
     "fontBitstreamVera": {
       "Package": "fontBitstreamVera",
