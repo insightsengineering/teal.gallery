@@ -879,9 +879,9 @@
     },
     "flextable": {
       "Package": "flextable",
-      "Version": "0.9.4",
+      "Version": "0.9.5",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "data.table",
         "gdtools",
@@ -899,7 +899,7 @@
         "uuid",
         "xml2"
       ],
-      "Hash": "db48820af2b3e5afa64726cf5615da27"
+      "Hash": "703b952d6be3f841274df7831ec95e5d"
     },
     "fontBitstreamVera": {
       "Package": "fontBitstreamVera",
@@ -2730,14 +2730,14 @@
     },
     "teal.osprey": {
       "Package": "teal.osprey",
-      "Version": "0.1.16.9011",
+      "Version": "0.1.16.9012",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.osprey",
       "RemoteRef": "main",
-      "RemoteSha": "2e553099d5698d0833f61de520a6dfbdcfd8d5e1",
+      "RemoteSha": "4f3f9dd49d038474c93f1340677edc555d76a417",
       "Requirements": [
         "R",
         "checkmate",
@@ -2758,7 +2758,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "ce11e47a955f5d3c2f571c0ef371d5a2"
+      "Hash": "4ee154997b978dee16a140407787288e"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
