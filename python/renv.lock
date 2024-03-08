@@ -2168,18 +2168,18 @@
     },
     "systemfonts": {
       "Package": "systemfonts",
-      "Version": "1.0.5",
+      "Version": "1.0.6",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "cpp11"
       ],
-      "Hash": "15b594369e70b975ba9f064295983499"
+      "Hash": "6d538cff441f0f1f36db2209ac7495ac"
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.1",
+      "Version": "0.15.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2202,7 +2202,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "a7ce753398ba84b10386b4393c2040b6"
+      "Hash": "c9e4b15461b0fc175a386cf28f474644"
     },
     "teal.code": {
       "Package": "teal.code",
