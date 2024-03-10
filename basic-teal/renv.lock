@@ -1167,7 +1167,7 @@
     },
     "shinybusy": {
       "Package": "shinybusy",
-      "Version": "0.3.2",
+      "Version": "0.3.3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1176,7 +1176,7 @@
         "jsonlite",
         "shiny"
       ],
-      "Hash": "cfb1edf0a7b334747556da1598ef67b1"
+      "Hash": "7dc8feb4207741ff581422a04fc8f3ea"
     },
     "shinycssloaders": {
       "Package": "shinycssloaders",
