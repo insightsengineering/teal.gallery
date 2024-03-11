@@ -2708,14 +2708,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.3.9022",
+      "Version": "0.9.3.9023",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "6ce9fb5aee3ac8f412510cc29b4f3251c7b7b3cc",
+      "RemoteSha": "0d4487f73270bb61309e0984d18bd27033792081",
       "Requirements": [
         "MASS",
         "R",
@@ -2745,7 +2745,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "403a2698f7047e2eb58eb08d178bb96f"
+      "Hash": "b8a111995add36b29fd64cf47c1dff7c"
     },
     "tern.gee": {
       "Package": "tern.gee",
