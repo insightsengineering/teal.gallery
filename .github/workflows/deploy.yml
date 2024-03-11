@@ -36,7 +36,7 @@ jobs:
     name: Publish 🗞
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/insightsengineering/rstudio:latest
+      image: ghcr.io/insightsengineering/rstudio:2024.03.05
     if: >
       !contains(github.event.commits[0].message, '[skip deploy]')
     strategy:
@@ -165,7 +165,6 @@ jobs:
 
       - name: Front end test to check if the app works fine
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
-        continue-on-error: true
         uses: cypress-io/github-action@v6
         with:
           build: npm install cypress --save-dev

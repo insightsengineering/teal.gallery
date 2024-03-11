@@ -56,54 +56,29 @@ ADLB <- data[["ADLB"]]
 
 
 ## Define variable inputs
-aeterm_input <- data_extract_spec(
-  dataname = "ADAE",
-  select = select_spec(
-    choices = variable_choices(ADAE, "AETERM"),
-    selected = c("AETERM"),
-    multiple = FALSE,
-    fixed = FALSE
-  )
+aeterm_input <- choices_selected(
+  choices = variable_choices(ADAE, "AETERM"),
+  selected = "AETERM"
 )
 
-cmtrt_input <- data_extract_spec(
-  dataname = "ADCM",
-  select = select_spec(
-    choices = variable_choices(ADCM, "CMTRT"),
-    selected = c("CMTRT"),
-    multiple = FALSE,
-    fixed = FALSE
-  )
+cmtrt_input <- choices_selected(
+  choices = variable_choices(ADCM, "CMTRT"),
+  selected = "CMTRT"
 )
 
-cmindc_input <- data_extract_spec(
-  dataname = "ADCM",
-  select = select_spec(
-    choices = variable_choices(ADCM, "CMINDC"),
-    selected = c("CMINDC"),
-    multiple = FALSE,
-    fixed = FALSE
-  )
+cmindc_input <- choices_selected(
+  choices = variable_choices(ADCM, "CMINDC"),
+  selected = "CMINDC"
 )
 
-atirel_input <- data_extract_spec(
-  dataname = "ADCM",
-  select = select_spec(
-    choices = variable_choices(ADCM, "ATIREL"),
-    selected = c("ATIREL"),
-    multiple = FALSE,
-    fixed = FALSE
-  )
+atirel_input <- choices_selected(
+  choices = variable_choices(ADCM, "ATIREL"),
+  selected = "ATIREL"
 )
 
-cmdecod_input <- data_extract_spec(
-  dataname = "ADCM",
-  select = select_spec(
-    choices = variable_choices(ADCM, "CMDECOD"),
-    selected = c("CMDECOD"),
-    multiple = FALSE,
-    fixed = FALSE
-  )
+cmdecod_input <- choices_selected(
+  choices = variable_choices(ADCM, "CMDECOD"),
+  selected = "CMDECOD"
 )
 
 app <- init(
@@ -130,46 +105,26 @@ app <- init(
       label = "Basic Info",
       dataname = "ADSL",
       patient_col = "USUBJID",
-      vars = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL),
-          selected = c("ARM", "AGE", "SEX", "COUNTRY", "RACE", "EOSSTT"),
-          multiple = TRUE,
-          fixed = FALSE
-        )
+      vars = choices_selected(
+        choices = variable_choices(ADSL),
+        selected = c("ARM", "AGE", "SEX", "COUNTRY", "RACE", "EOSSTT")
       )
     ),
     tm_t_pp_medical_history(
       label = "Medical History",
       parentname = "ADSL",
       patient_col = "USUBJID",
-      mhterm = data_extract_spec(
-        dataname = "ADMH",
-        select = select_spec(
-          choices = variable_choices(ADMH, c("MHTERM")),
-          selected = c("MHTERM"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      mhterm = choices_selected(
+        choices = variable_choices(ADMH, "MHTERM"),
+        selected = "MHTERM"
       ),
-      mhbodsys = data_extract_spec(
-        dataname = "ADMH",
-        select = select_spec(
-          choices = variable_choices(ADMH, "MHBODSYS"),
-          selected = c("MHBODSYS"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      mhbodsys = choices_selected(
+        choices = variable_choices(ADMH, "MHBODSYS"),
+        selected = "MHBODSYS"
       ),
-      mhdistat = data_extract_spec(
-        dataname = "ADMH",
-        select = select_spec(
-          choices = variable_choices(ADMH, "MHDISTAT"),
-          selected = c("MHDISTAT"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      mhdistat = choices_selected(
+        choices = variable_choices(ADMH, "MHDISTAT"),
+        selected = "MHDISTAT"
       )
     ),
     tm_t_pp_prior_medication(
@@ -179,14 +134,9 @@ app <- init(
       atirel = atirel_input,
       cmdecod = cmdecod_input,
       cmindc = cmindc_input,
-      cmstdy = data_extract_spec(
-        dataname = "ADCM",
-        select = select_spec(
-          choices = variable_choices(ADCM, "ASTDY"),
-          selected = c("ASTDY"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      cmstdy = choices_selected(
+        choices = variable_choices(ADCM, "ASTDY"),
+        selected = "ASTDY"
       )
     ),
     tm_g_pp_vitals(
@@ -194,32 +144,17 @@ app <- init(
       parentname = "ADSL",
       patient_col = "USUBJID",
       plot_height = c(600L, 200L, 2000L),
-      paramcd = data_extract_spec(
-        dataname = "ADVS",
-        select = select_spec(
-          choices = variable_choices(ADVS, "PARAMCD"),
-          selected = c("PARAMCD"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      paramcd = choices_selected(
+        choices = variable_choices(ADVS, "PARAMCD"),
+        selected = "PARAMCD"
       ),
-      xaxis = data_extract_spec(
-        dataname = "ADVS",
-        select = select_spec(
-          choices = variable_choices(ADVS, "ADY"),
-          selected = c("ADY"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      xaxis = choices_selected(
+        choices = variable_choices(ADVS, "ADY"),
+        selected = "ADY"
       ),
-      aval_var = data_extract_spec(
-        dataname = "ADVS",
-        select = select_spec(
-          choices = variable_choices(ADVS, "AVAL"),
-          selected = c("AVAL"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      aval_var = choices_selected(
+        choices = variable_choices(ADVS, "AVAL"),
+        selected = "AVAL"
       )
     ),
     tm_g_pp_therapy(
@@ -230,60 +165,30 @@ app <- init(
       atirel = atirel_input,
       cmdecod = cmdecod_input,
       cmindc = cmindc_input,
-      cmdose = data_extract_spec(
-        dataname = "ADCM",
-        select = select_spec(
-          choices = variable_choices(ADCM, "CMDOSE"),
-          selected = c("CMDOSE"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      cmdose = choices_selected(
+        choices = variable_choices(ADCM, "CMDOSE"),
+        selected = "CMDOSE"
       ),
       cmtrt = cmtrt_input,
-      cmdosu = data_extract_spec(
-        dataname = "ADCM",
-        select = select_spec(
-          choices = variable_choices(ADCM, "CMDOSU"),
-          selected = c("CMDOSU"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      cmdosu = choices_selected(
+        choices = variable_choices(ADCM, "CMDOSU"),
+        selected = "CMDOSU"
       ),
-      cmroute = data_extract_spec(
-        dataname = "ADCM",
-        select = select_spec(
-          choices = variable_choices(ADCM, "CMROUTE"),
-          selected = c("CMROUTE"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      cmroute = choices_selected(
+        choices = variable_choices(ADCM, "CMROUTE"),
+        selected = "CMROUTE"
       ),
-      cmdosfrq = data_extract_spec(
-        dataname = "ADCM",
-        select = select_spec(
-          choices = variable_choices(ADCM, "CMDOSFRQ"),
-          selected = c("CMDOSFRQ"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      cmdosfrq = choices_selected(
+        choices = variable_choices(ADCM, "CMDOSFRQ"),
+        selected = "CMDOSFRQ"
       ),
-      cmstdy = data_extract_spec(
-        dataname = "ADCM",
-        select = select_spec(
-          choices = variable_choices(ADCM, "ASTDY"),
-          selected = c("ASTDY"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      cmstdy = choices_selected(
+        choices = variable_choices(ADCM, "ASTDY"),
+        selected = "ASTDY"
       ),
-      cmendy = data_extract_spec(
-        dataname = "ADCM",
-        select = select_spec(
-          choices = variable_choices(ADCM, "AENDY"),
-          selected = c("AENDY"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      cmendy = choices_selected(
+        choices = variable_choices(ADCM, "AENDY"),
+        selected = "AENDY"
       )
     ),
     tm_g_pp_adverse_events(
@@ -292,50 +197,25 @@ app <- init(
       patient_col = "USUBJID",
       plot_height = c(600L, 200L, 2000L),
       aeterm = aeterm_input,
-      tox_grade = data_extract_spec(
-        dataname = "ADAE",
-        select = select_spec(
-          choices = variable_choices(ADAE, "AETOXGR"),
-          selected = c("AETOXGR"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      tox_grade = choices_selected(
+        choices = variable_choices(ADAE, "AETOXGR"),
+        selected = "AETOXGR"
       ),
-      causality = data_extract_spec(
-        dataname = "ADAE",
-        select = select_spec(
-          choices = variable_choices(ADAE, "AEREL"),
-          selected = c("AEREL"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      causality = choices_selected(
+        choices = variable_choices(ADAE, "AEREL"),
+        selected = "AEREL"
       ),
-      outcome = data_extract_spec(
-        dataname = "ADAE",
-        select = select_spec(
-          choices = variable_choices(ADAE, "AEOUT"),
-          selected = c("AEOUT"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      outcome = choices_selected(
+        choices = variable_choices(ADAE, "AEOUT"),
+        selected = "AEOUT"
       ),
-      action = data_extract_spec(
-        dataname = "ADAE",
-        select = select_spec(
-          choices = variable_choices(ADAE, "AEACN"),
-          selected = c("AEACN"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      action = choices_selected(
+        choices = variable_choices(ADAE, "AEACN"),
+        selected = "AEACN"
       ),
-      time = data_extract_spec(
-        dataname = "ADAE",
-        select = select_spec(
-          choices = variable_choices(ADAE, "ASTDY"),
-          selected = c("ASTDY"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      time = choices_selected(
+        choices = variable_choices(ADAE, "ASTDY"),
+        selected = "ASTDY"
       ),
       decod = NULL
     ),
@@ -343,59 +223,29 @@ app <- init(
       label = "Lab Values",
       parentname = "ADSL",
       patient_col = "USUBJID",
-      paramcd = data_extract_spec(
-        dataname = "ADLB",
-        select = select_spec(
-          choices = variable_choices(ADLB, "PARAMCD"),
-          selected = c("PARAMCD"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      paramcd = choices_selected(
+        choices = variable_choices(ADLB, "PARAMCD"),
+        selected = "PARAMCD"
       ),
-      param = data_extract_spec(
-        dataname = "ADLB",
-        select = select_spec(
-          choices = variable_choices(ADLB, "PARAM"),
-          selected = c("PARAM"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      param = choices_selected(
+        choices = variable_choices(ADLB, "PARAM"),
+        selected = "PARAM"
       ),
-      timepoints = data_extract_spec(
-        dataname = "ADLB",
-        select = select_spec(
-          choices = variable_choices(ADLB, "ADY"),
-          selected = c("ADY"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      timepoints = choices_selected(
+        choices = variable_choices(ADLB, "ADY"),
+        selected = "ADY"
       ),
-      anrind = data_extract_spec(
-        dataname = "ADLB",
-        select = select_spec(
-          choices = variable_choices(ADLB, "ANRIND"),
-          selected = c("ANRIND"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      anrind = choices_selected(
+        choices = variable_choices(ADLB, "ANRIND"),
+        selected = "ANRIND"
       ),
-      aval_var = data_extract_spec(
-        dataname = "ADLB",
-        select = select_spec(
-          choices = variable_choices(ADLB, "AVAL"),
-          selected = c("AVAL"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      aval_var = choices_selected(
+        choices = variable_choices(ADLB, "AVAL"),
+        selected = "AVAL"
       ),
-      avalu_var = data_extract_spec(
-        dataname = "ADLB",
-        select = select_spec(
-          choices = variable_choices(ADLB, "AVALU"),
-          selected = c("AVALU"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      avalu_var = choices_selected(
+        choices = variable_choices(ADLB, "AVALU"),
+        selected = "AVALU"
       )
     ),
     tm_g_pp_patient_timeline(
@@ -406,78 +256,38 @@ app <- init(
       font_size = c(15L, 8L, 25L),
       cmdecod = cmdecod_input,
       aeterm = aeterm_input,
-      aetime_start = data_extract_spec(
-        dataname = "ADAE",
-        select = select_spec(
-          choices = variable_choices(ADAE, "ASTDTM"),
-          selected = c("ASTDTM"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      aetime_start = choices_selected(
+        choices = variable_choices(ADAE, "ASTDTM"),
+        selected = "ASTDTM"
       ),
-      aetime_end = data_extract_spec(
-        dataname = "ADAE",
-        select = select_spec(
-          choices = variable_choices(ADAE, "AENDTM"),
-          selected = c("AENDTM"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      aetime_end = choices_selected(
+        choices = variable_choices(ADAE, "AENDTM"),
+        selected = "AENDTM"
       ),
-      dstime_start = data_extract_spec(
-        dataname = "ADCM",
-        select = select_spec(
-          choices = variable_choices(ADCM, "CMASTDTM"),
-          selected = c("CMASTDTM"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      dstime_start = choices_selected(
+        choices = variable_choices(ADCM, "CMASTDTM"),
+        selected = "CMASTDTM"
       ),
-      dstime_end = data_extract_spec(
-        dataname = "ADCM",
-        select = select_spec(
-          choices = variable_choices(ADCM, "CMAENDTM"),
-          selected = c("CMAENDTM"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      dstime_end = choices_selected(
+        choices = variable_choices(ADCM, "CMAENDTM"),
+        selected = "CMAENDTM"
       ),
-      aerelday_start = data_extract_spec(
-        dataname = "ADAE",
-        select = select_spec(
-          choices = variable_choices(ADAE, "ASTDY"),
-          selected = c("ASTDY"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      aerelday_start = choices_selected(
+        choices = variable_choices(ADAE, "ASTDY"),
+        selected = "ASTDY"
       ),
-      aerelday_end = data_extract_spec(
-        dataname = "ADAE",
-        select = select_spec(
-          choices = variable_choices(ADAE, "AENDY"),
-          selected = c("AENDY"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      aerelday_end = choices_selected(
+        choices = variable_choices(ADAE, "AENDY"),
+        selected = "AENDY"
       ),
-      dsrelday_start = data_extract_spec(
-        dataname = "ADCM",
-        select = select_spec(
-          choices = variable_choices(ADCM, "ASTDY"),
-          selected = c("ASTDY"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      dsrelday_start = choices_selected(
+        choices = variable_choices(ADCM, "ASTDY"),
+        selected = "ASTDY"
       ),
-      dsrelday_end = data_extract_spec(
-        dataname = "ADCM",
-        select = select_spec(
-          choices = variable_choices(ADCM, "AENDY"),
-          selected = c("AENDY"),
-          multiple = FALSE,
-          fixed = FALSE
-        )
-      )
+      dsrelday_end = choices_selected(
+        choices = variable_choices(ADCM, "AENDY"),
+        selected = "AENDY"
+      ),
     )
   ),
   title = build_app_title("Patient Profile Analysis Teal Demo App", nest_logo),
