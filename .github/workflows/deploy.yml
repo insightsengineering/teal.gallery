@@ -165,7 +165,6 @@ jobs:
 
       - name: Front end test to check if the app works fine
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
-        continue-on-error: true
         uses: cypress-io/github-action@v6
         with:
           build: npm install cypress --save-dev
