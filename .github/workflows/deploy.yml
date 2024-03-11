@@ -36,7 +36,7 @@ jobs:
     name: Publish 🗞
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/insightsengineering/rstudio:latest
+      image: ghcr.io/insightsengineering/rstudio:2024.03.05
     if: >
       !contains(github.event.commits[0].message, '[skip deploy]')
     strategy:
