@@ -1924,7 +1924,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "7fe8752f4a4fe75eed1a70497f07dd55ed2216fc",
+      "RemoteSha": "fea3bcff4ba5500875a7b49c102a9c6856c4b2c4",
       "Requirements": [
         "R",
         "checkmate",
@@ -1935,7 +1935,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "003a730468efbadea5d3d024143824c6"
+      "Hash": "3138ac2358fdf95dfcb528a6d837cd37"
     },
     "sandwich": {
       "Package": "sandwich",
