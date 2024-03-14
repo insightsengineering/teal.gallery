@@ -2483,14 +2483,14 @@
     },
     "ragg": {
       "Package": "ragg",
-      "Version": "1.2.7",
+      "Version": "1.3.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "systemfonts",
         "textshaping"
       ],
-      "Hash": "90a1b8b7e518d7f90480d56453b4d062"
+      "Hash": "082e1a198e3329d571f4448ef0ede4bc"
     },
     "rappdirs": {
       "Package": "rappdirs",
@@ -3038,14 +3038,14 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9004",
+      "Version": "0.1.6.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "1b9e2300ed7611f42e137cfcfec9974fc71c5c4f",
+      "RemoteSha": "bcea1efe2c2d90c8066b638bd86dd80c16a69512",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -3072,7 +3072,7 @@
         "teal.widgets",
         "tern"
       ],
-      "Hash": "f14061c0f25e82d5fc439fb94d66eb49"
+      "Hash": "7e543d7e024c6dccf1c1d8d53f2350eb"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
