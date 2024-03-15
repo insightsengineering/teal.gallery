@@ -742,14 +742,14 @@
     },
     "digest": {
       "Package": "digest",
-      "Version": "0.6.34",
+      "Version": "0.6.35",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "7ede2ee9ea8d3edbf1ca84c1e333ad1a"
+      "Hash": "698ece7ba5a4fa4559e3d537e7ec3d31"
     },
     "dplyr": {
       "Package": "dplyr",
@@ -2084,14 +2084,14 @@
     },
     "ragg": {
       "Package": "ragg",
-      "Version": "1.2.7",
+      "Version": "1.3.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "systemfonts",
         "textshaping"
       ],
-      "Hash": "90a1b8b7e518d7f90480d56453b4d062"
+      "Hash": "082e1a198e3329d571f4448ef0ede4bc"
     },
     "rappdirs": {
       "Package": "rappdirs",
@@ -2730,14 +2730,14 @@
     },
     "teal.osprey": {
       "Package": "teal.osprey",
-      "Version": "0.1.16.9012",
+      "Version": "0.1.16.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.osprey",
       "RemoteRef": "main",
-      "RemoteSha": "4f3f9dd49d038474c93f1340677edc555d76a417",
+      "RemoteSha": "bb944a8dcd82a887d3725d7f799bdbe4529f5be9",
       "Requirements": [
         "R",
         "checkmate",
@@ -2758,7 +2758,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "4ee154997b978dee16a140407787288e"
+      "Hash": "a4824ebf9ba0051b8dd89a469ee9bfa7"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -3024,7 +3024,7 @@
     },
     "tidyselect": {
       "Package": "tidyselect",
-      "Version": "1.2.0",
+      "Version": "1.2.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -3036,7 +3036,7 @@
         "vctrs",
         "withr"
       ],
-      "Hash": "79540e5fcd9e0435af547d885f184fd5"
+      "Hash": "829f27b9c4919c16b593794a6344d6c0"
     },
     "tinytex": {
       "Package": "tinytex",
