@@ -2280,9 +2280,9 @@
     },
     "sass": {
       "Package": "sass",
-      "Version": "0.4.8",
+      "Version": "0.4.9",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R6",
         "fs",
@@ -2290,7 +2290,7 @@
         "rappdirs",
         "rlang"
       ],
-      "Hash": "168f9353c76d4c4b0a0bbf72e2c2d035"
+      "Hash": "d53dbfddf695303ea4ad66f86e99b95d"
     },
     "scales": {
       "Package": "scales",
@@ -2424,6 +2424,19 @@
         "shiny"
       ],
       "Hash": "88289640c8206dc810ea9cb87bd58ffc"
+    },
+    "shinybusy": {
+      "Package": "shinybusy",
+      "Version": "0.3.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "htmltools",
+        "htmlwidgets",
+        "jsonlite",
+        "shiny"
+      ],
+      "Hash": "7dc8feb4207741ff581422a04fc8f3ea"
     },
     "shinycssloaders": {
       "Package": "shinycssloaders",
@@ -2687,14 +2700,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9000",
+      "Version": "0.3.0.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "da9dfc285157af93f366896e61895a173357c216",
+      "RemoteSha": "1fd0b1d5f7729e7a95a542cd059007735b104ce0",
       "Requirements": [
         "DT",
         "R",
@@ -2726,18 +2739,18 @@
         "tools",
         "utils"
       ],
-      "Hash": "04c9585b79935e464bf149c35515212e"
+      "Hash": "b5df6703fab1f6ff5aa959e2e955b837"
     },
     "teal.osprey": {
       "Package": "teal.osprey",
-      "Version": "0.1.16.9013",
+      "Version": "0.1.16.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.osprey",
       "RemoteRef": "main",
-      "RemoteSha": "bb944a8dcd82a887d3725d7f799bdbe4529f5be9",
+      "RemoteSha": "cfdc31493e36f4f7999f6ffd8d739ede27c9de72",
       "Requirements": [
         "R",
         "checkmate",
@@ -2758,11 +2771,11 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "a4824ebf9ba0051b8dd89a469ee9bfa7"
+      "Hash": "e248f965748a5208c9aa5d0886054892"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.0",
+      "Version": "0.3.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2777,10 +2790,11 @@
         "rmarkdown",
         "shiny",
         "shinyWidgets",
+        "shinybusy",
         "yaml",
         "zip"
       ],
-      "Hash": "368a9b64b4e69419f3a3ddb7e3d54d05"
+      "Hash": "b09a5fb625dc8bff3965f58ba69e8fb3"
     },
     "teal.slice": {
       "Package": "teal.slice",
