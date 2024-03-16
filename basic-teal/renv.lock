@@ -1076,7 +1076,7 @@
     },
     "sass": {
       "Package": "sass",
-      "Version": "0.4.8",
+      "Version": "0.4.9",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1086,7 +1086,7 @@
         "rappdirs",
         "rlang"
       ],
-      "Hash": "168f9353c76d4c4b0a0bbf72e2c2d035"
+      "Hash": "d53dbfddf695303ea4ad66f86e99b95d"
     },
     "scales": {
       "Package": "scales",
@@ -1159,6 +1159,19 @@
         "shiny"
       ],
       "Hash": "88289640c8206dc810ea9cb87bd58ffc"
+    },
+    "shinybusy": {
+      "Package": "shinybusy",
+      "Version": "0.3.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "htmltools",
+        "htmlwidgets",
+        "jsonlite",
+        "shiny"
+      ],
+      "Hash": "7dc8feb4207741ff581422a04fc8f3ea"
     },
     "shinycssloaders": {
       "Package": "shinycssloaders",
@@ -1340,7 +1353,7 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.0",
+      "Version": "0.3.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1355,10 +1368,11 @@
         "rmarkdown",
         "shiny",
         "shinyWidgets",
+        "shinybusy",
         "yaml",
         "zip"
       ],
-      "Hash": "368a9b64b4e69419f3a3ddb7e3d54d05"
+      "Hash": "b09a5fb625dc8bff3965f58ba69e8fb3"
     },
     "teal.slice": {
       "Package": "teal.slice",
