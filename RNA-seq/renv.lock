@@ -308,7 +308,7 @@
     },
     "GenomeInfoDb": {
       "Package": "GenomeInfoDb",
-      "Version": "1.38.7",
+      "Version": "1.38.8",
       "Source": "Bioconductor",
       "Repository": "Bioconductor 3.18",
       "Requirements": [
@@ -316,13 +316,14 @@
         "GenomeInfoDbData",
         "IRanges",
         "R",
+        "RCurl",
         "S4Vectors",
         "methods",
         "stats",
         "stats4",
         "utils"
       ],
-      "Hash": "6ddbcd4f3c7a2c8f73e29cdcc601502a"
+      "Hash": "155053909d2831bfac154a1118151d6b"
     },
     "GenomeInfoDbData": {
       "Package": "GenomeInfoDbData",
@@ -554,6 +555,18 @@
         "R"
       ],
       "Hash": "45f0398006e83a5b10b72a90663d8d8c"
+    },
+    "RCurl": {
+      "Package": "RCurl",
+      "Version": "1.98-1.14",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "bitops",
+        "methods"
+      ],
+      "Hash": "47f648d288079d0c696804ad4e55197e"
     },
     "RSQLite": {
       "Package": "RSQLite",
@@ -851,6 +864,13 @@
         "utils"
       ],
       "Hash": "9fe98599ca456d6552421db0d6772d8f"
+    },
+    "bitops": {
+      "Package": "bitops",
+      "Version": "1.0-7",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "b7d8d8ee39869c18d8846a184dd8a1af"
     },
     "blob": {
       "Package": "blob",
