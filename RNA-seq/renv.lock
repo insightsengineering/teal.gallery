@@ -1954,9 +1954,9 @@
     },
     "lattice": {
       "Package": "lattice",
-      "Version": "0.22-5",
+      "Version": "0.22-6",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "grDevices",
@@ -1965,7 +1965,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "7c5e89f04e72d6611c77451f6331a091"
+      "Hash": "cc5ac1ba4c238c7ca9fa6a87ca11a7e2"
     },
     "lazyeval": {
       "Package": "lazyeval",
@@ -3017,10 +3017,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.logger",
       "RemoteUsername": "insightsengineering",
-      "RemotePkgRef": "insightsengineering/teal.logger",
-      "RemoteRef": "HEAD",
+      "RemoteRepo": "teal.logger",
+      "RemoteRef": "main",
       "RemoteSha": "723a974d47b7aa7af309d37fb1c09963da797be5",
       "Requirements": [
         "R",
@@ -3031,7 +3030,7 @@
         "shiny",
         "withr"
       ],
-      "Hash": "a3ee0edd6a3648b4b57b46a550e16024"
+      "Hash": "0326135e936b8ade706dcb1d9b6b3089"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
@@ -3073,14 +3072,14 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9006",
+      "Version": "0.1.6.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "d6326b5a776f55628984abc1c6c9873405bd4c29",
+      "RemoteSha": "3c89b027745602d693b8cdaae0dec10a825f9e63",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -3093,7 +3092,6 @@
         "ggplot2",
         "hermes",
         "lifecycle",
-        "logger",
         "rtables",
         "shiny",
         "shinyRadioMatrix",
@@ -3107,7 +3105,7 @@
         "teal.widgets",
         "tern"
       ],
-      "Hash": "58805365de2dea7e5ed11b9be6cc686b"
+      "Hash": "f51722d9eb546c227b44e7cbf76883dd"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
