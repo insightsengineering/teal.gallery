@@ -1536,9 +1536,9 @@
     },
     "lattice": {
       "Package": "lattice",
-      "Version": "0.22-5",
+      "Version": "0.22-6",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "grDevices",
@@ -1547,7 +1547,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "7c5e89f04e72d6611c77451f6331a091"
+      "Hash": "cc5ac1ba4c238c7ca9fa6a87ca11a7e2"
     },
     "lazyeval": {
       "Package": "lazyeval",
@@ -2694,14 +2694,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.1.15.9014",
+      "Version": "0.1.15.9015",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "ab5e7c33b5f28ccddb9e4088d4cbad6d3bd6c324",
+      "RemoteSha": "c806727a55251e5d1c250cd34742c3e9d14e09c9",
       "Requirements": [
         "DT",
         "R",
@@ -2712,7 +2712,6 @@
         "goshawk",
         "grDevices",
         "lifecycle",
-        "logger",
         "methods",
         "rlang",
         "shiny",
@@ -2727,7 +2726,7 @@
         "teal.widgets",
         "tidyr"
       ],
-      "Hash": "4c653becf5a2cb5c4f604aba14cb5e12"
+      "Hash": "9ad80e7929de443908736078b26f55ff"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -2735,10 +2734,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.logger",
       "RemoteUsername": "insightsengineering",
-      "RemotePkgRef": "insightsengineering/teal.logger",
-      "RemoteRef": "HEAD",
+      "RemoteRepo": "teal.logger",
+      "RemoteRef": "main",
       "RemoteSha": "723a974d47b7aa7af309d37fb1c09963da797be5",
       "Requirements": [
         "R",
@@ -2749,7 +2747,7 @@
         "shiny",
         "withr"
       ],
-      "Hash": "a3ee0edd6a3648b4b57b46a550e16024"
+      "Hash": "0326135e936b8ade706dcb1d9b6b3089"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
