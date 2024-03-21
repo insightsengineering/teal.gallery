@@ -1562,9 +1562,9 @@
     },
     "pkgbuild": {
       "Package": "pkgbuild",
-      "Version": "1.4.3",
+      "Version": "1.4.4",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -1573,7 +1573,7 @@
         "desc",
         "processx"
       ],
-      "Hash": "c0143443203205e6a2760ce553dafc24"
+      "Hash": "a29e8e134a460a01e0ca67a4763c595b"
     },
     "pkgconfig": {
       "Package": "pkgconfig",
@@ -1669,7 +1669,7 @@
     },
     "processx": {
       "Package": "processx",
-      "Version": "3.8.3",
+      "Version": "3.8.4",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -1678,7 +1678,7 @@
         "ps",
         "utils"
       ],
-      "Hash": "82d48b1aec56084d9438dbf98087a7e9"
+      "Hash": "0c90a7d71988856bad2a2a45dd871bb9"
     },
     "productplots": {
       "Package": "productplots",
@@ -1880,7 +1880,7 @@
     },
     "sass": {
       "Package": "sass",
-      "Version": "0.4.8",
+      "Version": "0.4.9",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
@@ -1890,7 +1890,7 @@
         "rappdirs",
         "rlang"
       ],
-      "Hash": "168f9353c76d4c4b0a0bbf72e2c2d035"
+      "Hash": "d53dbfddf695303ea4ad66f86e99b95d"
     },
     "scales": {
       "Package": "scales",
@@ -2011,6 +2011,19 @@
         "shiny"
       ],
       "Hash": "88289640c8206dc810ea9cb87bd58ffc"
+    },
+    "shinybusy": {
+      "Package": "shinybusy",
+      "Version": "0.3.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "htmltools",
+        "htmlwidgets",
+        "jsonlite",
+        "shiny"
+      ],
+      "Hash": "7dc8feb4207741ff581422a04fc8f3ea"
     },
     "shinycssloaders": {
       "Package": "shinycssloaders",
@@ -2243,14 +2256,9 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9000",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRepo": "teal.modules.general",
-      "RemoteRef": "main",
-      "RemoteSha": "da9dfc285157af93f366896e61895a173357c216",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
       "Requirements": [
         "DT",
         "R",
@@ -2282,13 +2290,13 @@
         "tools",
         "utils"
       ],
-      "Hash": "04c9585b79935e464bf149c35515212e"
+      "Hash": "f54d7bc27cd048cec3a842f980c74e9b"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.0",
+      "Version": "0.3.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R6",
         "bslib",
@@ -2301,10 +2309,11 @@
         "rmarkdown",
         "shiny",
         "shinyWidgets",
+        "shinybusy",
         "yaml",
         "zip"
       ],
-      "Hash": "368a9b64b4e69419f3a3ddb7e3d54d05"
+      "Hash": "b09a5fb625dc8bff3965f58ba69e8fb3"
     },
     "teal.slice": {
       "Package": "teal.slice",
@@ -2530,13 +2539,13 @@
     },
     "tinytex": {
       "Package": "tinytex",
-      "Version": "0.49",
+      "Version": "0.50",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "xfun"
       ],
-      "Hash": "5ac22900ae0f386e54f1c307eca7d843"
+      "Hash": "be7a76845222ad20adb761f462eed3ea"
     },
     "triebeard": {
       "Package": "triebeard",

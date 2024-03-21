@@ -132,8 +132,8 @@ jobs:
           lockfile <- renv::lockfile_read()
           pkg_name_structure <- ifelse("${{ matrix.channel }}" == "stable", "%s/%s@*release", "%s/%s")
           unreleased_packages <- c(
-            "osprey", "hermes", "goshawk", "teal.modules.general",
-            "teal.osprey", "teal.modules.hermes", "teal.goshawk", "nestcolor"
+            "osprey", "hermes", "goshawk", "teal.osprey",
+            "teal.modules.hermes", "teal.goshawk", "nestcolor"
           )
           for (package in lockfile$Packages) {
               if (package$Source == "GitHub") {
