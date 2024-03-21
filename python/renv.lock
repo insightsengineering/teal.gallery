@@ -2266,14 +2266,9 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9003",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRepo": "teal.modules.general",
-      "RemoteRef": "main",
-      "RemoteSha": "1fc1653508d1d7096070954313389e061eec81c8",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
       "Requirements": [
         "DT",
         "R",
@@ -2305,7 +2300,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "2e13f73c7aa77beacb4995cff76bf0f6"
+      "Hash": "f54d7bc27cd048cec3a842f980c74e9b"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
