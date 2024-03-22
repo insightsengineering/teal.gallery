@@ -2240,7 +2240,7 @@
     },
     "shinyWidgets": {
       "Package": "shinyWidgets",
-      "Version": "0.8.2",
+      "Version": "0.8.3",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -2254,7 +2254,7 @@
         "sass",
         "shiny"
       ],
-      "Hash": "88289640c8206dc810ea9cb87bd58ffc"
+      "Hash": "a515a78460d21328d2b8765fd5506964"
     },
     "shinybusy": {
       "Package": "shinybusy",
@@ -2415,14 +2415,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9014",
+      "Version": "0.15.2.9016",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "90cf513ddc06ac256266e12c19781be34872382b",
+      "RemoteSha": "e03bf26658e0a344b85894f3a6ced0497ced3051",
       "Requirements": [
         "R",
         "checkmate",
@@ -2443,7 +2443,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "2881d3763dcfc94d095dffe53647d02e"
+      "Hash": "85f7ed65de1447db7eef3ad8ca8ead19"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2718,14 +2718,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.3.9025",
+      "Version": "0.9.3.9027",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "86bd2d28b5bf6197ea1585f14b8b58a4c5de0382",
+      "RemoteSha": "4350352a330bffef6e10380afef8b404a0eb8569",
       "Requirements": [
         "MASS",
         "R",
@@ -2755,7 +2755,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "d6411712cebaa430353641869458eb6d"
+      "Hash": "6a76c7c14a0c7d581c56e8b3b2d3b04a"
     },
     "tern.gee": {
       "Package": "tern.gee",
