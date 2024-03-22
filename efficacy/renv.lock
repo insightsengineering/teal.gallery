@@ -2205,7 +2205,7 @@
     },
     "shinyWidgets": {
       "Package": "shinyWidgets",
-      "Version": "0.8.2",
+      "Version": "0.8.3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2219,7 +2219,7 @@
         "sass",
         "shiny"
       ],
-      "Hash": "88289640c8206dc810ea9cb87bd58ffc"
+      "Hash": "a515a78460d21328d2b8765fd5506964"
     },
     "shinybusy": {
       "Package": "shinybusy",
