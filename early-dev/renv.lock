@@ -478,9 +478,9 @@
     },
     "bslib": {
       "Package": "bslib",
-      "Version": "0.6.1",
+      "Version": "0.6.2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "base64enc",
@@ -495,7 +495,7 @@
         "rlang",
         "sass"
       ],
-      "Hash": "c0d8599494bc7fb408cd206bbdd9cab0"
+      "Hash": "7fb73102553e0c8e478bfaa0ccebe479"
     },
     "cachem": {
       "Package": "cachem",
@@ -2446,7 +2446,7 @@
       "Package": "shinyWidgets",
       "Version": "0.8.3",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "anytime",
@@ -2953,14 +2953,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.3.9027",
+      "Version": "0.9.3.9028",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "4350352a330bffef6e10380afef8b404a0eb8569",
+      "RemoteSha": "19067f04e53c36a7e812b81d96e6dadff44c786f",
       "Requirements": [
         "MASS",
         "R",
@@ -2990,7 +2990,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "6a76c7c14a0c7d581c56e8b3b2d3b04a"
+      "Hash": "b944f67dad11bdb251c047cbafb816d1"
     },
     "tern.gee": {
       "Package": "tern.gee",
