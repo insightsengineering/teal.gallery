@@ -1327,9 +1327,9 @@
     },
     "kinship2": {
       "Package": "kinship2",
-      "Version": "1.9.6",
+      "Version": "1.9.6.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "Matrix",
         "R",
@@ -1339,7 +1339,7 @@
         "quadprog",
         "stats"
       ],
-      "Hash": "b79a5ce984c1e1230d84d0cd9f282ccd"
+      "Hash": "29505ec5dfd3c153c0f85af3e2df4170"
     },
     "knitr": {
       "Package": "knitr",
