@@ -1338,18 +1338,19 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.1.3",
+      "Version": "0.2.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "glue",
         "lifecycle",
         "logger",
+        "methods",
         "shiny",
         "withr"
       ],
-      "Hash": "7fcc2929a04dc755d0683f93716f534b"
+      "Hash": "ceeba20ebeb84344b1b81255e50b925f"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
