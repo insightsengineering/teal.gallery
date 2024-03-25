@@ -1302,9 +1302,9 @@
     },
     "kinship2": {
       "Package": "kinship2",
-      "Version": "1.9.6",
+      "Version": "1.9.6.1",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "Matrix",
         "R",
@@ -1314,7 +1314,7 @@
         "quadprog",
         "stats"
       ],
-      "Hash": "b79a5ce984c1e1230d84d0cd9f282ccd"
+      "Hash": "29505ec5dfd3c153c0f85af3e2df4170"
     },
     "knitr": {
       "Package": "knitr",
@@ -2444,18 +2444,19 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.1.3",
+      "Version": "0.2.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "glue",
         "lifecycle",
         "logger",
+        "methods",
         "shiny",
         "withr"
       ],
-      "Hash": "7fcc2929a04dc755d0683f93716f534b"
+      "Hash": "ceeba20ebeb84344b1b81255e50b925f"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
