@@ -107,8 +107,9 @@
     },
     "BiocFileCache": {
       "Package": "BiocFileCache",
-      "Version": "2.10.1",
+      "Version": "2.10.2",
       "Source": "Bioconductor",
+      "Repository": "Bioconductor 3.18",
       "Requirements": [
         "DBI",
         "R",
@@ -122,7 +123,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "ac2a12468b948654220ed90ae94e9d08"
+      "Hash": "d59a927de08cce606299009cc595b2cb"
     },
     "BiocGenerics": {
       "Package": "BiocGenerics",
