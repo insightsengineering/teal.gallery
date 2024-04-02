@@ -1696,14 +1696,14 @@
     },
     "munsell": {
       "Package": "munsell",
-      "Version": "0.5.0",
+      "Version": "0.5.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "colorspace",
         "methods"
       ],
-      "Hash": "6dfe8bf774944bd5595785e3229d8771"
+      "Hash": "4fd8900853b746af55b81fda99da7695"
     },
     "mvtnorm": {
       "Package": "mvtnorm",
@@ -2618,14 +2618,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9019",
+      "Version": "0.15.2.9020",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "59cae26c6fd00effe14a91d4d93cc9f4a7f3f5e9",
+      "RemoteSha": "af17c0790729bdf1b01aa2a627753b5f2250b97a",
       "Requirements": [
         "R",
         "checkmate",
@@ -2646,7 +2646,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "518de3235ceb55d4c843e6d955cef4b3"
+      "Hash": "1cfb3c88a8fb00978ef83448944efe62"
     },
     "teal.code": {
       "Package": "teal.code",
