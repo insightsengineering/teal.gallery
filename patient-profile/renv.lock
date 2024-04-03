@@ -2190,7 +2190,7 @@
     },
     "shiny": {
       "Package": "shiny",
-      "Version": "1.8.1",
+      "Version": "1.8.1.1",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -2219,7 +2219,7 @@
         "withr",
         "xtable"
       ],
-      "Hash": "a49e145ac3d0d1299e19ab215504f88e"
+      "Hash": "54b26646816af9960a4c64d8ceec75d6"
     },
     "shinyTree": {
       "Package": "shinyTree",
@@ -2544,14 +2544,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9005",
+      "Version": "0.3.0.9006",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "94ee47f54272acba7c568e1d4ee603cc383653ea",
+      "RemoteSha": "99d7f0256a10be0c84afbf160bf1a093f63ae44f",
       "Requirements": [
         "DT",
         "R",
@@ -2582,7 +2582,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "ae3409c1030af7e29304887c143e3759"
+      "Hash": "a4dd92ea172b1ac4ae21fc4d6bad2b2b"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
