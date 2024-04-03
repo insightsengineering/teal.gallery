@@ -2707,7 +2707,7 @@
     },
     "shiny": {
       "Package": "shiny",
-      "Version": "1.8.1",
+      "Version": "1.8.1.1",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -2736,7 +2736,7 @@
         "withr",
         "xtable"
       ],
-      "Hash": "a49e145ac3d0d1299e19ab215504f88e"
+      "Hash": "54b26646816af9960a4c64d8ceec75d6"
     },
     "shinyRadioMatrix": {
       "Package": "shinyRadioMatrix",
@@ -3072,14 +3072,14 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9009",
+      "Version": "0.1.6.9010",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "a41cc26abd756500e7fac0cb0b053fd246ae895b",
+      "RemoteSha": "37fc2a6171fce2eaba854d95418f9b8917b17bbc",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -3103,9 +3103,10 @@
         "teal.logger",
         "teal.reporter",
         "teal.widgets",
-        "tern"
+        "tern",
+        "utils"
       ],
-      "Hash": "f2e0bb0c211efbe83b7e260f4faf4872"
+      "Hash": "9a68c18726207519667d65e8004d998f"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
