@@ -2686,7 +2686,7 @@
     },
     "shiny": {
       "Package": "shiny",
-      "Version": "1.8.1",
+      "Version": "1.8.1.1",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -2715,7 +2715,7 @@
         "withr",
         "xtable"
       ],
-      "Hash": "a49e145ac3d0d1299e19ab215504f88e"
+      "Hash": "54b26646816af9960a4c64d8ceec75d6"
     },
     "shinyRadioMatrix": {
       "Package": "shinyRadioMatrix",
@@ -3016,14 +3016,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9005",
+      "Version": "0.3.0.9006",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "94ee47f54272acba7c568e1d4ee603cc383653ea",
+      "RemoteSha": "99d7f0256a10be0c84afbf160bf1a093f63ae44f",
       "Requirements": [
         "DT",
         "R",
@@ -3054,18 +3054,18 @@
         "tools",
         "utils"
       ],
-      "Hash": "ae3409c1030af7e29304887c143e3759"
+      "Hash": "a4dd92ea172b1ac4ae21fc4d6bad2b2b"
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9009",
+      "Version": "0.1.6.9010",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "a41cc26abd756500e7fac0cb0b053fd246ae895b",
+      "RemoteSha": "37fc2a6171fce2eaba854d95418f9b8917b17bbc",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -3089,9 +3089,10 @@
         "teal.logger",
         "teal.reporter",
         "teal.widgets",
-        "tern"
+        "tern",
+        "utils"
       ],
-      "Hash": "f2e0bb0c211efbe83b7e260f4faf4872"
+      "Hash": "9a68c18726207519667d65e8004d998f"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
