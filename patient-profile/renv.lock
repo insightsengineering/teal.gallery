@@ -62,9 +62,9 @@
     },
     "DT": {
       "Package": "DT",
-      "Version": "0.32",
+      "Version": "0.33",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "crosstalk",
         "htmltools",
@@ -75,7 +75,7 @@
         "magrittr",
         "promises"
       ],
-      "Hash": "0d3ab8abbb0c3e3daa47d4dc8e17bbae"
+      "Hash": "64ff3427f559ce3f2597a4fe13255cb6"
     },
     "MASS": {
       "Package": "MASS",
@@ -902,14 +902,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.5.9018",
+      "Version": "0.5.5.9019",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "732244fd36407608717e45ed6c2154b48dfe1c88",
+      "RemoteSha": "56b71bd77d1f4d84641ff9d8701413ac8b8f7ca3",
       "Requirements": [
         "R",
         "checkmate",
@@ -917,7 +917,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "f74febaa909b3b177ec6cd44075c2e7d"
+      "Hash": "232a53de94aefd0d5be69967523f32a7"
     },
     "fs": {
       "Package": "fs",
@@ -1217,7 +1217,7 @@
     },
     "htmltools": {
       "Package": "htmltools",
-      "Version": "0.5.8",
+      "Version": "0.5.8.1",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -1229,7 +1229,7 @@
         "rlang",
         "utils"
       ],
-      "Hash": "149431ee39aba5bdc264112c8ff94444"
+      "Hash": "81d371a9cc60640e74e4ab6ac46dcedc"
     },
     "htmlwidgets": {
       "Package": "htmlwidgets",
@@ -2239,9 +2239,9 @@
     },
     "shinyWidgets": {
       "Package": "shinyWidgets",
-      "Version": "0.8.3",
+      "Version": "0.8.4",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "anytime",
@@ -2253,7 +2253,7 @@
         "sass",
         "shiny"
       ],
-      "Hash": "a515a78460d21328d2b8765fd5506964"
+      "Hash": "32fa500353f86092c64fe12c062ee34c"
     },
     "shinybusy": {
       "Package": "shinybusy",
@@ -2455,14 +2455,14 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.5.0.9005",
+      "Version": "0.5.0.9006",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "c7846c71876d0c58f89bfc240aabd2c6ad611d33",
+      "RemoteSha": "c67471379c6a3179dcd386aeae63fbf3fd6c8b63",
       "Requirements": [
         "R",
         "checkmate",
@@ -2473,7 +2473,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "a5d15f1f1dd7ebf99a5295e0eb4e2196"
+      "Hash": "7d8f8aff116c3fe0c7c490d0343e4662"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -2706,14 +2706,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.3.9028",
+      "Version": "0.9.3.9030",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "19067f04e53c36a7e812b81d96e6dadff44c786f",
+      "RemoteSha": "696779fd29be1db0694b6b73d77b9178fd962190",
       "Requirements": [
         "MASS",
         "R",
@@ -2743,7 +2743,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "b944f67dad11bdb251c047cbafb816d1"
+      "Hash": "fc3b92a256a6ebb626199ff0fe49d659"
     },
     "tern.gee": {
       "Package": "tern.gee",
