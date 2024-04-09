@@ -1565,6 +1565,19 @@
       ],
       "Hash": "c145edf05cc128e6ffcfa5d872c46329"
     },
+    "lubridate": {
+      "Package": "lubridate",
+      "Version": "1.9.3",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "generics",
+        "methods",
+        "timechange"
+      ],
+      "Hash": "680ad542fbcf801442c83a6ac5a2126c"
+    },
     "magrittr": {
       "Package": "magrittr",
       "Version": "2.0.3",
@@ -2093,6 +2106,26 @@
       ],
       "Hash": "082e1a198e3329d571f4448ef0ede4bc"
     },
+    "random.cdisc.data": {
+      "Package": "random.cdisc.data",
+      "Version": "0.3.15",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "checkmate",
+        "dplyr",
+        "lifecycle",
+        "lubridate",
+        "magrittr",
+        "rlang",
+        "stringr",
+        "tibble",
+        "tidyr",
+        "yaml"
+      ],
+      "Hash": "c92edb70a24230a0b30f961c431c9fdf"
+    },
     "rappdirs": {
       "Package": "rappdirs",
       "Version": "0.3.3",
@@ -2311,26 +2344,6 @@
         "viridisLite"
       ],
       "Hash": "c19df082ba346b0ffa6f833e92de34d1"
-    },
-    "random.cdisc.data": {
-      "Package": "random.cdisc.data",
-      "Version": "0.3.15",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "checkmate",
-        "dplyr",
-        "lifecycle",
-        "lubridate",
-        "magrittr",
-        "rlang",
-        "stringr",
-        "tibble",
-        "tidyr",
-        "yaml"
-      ],
-      "Hash": "c92edb70a24230a0b30f961c431c9fdf"
     },
     "shape": {
       "Package": "shape",
@@ -3038,6 +3051,17 @@
         "withr"
       ],
       "Hash": "829f27b9c4919c16b593794a6344d6c0"
+    },
+    "timechange": {
+      "Package": "timechange",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "cpp11"
+      ],
+      "Hash": "c5f3c201b931cd6474d17d8700ccb1c8"
     },
     "tinytex": {
       "Package": "tinytex",
