@@ -8,14 +8,13 @@ nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
-  library(scda)
-  library(scda.2022)
+  library(random.cdisc.data)
   library(dplyr)
   library(nestcolor)
   # optional libraries
   library(sparkline)
 
-  ADSL <- synthetic_cdisc_dataset("latest", "adsl")
+  ADSL <- radsl(seed = 1)
 
   # derive ADSL treatment duration
   adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
@@ -34,7 +33,7 @@ data <- within(data, {
     droplevels()
   teal.data::col_labels(ADSL)[c(names(adsl_labels))] <- adsl_labels
 
-  ADAE <- synthetic_cdisc_dataset("latest", "adae")
+  ADAE <- radae(ADSL, seed = 1)
 
   # derive common flags for AEs
   adae_labels <- teal.data::col_labels(ADAE, fill = FALSE)
@@ -67,7 +66,7 @@ data <- within(data, {
       AELLT = "Lowest Level Term"
     )
 
-  ADCM <- synthetic_cdisc_dataset("latest", "adcm")
+  ADCM <- radcm(ADSL, seed = 1)
 
   # process ADCM
   ADCM <- ADCM %>%
@@ -80,7 +79,7 @@ data <- within(data, {
       AENDT = "Analysis End Date"
     )
 
-  ADEX <- synthetic_cdisc_dataset("latest", "adex")
+  ADEX <- radex(ADSL, seed = 1)
 
   # process ADEX
   ADEX <- ADEX %>%
@@ -93,7 +92,7 @@ data <- within(data, {
       AENDT = "Analysis End Date"
     )
 
-  ADTR <- synthetic_cdisc_dataset("latest", "adtr")
+  ADTR <- radtr(ADSL, seed = 1)
 
   # process ADTR
   adtr_labels <- teal.data::col_labels(ADTR, fill = FALSE)
@@ -113,11 +112,11 @@ data <- within(data, {
 
 
   # process ADRS
-  ADRSSWIM <- synthetic_cdisc_dataset("latest", "adrs") %>%
+  ADRSSWIM <- radrs(ADSL, seed = 1) %>%
     filter(PARAMCD == "OVRINV") %>%
     arrange(USUBJID)
 
-  ADRS <- synthetic_cdisc_dataset("latest", "adrs")
+  ADRS <- radrs(ADSL, seed = 1)
   adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
   ADRS <- ADRS %>%
     filter(PARAMCD %in% c("BESRSPI", "INVET")) %>%
@@ -125,7 +124,7 @@ data <- within(data, {
     droplevels()
   teal.data::col_labels(ADRS)["ADT"] <- "Analysis Date"
 
-  ADLB <- synthetic_cdisc_dataset("latest", "adlb")
+  ADLB <- radlb(ADSL, seed = 1)
 
   # process ADLB
   ADLB <- ADLB %>%

@@ -12,8 +12,7 @@ data <- within(data, {
   library(DescTools)
   library(magrittr)
   library(dplyr)
-  library(scda)
-  library(scda.2022)
+  library(random.cdisc.data)
   library(stringr)
   # optional libraries
   library(sparkline)
@@ -23,8 +22,8 @@ data <- within(data, {
   # depending on if the data are SUBJECT LEVEL ANALYSIS DATASET or BASIC DATA STRUCTURE
   # if for example outcome variables are added to ADSL then do also add them as columns to ADLB
   # this is needed to be able to use plot splitting by outcome functionality
-  ADSL <- synthetic_cdisc_dataset("latest", "adsl")
-  ADLB <- synthetic_cdisc_dataset("latest", "adlb")
+  ADSL <- radsl(seed = 1)
+  ADLB <- radlb(ADSL, seed = 1)
 
   ################################################################################
   # BEGIN: Analyst Input Required To Modify Values Below To Reflect Study Specifics

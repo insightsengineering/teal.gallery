@@ -9,8 +9,7 @@ nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
-  library(scda)
-  library(scda.2022)
+  library(random.cdisc.data)
   library(dplyr)
   library(tidyr)
   library(ggExtra)
@@ -30,9 +29,9 @@ data <- within(data, {
   library(sparkline)
 
 
-  ADSL <- synthetic_cdisc_dataset("latest", "adsl")
-  ADRS <- synthetic_cdisc_dataset("latest", "adrs")
-  ADLB <- synthetic_cdisc_dataset("latest", "adlb")
+  ADSL <- radsl(seed = 1)
+  ADRS <- radrs(ADSL, seed = 1)
+  ADLB <- radlb(ADSL, seed = 1)
   ADLBPCA <- ADLB %>%
     dplyr::select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
     tidyr::pivot_wider(

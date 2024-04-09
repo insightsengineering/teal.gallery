@@ -8,13 +8,12 @@ nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers
 data <- teal_data()
 data <- within(data, {
   library(dplyr)
-  library(scda)
-  library(scda.2022)
+  library(random.cdisc.data)
   library(nestcolor)
   # optional libraries
   library(sparkline)
 
-  ADSL <- synthetic_cdisc_dataset("latest", "adsl")
+  ADSL <- radsl(seed = 1)
   adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
 
   char_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.character)))
@@ -34,14 +33,14 @@ data <- within(data, {
 
   teal.data::col_labels(ADSL) <- adsl_labels
 
-  ADTTE <- synthetic_cdisc_dataset("latest", "adtte")
+  ADTTE <- radtte(ADSL, seed = 1)
 
-  ADRS <- synthetic_cdisc_dataset("latest", "adrs")
+  ADRS <- radrs(ADSL, seed = 1)
   adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
   ADRS <- filter(ADRS, PARAMCD == "BESRSPI" | AVISIT == "FOLLOW UP")
   teal.data::col_labels(ADRS) <- adrs_labels
 
-  ADQS <- synthetic_cdisc_dataset("latest", "adqs")
+  ADQS <- radqs(ADSL, seed = 1)
   adqs_labels <- teal.data::col_labels(ADQS, fill = FALSE)
   ADQS <- ADQS %>%
     filter(ABLFL != "Y" & ABLFL2 != "Y") %>%

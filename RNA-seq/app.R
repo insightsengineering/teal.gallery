@@ -7,9 +7,11 @@ nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
-  library(scda.2022)
   library(nestcolor)
-  ADTTE <- scda::synthetic_cdisc_dataset("rcd_2022_06_27", "adtte") %>%
+  library(random.cdisc.data)
+
+  ADSL <- radsl(seed = 1)
+  ADTTE <- radtte(ADSL, seed = 1) %>%
     dplyr::mutate(is_event = CNSR == 0)
   MAE <- hermes::multi_assay_experiment
 })

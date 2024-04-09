@@ -7,16 +7,15 @@ nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
-  library(scda)
-  library(scda.2022)
+  library(random.cdisc.data)
   library(nestcolor)
 
-  ADSL <- synthetic_cdisc_dataset("latest", "adsl")
-  ADMH <- synthetic_cdisc_dataset("latest", "admh")
-  ADAE <- synthetic_cdisc_dataset("latest", "adae")
-  ADCM <- synthetic_cdisc_dataset("latest", "adcm")
-  ADVS <- synthetic_cdisc_dataset("latest", "advs")
-  ADLB <- synthetic_cdisc_dataset("latest", "adlb")
+  ADSL <- radsl(seed = 1)
+  ADMH <- radmh(ADSL, seed = 1)
+  ADAE <- radae(ADSL, seed = 1)
+  ADCM <- radcm(ADSL, seed = 1)
+  ADVS <- radvs(ADSL, seed = 1)
+  ADLB <- radlb(ADSL, seed = 1)
 
   ## Modify ADCM
   ADCM$CMINDC <- paste0("Indication_", as.numeric(ADCM$CMDECOD))

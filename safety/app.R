@@ -7,16 +7,15 @@ nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
-  library(scda)
-  library(scda.2022)
+  library(random.cdisc.data)
   library(dplyr)
   library(nestcolor)
   # optional libraries
   library(sparkline)
 
-  ADSL <- synthetic_cdisc_dataset("latest", "adsl")
-  ADAE <- synthetic_cdisc_dataset("latest", "adae")
-  ADAETTE <- synthetic_cdisc_dataset("latest", "adaette")
+  ADSL <- radsl(seed = 1)
+  ADAE <- radae(ADSL, seed = 1)
+  ADAETTE <- radaette(ADSL, seed = 1)
   ADAETTE <- ADAETTE %>%
     mutate(is_event = case_when(
       grepl("TOT", .data$PARAMCD, fixed = TRUE) ~ TRUE,
@@ -41,7 +40,7 @@ data <- within(data, {
     full_join(ADAETTE_AE, ADAETTE_TTE, by = c("USUBJID", "ARM", "ARMCD"))
   ADAETTE <- rbind(ADAETTE_AE, ADAETTE_OTH)
 
-  ADEX <- synthetic_cdisc_dataset("latest", "adex")
+  ADEX <- radex(ADSL, seed = 1)
   ADEX_labels <- teal.data::col_labels(ADEX, fill = FALSE)
   # Below steps are done to simulate data with TDURD parameter as it is not in the ADEX data from scda package
   set.seed(1, kind = "Mersenne-Twister")
@@ -64,12 +63,12 @@ data <- within(data, {
       PARAMCD %in% c("TDOSE", "TNDOSE", "TDURD"))
   teal.data::col_labels(ADEX) <- ADEX_labels
 
-  ADLB <- synthetic_cdisc_dataset("latest", "adlb")
+  ADLB <- radlb(ADSL, seed = 1)
 
-  ADEG <- synthetic_cdisc_dataset("latest", "adeg")
+  ADEG <- radeg(ADSL, seed = 1)
 
   # For real data, ADVS needs some preprocessing like group different ANRIND and BNRIND into abnormal
-  ADVS <- synthetic_cdisc_dataset("latest", "advs") %>%
+  ADVS <- radvs(ADSL, seed = 1) %>%
     mutate(ONTRTFL = ifelse(AVISIT %in% c("SCREENING", "BASELINE"), "", "Y")) %>%
     teal.data::col_relabel(ONTRTFL = "On Treatment Record Flag") %>%
     mutate(ANRIND = as.character(ANRIND), BNRIND = as.character(BNRIND)) %>%
@@ -86,8 +85,7 @@ data <- within(data, {
       )
     )
 
-  ADCM <-
-    synthetic_cdisc_dataset("latest", "adcm") %>% mutate(CMSEQ = as.integer(CMSEQ))
+  ADCM <- radcm(ADSL, seed = 1) %>% mutate(CMSEQ = as.integer(CMSEQ))
 
   # Add study-specific pre-processing: convert arm, param and visit variables to factors
   # Sample code:
