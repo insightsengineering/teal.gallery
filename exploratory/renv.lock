@@ -1762,6 +1762,26 @@
       ],
       "Hash": "082e1a198e3329d571f4448ef0ede4bc"
     },
+    "random.cdisc.data": {
+      "Package": "random.cdisc.data",
+      "Version": "0.3.15",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "checkmate",
+        "dplyr",
+        "lifecycle",
+        "lubridate",
+        "magrittr",
+        "rlang",
+        "stringr",
+        "tibble",
+        "tidyr",
+        "yaml"
+      ],
+      "Hash": "c92edb70a24230a0b30f961c431c9fdf"
+    },
     "rappdirs": {
       "Package": "rappdirs",
       "Version": "0.3.3",
@@ -1911,26 +1931,6 @@
         "viridisLite"
       ],
       "Hash": "c19df082ba346b0ffa6f833e92de34d1"
-    },
-    "random.cdisc.data": {
-      "Package": "random.cdisc.data",
-      "Version": "0.3.15",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "checkmate",
-        "dplyr",
-        "lifecycle",
-        "lubridate",
-        "magrittr",
-        "rlang",
-        "stringr",
-        "tibble",
-        "tidyr",
-        "yaml"
-      ],
-      "Hash": "c92edb70a24230a0b30f961c431c9fdf"
     },
     "shiny": {
       "Package": "shiny",
