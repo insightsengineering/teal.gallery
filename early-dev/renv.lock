@@ -2743,14 +2743,14 @@
     },
     "teal.osprey": {
       "Package": "teal.osprey",
-      "Version": "0.1.16.9015",
+      "Version": "0.1.16.9016",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.osprey",
       "RemoteRef": "main",
-      "RemoteSha": "c048374380e23736f40e5ad33bf48699df1287fb",
+      "RemoteSha": "8f1dc4efa05151257461e513a01a52a1c2d347f2",
       "Requirements": [
         "R",
         "checkmate",
@@ -2770,7 +2770,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "fee0d02d5489fc9379553ed903d813d1"
+      "Hash": "d8a3dc2e02a826560315b8767f385d96"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
