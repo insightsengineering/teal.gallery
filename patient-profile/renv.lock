@@ -631,9 +631,9 @@
     },
     "crul": {
       "Package": "crul",
-      "Version": "1.4.0",
+      "Version": "1.4.2",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R6",
         "curl",
@@ -642,7 +642,7 @@
         "mime",
         "urltools"
       ],
-      "Hash": "1eb00a531331c91d970f3af74b75321f"
+      "Hash": "5685d2603020d0f879a147ba23d51292"
     },
     "curl": {
       "Package": "curl",
@@ -2498,14 +2498,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.0.9014",
+      "Version": "0.9.0.9015",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "80220ffc237067db4e5e57f48e75e2f0d6469526",
+      "RemoteSha": "a1fc91a5133361150abcbe579229c59500bf4a01",
       "Requirements": [
         "DT",
         "R",
@@ -2540,7 +2540,7 @@
         "utils",
         "vistime"
       ],
-      "Hash": "de5e16b586af0ebf4885ea49606695a5"
+      "Hash": "40bb1751da3b556014590f89c732a996"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
