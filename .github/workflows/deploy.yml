@@ -156,7 +156,6 @@ jobs:
           lockfile_pkgs <- renv::lockfile_read()$Package
           github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
           renv::restore(clean = TRUE)
-          renv::install('random.cdisc.data')
           renv::update(exclude = github_pkgs)
           renv::snapshot()
 
