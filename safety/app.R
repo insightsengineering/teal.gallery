@@ -42,7 +42,7 @@ data <- within(data, {
 
   ADEX <- radex(ADSL, seed = 1)
   ADEX_labels <- teal.data::col_labels(ADEX, fill = FALSE)
-  # Below steps are done to simulate data with TDURD parameter as it is not in the ADEX data from `random.cdisc.data`` package
+  # Below steps are done to simulate data with TDURD parameter as it is not in the ADEX data from `random.cdisc.data` package
   set.seed(1, kind = "Mersenne-Twister")
   ADEX <- ADEX %>%
     distinct(USUBJID, .keep_all = TRUE) %>%
