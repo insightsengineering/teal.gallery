@@ -902,14 +902,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.5.9020",
+      "Version": "0.5.5.9021",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "959bfb4519082f28e3fc417ab208eee0c5f665e8",
+      "RemoteSha": "0fc6aad9a920f27de29c4ac6e519cd961a469fa5",
       "Requirements": [
         "R",
         "checkmate",
@@ -917,7 +917,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "a38b92ec5b4a137e1fbc2f8720fcbb0d"
+      "Hash": "451da8bbfaddaca7355c94973362871a"
     },
     "fs": {
       "Package": "fs",
@@ -1470,6 +1470,19 @@
       ],
       "Hash": "c145edf05cc128e6ffcfa5d872c46329"
     },
+    "lubridate": {
+      "Package": "lubridate",
+      "Version": "1.9.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "generics",
+        "methods",
+        "timechange"
+      ],
+      "Hash": "680ad542fbcf801442c83a6ac5a2126c"
+    },
     "magrittr": {
       "Package": "magrittr",
       "Version": "2.0.3",
@@ -1961,6 +1974,26 @@
       ],
       "Hash": "082e1a198e3329d571f4448ef0ede4bc"
     },
+    "random.cdisc.data": {
+      "Package": "random.cdisc.data",
+      "Version": "0.3.15",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "checkmate",
+        "dplyr",
+        "lifecycle",
+        "lubridate",
+        "magrittr",
+        "rlang",
+        "stringr",
+        "tibble",
+        "tidyr",
+        "yaml"
+      ],
+      "Hash": "c92edb70a24230a0b30f961c431c9fdf"
+    },
     "rappdirs": {
       "Package": "rappdirs",
       "Version": "0.3.3",
@@ -2142,38 +2175,6 @@
         "viridisLite"
       ],
       "Hash": "c19df082ba346b0ffa6f833e92de34d1"
-    },
-    "scda": {
-      "Package": "scda",
-      "Version": "0.1.6.9017",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRepo": "scda",
-      "RemoteRef": "main",
-      "RemoteSha": "54515f7efe296d03221a1338421aad8fdec5a2e7",
-      "Remotes": "insightsengineering/scda.2022@*release",
-      "Requirements": [
-        "R",
-        "utils"
-      ],
-      "Hash": "1179680c55d796335bf815da617cf4c3"
-    },
-    "scda.2022": {
-      "Package": "scda.2022",
-      "Version": "0.1.5.9006",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRepo": "scda.2022",
-      "RemoteRef": "main",
-      "RemoteSha": "3ec4b1d6805d3d31d02d531bdc7e1bedb4494df4",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "978dd9f7d1bd8ac81ca68ad0d71074b2"
     },
     "shape": {
       "Package": "shape",
@@ -2509,14 +2510,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.0.9015",
+      "Version": "0.9.0.9016",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "a1fc91a5133361150abcbe579229c59500bf4a01",
+      "RemoteSha": "72195ad40a8197caf433620eb57975dbdc72c662",
       "Requirements": [
         "DT",
         "R",
@@ -2551,18 +2552,18 @@
         "utils",
         "vistime"
       ],
-      "Hash": "40bb1751da3b556014590f89c732a996"
+      "Hash": "dac6829c8ff95993e0cefa1d9b13ec62"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9006",
+      "Version": "0.3.0.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "99d7f0256a10be0c84afbf160bf1a093f63ae44f",
+      "RemoteSha": "78b95ac65d9ba0e324419469ccedc4b1a2262156",
       "Requirements": [
         "DT",
         "R",
@@ -2593,7 +2594,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "a4dd92ea172b1ac4ae21fc4d6bad2b2b"
+      "Hash": "12c504ca8685f7e14f6c1a04c61c3c69"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -2758,14 +2759,14 @@
     },
     "tern.gee": {
       "Package": "tern.gee",
-      "Version": "0.1.3.9004",
+      "Version": "0.1.3.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.gee",
       "RemoteRef": "main",
-      "RemoteSha": "7c0e8edcb70f300da014245d0f224233d986672a",
+      "RemoteSha": "ce377eb62b2611d77948bf133dc525b3a9b76fd1",
       "Requirements": [
         "R",
         "checkmate",
@@ -2778,7 +2779,7 @@
         "stats",
         "tern"
       ],
-      "Hash": "2386f1d8811e7d3582b97b2620ae27c4"
+      "Hash": "08ad82b81f3a7477c4823e59b41a242a"
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
@@ -2909,6 +2910,17 @@
         "withr"
       ],
       "Hash": "829f27b9c4919c16b593794a6344d6c0"
+    },
+    "timechange": {
+      "Package": "timechange",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "cpp11"
+      ],
+      "Hash": "c5f3c201b931cd6474d17d8700ccb1c8"
     },
     "tinytex": {
       "Package": "tinytex",
