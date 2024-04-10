@@ -1762,6 +1762,26 @@
       ],
       "Hash": "082e1a198e3329d571f4448ef0ede4bc"
     },
+    "random.cdisc.data": {
+      "Package": "random.cdisc.data",
+      "Version": "0.3.15",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "checkmate",
+        "dplyr",
+        "lifecycle",
+        "lubridate",
+        "magrittr",
+        "rlang",
+        "stringr",
+        "tibble",
+        "tidyr",
+        "yaml"
+      ],
+      "Hash": "c92edb70a24230a0b30f961c431c9fdf"
+    },
     "rappdirs": {
       "Package": "rappdirs",
       "Version": "0.3.3",
@@ -1911,38 +1931,6 @@
         "viridisLite"
       ],
       "Hash": "c19df082ba346b0ffa6f833e92de34d1"
-    },
-    "scda": {
-      "Package": "scda",
-      "Version": "0.1.6",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRepo": "scda",
-      "RemoteRef": "v0.1.6",
-      "RemoteSha": "665d4540a8f3c9e8d9271c33b5dd70296b49636c",
-      "Remotes": "insightsengineering/scda.2022@*release",
-      "Requirements": [
-        "R",
-        "utils"
-      ],
-      "Hash": "050ae235c739506fb50990d8e03518bb"
-    },
-    "scda.2022": {
-      "Package": "scda.2022",
-      "Version": "0.1.5",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRepo": "scda.2022",
-      "RemoteRef": "v0.1.5",
-      "RemoteSha": "5b08051312fababe15476f21323d17bcbb0543cf",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "0e04543b6e8a5f658699c9cdc50534c8"
     },
     "shiny": {
       "Package": "shiny",
