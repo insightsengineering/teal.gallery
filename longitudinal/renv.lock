@@ -697,7 +697,7 @@
     },
     "crul": {
       "Package": "crul",
-      "Version": "1.4.0",
+      "Version": "1.4.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -708,7 +708,7 @@
         "mime",
         "urltools"
       ],
-      "Hash": "1eb00a531331c91d970f3af74b75321f"
+      "Hash": "5685d2603020d0f879a147ba23d51292"
     },
     "curl": {
       "Package": "curl",
@@ -2693,14 +2693,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.1.15.9016",
+      "Version": "0.1.15.9017",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "a0af1cd775d435cbc580fa199b8125d82a60504f",
+      "RemoteSha": "e9f4f08d4cd08486d821d0b71afe7faa5360d9e0",
       "Requirements": [
         "DT",
         "R",
@@ -2725,7 +2725,7 @@
         "teal.widgets",
         "tidyr"
       ],
-      "Hash": "d26a8bba3f9af2ca3c46286acd7a95f7"
+      "Hash": "d539a1a910384c3fd4f37eb21592cb9d"
     },
     "teal.logger": {
       "Package": "teal.logger",
