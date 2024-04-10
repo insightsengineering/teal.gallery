@@ -1470,6 +1470,19 @@
       ],
       "Hash": "c145edf05cc128e6ffcfa5d872c46329"
     },
+    "lubridate": {
+      "Package": "lubridate",
+      "Version": "1.9.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "generics",
+        "methods",
+        "timechange"
+      ],
+      "Hash": "680ad542fbcf801442c83a6ac5a2126c"
+    },
     "magrittr": {
       "Package": "magrittr",
       "Version": "2.0.3",
@@ -1961,6 +1974,26 @@
       ],
       "Hash": "082e1a198e3329d571f4448ef0ede4bc"
     },
+    "random.cdisc.data": {
+      "Package": "random.cdisc.data",
+      "Version": "0.3.15",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "checkmate",
+        "dplyr",
+        "lifecycle",
+        "lubridate",
+        "magrittr",
+        "rlang",
+        "stringr",
+        "tibble",
+        "tidyr",
+        "yaml"
+      ],
+      "Hash": "c92edb70a24230a0b30f961c431c9fdf"
+    },
     "rappdirs": {
       "Package": "rappdirs",
       "Version": "0.3.3",
@@ -2142,38 +2175,6 @@
         "viridisLite"
       ],
       "Hash": "c19df082ba346b0ffa6f833e92de34d1"
-    },
-    "scda": {
-      "Package": "scda",
-      "Version": "0.1.6.9017",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRepo": "scda",
-      "RemoteRef": "main",
-      "RemoteSha": "54515f7efe296d03221a1338421aad8fdec5a2e7",
-      "Remotes": "insightsengineering/scda.2022@*release",
-      "Requirements": [
-        "R",
-        "utils"
-      ],
-      "Hash": "1179680c55d796335bf815da617cf4c3"
-    },
-    "scda.2022": {
-      "Package": "scda.2022",
-      "Version": "0.1.5.9006",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRepo": "scda.2022",
-      "RemoteRef": "main",
-      "RemoteSha": "3ec4b1d6805d3d31d02d531bdc7e1bedb4494df4",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "978dd9f7d1bd8ac81ca68ad0d71074b2"
     },
     "shape": {
       "Package": "shape",
@@ -2898,6 +2899,17 @@
         "withr"
       ],
       "Hash": "829f27b9c4919c16b593794a6344d6c0"
+    },
+    "timechange": {
+      "Package": "timechange",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "cpp11"
+      ],
+      "Hash": "c5f3c201b931cd6474d17d8700ccb1c8"
     },
     "tinytex": {
       "Package": "tinytex",
