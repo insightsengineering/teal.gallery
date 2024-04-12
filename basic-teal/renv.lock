@@ -999,13 +999,13 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.0.5",
+      "Version": "1.0.7",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
-      "Hash": "32c3f93e8360f667ca5863272ec8ba6a"
+      "Hash": "397b7b2a265bc5a7a06852524dabae20"
     },
     "rlang": {
       "Package": "rlang",
@@ -1272,14 +1272,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9023",
+      "Version": "0.15.2.9025",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "05c0775fa56f85496f582fc8dc16bc506e88c89c",
+      "RemoteSha": "839629ab12d3200ee3d01ce6feefc452dac7b675",
       "Requirements": [
         "R",
         "checkmate",
@@ -1300,7 +1300,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "9139ab870202a52fd9a3568d6dc4674b"
+      "Hash": "9ba17036370969160f8006aaced138c7"
     },
     "teal.code": {
       "Package": "teal.code",
