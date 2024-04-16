@@ -595,9 +595,9 @@
     },
     "RcppArmadillo": {
       "Package": "RcppArmadillo",
-      "Version": "0.12.8.2.0",
+      "Version": "0.12.8.2.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "Rcpp",
@@ -605,7 +605,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "85c0c4491c06db4814ed7e39b960973c"
+      "Hash": "d5448fb24fb114c4da1275a37a571f37"
     },
     "RcppEigen": {
       "Package": "RcppEigen",
@@ -1483,14 +1483,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.5.9021",
+      "Version": "0.5.6.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "0fc6aad9a920f27de29c4ac6e519cd961a469fa5",
+      "RemoteSha": "88a928952c392a0f7a012c72d0c4764c5c4beeaa",
       "Requirements": [
         "R",
         "checkmate",
@@ -1498,7 +1498,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "451da8bbfaddaca7355c94973362871a"
+      "Hash": "17ea110a8b6a535827dd9d901ea376ac"
     },
     "fs": {
       "Package": "fs",
@@ -2618,14 +2618,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.6.9011",
+      "Version": "0.6.7",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "089811b9cf74d172487cd87c2ceebe9f98ad7b88",
+      "RemoteSha": "2fa96a8d28c9deba4c67c17b281d4161d8c41a11",
       "Requirements": [
         "R",
         "checkmate",
@@ -2636,7 +2636,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "e87a4afeaf2fefe75246fb63535b5778"
+      "Hash": "5416892201968f9851e3d3a1cd48cadc"
     },
     "sass": {
       "Package": "sass",
@@ -3217,14 +3217,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.3.9032",
+      "Version": "0.9.3.9033",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "fade4b504562a747f1ba4f9d6fc1d1d0617114d3",
+      "RemoteSha": "fce3ed27a26884c27c4091e4a8a7008a70b5f909",
       "Requirements": [
         "MASS",
         "R",
@@ -3254,7 +3254,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "4cf35986aa777d2c7e7fdc3971dc14b6"
+      "Hash": "653fb119cf78dd7de3f5cfc3cb80cc79"
     },
     "testthat": {
       "Package": "testthat",
