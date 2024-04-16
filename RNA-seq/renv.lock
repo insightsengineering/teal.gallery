@@ -601,7 +601,7 @@
     },
     "RcppArmadillo": {
       "Package": "RcppArmadillo",
-      "Version": "0.12.8.2.0",
+      "Version": "0.12.8.2.1",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -611,7 +611,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "85c0c4491c06db4814ed7e39b960973c"
+      "Hash": "d5448fb24fb114c4da1275a37a571f37"
     },
     "RcppEigen": {
       "Package": "RcppEigen",
@@ -1513,9 +1513,9 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.5",
+      "Version": "0.5.6",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "checkmate",
@@ -1523,7 +1523,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "baa3810e1b7001ddd133c9dd3299dab3"
+      "Hash": "45b3a7cd883b90994abae341c9d80c1c"
     },
     "fs": {
       "Package": "fs",
@@ -2644,9 +2644,9 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.6",
+      "Version": "0.6.7",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "checkmate",
@@ -2657,7 +2657,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "cdcb6650f79786a2cac92d0c5606aad4"
+      "Hash": "a64d5e33486183ab9ad13f88cfff4320"
     },
     "sass": {
       "Package": "sass",
