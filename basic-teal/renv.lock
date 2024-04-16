@@ -464,14 +464,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.5.9021",
+      "Version": "0.5.6.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "0fc6aad9a920f27de29c4ac6e519cd961a469fa5",
+      "RemoteSha": "88a928952c392a0f7a012c72d0c4764c5c4beeaa",
       "Requirements": [
         "R",
         "checkmate",
@@ -479,7 +479,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "451da8bbfaddaca7355c94973362871a"
+      "Hash": "17ea110a8b6a535827dd9d901ea376ac"
     },
     "fs": {
       "Package": "fs",
@@ -1053,7 +1053,7 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.6",
+      "Version": "0.6.7",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1066,7 +1066,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "cdcb6650f79786a2cac92d0c5606aad4"
+      "Hash": "a64d5e33486183ab9ad13f88cfff4320"
     },
     "sass": {
       "Package": "sass",
