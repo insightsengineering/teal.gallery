@@ -824,9 +824,9 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.5",
+      "Version": "0.5.6",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "checkmate",
@@ -834,7 +834,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "baa3810e1b7001ddd133c9dd3299dab3"
+      "Hash": "45b3a7cd883b90994abae341c9d80c1c"
     },
     "fs": {
       "Package": "fs",
@@ -1826,9 +1826,9 @@
     },
     "reticulate": {
       "Package": "reticulate",
-      "Version": "1.35.0",
+      "Version": "1.36.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "Matrix",
         "R",
@@ -1844,7 +1844,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "90be16b53b955990db4aa355c03d85eb"
+      "Hash": "ed42084db0ff8dd4b1d997202f774dcf"
     },
     "rlang": {
       "Package": "rlang",
@@ -1892,9 +1892,9 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.6",
+      "Version": "0.6.7",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "checkmate",
@@ -1905,7 +1905,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "cdcb6650f79786a2cac92d0c5606aad4"
+      "Hash": "a64d5e33486183ab9ad13f88cfff4320"
     },
     "sandwich": {
       "Package": "sandwich",
