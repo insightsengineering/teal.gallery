@@ -1292,9 +1292,9 @@
     },
     "lme4": {
       "Package": "lme4",
-      "Version": "1.1-35.2",
+      "Version": "1.1-35.3",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "MASS",
         "Matrix",
@@ -1314,7 +1314,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "c255dd80a1771f41321db15041feed11"
+      "Hash": "862f9d995f528f3051f524791955b20c"
     },
     "lmodel2": {
       "Package": "lmodel2",
@@ -1853,7 +1853,7 @@
       "Package": "reticulate",
       "Version": "1.36.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "Matrix",
         "R",
@@ -2221,14 +2221,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9026",
+      "Version": "0.15.2.9028",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "1de78ee3ad70858aee6ef78d188be207b010bf17",
+      "RemoteSha": "a358d6398bb9677a26da47060e4e7214311cce80",
       "Requirements": [
         "R",
         "checkmate",
@@ -2249,7 +2249,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "59387cfac40a7efb54b31a3e7455b349"
+      "Hash": "83219e47447217f15ee9e37a41ea1bea"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2478,14 +2478,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.3.9033",
+      "Version": "0.9.3.9035",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "fce3ed27a26884c27c4091e4a8a7008a70b5f909",
+      "RemoteSha": "31fbe0371120c9fc56d75dee3b2d2d13de332496",
       "Requirements": [
         "MASS",
         "R",
@@ -2515,7 +2515,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "653fb119cf78dd7de3f5cfc3cb80cc79"
+      "Hash": "a572c209a336bd61f80aea010b5d0bae"
     },
     "testthat": {
       "Package": "testthat",
