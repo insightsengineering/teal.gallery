@@ -603,7 +603,7 @@
       "Package": "RcppArmadillo",
       "Version": "0.12.8.2.1",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "Rcpp",
@@ -1515,7 +1515,7 @@
       "Package": "formatters",
       "Version": "0.5.6",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "checkmate",
@@ -2008,7 +2008,7 @@
     },
     "lme4": {
       "Package": "lme4",
-      "Version": "1.1-35.2",
+      "Version": "1.1-35.3",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -2030,7 +2030,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "c255dd80a1771f41321db15041feed11"
+      "Hash": "862f9d995f528f3051f524791955b20c"
     },
     "locfit": {
       "Package": "locfit",
@@ -2646,7 +2646,7 @@
       "Package": "rtables",
       "Version": "0.6.7",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "checkmate",
