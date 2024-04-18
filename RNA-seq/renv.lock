@@ -1606,7 +1606,7 @@
     },
     "ggfortify": {
       "Package": "ggfortify",
-      "Version": "0.4.16",
+      "Version": "0.4.17",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1620,7 +1620,7 @@
         "tibble",
         "tidyr"
       ],
-      "Hash": "ae0e011aa23b95682e2872fd7a7e5682"
+      "Hash": "28eb83fd20b824710e681fc4e1a9ac94"
     },
     "ggmosaic": {
       "Package": "ggmosaic",
@@ -2768,7 +2768,7 @@
     },
     "shinyWidgets": {
       "Package": "shinyWidgets",
-      "Version": "0.8.4",
+      "Version": "0.8.5",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2782,7 +2782,7 @@
         "sass",
         "shiny"
       ],
-      "Hash": "32fa500353f86092c64fe12c062ee34c"
+      "Hash": "fcfd331c780da8d4b62fa4bfb6c8785e"
     },
     "shinybusy": {
       "Package": "shinybusy",
@@ -3211,10 +3211,11 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.3",
+      "Version": "0.9.4",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
+        "MASS",
         "R",
         "Rdpack",
         "broom",
@@ -3242,7 +3243,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "8cdc0e48e17b8c4be0200ed1b2252691"
+      "Hash": "a8d617a605a1383dabf4e32e3de26222"
     },
     "testthat": {
       "Package": "testthat",
