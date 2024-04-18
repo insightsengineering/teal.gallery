@@ -2210,9 +2210,9 @@
     },
     "shinyWidgets": {
       "Package": "shinyWidgets",
-      "Version": "0.8.4",
+      "Version": "0.8.5",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "anytime",
@@ -2224,7 +2224,7 @@
         "sass",
         "shiny"
       ],
-      "Hash": "32fa500353f86092c64fe12c062ee34c"
+      "Hash": "fcfd331c780da8d4b62fa4bfb6c8785e"
     },
     "shinybusy": {
       "Package": "shinybusy",
@@ -2640,10 +2640,11 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.3",
+      "Version": "0.9.4",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
+        "MASS",
         "R",
         "Rdpack",
         "broom",
@@ -2671,7 +2672,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "8cdc0e48e17b8c4be0200ed1b2252691"
+      "Hash": "a8d617a605a1383dabf4e32e3de26222"
     },
     "tern.gee": {
       "Package": "tern.gee",
