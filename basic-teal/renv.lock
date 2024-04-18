@@ -1137,7 +1137,7 @@
     },
     "shinyWidgets": {
       "Package": "shinyWidgets",
-      "Version": "0.8.4",
+      "Version": "0.8.5",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1151,7 +1151,7 @@
         "sass",
         "shiny"
       ],
-      "Hash": "32fa500353f86092c64fe12c062ee34c"
+      "Hash": "fcfd331c780da8d4b62fa4bfb6c8785e"
     },
     "shinybusy": {
       "Package": "shinybusy",
@@ -1395,14 +1395,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.0.9010",
+      "Version": "0.5.0.9011",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "7f72a2caa179dba918c16eec37a87874082e799c",
+      "RemoteSha": "b4da8d6238808ed0817810942a1937cece87300f",
       "Requirements": [
         "R",
         "R6",
@@ -1425,7 +1425,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "47a45844497da8256f7f892b05694014"
+      "Hash": "544e1cad38df8cd99d63d6e21929b933"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
