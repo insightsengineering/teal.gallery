@@ -103,7 +103,8 @@ jobs:
             libgbm-dev \
             libnotify-dev \
             libgconf-2-4 \
-            xvfb
+            xvfb \
+            jq
           if [ " ${{ matrix.directory }}" == "python" ]
           then {
             apt-get install --yes python3.10-venv
