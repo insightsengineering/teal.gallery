@@ -1684,9 +1684,9 @@
     },
     "gtable": {
       "Package": "gtable",
-      "Version": "0.3.4",
+      "Version": "0.3.5",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "cli",
@@ -1695,7 +1695,7 @@
         "lifecycle",
         "rlang"
       ],
-      "Hash": "b29cf3031f49b04ab9c852c912547eef"
+      "Hash": "e18861963cbc65a27736e02b3cd3c4a0"
     },
     "hermes": {
       "Package": "hermes",
@@ -3017,14 +3017,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9021",
+      "Version": "0.3.0.9025",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "9e5c0aa02a61e5dbd9f802f1e8c8fc96264f9144",
+      "RemoteSha": "d595de1f8347bf3cba804d972875371df9ca8f27",
       "Requirements": [
         "DT",
         "R",
@@ -3055,7 +3055,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "8ceda1b02bc305b983db3046bf0afdf9"
+      "Hash": "049f17a1f67a3f516878643307b6e0a2"
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
