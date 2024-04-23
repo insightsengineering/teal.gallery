@@ -25,7 +25,6 @@ env:
   SHINYAPPSIO_ACCOUNT: genentech
   APP_PREFIX: NEST
   GITHUB_PAT: ${{ secrets.REPO_GITHUB_TOKEN }}
-  APP_NAME: ${{ matrix.directory }}
 
 jobs:
   deploy:
@@ -164,11 +163,12 @@ jobs:
         working-directory: ${{ matrix.directory }}
         run: cat renv.lock
 
-      - name: Read number of tabs from JSON file
+      - name: Read number of tabs from JSON file and set APP_NAME
         id: read-tabs
         run: |
           num_tabs=$(jq -r ".\"${{ matrix.directory }}\"" _internal/tabs.json)
           echo "NUM_TABS=${num_tabs}" >> $GITHUB_ENV
+          echo "APP_NAME=${{ matrix.directory }}" >> $GITHUB_ENV
 
       - name: Front end test to check if the app works fine
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
