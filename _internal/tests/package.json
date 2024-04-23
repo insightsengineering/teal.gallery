@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "run-app": "cd ../.. && Rscript -e \"shiny::runApp('$APP_NAME', port = 3333)\"",
+    "run-cypress": "cypress run --project ../tests --env NUM_TABS=$NUM_TABS",
+    "open-cypress": "cypress open --project ../tests",
+    "test-e2e": "start-server-and-test run-app http://localhost:3333 run-cypress",
+    "test-e2e-interactive": "start-server-and-test run-app http://localhost:3333 open-cypress"
+  },
+  "devDependencies": {
+    "cypress": "^13.3.0",
+    "start-server-and-test": "^2.0.3"
+  }
+}

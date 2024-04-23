@@ -57,3 +57,4 @@ rsconnect/
 
 # Markdown generated files
 */README.html
+_internal/tests/node_modules
