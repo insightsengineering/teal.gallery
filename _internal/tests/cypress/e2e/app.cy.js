@@ -1,6 +1,10 @@
 describe("app", () => {
   beforeEach(() => {
     cy.visit("/");
+    // If NUM_TABS is 0, click the button that has the name "Load data"
+    if (Cypress.env("APP_NAME") === "python") {
+      cy.get("button").contains("Load data").click();
+    }
   });
 
   it("Starts", () => {});
