@@ -166,8 +166,9 @@ jobs:
 
       - name: Read number of tabs from JSON file and set APP_NAME
         id: read-tabs
+        working-directory: _internal
         run: |
-          num_tabs=$(jq -r ".\"${{ matrix.directory }}\"" _internal/tabs.json)
+          num_tabs=$(jq -r ".\"${{ matrix.directory }}\"" tabs.json)
           echo "NUM_TABS=${num_tabs}" >> $GITHUB_ENV
           echo "APP_NAME=${{ matrix.directory }}" >> $GITHUB_ENV
 
