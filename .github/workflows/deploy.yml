@@ -54,13 +54,13 @@ jobs:
           - safety
         channel:
           - stable
-          - dev
+          # - dev #TODO: uncomment before merge and change branch name from `check_errors@main` to `main`
     steps:
       - name: Set channel related constants
         run: |
           echo "BRANCH_NAME=dev" >> $GITHUB_ENV
           if [ "${{ matrix.channel }}" == "stable" ]; then
-            echo "BRANCH_NAME=main" >> $GITHUB_ENV
+            echo "BRANCH_NAME=check_errors@main" >> $GITHUB_ENV
           fi
 
       - name: Setup job token 🔑
