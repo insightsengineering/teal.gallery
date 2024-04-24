@@ -1181,9 +1181,9 @@
     },
     "ggplot2": {
       "Package": "ggplot2",
-      "Version": "3.5.0",
+      "Version": "3.5.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "MASS",
         "R",
@@ -1202,7 +1202,7 @@
         "vctrs",
         "withr"
       ],
-      "Hash": "52ef83f93f74833007f193b2d4c159a2"
+      "Hash": "44c6a2f8202d5b7e878ea274b1092426"
     },
     "ggrepel": {
       "Package": "ggrepel",
@@ -1533,9 +1533,9 @@
     },
     "labelled": {
       "Package": "labelled",
-      "Version": "2.12.0",
+      "Version": "2.13.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "dplyr",
@@ -1544,9 +1544,10 @@
         "rlang",
         "stringr",
         "tidyr",
+        "tidyselect",
         "vctrs"
       ],
-      "Hash": "1ec27c624ece6c20431e9249bd232797"
+      "Hash": "ad4b6d757624221aec6220b8c78defeb"
     },
     "later": {
       "Package": "later",
@@ -2665,14 +2666,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9028",
+      "Version": "0.15.2.9029",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "a358d6398bb9677a26da47060e4e7214311cce80",
+      "RemoteSha": "6cf686710a83b6921612b625f6ed61e05fe1609e",
       "Requirements": [
         "R",
         "checkmate",
@@ -2693,7 +2694,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "83219e47447217f15ee9e37a41ea1bea"
+      "Hash": "59fa63b591993fecb00d401ecbafdaed"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2842,14 +2843,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9025",
+      "Version": "0.3.0.9026",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "d595de1f8347bf3cba804d972875371df9ca8f27",
+      "RemoteSha": "a601036ecc61c49f782b5b0ccc39dc85f3ced495",
       "Requirements": [
         "DT",
         "R",
@@ -2880,7 +2881,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "049f17a1f67a3f516878643307b6e0a2"
+      "Hash": "e807acdcbe76574829cfbc5cba09145d"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -2912,14 +2913,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.0.9011",
+      "Version": "0.5.0.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "b4da8d6238808ed0817810942a1937cece87300f",
+      "RemoteSha": "8d3256563bc6d0b8556a4ea1b7252068290edbd5",
       "Requirements": [
         "R",
         "R6",
@@ -2942,7 +2943,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "544e1cad38df8cd99d63d6e21929b933"
+      "Hash": "c40ac8e617dfe0ea3a7bdaa8a77f9d4c"
     },
     "teal.transform": {
       "Package": "teal.transform",
@@ -3004,14 +3005,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.4.9000",
+      "Version": "0.9.4.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "03ee873c0cf9b5a1142ba8ddb001d222816b4c26",
+      "RemoteSha": "48c8b18758b25565785eb11ffdebf96c2888631c",
       "Requirements": [
         "MASS",
         "R",
@@ -3041,7 +3042,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "8b377a5e382646db85b37f24aee9b65b"
+      "Hash": "83a50dc55b44d693c67481128e5f09d0"
     },
     "tern.gee": {
       "Package": "tern.gee",
