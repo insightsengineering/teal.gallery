@@ -384,13 +384,13 @@
     },
     "brio": {
       "Package": "brio",
-      "Version": "1.1.4",
+      "Version": "1.1.5",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "68bd2b066e1fe780bbf62fc8bcc36de3"
+      "Hash": "c1ee497a6d999947c2c224ae46799b1a"
     },
     "broom": {
       "Package": "broom",
@@ -1033,9 +1033,9 @@
     },
     "ggplot2": {
       "Package": "ggplot2",
-      "Version": "3.5.0",
+      "Version": "3.5.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "MASS",
         "R",
@@ -1054,7 +1054,7 @@
         "vctrs",
         "withr"
       ],
-      "Hash": "52ef83f93f74833007f193b2d4c159a2"
+      "Hash": "44c6a2f8202d5b7e878ea274b1092426"
     },
     "ggrepel": {
       "Package": "ggrepel",
@@ -1345,9 +1345,9 @@
     },
     "labelled": {
       "Package": "labelled",
-      "Version": "2.12.0",
+      "Version": "2.13.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "dplyr",
@@ -1356,9 +1356,10 @@
         "rlang",
         "stringr",
         "tidyr",
+        "tidyselect",
         "vctrs"
       ],
-      "Hash": "1ec27c624ece6c20431e9249bd232797"
+      "Hash": "ad4b6d757624221aec6220b8c78defeb"
     },
     "later": {
       "Package": "later",
@@ -2205,9 +2206,9 @@
     },
     "shinyWidgets": {
       "Package": "shinyWidgets",
-      "Version": "0.8.5",
+      "Version": "0.8.6",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "anytime",
@@ -2219,7 +2220,7 @@
         "sass",
         "shiny"
       ],
-      "Hash": "fcfd331c780da8d4b62fa4bfb6c8785e"
+      "Hash": "bc918b6911c4e928e24a9928295de834"
     },
     "shinybusy": {
       "Package": "shinybusy",
@@ -2346,9 +2347,9 @@
     },
     "survival": {
       "Package": "survival",
-      "Version": "3.5-8",
+      "Version": "3.6-4",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "Matrix",
         "R",
@@ -2358,7 +2359,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "184d7799bca4ba8c3be72ea396f4b9a3"
+      "Hash": "e6e3071f471513e4b85f98ca041303c7"
     },
     "sys": {
       "Package": "sys",
