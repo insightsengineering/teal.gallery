@@ -1137,7 +1137,7 @@
     },
     "shinyWidgets": {
       "Package": "shinyWidgets",
-      "Version": "0.8.5",
+      "Version": "0.8.6",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1151,7 +1151,7 @@
         "sass",
         "shiny"
       ],
-      "Hash": "fcfd331c780da8d4b62fa4bfb6c8785e"
+      "Hash": "bc918b6911c4e928e24a9928295de834"
     },
     "shinybusy": {
       "Package": "shinybusy",
@@ -1272,14 +1272,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9029",
+      "Version": "0.15.2.9031",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "6cf686710a83b6921612b625f6ed61e05fe1609e",
+      "RemoteSha": "94a9ea4964da72756e486f86364e4dddccf8a127",
       "Requirements": [
         "R",
         "checkmate",
@@ -1300,7 +1300,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "59fa63b591993fecb00d401ecbafdaed"
+      "Hash": "09a687afa12a31677a6e4d3ee7baff91"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -1367,14 +1367,14 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.1.9003",
+      "Version": "0.3.1.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "ad7fd2041f0d7cac83d0d97dbbe3ed7914a197ea",
+      "RemoteSha": "db1419bafedfe407c977fe6d6aa29f751f9cbeb8",
       "Requirements": [
         "R6",
         "bslib",
@@ -1391,7 +1391,7 @@
         "yaml",
         "zip"
       ],
-      "Hash": "090bbb97317a105da3537a523039eafd"
+      "Hash": "09332a604cec04a3ecb37ab81c6ed061"
     },
     "teal.slice": {
       "Package": "teal.slice",
