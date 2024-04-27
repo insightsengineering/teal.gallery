@@ -1429,14 +1429,14 @@
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.2.9009",
+      "Version": "0.4.2.9010",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "3176ff54b7aef0e69528fad6dc4b6c51700c1539",
+      "RemoteSha": "570fae4950e87e0115a36f963c615d50fad2d51d",
       "Requirements": [
         "R",
         "bslib",
@@ -1453,7 +1453,7 @@
         "shinyjs",
         "styler"
       ],
-      "Hash": "4ccfb2043eacb9baa6f79ffc99a69085"
+      "Hash": "8c3138018a7b8d57e4cadeaaf82057ff"
     },
     "textshaping": {
       "Package": "textshaping",
