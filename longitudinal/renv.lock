@@ -2752,7 +2752,7 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.0",
+      "Version": "0.9.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2760,13 +2760,12 @@
         "R",
         "broom",
         "checkmate",
+        "cowplot",
         "dplyr",
-        "formatters",
         "ggplot2",
         "ggrepel",
         "grid",
         "lifecycle",
-        "logger",
         "methods",
         "rlistings",
         "rmarkdown",
@@ -2790,7 +2789,7 @@
         "utils",
         "vistime"
       ],
-      "Hash": "8a228ec3700320f55de3b44fd751cef4"
+      "Hash": "3eb91e9ee28f30706277f0162c5319e4"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
