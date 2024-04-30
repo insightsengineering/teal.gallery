@@ -1031,7 +1031,7 @@
     },
     "geeasy": {
       "Package": "geeasy",
-      "Version": "0.1.1",
+      "Version": "0.1.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1044,7 +1044,7 @@
         "methods",
         "stats"
       ],
-      "Hash": "de9b89b98a8034c5551356d6c5dd69df"
+      "Hash": "41ee88f5c45f3592984f4c78525451bc"
     },
     "geepack": {
       "Package": "geepack",
@@ -1702,21 +1702,21 @@
     },
     "nestcolor": {
       "Package": "nestcolor",
-      "Version": "0.1.2.9009",
+      "Version": "0.1.2.9010",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "nestcolor",
       "RemoteRef": "main",
-      "RemoteSha": "9ad1ed4f7e62f2f1dd30cb43ae77a7e506108de7",
+      "RemoteSha": "6f1b5ed6f6ba44fb98d7c2fe725ca0bbcc30f9bf",
       "Requirements": [
         "R",
         "checkmate",
         "ggplot2",
         "lifecycle"
       ],
-      "Hash": "b950b201267181a06284fa78a66a4367"
+      "Hash": "6400adc3ab6bade398dff8af114ed222"
     },
     "nlme": {
       "Package": "nlme",
@@ -1795,14 +1795,14 @@
     },
     "osprey": {
       "Package": "osprey",
-      "Version": "0.1.16.9008",
+      "Version": "0.1.16.9009",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "osprey",
       "RemoteRef": "main",
-      "RemoteSha": "a6021fc04efa073e30340bf74745d096db918351",
+      "RemoteSha": "8908b2469ddbb5f64a7b4103e8454df53c79e883",
       "Requirements": [
         "DescTools",
         "R",
@@ -1821,7 +1821,7 @@
         "tibble",
         "tidyr"
       ],
-      "Hash": "dc5c83635ca158f4982781ba69800e38"
+      "Hash": "adf0c8b0fccba7a5462bed6e79582a46"
     },
     "parallelly": {
       "Package": "parallelly",
@@ -2644,14 +2644,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.2.0.9001",
+      "Version": "0.2.0.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "d44e533c59efb1b52069dda737d8d3dd934cf9d2",
+      "RemoteSha": "9f0e791377dce8e2afd502c58871ab043aa3027a",
       "Requirements": [
         "R",
         "glue",
@@ -2661,7 +2661,7 @@
         "shiny",
         "withr"
       ],
-      "Hash": "4c64e95b353669fd6c338db01cdc6215"
+      "Hash": "c5f9df1fc4d82a0b5fb76acd73906174"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
@@ -2744,14 +2744,14 @@
     },
     "teal.osprey": {
       "Package": "teal.osprey",
-      "Version": "0.1.16.9016",
+      "Version": "0.1.16.9017",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.osprey",
       "RemoteRef": "main",
-      "RemoteSha": "8f1dc4efa05151257461e513a01a52a1c2d347f2",
+      "RemoteSha": "3a2c2699adbf8d49dcba22e349ca7c1d850f1677",
       "Requirements": [
         "R",
         "checkmate",
@@ -2771,7 +2771,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "d8a3dc2e02a826560315b8767f385d96"
+      "Hash": "ee7f9eb8e9baa45bc5bc7ac7c613630d"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
