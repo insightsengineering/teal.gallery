@@ -936,7 +936,7 @@
     },
     "geeasy": {
       "Package": "geeasy",
-      "Version": "0.1.1",
+      "Version": "0.1.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -949,7 +949,7 @@
         "methods",
         "stats"
       ],
-      "Hash": "de9b89b98a8034c5551356d6c5dd69df"
+      "Hash": "41ee88f5c45f3592984f4c78525451bc"
     },
     "geepack": {
       "Package": "geepack",
@@ -1587,21 +1587,21 @@
     },
     "nestcolor": {
       "Package": "nestcolor",
-      "Version": "0.1.2.9009",
+      "Version": "0.1.2.9010",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "nestcolor",
       "RemoteRef": "main",
-      "RemoteSha": "9ad1ed4f7e62f2f1dd30cb43ae77a7e506108de7",
+      "RemoteSha": "6f1b5ed6f6ba44fb98d7c2fe725ca0bbcc30f9bf",
       "Requirements": [
         "R",
         "checkmate",
         "ggplot2",
         "lifecycle"
       ],
-      "Hash": "b950b201267181a06284fa78a66a4367"
+      "Hash": "6400adc3ab6bade398dff8af114ed222"
     },
     "nlme": {
       "Package": "nlme",
