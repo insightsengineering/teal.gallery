@@ -2417,7 +2417,7 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.5.0",
+      "Version": "0.6.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2430,7 +2430,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "3afbea901764701cf2bd715a03291775"
+      "Hash": "22dd132d65fb21b8efa739855cb632a8"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -2552,7 +2552,7 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.0",
+      "Version": "0.5.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2577,7 +2577,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "1503b34d2258e76bdc7dd7538d97f3a4"
+      "Hash": "a29de94bc89bad9a12a914c17e8269f1"
     },
     "teal.transform": {
       "Package": "teal.transform",
