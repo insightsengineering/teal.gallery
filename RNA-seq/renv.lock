@@ -2997,9 +2997,9 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.5.0",
+      "Version": "0.6.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "checkmate",
@@ -3010,7 +3010,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "3afbea901764701cf2bd715a03291775"
+      "Hash": "22dd132d65fb21b8efa739855cb632a8"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -3073,14 +3073,14 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9012",
+      "Version": "0.1.6.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "f637cc55b02f54fd3adda9b4a41d33962068c88b",
+      "RemoteSha": "b36c67ea8636c8fe6fcec45ffe5a79f90b60b48e",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -3107,7 +3107,7 @@
         "tern",
         "utils"
       ],
-      "Hash": "ff7905192cea5d928441c2ef045794be"
+      "Hash": "8fe3429bfebd50ebdee8ba4468af35ce"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -3134,9 +3134,9 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.0",
+      "Version": "0.5.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -3159,7 +3159,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "1503b34d2258e76bdc7dd7538d97f3a4"
+      "Hash": "a29de94bc89bad9a12a914c17e8269f1"
     },
     "teal.transform": {
       "Package": "teal.transform",
