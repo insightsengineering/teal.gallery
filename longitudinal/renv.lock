@@ -1076,7 +1076,7 @@
       "Package": "geeasy",
       "Version": "0.1.2",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "MESS",
         "Matrix",
