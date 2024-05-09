@@ -227,7 +227,7 @@ footer <- tags$p(
 
 app <- init(
   data = data,
-  title = build_app_title("Early Development Analysis Teal Demo App", nest_logo),
+  title = build_app_title("Exploratory Analysis Teal Demo App", nest_logo),
   header = header,
   footer = footer,
   filter = teal_slices(

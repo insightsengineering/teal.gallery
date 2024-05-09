@@ -17,7 +17,7 @@ datanames(data) <- c("ADTTE", "MAE")
 
 ## App header and footer ----
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
-app_source <- "https://github.com/insightsengineering/teal.gallery/tree/main/python"
+app_source <- "https://github.com/insightsengineering/teal.gallery/tree/main/RNA-seq"
 gh_issues_page <- "https://github.com/insightsengineering/teal.gallery/issues"
 
 header <- tags$span(
@@ -39,7 +39,7 @@ footer <- tags$p(
 
 app <- init(
   data = data,
-  title = build_app_title("Early Development Analysis Teal Demo App", nest_logo),
+  title = build_app_title("RNA-Seq Analysis Teal Demo App", nest_logo),
   header = header,
   footer = footer,
   modules = modules(

@@ -436,7 +436,7 @@ footer <- tags$p(
 
 app <- teal::init(
   data = data,
-  title = build_app_title("Early Development Analysis Teal Demo App", nest_logo),
+  title = build_app_title("Longitudinal Analysis Teal Demo App", nest_logo),
   header = header,
   footer = footer,
   filter = teal_slices(
@@ -771,32 +771,6 @@ app <- teal::init(
         hline_vars = c("ANRHI", "ANRLO", "ULOQN", "LLOQN"),
         hline_vars_colors = c("pink", "brown", "purple", "gray")
       )
-    )
-  ),
-  title = build_app_title("Longitudinal Analysis Teal Demo App", nest_logo),
-  header = tags$span(
-    style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$span(
-      style = "font-size: 30px;",
-      "Example teal app focusing on analysis of longitudinal clinical trial data with teal.goshawk"
-    ),
-    tags$span(
-      style = "display: flex; align-items: center;",
-      tags$img(src = nest_logo, alt = "NEST logo", height = "45px", style = "margin-right:10px;"),
-      tags$span(style = "font-size: 24px;", "NEST @ Roche")
-    )
-  ),
-  footer = tags$p(
-    actionLink("showAboutModal", "About,"),
-    tags$a(
-      href = "https://github.com/insightsengineering/teal.gallery/tree/main/longitudinal",
-      target = "_blank",
-      "Source Code,"
-    ),
-    tags$a(
-      href = "https://github.com/insightsengineering/teal.gallery/issues",
-      target = "_blank",
-      "Report Issues"
     )
   )
 )

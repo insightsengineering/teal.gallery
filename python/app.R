@@ -106,10 +106,9 @@ footer <- tags$p(
 
 app <- teal::init(
   data = data,
-  title = build_app_title("Early Development Analysis Teal Demo App", nest_logo),
+  title = build_app_title("Python Dataset Teal Demo App", nest_logo),
   header = header,
   footer = footer,
-  title = build_app_title("Python Dataset Teal Demo App", nest_logo),
   modules = modules(
     tm_data_table("Data Table"),
     tm_variable_browser("Variable Browser"),

@@ -182,7 +182,7 @@ footer <- tags$p(
 ## Setup App
 app <- teal::init(
   data = data,
-  title = build_app_title("Early Development Analysis Teal Demo App", nest_logo),
+  title = build_app_title("Safety Analysis Teal Demo App", nest_logo),
   header = header,
   footer = footer,
   # Set initial filter state as safety-evaluable population
