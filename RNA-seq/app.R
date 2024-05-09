@@ -2,8 +2,6 @@ library(teal.modules.hermes)
 library(teal.modules.general)
 options(shiny.useragg = FALSE)
 
-nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
-
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
@@ -17,9 +15,33 @@ data <- within(data, {
 })
 datanames(data) <- c("ADTTE", "MAE")
 
+## App header and footer ----
+nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
+app_source <- "https://github.com/insightsengineering/teal.gallery/tree/main/python"
+gh_issues_page <- "https://github.com/insightsengineering/teal.gallery/issues"
+
+header <- tags$span(
+  style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
+  tags$span("My first teal app", style = "font-size: 30px;"),
+  tags$span(
+    style = "display: flex; align-items: center;",
+    tags$img(src = nest_logo, alt = "NEST logo", height = "45px", style = "margin-right:10px;"),
+    tags$span(style = "font-size: 24px;", "NEST @ Roche")
+  )
+)
+
+footer <- tags$p(
+  "This teal app is brought to you by the NEST Team at Roche/Genentech.
+        For more information, please visit:",
+  tags$a(href = app_source, target = "_blank", "Source Code"), ", ",
+  tags$a(href = gh_issues_page, target = "_blank", "Report Issues")
+)
 
 app <- init(
   data = data,
+  title = build_app_title("Early Development Analysis Teal Demo App", nest_logo),
+  header = header,
+  footer = footer,
   modules = modules(
     tm_front_page(
       label = "App Info",
@@ -62,55 +84,7 @@ app <- init(
       adtte_name = "ADTTE",
       mae_name = "MAE"
     )
-  ),
-  title = build_app_title("RNA-Seq Analysis Teal Demo App", nest_logo),
-  header = tags$span(
-    style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$span(
-      style = "font-size: 30px;",
-      "Example teal app focusing on analysis of RNA-seq data with teal.modules.hermes"
-    ),
-    tags$span(
-      style = "display: flex; align-items: center;",
-      tags$img(src = nest_logo, alt = "NEST logo", height = "45px", style = "margin-right:10px;"),
-      tags$span(style = "font-size: 24px;", "NEST @ Roche")
-    )
-  ),
-  footer = tags$p(
-    actionLink("showAboutModal", "About,"),
-    tags$a(
-      href = "https://github.com/insightsengineering/teal.gallery/tree/main/RNA-seq",
-      target = "_blank",
-      "Source Code,"
-    ),
-    tags$a(
-      href = "https://github.com/insightsengineering/teal.gallery/issues",
-      target = "_blank",
-      "Report Issues"
-    )
   )
-)
-
-body(app$server)[[length(body(app$server)) + 1]] <- quote(
-  observeEvent(input$showAboutModal, {
-    showModal(modalDialog(
-      tags$p(
-        "This teal app is brought to you by the NEST Team at Roche/Genentech.
-        For more information, please visit:"
-      ),
-      tags$ul(
-        tags$li(tags$a(
-          href = "https://github.com/insightsengineering", "Insights Engineering",
-          target = "blank"
-        )),
-        tags$li(tags$a(
-          href = "https://pharmaverse.org", "Pharmaverse",
-          target = "blank"
-        ))
-      ),
-      easyClose = TRUE
-    ))
-  })
 )
 
 ## Not run:

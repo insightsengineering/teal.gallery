@@ -2,8 +2,6 @@ library(teal.modules.general)
 library(teal.modules.clinical)
 options(shiny.useragg = FALSE)
 
-nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
-
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
@@ -159,9 +157,34 @@ aesi_vars <-
   names(ADAE)[startsWith(names(ADAE), "TMP_SMQ") |
     startsWith(names(ADAE), "TMP_CQ")]
 
+## App header and footer ----
+nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
+app_source <- "https://github.com/insightsengineering/teal.gallery/tree/main/safety"
+gh_issues_page <- "https://github.com/insightsengineering/teal.gallery/issues"
+
+header <- tags$span(
+  style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
+  tags$span("My first teal app", style = "font-size: 30px;"),
+  tags$span(
+    style = "display: flex; align-items: center;",
+    tags$img(src = nest_logo, alt = "NEST logo", height = "45px", style = "margin-right:10px;"),
+    tags$span(style = "font-size: 24px;", "NEST @ Roche")
+  )
+)
+
+footer <- tags$p(
+  "This teal app is brought to you by the NEST Team at Roche/Genentech.
+        For more information, please visit:",
+  tags$a(href = app_source, target = "_blank", "Source Code"), ", ",
+  tags$a(href = gh_issues_page, target = "_blank", "Report Issues")
+)
+
 ## Setup App
 app <- teal::init(
   data = data,
+  title = build_app_title("Early Development Analysis Teal Demo App", nest_logo),
+  header = header,
+  footer = footer,
   # Set initial filter state as safety-evaluable population
   filter = teal_slices(
     count_type = "all",
@@ -475,55 +498,7 @@ app <- teal::init(
       param = choices_selected(value_choices(ADLB, "PARAMCD", "PARAM"), "ALT"),
       plot_height = c(1000L, 200L, 4000L)
     )
-  ),
-  title = build_app_title("Safety Analysis Teal Demo App", nest_logo),
-  header = tags$span(
-    style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-    tags$span(
-      style = "font-size: 30px;",
-      "Example teal app focusing on safety analysis of clinical trial data with teal.modules.clinical"
-    ),
-    tags$span(
-      style = "display: flex; align-items: center;",
-      tags$img(src = nest_logo, alt = "NEST logo", height = "45px", style = "margin-right:10px;"),
-      tags$span(style = "font-size: 24px;", "NEST @ Roche")
-    )
-  ),
-  footer = tags$p(
-    actionLink("showAboutModal", "About,"),
-    tags$a(
-      href = "https://github.com/insightsengineering/teal.gallery/tree/main/safety",
-      target = "_blank",
-      "Source Code,"
-    ),
-    tags$a(
-      href = "https://github.com/insightsengineering/teal.gallery/issues",
-      target = "_blank",
-      "Report Issues"
-    )
   )
-)
-
-body(app$server)[[length(body(app$server)) + 1]] <- quote(
-  observeEvent(input$showAboutModal, {
-    showModal(modalDialog(
-      tags$p(
-        "This teal app is brought to you by the NEST Team at Roche/Genentech.
-        For more information, please visit:"
-      ),
-      tags$ul(
-        tags$li(tags$a(
-          href = "https://github.com/insightsengineering", "Insights Engineering",
-          target = "blank"
-        )),
-        tags$li(tags$a(
-          href = "https://pharmaverse.org", "Pharmaverse",
-          target = "blank"
-        ))
-      ),
-      easyClose = TRUE
-    ))
-  })
 )
 
 shinyApp(app$ui, app$server)

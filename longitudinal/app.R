@@ -4,8 +4,6 @@ library(teal.modules.clinical)
 library(teal.modules.general)
 options(shiny.useragg = FALSE, shiny.sanitize.errors = FALSE)
 
-nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
-
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
@@ -414,8 +412,33 @@ paramexcldDict <- paramDict %>%
 paramexcld_list <- paramexcldDict$PARAM
 paramcdexcld_list <- paramexcldDict$PARAMCD
 
+## App header and footer ----
+nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
+app_source <- "https://github.com/insightsengineering/teal.gallery/tree/main/longitudinal"
+gh_issues_page <- "https://github.com/insightsengineering/teal.gallery/issues"
+
+header <- tags$span(
+  style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
+  tags$span("My first teal app", style = "font-size: 30px;"),
+  tags$span(
+    style = "display: flex; align-items: center;",
+    tags$img(src = nest_logo, alt = "NEST logo", height = "45px", style = "margin-right:10px;"),
+    tags$span(style = "font-size: 24px;", "NEST @ Roche")
+  )
+)
+
+footer <- tags$p(
+  "This teal app is brought to you by the NEST Team at Roche/Genentech.
+        For more information, please visit:",
+  tags$a(href = app_source, target = "_blank", "Source Code"), ", ",
+  tags$a(href = gh_issues_page, target = "_blank", "Report Issues")
+)
+
 app <- teal::init(
   data = data,
+  title = build_app_title("Early Development Analysis Teal Demo App", nest_logo),
+  header = header,
+  footer = footer,
   filter = teal_slices(
     count_type = "all",
     teal_slice(dataname = "ADSL", varname = "SEX"),
@@ -798,28 +821,6 @@ body(app$server)[[length(body(app$server)) + 1]] <- quote(
       p("PCHG =  % Change from Baseline"),
       p("AVAL = Visit Values"),
       p("AVALL2 = Log2(AVAL)"),
-      easyClose = TRUE
-    ))
-  })
-)
-
-body(app$server)[[length(body(app$server)) + 1]] <- quote(
-  observeEvent(input$showAboutModal, {
-    showModal(modalDialog(
-      tags$p(
-        "This teal app is brought to you by the NEST Team at Roche/Genentech.
-        For more information, please visit:"
-      ),
-      tags$ul(
-        tags$li(tags$a(
-          href = "https://github.com/insightsengineering", "Insights Engineering",
-          target = "blank"
-        )),
-        tags$li(tags$a(
-          href = "https://pharmaverse.org", "Pharmaverse",
-          target = "blank"
-        ))
-      ),
       easyClose = TRUE
     ))
   })
