@@ -595,9 +595,9 @@
     },
     "RcppArmadillo": {
       "Package": "RcppArmadillo",
-      "Version": "0.12.8.2.1",
+      "Version": "0.12.8.3.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "Rcpp",
@@ -605,7 +605,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "d5448fb24fb114c4da1275a37a571f37"
+      "Hash": "1eb4a0603478b5557b77d75534251371"
     },
     "RcppEigen": {
       "Package": "RcppEigen",
@@ -1483,22 +1483,23 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.6.9003",
+      "Version": "0.5.6.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "b0c6942f45f747c29c1c9a05f275d1bad4daf6c2",
+      "RemoteSha": "63530282db089234559b865ef031814907ec6075",
       "Requirements": [
         "R",
         "checkmate",
         "grid",
         "htmltools",
+        "lifecycle",
         "methods"
       ],
-      "Hash": "054c1972ee84232e8f1e1987c2089765"
+      "Hash": "c5b26d6d075cb5727358cb8ccca1c487"
     },
     "fs": {
       "Package": "fs",
@@ -2922,14 +2923,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9033",
+      "Version": "0.15.2.9034",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "53dfbe6768cf5a023ebacfba8cd36a6021213e95",
+      "RemoteSha": "04e9002f8f0e9dad91baac70842c9029e180fdb9",
       "Requirements": [
         "R",
         "checkmate",
@@ -2950,7 +2951,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "2ed080806a1e59b36a4ec6c87a21aa2e"
+      "Hash": "82787614bc3792fc6d6b4be3c5de4c41"
     },
     "teal.code": {
       "Package": "teal.code",
