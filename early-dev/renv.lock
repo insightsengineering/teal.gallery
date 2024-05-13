@@ -821,14 +821,14 @@
     },
     "estimability": {
       "Package": "estimability",
-      "Version": "1.5",
+      "Version": "1.5.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "stats"
       ],
-      "Hash": "0d5f495f1edc281fca2510d8dabcba0f"
+      "Hash": "21ec52af13afbcab1cb317567b639b0a"
     },
     "evaluate": {
       "Package": "evaluate",
@@ -2744,14 +2744,14 @@
     },
     "teal.osprey": {
       "Package": "teal.osprey",
-      "Version": "0.1.16.9017",
+      "Version": "0.1.16.9018",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.osprey",
       "RemoteRef": "main",
-      "RemoteSha": "3a2c2699adbf8d49dcba22e349ca7c1d850f1677",
+      "RemoteSha": "a6c567b175eafd3a806f5087b0631f26c0e443f6",
       "Requirements": [
         "R",
         "checkmate",
@@ -2771,7 +2771,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "ee7f9eb8e9baa45bc5bc7ac7c613630d"
+      "Hash": "a41f002cd90eaab6861e780f0e46f40b"
     },
     "teal.reporter": {
       "Package": "teal.reporter",

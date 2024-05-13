@@ -839,14 +839,14 @@
     },
     "estimability": {
       "Package": "estimability",
-      "Version": "1.5",
+      "Version": "1.5.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "stats"
       ],
-      "Hash": "0d5f495f1edc281fca2510d8dabcba0f"
+      "Hash": "21ec52af13afbcab1cb317567b639b0a"
     },
     "evaluate": {
       "Package": "evaluate",
@@ -2695,14 +2695,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.1.15.9018",
+      "Version": "0.1.15.9019",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "eee056f84fa5fd8b7a8bc2e21cf7d49ac9e76d68",
+      "RemoteSha": "c4ba03bfa2a6b69c9abcf4fcfedca684d45847de",
       "Requirements": [
         "DT",
         "R",
@@ -2727,7 +2727,7 @@
         "teal.widgets",
         "tidyr"
       ],
-      "Hash": "55208ee9d4d0ab8c72f4485a47ea6bd6"
+      "Hash": "b3a63cdb6ac4baf1a20a15e2ee5d545e"
     },
     "teal.logger": {
       "Package": "teal.logger",
