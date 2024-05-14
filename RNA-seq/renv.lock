@@ -1352,10 +1352,10 @@
     },
     "farver": {
       "Package": "farver",
-      "Version": "2.1.1",
+      "Version": "2.1.2",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "8106d78941f34855c440ddb946b8f7a5"
+      "Hash": "680887028577f3fa2a81e410ed0d6e42"
     },
     "fastmap": {
       "Package": "fastmap",
@@ -2619,25 +2619,26 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.7.9001",
+      "Version": "0.6.7.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "01fedbe527af05fb85dc31937cbf37f0872c5c42",
+      "RemoteSha": "bdafa9d155ef71c7bc829d17c5ba78ae5a7c8308",
       "Requirements": [
         "R",
         "checkmate",
         "formatters",
         "htmltools",
+        "lifecycle",
         "magrittr",
         "methods",
         "stats",
         "stringi"
       ],
-      "Hash": "8e36ba1dfdd752ab963e953379e6c920"
+      "Hash": "77b12b68f3316fdd79e2294d04ee21f7"
     },
     "sass": {
       "Package": "sass",
@@ -3060,14 +3061,14 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9013",
+      "Version": "0.1.6.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "b36c67ea8636c8fe6fcec45ffe5a79f90b60b48e",
+      "RemoteSha": "6afd7e2e941d673d258fa1ce4a7ba7d8d8ad9d06",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -3094,7 +3095,7 @@
         "tern",
         "utils"
       ],
-      "Hash": "8fe3429bfebd50ebdee8ba4468af35ce"
+      "Hash": "92462e17f55cb4689aa3b34f61691770"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
