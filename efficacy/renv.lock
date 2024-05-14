@@ -757,14 +757,14 @@
     },
     "estimability": {
       "Package": "estimability",
-      "Version": "1.5",
+      "Version": "1.5.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "stats"
       ],
-      "Hash": "0d5f495f1edc281fca2510d8dabcba0f"
+      "Hash": "21ec52af13afbcab1cb317567b639b0a"
     },
     "evaluate": {
       "Package": "evaluate",
@@ -791,10 +791,10 @@
     },
     "farver": {
       "Package": "farver",
-      "Version": "2.1.1",
+      "Version": "2.1.2",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "8106d78941f34855c440ddb946b8f7a5"
+      "Repository": "BioC.CRAN",
+      "Hash": "680887028577f3fa2a81e410ed0d6e42"
     },
     "fastmap": {
       "Package": "fastmap",
@@ -2124,25 +2124,26 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.7.9001",
+      "Version": "0.6.7.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "01fedbe527af05fb85dc31937cbf37f0872c5c42",
+      "RemoteSha": "bdafa9d155ef71c7bc829d17c5ba78ae5a7c8308",
       "Requirements": [
         "R",
         "checkmate",
         "formatters",
         "htmltools",
+        "lifecycle",
         "magrittr",
         "methods",
         "stats",
         "stringi"
       ],
-      "Hash": "8e36ba1dfdd752ab963e953379e6c920"
+      "Hash": "77b12b68f3316fdd79e2294d04ee21f7"
     },
     "sass": {
       "Package": "sass",
