@@ -884,10 +884,10 @@
     },
     "farver": {
       "Package": "farver",
-      "Version": "2.1.1",
+      "Version": "2.1.2",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "8106d78941f34855c440ddb946b8f7a5"
+      "Repository": "RSPM",
+      "Hash": "680887028577f3fa2a81e410ed0d6e42"
     },
     "fastmap": {
       "Package": "fastmap",
@@ -1253,14 +1253,14 @@
     },
     "goshawk": {
       "Package": "goshawk",
-      "Version": "0.1.15.9011",
+      "Version": "0.1.15.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "c3e07bc6f2585d193ff1aa02d24cac16d3bac8f2",
+      "RemoteSha": "a492dd9d4aca4d8bdf8af80b67407c3211257731",
       "Requirements": [
         "R",
         "checkmate",
@@ -1276,7 +1276,7 @@
         "rlang",
         "stringr"
       ],
-      "Hash": "fb89033bbb3d7622e41a46d716171cda"
+      "Hash": "5575f8c5a9dfe411d311f8cbc995b460"
     },
     "gridExtra": {
       "Package": "gridExtra",
