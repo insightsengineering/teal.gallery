@@ -1350,7 +1350,7 @@
       "Package": "estimability",
       "Version": "1.5.1",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "stats"
@@ -1382,10 +1382,10 @@
     },
     "farver": {
       "Package": "farver",
-      "Version": "2.1.1",
+      "Version": "2.1.2",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "8106d78941f34855c440ddb946b8f7a5"
+      "Repository": "BioC.CRAN",
+      "Hash": "680887028577f3fa2a81e410ed0d6e42"
     },
     "fastmap": {
       "Package": "fastmap",
@@ -3073,14 +3073,14 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9013",
+      "Version": "0.1.6.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "b36c67ea8636c8fe6fcec45ffe5a79f90b60b48e",
+      "RemoteSha": "6afd7e2e941d673d258fa1ce4a7ba7d8d8ad9d06",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -3107,7 +3107,7 @@
         "tern",
         "utils"
       ],
-      "Hash": "8fe3429bfebd50ebdee8ba4468af35ce"
+      "Hash": "92462e17f55cb4689aa3b34f61691770"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
