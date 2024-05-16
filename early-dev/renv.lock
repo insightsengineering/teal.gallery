@@ -893,10 +893,10 @@
     },
     "fastmap": {
       "Package": "fastmap",
-      "Version": "1.1.1",
+      "Version": "1.2.0",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "f7736a18de97dea803bde0a2daaafb27"
+      "Repository": "BioC.CRAN",
+      "Hash": "aa5e1cd11c2d15497494c5292d7ffcc8"
     },
     "flextable": {
       "Package": "flextable",
@@ -2129,14 +2129,14 @@
     },
     "ragg": {
       "Package": "ragg",
-      "Version": "1.3.1",
+      "Version": "1.3.2",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
         "systemfonts",
         "textshaping"
       ],
-      "Hash": "539dcb63ce611fe389b4c8e2b546cf24"
+      "Hash": "e3087db406e079a8a2fd87f413918ed3"
     },
     "random.cdisc.data": {
       "Package": "random.cdisc.data",
@@ -2611,14 +2611,15 @@
     },
     "systemfonts": {
       "Package": "systemfonts",
-      "Version": "1.0.6",
+      "Version": "1.1.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
-        "cpp11"
+        "cpp11",
+        "lifecycle"
       ],
-      "Hash": "6d538cff441f0f1f36db2209ac7495ac"
+      "Hash": "213b6b8ed5afbf934843e6c3b090d418"
     },
     "teal": {
       "Package": "teal",
@@ -2674,14 +2675,14 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.6.0.9001",
+      "Version": "0.6.0.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "91160638b0ba4e3dc01d33e7af5b5aebb83b1eab",
+      "RemoteSha": "9bd75a9ad7e92c041967f6d9cd41c8f5c29cc87f",
       "Requirements": [
         "R",
         "checkmate",
@@ -2692,7 +2693,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "bb139c9e09f52b45bce1ca05eac6e73a"
+      "Hash": "f8555e7c7dd3e1e522a7c380674fe1e8"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -2956,14 +2957,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.4.9006",
+      "Version": "0.9.4.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "5dd9f15d68373db454e7bf694e89ece392eb53aa",
+      "RemoteSha": "75d3324bc71c1144a76ecaebc6bf47625027c661",
       "Requirements": [
         "MASS",
         "R",
@@ -2993,7 +2994,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "e5fd6c7c511ff923971d0ef29135ae46"
+      "Hash": "4936eddff7078cadd9a98f65e08866f2"
     },
     "tern.gee": {
       "Package": "tern.gee",
@@ -3322,15 +3323,15 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.43",
+      "Version": "0.44",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "grDevices",
         "stats",
         "tools"
       ],
-      "Hash": "ab6371d8653ce5f2f9290f4ec7b42a8e"
+      "Hash": "317a0538d32f4a009658bcedb7923f4b"
     },
     "xml2": {
       "Package": "xml2",
