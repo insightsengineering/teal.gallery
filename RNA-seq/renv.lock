@@ -952,14 +952,14 @@
     },
     "cachem": {
       "Package": "cachem",
-      "Version": "1.0.8",
+      "Version": "1.1.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "fastmap",
         "rlang"
       ],
-      "Hash": "c35768291560ce302c0a6589f92e837d"
+      "Hash": "cd9a672193789068eb5a2aad65a0dedf"
     },
     "callr": {
       "Package": "callr",
@@ -1391,7 +1391,7 @@
       "Package": "fastmap",
       "Version": "1.2.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Hash": "aa5e1cd11c2d15497494c5292d7ffcc8"
     },
     "filelock": {
@@ -2251,13 +2251,13 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.1.2",
+      "Version": "2.2.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "askpass"
       ],
-      "Hash": "ea2475b073243d9d338aa8f086ce973e"
+      "Hash": "2bcca3848e4734eb3b16103bc9aa4b8e"
     },
     "pbkrtest": {
       "Package": "pbkrtest",
@@ -2519,7 +2519,7 @@
       "Package": "ragg",
       "Version": "1.3.2",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "systemfonts",
         "textshaping"
@@ -2946,7 +2946,7 @@
       "Package": "systemfonts",
       "Version": "1.1.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "cpp11",
@@ -3074,14 +3074,14 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9014",
+      "Version": "0.1.6.9015",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "6afd7e2e941d673d258fa1ce4a7ba7d8d8ad9d06",
+      "RemoteSha": "73a6a336aa9c217953adcb1e8c814ee039c4c086",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -3094,6 +3094,7 @@
         "ggplot2",
         "hermes",
         "lifecycle",
+        "logger",
         "rtables",
         "shiny",
         "shinyRadioMatrix",
@@ -3108,7 +3109,7 @@
         "tern",
         "utils"
       ],
-      "Hash": "92462e17f55cb4689aa3b34f61691770"
+      "Hash": "f584ebded95939856ba9277949fdb5e5"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -3467,7 +3468,7 @@
       "Package": "xfun",
       "Version": "0.44",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "grDevices",
         "stats",
