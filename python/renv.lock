@@ -392,14 +392,14 @@
     },
     "cachem": {
       "Package": "cachem",
-      "Version": "1.0.8",
+      "Version": "1.1.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "fastmap",
         "rlang"
       ],
-      "Hash": "c35768291560ce302c0a6589f92e837d"
+      "Hash": "cd9a672193789068eb5a2aad65a0dedf"
     },
     "callr": {
       "Package": "callr",
@@ -755,7 +755,7 @@
       "Package": "fastmap",
       "Version": "1.2.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Hash": "aa5e1cd11c2d15497494c5292d7ffcc8"
     },
     "flextable": {
@@ -1554,13 +1554,13 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.1.2",
+      "Version": "2.2.0",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
         "askpass"
       ],
-      "Hash": "ea2475b073243d9d338aa8f086ce973e"
+      "Hash": "2bcca3848e4734eb3b16103bc9aa4b8e"
     },
     "pbkrtest": {
       "Package": "pbkrtest",
@@ -1802,7 +1802,7 @@
       "Package": "ragg",
       "Version": "1.3.2",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "systemfonts",
         "textshaping"
@@ -1883,6 +1883,23 @@
         "utils"
       ],
       "Hash": "42548638fae05fd9a9b5f3f437fbbbe2"
+    },
+    "rlistings": {
+      "Package": "rlistings",
+      "Version": "0.2.8",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "checkmate",
+        "formatters",
+        "grDevices",
+        "grid",
+        "methods",
+        "stats",
+        "tibble",
+        "utils"
+      ],
+      "Hash": "c713ee591976d75590549ece8d763ff4"
     },
     "rmarkdown": {
       "Package": "rmarkdown",
@@ -2215,7 +2232,7 @@
       "Package": "systemfonts",
       "Version": "1.1.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "cpp11",
@@ -2225,14 +2242,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9036",
+      "Version": "0.15.2.9037",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "d639140fae1f986b19daf08c26058780a77fbfae",
+      "RemoteSha": "0fcd26fe37389fb60cfefa63d8f8b1acc1d6a1ed",
       "Requirements": [
         "R",
         "checkmate",
@@ -2253,7 +2270,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "cdaf61c17dce3f6c9c7a46d8db13484a"
+      "Hash": "445918dc79945ff71f9365192b9f78e7"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2277,14 +2294,14 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.6.0.9002",
+      "Version": "0.6.0.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "9bd75a9ad7e92c041967f6d9cd41c8f5c29cc87f",
+      "RemoteSha": "30d29651818ac82fc00c14be3f136b3a2064d7e2",
       "Requirements": [
         "R",
         "checkmate",
@@ -2295,7 +2312,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "f8555e7c7dd3e1e522a7c380674fe1e8"
+      "Hash": "74ba03024072e1673c312a637c477ea7"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -2320,14 +2337,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9030",
+      "Version": "0.3.0.9034",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "f3b01871504f510ef4338fc6ee1f7dca139bee33",
+      "RemoteSha": "f84cd4989ea079328148d7dcc04b8fe5a031ea06",
       "Requirements": [
         "DT",
         "R",
@@ -2337,6 +2354,7 @@
         "ggmosaic",
         "ggplot2",
         "grid",
+        "logger",
         "scales",
         "shiny",
         "shinyTree",
@@ -2358,18 +2376,18 @@
         "tools",
         "utils"
       ],
-      "Hash": "f2fa043c8ec324675092e90d9cfe6190"
+      "Hash": "93a7eb7fde2d1af8d31c48fc78791777"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.1.9005",
+      "Version": "0.3.1.9006",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "9a89e488183008ccea30b3a414a2ddf4cb581791",
+      "RemoteSha": "75fefe75b6eb7f18da6d836af5687e6eac488c32",
       "Requirements": [
         "R6",
         "bslib",
@@ -2379,14 +2397,16 @@
         "htmltools",
         "knitr",
         "lifecycle",
+        "rlistings",
         "rmarkdown",
+        "rtables",
         "shiny",
         "shinyWidgets",
         "shinybusy",
         "yaml",
         "zip"
       ],
-      "Hash": "df15dfda2c08f9a8c28bb8494af0e30a"
+      "Hash": "af11feb0a3597ede352fb334bfef0bd3"
     },
     "teal.slice": {
       "Package": "teal.slice",
@@ -2742,7 +2762,7 @@
       "Package": "xfun",
       "Version": "0.44",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "grDevices",
         "stats",
