@@ -480,14 +480,14 @@
     },
     "cachem": {
       "Package": "cachem",
-      "Version": "1.0.8",
+      "Version": "1.1.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "fastmap",
         "rlang"
       ],
-      "Hash": "c35768291560ce302c0a6589f92e837d"
+      "Hash": "cd9a672193789068eb5a2aad65a0dedf"
     },
     "callr": {
       "Package": "callr",
@@ -1785,24 +1785,24 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.1.2",
+      "Version": "2.2.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "askpass"
       ],
-      "Hash": "ea2475b073243d9d338aa8f086ce973e"
+      "Hash": "2bcca3848e4734eb3b16103bc9aa4b8e"
     },
     "osprey": {
       "Package": "osprey",
-      "Version": "0.1.16.9009",
+      "Version": "0.1.16.9010",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "osprey",
       "RemoteRef": "main",
-      "RemoteSha": "8908b2469ddbb5f64a7b4103e8454df53c79e883",
+      "RemoteSha": "742f532da98d65db73e07564ffc7a0821d8c2506",
       "Requirements": [
         "DescTools",
         "R",
@@ -1821,7 +1821,7 @@
         "tibble",
         "tidyr"
       ],
-      "Hash": "adf0c8b0fccba7a5462bed6e79582a46"
+      "Hash": "4e629c22b8c84cce73fd3481590b4ebc"
     },
     "parallelly": {
       "Package": "parallelly",
@@ -2745,14 +2745,14 @@
     },
     "teal.osprey": {
       "Package": "teal.osprey",
-      "Version": "0.1.16.9018",
+      "Version": "0.1.16.9019",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.osprey",
       "RemoteRef": "main",
-      "RemoteSha": "a6c567b175eafd3a806f5087b0631f26c0e443f6",
+      "RemoteSha": "71c6c23da74d7b0cecfc3ddc798629780fef302d",
       "Requirements": [
         "R",
         "checkmate",
@@ -2760,6 +2760,7 @@
         "formatters",
         "ggplot2",
         "lifecycle",
+        "logger",
         "osprey",
         "shiny",
         "shinyvalidate",
@@ -2772,7 +2773,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "a41f002cd90eaab6861e780f0e46f40b"
+      "Hash": "54a23a4627b46ea91f4235bf10d42da5"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
