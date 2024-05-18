@@ -437,14 +437,13 @@
     },
     "broom": {
       "Package": "broom",
-      "Version": "1.0.5",
+      "Version": "1.0.6",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "backports",
         "dplyr",
-        "ellipsis",
         "generics",
         "glue",
         "lifecycle",
@@ -454,7 +453,7 @@
         "tibble",
         "tidyr"
       ],
-      "Hash": "fd25391c3c4f6ecf0fa95f1e6d15378c"
+      "Hash": "a4652c36d1f8abfc3ddf4774f768c934"
     },
     "bslib": {
       "Package": "bslib",
@@ -480,14 +479,14 @@
     },
     "cachem": {
       "Package": "cachem",
-      "Version": "1.0.8",
+      "Version": "1.1.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "fastmap",
         "rlang"
       ],
-      "Hash": "c35768291560ce302c0a6589f92e837d"
+      "Hash": "cd9a672193789068eb5a2aad65a0dedf"
     },
     "callr": {
       "Package": "callr",
@@ -808,17 +807,6 @@
         "utils"
       ],
       "Hash": "4ef372b716824753719a8a38b258442d"
-    },
-    "ellipsis": {
-      "Package": "ellipsis",
-      "Version": "0.3.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "rlang"
-      ],
-      "Hash": "bb0eec2fe32e88d9e2836c2f73ea2077"
     },
     "emmeans": {
       "Package": "emmeans",
@@ -1855,13 +1843,13 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.1.2",
+      "Version": "2.2.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "askpass"
       ],
-      "Hash": "ea2475b073243d9d338aa8f086ce973e"
+      "Hash": "2bcca3848e4734eb3b16103bc9aa4b8e"
     },
     "parallelly": {
       "Package": "parallelly",
@@ -2284,7 +2272,7 @@
     },
     "rmarkdown": {
       "Package": "rmarkdown",
-      "Version": "2.26",
+      "Version": "2.27",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2303,7 +2291,7 @@
         "xfun",
         "yaml"
       ],
-      "Hash": "9b148e7f95d33aac01f31282d49e4f44"
+      "Hash": "27f9502e1cdbfa195f94e03b0f517484"
     },
     "robslopes": {
       "Package": "robslopes",
@@ -2696,14 +2684,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.1.15.9019",
+      "Version": "0.1.15.9020",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "c4ba03bfa2a6b69c9abcf4fcfedca684d45847de",
+      "RemoteSha": "9b482e981c8d189f1df7f2efa33cdc46f0e918b5",
       "Requirements": [
         "DT",
         "R",
@@ -2714,6 +2702,7 @@
         "goshawk",
         "grDevices",
         "lifecycle",
+        "logger",
         "methods",
         "rlang",
         "shiny",
@@ -2728,7 +2717,7 @@
         "teal.widgets",
         "tidyr"
       ],
-      "Hash": "b3a63cdb6ac4baf1a20a15e2ee5d545e"
+      "Hash": "22d2ea4e5a5266f58d878794e0dfcdac"
     },
     "teal.logger": {
       "Package": "teal.logger",
