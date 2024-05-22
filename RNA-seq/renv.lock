@@ -1289,7 +1289,7 @@
     },
     "emmeans": {
       "Package": "emmeans",
-      "Version": "1.10.1",
+      "Version": "1.10.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1302,7 +1302,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "4445298c65c50bcb7d33b687e69bb0bd"
+      "Hash": "239d1c87247092e8e620063c85dc8516"
     },
     "estimability": {
       "Package": "estimability",
@@ -2089,13 +2089,13 @@
     },
     "minqa": {
       "Package": "minqa",
-      "Version": "1.2.6",
+      "Version": "1.2.7",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "Rcpp"
       ],
-      "Hash": "f48238f8d4740426ca12f53f27d004dd"
+      "Hash": "aba060ef3c097b26a4d304ea39d87f32"
     },
     "munsell": {
       "Package": "munsell",
@@ -2110,14 +2110,14 @@
     },
     "mvtnorm": {
       "Package": "mvtnorm",
-      "Version": "1.2-4",
+      "Version": "1.2-5",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "stats"
       ],
-      "Hash": "17e96668f44a28aef0981d9e17c49b59"
+      "Hash": "4d1891e59ac7a12b4e7e8a69349125f1"
     },
     "nestcolor": {
       "Package": "nestcolor",
@@ -2982,14 +2982,14 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.6.0.9004",
+      "Version": "0.6.0.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "30d29651818ac82fc00c14be3f136b3a2064d7e2",
+      "RemoteSha": "770f6e95ce9faecf18a2d827bba04cd7d64d471d",
       "Requirements": [
         "R",
         "checkmate",
@@ -3000,7 +3000,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "74ba03024072e1673c312a637c477ea7"
+      "Hash": "36ac5fdfb4db3ca662b36374100f27b8"
     },
     "teal.logger": {
       "Package": "teal.logger",
