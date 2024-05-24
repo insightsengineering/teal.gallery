@@ -371,13 +371,13 @@
     },
     "backports": {
       "Package": "backports",
-      "Version": "1.4.1",
+      "Version": "1.5.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "c39fbec8a30d23e721980b8afb31984c"
+      "Hash": "e1e1b9d75c37401117b636b7ae50827a"
     },
     "base64enc": {
       "Package": "base64enc",
@@ -1241,14 +1241,14 @@
     },
     "goshawk": {
       "Package": "goshawk",
-      "Version": "0.1.15.9013",
+      "Version": "0.1.15.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "a492dd9d4aca4d8bdf8af80b67407c3211257731",
+      "RemoteSha": "beb4072ff1b77324fb95a401b9c237edcebed4af",
       "Requirements": [
         "R",
         "checkmate",
@@ -1264,7 +1264,7 @@
         "rlang",
         "stringr"
       ],
-      "Hash": "5575f8c5a9dfe411d311f8cbc995b460"
+      "Hash": "cbf4c59b414f094ac808ffe1dffba66c"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -2684,14 +2684,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.1.15.9020",
+      "Version": "0.1.15.9021",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "9b482e981c8d189f1df7f2efa33cdc46f0e918b5",
+      "RemoteSha": "5b225d255e383aa9d6f5713eedf42d6ed271b481",
       "Requirements": [
         "DT",
         "R",
@@ -2717,18 +2717,18 @@
         "teal.widgets",
         "tidyr"
       ],
-      "Hash": "22d2ea4e5a5266f58d878794e0dfcdac"
+      "Hash": "503fbb083f5e0e50373a5cf06973a249"
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.2.0.9002",
+      "Version": "0.2.0.9003",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "9f0e791377dce8e2afd502c58871ab043aa3027a",
+      "RemoteSha": "ebdaa138f3d3669e1fcd9aea2aee95fb278cf30c",
       "Requirements": [
         "R",
         "glue",
@@ -2738,7 +2738,7 @@
         "shiny",
         "withr"
       ],
-      "Hash": "c5f9df1fc4d82a0b5fb76acd73906174"
+      "Hash": "4c880d553208e66aec767f2f673518df"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
