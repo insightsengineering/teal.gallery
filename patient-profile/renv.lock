@@ -2581,14 +2581,14 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.1.9006",
+      "Version": "0.3.1.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "75fefe75b6eb7f18da6d836af5687e6eac488c32",
+      "RemoteSha": "688c3c5b53a16fe62a9e8e30178ee319f09340e4",
       "Requirements": [
         "R6",
         "bslib",
@@ -2607,7 +2607,7 @@
         "yaml",
         "zip"
       ],
-      "Hash": "af11feb0a3597ede352fb334bfef0bd3"
+      "Hash": "a51194801cf850cab1d9431569ac3820"
     },
     "teal.slice": {
       "Package": "teal.slice",
@@ -2703,14 +2703,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.4.9007",
+      "Version": "0.9.4.9008",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "75d3324bc71c1144a76ecaebc6bf47625027c661",
+      "RemoteSha": "2c04d96a7d73ba32ccf5a42899386e08ff5da3da",
       "Requirements": [
         "MASS",
         "R",
@@ -2740,7 +2740,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "4936eddff7078cadd9a98f65e08866f2"
+      "Hash": "cf3bb6aefd8c58a977d81f62e3f558ff"
     },
     "tern.gee": {
       "Package": "tern.gee",
@@ -2828,15 +2828,16 @@
     },
     "textshaping": {
       "Package": "textshaping",
-      "Version": "0.3.7",
+      "Version": "0.4.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "cpp11",
+        "lifecycle",
         "systemfonts"
       ],
-      "Hash": "997aac9ad649e0ef3b97f96cddd5622b"
+      "Hash": "5142f8bc78ed3d819d26461b641627ce"
     },
     "tibble": {
       "Package": "tibble",
