@@ -1386,14 +1386,14 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.1.9006",
+      "Version": "0.3.1.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "75fefe75b6eb7f18da6d836af5687e6eac488c32",
+      "RemoteSha": "688c3c5b53a16fe62a9e8e30178ee319f09340e4",
       "Requirements": [
         "R6",
         "bslib",
@@ -1412,7 +1412,7 @@
         "yaml",
         "zip"
       ],
-      "Hash": "af11feb0a3597ede352fb334bfef0bd3"
+      "Hash": "a51194801cf850cab1d9431569ac3820"
     },
     "teal.slice": {
       "Package": "teal.slice",
@@ -1478,15 +1478,16 @@
     },
     "textshaping": {
       "Package": "textshaping",
-      "Version": "0.3.7",
+      "Version": "0.4.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "cpp11",
+        "lifecycle",
         "systemfonts"
       ],
-      "Hash": "997aac9ad649e0ef3b97f96cddd5622b"
+      "Hash": "5142f8bc78ed3d819d26461b641627ce"
     },
     "tibble": {
       "Package": "tibble",
