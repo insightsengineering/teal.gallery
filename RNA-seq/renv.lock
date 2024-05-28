@@ -571,7 +571,7 @@
     },
     "RSQLite": {
       "Package": "RSQLite",
-      "Version": "2.3.6",
+      "Version": "2.3.7",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -586,7 +586,7 @@
         "plogr",
         "rlang"
       ],
-      "Hash": "ae4a925e0f6bb1b7e5fa96b739c5221a"
+      "Hash": "46b45a4dd7bb0e0f4e3fc22245817240"
     },
     "Rcpp": {
       "Package": "Rcpp",
@@ -695,9 +695,9 @@
     },
     "SparseM": {
       "Package": "SparseM",
-      "Version": "1.81",
+      "Version": "1.82",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "graphics",
@@ -705,7 +705,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "2042cd9759cc89a453c4aefef0ce9aae"
+      "Hash": "d9654aa07d133ba02190ad518a653931"
     },
     "SummarizedExperiment": {
       "Package": "SummarizedExperiment",
