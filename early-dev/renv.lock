@@ -317,9 +317,9 @@
     },
     "SparseM": {
       "Package": "SparseM",
-      "Version": "1.81",
+      "Version": "1.82",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "graphics",
@@ -327,7 +327,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "2042cd9759cc89a453c4aefef0ce9aae"
+      "Hash": "d9654aa07d133ba02190ad518a653931"
     },
     "TMB": {
       "Package": "TMB",
@@ -985,14 +985,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.6.9005",
+      "Version": "0.5.6.9006",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "89e16c95b16df6fe9074a0dfbadb46744224f2b4",
+      "RemoteSha": "06f8a1f17a6d6c343acfb2383331113f0efddbf1",
       "Requirements": [
         "R",
         "checkmate",
@@ -1001,7 +1001,7 @@
         "lifecycle",
         "methods"
       ],
-      "Hash": "e73959492f4a9d261820a764e3c0a13a"
+      "Hash": "8ed5ead34fdab6ec2a5ca960df104bf1"
     },
     "fs": {
       "Package": "fs",
@@ -1291,7 +1291,7 @@
       "Package": "highr",
       "Version": "0.11",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "xfun"
@@ -2101,7 +2101,7 @@
       "Package": "quantreg",
       "Version": "5.98",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "MASS",
         "Matrix",
