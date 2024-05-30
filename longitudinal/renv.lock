@@ -1241,14 +1241,14 @@
     },
     "goshawk": {
       "Package": "goshawk",
-      "Version": "0.1.15.9014",
+      "Version": "0.1.16.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "beb4072ff1b77324fb95a401b9c237edcebed4af",
+      "RemoteSha": "55d9f0cad3054df81742282d51b73e4cf12d950f",
       "Requirements": [
         "R",
         "checkmate",
@@ -1264,7 +1264,7 @@
         "rlang",
         "stringr"
       ],
-      "Hash": "cbf4c59b414f094ac808ffe1dffba66c"
+      "Hash": "555a9a22265bfcc19eee28f5d9e2fc9e"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -1469,9 +1469,9 @@
     },
     "knitr": {
       "Package": "knitr",
-      "Version": "1.46",
+      "Version": "1.47",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "evaluate",
@@ -1481,7 +1481,7 @@
         "xfun",
         "yaml"
       ],
-      "Hash": "6e008ab1d696a5283c79765fa7b56b47"
+      "Hash": "7c99b2d55584b982717fcc0950378612"
     },
     "labeling": {
       "Package": "labeling",
