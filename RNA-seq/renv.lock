@@ -1471,14 +1471,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.6.9006",
+      "Version": "0.5.7.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "06f8a1f17a6d6c343acfb2383331113f0efddbf1",
+      "RemoteSha": "ed23f8176b82fe4b351965faa7c734332778047d",
       "Requirements": [
         "R",
         "checkmate",
@@ -1487,7 +1487,7 @@
         "lifecycle",
         "methods"
       ],
-      "Hash": "8ed5ead34fdab6ec2a5ca960df104bf1"
+      "Hash": "aa0ee6c3b35213cb55b3e4b5fadec683"
     },
     "fs": {
       "Package": "fs",
@@ -1870,9 +1870,9 @@
     },
     "knitr": {
       "Package": "knitr",
-      "Version": "1.46",
+      "Version": "1.47",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "evaluate",
@@ -1882,7 +1882,7 @@
         "xfun",
         "yaml"
       ],
-      "Hash": "6e008ab1d696a5283c79765fa7b56b47"
+      "Hash": "7c99b2d55584b982717fcc0950378612"
     },
     "labeling": {
       "Package": "labeling",
