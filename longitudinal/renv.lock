@@ -317,7 +317,7 @@
     },
     "SparseM": {
       "Package": "SparseM",
-      "Version": "1.82",
+      "Version": "1.83",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -327,7 +327,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "d9654aa07d133ba02190ad518a653931"
+      "Hash": "f2b9f6a10ac6bc136be10c508ee890f9"
     },
     "TMB": {
       "Package": "TMB",
@@ -2657,14 +2657,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9038",
+      "Version": "0.15.2.9039",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "5c3e3fd4380ef0fc7efc53ec1cdf4f5a7c922dd3",
+      "RemoteSha": "cbe23a195387648f067836af59d37687d559447f",
       "Requirements": [
         "R",
         "checkmate",
@@ -2685,7 +2685,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "1c219e675627e150849a5fde777ef022"
+      "Hash": "7bb7edc786cd9185ccb4829d5cfee856"
     },
     "teal.code": {
       "Package": "teal.code",
