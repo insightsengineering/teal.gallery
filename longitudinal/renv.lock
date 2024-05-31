@@ -297,7 +297,7 @@
     },
     "SparseM": {
       "Package": "SparseM",
-      "Version": "1.82",
+      "Version": "1.83",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -307,7 +307,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "d9654aa07d133ba02190ad518a653931"
+      "Hash": "f2b9f6a10ac6bc136be10c508ee890f9"
     },
     "TMB": {
       "Package": "TMB",
