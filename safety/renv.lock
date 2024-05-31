@@ -274,7 +274,7 @@
     },
     "SparseM": {
       "Package": "SparseM",
-      "Version": "1.82",
+      "Version": "1.83",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -284,7 +284,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "d9654aa07d133ba02190ad518a653931"
+      "Hash": "f2b9f6a10ac6bc136be10c508ee890f9"
     },
     "TMB": {
       "Package": "TMB",
@@ -890,14 +890,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.6.9006",
+      "Version": "0.5.7.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "06f8a1f17a6d6c343acfb2383331113f0efddbf1",
+      "RemoteSha": "ed23f8176b82fe4b351965faa7c734332778047d",
       "Requirements": [
         "R",
         "checkmate",
@@ -906,7 +906,7 @@
         "lifecycle",
         "methods"
       ],
-      "Hash": "8ed5ead34fdab6ec2a5ca960df104bf1"
+      "Hash": "aa0ee6c3b35213cb55b3e4b5fadec683"
     },
     "fs": {
       "Package": "fs",
@@ -1332,7 +1332,7 @@
     },
     "knitr": {
       "Package": "knitr",
-      "Version": "1.46",
+      "Version": "1.47",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1344,7 +1344,7 @@
         "xfun",
         "yaml"
       ],
-      "Hash": "6e008ab1d696a5283c79765fa7b56b47"
+      "Hash": "7c99b2d55584b982717fcc0950378612"
     },
     "labeling": {
       "Package": "labeling",
@@ -2407,14 +2407,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9038",
+      "Version": "0.15.2.9039",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "5c3e3fd4380ef0fc7efc53ec1cdf4f5a7c922dd3",
+      "RemoteSha": "cbe23a195387648f067836af59d37687d559447f",
       "Requirements": [
         "R",
         "checkmate",
@@ -2435,7 +2435,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "1c219e675627e150849a5fde777ef022"
+      "Hash": "7bb7edc786cd9185ccb4829d5cfee856"
     },
     "teal.code": {
       "Package": "teal.code",
