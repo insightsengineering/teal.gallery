@@ -256,7 +256,7 @@
     },
     "RcppArmadillo": {
       "Package": "RcppArmadillo",
-      "Version": "0.12.8.3.0",
+      "Version": "0.12.8.4.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -266,7 +266,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "1eb4a0603478b5557b77d75534251371"
+      "Hash": "a535dd90aa8ec9a2e63a8f79b4a1bf43"
     },
     "RcppEigen": {
       "Package": "RcppEigen",
@@ -1241,14 +1241,14 @@
     },
     "goshawk": {
       "Package": "goshawk",
-      "Version": "0.1.16.9000",
+      "Version": "0.1.17.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "55d9f0cad3054df81742282d51b73e4cf12d950f",
+      "RemoteSha": "df9a4c6eac79af0d9e3c3c035b1c044e36141670",
       "Requirements": [
         "R",
         "checkmate",
@@ -1264,7 +1264,7 @@
         "rlang",
         "stringr"
       ],
-      "Hash": "555a9a22265bfcc19eee28f5d9e2fc9e"
+      "Hash": "bedce455fd1722fcb9980c44a5f6645a"
     },
     "gridExtra": {
       "Package": "gridExtra",
