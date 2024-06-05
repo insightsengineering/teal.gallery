@@ -2244,14 +2244,14 @@
     },
     "rlang": {
       "Package": "rlang",
-      "Version": "1.1.3",
+      "Version": "1.1.4",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "42548638fae05fd9a9b5f3f437fbbbe2"
+      "Hash": "3eec01f8b1dee337674b2e34ab1f9bc1"
     },
     "rlistings": {
       "Package": "rlistings",
@@ -2684,14 +2684,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.1.15.9021",
+      "Version": "0.1.15.9022",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "5b225d255e383aa9d6f5713eedf42d6ed271b481",
+      "RemoteSha": "e7b4cc53d5455483a4eb1c7eb47627062ce6f779",
       "Requirements": [
         "DT",
         "R",
@@ -2717,7 +2717,7 @@
         "teal.widgets",
         "tidyr"
       ],
-      "Hash": "503fbb083f5e0e50373a5cf06973a249"
+      "Hash": "b5fad6a00605d94b6ac2d1446fe466c5"
     },
     "teal.logger": {
       "Package": "teal.logger",
