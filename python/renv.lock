@@ -832,14 +832,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.7.9000",
+      "Version": "0.5.7.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "ed23f8176b82fe4b351965faa7c734332778047d",
+      "RemoteSha": "0e0d426817b6ac947c7e87e9ac2da32822ea33eb",
       "Requirements": [
         "R",
         "checkmate",
@@ -848,7 +848,7 @@
         "lifecycle",
         "methods"
       ],
-      "Hash": "aa0ee6c3b35213cb55b3e4b5fadec683"
+      "Hash": "3002f8616175d65493ae7783ec7f01fe"
     },
     "fs": {
       "Package": "fs",
@@ -1863,14 +1863,14 @@
     },
     "rlang": {
       "Package": "rlang",
-      "Version": "1.1.3",
+      "Version": "1.1.4",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "42548638fae05fd9a9b5f3f437fbbbe2"
+      "Hash": "3eec01f8b1dee337674b2e34ab1f9bc1"
     },
     "rlistings": {
       "Package": "rlistings",
@@ -1924,14 +1924,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.7.9002",
+      "Version": "0.6.7.9003",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "bdafa9d155ef71c7bc829d17c5ba78ae5a7c8308",
+      "RemoteSha": "f36eb0d09e228c64fc82de96d54a8f985c1f66f0",
       "Requirements": [
         "R",
         "checkmate",
@@ -1943,7 +1943,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "77b12b68f3316fdd79e2294d04ee21f7"
+      "Hash": "b34309a04d0da11ba09c7b480f97439e"
     },
     "sandwich": {
       "Package": "sandwich",
@@ -2490,14 +2490,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.4.9008",
+      "Version": "0.9.4.9009",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "2c04d96a7d73ba32ccf5a42899386e08ff5da3da",
+      "RemoteSha": "970dcf3a3d8361009ac54486242a9ab2b00318dd",
       "Requirements": [
         "MASS",
         "R",
@@ -2527,7 +2527,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "cf3bb6aefd8c58a977d81f62e3f558ff"
+      "Hash": "c9e9c5c1a6069c08531e3060aa635a13"
     },
     "testthat": {
       "Package": "testthat",
