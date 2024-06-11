@@ -1317,14 +1317,14 @@
     },
     "evaluate": {
       "Package": "evaluate",
-      "Version": "0.23",
+      "Version": "0.24.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "methods"
       ],
-      "Hash": "daf4a1246be12c1fa8c7705a0935c1a0"
+      "Hash": "a1066cbc05caee9a4bf6d90f194ff4da"
     },
     "fansi": {
       "Package": "fansi",
@@ -3068,14 +3068,14 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9015",
+      "Version": "0.1.6.9016",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "73a6a336aa9c217953adcb1e8c814ee039c4c086",
+      "RemoteSha": "4ea77cc9971a1bf8bd0a001c0f54574fd115f795",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -3103,7 +3103,7 @@
         "tern",
         "utils"
       ],
-      "Hash": "f584ebded95939856ba9277949fdb5e5"
+      "Hash": "8031b768a6fb20509eb7c0dde1ae98d2"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
