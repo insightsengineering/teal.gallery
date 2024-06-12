@@ -1349,7 +1349,7 @@
       "Package": "evaluate",
       "Version": "0.24.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "methods"
