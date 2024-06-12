@@ -1241,14 +1241,14 @@
     },
     "goshawk": {
       "Package": "goshawk",
-      "Version": "0.1.17.9001",
+      "Version": "0.1.17.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "df9a4c6eac79af0d9e3c3c035b1c044e36141670",
+      "RemoteSha": "e948e2935af3e32afa5d785585098b2f4a92f153",
       "Requirements": [
         "R",
         "checkmate",
@@ -1264,7 +1264,7 @@
         "rlang",
         "stringr"
       ],
-      "Hash": "bedce455fd1722fcb9980c44a5f6645a"
+      "Hash": "d7c27d67bd13f8346736f9c5fd70a163"
     },
     "gridExtra": {
       "Package": "gridExtra",
