@@ -1783,14 +1783,14 @@
     },
     "osprey": {
       "Package": "osprey",
-      "Version": "0.1.16.9010",
+      "Version": "0.1.16.9011",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "osprey",
       "RemoteRef": "main",
-      "RemoteSha": "742f532da98d65db73e07564ffc7a0821d8c2506",
+      "RemoteSha": "fc5fb7fa6bf4912a3273cb76a4d58d2aa7f87d5b",
       "Requirements": [
         "DescTools",
         "R",
@@ -1809,7 +1809,7 @@
         "tibble",
         "tidyr"
       ],
-      "Hash": "4e629c22b8c84cce73fd3481590b4ebc"
+      "Hash": "d3e5ce77ea6cfce165b865c2f0f70a0b"
     },
     "parallelly": {
       "Package": "parallelly",
@@ -2733,14 +2733,14 @@
     },
     "teal.osprey": {
       "Package": "teal.osprey",
-      "Version": "0.1.16.9019",
+      "Version": "0.1.16.9020",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.osprey",
       "RemoteRef": "main",
-      "RemoteSha": "71c6c23da74d7b0cecfc3ddc798629780fef302d",
+      "RemoteSha": "be31d030a973cec94b720ad422b854763654c8b9",
       "Requirements": [
         "R",
         "checkmate",
@@ -2761,7 +2761,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "54a23a4627b46ea91f4235bf10d42da5"
+      "Hash": "0d2008cce7997665a12d245a7bbc93fc"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
