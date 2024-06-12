@@ -1386,14 +1386,14 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.1.9007",
+      "Version": "0.3.1.9008",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "688c3c5b53a16fe62a9e8e30178ee319f09340e4",
+      "RemoteSha": "91152a6fa88a501c840f7ebf36e3af5720c9d40e",
       "Requirements": [
         "R6",
         "bslib",
@@ -1412,18 +1412,18 @@
         "yaml",
         "zip"
       ],
-      "Hash": "a51194801cf850cab1d9431569ac3820"
+      "Hash": "4048481527bb9128d9b6d03994033351"
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.1.9003",
+      "Version": "0.5.1.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "71cee08aca11618a555649a4b5836626281ea460",
+      "RemoteSha": "8b45f6a72af99c9180dc6063378b158ccfd066c2",
       "Requirements": [
         "R",
         "R6",
@@ -1446,7 +1446,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "bf878737b319903994955c8d302c77e9"
+      "Hash": "298b0d649b1c7fba7a80b931b6b40c7e"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
