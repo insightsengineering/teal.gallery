@@ -2665,9 +2665,9 @@
     },
     "tern.gee": {
       "Package": "tern.gee",
-      "Version": "0.1.3",
+      "Version": "0.1.4",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "checkmate",
@@ -2680,13 +2680,13 @@
         "stats",
         "tern"
       ],
-      "Hash": "f6ad6455250233b12875e7aa6e4ee5e4"
+      "Hash": "8294cdab11abb5dca212bcedf006f465"
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
-      "Version": "0.3.0",
+      "Version": "0.3.1",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "checkmate",
@@ -2706,7 +2706,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "558f56591582b7ef825e094cc1d68964"
+      "Hash": "d46814e31fd7f2eb1f3c5a98ec31ac31"
     },
     "testthat": {
       "Package": "testthat",
