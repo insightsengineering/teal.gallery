@@ -227,7 +227,7 @@
       "Package": "DBI",
       "Version": "1.2.3",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "methods"
@@ -573,7 +573,7 @@
       "Package": "RSQLite",
       "Version": "2.3.7",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "DBI",
         "R",
@@ -806,7 +806,7 @@
       "Package": "backports",
       "Version": "1.5.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
@@ -889,7 +889,7 @@
       "Package": "boot",
       "Version": "1.3-30",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "graphics",
@@ -901,7 +901,7 @@
       "Package": "brio",
       "Version": "1.1.5",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
@@ -911,7 +911,7 @@
       "Package": "broom",
       "Version": "1.0.6",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "backports",
@@ -931,7 +931,7 @@
       "Package": "bslib",
       "Version": "0.7.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "base64enc",
@@ -953,7 +953,7 @@
       "Package": "cachem",
       "Version": "1.1.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "fastmap",
         "rlang"
@@ -1081,7 +1081,7 @@
       "Package": "codetools",
       "Version": "0.2-20",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
@@ -1164,7 +1164,7 @@
       "Package": "crul",
       "Version": "1.4.2",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R6",
         "curl",
@@ -1179,7 +1179,7 @@
       "Package": "curl",
       "Version": "5.2.1",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
@@ -1189,7 +1189,7 @@
       "Package": "data.table",
       "Version": "1.15.4",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "methods"
@@ -1200,7 +1200,7 @@
       "Package": "dbplyr",
       "Version": "2.5.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "DBI",
         "R",
@@ -1372,7 +1372,7 @@
       "Package": "farver",
       "Version": "2.1.2",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Hash": "680887028577f3fa2a81e410ed0d6e42"
     },
     "fastmap": {
@@ -1396,7 +1396,7 @@
       "Package": "flextable",
       "Version": "0.9.6",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "data.table",
         "gdtools",
@@ -1517,7 +1517,7 @@
       "Package": "fs",
       "Version": "1.6.4",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "methods"
@@ -1633,7 +1633,7 @@
       "Package": "ggplot2",
       "Version": "3.5.1",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "MASS",
         "R",
@@ -1699,7 +1699,7 @@
       "Package": "gtable",
       "Version": "0.3.5",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "cli",
@@ -1761,7 +1761,7 @@
       "Package": "highr",
       "Version": "0.11",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "xfun"
@@ -1824,7 +1824,7 @@
       "Package": "httpuv",
       "Version": "1.6.15",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -1945,7 +1945,7 @@
       "Package": "lattice",
       "Version": "0.22-6",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "grDevices",
@@ -1998,7 +1998,7 @@
       "Package": "lme4",
       "Version": "1.1-35.3",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "MASS",
         "Matrix",
@@ -2024,7 +2024,7 @@
       "Package": "locfit",
       "Version": "1.5-9.9",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "lattice"
@@ -2126,7 +2126,7 @@
       "Package": "munsell",
       "Version": "0.5.1",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "colorspace",
         "methods"
@@ -2137,7 +2137,7 @@
       "Package": "mvtnorm",
       "Version": "1.2-5",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "stats"
@@ -2166,7 +2166,7 @@
       "Package": "nlme",
       "Version": "3.1-165",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "graphics",
@@ -2222,7 +2222,7 @@
       "Package": "officer",
       "Version": "0.6.6",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R6",
         "grDevices",
@@ -2241,7 +2241,7 @@
       "Package": "openssl",
       "Version": "2.2.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "askpass"
       ],
@@ -2286,7 +2286,7 @@
       "Package": "pkgbuild",
       "Version": "1.4.4",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -2409,7 +2409,7 @@
       "Package": "processx",
       "Version": "3.8.4",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -2447,7 +2447,7 @@
       "Package": "promises",
       "Version": "1.3.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R6",
         "Rcpp",
@@ -2489,7 +2489,7 @@
       "Package": "quantreg",
       "Version": "5.98",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "MASS",
         "Matrix",
@@ -2601,7 +2601,7 @@
       "Package": "rmarkdown",
       "Version": "2.27",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "bslib",
@@ -2685,7 +2685,7 @@
       "Package": "shape",
       "Version": "1.4.6.1",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "grDevices",
@@ -2698,7 +2698,7 @@
       "Package": "shiny",
       "Version": "1.8.1.1",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -2758,7 +2758,7 @@
       "Package": "shinyWidgets",
       "Version": "0.8.6",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "anytime",
@@ -2862,7 +2862,7 @@
       "Package": "stringi",
       "Version": "1.8.4",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "stats",
@@ -2892,7 +2892,7 @@
       "Package": "styler",
       "Version": "1.10.3",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "R.cache",
@@ -2911,7 +2911,7 @@
       "Package": "survival",
       "Version": "3.7-0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "Matrix",
         "R",
@@ -2946,7 +2946,7 @@
       "Package": "teal",
       "Version": "0.15.2",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "checkmate",
@@ -2988,7 +2988,7 @@
       "Package": "teal.data",
       "Version": "0.6.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "checkmate",
@@ -3126,7 +3126,7 @@
       "Package": "teal.slice",
       "Version": "0.5.1",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -3239,7 +3239,7 @@
       "Package": "testthat",
       "Version": "3.2.1.1",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -3350,7 +3350,7 @@
       "Package": "tinytex",
       "Version": "0.51",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "xfun"
       ],
