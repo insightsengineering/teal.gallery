@@ -1902,14 +1902,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.7.9006",
+      "Version": "0.6.7.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "5e5f1485a49bd91930a23aa00ea033dcc3b55bf0",
+      "RemoteSha": "96d1b397da00dfe313219091e7bd67f2d06ab741",
       "Requirements": [
         "R",
         "checkmate",
@@ -1921,7 +1921,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "3bad55d00a6d2b1890c6278e6c9c0c05"
+      "Hash": "6891aa1f0f6662e9afb39cd4d266f2b8"
     },
     "sandwich": {
       "Package": "sandwich",
@@ -2468,14 +2468,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.4.9009",
+      "Version": "0.9.4.9010",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "970dcf3a3d8361009ac54486242a9ab2b00318dd",
+      "RemoteSha": "aa63cd5c5548612654496f1ebd91e21cbf14ca64",
       "Requirements": [
         "MASS",
         "R",
@@ -2505,7 +2505,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "c9e9c5c1a6069c08531e3060aa635a13"
+      "Hash": "c082744957357ce9da80a27e5945f5bc"
     },
     "testthat": {
       "Package": "testthat",
@@ -2727,15 +2727,15 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.44",
+      "Version": "0.45",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "grDevices",
         "stats",
         "tools"
       ],
-      "Hash": "317a0538d32f4a009658bcedb7923f4b"
+      "Hash": "ca59c87fe305b16a9141a5874c3a7889"
     },
     "xml2": {
       "Package": "xml2",
