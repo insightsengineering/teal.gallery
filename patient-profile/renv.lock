@@ -3072,7 +3072,7 @@
       "Package": "xfun",
       "Version": "0.45",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "grDevices",
         "stats",
