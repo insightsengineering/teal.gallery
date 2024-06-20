@@ -311,7 +311,7 @@
     },
     "TMB": {
       "Package": "TMB",
-      "Version": "1.9.11",
+      "Version": "1.9.12",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -323,7 +323,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "14d82c02c5dc0330a0f3f3d717d92a19"
+      "Hash": "aae963230e1399bb9a2e915ec6e67732"
     },
     "abind": {
       "Package": "abind",
@@ -965,7 +965,7 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.6",
+      "Version": "0.5.8",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -973,9 +973,10 @@
         "checkmate",
         "grid",
         "htmltools",
+        "lifecycle",
         "methods"
       ],
-      "Hash": "45b3a7cd883b90994abae341c9d80c1c"
+      "Hash": "e14d987febeaee41fc0c6a0ec2f6980b"
     },
     "fs": {
       "Package": "fs",
@@ -1508,7 +1509,7 @@
     },
     "lme4": {
       "Package": "lme4",
-      "Version": "1.1-35.3",
+      "Version": "1.1-35.4",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1530,7 +1531,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "862f9d995f528f3051f524791955b20c"
+      "Hash": "a6f5390caceaa1b23b68f57d663b2061"
     },
     "lmom": {
       "Package": "lmom",
@@ -1722,13 +1723,10 @@
     },
     "nloptr": {
       "Package": "nloptr",
-      "Version": "2.0.3",
+      "Version": "2.1.0",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Requirements": [
-        "testthat"
-      ],
-      "Hash": "277c67a08f358f42b6a77826e4492f79"
+      "Hash": "2f436f0a4e224ae7542c68f1896a00d9"
     },
     "nnet": {
       "Package": "nnet",
@@ -2633,14 +2631,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.2.0.9003",
+      "Version": "0.2.0.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "ebdaa138f3d3669e1fcd9aea2aee95fb278cf30c",
+      "RemoteSha": "7f6cec3c2acd7c1ee430a714f370466fa2575eb9",
       "Requirements": [
         "R",
         "glue",
@@ -2648,9 +2646,10 @@
         "logger",
         "methods",
         "shiny",
+        "utils",
         "withr"
       ],
-      "Hash": "4c880d553208e66aec767f2f673518df"
+      "Hash": "dbc1e738b8d99d7d9f79064136af78e8"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
@@ -2733,14 +2732,14 @@
     },
     "teal.osprey": {
       "Package": "teal.osprey",
-      "Version": "0.1.16.9021",
+      "Version": "0.1.16.9022",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.osprey",
       "RemoteRef": "main",
-      "RemoteSha": "e557a66e89d53d1cad1a2b130aaa1ffa4f5eff70",
+      "RemoteSha": "c79b2d55c26a78d7f0904c6f1de625e007eec8bf",
       "Requirements": [
         "R",
         "checkmate",
@@ -2748,7 +2747,6 @@
         "formatters",
         "ggplot2",
         "lifecycle",
-        "logger",
         "osprey",
         "shiny",
         "shinyvalidate",
@@ -2761,7 +2759,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "f64c5f5706448ee0898462b18bd327bf"
+      "Hash": "5e52885ba676caae67cb788c1deb7492"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
