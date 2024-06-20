@@ -464,7 +464,7 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.6",
+      "Version": "0.5.8",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -472,9 +472,10 @@
         "checkmate",
         "grid",
         "htmltools",
+        "lifecycle",
         "methods"
       ],
-      "Hash": "45b3a7cd883b90994abae341c9d80c1c"
+      "Hash": "e14d987febeaee41fc0c6a0ec2f6980b"
     },
     "fs": {
       "Package": "fs",
