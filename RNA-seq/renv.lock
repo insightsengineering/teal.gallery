@@ -897,16 +897,6 @@
       ],
       "Hash": "96abeed416a286d4a0f52e550b612343"
     },
-    "brio": {
-      "Package": "brio",
-      "Version": "1.1.5",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "c1ee497a6d999947c2c224ae46799b1a"
-    },
     "broom": {
       "Package": "broom",
       "Version": "1.0.6",
@@ -959,19 +949,6 @@
         "rlang"
       ],
       "Hash": "cd9a672193789068eb5a2aad65a0dedf"
-    },
-    "callr": {
-      "Package": "callr",
-      "Version": "3.7.6",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "R6",
-        "processx",
-        "utils"
-      ],
-      "Hash": "d7e13f49c19103ece9e58ad2d83a7354"
     },
     "car": {
       "Package": "car",
@@ -1224,34 +1201,6 @@
       ],
       "Hash": "39b2e002522bfd258039ee4e889e0fd1"
     },
-    "desc": {
-      "Package": "desc",
-      "Version": "1.4.3",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "R6",
-        "cli",
-        "utils"
-      ],
-      "Hash": "99b79fcbd6c4d1ce087f5c5c758b384f"
-    },
-    "diffobj": {
-      "Package": "diffobj",
-      "Version": "0.3.5",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "crayon",
-        "methods",
-        "stats",
-        "tools",
-        "utils"
-      ],
-      "Hash": "bcaa8b95f8d7d01a5dedfd959ce88ab8"
-    },
     "digest": {
       "Package": "digest",
       "Version": "0.6.35",
@@ -1501,17 +1450,18 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.6",
+      "Version": "0.5.8",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "checkmate",
         "grid",
         "htmltools",
+        "lifecycle",
         "methods"
       ],
-      "Hash": "45b3a7cd883b90994abae341c9d80c1c"
+      "Hash": "e14d987febeaee41fc0c6a0ec2f6980b"
     },
     "fs": {
       "Package": "fs",
@@ -1996,9 +1946,9 @@
     },
     "lme4": {
       "Package": "lme4",
-      "Version": "1.1-35.3",
+      "Version": "1.1-35.4",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "MASS",
         "Matrix",
@@ -2018,7 +1968,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "862f9d995f528f3051f524791955b20c"
+      "Hash": "a6f5390caceaa1b23b68f57d663b2061"
     },
     "locfit": {
       "Package": "locfit",
@@ -2178,13 +2128,10 @@
     },
     "nloptr": {
       "Package": "nloptr",
-      "Version": "2.0.3",
+      "Version": "2.1.0",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "testthat"
-      ],
-      "Hash": "277c67a08f358f42b6a77826e4492f79"
+      "Repository": "BioC.CRAN",
+      "Hash": "2f436f0a4e224ae7542c68f1896a00d9"
     },
     "nnet": {
       "Package": "nnet",
@@ -2282,21 +2229,6 @@
       ],
       "Hash": "15da5a8412f317beeee6175fbc76f4bb"
     },
-    "pkgbuild": {
-      "Package": "pkgbuild",
-      "Version": "1.4.4",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "R6",
-        "callr",
-        "cli",
-        "desc",
-        "processx"
-      ],
-      "Hash": "a29e8e134a460a01e0ca67a4763c595b"
-    },
     "pkgconfig": {
       "Package": "pkgconfig",
       "Version": "2.0.3",
@@ -2306,27 +2238,6 @@
         "utils"
       ],
       "Hash": "01f28d4278f15c76cddbea05899c5d6f"
-    },
-    "pkgload": {
-      "Package": "pkgload",
-      "Version": "1.3.4",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "cli",
-        "crayon",
-        "desc",
-        "fs",
-        "glue",
-        "methods",
-        "pkgbuild",
-        "rlang",
-        "rprojroot",
-        "utils",
-        "withr"
-      ],
-      "Hash": "876c618df5ae610be84356d5d7a5d124"
     },
     "plogr": {
       "Package": "plogr",
@@ -2388,13 +2299,6 @@
       ],
       "Hash": "bd54ba8a0a5faded999a7aab6e46b374"
     },
-    "praise": {
-      "Package": "praise",
-      "Version": "1.0.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "a555924add98c99d2f411e37e7d25e9f"
-    },
     "prettyunits": {
       "Package": "prettyunits",
       "Version": "1.2.0",
@@ -2404,19 +2308,6 @@
         "R"
       ],
       "Hash": "6b01fc98b1e86c4f705ce9dcfd2f57c7"
-    },
-    "processx": {
-      "Package": "processx",
-      "Version": "3.8.4",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "R6",
-        "ps",
-        "utils"
-      ],
-      "Hash": "0c90a7d71988856bad2a2a45dd871bb9"
     },
     "productplots": {
       "Package": "productplots",
@@ -2458,17 +2349,6 @@
         "stats"
       ],
       "Hash": "434cd5388a3979e74be5c219bcd6e77d"
-    },
-    "ps": {
-      "Package": "ps",
-      "Version": "1.7.6",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "utils"
-      ],
-      "Hash": "dd2b9319ee0656c8acf45c7f40c59de7"
     },
     "purrr": {
       "Package": "purrr",
@@ -2555,16 +2435,6 @@
         "utils"
       ],
       "Hash": "8c06968e0a5b0209c5f34239b1302336"
-    },
-    "rematch2": {
-      "Package": "rematch2",
-      "Version": "2.1.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "tibble"
-      ],
-      "Hash": "76c9e04c712a05848ae7a23d2f170a40"
     },
     "renv": {
       "Package": "renv",
@@ -3003,14 +2873,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.2.0.9003",
+      "Version": "0.2.0.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "ebdaa138f3d3669e1fcd9aea2aee95fb278cf30c",
+      "RemoteSha": "7f6cec3c2acd7c1ee430a714f370466fa2575eb9",
       "Requirements": [
         "R",
         "glue",
@@ -3018,9 +2888,10 @@
         "logger",
         "methods",
         "shiny",
+        "utils",
         "withr"
       ],
-      "Hash": "4c880d553208e66aec767f2f673518df"
+      "Hash": "dbc1e738b8d99d7d9f79064136af78e8"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
@@ -3062,14 +2933,14 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9016",
+      "Version": "0.1.6.9017",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "4ea77cc9971a1bf8bd0a001c0f54574fd115f795",
+      "RemoteSha": "04f02aa2d3d40a8faa52c77a6054158d1082e540",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -3082,7 +2953,6 @@
         "ggplot2",
         "hermes",
         "lifecycle",
-        "logger",
         "rtables",
         "shiny",
         "shinyRadioMatrix",
@@ -3097,7 +2967,7 @@
         "tern",
         "utils"
       ],
-      "Hash": "8031b768a6fb20509eb7c0dde1ae98d2"
+      "Hash": "ddb542df4c6d52a11951ae92fe316359"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -3234,35 +3104,6 @@
         "utils"
       ],
       "Hash": "a8d617a605a1383dabf4e32e3de26222"
-    },
-    "testthat": {
-      "Package": "testthat",
-      "Version": "3.2.1.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "R6",
-        "brio",
-        "callr",
-        "cli",
-        "desc",
-        "digest",
-        "evaluate",
-        "jsonlite",
-        "lifecycle",
-        "magrittr",
-        "methods",
-        "pkgload",
-        "praise",
-        "processx",
-        "ps",
-        "rlang",
-        "utils",
-        "waldo",
-        "withr"
-      ],
-      "Hash": "3f6e7e5e2220856ff865e4834766bf2b"
     },
     "textshaping": {
       "Package": "textshaping",
@@ -3422,24 +3263,6 @@
         "R"
       ],
       "Hash": "c826c7c4241b6fc89ff55aaea3fa7491"
-    },
-    "waldo": {
-      "Package": "waldo",
-      "Version": "0.5.2",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "cli",
-        "diffobj",
-        "fansi",
-        "glue",
-        "methods",
-        "rematch2",
-        "rlang",
-        "tibble"
-      ],
-      "Hash": "c7d3fd6d29ab077cbac8f0e2751449e6"
     },
     "withr": {
       "Package": "withr",
