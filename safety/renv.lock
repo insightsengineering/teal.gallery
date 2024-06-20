@@ -268,7 +268,7 @@
     },
     "TMB": {
       "Package": "TMB",
-      "Version": "1.9.11",
+      "Version": "1.9.12",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -280,7 +280,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "14d82c02c5dc0330a0f3f3d717d92a19"
+      "Hash": "aae963230e1399bb9a2e915ec6e67732"
     },
     "abind": {
       "Package": "abind",
@@ -870,7 +870,7 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.6",
+      "Version": "0.5.8",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -878,9 +878,10 @@
         "checkmate",
         "grid",
         "htmltools",
+        "lifecycle",
         "methods"
       ],
-      "Hash": "45b3a7cd883b90994abae341c9d80c1c"
+      "Hash": "e14d987febeaee41fc0c6a0ec2f6980b"
     },
     "fs": {
       "Package": "fs",
@@ -1400,7 +1401,7 @@
     },
     "lme4": {
       "Package": "lme4",
-      "Version": "1.1-35.3",
+      "Version": "1.1-35.4",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1422,7 +1423,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "862f9d995f528f3051f524791955b20c"
+      "Hash": "a6f5390caceaa1b23b68f57d663b2061"
     },
     "logger": {
       "Package": "logger",
@@ -1607,13 +1608,10 @@
     },
     "nloptr": {
       "Package": "nloptr",
-      "Version": "2.0.3",
+      "Version": "2.1.0",
       "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "testthat"
-      ],
-      "Hash": "277c67a08f358f42b6a77826e4492f79"
+      "Repository": "CRAN",
+      "Hash": "2f436f0a4e224ae7542c68f1896a00d9"
     },
     "nnet": {
       "Package": "nnet",
