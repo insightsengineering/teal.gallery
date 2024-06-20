@@ -288,7 +288,7 @@
     },
     "TMB": {
       "Package": "TMB",
-      "Version": "1.9.11",
+      "Version": "1.9.12",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -300,7 +300,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "14d82c02c5dc0330a0f3f3d717d92a19"
+      "Hash": "aae963230e1399bb9a2e915ec6e67732"
     },
     "abind": {
       "Package": "abind",
@@ -890,14 +890,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.7.9002",
+      "Version": "0.5.8.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "78fb36d56b599a57bce6c7149c39c72f89b24dc3",
+      "RemoteSha": "e8e42686baab48bcb87dfe66fcec89c1d1ed20fe",
       "Requirements": [
         "R",
         "checkmate",
@@ -906,7 +906,7 @@
         "lifecycle",
         "methods"
       ],
-      "Hash": "6774cd4b8daaad0e2c605d77b7819572"
+      "Hash": "753bcfa1fa68ca7c080a96ab3cd68727"
     },
     "fs": {
       "Package": "fs",
@@ -1426,7 +1426,7 @@
     },
     "lme4": {
       "Package": "lme4",
-      "Version": "1.1-35.3",
+      "Version": "1.1-35.4",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -1448,7 +1448,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "862f9d995f528f3051f524791955b20c"
+      "Hash": "a6f5390caceaa1b23b68f57d663b2061"
     },
     "logger": {
       "Package": "logger",
@@ -1633,13 +1633,10 @@
     },
     "nloptr": {
       "Package": "nloptr",
-      "Version": "2.0.3",
+      "Version": "2.1.0",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "testthat"
-      ],
-      "Hash": "277c67a08f358f42b6a77826e4492f79"
+      "Repository": "BioC.CRAN",
+      "Hash": "2f436f0a4e224ae7542c68f1896a00d9"
     },
     "nnet": {
       "Package": "nnet",
@@ -2407,14 +2404,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9042",
+      "Version": "0.15.2.9044",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "89a89c466a44b7be6a4a5d32d9c2a571f6c053d5",
+      "RemoteSha": "7da5d29e28c80fb2c8af7dec43cac525274ca257",
       "Requirements": [
         "R",
         "checkmate",
@@ -2435,7 +2432,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "311dfdc59510f57ac106c3ca3c4d09cc"
+      "Hash": "5992a5c0b5e5b76fa226fc738e9120e3"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2481,14 +2478,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.2.0.9003",
+      "Version": "0.2.0.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "ebdaa138f3d3669e1fcd9aea2aee95fb278cf30c",
+      "RemoteSha": "7f6cec3c2acd7c1ee430a714f370466fa2575eb9",
       "Requirements": [
         "R",
         "glue",
@@ -2496,20 +2493,21 @@
         "logger",
         "methods",
         "shiny",
+        "utils",
         "withr"
       ],
-      "Hash": "4c880d553208e66aec767f2f673518df"
+      "Hash": "dbc1e738b8d99d7d9f79064136af78e8"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.1.9010",
+      "Version": "0.9.1.9011",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "1f7619260224cb9c949435c155ef47a99ce2c343",
+      "RemoteSha": "d150074c2d0f408856e70fe81f790d8d051b93f6",
       "Requirements": [
         "DT",
         "R",
@@ -2521,7 +2519,6 @@
         "ggrepel",
         "grid",
         "lifecycle",
-        "logger",
         "methods",
         "rlistings",
         "rmarkdown",
@@ -2545,18 +2542,18 @@
         "utils",
         "vistime"
       ],
-      "Hash": "693e49a4f3cc5088d4629109e21bdbb3"
+      "Hash": "2e84339a3b1df9341560bd4a98f5482a"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9035",
+      "Version": "0.3.0.9036",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "09a27f025ca6a15b6f092bf7f96481d4de38ac9f",
+      "RemoteSha": "ee17733ef0d988fee0afd74938754e40cf01c346",
       "Requirements": [
         "DT",
         "R",
@@ -2566,7 +2563,6 @@
         "ggmosaic",
         "ggplot2",
         "grid",
-        "logger",
         "scales",
         "shiny",
         "shinyTree",
@@ -2588,7 +2584,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "a205b487658b7abb986aa48cb390d0be"
+      "Hash": "41392bfcc8b60f160bbdf88df7516eca"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -2622,14 +2618,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.1.9004",
+      "Version": "0.5.1.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "8b45f6a72af99c9180dc6063378b158ccfd066c2",
+      "RemoteSha": "4366cf9ad01a97210d03e4f776215a758e0b69ff",
       "Requirements": [
         "R",
         "R6",
@@ -2652,7 +2648,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "298b0d649b1c7fba7a80b931b6b40c7e"
+      "Hash": "de2c8be53b7eec1e5514e639f6b1c71d"
     },
     "teal.transform": {
       "Package": "teal.transform",
