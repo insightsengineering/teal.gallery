@@ -1114,15 +1114,15 @@
     },
     "crayon": {
       "Package": "crayon",
-      "Version": "1.5.2",
+      "Version": "1.5.3",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "grDevices",
         "methods",
         "utils"
       ],
-      "Hash": "e8a1e41acf02548751f45c718d55aa6a"
+      "Hash": "859d96e65ef198fd43e82b9628d593ef"
     },
     "crosstalk": {
       "Package": "crosstalk",
@@ -1452,7 +1452,7 @@
       "Package": "formatters",
       "Version": "0.5.8",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "checkmate",
@@ -1948,7 +1948,7 @@
       "Package": "lme4",
       "Version": "1.1-35.4",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "MASS",
         "Matrix",
@@ -2130,7 +2130,7 @@
       "Package": "nloptr",
       "Version": "2.1.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Hash": "2f436f0a4e224ae7542c68f1896a00d9"
     },
     "nnet": {
@@ -2502,20 +2502,21 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.7",
+      "Version": "0.6.8",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "checkmate",
         "formatters",
         "htmltools",
+        "lifecycle",
         "magrittr",
         "methods",
         "stats",
         "stringi"
       ],
-      "Hash": "a64d5e33486183ab9ad13f88cfff4320"
+      "Hash": "d625ddfbb4d8a2d78018e53b49e56ea4"
     },
     "sass": {
       "Package": "sass",
