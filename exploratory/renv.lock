@@ -506,7 +506,7 @@
     },
     "crayon": {
       "Package": "crayon",
-      "Version": "1.5.2",
+      "Version": "1.5.3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -514,7 +514,7 @@
         "methods",
         "utils"
       ],
-      "Hash": "e8a1e41acf02548751f45c718d55aa6a"
+      "Hash": "859d96e65ef198fd43e82b9628d593ef"
     },
     "crosstalk": {
       "Package": "crosstalk",
@@ -1729,7 +1729,7 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.7",
+      "Version": "0.6.8",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1737,12 +1737,13 @@
         "checkmate",
         "formatters",
         "htmltools",
+        "lifecycle",
         "magrittr",
         "methods",
         "stats",
         "stringi"
       ],
-      "Hash": "a64d5e33486183ab9ad13f88cfff4320"
+      "Hash": "d625ddfbb4d8a2d78018e53b49e56ea4"
     },
     "sandwich": {
       "Package": "sandwich",
