@@ -231,6 +231,16 @@
       ],
       "Hash": "1216ac65ac55ec0058a6f75d7ca0fd52"
     },
+    "codetools": {
+      "Package": "codetools",
+      "Version": "0.2-20",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "61e097f35917d342622f21cdc79c256e"
+    },
     "colorspace": {
       "Package": "colorspace",
       "Version": "2.1-0",
@@ -264,7 +274,7 @@
     },
     "crayon": {
       "Package": "crayon",
-      "Version": "1.5.2",
+      "Version": "1.5.3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -272,7 +282,7 @@
         "methods",
         "utils"
       ],
-      "Hash": "e8a1e41acf02548751f45c718d55aa6a"
+      "Hash": "859d96e65ef198fd43e82b9628d593ef"
     },
     "crosstalk": {
       "Package": "crosstalk",
@@ -493,6 +503,21 @@
       ],
       "Hash": "15aeb8c27f5ea5161f9f6a641fafd93a"
     },
+    "future": {
+      "Package": "future",
+      "Version": "1.33.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "digest",
+        "globals",
+        "listenv",
+        "parallel",
+        "parallelly",
+        "utils"
+      ],
+      "Hash": "fd7b1d69d16d0d114e4fa82db68f184c"
+    },
     "gdtools": {
       "Package": "gdtools",
       "Version": "0.3.7",
@@ -562,6 +587,17 @@
         "withr"
       ],
       "Hash": "44c6a2f8202d5b7e878ea274b1092426"
+    },
+    "globals": {
+      "Package": "globals",
+      "Version": "0.16.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "codetools"
+      ],
+      "Hash": "2580567908cafd4f187c1e5a91e98b7f"
     },
     "glue": {
       "Package": "glue",
@@ -775,6 +811,16 @@
       ],
       "Hash": "b8552d117e1b808b09a832f589b79035"
     },
+    "listenv": {
+      "Package": "listenv",
+      "Version": "0.9.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "e2fca3e12e4db979dccc6e519b10a7ee"
+    },
     "logger": {
       "Package": "logger",
       "Version": "0.3.0",
@@ -886,6 +932,18 @@
         "askpass"
       ],
       "Hash": "2bcca3848e4734eb3b16103bc9aa4b8e"
+    },
+    "parallelly": {
+      "Package": "parallelly",
+      "Version": "1.37.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "parallel",
+        "tools",
+        "utils"
+      ],
+      "Hash": "5410df8d22bd36e616f2a2343dbb328c"
     },
     "pillar": {
       "Package": "pillar",
@@ -1021,7 +1079,7 @@
     },
     "rlistings": {
       "Package": "rlistings",
-      "Version": "0.2.8",
+      "Version": "0.2.9",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1034,7 +1092,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "c713ee591976d75590549ece8d763ff4"
+      "Hash": "de6d9714857cae1cc672bbad3f3d0f34"
     },
     "rmarkdown": {
       "Package": "rmarkdown",
@@ -1071,7 +1129,7 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.7",
+      "Version": "0.6.8",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1079,12 +1137,13 @@
         "checkmate",
         "formatters",
         "htmltools",
+        "lifecycle",
         "magrittr",
         "methods",
         "stats",
         "stringi"
       ],
-      "Hash": "a64d5e33486183ab9ad13f88cfff4320"
+      "Hash": "d625ddfbb4d8a2d78018e53b49e56ea4"
     },
     "sass": {
       "Package": "sass",
@@ -1291,22 +1350,25 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9044",
+      "Version": "0.15.2.9045",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "7da5d29e28c80fb2c8af7dec43cac525274ca257",
+      "RemoteSha": "1952007520055ee3169ff107f685bd9589eb72b4",
       "Requirements": [
         "R",
         "checkmate",
+        "future",
         "jsonlite",
         "lifecycle",
         "logger",
         "magrittr",
         "methods",
+        "promises",
+        "renv",
         "rlang",
         "shiny",
         "shinyjs",
@@ -1319,7 +1381,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "5992a5c0b5e5b76fa226fc738e9120e3"
+      "Hash": "1f94e0b932531d4120e984c19e2689b2"
     },
     "teal.code": {
       "Package": "teal.code",
