@@ -2617,9 +2617,9 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.4",
+      "Version": "0.9.5",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "MASS",
         "R",
@@ -2649,7 +2649,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "a8d617a605a1383dabf4e32e3de26222"
+      "Hash": "228f938ebdc8c39b3c71acafbf4d05dc"
     },
     "tern.gee": {
       "Package": "tern.gee",
