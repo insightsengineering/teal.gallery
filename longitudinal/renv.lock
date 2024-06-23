@@ -594,14 +594,14 @@
     },
     "cli": {
       "Package": "cli",
-      "Version": "3.6.2",
+      "Version": "3.6.3",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "1216ac65ac55ec0058a6f75d7ca0fd52"
+      "Hash": "b21916dd77a27642b447374a5d30ecf3"
     },
     "clipr": {
       "Package": "clipr",
@@ -2871,14 +2871,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9036",
+      "Version": "0.3.0.9037",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "ee17733ef0d988fee0afd74938754e40cf01c346",
+      "RemoteSha": "3a6f9f06502220f9ed4d2095074cffddc2c88b5f",
       "Requirements": [
         "DT",
         "R",
@@ -2909,7 +2909,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "41392bfcc8b60f160bbdf88df7516eca"
+      "Hash": "a968d577480939cba8c51c765ec3161f"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
