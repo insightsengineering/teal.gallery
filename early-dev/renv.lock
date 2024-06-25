@@ -762,14 +762,14 @@
     },
     "digest": {
       "Package": "digest",
-      "Version": "0.6.35",
+      "Version": "0.6.36",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "698ece7ba5a4fa4559e3d537e7ec3d31"
+      "Hash": "fd6824ad91ede64151e93af67df6376b"
     },
     "dplyr": {
       "Package": "dplyr",
@@ -2831,14 +2831,14 @@
     },
     "teal.osprey": {
       "Package": "teal.osprey",
-      "Version": "0.1.16.9022",
+      "Version": "0.1.16.9023",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.osprey",
       "RemoteRef": "main",
-      "RemoteSha": "c79b2d55c26a78d7f0904c6f1de625e007eec8bf",
+      "RemoteSha": "d8d8ee1ff337191936a62c6548d2394506582cce",
       "Requirements": [
         "R",
         "checkmate",
@@ -2858,7 +2858,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "5e52885ba676caae67cb788c1deb7492"
+      "Hash": "09dbfb05a94f98f81a10462e249d2fc4"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
