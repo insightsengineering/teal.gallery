@@ -1203,14 +1203,14 @@
     },
     "digest": {
       "Package": "digest",
-      "Version": "0.6.35",
+      "Version": "0.6.36",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "698ece7ba5a4fa4559e3d537e7ec3d31"
+      "Hash": "fd6824ad91ede64151e93af67df6376b"
     },
     "doParallel": {
       "Package": "doParallel",
@@ -1972,14 +1972,14 @@
     },
     "locfit": {
       "Package": "locfit",
-      "Version": "1.5-9.9",
+      "Version": "1.5-9.10",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "lattice"
       ],
-      "Hash": "3885127e04b35dafded049075057ad83"
+      "Hash": "7d8e0ac914051ca0254332387d9b5816"
     },
     "logger": {
       "Package": "logger",
@@ -2934,14 +2934,14 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9017",
+      "Version": "0.1.6.9018",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "04f02aa2d3d40a8faa52c77a6054158d1082e540",
+      "RemoteSha": "a1f33fd7924894bd9c3b56d80941e4602e057020",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -2968,7 +2968,7 @@
         "tern",
         "utils"
       ],
-      "Hash": "ddb542df4c6d52a11951ae92fe316359"
+      "Hash": "3eb631021e1c464ade09f143c4de2857"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
