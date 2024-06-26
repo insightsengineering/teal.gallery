@@ -695,9 +695,9 @@
     },
     "SparseM": {
       "Package": "SparseM",
-      "Version": "1.83",
+      "Version": "1.84",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "graphics",
@@ -705,7 +705,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "f2b9f6a10ac6bc136be10c508ee890f9"
+      "Hash": "0648c7c4e275c265356649f818dbfcf5"
     },
     "SummarizedExperiment": {
       "Package": "SummarizedExperiment",
@@ -732,15 +732,15 @@
     },
     "XML": {
       "Package": "XML",
-      "Version": "3.99-0.16.1",
+      "Version": "3.99-0.17",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "methods",
         "utils"
       ],
-      "Hash": "da3098169c887914551b607c66fe2a28"
+      "Hash": "bc2a8a1139d8d4bd9c46086708945124"
     },
     "XVector": {
       "Package": "XVector",
@@ -1974,7 +1974,7 @@
       "Package": "locfit",
       "Version": "1.5-9.10",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "lattice"
@@ -2128,10 +2128,10 @@
     },
     "nloptr": {
       "Package": "nloptr",
-      "Version": "2.1.0",
+      "Version": "2.1.1",
       "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "2f436f0a4e224ae7542c68f1896a00d9"
+      "Repository": "BioC.CRAN",
+      "Hash": "27550641889a3abf3aec4d91186311ec"
     },
     "nnet": {
       "Package": "nnet",
