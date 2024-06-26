@@ -317,7 +317,7 @@
     },
     "SparseM": {
       "Package": "SparseM",
-      "Version": "1.83",
+      "Version": "1.84",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -327,7 +327,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "f2b9f6a10ac6bc136be10c508ee890f9"
+      "Hash": "0648c7c4e275c265356649f818dbfcf5"
     },
     "TMB": {
       "Package": "TMB",
@@ -1854,10 +1854,10 @@
     },
     "nloptr": {
       "Package": "nloptr",
-      "Version": "2.1.0",
+      "Version": "2.1.1",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
-      "Hash": "2f436f0a4e224ae7542c68f1896a00d9"
+      "Hash": "27550641889a3abf3aec4d91186311ec"
     },
     "nnet": {
       "Package": "nnet",
