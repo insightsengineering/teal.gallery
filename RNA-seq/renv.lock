@@ -289,6 +289,16 @@
       ],
       "Hash": "ef6ff3e15ce624118e6cf8151e58e38c"
     },
+    "Deriv": {
+      "Package": "Deriv",
+      "Version": "4.1.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "methods"
+      ],
+      "Hash": "bc727aba82bcda74db0bbe188ec6757c"
+    },
     "EnvStats": {
       "Package": "EnvStats",
       "Version": "2.8.1",
@@ -1183,6 +1193,30 @@
       ],
       "Hash": "fd6824ad91ede64151e93af67df6376b"
     },
+    "doBy": {
+      "Package": "doBy",
+      "Version": "4.6.22",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "Deriv",
+        "MASS",
+        "Matrix",
+        "R",
+        "boot",
+        "broom",
+        "cowplot",
+        "dplyr",
+        "ggplot2",
+        "methods",
+        "microbenchmark",
+        "modelr",
+        "rlang",
+        "tibble",
+        "tidyr"
+      ],
+      "Hash": "a9b56885b9596c284168df26d6179c40"
+    },
     "doParallel": {
       "Package": "doParallel",
       "Version": "1.0.17",
@@ -2062,6 +2096,17 @@
       ],
       "Hash": "110ee9d83b496279960e162ac97764ce"
     },
+    "microbenchmark": {
+      "Package": "microbenchmark",
+      "Version": "1.4.10",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "graphics",
+        "stats"
+      ],
+      "Hash": "db81b552e393ed092872cf7023469bc2"
+    },
     "mime": {
       "Package": "mime",
       "Version": "0.12",
@@ -2081,6 +2126,24 @@
         "Rcpp"
       ],
       "Hash": "aba060ef3c097b26a4d304ea39d87f32"
+    },
+    "modelr": {
+      "Package": "modelr",
+      "Version": "0.1.11",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "broom",
+        "magrittr",
+        "purrr",
+        "rlang",
+        "tibble",
+        "tidyr",
+        "tidyselect",
+        "vctrs"
+      ],
+      "Hash": "4f50122dc256b1b6996a4703fecea821"
     },
     "munsell": {
       "Package": "munsell",
@@ -2218,21 +2281,21 @@
     },
     "pbkrtest": {
       "Package": "pbkrtest",
-      "Version": "0.5.2",
+      "Version": "0.5.3",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "MASS",
         "Matrix",
         "R",
         "broom",
+        "doBy",
         "dplyr",
         "lme4",
         "methods",
-        "numDeriv",
-        "parallel"
+        "numDeriv"
       ],
-      "Hash": "3b5b99f4d3f067bb9c1d59317d071370"
+      "Hash": "938e6bbc4ac57534f8b43224506a8966"
     },
     "pillar": {
       "Package": "pillar",
@@ -2847,14 +2910,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9045",
+      "Version": "0.15.2.9046",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "1952007520055ee3169ff107f685bd9589eb72b4",
+      "RemoteSha": "c4cc6991c2f51b5e92cc7d8599a4acc72886dad3",
       "Requirements": [
         "R",
         "checkmate",
@@ -2878,7 +2941,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "1f94e0b932531d4120e984c19e2689b2"
+      "Hash": "cf10f9e9f697eedc03d013378c606457"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -3120,14 +3183,14 @@
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.2.9012",
+      "Version": "0.4.2.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "a264f29dad725ba481642b7b25866c76725d619b",
+      "RemoteSha": "285e85e369a46d0e6f3c90b055cc744dc24d9526",
       "Requirements": [
         "R",
         "bslib",
@@ -3144,18 +3207,18 @@
         "shinyjs",
         "styler"
       ],
-      "Hash": "2a6722f73977cf67301e96cb878211b4"
+      "Hash": "5de962af19ff0d6f8186aa008f56c602"
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.5.9000",
+      "Version": "0.9.5.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "26a0927086f6076e53475d01b144fe83042ba236",
+      "RemoteSha": "6e47e58eb1e0abde4fb3dd5e6378e32a29fb2ae9",
       "Requirements": [
         "MASS",
         "R",
@@ -3185,7 +3248,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "0695f5a1585f4661c7e30c180cf258b3"
+      "Hash": "9fcf9001c0c1058f696b147c3efe19d3"
     },
     "textshaping": {
       "Package": "textshaping",
