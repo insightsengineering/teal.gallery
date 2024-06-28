@@ -2208,14 +2208,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.8.9000",
+      "Version": "0.6.9.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "5d4fd92758b211425bda3d26ac43f0ffbc61e918",
+      "RemoteSha": "ac8991e6d4c852d388849c7b9f6c9b8db1fffde2",
       "Requirements": [
         "R",
         "checkmate",
@@ -2227,7 +2227,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "038e5651e48460313b6331ab17ce9b51"
+      "Hash": "f78b76305d7e63f65cd8705082a9ca1d"
     },
     "sass": {
       "Package": "sass",
@@ -2637,14 +2637,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9037",
+      "Version": "0.3.0.9038",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "3a6f9f06502220f9ed4d2095074cffddc2c88b5f",
+      "RemoteSha": "54cd3917eded2ddde71ad8facc1d349b419c6c55",
       "Requirements": [
         "DT",
         "R",
@@ -2675,7 +2675,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "a968d577480939cba8c51c765ec3161f"
+      "Hash": "6b3615c2708641482052560de632a037"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -2801,14 +2801,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.5.9001",
+      "Version": "0.9.5.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "6e47e58eb1e0abde4fb3dd5e6378e32a29fb2ae9",
+      "RemoteSha": "3f53124645d8029bdf83f0db2f1ef23c1e6d292a",
       "Requirements": [
         "MASS",
         "R",
@@ -2838,7 +2838,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "9fcf9001c0c1058f696b147c3efe19d3"
+      "Hash": "8b04f07cacd061d3b9dcd56ebf85e90d"
     },
     "tern.gee": {
       "Package": "tern.gee",
