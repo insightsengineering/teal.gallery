@@ -1049,7 +1049,7 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.8",
+      "Version": "0.6.9",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1063,7 +1063,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "d625ddfbb4d8a2d78018e53b49e56ea4"
+      "Hash": "8320d917da2a3db93ce9d91649db0b1d"
     },
     "sass": {
       "Package": "sass",
