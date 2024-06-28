@@ -1696,14 +1696,14 @@
     },
     "hermes": {
       "Package": "hermes",
-      "Version": "1.7.1.9002",
+      "Version": "1.7.2.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "hermes",
       "RemoteRef": "main",
-      "RemoteSha": "b5b6fd0f4d3ff3e444c332630360bdd1b94de00b",
+      "RemoteSha": "dbe50ae04ac3e0f5a2069753c997f5de77e6f3c1",
       "Requirements": [
         "Biobase",
         "BiocGenerics",
@@ -1739,7 +1739,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "2d6ba1df7130dc47cd90fbd7f5483961"
+      "Hash": "eea514c594e833bd880a38249bf78460"
     },
     "highr": {
       "Package": "highr",
@@ -2565,7 +2565,7 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.8",
+      "Version": "0.6.9",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -2579,7 +2579,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "d625ddfbb4d8a2d78018e53b49e56ea4"
+      "Hash": "8320d917da2a3db93ce9d91649db0b1d"
     },
     "sass": {
       "Package": "sass",
