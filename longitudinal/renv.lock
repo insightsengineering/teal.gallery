@@ -2397,7 +2397,7 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.8",
+      "Version": "0.6.9",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2411,7 +2411,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "d625ddfbb4d8a2d78018e53b49e56ea4"
+      "Hash": "8320d917da2a3db93ce9d91649db0b1d"
     },
     "sass": {
       "Package": "sass",
@@ -2746,14 +2746,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.1.15.9024",
+      "Version": "0.1.15.9025",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "0efb541381694c086d88482bd98a9b7e1f9ea065",
+      "RemoteSha": "5faa22d6f393610be327857e90d7cb028451496c",
       "Requirements": [
         "DT",
         "R",
@@ -2775,10 +2775,9 @@
         "teal.logger",
         "teal.reporter",
         "teal.transform",
-        "teal.widgets",
-        "tidyr"
+        "teal.widgets"
       ],
-      "Hash": "acc292503204350e5cf8af13a65e81e7"
+      "Hash": "ad453339123f36f5fd5e687030b6707a"
     },
     "teal.logger": {
       "Package": "teal.logger",
