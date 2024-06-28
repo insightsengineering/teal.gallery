@@ -931,7 +931,7 @@
     },
     "ggpmisc": {
       "Package": "ggpmisc",
-      "Version": "0.5.6",
+      "Version": "0.6.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -956,7 +956,7 @@
         "stats",
         "tibble"
       ],
-      "Hash": "e35c13b0b693142dfe4bec1b54b4e597"
+      "Hash": "e0e669a53c9e39482705df3de75ec054"
     },
     "ggpp": {
       "Package": "ggpp",
@@ -1814,7 +1814,7 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.8",
+      "Version": "0.6.9",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1828,7 +1828,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "d625ddfbb4d8a2d78018e53b49e56ea4"
+      "Hash": "8320d917da2a3db93ce9d91649db0b1d"
     },
     "sandwich": {
       "Package": "sandwich",
