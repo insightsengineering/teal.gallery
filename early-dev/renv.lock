@@ -321,7 +321,7 @@
     },
     "TMB": {
       "Package": "TMB",
-      "Version": "1.9.12",
+      "Version": "1.9.13",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -333,7 +333,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "aae963230e1399bb9a2e915ec6e67732"
+      "Hash": "4f32eb7b7a03efb7001edc16ae3cb72a"
     },
     "abind": {
       "Package": "abind",
@@ -1946,24 +1946,25 @@
     },
     "pkgload": {
       "Package": "pkgload",
-      "Version": "1.3.4",
+      "Version": "1.4.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "cli",
-        "crayon",
         "desc",
         "fs",
         "glue",
+        "lifecycle",
         "methods",
         "pkgbuild",
+        "processx",
         "rlang",
         "rprojroot",
         "utils",
         "withr"
       ],
-      "Hash": "876c618df5ae610be84356d5d7a5d124"
+      "Hash": "2ec30ffbeec83da57655b850cf2d3e0e"
     },
     "plotly": {
       "Package": "plotly",
