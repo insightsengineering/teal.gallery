@@ -826,7 +826,7 @@
     },
     "emmeans": {
       "Package": "emmeans",
-      "Version": "1.10.2",
+      "Version": "1.10.3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -839,7 +839,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "239d1c87247092e8e620063c85dc8516"
+      "Hash": "276510e85e99a058fa4a0668e7ecca05"
     },
     "estimability": {
       "Package": "estimability",
