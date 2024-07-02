@@ -1272,9 +1272,9 @@
     },
     "emmeans": {
       "Package": "emmeans",
-      "Version": "1.10.2",
+      "Version": "1.10.3",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "estimability",
@@ -1285,7 +1285,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "239d1c87247092e8e620063c85dc8516"
+      "Hash": "276510e85e99a058fa4a0668e7ecca05"
     },
     "estimability": {
       "Package": "estimability",
@@ -3211,14 +3211,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.5.9002",
+      "Version": "0.9.5.9003",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "3f53124645d8029bdf83f0db2f1ef23c1e6d292a",
+      "RemoteSha": "2e41fcb088f6a2515a62762320e3dc3a842d3ef5",
       "Requirements": [
         "MASS",
         "R",
@@ -3248,7 +3248,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "8b04f07cacd061d3b9dcd56ebf85e90d"
+      "Hash": "518e8e78f48cc1a77d0893c4f9614700"
     },
     "textshaping": {
       "Package": "textshaping",
