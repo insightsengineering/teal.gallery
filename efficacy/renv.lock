@@ -762,9 +762,9 @@
     },
     "emmeans": {
       "Package": "emmeans",
-      "Version": "1.10.2",
+      "Version": "1.10.3",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "estimability",
@@ -775,7 +775,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "239d1c87247092e8e620063c85dc8516"
+      "Hash": "276510e85e99a058fa4a0668e7ecca05"
     },
     "estimability": {
       "Package": "estimability",
@@ -2813,14 +2813,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.5.9002",
+      "Version": "0.9.5.9003",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "3f53124645d8029bdf83f0db2f1ef23c1e6d292a",
+      "RemoteSha": "2e41fcb088f6a2515a62762320e3dc3a842d3ef5",
       "Requirements": [
         "MASS",
         "R",
@@ -2850,7 +2850,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "8b04f07cacd061d3b9dcd56ebf85e90d"
+      "Hash": "518e8e78f48cc1a77d0893c4f9614700"
     },
     "tern.gee": {
       "Package": "tern.gee",
@@ -2878,14 +2878,14 @@
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
-      "Version": "0.3.1.9000",
+      "Version": "0.3.1.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "f96ab2dff9477b915fbb9c3b6308e6885cc8c617",
+      "RemoteSha": "7a9ab7989b7963cffca1f485423be7f53c0d70ff",
       "Requirements": [
         "R",
         "checkmate",
@@ -2905,7 +2905,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "90ac450d485592bc2be5dabec25f8eac"
+      "Hash": "39038ef62be67d72ca1e4ed324e266c4"
     },
     "testthat": {
       "Package": "testthat",
