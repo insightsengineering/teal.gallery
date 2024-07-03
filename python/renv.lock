@@ -668,7 +668,7 @@
       "Package": "emmeans",
       "Version": "1.10.3",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "estimability",
@@ -1002,7 +1002,7 @@
       "Package": "ggpp",
       "Version": "0.5.8-1",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "MASS",
         "R",
