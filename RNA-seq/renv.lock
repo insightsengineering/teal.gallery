@@ -1304,7 +1304,7 @@
       "Package": "emmeans",
       "Version": "1.10.3",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "estimability",
