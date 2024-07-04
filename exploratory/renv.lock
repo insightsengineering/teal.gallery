@@ -1230,7 +1230,7 @@
     },
     "lme4": {
       "Package": "lme4",
-      "Version": "1.1-35.4",
+      "Version": "1.1-35.5",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1252,7 +1252,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "a6f5390caceaa1b23b68f57d663b2061"
+      "Hash": "16a08fc75007da0d08e0c0388c7c33e6"
     },
     "lmodel2": {
       "Package": "lmodel2",
