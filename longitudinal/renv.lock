@@ -321,9 +321,9 @@
     },
     "TMB": {
       "Package": "TMB",
-      "Version": "1.9.13",
+      "Version": "1.9.14",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "Matrix",
         "R",
@@ -333,7 +333,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "4f32eb7b7a03efb7001edc16ae3cb72a"
+      "Hash": "685836c6eb244780c75d1f8d0124fdbd"
     },
     "abind": {
       "Package": "abind",
@@ -1598,9 +1598,9 @@
     },
     "lme4": {
       "Package": "lme4",
-      "Version": "1.1-35.4",
+      "Version": "1.1-35.5",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "MASS",
         "Matrix",
@@ -1620,7 +1620,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "a6f5390caceaa1b23b68f57d663b2061"
+      "Hash": "16a08fc75007da0d08e0c0388c7c33e6"
     },
     "lmom": {
       "Package": "lmom",
@@ -2747,14 +2747,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.1.15.9025",
+      "Version": "0.1.15.9026",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "5faa22d6f393610be327857e90d7cb028451496c",
+      "RemoteSha": "2d33b3b456c38dd483e5c55101afec3be4bba65b",
       "Requirements": [
         "DT",
         "R",
@@ -2778,7 +2778,7 @@
         "teal.transform",
         "teal.widgets"
       ],
-      "Hash": "ad453339123f36f5fd5e687030b6707a"
+      "Hash": "2b6b8c13bf4a108d61ef24919832a586"
     },
     "teal.logger": {
       "Package": "teal.logger",
