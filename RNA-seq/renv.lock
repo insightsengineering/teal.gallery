@@ -3460,10 +3460,10 @@
     },
     "yaml": {
       "Package": "yaml",
-      "Version": "2.3.8",
+      "Version": "2.3.9",
       "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "29240487a071f535f5e5d5a323b7afbd"
+      "Repository": "BioC.CRAN",
+      "Hash": "9cb28d11799d93c953f852083d55ee9e"
     },
     "zip": {
       "Package": "zip",
