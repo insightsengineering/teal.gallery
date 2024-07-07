@@ -3208,7 +3208,7 @@
       "Package": "yaml",
       "Version": "2.3.9",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Hash": "9cb28d11799d93c953f852083d55ee9e"
     },
     "zip": {
