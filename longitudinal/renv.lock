@@ -2459,14 +2459,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.9.9000",
+      "Version": "0.6.9.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "ac8991e6d4c852d388849c7b9f6c9b8db1fffde2",
+      "RemoteSha": "c564cd83ef9907241fca1a310db050a961fbb48d",
       "Requirements": [
         "R",
         "checkmate",
@@ -2478,7 +2478,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "f78b76305d7e63f65cd8705082a9ca1d"
+      "Hash": "90ccfb968c14d2066a56b136ffc869af"
     },
     "sass": {
       "Package": "sass",
@@ -3070,14 +3070,14 @@
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.2.9013",
+      "Version": "0.4.2.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "285e85e369a46d0e6f3c90b055cc744dc24d9526",
+      "RemoteSha": "2b7826053c3795c13b43b0e4ca108bb3717cf645",
       "Requirements": [
         "R",
         "bslib",
@@ -3094,18 +3094,18 @@
         "shinyjs",
         "styler"
       ],
-      "Hash": "5de962af19ff0d6f8186aa008f56c602"
+      "Hash": "6d44dec1c0a4e16168b85632d2abb91a"
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.5.9003",
+      "Version": "0.9.5.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "2e41fcb088f6a2515a62762320e3dc3a842d3ef5",
+      "RemoteSha": "99f9c3d82891b3e38e04a11494976d482668452f",
       "Requirements": [
         "MASS",
         "R",
@@ -3135,7 +3135,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "518e8e78f48cc1a77d0893c4f9614700"
+      "Hash": "04486f4876b0e3a996b98672aa9967c8"
     },
     "tern.gee": {
       "Package": "tern.gee",
