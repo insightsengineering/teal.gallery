@@ -1696,14 +1696,14 @@
     },
     "hermes": {
       "Package": "hermes",
-      "Version": "1.7.2.9000",
+      "Version": "1.7.2.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "hermes",
       "RemoteRef": "main",
-      "RemoteSha": "dbe50ae04ac3e0f5a2069753c997f5de77e6f3c1",
+      "RemoteSha": "11e90924a4c215a01d15cd314df3a110decdd299",
       "Requirements": [
         "Biobase",
         "BiocGenerics",
@@ -1739,7 +1739,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "eea514c594e833bd880a38249bf78460"
+      "Hash": "f4072ccd72c64233b694d3abb11529ab"
     },
     "highr": {
       "Package": "highr",
