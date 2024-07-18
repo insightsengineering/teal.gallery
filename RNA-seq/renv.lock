@@ -594,14 +594,14 @@
     },
     "Rcpp": {
       "Package": "Rcpp",
-      "Version": "1.0.12",
+      "Version": "1.0.13",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "methods",
         "utils"
       ],
-      "Hash": "5ea2700d21e038ace58269ecdbeb9ec0"
+      "Hash": "f27411eb6d9c3dada5edd444b8416675"
     },
     "RcppArmadillo": {
       "Package": "RcppArmadillo",
@@ -677,7 +677,7 @@
     },
     "SparseM": {
       "Package": "SparseM",
-      "Version": "1.84",
+      "Version": "1.84-2",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -687,7 +687,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "0648c7c4e275c265356649f818dbfcf5"
+      "Hash": "e78499cbcbbca98200254bd171379165"
     },
     "SummarizedExperiment": {
       "Package": "SummarizedExperiment",
