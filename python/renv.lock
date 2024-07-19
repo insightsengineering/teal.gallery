@@ -210,7 +210,7 @@
       "Package": "Rcpp",
       "Version": "1.0.13",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "methods",
         "utils"
@@ -259,7 +259,7 @@
       "Package": "SparseM",
       "Version": "1.84-2",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "graphics",
@@ -1459,9 +1459,9 @@
     },
     "multcomp": {
       "Package": "multcomp",
-      "Version": "1.4-25",
+      "Version": "1.4-26",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "TH.data",
         "codetools",
@@ -1471,7 +1471,7 @@
         "stats",
         "survival"
       ],
-      "Hash": "2688bf2f8d54c19534ee7d8a876d9fc7"
+      "Hash": "ec6f951a557132215fab91912acdd9ef"
     },
     "multcompView": {
       "Package": "multcompView",
@@ -1904,14 +1904,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.9.9001",
+      "Version": "0.6.9.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "c564cd83ef9907241fca1a310db050a961fbb48d",
+      "RemoteSha": "26c68f1b565fe7367a5825d1974ecc703285fa77",
       "Requirements": [
         "R",
         "checkmate",
@@ -1923,7 +1923,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "90ccfb968c14d2066a56b136ffc869af"
+      "Hash": "3d58aad7a11bc0cd047ae8978ccbd12c"
     },
     "sandwich": {
       "Package": "sandwich",
@@ -2596,13 +2596,13 @@
     },
     "tinytex": {
       "Package": "tinytex",
-      "Version": "0.51",
+      "Version": "0.52",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "xfun"
       ],
-      "Hash": "d44e2fcd2e4e076f0aac540208559d1d"
+      "Hash": "cfbad971a71f0e27cec22e544a08bc3b"
     },
     "triebeard": {
       "Package": "triebeard",
@@ -2685,15 +2685,15 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.45",
+      "Version": "0.46",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "grDevices",
         "stats",
         "tools"
       ],
-      "Hash": "ca59c87fe305b16a9141a5874c3a7889"
+      "Hash": "00ce32f398db0415dde61abfef11300c"
     },
     "xml2": {
       "Package": "xml2",
