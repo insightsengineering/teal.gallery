@@ -640,9 +640,9 @@
     },
     "crul": {
       "Package": "crul",
-      "Version": "1.4.2",
+      "Version": "1.5.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R6",
         "curl",
@@ -651,7 +651,7 @@
         "mime",
         "urltools"
       ],
-      "Hash": "5685d2603020d0f879a147ba23d51292"
+      "Hash": "22e70c5046981d39b7bf7af74433e396"
     },
     "curl": {
       "Package": "curl",
@@ -2813,14 +2813,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.5.9005",
+      "Version": "0.9.5.9006",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "f6ed650d304777e5d10123d4dd2ccb12dae0fe46",
+      "RemoteSha": "4ac1c780f12faa1cf163314af6f4e57d8365febb",
       "Requirements": [
         "MASS",
         "R",
@@ -2850,7 +2850,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "f66fa8c929292b4ce0e2c71b47af886b"
+      "Hash": "d7967a6e26f80c752db632499e9ed6c8"
     },
     "tern.gee": {
       "Package": "tern.gee",
