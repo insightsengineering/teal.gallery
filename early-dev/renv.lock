@@ -120,7 +120,7 @@
       "Package": "Exact",
       "Version": "3.3",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "graphics",
