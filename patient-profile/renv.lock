@@ -2592,14 +2592,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.1.9012",
+      "Version": "0.9.1.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "98ecb290b10431b3683ff8045104d69823dce30e",
+      "RemoteSha": "7c4b75135c6f4b86724c46847686ad4e9aca8891",
       "Requirements": [
         "DT",
         "R",
@@ -2634,7 +2634,7 @@
         "utils",
         "vistime"
       ],
-      "Hash": "7dae996810b4996d6732cfc7217f6f48"
+      "Hash": "e83324fd426a131ebd00eff21b6ab6c9"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
@@ -2802,14 +2802,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.5.9006",
+      "Version": "0.9.5.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "4ac1c780f12faa1cf163314af6f4e57d8365febb",
+      "RemoteSha": "8fe3dc4a817f426402b9f1fe1d77246dc005e802",
       "Requirements": [
         "MASS",
         "R",
@@ -2839,7 +2839,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "d7967a6e26f80c752db632499e9ed6c8"
+      "Hash": "c25b82e4d220d4c45e57f0e2431c084c"
     },
     "tern.gee": {
       "Package": "tern.gee",
