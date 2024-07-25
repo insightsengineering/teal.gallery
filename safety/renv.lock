@@ -2755,14 +2755,14 @@
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.5.0.9006",
+      "Version": "0.5.0.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.transform",
       "RemoteRef": "main",
-      "RemoteSha": "464a4ba29a0774ece1b0e178abd641e4e39b1238",
+      "RemoteSha": "2f04a925b364b1fe55b95ce7d9233f0cd7bdeb57",
       "Requirements": [
         "R",
         "checkmate",
@@ -2781,7 +2781,7 @@
         "tidyr",
         "tidyselect"
       ],
-      "Hash": "b4997d0c6d8405c143be4513d22a66f8"
+      "Hash": "f83052d22e592751de63db04b8f466d0"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
