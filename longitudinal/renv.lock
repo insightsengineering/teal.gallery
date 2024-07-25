@@ -1276,14 +1276,14 @@
     },
     "goshawk": {
       "Package": "goshawk",
-      "Version": "0.1.17.9002",
+      "Version": "0.1.17.9003",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "e948e2935af3e32afa5d785585098b2f4a92f153",
+      "RemoteSha": "67f095cfc76e3e6674bdb67dc02d509ddf53f4f0",
       "Requirements": [
         "R",
         "checkmate",
@@ -1299,7 +1299,7 @@
         "rlang",
         "stringr"
       ],
-      "Hash": "d7c27d67bd13f8346736f9c5fd70a163"
+      "Hash": "858dd7de126583bc0398ec8fb6218dd1"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -2747,14 +2747,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.1.15.9026",
+      "Version": "0.1.15.9027",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "2d33b3b456c38dd483e5c55101afec3be4bba65b",
+      "RemoteSha": "edfdbba63c1460e2e225cb927bca981c44546d6b",
       "Requirements": [
         "DT",
         "R",
@@ -2778,7 +2778,7 @@
         "teal.transform",
         "teal.widgets"
       ],
-      "Hash": "2b6b8c13bf4a108d61ef24919832a586"
+      "Hash": "87d1dd96431d0cd10a05c25e4f531715"
     },
     "teal.logger": {
       "Package": "teal.logger",
