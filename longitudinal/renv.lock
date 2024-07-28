@@ -1975,15 +1975,15 @@
     },
     "parallelly": {
       "Package": "parallelly",
-      "Version": "1.37.1",
+      "Version": "1.38.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "parallel",
         "tools",
         "utils"
       ],
-      "Hash": "5410df8d22bd36e616f2a2343dbb328c"
+      "Hash": "6e8b139c1904f5e9e14c69db64453bbe"
     },
     "pbkrtest": {
       "Package": "pbkrtest",
