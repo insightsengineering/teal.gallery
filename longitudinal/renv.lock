@@ -69,9 +69,9 @@
     },
     "DescTools": {
       "Package": "DescTools",
-      "Version": "0.99.54",
+      "Version": "0.99.55",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "Exact",
         "MASS",
@@ -94,7 +94,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "cdd76cdd712d77020083cf669af8b3f3"
+      "Hash": "ee3db01d9518af45bbb95e6560909a14"
     },
     "Exact": {
       "Package": "Exact",
@@ -467,7 +467,7 @@
     },
     "bslib": {
       "Package": "bslib",
-      "Version": "0.7.0",
+      "Version": "0.8.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -485,7 +485,7 @@
         "rlang",
         "sass"
       ],
-      "Hash": "8644cc53f43828f19133548195d7e59e"
+      "Hash": "b299c6741ca9746fb227debcb0f9fb6c"
     },
     "cachem": {
       "Package": "cachem",
@@ -559,15 +559,15 @@
     },
     "checkmate": {
       "Package": "checkmate",
-      "Version": "2.3.1",
+      "Version": "2.3.2",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "backports",
         "utils"
       ],
-      "Hash": "c01cab1cb0f9125211a6fc99d540e315"
+      "Hash": "0e14e01ce07e7c88fd25de6d4260d26b"
     },
     "class": {
       "Package": "class",
@@ -1276,14 +1276,14 @@
     },
     "goshawk": {
       "Package": "goshawk",
-      "Version": "0.1.17.9003",
+      "Version": "0.1.18.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "67f095cfc76e3e6674bdb67dc02d509ddf53f4f0",
+      "RemoteSha": "87a7e9d0ac8b592069d78b895eb69e04aed955e0",
       "Requirements": [
         "R",
         "checkmate",
@@ -1299,7 +1299,7 @@
         "rlang",
         "stringr"
       ],
-      "Hash": "858dd7de126583bc0398ec8fb6218dd1"
+      "Hash": "4160ba2adb225d836443c6c65be754ec"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -2463,7 +2463,7 @@
     },
     "shiny": {
       "Package": "shiny",
-      "Version": "1.8.1.1",
+      "Version": "1.9.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2492,7 +2492,7 @@
         "withr",
         "xtable"
       ],
-      "Hash": "54b26646816af9960a4c64d8ceec75d6"
+      "Hash": "01666113b04d504390d60736f39bd0d0"
     },
     "shinyTree": {
       "Package": "shinyTree",
@@ -2747,14 +2747,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.1.15.9027",
+      "Version": "0.1.15.9028",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "edfdbba63c1460e2e225cb927bca981c44546d6b",
+      "RemoteSha": "2889fc6dfd5af5a5c52db19382127d39926ea3d4",
       "Requirements": [
         "DT",
         "R",
@@ -2778,7 +2778,7 @@
         "teal.transform",
         "teal.widgets"
       ],
-      "Hash": "87d1dd96431d0cd10a05c25e4f531715"
+      "Hash": "8695260f15f42fc223c363de8578bc8f"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -3229,13 +3229,13 @@
     },
     "uuid": {
       "Package": "uuid",
-      "Version": "1.2-0",
+      "Version": "1.2-1",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "303c19bfd970bece872f93a824e323d9"
+      "Hash": "34e965e62a41fcafb1ca60e9b142085b"
     },
     "vctrs": {
       "Package": "vctrs",
