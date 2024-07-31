@@ -1245,7 +1245,7 @@
     },
     "shinycssloaders": {
       "Package": "shinycssloaders",
-      "Version": "1.0.0",
+      "Version": "1.1.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1253,9 +1253,10 @@
         "digest",
         "glue",
         "grDevices",
+        "htmltools",
         "shiny"
       ],
-      "Hash": "f39bb3c44a9b496723ec7e86f9a771d8"
+      "Hash": "2b45a467a30d6a88a1892a738c0900cf"
     },
     "shinyjs": {
       "Package": "shinyjs",
@@ -1479,14 +1480,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.1.9005",
+      "Version": "0.5.1.9006",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "4366cf9ad01a97210d03e4f776215a758e0b69ff",
+      "RemoteSha": "29e2952cac630cab96ba3293ed0bec3ec620f9c5",
       "Requirements": [
         "R",
         "R6",
@@ -1509,7 +1510,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "de2c8be53b7eec1e5514e639f6b1c71d"
+      "Hash": "b1d808eacdb964c26720a103b940854d"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
