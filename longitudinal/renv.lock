@@ -2543,7 +2543,7 @@
     },
     "shinycssloaders": {
       "Package": "shinycssloaders",
-      "Version": "1.0.0",
+      "Version": "1.1.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2551,9 +2551,10 @@
         "digest",
         "glue",
         "grDevices",
+        "htmltools",
         "shiny"
       ],
-      "Hash": "f39bb3c44a9b496723ec7e86f9a771d8"
+      "Hash": "2b45a467a30d6a88a1892a738c0900cf"
     },
     "shinyjs": {
       "Package": "shinyjs",
@@ -2747,14 +2748,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.1.15.9028",
+      "Version": "0.2.0.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "2889fc6dfd5af5a5c52db19382127d39926ea3d4",
+      "RemoteSha": "a783b1021024b092f14bbb85be01895e86d5401d",
       "Requirements": [
         "DT",
         "R",
@@ -2778,7 +2779,7 @@
         "teal.transform",
         "teal.widgets"
       ],
-      "Hash": "8695260f15f42fc223c363de8578bc8f"
+      "Hash": "6db0bc6c3ef2dd5d85fe0f5ba13a137d"
     },
     "teal.logger": {
       "Package": "teal.logger",
