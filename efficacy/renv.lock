@@ -2279,9 +2279,9 @@
     },
     "shiny": {
       "Package": "shiny",
-      "Version": "1.9.0",
+      "Version": "1.9.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -2308,7 +2308,7 @@
         "withr",
         "xtable"
       ],
-      "Hash": "01666113b04d504390d60736f39bd0d0"
+      "Hash": "6a293995a66e12c48d13aa1f957d09c7"
     },
     "shinyTree": {
       "Package": "shinyTree",
@@ -2604,14 +2604,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.1.9014",
+      "Version": "0.9.1.9015",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "a3ed80f14812350c44b939db7edda32b2715171c",
+      "RemoteSha": "29298dbaf17bb956d7506e84732b24414cf062f2",
       "Requirements": [
         "DT",
         "R",
@@ -2646,7 +2646,7 @@
         "utils",
         "vistime"
       ],
-      "Hash": "632993146a5f74bd2f567f1aaec5c70b"
+      "Hash": "e58aaa032c7ef9215cf6932f678c80ba"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
