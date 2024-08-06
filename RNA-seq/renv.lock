@@ -2159,21 +2159,21 @@
     },
     "nestcolor": {
       "Package": "nestcolor",
-      "Version": "0.1.2.9010",
+      "Version": "0.1.2.9011",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "nestcolor",
       "RemoteRef": "main",
-      "RemoteSha": "6f1b5ed6f6ba44fb98d7c2fe725ca0bbcc30f9bf",
+      "RemoteSha": "a0bcf52e64b3b13e986c076710254c6f1d576705",
       "Requirements": [
         "R",
         "checkmate",
         "ggplot2",
         "lifecycle"
       ],
-      "Hash": "6400adc3ab6bade398dff8af114ed222"
+      "Hash": "869ba14f82f02ccc52ec4e69ae479c0a"
     },
     "nlme": {
       "Package": "nlme",
@@ -2938,14 +2938,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.2.0.9005",
+      "Version": "0.2.0.9006",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "7f6cec3c2acd7c1ee430a714f370466fa2575eb9",
+      "RemoteSha": "d89dcf6acf56bf19a4c2b77f4a0e3f59a08ced42",
       "Requirements": [
         "R",
         "glue",
@@ -2956,7 +2956,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "dbc1e738b8d99d7d9f79064136af78e8"
+      "Hash": "00229fbe7d6eff242ebdf2774237b49c"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
