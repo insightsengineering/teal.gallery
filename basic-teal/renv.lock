@@ -1351,14 +1351,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9049",
+      "Version": "0.15.2.9050",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "74696b61c439ec2ed17aae27dc33314d8963a988",
+      "RemoteSha": "8ba7e31a236de47186a1ef50502b0b88bce1a35e",
       "Requirements": [
         "R",
         "checkmate",
@@ -1382,7 +1382,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "6c11685940419cc26717fe291272539d"
+      "Hash": "953686b371d8bebd8c0c2ba4bfd7b7e9"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -1480,14 +1480,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.1.9007",
+      "Version": "0.5.1.9008",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "d5c18f46b2f7deabf9b575c848a6d81926d76b5e",
+      "RemoteSha": "3cb84288e9379300567e60543ef28e334621bb05",
       "Requirements": [
         "R",
         "R6",
@@ -1510,18 +1510,18 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "1e7105cf4ded61e125502d9ef2902c95"
+      "Hash": "06347f4f66522bba9719a5946b765707"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.2.9016",
+      "Version": "0.4.2.9017",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "761b2d7e30e4843e376c7a2a72fbe0ad01ebf858",
+      "RemoteSha": "cc8faa983bdc4396fa073f97d6b4828cff1c50bb",
       "Requirements": [
         "R",
         "bslib",
@@ -1538,7 +1538,7 @@
         "shinyjs",
         "styler"
       ],
-      "Hash": "638f41b7971f6fe505598d219466997c"
+      "Hash": "07a1c3f1c556110abf091bf8e53a0de1"
     },
     "textshaping": {
       "Package": "textshaping",
