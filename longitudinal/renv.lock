@@ -293,9 +293,9 @@
     },
     "Rdpack": {
       "Package": "Rdpack",
-      "Version": "2.6",
+      "Version": "2.6.1",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "methods",
@@ -303,7 +303,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "3e1384ada5d3948b392e98b11434d972"
+      "Hash": "24a964d2cf75ad25d7b843856c8d4c93"
     },
     "SparseM": {
       "Package": "SparseM",
@@ -2748,14 +2748,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.2.0.9000",
+      "Version": "0.2.0.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "a783b1021024b092f14bbb85be01895e86d5401d",
+      "RemoteSha": "8a0968cf32b88facbb41c2565e514ac2e923d73d",
       "Requirements": [
         "DT",
         "R",
@@ -2779,7 +2779,7 @@
         "teal.transform",
         "teal.widgets"
       ],
-      "Hash": "6db0bc6c3ef2dd5d85fe0f5ba13a137d"
+      "Hash": "7539bbe0f145e4b9bb14a552d5d76c78"
     },
     "teal.logger": {
       "Package": "teal.logger",
