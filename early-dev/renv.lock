@@ -293,9 +293,9 @@
     },
     "Rdpack": {
       "Package": "Rdpack",
-      "Version": "2.6",
+      "Version": "2.6.1",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "methods",
@@ -303,7 +303,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "3e1384ada5d3948b392e98b11434d972"
+      "Hash": "24a964d2cf75ad25d7b843856c8d4c93"
     },
     "SparseM": {
       "Package": "SparseM",
@@ -2798,14 +2798,14 @@
     },
     "teal.osprey": {
       "Package": "teal.osprey",
-      "Version": "0.1.16.9023",
+      "Version": "0.1.16.9024",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.osprey",
       "RemoteRef": "main",
-      "RemoteSha": "d8d8ee1ff337191936a62c6548d2394506582cce",
+      "RemoteSha": "d072d2f500b859116cd6e1d914efc19126f82ce2",
       "Requirements": [
         "R",
         "checkmate",
@@ -2825,7 +2825,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "09dbfb05a94f98f81a10462e249d2fc4"
+      "Hash": "cb51603da26a87ee0dde746dd35d56d9"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
