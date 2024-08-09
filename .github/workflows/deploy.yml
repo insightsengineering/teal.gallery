@@ -10,6 +10,8 @@ on:
     paths:
       - RNA-seq/**
       - basic-teal/**
+      - delayed-data/**
+      - custom-transform/**
       - efficacy/**
       - exploratory/**
       - longitudinal/**
@@ -45,6 +47,8 @@ jobs:
         directory:
           - RNA-seq
           - basic-teal
+          - delayed-data
+          - custom-transform
           - efficacy
           - exploratory
           - longitudinal

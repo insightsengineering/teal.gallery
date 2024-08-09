@@ -2,6 +2,8 @@
   deployment_server: https://genentech.shinyapps.io/
   apps:
     - title: basic-teal
+    - title: delayed-data
+    - title: custom-transform
     - title: exploratory
     - title: safety
     - title: efficacy

@@ -13,19 +13,19 @@ A gallery of sample apps based on the [`teal`](https://github.com/insightsengine
 
 The Stable version of the apps use the latest released packages while the dev version of the apps use the development packages which are installed from the `main` branch of the respective package repository. The specific versions used can be seen in the `Session Info` of the deployed app.
 
-
-| Stable version                                    | Dev version                                     |
-|---------------------------------------------------|-------------------------------------------------|
-| [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_stable/)          | [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_dev/)         |
-| [exploratory](https://genentech.shinyapps.io/NEST_exploratory_stable/)        | [exploratory](https://genentech.shinyapps.io/NEST_exploratory_dev/)       |
-| [safety](https://genentech.shinyapps.io/NEST_safety_stable/)                  | [safety](https://genentech.shinyapps.io/NEST_safety_dev/)                 |
-| [efficacy](https://genentech.shinyapps.io/NEST_efficacy_stable/)              | [efficacy](https://genentech.shinyapps.io/NEST_efficacy_dev/)             |
-| [patient-profile](https://genentech.shinyapps.io/NEST_patient-profile_stable/) | [patient-profile](https://genentech.shinyapps.io/NEST_patient-profile_dev/)|
-| [early-dev](https://genentech.shinyapps.io/NEST_early-dev_stable/)             | [early-dev](https://genentech.shinyapps.io/NEST_early-dev_dev/)           |
-| [longitudinal](https://genentech.shinyapps.io/NEST_longitudinal_stable/)       | [longitudinal](https://genentech.shinyapps.io/NEST_longitudinal_dev/)     |
-| [RNA-seq](https://genentech.shinyapps.io/NEST_RNA-seq_stable/)                 | [RNA-seq](https://genentech.shinyapps.io/NEST_RNA-seq_dev/)               |
-| [python](https://genentech.shinyapps.io/NEST_python_stable/)                   | [python](https://genentech.shinyapps.io/NEST_python_dev/)                 |
-
+| Stable version                                                                   | Dev version                                                                   |
+| -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_stable/)             | [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_dev/)             |
+| [delayed-data](https://genentech.shinyapps.io/NEST_delayed-data_stable/)         | [delayed-data](https://genentech.shinyapps.io/NEST_delayed-data_dev/)         |
+| [custom-transform](https://genentech.shinyapps.io/NEST_custom-transform_stable/) | [custom-transform](https://genentech.shinyapps.io/NEST_custom-transform_dev/) |
+| [exploratory](https://genentech.shinyapps.io/NEST_exploratory_stable/)           | [exploratory](https://genentech.shinyapps.io/NEST_exploratory_dev/)           |
+| [safety](https://genentech.shinyapps.io/NEST_safety_stable/)                     | [safety](https://genentech.shinyapps.io/NEST_safety_dev/)                     |
+| [efficacy](https://genentech.shinyapps.io/NEST_efficacy_stable/)                 | [efficacy](https://genentech.shinyapps.io/NEST_efficacy_dev/)                 |
+| [patient-profile](https://genentech.shinyapps.io/NEST_patient-profile_stable/)   | [patient-profile](https://genentech.shinyapps.io/NEST_patient-profile_dev/)   |
+| [early-dev](https://genentech.shinyapps.io/NEST_early-dev_stable/)               | [early-dev](https://genentech.shinyapps.io/NEST_early-dev_dev/)               |
+| [longitudinal](https://genentech.shinyapps.io/NEST_longitudinal_stable/)         | [longitudinal](https://genentech.shinyapps.io/NEST_longitudinal_dev/)         |
+| [RNA-seq](https://genentech.shinyapps.io/NEST_RNA-seq_stable/)                   | [RNA-seq](https://genentech.shinyapps.io/NEST_RNA-seq_dev/)                   |
+| [python](https://genentech.shinyapps.io/NEST_python_stable/)                     | [python](https://genentech.shinyapps.io/NEST_python_dev/)                     |
 
 ## Running the apps
 
@@ -74,5 +74,5 @@ Adding a sample app involves the following steps:
 #### Optional/Soft requirements
 
 1. You can snapshot the teal app dependencies using `{renv}` but make sure to snapshot using GitHub references to the teal packages.
-2. Create a GIF recording ([KAP](https://getkap.co/) is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. (It can be done by recording using KAP in 1470x840 px and rendering 5fps and downsizing 33%). Place the GIF inside the `_internal/quarto/assets/img` directory. Also, make sure that the name of the GIF is `APP_NAME.gif`. Also, make sure to place a static image with the name dimention called `APP_NAME.png` that will be displayed in the demo page when the card is not hovered.
+2. Create a GIF recording ([LICEcap](https://www.cockos.com/licecap/) is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. Place the GIF inside the `_internal/quarto/assets/img` directory. Also, make sure that the name of the GIF is `APP_NAME.gif`. Also, make sure to place a static image with the name dimention called `APP_NAME.png` that will be displayed in the demo page when the card is not hovered.
 3. Add front-end tests with the help of cypress. Copy the contents of the `js` directory within some other app's directory inside your app directory to get the node dependencies. Place the cypress tests inside the `tests/cypress` inside your app's directory. Please refer to an existing app's tests so that the `.github/deploy.yaml` will automaticall run the cypress tests.
