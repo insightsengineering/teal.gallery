@@ -40,11 +40,7 @@ jobs:
     container:
       image: ghcr.io/insightsengineering/rstudio:2024.03.05
     if: >
-      !contains(github.event.commits[0].message, '[skip deploy]') &&
-      !(
-        matrix.channel == 'main' &&
-        (matrix.directory == 'delayed-data' || matrix.directory == 'custom-transform')
-      )
+      !contains(github.event.commits[0].message, '[skip deploy]')
     strategy:
       fail-fast: false
       matrix:
@@ -69,6 +65,15 @@ jobs:
           echo "BRANCH_NAME=dev" >> $GITHUB_ENV
           if [ "${{ matrix.channel }}" == "stable" ]; then
             echo "BRANCH_NAME=main" >> $GITHUB_ENV
+          fi
+
+      - name: Check if deployment should be skipped
+        id: skip_check
+        run: |
+          if [[ "${{ matrix.channel }}" == "dev" && ("${{ matrix.directory }}" == "delayed-data" || "${{ matrix.directory }}" == "custom-transform") ]]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
           fi
 
       - name: Setup job token 🔑
@@ -158,6 +163,7 @@ jobs:
 
       - name: Install R packages using renv and update the renv snapshot
         shell: Rscript {0}
+        if: steps.skip_check.outputs.skip == 'false'
         working-directory: ${{ matrix.directory }}
         run: |
           options(renv.config.cache.symlinks = FALSE)
@@ -172,7 +178,7 @@ jobs:
         run: cat renv.lock
 
       - name: Front end test to check if the app works fine
-        if: steps.find-cypress.outputs.has-cypress-tests == 'true'
+        if: steps.find-cypress.outputs.has-cypress-tests == 'true' && steps.skip_check.outputs.skip == 'false'
         uses: cypress-io/github-action@v6
         with:
           build: npm install cypress --save-dev
@@ -183,12 +189,14 @@ jobs:
 
       - name: Install deployment-related R package dependencies
         shell: Rscript {0}
+        if: steps.skip_check.outputs.skip == 'false'
         working-directory: ${{ matrix.directory }}
         run: |
           install.packages(c("BiocManager", "rsconnect"))
 
       - name: Deploy 🖨 ${{ matrix.directory }} 🎨
         shell: Rscript {0}
+        if: steps.skip_check.outputs.skip == 'false'
         working-directory: ${{ matrix.directory }}
         run: |
           rsconnect::setAccountInfo(
@@ -209,6 +217,7 @@ jobs:
           )
 
       - name: Commit and push changes 📌
+        if: steps.skip_check.outputs.skip == 'false'
         run: |
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions"
