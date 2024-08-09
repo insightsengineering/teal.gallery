@@ -16,8 +16,8 @@ The Stable version of the apps use the latest released packages while the dev ve
 | Stable version                                                                   | Dev version                                                                   |
 | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_stable/)             | [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_dev/)             |
-| [delayed-data](https://genentech.shinyapps.io/NEST_delayed-data_stable/)         | [delayed-data](https://genentech.shinyapps.io/NEST_delayed-data_dev/)         |
-| [custom-transform](https://genentech.shinyapps.io/NEST_custom-transform_stable/) | [custom-transform](https://genentech.shinyapps.io/NEST_custom-transform_dev/) |
+| delayed-data - NOT DEPLOYED         | [delayed-data](https://genentech.shinyapps.io/NEST_delayed-data_dev/)         |
+| custom-transform - NOT DEPLOYED | [custom-transform](https://genentech.shinyapps.io/NEST_custom-transform_dev/) |
 | [exploratory](https://genentech.shinyapps.io/NEST_exploratory_stable/)           | [exploratory](https://genentech.shinyapps.io/NEST_exploratory_dev/)           |
 | [safety](https://genentech.shinyapps.io/NEST_safety_stable/)                     | [safety](https://genentech.shinyapps.io/NEST_safety_dev/)                     |
 | [efficacy](https://genentech.shinyapps.io/NEST_efficacy_stable/)                 | [efficacy](https://genentech.shinyapps.io/NEST_efficacy_dev/)                 |

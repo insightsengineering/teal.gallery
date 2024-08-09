@@ -40,7 +40,11 @@ jobs:
     container:
       image: ghcr.io/insightsengineering/rstudio:2024.03.05
     if: >
-      !contains(github.event.commits[0].message, '[skip deploy]')
+      !contains(github.event.commits[0].message, '[skip deploy]') &&
+      !(
+        matrix.channel == 'main' &&
+        (matrix.directory == 'delayed-data' || matrix.directory == 'custom-transform')
+      )
     strategy:
       fail-fast: false
       matrix:
