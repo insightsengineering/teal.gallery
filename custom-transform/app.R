@@ -2,7 +2,7 @@ library(teal)
 
 my_transformers <- list(
   teal_transform_module(
-    label = "Keep first 6 from IRIS",
+    label = "Keep first n-observations from IRIS",
     ui = function(id) {
       ns <- NS(id)
       div(
