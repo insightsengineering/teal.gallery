@@ -39,7 +39,7 @@ my_transformers <- list(
         iv$add_rule("merge_a", shinyvalidate::sv_required("Please select dataset A"))
         iv$add_rule("merge_b", shinyvalidate::sv_required("Please select dataset B"))
         iv$enable()
-        
+
         reactive_datanames <- reactive({
           req(data())
           teal.data::datanames(data())
@@ -63,15 +63,14 @@ my_transformers <- list(
             selected = restoreInput(session$ns("merge_b"), selected_b)
           )
         })
-        
-        
+
         reactive({
-          req(merge_a(), merge_b())
+          req(input$merge_a, input$merge_b)
           new_data <- within(
             data(),
             ANL <- dplyr::left_join(merge_a, merge_b),
-            merge_a = as.name(merge_a()),
-            merge_b = as.name(merge_b())
+            merge_a = as.name(input$merge_a),
+            merge_b = as.name(input$merge_b)
           )
           teal.data::datanames(new_data) <- c(teal.data::datanames(new_data), "ANL")
           new_data
@@ -82,17 +81,15 @@ my_transformers <- list(
 )
 
 data <- teal_data() %>%
-  within(
-    {
-      ADSL <- teal.data::rADSL
-      ADTTE <- teal.data::rADTTE
-      iris <- iris
+  within({
+    ADSL <- teal.data::rADSL
+    ADTTE <- teal.data::rADTTE
+    iris <- iris
 
-      CO2 <- CO2
-      factors <- names(Filter(isTRUE, vapply(CO2, is.factor, logical(1L))))
-      CO2[factors] <- lapply(CO2[factors], as.character)
-    }
-  )
+    CO2 <- CO2
+    factors <- names(Filter(isTRUE, vapply(CO2, is.factor, logical(1L))))
+    CO2[factors] <- lapply(CO2[factors], as.character)
+  })
 join_keys(data) <- default_cdisc_join_keys[c("ADSL", "ADTTE")]
 teal.data::datanames(data) <- c("ADSL", "ADTTE", "iris", "CO2")
 
