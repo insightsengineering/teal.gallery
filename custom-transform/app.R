@@ -68,11 +68,12 @@ my_transformers <- list(
         merge_b <- reactive(input$merge_b)
         
         reactive({
+          req(merge_a(), merge_b())
           new_data <- within(
             data(),
             ANL <- dplyr::left_join(merge_a, merge_b),
-            merge_a = tryCatch(as.name(merge_a()), error = function(e) as.name("DatasetA")),
-            merge_b = tryCatch(as.name(merge_b()), error = function(e) as.name("DatasetA"))
+            merge_a = as.name(merge_a()),
+            merge_b = as.name(merge_b())
           )
           teal.data::datanames(new_data) <- c(teal.data::datanames(new_data), "ANL")
           new_data
