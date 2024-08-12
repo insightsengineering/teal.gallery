@@ -64,8 +64,6 @@ my_transformers <- list(
           )
         })
         
-        merge_a <- reactive(input$merge_a)
-        merge_b <- reactive(input$merge_b)
         
         reactive({
           req(merge_a(), merge_b())
