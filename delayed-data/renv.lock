@@ -1346,14 +1346,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9050",
+      "Version": "0.15.2.9052",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal",
       "RemoteUsername": "insightsengineering",
-      "RemoteRef": "669_insertUI@main",
-      "RemoteSha": "049273d7e7e1ffa135a856612ec93936235face4",
+      "RemoteRepo": "teal",
+      "RemoteRef": "main",
+      "RemoteSha": "9c6d38ce05fd6f6ce0741038a4d04106fb82ae61",
       "Requirements": [
         "R",
         "checkmate",
@@ -1361,7 +1361,6 @@
         "jsonlite",
         "lifecycle",
         "logger",
-        "magrittr",
         "methods",
         "promises",
         "renv",
@@ -1377,7 +1376,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "0366835734e04a95157991d37cbe6cb5"
+      "Hash": "6804ac30d96e35c9db89e8c2791be850"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -1401,14 +1400,14 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.6.0.9005",
+      "Version": "0.6.0.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.data",
       "RemoteUsername": "insightsengineering",
-      "RemoteRef": "669_insertUI@main",
-      "RemoteSha": "b9dd005484e2f9c7a95a8523f9e95109ddd295ec",
+      "RemoteRepo": "teal.data",
+      "RemoteRef": "main",
+      "RemoteSha": "bd7edb83d2735b87c2c4c6653fb7ca9dd0436b82",
       "Requirements": [
         "R",
         "checkmate",
@@ -1419,7 +1418,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "f1937915f5580f9785ef265f5919225c"
+      "Hash": "4383efee11c829a0448c44a19dd6e0af"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -1475,14 +1474,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.1.9008",
+      "Version": "0.5.1.9009",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.slice",
       "RemoteUsername": "insightsengineering",
-      "RemoteRef": "669_insertUI@main",
-      "RemoteSha": "1b024376f76e94c34bf7c8e7405cce8773a3f3a5",
+      "RemoteRepo": "teal.slice",
+      "RemoteRef": "main",
+      "RemoteSha": "2782f1bd2d24db11c3b4191cf2fc7b054f0737ae",
       "Requirements": [
         "R",
         "R6",
@@ -1505,7 +1504,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "38256c22795ae3911fe56868edc6d04f"
+      "Hash": "ef54a9e3dce14f1f2c13430274465ad1"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
