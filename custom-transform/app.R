@@ -80,16 +80,15 @@ my_transformers <- list(
   )
 )
 
-data <- teal_data() %>%
-  within({
-    ADSL <- teal.data::rADSL
-    ADTTE <- teal.data::rADTTE
-    iris <- iris
-
-    CO2 <- CO2
-    factors <- names(Filter(isTRUE, vapply(CO2, is.factor, logical(1L))))
-    CO2[factors] <- lapply(CO2[factors], as.character)
-  })
+data <- teal_data()
+data <- within(data, {
+  ADSL <- teal.data::rADSL
+  ADTTE <- teal.data::rADTTE
+  iris <- iris
+  CO2 <- CO2
+  factors <- names(Filter(isTRUE, vapply(CO2, is.factor, logical(1L))))
+  CO2[factors] <- lapply(CO2[factors], as.character)
+})
 join_keys(data) <- default_cdisc_join_keys[c("ADSL", "ADTTE")]
 teal.data::datanames(data) <- c("ADSL", "ADTTE", "iris", "CO2")
 
