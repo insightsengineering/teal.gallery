@@ -70,7 +70,7 @@ jobs:
       - name: Check if deployment should be skipped
         id: skip_check
         run: |
-          if [[ "${{ matrix.channel }}" != "main" && ("${{ matrix.directory }}" == "delayed-data" || "${{ matrix.directory }}" == "custom-transform") ]]; then
+          if [[ "${{ matrix.channel }}" == "stable" && ("${{ matrix.directory }}" == "delayed-data" || "${{ matrix.directory }}" == "custom-transform") ]]; then
             echo "skip=true" >> $GITHUB_OUTPUT
             echo "Skipping deployment for ${{ matrix.directory }} app."
           else
