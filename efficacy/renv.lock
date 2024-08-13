@@ -1621,7 +1621,7 @@
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "424810d88b0507e9e88242b61d343852358b2df2",
+      "RemoteSha": "2de9c871c190dfbec1358b8ef6709c234b2cdad1",
       "Requirements": [
         "Matrix",
         "R",
@@ -1641,7 +1641,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "a15a8b9523ef5c569b8dc335c8d188fd"
+      "Hash": "8263ccf2298553523d7227bc9b86c437"
     },
     "modelr": {
       "Package": "modelr",
@@ -2560,14 +2560,14 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.6.0.9006",
+      "Version": "0.6.0.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "b8f4522142075331f98b461b7a16f01edea88403",
+      "RemoteSha": "bd7edb83d2735b87c2c4c6653fb7ca9dd0436b82",
       "Requirements": [
         "R",
         "checkmate",
@@ -2578,7 +2578,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "aec711062da5b67174af78a3b4721438"
+      "Hash": "4383efee11c829a0448c44a19dd6e0af"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -2722,14 +2722,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.1.9008",
+      "Version": "0.5.1.9009",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "3cb84288e9379300567e60543ef28e334621bb05",
+      "RemoteSha": "2782f1bd2d24db11c3b4191cf2fc7b054f0737ae",
       "Requirements": [
         "R",
         "R6",
@@ -2752,7 +2752,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "06347f4f66522bba9719a5946b765707"
+      "Hash": "ef54a9e3dce14f1f2c13430274465ad1"
     },
     "teal.transform": {
       "Package": "teal.transform",
@@ -2814,14 +2814,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.5.9012",
+      "Version": "0.9.5.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "41ce0132f4ec181740bacd1b9dac1dbe44ca223f",
+      "RemoteSha": "afe9767025e94421779a15195c5a761ca110b7fc",
       "Requirements": [
         "MASS",
         "R",
@@ -2851,7 +2851,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "db261635a412d0e0ecdba9bce070a88f"
+      "Hash": "b66b9d10c675394e55e00af9e3d0b3c8"
     },
     "tern.gee": {
       "Package": "tern.gee",
