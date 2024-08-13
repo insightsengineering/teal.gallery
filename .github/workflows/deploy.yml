@@ -70,10 +70,12 @@ jobs:
       - name: Check if deployment should be skipped
         id: skip_check
         run: |
-          if [[ "${{ matrix.channel }}" == "dev" && ("${{ matrix.directory }}" == "delayed-data" || "${{ matrix.directory }}" == "custom-transform") ]]; then
+          if [[ "${{ matrix.channel }}" != "main" && ("${{ matrix.directory }}" == "delayed-data" || "${{ matrix.directory }}" == "custom-transform") ]]; then
             echo "skip=true" >> $GITHUB_OUTPUT
+            echo "Skipping deployment for ${{ matrix.directory }} app."
           else
             echo "skip=false" >> $GITHUB_OUTPUT
+            echo "Proceeding with deployment for ${{ matrix.directory }} app."
           fi
 
       - name: Setup job token 🔑
@@ -91,7 +93,7 @@ jobs:
       - name: Checkout repo 🛎
         uses: actions/checkout@v4
         with:
-          ref: "${{ env.BRANCH_NAME }}"
+          ref: "669_insertUI@dev"
           token: "${{ steps.github-token.outputs.token }}"
 
       - name: Add safe directory in git config
