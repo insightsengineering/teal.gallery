@@ -1838,7 +1838,7 @@
     },
     "nlme": {
       "Package": "nlme",
-      "Version": "3.1-165",
+      "Version": "3.1-166",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -1848,7 +1848,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "2769a88be217841b1f33ed469675c3cc"
+      "Hash": "ccbb8846be320b627e6aa2b4616a2ded"
     },
     "nloptr": {
       "Package": "nloptr",
@@ -2709,14 +2709,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9052",
+      "Version": "0.15.2.9054",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "9c6d38ce05fd6f6ce0741038a4d04106fb82ae61",
+      "RemoteSha": "7eac4d58a5373aa511f363a2f259d850749501f7",
       "Requirements": [
         "R",
         "checkmate",
@@ -2739,7 +2739,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "6804ac30d96e35c9db89e8c2791be850"
+      "Hash": "5b55073253900accd6e452b16e2c50bc"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2807,14 +2807,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.1.9018",
+      "Version": "0.9.1.9019",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "6d964f3515d16b4584dec563a215adf826fbb9b9",
+      "RemoteSha": "26bca2129abed05b567f43cd65de3c9cf07733f0",
       "Requirements": [
         "DT",
         "R",
@@ -2849,18 +2849,18 @@
         "utils",
         "vistime"
       ],
-      "Hash": "eb5401b91ba07d4697f74c30dd5d70a1"
+      "Hash": "66812e0813f6ef06844e6ee32a851a31"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9039",
+      "Version": "0.3.0.9040",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "74b71af578cd72e3716caa21e780ac2ea5cfad77",
+      "RemoteSha": "5ac52a5575b236a4c0e8bd7200fadcdbb1fd7d0c",
       "Requirements": [
         "DT",
         "R",
@@ -2891,7 +2891,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "c9c7f1afe8f716b5de90f3c17b5009e2"
+      "Hash": "a56c8a50ebf1e3f1a610fe407acc0e1f"
     },
     "teal.osprey": {
       "Package": "teal.osprey",
@@ -2926,14 +2926,14 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.1.9010",
+      "Version": "0.3.1.9011",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "2f69b86f2a2d61449a5c8fb8f187139a6569ac38",
+      "RemoteSha": "4d64b76a68e2e2fbc670f3edc90bdf2031dda5b8",
       "Requirements": [
         "R6",
         "bslib",
@@ -2952,18 +2952,18 @@
         "yaml",
         "zip"
       ],
-      "Hash": "bc4e9e485b54198d3b98bd7b55736e88"
+      "Hash": "9f44d57c3dc97375f245eebfe23533e6"
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.1.9009",
+      "Version": "0.5.1.9010",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "2782f1bd2d24db11c3b4191cf2fc7b054f0737ae",
+      "RemoteSha": "e1e3578297a086d05c4cfc99fbe2870daae0de6d",
       "Requirements": [
         "R",
         "R6",
@@ -2986,7 +2986,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "ef54a9e3dce14f1f2c13430274465ad1"
+      "Hash": "202d78a9eb064ec0c297e8b88349f984"
     },
     "teal.transform": {
       "Package": "teal.transform",
