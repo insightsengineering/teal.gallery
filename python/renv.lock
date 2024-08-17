@@ -219,16 +219,16 @@
     },
     "RcppEigen": {
       "Package": "RcppEigen",
-      "Version": "0.3.4.0.0",
+      "Version": "0.3.4.0.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "Rcpp",
         "stats",
         "utils"
       ],
-      "Hash": "df49e3306f232ec28f1604e36a202847"
+      "Hash": "598ee071e758b5f667b0ebe83f5d5085"
     },
     "RcppTOML": {
       "Package": "RcppTOML",
@@ -1587,13 +1587,13 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.2.0",
+      "Version": "2.2.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "askpass"
       ],
-      "Hash": "2bcca3848e4734eb3b16103bc9aa4b8e"
+      "Hash": "c62edf62de70cadf40553e10c739049d"
     },
     "parallelly": {
       "Package": "parallelly",
@@ -2211,14 +2211,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9055",
+      "Version": "0.15.2.9056",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "86a9082cdefebb9cd9a3bd6604af6f77d986a20b",
+      "RemoteSha": "9e94ef42b4b30d16fc2bbd86d072577d232e2916",
       "Requirements": [
         "R",
         "checkmate",
@@ -2241,7 +2241,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "7f8dba693f830329ca2109cd0fdca1db"
+      "Hash": "cfaa104f863406c98c043381aeb30624"
     },
     "teal.code": {
       "Package": "teal.code",
