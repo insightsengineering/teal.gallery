@@ -1663,13 +1663,13 @@
     },
     "minqa": {
       "Package": "minqa",
-      "Version": "1.2.7",
+      "Version": "1.2.8",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "Rcpp"
       ],
-      "Hash": "aba060ef3c097b26a4d304ea39d87f32"
+      "Hash": "785ef8e22389d4a7634c6c944f2dc07d"
     },
     "mmrm": {
       "Package": "mmrm",
@@ -1743,14 +1743,14 @@
     },
     "mvtnorm": {
       "Package": "mvtnorm",
-      "Version": "1.2-5",
+      "Version": "1.2-6",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "stats"
       ],
-      "Hash": "4d1891e59ac7a12b4e7e8a69349125f1"
+      "Hash": "b5b11e71e41d9d0eef7d8dc26903ed55"
     },
     "nestcolor": {
       "Package": "nestcolor",
@@ -2294,7 +2294,7 @@
     },
     "rmarkdown": {
       "Package": "rmarkdown",
-      "Version": "2.27",
+      "Version": "2.28",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2313,7 +2313,7 @@
         "xfun",
         "yaml"
       ],
-      "Hash": "27f9502e1cdbfa195f94e03b0f517484"
+      "Hash": "062470668513dcda416927085ee9bdc7"
     },
     "rootSolve": {
       "Package": "rootSolve",
@@ -3281,15 +3281,16 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.46",
+      "Version": "0.47",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
+        "R",
         "grDevices",
         "stats",
         "tools"
       ],
-      "Hash": "00ce32f398db0415dde61abfef11300c"
+      "Hash": "36ab21660e2d095fef0d83f689e0477c"
     },
     "xml2": {
       "Package": "xml2",
