@@ -704,14 +704,14 @@
     },
     "digest": {
       "Package": "digest",
-      "Version": "0.6.36",
+      "Version": "0.6.37",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "fd6824ad91ede64151e93af67df6376b"
+      "Hash": "33698c4b3127fc9f506654607fb73676"
     },
     "doBy": {
       "Package": "doBy",
@@ -1700,21 +1700,21 @@
     },
     "nestcolor": {
       "Package": "nestcolor",
-      "Version": "0.1.2.9011",
+      "Version": "0.1.2.9012",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "nestcolor",
       "RemoteRef": "main",
-      "RemoteSha": "a0bcf52e64b3b13e986c076710254c6f1d576705",
+      "RemoteSha": "96deb2b41c03bfe5e6c01179452584e8a53daa3e",
       "Requirements": [
         "R",
         "checkmate",
         "ggplot2",
         "lifecycle"
       ],
-      "Hash": "869ba14f82f02ccc52ec4e69ae479c0a"
+      "Hash": "08df0859c46abe074dcdb9317636e124"
     },
     "nlme": {
       "Package": "nlme",
@@ -2638,14 +2638,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9040",
+      "Version": "0.3.0.9041",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "5ac52a5575b236a4c0e8bd7200fadcdbb1fd7d0c",
+      "RemoteSha": "45eaf8f9cd04b1c420f08eac8789b5bd6c8d50db",
       "Requirements": [
         "DT",
         "R",
@@ -2676,18 +2676,18 @@
         "tools",
         "utils"
       ],
-      "Hash": "a56c8a50ebf1e3f1a610fe407acc0e1f"
+      "Hash": "1f1b6ed697438504504912b29661868a"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.1.9011",
+      "Version": "0.3.1.9012",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "4d64b76a68e2e2fbc670f3edc90bdf2031dda5b8",
+      "RemoteSha": "e24db5169585d54d2c12acef329e0320309c9908",
       "Requirements": [
         "R6",
         "bslib",
@@ -2706,7 +2706,7 @@
         "yaml",
         "zip"
       ],
-      "Hash": "9f44d57c3dc97375f245eebfe23533e6"
+      "Hash": "93209b5b22745dd96061d7052ff643c3"
     },
     "teal.slice": {
       "Package": "teal.slice",
@@ -2744,14 +2744,14 @@
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.5.0.9009",
+      "Version": "0.5.0.9010",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.transform",
       "RemoteRef": "main",
-      "RemoteSha": "016799c641e9079a4893a95d825d803cd82f6dda",
+      "RemoteSha": "91b4026386f5c9a2ab6778217fcac27820cc23d2",
       "Requirements": [
         "R",
         "checkmate",
@@ -2770,7 +2770,7 @@
         "tidyr",
         "tidyselect"
       ],
-      "Hash": "082ba3796ac72b16ea1f2a3dd86dd85c"
+      "Hash": "5f2e7bd09c0d45e6aa4ec82bb866ff11"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
@@ -2867,14 +2867,14 @@
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
-      "Version": "0.3.1.9001",
+      "Version": "0.3.1.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "7a9ab7989b7963cffca1f485423be7f53c0d70ff",
+      "RemoteSha": "7ee55dc2c06bbf6a68ed03cf6cf2f6943a8f625b",
       "Requirements": [
         "R",
         "checkmate",
@@ -2894,7 +2894,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "39038ef62be67d72ca1e4ed324e266c4"
+      "Hash": "a279a509cad424b5aa80e9e8ff4fb471"
     },
     "testthat": {
       "Package": "testthat",
