@@ -770,14 +770,14 @@
     },
     "digest": {
       "Package": "digest",
-      "Version": "0.6.36",
+      "Version": "0.6.37",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "fd6824ad91ede64151e93af67df6376b"
+      "Hash": "33698c4b3127fc9f506654607fb73676"
     },
     "doBy": {
       "Package": "doBy",
@@ -883,14 +883,14 @@
     },
     "expm": {
       "Package": "expm",
-      "Version": "0.999-9",
+      "Version": "1.0-0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "Matrix",
         "methods"
       ],
-      "Hash": "a9cfdee9645dd6b09ba8d4b9a9befa77"
+      "Hash": "a44b2810f36c1cda5d52eee6ec96cafa"
     },
     "fansi": {
       "Package": "fansi",
@@ -1276,14 +1276,14 @@
     },
     "goshawk": {
       "Package": "goshawk",
-      "Version": "0.1.18.9000",
+      "Version": "0.1.18.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "87a7e9d0ac8b592069d78b895eb69e04aed955e0",
+      "RemoteSha": "29891bb517336d25bc695db9d8424855d32db8a4",
       "Requirements": [
         "R",
         "checkmate",
@@ -1299,7 +1299,7 @@
         "rlang",
         "stringr"
       ],
-      "Hash": "4160ba2adb225d836443c6c65be754ec"
+      "Hash": "4227b9d9dcfa9f4bf16556963e4e792a"
     },
     "gridExtra": {
       "Package": "gridExtra",
