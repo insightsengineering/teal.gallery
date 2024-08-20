@@ -335,14 +335,14 @@
     },
     "digest": {
       "Package": "digest",
-      "Version": "0.6.36",
+      "Version": "0.6.37",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "fd6824ad91ede64151e93af67df6376b"
+      "Hash": "33698c4b3127fc9f506654607fb73676"
     },
     "dplyr": {
       "Package": "dplyr",
@@ -1449,14 +1449,14 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.1.9011",
+      "Version": "0.3.1.9012",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "4d64b76a68e2e2fbc670f3edc90bdf2031dda5b8",
+      "RemoteSha": "e24db5169585d54d2c12acef329e0320309c9908",
       "Requirements": [
         "R6",
         "bslib",
@@ -1475,7 +1475,7 @@
         "yaml",
         "zip"
       ],
-      "Hash": "9f44d57c3dc97375f245eebfe23533e6"
+      "Hash": "93209b5b22745dd96061d7052ff643c3"
     },
     "teal.slice": {
       "Package": "teal.slice",
