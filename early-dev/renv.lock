@@ -752,14 +752,14 @@
     },
     "digest": {
       "Package": "digest",
-      "Version": "0.6.36",
+      "Version": "0.6.37",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "fd6824ad91ede64151e93af67df6376b"
+      "Hash": "33698c4b3127fc9f506654607fb73676"
     },
     "doBy": {
       "Package": "doBy",
@@ -865,14 +865,14 @@
     },
     "expm": {
       "Package": "expm",
-      "Version": "0.999-9",
+      "Version": "1.0-0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "Matrix",
         "methods"
       ],
-      "Hash": "a9cfdee9645dd6b09ba8d4b9a9befa77"
+      "Hash": "a44b2810f36c1cda5d52eee6ec96cafa"
     },
     "fansi": {
       "Package": "fansi",
@@ -1754,21 +1754,21 @@
     },
     "nestcolor": {
       "Package": "nestcolor",
-      "Version": "0.1.2.9011",
+      "Version": "0.1.2.9012",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "nestcolor",
       "RemoteRef": "main",
-      "RemoteSha": "a0bcf52e64b3b13e986c076710254c6f1d576705",
+      "RemoteSha": "96deb2b41c03bfe5e6c01179452584e8a53daa3e",
       "Requirements": [
         "R",
         "checkmate",
         "ggplot2",
         "lifecycle"
       ],
-      "Hash": "869ba14f82f02ccc52ec4e69ae479c0a"
+      "Hash": "08df0859c46abe074dcdb9317636e124"
     },
     "nlme": {
       "Package": "nlme",
@@ -1844,14 +1844,14 @@
     },
     "osprey": {
       "Package": "osprey",
-      "Version": "0.1.16.9011",
+      "Version": "0.1.16.9012",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "osprey",
       "RemoteRef": "main",
-      "RemoteSha": "fc5fb7fa6bf4912a3273cb76a4d58d2aa7f87d5b",
+      "RemoteSha": "94bc33edde8272c94ddf0493190c36b546eab47d",
       "Requirements": [
         "DescTools",
         "R",
@@ -1870,7 +1870,7 @@
         "tibble",
         "tidyr"
       ],
-      "Hash": "d3e5ce77ea6cfce165b865c2f0f70a0b"
+      "Hash": "cbc781ec43d4652c11fec915e4e2979a"
     },
     "parallelly": {
       "Package": "parallelly",
