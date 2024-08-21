@@ -792,7 +792,7 @@
       "Package": "digest",
       "Version": "0.6.37",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "utils"
@@ -905,7 +905,7 @@
       "Package": "expm",
       "Version": "1.0-0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "Matrix",
         "methods"
@@ -2459,14 +2459,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.9.9006",
+      "Version": "0.6.9.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "68a176bb43287bfe64304e93d57223977247ed0a",
+      "RemoteSha": "5617d9cf54c8d2d9dc351e31e0a30204997c8ad3",
       "Requirements": [
         "R",
         "checkmate",
@@ -2478,7 +2478,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "b50e94c557aafe2ca41b657ba51303bd"
+      "Hash": "59f1ac0eafef41f5870a66043d246b71"
     },
     "sass": {
       "Package": "sass",
@@ -3139,14 +3139,14 @@
     },
     "tern.gee": {
       "Package": "tern.gee",
-      "Version": "0.1.4.9003",
+      "Version": "0.1.4.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.gee",
       "RemoteRef": "main",
-      "RemoteSha": "f9dc9130c6f888b4fd5c8f7fa91d1cf59e77fc03",
+      "RemoteSha": "f1d62b1da11ed31cb6ab7bef22fd37fed5c539ef",
       "Requirements": [
         "R",
         "checkmate",
@@ -3159,7 +3159,7 @@
         "stats",
         "tern"
       ],
-      "Hash": "97402a4fd4311ee1c6b156d84920bf9a"
+      "Hash": "f515faa2124eaac95f29ad83d701dd8e"
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
