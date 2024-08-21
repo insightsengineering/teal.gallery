@@ -140,13 +140,13 @@
     },
     "BiocManager": {
       "Package": "BiocManager",
-      "Version": "1.30.23",
+      "Version": "1.30.24",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "utils"
       ],
-      "Hash": "47e968dfe563c1b22c2e20a067ec21d5"
+      "Hash": "dcb7fa4b65120de23d3496b94cc0d1da"
     },
     "BiocParallel": {
       "Package": "BiocParallel",
@@ -1215,7 +1215,7 @@
       "Package": "digest",
       "Version": "0.6.37",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "utils"
@@ -2159,21 +2159,21 @@
     },
     "nestcolor": {
       "Package": "nestcolor",
-      "Version": "0.1.2.9012",
+      "Version": "0.1.2.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "nestcolor",
       "RemoteRef": "main",
-      "RemoteSha": "96deb2b41c03bfe5e6c01179452584e8a53daa3e",
+      "RemoteSha": "cd3bad48c691edd6ca3baa9db9cfdefddef5dd4d",
       "Requirements": [
         "R",
         "checkmate",
         "ggplot2",
         "lifecycle"
       ],
-      "Hash": "08df0859c46abe074dcdb9317636e124"
+      "Hash": "725d258dd079e3ff46a8d52e14d74474"
     },
     "nlme": {
       "Package": "nlme",
