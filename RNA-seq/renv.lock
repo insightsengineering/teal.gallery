@@ -142,7 +142,7 @@
       "Package": "BiocManager",
       "Version": "1.30.24",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
@@ -1302,7 +1302,7 @@
     },
     "emmeans": {
       "Package": "emmeans",
-      "Version": "1.10.3",
+      "Version": "1.10.4",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1315,7 +1315,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "276510e85e99a058fa4a0668e7ecca05"
+      "Hash": "68cb418754ae04b2bcb4377dda09ce2b"
     },
     "estimability": {
       "Package": "estimability",
@@ -2159,21 +2159,21 @@
     },
     "nestcolor": {
       "Package": "nestcolor",
-      "Version": "0.1.2.9013",
+      "Version": "0.1.2.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "nestcolor",
       "RemoteRef": "main",
-      "RemoteSha": "cd3bad48c691edd6ca3baa9db9cfdefddef5dd4d",
+      "RemoteSha": "49398925577bcf4019336ff8de532fa77c66efa7",
       "Requirements": [
         "R",
         "checkmate",
         "ggplot2",
         "lifecycle"
       ],
-      "Hash": "725d258dd079e3ff46a8d52e14d74474"
+      "Hash": "800b879214fac53054d3bc8eb0f9283d"
     },
     "nlme": {
       "Package": "nlme",
