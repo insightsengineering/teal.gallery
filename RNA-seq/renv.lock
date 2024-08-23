@@ -1697,14 +1697,14 @@
     },
     "hermes": {
       "Package": "hermes",
-      "Version": "1.7.2.9001",
+      "Version": "1.7.2.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "hermes",
       "RemoteRef": "main",
-      "RemoteSha": "11e90924a4c215a01d15cd314df3a110decdd299",
+      "RemoteSha": "9cd9472f80f119c49f887fe5c27a826b17fa844a",
       "Requirements": [
         "Biobase",
         "BiocGenerics",
@@ -1740,7 +1740,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "f4072ccd72c64233b694d3abb11529ab"
+      "Hash": "762967b63511f7eeaf3057e9cf0f9fb1"
     },
     "highr": {
       "Package": "highr",
@@ -3051,14 +3051,14 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9018",
+      "Version": "0.1.6.9019",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "a1f33fd7924894bd9c3b56d80941e4602e057020",
+      "RemoteSha": "f3dae3c4cf09c90330ddef699de690b961ff61a8",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -3085,7 +3085,7 @@
         "tern",
         "utils"
       ],
-      "Hash": "3eb631021e1c464ade09f143c4de2857"
+      "Hash": "6762f2fdca8728bd44054f8f220cd50a"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
