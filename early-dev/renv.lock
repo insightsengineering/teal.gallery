@@ -69,7 +69,7 @@
     },
     "DescTools": {
       "Package": "DescTools",
-      "Version": "0.99.55",
+      "Version": "0.99.56",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -94,7 +94,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "ee3db01d9518af45bbb95e6560909a14"
+      "Hash": "f4f83356d89ee1b27813cf0312e92936"
     },
     "Exact": {
       "Package": "Exact",
