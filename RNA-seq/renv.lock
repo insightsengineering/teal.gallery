@@ -301,16 +301,16 @@
     },
     "EnvStats": {
       "Package": "EnvStats",
-      "Version": "2.8.1",
+      "Version": "3.0.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "MASS",
         "R",
         "ggplot2",
         "nortest"
       ],
-      "Hash": "1b55a740dea99c9d226e75acc2c0a85e"
+      "Hash": "08f0337e9a3b03a9027a423a1ae76ed3"
     },
     "GenomeInfoDb": {
       "Package": "GenomeInfoDb",
@@ -619,7 +619,7 @@
     },
     "RcppEigen": {
       "Package": "RcppEigen",
-      "Version": "0.3.4.0.1",
+      "Version": "0.3.4.0.2",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -628,7 +628,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "598ee071e758b5f667b0ebe83f5d5085"
+      "Hash": "4ac8e423216b8b70cb9653d1b3f71eb9"
     },
     "Rdpack": {
       "Package": "Rdpack",
