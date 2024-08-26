@@ -257,16 +257,16 @@
     },
     "RcppEigen": {
       "Package": "RcppEigen",
-      "Version": "0.3.4.0.1",
+      "Version": "0.3.4.0.2",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "Rcpp",
         "stats",
         "utils"
       ],
-      "Hash": "598ee071e758b5f667b0ebe83f5d5085"
+      "Hash": "4ac8e423216b8b70cb9653d1b3f71eb9"
     },
     "Rdpack": {
       "Package": "Rdpack",
@@ -3152,7 +3152,7 @@
       "Package": "waldo",
       "Version": "0.5.3",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "cli",
