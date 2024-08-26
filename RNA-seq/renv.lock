@@ -303,7 +303,7 @@
       "Package": "EnvStats",
       "Version": "3.0.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "MASS",
         "R",
@@ -621,7 +621,7 @@
       "Package": "RcppEigen",
       "Version": "0.3.4.0.2",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "Rcpp",
