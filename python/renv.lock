@@ -587,13 +587,13 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "5.2.1",
+      "Version": "5.2.2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "411ca2c03b1ce5f548345d2fc2685f7a"
+      "Hash": "8f27335f2bcff4d6035edcc82d7d46de"
     },
     "data.table": {
       "Package": "data.table",
@@ -2211,14 +2211,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9056",
+      "Version": "0.15.2.9057",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "9e94ef42b4b30d16fc2bbd86d072577d232e2916",
+      "RemoteSha": "2e403427e8676bb7f013453cd3cadf2465f052e5",
       "Requirements": [
         "R",
         "checkmate",
@@ -2241,7 +2241,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "cfaa104f863406c98c043381aeb30624"
+      "Hash": "267d34f941117de4462613cbba46197d"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2265,14 +2265,14 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.6.0.9008",
+      "Version": "0.6.0.9009",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "870e7a4b7594ffa2124dc3954cbca47869028a42",
+      "RemoteSha": "eb87d480541e4b7e8ae00341326a06d804716171",
       "Requirements": [
         "R",
         "checkmate",
@@ -2283,7 +2283,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "9fabc4cf501d10fcb67c1fb2bf132d0d"
+      "Hash": "05e177f8efa5cd10260ee29c82960278"
     },
     "teal.logger": {
       "Package": "teal.logger",
