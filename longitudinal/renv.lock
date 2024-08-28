@@ -671,13 +671,13 @@
     },
     "cpp11": {
       "Package": "cpp11",
-      "Version": "0.4.7",
+      "Version": "0.5.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "5a295d7d963cc5035284dcdbaf334f4e"
+      "Hash": "91570bba75d0c9d3f1040c835cee8fba"
     },
     "crayon": {
       "Package": "crayon",
@@ -731,14 +731,14 @@
     },
     "data.table": {
       "Package": "data.table",
-      "Version": "1.15.4",
+      "Version": "1.16.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "methods"
       ],
-      "Hash": "8ee9ac56ef633d0c7cab8b2ca87d683e"
+      "Hash": "fb24e05d4a91d8b1c7ff8e284bde834a"
     },
     "desc": {
       "Package": "desc",
@@ -2783,14 +2783,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.2.0.9006",
+      "Version": "0.2.0.9007",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "d89dcf6acf56bf19a4c2b77f4a0e3f59a08ced42",
+      "RemoteSha": "c841c69657433a6c06e70dbe96490da1d2347320",
       "Requirements": [
         "R",
         "glue",
@@ -2801,7 +2801,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "00229fbe7d6eff242ebdf2774237b49c"
+      "Hash": "eb3d6a050ee5e19d94417fc22c20ac35"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
