@@ -382,7 +382,7 @@
     },
     "boot": {
       "Package": "boot",
-      "Version": "1.3-30",
+      "Version": "1.3-31",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -390,7 +390,7 @@
         "graphics",
         "stats"
       ],
-      "Hash": "96abeed416a286d4a0f52e550b612343"
+      "Hash": "de2a4646c18661d6a0a08ec67f40b7ed"
     },
     "brio": {
       "Package": "brio",
@@ -617,21 +617,6 @@
         "lazyeval"
       ],
       "Hash": "ab12c7b080a57475248a30f4db6298c0"
-    },
-    "crul": {
-      "Package": "crul",
-      "Version": "1.5.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R6",
-        "curl",
-        "httpcode",
-        "jsonlite",
-        "mime",
-        "urltools"
-      ],
-      "Hash": "22e70c5046981d39b7bf7af74433e396"
     },
     "curl": {
       "Package": "curl",
@@ -930,20 +915,18 @@
     },
     "gdtools": {
       "Package": "gdtools",
-      "Version": "0.3.7",
+      "Version": "0.4.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "Rcpp",
-        "curl",
         "fontquiver",
-        "gfonts",
         "htmltools",
         "systemfonts",
         "tools"
       ],
-      "Hash": "b53e23731a5946448ad888efca14d2df"
+      "Hash": "e8e09897fee8d96f6bb02bf841177d20"
     },
     "geeM": {
       "Package": "geeM",
@@ -998,23 +981,6 @@
         "methods"
       ],
       "Hash": "15e9634c0fcd294799e9b2e929ed1b86"
-    },
-    "gfonts": {
-      "Package": "gfonts",
-      "Version": "0.2.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "crayon",
-        "crul",
-        "glue",
-        "htmltools",
-        "jsonlite",
-        "shiny",
-        "utils"
-      ],
-      "Hash": "a535d76cf92645364997a8751396d63b"
     },
     "ggformula": {
       "Package": "ggformula",
@@ -1243,13 +1209,6 @@
         "yaml"
       ],
       "Hash": "04291cc45198225444a397606810ac37"
-    },
-    "httpcode": {
-      "Package": "httpcode",
-      "Version": "0.3.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "13641a1c6d2cc98801b76764078e17ea"
     },
     "httpuv": {
       "Package": "httpuv",
@@ -2888,16 +2847,6 @@
       ],
       "Hash": "cfbad971a71f0e27cec22e544a08bc3b"
     },
-    "triebeard": {
-      "Package": "triebeard",
-      "Version": "0.4.1",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "Rcpp"
-      ],
-      "Hash": "642507a148b0dd9b5620177e0a044413"
-    },
     "tzdb": {
       "Package": "tzdb",
       "Version": "0.4.0",
@@ -2908,19 +2857,6 @@
         "cpp11"
       ],
       "Hash": "f561504ec2897f4d46f0c7657e488ae1"
-    },
-    "urltools": {
-      "Package": "urltools",
-      "Version": "1.7.3",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "Rcpp",
-        "methods",
-        "triebeard"
-      ],
-      "Hash": "e86a704261a105f4703f653e05defa3e"
     },
     "utf8": {
       "Package": "utf8",
