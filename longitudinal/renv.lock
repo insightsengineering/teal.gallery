@@ -1242,14 +1242,14 @@
     },
     "goshawk": {
       "Package": "goshawk",
-      "Version": "0.1.18.9001",
+      "Version": "0.1.18.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "29891bb517336d25bc695db9d8424855d32db8a4",
+      "RemoteSha": "ba56211900c9a936703281c24e66eefcb2018c25",
       "Requirements": [
         "R",
         "checkmate",
@@ -1265,7 +1265,7 @@
         "rlang",
         "stringr"
       ],
-      "Hash": "4227b9d9dcfa9f4bf16556963e4e792a"
+      "Hash": "b0d7abfc99cca55df0c708e4cda6e886"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -2707,14 +2707,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.2.0.9002",
+      "Version": "0.2.0.9003",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "94f78cfa7608edeceb7dc3f846601a3ff48b9fe3",
+      "RemoteSha": "b29556a90e54c8c1fc957477f108f18ec12c59ec",
       "Requirements": [
         "DT",
         "R",
@@ -2738,18 +2738,18 @@
         "teal.transform",
         "teal.widgets"
       ],
-      "Hash": "ae77e27f2b0242faeab41a55d018ad2d"
+      "Hash": "ea62dc40da8b5afd58c4c4f4e32bfe5c"
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.2.0.9007",
+      "Version": "0.2.0.9008",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "c841c69657433a6c06e70dbe96490da1d2347320",
+      "RemoteSha": "cd0e0df17498ecc05b3edfd214766c03c923a020",
       "Requirements": [
         "R",
         "glue",
@@ -2760,7 +2760,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "eb3d6a050ee5e19d94417fc22c20ac35"
+      "Hash": "8efd39254c2579208c4b81307fec8942"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
