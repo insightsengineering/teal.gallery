@@ -142,7 +142,7 @@
       "Package": "BiocManager",
       "Version": "1.30.25",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
@@ -2897,14 +2897,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.2.0.9007",
+      "Version": "0.2.0.9008",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "c841c69657433a6c06e70dbe96490da1d2347320",
+      "RemoteSha": "cd0e0df17498ecc05b3edfd214766c03c923a020",
       "Requirements": [
         "R",
         "glue",
@@ -2915,7 +2915,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "eb3d6a050ee5e19d94417fc22c20ac35"
+      "Hash": "8efd39254c2579208c4b81307fec8942"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
@@ -2957,14 +2957,14 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9019",
+      "Version": "0.1.6.9020",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "f3dae3c4cf09c90330ddef699de690b961ff61a8",
+      "RemoteSha": "1dc4bbb3dd917b5c358d8c492cfb8d0b29e1f322",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -2991,7 +2991,7 @@
         "tern",
         "utils"
       ],
-      "Hash": "6762f2fdca8728bd44054f8f220cd50a"
+      "Hash": "ba32c5844330d43b9c050f1ecb940baa"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
