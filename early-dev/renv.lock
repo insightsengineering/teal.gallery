@@ -1803,14 +1803,14 @@
     },
     "osprey": {
       "Package": "osprey",
-      "Version": "0.1.16.9012",
+      "Version": "0.1.16.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "osprey",
       "RemoteRef": "main",
-      "RemoteSha": "94bc33edde8272c94ddf0493190c36b546eab47d",
+      "RemoteSha": "064477a95bdd7ba1de4fd5180e1c9f093b15d922",
       "Requirements": [
         "DescTools",
         "R",
@@ -1829,7 +1829,7 @@
         "tibble",
         "tidyr"
       ],
-      "Hash": "cbc781ec43d4652c11fec915e4e2979a"
+      "Hash": "612dbff1ca0acf2d7fecc36a6d585941"
     },
     "parallelly": {
       "Package": "parallelly",
@@ -2656,14 +2656,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.2.0.9007",
+      "Version": "0.2.0.9008",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "c841c69657433a6c06e70dbe96490da1d2347320",
+      "RemoteSha": "cd0e0df17498ecc05b3edfd214766c03c923a020",
       "Requirements": [
         "R",
         "glue",
@@ -2674,7 +2674,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "eb3d6a050ee5e19d94417fc22c20ac35"
+      "Hash": "8efd39254c2579208c4b81307fec8942"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
@@ -2757,14 +2757,14 @@
     },
     "teal.osprey": {
       "Package": "teal.osprey",
-      "Version": "0.1.16.9024",
+      "Version": "0.1.16.9025",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.osprey",
       "RemoteRef": "main",
-      "RemoteSha": "d072d2f500b859116cd6e1d914efc19126f82ce2",
+      "RemoteSha": "99ce029ab4a04cae6f994335e8818ef750618f46",
       "Requirements": [
         "R",
         "checkmate",
@@ -2784,7 +2784,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "cb51603da26a87ee0dde746dd35d56d9"
+      "Hash": "28effbbd982048176af9900193a429db"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
