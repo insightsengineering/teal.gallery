@@ -1446,14 +1446,14 @@
     },
     "mvtnorm": {
       "Package": "mvtnorm",
-      "Version": "1.2-6",
+      "Version": "1.3-0",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "stats"
       ],
-      "Hash": "b5b11e71e41d9d0eef7d8dc26903ed55"
+      "Hash": "c3f10f2c35182d1921ed134f3194af55"
     },
     "nestcolor": {
       "Package": "nestcolor",
@@ -1842,14 +1842,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.9.9010",
+      "Version": "0.6.9.9011",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "d8e1aa82302e04990906ff26b49b4e4653f3d44c",
+      "RemoteSha": "4155470f01e4c3924aa110d4a740beaaaba5fb3f",
       "Requirements": [
         "R",
         "checkmate",
@@ -1861,7 +1861,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "476a3478a56aeae8ee05ad388f026654"
+      "Hash": "0ca68dd5ded88a6a33fa308d17fa5635"
     },
     "sandwich": {
       "Package": "sandwich",
