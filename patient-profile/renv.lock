@@ -2827,14 +2827,14 @@
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
-      "Version": "0.3.1.9004",
+      "Version": "0.3.1.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "8da72655a69714dc88b9de7397d01d064fa3b55b",
+      "RemoteSha": "8990ce4ddb92cc961708323a8c4170e251931a5b",
       "Requirements": [
         "R",
         "checkmate",
@@ -2854,7 +2854,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "d32e9c9da2f89509ad9e423fe188498a"
+      "Hash": "feb230409cd9d458860133db777ddeb1"
     },
     "testthat": {
       "Package": "testthat",
