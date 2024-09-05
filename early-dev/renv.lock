@@ -1663,14 +1663,15 @@
     },
     "microbenchmark": {
       "Package": "microbenchmark",
-      "Version": "1.4.10",
+      "Version": "1.5.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
+        "R",
         "graphics",
         "stats"
       ],
-      "Hash": "db81b552e393ed092872cf7023469bc2"
+      "Hash": "f9d226d88d4087d817d4e616626ce8e5"
     },
     "mime": {
       "Package": "mime",
@@ -3008,14 +3009,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.5.9016",
+      "Version": "0.9.5.9017",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "66bb8f8d2ec1457f809516a0f1d7cfab71b4c60f",
+      "RemoteSha": "f598c3da7a1c668a70d61c0ad48dd8b6b6a06681",
       "Requirements": [
         "MASS",
         "R",
@@ -3045,7 +3046,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "54621c7a6705574ab0fce9bf9b09b2f7"
+      "Hash": "30091eae68e63a861426a5a73d325a33"
     },
     "tern.gee": {
       "Package": "tern.gee",
