@@ -1311,14 +1311,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9059",
+      "Version": "0.15.2.9060",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "0812f26538e7283e0b8138972dfe75eb5f21843b",
+      "RemoteSha": "fc481ee88bf8e40c60a498048c3a1759817d66ef",
       "Requirements": [
         "R",
         "checkmate",
@@ -1341,7 +1341,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "a2069dc295172288526d5b38db241f42"
+      "Hash": "ed34039b638be162288989254d4b77f6"
     },
     "teal.code": {
       "Package": "teal.code",
