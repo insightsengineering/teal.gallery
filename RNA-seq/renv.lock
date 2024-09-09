@@ -2020,13 +2020,13 @@
     },
     "matrixStats": {
       "Package": "matrixStats",
-      "Version": "1.4.0",
+      "Version": "1.4.1",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "402a3de5925c153a18f6b81f8e3e56c6"
+      "Hash": "8885ffb1f46e820dede6b2ca9442abca"
     },
     "memoise": {
       "Package": "memoise",
