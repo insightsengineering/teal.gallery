@@ -2948,14 +2948,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.2.0.9008",
+      "Version": "0.2.0.9009",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "cd0e0df17498ecc05b3edfd214766c03c923a020",
+      "RemoteSha": "40fad7fbe7e8009c3b97fbc08cb094ba4d46ae26",
       "Requirements": [
         "R",
         "glue",
@@ -2966,7 +2966,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "8efd39254c2579208c4b81307fec8942"
+      "Hash": "1d6f602cb6e85142a114f8ebaae33528"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
@@ -3172,14 +3172,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.5.9021",
+      "Version": "0.9.5.9022",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "12bfafc144ea2d78533c4f66272e48530fdaef89",
+      "RemoteSha": "03eac81da65d15b66bfbb5d2de8153725b1223a2",
       "Requirements": [
         "MASS",
         "R",
@@ -3209,7 +3209,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "2bb66b3232f0b6be3929e82094a2e2b7"
+      "Hash": "a5ec40d6e700e4b8b6d0c2c172587de4"
     },
     "textshaping": {
       "Package": "textshaping",
