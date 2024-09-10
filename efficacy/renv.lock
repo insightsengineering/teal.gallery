@@ -278,7 +278,7 @@
     },
     "TMB": {
       "Package": "TMB",
-      "Version": "1.9.14",
+      "Version": "1.9.15",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -290,7 +290,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "685836c6eb244780c75d1f8d0124fdbd"
+      "Hash": "a9c26d0c76fdcde77410b88197efa7bf"
     },
     "abind": {
       "Package": "abind",
@@ -959,7 +959,7 @@
     },
     "geepack": {
       "Package": "geepack",
-      "Version": "1.3.11",
+      "Version": "1.3.11.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -969,7 +969,7 @@
         "magrittr",
         "methods"
       ],
-      "Hash": "81f84c558953c8f362bc361b8b06a94c"
+      "Hash": "4eb21bd359be73a46797be7a36ef51df"
     },
     "generics": {
       "Package": "generics",
