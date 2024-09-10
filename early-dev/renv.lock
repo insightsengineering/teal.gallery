@@ -341,7 +341,7 @@
     },
     "TMB": {
       "Package": "TMB",
-      "Version": "1.9.14",
+      "Version": "1.9.15",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -353,7 +353,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "685836c6eb244780c75d1f8d0124fdbd"
+      "Hash": "a9c26d0c76fdcde77410b88197efa7bf"
     },
     "abind": {
       "Package": "abind",
@@ -1095,7 +1095,7 @@
     },
     "geepack": {
       "Package": "geepack",
-      "Version": "1.3.11",
+      "Version": "1.3.11.1",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -1105,7 +1105,7 @@
         "magrittr",
         "methods"
       ],
-      "Hash": "81f84c558953c8f362bc361b8b06a94c"
+      "Hash": "4eb21bd359be73a46797be7a36ef51df"
     },
     "generics": {
       "Package": "generics",
@@ -2746,14 +2746,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.2.0.9008",
+      "Version": "0.2.0.9009",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "cd0e0df17498ecc05b3edfd214766c03c923a020",
+      "RemoteSha": "40fad7fbe7e8009c3b97fbc08cb094ba4d46ae26",
       "Requirements": [
         "R",
         "glue",
@@ -2764,7 +2764,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "8efd39254c2579208c4b81307fec8942"
+      "Hash": "1d6f602cb6e85142a114f8ebaae33528"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
@@ -3009,14 +3009,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.5.9021",
+      "Version": "0.9.5.9022",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "12bfafc144ea2d78533c4f66272e48530fdaef89",
+      "RemoteSha": "03eac81da65d15b66bfbb5d2de8153725b1223a2",
       "Requirements": [
         "MASS",
         "R",
@@ -3046,7 +3046,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "2bb66b3232f0b6be3929e82094a2e2b7"
+      "Hash": "a5ec40d6e700e4b8b6d0c2c172587de4"
     },
     "tern.gee": {
       "Package": "tern.gee",
