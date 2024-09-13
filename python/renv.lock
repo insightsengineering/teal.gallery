@@ -263,7 +263,7 @@
     },
     "abind": {
       "Package": "abind",
-      "Version": "1.4-5",
+      "Version": "1.4-8",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -271,7 +271,7 @@
         "methods",
         "utils"
       ],
-      "Hash": "4f57884290cc75ab22f4af9e9d4ca862"
+      "Hash": "2288423bb0f20a457800d7fc47f6aa54"
     },
     "anytime": {
       "Package": "anytime",
@@ -780,7 +780,7 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.8",
+      "Version": "0.5.9",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -789,9 +789,10 @@
         "grid",
         "htmltools",
         "lifecycle",
-        "methods"
+        "methods",
+        "stringi"
       ],
-      "Hash": "e14d987febeaee41fc0c6a0ec2f6980b"
+      "Hash": "8be2fff2bd140e59cc3bc32fa761de26"
     },
     "fs": {
       "Package": "fs",
