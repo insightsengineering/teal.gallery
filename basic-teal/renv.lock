@@ -449,7 +449,7 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.8",
+      "Version": "0.5.9",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -458,9 +458,10 @@
         "grid",
         "htmltools",
         "lifecycle",
-        "methods"
+        "methods",
+        "stringi"
       ],
-      "Hash": "e14d987febeaee41fc0c6a0ec2f6980b"
+      "Hash": "8be2fff2bd140e59cc3bc32fa761de26"
     },
     "fs": {
       "Package": "fs",
