@@ -79,13 +79,13 @@
     },
     "Deriv": {
       "Package": "Deriv",
-      "Version": "4.1.3",
+      "Version": "4.1.6",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "methods"
       ],
-      "Hash": "bc727aba82bcda74db0bbe188ec6757c"
+      "Hash": "cd52c065c9e687c60c56b51f10f7bcd3"
     },
     "MASS": {
       "Package": "MASS",
@@ -909,14 +909,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.8.9006",
+      "Version": "0.5.9.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "ec6e4adcef6326aaf2da6054b717d1592ab7f7d5",
+      "RemoteSha": "144c5db521abb0dbba05e5af9dfcc3d9e1dd8f55",
       "Requirements": [
         "R",
         "checkmate",
@@ -926,7 +926,7 @@
         "methods",
         "stringi"
       ],
-      "Hash": "b228963df0f22a295fd56296b3549ad1"
+      "Hash": "935d21fa17829c09ddf66c096f3ee070"
     },
     "fs": {
       "Package": "fs",
@@ -1582,7 +1582,7 @@
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "2de9c871c190dfbec1358b8ef6709c234b2cdad1",
+      "RemoteSha": "17e417b8b783d2bf8b74fbe3f50650471b4f332b",
       "Requirements": [
         "Matrix",
         "R",
@@ -1602,7 +1602,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "8263ccf2298553523d7227bc9b86c437"
+      "Hash": "ef473fa0bb27a903de917218cfd444fa"
     },
     "modelr": {
       "Package": "modelr",
@@ -2564,14 +2564,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.1.9023",
+      "Version": "0.9.1.9024",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "03914e0dd9e5a5afea90f294a9ed67f232a32647",
+      "RemoteSha": "f4877034085ea95b2600a129a4726b86b21de3cc",
       "Requirements": [
         "DT",
         "R",
@@ -2606,7 +2606,7 @@
         "utils",
         "vistime"
       ],
-      "Hash": "f020ba7814a4b461596f9e44ae8effd0"
+      "Hash": "ee2cf1e01f31ce96cf37715eb55ad152"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
