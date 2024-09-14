@@ -459,14 +459,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.8.9006",
+      "Version": "0.5.9.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "ec6e4adcef6326aaf2da6054b717d1592ab7f7d5",
+      "RemoteSha": "144c5db521abb0dbba05e5af9dfcc3d9e1dd8f55",
       "Requirements": [
         "R",
         "checkmate",
@@ -476,7 +476,7 @@
         "methods",
         "stringi"
       ],
-      "Hash": "b228963df0f22a295fd56296b3549ad1"
+      "Hash": "935d21fa17829c09ddf66c096f3ee070"
     },
     "fs": {
       "Package": "fs",
