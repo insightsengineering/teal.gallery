@@ -1407,21 +1407,21 @@
     },
     "nestcolor": {
       "Package": "nestcolor",
-      "Version": "0.1.2.9014",
+      "Version": "0.1.2.9015",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "nestcolor",
       "RemoteRef": "main",
-      "RemoteSha": "49398925577bcf4019336ff8de532fa77c66efa7",
+      "RemoteSha": "fe8b71c02b41f82260300b519433f5f21c22b89b",
       "Requirements": [
         "R",
         "checkmate",
         "ggplot2",
         "lifecycle"
       ],
-      "Hash": "800b879214fac53054d3bc8eb0f9283d"
+      "Hash": "99e7ce8743d681af12ef2050b10e1502"
     },
     "nlme": {
       "Package": "nlme",
