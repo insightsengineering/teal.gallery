@@ -1439,14 +1439,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.9.9000",
+      "Version": "0.5.9.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "144c5db521abb0dbba05e5af9dfcc3d9e1dd8f55",
+      "RemoteSha": "85be9d52a6c1a3e3a9bad490f1ff7eb6a1bed92f",
       "Requirements": [
         "R",
         "checkmate",
@@ -1456,7 +1456,7 @@
         "methods",
         "stringi"
       ],
-      "Hash": "935d21fa17829c09ddf66c096f3ee070"
+      "Hash": "8ae18cedf8f603245cc496e27c825381"
     },
     "fs": {
       "Package": "fs",
@@ -2130,21 +2130,21 @@
     },
     "nestcolor": {
       "Package": "nestcolor",
-      "Version": "0.1.2.9014",
+      "Version": "0.1.2.9015",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "nestcolor",
       "RemoteRef": "main",
-      "RemoteSha": "49398925577bcf4019336ff8de532fa77c66efa7",
+      "RemoteSha": "fe8b71c02b41f82260300b519433f5f21c22b89b",
       "Requirements": [
         "R",
         "checkmate",
         "ggplot2",
         "lifecycle"
       ],
-      "Hash": "800b879214fac53054d3bc8eb0f9283d"
+      "Hash": "99e7ce8743d681af12ef2050b10e1502"
     },
     "nlme": {
       "Package": "nlme",
@@ -2565,14 +2565,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.9.9013",
+      "Version": "0.6.9.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "455e30d3376626e1980c36033e17d2bd13910042",
+      "RemoteSha": "d57a5151bced219174f306d73fc090c7dea529b8",
       "Requirements": [
         "R",
         "checkmate",
@@ -2584,7 +2584,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "fc5e9d5c59e580285b1288d83303983f"
+      "Hash": "a9d50381f7e1b3ed4e868d9035f5ed69"
     },
     "sass": {
       "Package": "sass",
