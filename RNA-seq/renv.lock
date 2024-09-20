@@ -3171,14 +3171,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.5.9025",
+      "Version": "0.9.5.9027",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "0817483d2b7a82c869e9ef1bb3c7de690ea7c45e",
+      "RemoteSha": "533ac2bf1791bd5a72f873899703d739dc6f7143",
       "Requirements": [
         "MASS",
         "R",
@@ -3208,7 +3208,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "9673221d3f381bef7a8016de66c2c1f9"
+      "Hash": "f6687da5c832a8f23da3e6e1b16da857"
     },
     "textshaping": {
       "Package": "textshaping",
