@@ -401,13 +401,13 @@
     },
     "bit": {
       "Package": "bit",
-      "Version": "4.0.5",
+      "Version": "4.5.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "d242abec29412ce988848d0294b208fd"
+      "Hash": "5dc7b2677d65d0e874fc4aaf0e879987"
     },
     "bit64": {
       "Package": "bit64",
@@ -688,13 +688,13 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "5.2.2",
+      "Version": "5.2.3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "8f27335f2bcff4d6035edcc82d7d46de"
+      "Hash": "d91263322a58af798f6cf3b13fd56dde"
     },
     "data.table": {
       "Package": "data.table",
@@ -1382,13 +1382,13 @@
     },
     "jsonlite": {
       "Package": "jsonlite",
-      "Version": "1.8.8",
+      "Version": "1.8.9",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "methods"
       ],
-      "Hash": "e1b9c55281c5adc4dd113652d9e26768"
+      "Hash": "4e993b65c2c3ffbffce7bb3e2c6f832b"
     },
     "kinship2": {
       "Package": "kinship2",
@@ -1794,13 +1794,13 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.2.1",
+      "Version": "2.2.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "askpass"
       ],
-      "Hash": "c62edf62de70cadf40553e10c739049d"
+      "Hash": "d413e0fef796c9401a4419485f709ca1"
     },
     "osprey": {
       "Package": "osprey",
@@ -2216,13 +2216,13 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.0.7",
+      "Version": "1.0.8",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
-      "Hash": "397b7b2a265bc5a7a06852524dabae20"
+      "Hash": "e082251834fa427514e68bec8afc8fda"
     },
     "rlang": {
       "Package": "rlang",
@@ -2307,7 +2307,7 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.9",
+      "Version": "0.6.10",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2321,7 +2321,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "8320d917da2a3db93ce9d91649db0b1d"
+      "Hash": "1907d8ff958d4e8d62549fcc0a0c7985"
     },
     "sass": {
       "Package": "sass",
