@@ -378,13 +378,13 @@
     },
     "bit": {
       "Package": "bit",
-      "Version": "4.0.5",
+      "Version": "4.5.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "d242abec29412ce988848d0294b208fd"
+      "Hash": "5dc7b2677d65d0e874fc4aaf0e879987"
     },
     "bit64": {
       "Package": "bit64",
@@ -640,13 +640,13 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "5.2.2",
+      "Version": "5.2.3",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "8f27335f2bcff4d6035edcc82d7d46de"
+      "Hash": "d91263322a58af798f6cf3b13fd56dde"
     },
     "data.table": {
       "Package": "data.table",
@@ -1325,13 +1325,13 @@
     },
     "jsonlite": {
       "Package": "jsonlite",
-      "Version": "1.8.8",
+      "Version": "1.8.9",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "methods"
       ],
-      "Hash": "e1b9c55281c5adc4dd113652d9e26768"
+      "Hash": "4e993b65c2c3ffbffce7bb3e2c6f832b"
     },
     "kinship2": {
       "Package": "kinship2",
@@ -1574,14 +1574,14 @@
     },
     "mmrm": {
       "Package": "mmrm",
-      "Version": "0.3.12.9000",
+      "Version": "0.3.12.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "0bc1417e65affa83365e753a7138273c72f28a84",
+      "RemoteSha": "cec2b1f05a0d1544d8b9afc21e35c70c19d74030",
       "Requirements": [
         "Matrix",
         "R",
@@ -1602,7 +1602,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "1d0b90dfebf4e8fae946a5bb865c1666"
+      "Hash": "cb34036b1f2c13ab84f85ff670c7ad13"
     },
     "modelr": {
       "Package": "modelr",
@@ -1741,13 +1741,13 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.2.1",
+      "Version": "2.2.2",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
         "askpass"
       ],
-      "Hash": "c62edf62de70cadf40553e10c739049d"
+      "Hash": "d413e0fef796c9401a4419485f709ca1"
     },
     "parallelly": {
       "Package": "parallelly",
@@ -2099,13 +2099,13 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.0.7",
+      "Version": "1.0.8",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
         "utils"
       ],
-      "Hash": "397b7b2a265bc5a7a06852524dabae20"
+      "Hash": "e082251834fa427514e68bec8afc8fda"
     },
     "rlang": {
       "Package": "rlang",
@@ -2170,14 +2170,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.9.9015",
+      "Version": "0.6.9.9016",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "13b95e0a21c224d72730d226d9f22e57d6b21efc",
+      "RemoteSha": "9e526e6f39e798c1db38d7c0c88bedb5e60a25e6",
       "Requirements": [
         "R",
         "checkmate",
@@ -2189,7 +2189,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "c0929bd8921974c81d530fc874435f5b"
+      "Hash": "d5a458a7e4806f0f197805b3e124a693"
     },
     "sass": {
       "Package": "sass",
