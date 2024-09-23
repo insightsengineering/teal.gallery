@@ -1842,14 +1842,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.9.9016",
+      "Version": "0.6.10.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "9e526e6f39e798c1db38d7c0c88bedb5e60a25e6",
+      "RemoteSha": "204a0fb1c9b9681f55f51b9c454d574ea87eb1a2",
       "Requirements": [
         "R",
         "checkmate",
@@ -1861,7 +1861,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "d5a458a7e4806f0f197805b3e124a693"
+      "Hash": "27e0a3e51f2a8df5589dd841e690f840"
     },
     "sandwich": {
       "Package": "sandwich",
