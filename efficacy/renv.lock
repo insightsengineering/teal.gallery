@@ -388,9 +388,9 @@
     },
     "bit64": {
       "Package": "bit64",
-      "Version": "4.0.5",
+      "Version": "4.5.2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "bit",
@@ -398,7 +398,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "9fe98599ca456d6552421db0d6772d8f"
+      "Hash": "e84984bf5f12a18628d9a02322128dfd"
     },
     "boot": {
       "Package": "boot",
@@ -1574,14 +1574,14 @@
     },
     "mmrm": {
       "Package": "mmrm",
-      "Version": "0.3.12.9002",
+      "Version": "0.3.12.9003",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "7146250670357e3b4c2f4f279cb0e717590567f0",
+      "RemoteSha": "73d3681e8cdd41959970e1ed57266eb9052db394",
       "Requirements": [
         "Matrix",
         "R",
@@ -1602,7 +1602,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "840f34cd958e941e87631e6fde88440d"
+      "Hash": "6034cfe2b88c4d03bfa23964673b3db4"
     },
     "modelr": {
       "Package": "modelr",
@@ -2170,14 +2170,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.9.9016",
+      "Version": "0.6.10.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "9e526e6f39e798c1db38d7c0c88bedb5e60a25e6",
+      "RemoteSha": "204a0fb1c9b9681f55f51b9c454d574ea87eb1a2",
       "Requirements": [
         "R",
         "checkmate",
@@ -2189,7 +2189,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "d5a458a7e4806f0f197805b3e124a693"
+      "Hash": "27e0a3e51f2a8df5589dd841e690f840"
     },
     "sass": {
       "Package": "sass",
@@ -2839,14 +2839,14 @@
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
-      "Version": "0.3.1.9007",
+      "Version": "0.3.1.9008",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "bdae310ba87a06c4976bc447230c268dd3d1f68d",
+      "RemoteSha": "1f6ab665e5afcc1387c3f550cb4c1ead5475eb83",
       "Requirements": [
         "R",
         "checkmate",
@@ -2866,7 +2866,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "a29a959fec33aabb2fd1fd14465caac5"
+      "Hash": "bed9f8c22aa920b1966ce2e76cb48cfc"
     },
     "testthat": {
       "Package": "testthat",
