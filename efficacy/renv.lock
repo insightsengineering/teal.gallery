@@ -33,13 +33,6 @@
     ]
   },
   "Packages": {
-    "BH": {
-      "Package": "BH",
-      "Version": "1.84.0-0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "a8235afbcd6316e6e91433ea47661013"
-    },
     "DT": {
       "Package": "DT",
       "Version": "0.33",
@@ -304,18 +297,6 @@
       ],
       "Hash": "2288423bb0f20a457800d7fc47f6aa54"
     },
-    "anytime": {
-      "Package": "anytime",
-      "Version": "0.3.9",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "BH",
-        "R",
-        "Rcpp"
-      ],
-      "Hash": "74a64813f17b492da9c6afda6b128e3d"
-    },
     "askpass": {
       "Package": "askpass",
       "Version": "1.2.0",
@@ -368,9 +349,9 @@
     },
     "bit64": {
       "Package": "bit64",
-      "Version": "4.0.5",
+      "Version": "4.5.2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "R",
         "bit",
@@ -378,7 +359,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "9fe98599ca456d6552421db0d6772d8f"
+      "Hash": "e84984bf5f12a18628d9a02322128dfd"
     },
     "boot": {
       "Package": "boot",
@@ -959,7 +940,7 @@
     },
     "geepack": {
       "Package": "geepack",
-      "Version": "1.3.11.1",
+      "Version": "1.3.12",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -969,7 +950,7 @@
         "magrittr",
         "methods"
       ],
-      "Hash": "4eb21bd359be73a46797be7a36ef51df"
+      "Hash": "52e17b9435f558bd15c764d1182371d6"
     },
     "generics": {
       "Package": "generics",
@@ -1513,7 +1494,7 @@
     },
     "mmrm": {
       "Package": "mmrm",
-      "Version": "0.3.12",
+      "Version": "0.3.13",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1529,13 +1510,14 @@
         "methods",
         "nlme",
         "parallel",
+        "rlang",
         "stats",
         "stringr",
         "testthat",
         "tibble",
         "utils"
       ],
-      "Hash": "656c0b5da886e1410a6dec73c5b965b4"
+      "Hash": "384f7b29c05ef9eafc93e003145c3d7a"
     },
     "modelr": {
       "Package": "modelr",
@@ -2032,13 +2014,13 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.0.8",
+      "Version": "1.0.9",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
-      "Hash": "e082251834fa427514e68bec8afc8fda"
+      "Hash": "ef233f0e9064fc88c898b340c9add5c2"
     },
     "rlang": {
       "Package": "rlang",
@@ -2217,12 +2199,11 @@
     },
     "shinyWidgets": {
       "Package": "shinyWidgets",
-      "Version": "0.8.6",
+      "Version": "0.8.7",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
-        "anytime",
         "bslib",
         "grDevices",
         "htmltools",
@@ -2231,7 +2212,7 @@
         "sass",
         "shiny"
       ],
-      "Hash": "bc918b6911c4e928e24a9928295de834"
+      "Hash": "fd8239886f70daa85c36596214958451"
     },
     "shinybusy": {
       "Package": "shinybusy",
@@ -2703,7 +2684,7 @@
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
-      "Version": "0.3.1",
+      "Version": "0.3.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2725,7 +2706,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "d46814e31fd7f2eb1f3c5a98ec31ac31"
+      "Hash": "20fac063b8514cb2bdb0d6dbaeb43419"
     },
     "testthat": {
       "Package": "testthat",
