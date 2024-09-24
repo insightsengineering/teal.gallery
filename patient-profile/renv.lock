@@ -53,13 +53,6 @@
     ]
   },
   "Packages": {
-    "BH": {
-      "Package": "BH",
-      "Version": "1.84.0-0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "a8235afbcd6316e6e91433ea47661013"
-    },
     "DT": {
       "Package": "DT",
       "Version": "0.33",
@@ -323,18 +316,6 @@
         "utils"
       ],
       "Hash": "2288423bb0f20a457800d7fc47f6aa54"
-    },
-    "anytime": {
-      "Package": "anytime",
-      "Version": "0.3.9",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "BH",
-        "R",
-        "Rcpp"
-      ],
-      "Hash": "74a64813f17b492da9c6afda6b128e3d"
     },
     "askpass": {
       "Package": "askpass",
@@ -938,21 +919,6 @@
       ],
       "Hash": "15aeb8c27f5ea5161f9f6a641fafd93a"
     },
-    "future": {
-      "Package": "future",
-      "Version": "1.34.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "digest",
-        "globals",
-        "listenv",
-        "parallel",
-        "parallelly",
-        "utils"
-      ],
-      "Hash": "475771e3edb711591476be387c9a8c2e"
-    },
     "gdtools": {
       "Package": "gdtools",
       "Version": "0.4.0",
@@ -999,9 +965,9 @@
     },
     "geepack": {
       "Package": "geepack",
-      "Version": "1.3.11.1",
+      "Version": "1.3.12",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "MASS",
         "R",
@@ -1009,7 +975,7 @@
         "magrittr",
         "methods"
       ],
-      "Hash": "4eb21bd359be73a46797be7a36ef51df"
+      "Hash": "52e17b9435f558bd15c764d1182371d6"
     },
     "generics": {
       "Package": "generics",
@@ -1132,17 +1098,6 @@
         "utils"
       ],
       "Hash": "eb6fc70e561aae41d5911a6726188f71"
-    },
-    "globals": {
-      "Package": "globals",
-      "Version": "0.16.3",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "codetools"
-      ],
-      "Hash": "2580567908cafd4f187c1e5a91e98b7f"
     },
     "glue": {
       "Package": "glue",
@@ -1443,16 +1398,6 @@
       ],
       "Hash": "b8552d117e1b808b09a832f589b79035"
     },
-    "listenv": {
-      "Package": "listenv",
-      "Version": "0.9.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "e2fca3e12e4db979dccc6e519b10a7ee"
-    },
     "lme4": {
       "Package": "lme4",
       "Version": "1.1-35.5",
@@ -1574,14 +1519,14 @@
     },
     "mmrm": {
       "Package": "mmrm",
-      "Version": "0.3.12.9003",
+      "Version": "0.3.13.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "73d3681e8cdd41959970e1ed57266eb9052db394",
+      "RemoteSha": "610fdf0834d27590dace9542eed4337c766eea12",
       "Requirements": [
         "Matrix",
         "R",
@@ -1602,7 +1547,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "6034cfe2b88c4d03bfa23964673b3db4"
+      "Hash": "9528d4a899e5ba68316379af5423ab91"
     },
     "modelr": {
       "Package": "modelr",
@@ -2099,13 +2044,13 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.0.8",
+      "Version": "1.0.9",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
         "utils"
       ],
-      "Hash": "e082251834fa427514e68bec8afc8fda"
+      "Hash": "ef233f0e9064fc88c898b340c9add5c2"
     },
     "rlang": {
       "Package": "rlang",
@@ -2289,12 +2234,11 @@
     },
     "shinyWidgets": {
       "Package": "shinyWidgets",
-      "Version": "0.8.6",
+      "Version": "0.8.7",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
-        "anytime",
         "bslib",
         "grDevices",
         "htmltools",
@@ -2303,7 +2247,7 @@
         "sass",
         "shiny"
       ],
-      "Hash": "bc918b6911c4e928e24a9928295de834"
+      "Hash": "fd8239886f70daa85c36596214958451"
     },
     "shinybusy": {
       "Package": "shinybusy",
@@ -2455,24 +2399,21 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9063",
+      "Version": "0.15.2.9064",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "19cda800137c50cbed347f19a5241618aed38624",
+      "RemoteSha": "6e7841124e542993ce25e49960b4d03a0072bebf",
       "Requirements": [
         "R",
         "checkmate",
-        "future",
         "jsonlite",
         "lifecycle",
         "logger",
         "methods",
-        "promises",
-        "renv",
         "rlang",
         "shiny",
         "shinyjs",
@@ -2485,7 +2426,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "de3dcdfe3acb8f4c0a48ca563e117520"
+      "Hash": "804275fd21356a683d82478b604854fd"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2828,14 +2769,14 @@
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
-      "Version": "0.3.1.9008",
+      "Version": "0.3.2.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "1f6ab665e5afcc1387c3f550cb4c1ead5475eb83",
+      "RemoteSha": "0638d8a9696299c1ae58b777640fefd6d5f3fd2d",
       "Requirements": [
         "R",
         "checkmate",
@@ -2855,7 +2796,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "bed9f8c22aa920b1966ce2e76cb48cfc"
+      "Hash": "506932afd661bf2880e92e00f0c0f7d0"
     },
     "testthat": {
       "Package": "testthat",
