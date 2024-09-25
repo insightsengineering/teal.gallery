@@ -3083,7 +3083,7 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.5",
+      "Version": "0.9.6",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -3115,7 +3115,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "228f938ebdc8c39b3c71acafbf4d05dc"
+      "Hash": "35fe86bc358b15525217e775f5318d33"
     },
     "textshaping": {
       "Package": "textshaping",
