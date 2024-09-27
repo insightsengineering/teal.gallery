@@ -1232,14 +1232,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9064",
+      "Version": "0.15.2.9065",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "6e7841124e542993ce25e49960b4d03a0072bebf",
+      "RemoteSha": "5f6bc656001815deaf16906b21b6aa35bd424bf8",
       "Requirements": [
         "R",
         "checkmate",
@@ -1259,7 +1259,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "804275fd21356a683d82478b604854fd"
+      "Hash": "cc3c68d39d2f86b92034232341a8480a"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -1283,14 +1283,14 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.6.0.9011",
+      "Version": "0.6.0.9012",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "98a58add06898781a0cbb01e333352b54bf2fe83",
+      "RemoteSha": "b5ccb1d500c648ca7f8ba77058246a280ef2fa2b",
       "Requirements": [
         "R",
         "checkmate",
@@ -1301,7 +1301,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "9986dc635bf39674037424253abc6e22"
+      "Hash": "4dca82e20cb457fffe0b0d3e5d4c1d45"
     },
     "teal.logger": {
       "Package": "teal.logger",
