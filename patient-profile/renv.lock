@@ -1531,14 +1531,14 @@
     },
     "mmrm": {
       "Package": "mmrm",
-      "Version": "0.3.13.9001",
+      "Version": "0.3.14.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "9ec8a659fccd83fdcd33003509f007b71b0ed887",
+      "RemoteSha": "df3418de7a97cd6de3dd10363f2d6b1fa99b5eef",
       "Requirements": [
         "Matrix",
         "R",
@@ -1558,7 +1558,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "57cd43e594838b682df658bb5479c065"
+      "Hash": "73898b9c5882d3993aabdfffe64be534"
     },
     "modelr": {
       "Package": "modelr",
@@ -2505,14 +2505,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.1.9026",
+      "Version": "0.9.1.9027",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "026c46f1afb885b3aa8a4c74786c8119dd33e921",
+      "RemoteSha": "9a9e48cb220f9408dc9322b6d3a86f7cd938cf1c",
       "Requirements": [
         "DT",
         "R",
@@ -2547,7 +2547,7 @@
         "utils",
         "vistime"
       ],
-      "Hash": "5ae357dbd520cb1a6d82d3201aec57a4"
+      "Hash": "1195878038bc05ce590eb548c405fbc2"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
