@@ -1113,14 +1113,14 @@
     },
     "glue": {
       "Package": "glue",
-      "Version": "1.7.0",
+      "Version": "1.8.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "methods"
       ],
-      "Hash": "e0b3a53876554bd45879e596cdb10a52"
+      "Hash": "5899f1eaa825580172bb56c08266f37c"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -2516,14 +2516,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.1.9027",
+      "Version": "0.9.1.9028",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "9a9e48cb220f9408dc9322b6d3a86f7cd938cf1c",
+      "RemoteSha": "f2895ee28fd7a136d4fe5151f40b9f2106bef170",
       "Requirements": [
         "DT",
         "R",
@@ -2558,7 +2558,7 @@
         "utils",
         "vistime"
       ],
-      "Hash": "1195878038bc05ce590eb548c405fbc2"
+      "Hash": "3e371fa856ae829516e8479fdb6cb61b"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
@@ -2726,14 +2726,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.6.9000",
+      "Version": "0.9.6.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "0dc93dfddee60b8091db880fb6b5b094bd96226c",
+      "RemoteSha": "2b17efe411c35cb79df066b26ae7e38d5484cadc",
       "Requirements": [
         "MASS",
         "R",
@@ -2763,7 +2763,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "cbaba3a5b6258478dcdb8c8e5f799b71"
+      "Hash": "1ef5c16fa6abdc03c59777d5542d9069"
     },
     "tern.gee": {
       "Package": "tern.gee",
