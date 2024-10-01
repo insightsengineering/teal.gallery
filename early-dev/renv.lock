@@ -1196,14 +1196,14 @@
     },
     "glue": {
       "Package": "glue",
-      "Version": "1.7.0",
+      "Version": "1.8.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "methods"
       ],
-      "Hash": "e0b3a53876554bd45879e596cdb10a52"
+      "Hash": "5899f1eaa825580172bb56c08266f37c"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -1521,15 +1521,15 @@
     },
     "lmom": {
       "Package": "lmom",
-      "Version": "3.0",
+      "Version": "3.2",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "graphics",
         "stats"
       ],
-      "Hash": "a69348cee0766082223f1c7e2a545505"
+      "Hash": "a75d2dd42af9b4cb291815889cdcff77"
     },
     "logger": {
       "Package": "logger",
