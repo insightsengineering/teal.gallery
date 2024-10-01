@@ -988,14 +988,14 @@
     },
     "glue": {
       "Package": "glue",
-      "Version": "1.7.0",
+      "Version": "1.8.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "methods"
       ],
-      "Hash": "e0b3a53876554bd45879e596cdb10a52"
+      "Hash": "5899f1eaa825580172bb56c08266f37c"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -2374,14 +2374,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.6.9000",
+      "Version": "0.9.6.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "0dc93dfddee60b8091db880fb6b5b094bd96226c",
+      "RemoteSha": "2b17efe411c35cb79df066b26ae7e38d5484cadc",
       "Requirements": [
         "MASS",
         "R",
@@ -2411,7 +2411,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "cbaba3a5b6258478dcdb8c8e5f799b71"
+      "Hash": "1ef5c16fa6abdc03c59777d5542d9069"
     },
     "textshaping": {
       "Package": "textshaping",
