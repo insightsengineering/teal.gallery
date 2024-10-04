@@ -2700,14 +2700,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.2.0.9007",
+      "Version": "0.2.0.9008",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "483c64ae7f2d1adb82a8a84046db4cdb123bf94f",
+      "RemoteSha": "36a9078b45639a62a3e39fd40231e3dd32ea7c3b",
       "Requirements": [
         "DT",
         "R",
@@ -2731,7 +2731,7 @@
         "teal.transform",
         "teal.widgets"
       ],
-      "Hash": "c4cf2725920ab88aa1a9f6b0fef965c0"
+      "Hash": "57c305c789c70a9d97fec5c0cafc3dab"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -3264,7 +3264,7 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.47",
+      "Version": "0.48",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -3273,7 +3273,7 @@
         "stats",
         "tools"
       ],
-      "Hash": "36ab21660e2d095fef0d83f689e0477c"
+      "Hash": "89e455b87c84e227eb7f60a1b4e5fe1f"
     },
     "xml2": {
       "Package": "xml2",
