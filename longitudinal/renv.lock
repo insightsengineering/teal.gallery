@@ -759,9 +759,9 @@
     },
     "doBy": {
       "Package": "doBy",
-      "Version": "4.6.22",
+      "Version": "4.6.24",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "Deriv",
         "MASS",
@@ -779,7 +779,7 @@
         "tibble",
         "tidyr"
       ],
-      "Hash": "a9b56885b9596c284168df26d6179c40"
+      "Hash": "8ddf795104defe53c5392a588888ec68"
     },
     "dplyr": {
       "Package": "dplyr",
@@ -2700,14 +2700,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.2.0.9009",
+      "Version": "0.2.0.9011",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "95a68c380ea30642484df0f389f8cb67ea9d0509",
+      "RemoteSha": "60caaa6cfd3abaf1b87cec89454275750b0f0f4e",
       "Requirements": [
         "DT",
         "R",
@@ -2731,7 +2731,7 @@
         "teal.transform",
         "teal.widgets"
       ],
-      "Hash": "4d4c53b8eb4d02e2bcaf1a71559e15cd"
+      "Hash": "5ca359bb73d408eb859778daef69f722"
     },
     "teal.logger": {
       "Package": "teal.logger",
