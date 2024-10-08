@@ -1180,9 +1180,9 @@
     },
     "doBy": {
       "Package": "doBy",
-      "Version": "4.6.22",
+      "Version": "4.6.24",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "Deriv",
         "MASS",
@@ -1200,7 +1200,7 @@
         "tibble",
         "tidyr"
       ],
-      "Hash": "a9b56885b9596c284168df26d6179c40"
+      "Hash": "8ddf795104defe53c5392a588888ec68"
     },
     "doParallel": {
       "Package": "doParallel",
@@ -2516,14 +2516,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.10.9000",
+      "Version": "0.6.10.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "204a0fb1c9b9681f55f51b9c454d574ea87eb1a2",
+      "RemoteSha": "5d29a34ae6672c1d17c97a44bba81060919d06c2",
       "Requirements": [
         "R",
         "checkmate",
@@ -2535,7 +2535,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "27e0a3e51f2a8df5589dd841e690f840"
+      "Hash": "74a6e819e2d094e48e9167211df94393"
     },
     "sass": {
       "Package": "sass",
@@ -2917,14 +2917,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9050",
+      "Version": "0.3.0.9051",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "ae01110ea4c35ff586ffaeebf7f9455b8a38d57c",
+      "RemoteSha": "643644eb0d839c755cc796f6074b6f8c4b9b59ea",
       "Requirements": [
         "DT",
         "R",
@@ -2955,7 +2955,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "461c8a85bb37935243edb6ff260766cb"
+      "Hash": "d4edf879237be777e1ee45e053a73e29"
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
@@ -3119,14 +3119,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.6.9002",
+      "Version": "0.9.6.9003",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "e6a3d07319e9b3b809900cde4ebf4daa16fb7200",
+      "RemoteSha": "45e2a4bcca2220e20e9a2fc02c80bc35a1b6400a",
       "Requirements": [
         "MASS",
         "R",
@@ -3156,7 +3156,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "404f0f3d93b1ab0b251fccacaa5c2e4b"
+      "Hash": "780114062574f1cb6eac4a13143e7cc9"
     },
     "textshaping": {
       "Package": "textshaping",
