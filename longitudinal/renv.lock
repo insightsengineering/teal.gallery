@@ -2700,14 +2700,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.2.0.9012",
+      "Version": "0.2.0.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "322d202c8cdfa4d9866050f07934df652d3d768f",
+      "RemoteSha": "31455d96fce8ccf9a1a1983e4f23744a31666323",
       "Requirements": [
         "DT",
         "R",
@@ -2731,18 +2731,18 @@
         "teal.transform",
         "teal.widgets"
       ],
-      "Hash": "26c59483a0fd6caea7e09e39be32398b"
+      "Hash": "019d038b4faec13e2093df5f27316d01"
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.2.0.9011",
+      "Version": "0.2.0",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
-      "RemoteRef": "main",
-      "RemoteSha": "1e34763b71442fc4f12627813aff4017143a4f6a",
+      "RemoteRef": "v0.2.0",
+      "RemoteSha": "1ff0f084cb7591d45a175bdb204bc3217a5c74a4",
       "Requirements": [
         "R",
         "glue",
@@ -2750,10 +2750,9 @@
         "logger",
         "methods",
         "shiny",
-        "utils",
         "withr"
       ],
-      "Hash": "a9ded0afdde2e0a6f6c00a4e87f7f1d3"
+      "Hash": "d341d1a17a11547595503a1e88c1fe73"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
