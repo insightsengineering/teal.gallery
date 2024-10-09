@@ -39,9 +39,7 @@ data <- within(data, {
   teal.data::col_labels(ADMH[c("MHDISTAT")]) <- c("Status of Disease")
 })
 
-datanames <- c("ADSL", "ADMH", "ADAE", "ADCM", "ADVS", "ADLB")
-datanames(data) <- datanames
-join_keys(data) <- default_cdisc_join_keys[datanames]
+join_keys(data) <- default_cdisc_join_keys[c("ADSL", "ADMH", "ADAE", "ADCM", "ADVS", "ADLB")]
 
 ## App configuration ----
 ADSL <- data[["ADSL"]]

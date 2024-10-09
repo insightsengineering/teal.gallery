@@ -39,10 +39,7 @@ data <- within(data, {
     )
 })
 
-datanames <- c("ADSL", "ADRS", "ADLB", "ADLBPCA")
-datanames(data) <- datanames
-
-join_keys(data) <- default_cdisc_join_keys[datanames]
+join_keys(data) <- default_cdisc_join_keys[c("ADSL", "ADRS", "ADLB", "ADLBPCA")]
 
 ## Reusable Configuration For Modules
 ADSL <- data[["ADSL"]]

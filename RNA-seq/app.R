@@ -13,7 +13,6 @@ data <- within(data, {
     dplyr::mutate(is_event = CNSR == 0)
   MAE <- hermes::multi_assay_experiment
 })
-datanames(data) <- c("ADTTE", "MAE")
 
 ## App header and footer ----
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"

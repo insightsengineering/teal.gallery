@@ -15,7 +15,7 @@ data <- within(data, {
   ADSL <- radsl(seed = 1)
 
   # derive ADSL treatment duration
-  adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
+  .adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
   ADSL <- ADSL %>%
     mutate(
       TRTDURD = as.numeric(as.Date(TRTEDTM) - as.Date(TRTSDTM)) + 1,
@@ -29,12 +29,11 @@ data <- within(data, {
       EOSSTT = "End of Study Status"
     ) %>%
     droplevels()
-  teal.data::col_labels(ADSL)[c(names(adsl_labels))] <- adsl_labels
+  teal.data::col_labels(ADSL)[c(names(.adsl_labels))] <- .adsl_labels
 
   ADAE <- radae(ADSL, seed = 1)
 
   # derive common flags for AEs
-  adae_labels <- teal.data::col_labels(ADAE, fill = FALSE)
   ADAE <- ADAE %>%
     mutate_at(c("AESOC", "AEBODSYS", "AEHLT", "AEDECOD", "AETERM", "AELLT"), as.character) %>%
     mutate(
@@ -93,7 +92,7 @@ data <- within(data, {
   ADTR <- radtr(ADSL, seed = 1)
 
   # process ADTR
-  adtr_labels <- teal.data::col_labels(ADTR, fill = FALSE)
+  .adtr_labels <- teal.data::col_labels(ADTR, fill = FALSE)
   ADTR <- ADTR %>%
     mutate(
       PCHG = ifelse(AVISIT == "BASELINE", 0, PCHG),
@@ -102,7 +101,7 @@ data <- within(data, {
       AVALC = ifelse(AVISIT == "BASELINE", as.character(BASE), AVALC)
     ) %>%
     filter(AVISIT != "SCREENING")
-  teal.data::col_labels(ADTR) <- adtr_labels
+  teal.data::col_labels(ADTR) <- .adtr_labels
 
   ADTRWF <- ADTR %>%
     filter(AVISIT != "BASELINE")
@@ -115,7 +114,6 @@ data <- within(data, {
     arrange(USUBJID)
 
   ADRS <- radrs(ADSL, seed = 1)
-  adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
   ADRS <- ADRS %>%
     filter(PARAMCD %in% c("BESRSPI", "INVET")) %>%
     mutate(ADT = as.Date(ADTM)) %>%
@@ -136,12 +134,10 @@ data <- within(data, {
     )
 })
 
-# set datanames
-datanames <- c("ADSL", "ADAE", "ADCM", "ADEX", "ADTR", "ADTRWF", "ADRS", "ADRSSWIM", "ADLB")
-datanames(data) <- datanames
-
 # set join keys
-join_keys(data) <- default_cdisc_join_keys[datanames] # get default keys by name
+join_keys(data) <- default_cdisc_join_keys[
+  c("ADSL", "ADAE", "ADCM", "ADEX", "ADTR", "ADTRWF", "ADRS", "ADRSSWIM", "ADLB")
+] # get default keys by name
 join_keys(data)["ADTR", "ADTR"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
 join_keys(data)["ADTRWF", "ADTRWF"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
 join_keys(data)["ADRSSWIM", "ADRSSWIM"] <- c("STUDYID", "USUBJID", "PARAMCD", "AVISIT")
@@ -162,12 +158,7 @@ ADRSSWIM <- data[["ADRSSWIM"]]
 ADLB <- data[["ADLB"]]
 
 
-adsl_labels <- teal.data::col_labels(ADSL)
 fact_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.factor)))
-
-date_vars_asl <-
-  names(ADSL)[vapply(ADSL, function(x) inherits(x, c("Date", "POSIXct", "POSIXlt")), logical(1))]
-demog_vars_asl <- names(ADSL)[!(names(ADSL) %in% c("USUBJID", "STUDYID", date_vars_asl))]
 
 arm_vars <- c("ARMCD", "ARM", "ACTARMCD", "ACTARM", "EOSSTT")
 aeflag_vars <- c("RELFL", "CTC35FL", "SERFL", "RELSERFL")

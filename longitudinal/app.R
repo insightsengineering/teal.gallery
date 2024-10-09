@@ -31,12 +31,12 @@ data <- within(data, {
   # for example if biomarker is already log2 transformed then exclude
   # value of AVAL will then be assigned to XXXXXL2 variables. e.g. AVALL2
   # e.g. if x assay is already log2 transformed then assigns AVAL to AVALL2
-  exclude_l2 <- c("")
+  .exclude_l2 <- c("")
 
   # for example if study specific biomarker represents a CHG value then exclude
   # value NA is assigned to XXXXXL2. e.g. AVALL2
   # e.g. if x assay are CHG values then assigns NA to AVALL2
-  exclude_chg <- c("")
+  .exclude_chg <- c("")
 
   # the app expects ARM to be the main treatment variable
   # to use other treatment variables it is easiest to rename to ARM and process as ARM
@@ -64,13 +64,13 @@ data <- within(data, {
 
   # convenience operator: create an operator that keeps the variable attributes
   # variable labels often get clobbered and we would like to keep them)
-  `%keep_label%` <- function(lhv, rhv) {
+  .keep_label <- function(lhv, rhv) {
     attributes(lhv) <- attributes(rhv)
     lhv
   }
 
   # convenience operator: create an operator that adds a label to newly created or re-processed variables
-  `%make_label%` <- function(lhv, label) {
+  .make_label <- function(lhv, label) {
     attr(lhv, "label") <- label
     lhv
   }
@@ -86,10 +86,10 @@ data <- within(data, {
         TRT01P == "B: Placebo" ~ 3,
         TRUE ~ as.numeric(NA)
       ),
-      TRTORD = TRTORD %make_label% "Treatment Order",
+      TRTORD = .make_label(TRTORD, "Treatment Order"),
       TRT01P = as.character(arm_mapping[match(TRT01P, names(arm_mapping))]),
       TRT01P = factor(ARM) %>% reorder(TRTORD),
-      TRT01P = TRT01P %make_label% "Planned Treatment for Period 01"
+      TRT01P = .make_label(TRT01P, "Planned Treatment for Period 01")
     )
 
   # capture state of variable labels to apply back onto variables after data filtering
@@ -198,56 +198,60 @@ data <- within(data, {
     select(USUBJID, PARAMCD, AVAL) %>%
     group_by(PARAMCD) %>%
     summarise(AVAL_MIN = min(AVAL, na.rm = TRUE), .groups = "drop") %>%
-    mutate(PARAMCD = PARAMCD %make_label% "Parameter Code")
+    mutate(PARAMCD = .make_label(PARAMCD, "Parameter Code"))
 
   # post process the data to create several new variables and adjust existing record specific values per specification
   # - adjust existing BASELINE record values where values are missing
   ADLB_SUPED1 <- ADLB_SUBSET %>%
-    mutate(BASE2 = ifelse(toupper(AVISIT) == "SCREENING" & is.na(BASE2), AVAL, BASE2) %keep_label% BASE2) %>%
-    mutate(CHG2 = ifelse(toupper(AVISIT) == "SCREENING" & is.na(CHG2), 0, CHG2) %keep_label% CHG2) %>%
-    mutate(PCHG2 = ifelse(toupper(AVISIT) == "SCREENING" & is.na(PCHG2), 0, PCHG2) %keep_label% PCHG2) %>%
-    mutate(BASE = ifelse(toupper(AVISIT) == "BASELINE" & is.na(BASE), AVAL, BASE) %keep_label% BASE) %>%
-    mutate(CHG = ifelse(toupper(AVISIT) == "BASELINE" & is.na(CHG), 0, CHG) %keep_label% CHG) %>%
-    mutate(PCHG = ifelse(toupper(AVISIT) == "BASELINE" & is.na(PCHG), 0, PCHG) %keep_label% PCHG) %>%
-    mutate(TRTORD = TRTORD %make_label% "Treatment Order")
+    mutate(BASE2 = .keep_label(ifelse(toupper(AVISIT) == "SCREENING" & is.na(BASE2), AVAL, BASE2), BASE2)) %>%
+    mutate(CHG2 = .keep_label(ifelse(toupper(AVISIT) == "SCREENING" & is.na(CHG2), 0, CHG2), CHG2)) %>%
+    mutate(PCHG2 = .keep_label(ifelse(toupper(AVISIT) == "SCREENING" & is.na(PCHG2), 0, PCHG2), PCHG2)) %>%
+    mutate(BASE = .keep_label(ifelse(toupper(AVISIT) == "BASELINE" & is.na(BASE), AVAL, BASE), BASE)) %>%
+    mutate(CHG = .keep_label(ifelse(toupper(AVISIT) == "BASELINE" & is.na(CHG), 0, CHG), CHG)) %>%
+    mutate(PCHG = .keep_label(ifelse(toupper(AVISIT) == "BASELINE" & is.na(PCHG), 0, PCHG), PCHG)) %>%
+    mutate(TRTORD = .make_label(TRTORD, "Treatment Order"))
 
   # Inconsequential Warning issued: Warning: "PARAMCD" has different attributes on LHS and RHS of join.
   # merge minimum AVAL value onto the ADLB data to calculate the log2 variables. preserve the variable order
   ADLB_SUPED2 <- inner_join(PARAM_MINS, ADLB_SUPED1, by = "PARAMCD")[, union(names(ADLB_SUPED1), names(PARAM_MINS))] %>%
     # visit values
     # excludes biomarkers where log2 is not appropriate: for example assay value already log2
-    mutate(AVALL2 = ifelse(PARAMCD %in% exclude_l2, AVAL,
-      # excludes biomarkers where log2 is not appropriate: for example CHG type assay
-      ifelse(PARAMCD %in% exclude_chg, NA,
-        ifelse(AVAL == 0 & AVAL_MIN > 0, log2(AVAL_MIN / 2),
-          # would be taking log2 of 0 or negative value so set to NA
-          ifelse(AVAL == 0 & AVAL_MIN <= 0, NA,
-            ifelse(AVAL > 0, log2(AVAL), NA)
+    mutate(AVALL2 = .make_label(
+      ifelse(PARAMCD %in% .exclude_l2, AVAL,
+        # excludes biomarkers where log2 is not appropriate: for example CHG type assay
+        ifelse(PARAMCD %in% .exclude_chg, NA,
+          ifelse(AVAL == 0 & AVAL_MIN > 0, log2(AVAL_MIN / 2),
+            # would be taking log2 of 0 or negative value so set to NA
+            ifelse(AVAL == 0 & AVAL_MIN <= 0, NA,
+              ifelse(AVAL > 0, log2(AVAL), NA)
+            )
           )
         )
-      )
-    ) %make_label% "Log2 of AVAL") %>%
+      ), "Log2 of AVAL"
+    )) %>%
     # baseline values
-    mutate(BASEL2 = ifelse(PARAMCD %in% exclude_l2, BASE,
-      ifelse(PARAMCD %in% exclude_chg, NA,
+    mutate(BASEL2 = .make_label(ifelse(PARAMCD %in% .exclude_l2, BASE,
+      ifelse(PARAMCD %in% .exclude_chg, NA,
         ifelse(BASE == 0 & AVAL_MIN > 0, log2(AVAL_MIN / 2),
           ifelse(BASE == 0 & AVAL_MIN <= 0, NA,
             ifelse(BASE > 0, log2(BASE), NA)
           )
         )
       )
-    ) %make_label% "Log2 of BASE") %>%
+    ), "Log2 of BASE")) %>%
     # screening
-    mutate(BASE2L2 = ifelse(PARAMCD %in% exclude_l2, BASE2,
-      ifelse(PARAMCD %in% exclude_chg, NA,
-        ifelse(BASE2 == 0 & AVAL_MIN > 0, log2(AVAL_MIN / 2),
-          ifelse(BASE2 == 0 & AVAL_MIN <= 0, NA,
-            ifelse(BASE2 > 0, log2(BASE2), NA)
+    mutate(BASE2L2 = .make_label(
+      ifelse(PARAMCD %in% .exclude_l2, BASE2,
+        ifelse(PARAMCD %in% .exclude_chg, NA,
+          ifelse(BASE2 == 0 & AVAL_MIN > 0, log2(AVAL_MIN / 2),
+            ifelse(BASE2 == 0 & AVAL_MIN <= 0, NA,
+              ifelse(BASE2 > 0, log2(BASE2), NA)
+            )
           )
         )
-      )
-    ) %make_label% "Log2 of BASE2") %>%
-    mutate(AVAL_MIN = AVAL_MIN %make_label% "Minimum AVAL Within PARAMCD")
+      ), "Log2 of BASE2"
+    )) %>%
+    mutate(AVAL_MIN = .make_label(AVAL_MIN, "Minimum AVAL Within PARAMCD"))
 
   # create final data set used by goshawk
   # all data set passed into a goshawk app must have all of the columns
@@ -255,15 +259,15 @@ data <- within(data, {
   ADLB <- ADLB_SUPED2 %>%
     mutate(
       TRT01P = as.character(arm_mapping[match(TRT01P, names(arm_mapping))]),
-      TRT01P = factor(TRT01P) %>% reorder(TRTORD) %make_label% "Planned Treatment for Period 01",
+      TRT01P = .make_label(factor(TRT01P) %>% reorder(TRTORD), "Planned Treatment for Period 01"),
       TRT01A = as.character(arm_mapping[match(TRT01A, names(arm_mapping))]),
-      TRT01A = factor(TRT01A) %>% reorder(TRTORD) %make_label% "Actual Treatment for Period 01",
-      LOQFL = LOQFL %make_label% "Limit of Quantification",
-      AVISITCD = factor(AVISITCD) %>% reorder(AVISITCDN) %make_label% "Analysis Visit Window Code",
-      AVISITCDN = AVISITCDN %make_label% "Analysis Visit Window Code (N)",
-      BASE2 = BASE2 %make_label% "Screening Value",
-      CHG2 = CHG2 %make_label% "Absolute Change from Screening",
-      PCHG2 = PCHG2 %make_label% "Percent Change from Screening"
+      TRT01A = .make_label(factor(TRT01A) %>% reorder(TRTORD), "Actual Treatment for Period 01"),
+      LOQFL = .make_label(LOQFL, "Limit of Quantification"),
+      AVISITCD = .make_label(factor(AVISITCD) %>% reorder(AVISITCDN), "Analysis Visit Window Code"),
+      AVISITCDN = .make_label(AVISITCDN, "Analysis Visit Window Code (N)"),
+      BASE2 = .make_label(BASE2, "Screening Value"),
+      CHG2 = .make_label(CHG2, "Absolute Change from Screening"),
+      PCHG2 = .make_label(PCHG2, "Percent Change from Screening")
     )
 
   # add LLOQ and ULOQ variables to support adding horizontal/vertical range lines
@@ -279,15 +283,13 @@ data <- within(data, {
   ################################################################################
 })
 
-datanames <- c("ADSL", "ADLB")
-datanames(data) <- datanames
-join_keys(data) <- default_cdisc_join_keys[datanames]
+join_keys(data) <- default_cdisc_join_keys[c("ADSL", "ADLB")]
 
 ## App configuration ----
 ADSL <- data[["ADSL"]]
 ADLB <- data[["ADLB"]]
-exclude_l2 <- data[["exclude_l2"]]
-exclude_chg <- data[["exclude_chg"]]
+.exclude_l2 <- data[[".exclude_l2"]]
+.exclude_chg <- data[[".exclude_chg"]]
 
 # study information: used to label app and in "Example Info Page" module
 ATYPE <- "Exploratory" # define here and in the "# code >" section below
@@ -408,7 +410,7 @@ paramcd_list <- paramDict$PARAMCD
 
 # create list of biomarkers excluded from log2 transformation
 paramexcldDict <- paramDict %>%
-  filter(PARAMCD %in% c(exclude_l2, exclude_chg))
+  filter(PARAMCD %in% c(.exclude_l2, .exclude_chg))
 paramexcld_list <- paramexcldDict$PARAM
 paramcdexcld_list <- paramexcldDict$PARAMCD
 
@@ -773,31 +775,6 @@ app <- teal::init(
       )
     )
   )
-)
-
-# Add context sensitive help code
-body(app$server)[[length(body(app$server)) + 1]] <- quote(
-  observeEvent(input$showAnlVarLegendModal, {
-    showModal(modalDialog(
-      title = "Analysis Variable Pull Down Menu",
-      tags$p(
-        "These variables will appear in the Visualizations 'Analysis Variable' pull down menu. This legend
-            provides the variable labels to help clarify the short analysis variable names displayed in the pull down
-          menu."
-      ),
-      p("BASE2 = Screening Visit Value"),
-      p("BASE2L2 = Log2(BASE2)"),
-      p("CHG2 = Change from Screening"),
-      p("PCHG2 =  % Change from Screening"),
-      p("BASE = Baseline Visit Value"),
-      p("BASEL2 = Log2(BASE)"),
-      p("CHG = Change from Baseline"),
-      p("PCHG =  % Change from Baseline"),
-      p("AVAL = Visit Values"),
-      p("AVALL2 = Log2(AVAL)"),
-      easyClose = TRUE
-    ))
-  })
 )
 
 shinyApp(app$ui, app$server)
