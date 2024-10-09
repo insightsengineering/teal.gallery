@@ -25,21 +25,18 @@ data <- within(data, {
     )) %>%
     teal.data::col_relabel(is_event = "Is an Event") %>%
     teal.data::col_relabel(n_events = "Number of Events")
-  ADAETTE_AE <-
-    filter(ADAETTE, grepl("TOT", .data$PARAMCD, fixed = TRUE)) %>% select(-"AVAL")
-  ADAETTE_OTH <-
-    filter(ADAETTE, !(grepl("TOT", .data$PARAMCD, fixed = TRUE)))
+  .ADAETTE_AE <- filter(ADAETTE, grepl("TOT", .data$PARAMCD, fixed = TRUE)) %>% select(-"AVAL")
+  .ADAETTE_OTH <- filter(ADAETTE, !(grepl("TOT", .data$PARAMCD, fixed = TRUE)))
 
-  ADAETTE_TTE <- ADAETTE %>%
+  .ADAETTE_TTE <- ADAETTE %>%
     filter(PARAMCD == "AEREPTTE") %>%
     select(USUBJID, ARM, ARMCD, AVAL)
 
-  ADAETTE_AE <-
-    full_join(ADAETTE_AE, ADAETTE_TTE, by = c("USUBJID", "ARM", "ARMCD"))
-  ADAETTE <- rbind(ADAETTE_AE, ADAETTE_OTH)
+  .ADAETTE_AE <- full_join(.ADAETTE_AE, .ADAETTE_TTE, by = c("USUBJID", "ARM", "ARMCD"))
+  ADAETTE <- rbind(.ADAETTE_AE, .ADAETTE_OTH)
 
   ADEX <- radex(ADSL, seed = 1)
-  ADEX_labels <- teal.data::col_labels(ADEX, fill = FALSE)
+  .ADEX_labels <- teal.data::col_labels(ADEX, fill = FALSE)
   # Below steps are done to simulate data with TDURD parameter as it is not in the ADEX data from `random.cdisc.data` package
   set.seed(1, kind = "Mersenne-Twister")
   ADEX <- ADEX %>%
@@ -59,7 +56,7 @@ data <- within(data, {
   ADEX <- ADEX %>%
     filter(PARCAT1 == "OVERALL" &
       PARAMCD %in% c("TDOSE", "TNDOSE", "TDURD"))
-  teal.data::col_labels(ADEX) <- ADEX_labels
+  teal.data::col_labels(ADEX) <- .ADEX_labels
 
   ADLB <- radlb(ADSL, seed = 1)
 
@@ -95,7 +92,7 @@ data <- within(data, {
   #   tern::df_explicit_na(omit_columns = setdiff(names(ADEX), c("PARAM", "PARAMCD", "PARCAT2") ))
 
   # define study-specific analysis subgroups and baskets from ADAE
-  add_event_flags <- function(dat) {
+  .add_event_flags <- function(dat) {
     dat %>%
       dplyr::mutate(
         TMPFL_SER = AESER == "Y",
@@ -116,12 +113,10 @@ data <- within(data, {
   }
 
   ADAE <- ADAE %>%
-    add_event_flags()
+    .add_event_flags()
 })
 
-datanames <- c("ADSL", "ADAE", "ADAETTE", "ADEX", "ADLB", "ADEG", "ADVS", "ADCM")
-datanames(data) <- datanames
-join_keys(data) <- default_cdisc_join_keys[datanames]
+join_keys(data) <- default_cdisc_join_keys[c("ADSL", "ADAE", "ADAETTE", "ADEX", "ADLB", "ADEG", "ADVS", "ADCM")]
 
 ## App configuration ----
 ADSL <- data[["ADSL"]]
