@@ -2700,14 +2700,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.2.0.9011",
+      "Version": "0.2.0.9012",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "60caaa6cfd3abaf1b87cec89454275750b0f0f4e",
+      "RemoteSha": "322d202c8cdfa4d9866050f07934df652d3d768f",
       "Requirements": [
         "DT",
         "R",
@@ -2731,7 +2731,7 @@
         "teal.transform",
         "teal.widgets"
       ],
-      "Hash": "5ca359bb73d408eb859778daef69f722"
+      "Hash": "26c59483a0fd6caea7e09e39be32398b"
     },
     "teal.logger": {
       "Package": "teal.logger",
