@@ -1485,11 +1485,12 @@
     },
     "officer": {
       "Package": "officer",
-      "Version": "0.6.6",
+      "Version": "0.6.7",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R6",
+        "cli",
         "grDevices",
         "graphics",
         "openssl",
@@ -1500,7 +1501,7 @@
         "xml2",
         "zip"
       ],
-      "Hash": "dc703d9a479e428a15dc6f82e268387e"
+      "Hash": "d6c0a4e796301a5d252de42c92a9a8b9"
     },
     "openssl": {
       "Package": "openssl",
@@ -2374,14 +2375,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.6.9004",
+      "Version": "0.9.6.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "57928a262ad18f0a31cbaa3b7aa38373494ed004",
+      "RemoteSha": "eae5ff2bec8bc736ff1f5155928cc993b8bb80e2",
       "Requirements": [
         "MASS",
         "R",
@@ -2411,7 +2412,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "eb98d697bd041ad17fbbfbe3b1a5665b"
+      "Hash": "98bfd1bdfa2a87482efdf1e78a9c82b1"
     },
     "textshaping": {
       "Package": "textshaping",
