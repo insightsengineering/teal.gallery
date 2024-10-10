@@ -1865,7 +1865,7 @@
       "Package": "officer",
       "Version": "0.6.7",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R6",
         "cli",
