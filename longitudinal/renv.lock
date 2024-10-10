@@ -1838,11 +1838,12 @@
     },
     "officer": {
       "Package": "officer",
-      "Version": "0.6.6",
+      "Version": "0.6.7",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R6",
+        "cli",
         "grDevices",
         "graphics",
         "openssl",
@@ -1853,7 +1854,7 @@
         "xml2",
         "zip"
       ],
-      "Hash": "dc703d9a479e428a15dc6f82e268387e"
+      "Hash": "d6c0a4e796301a5d252de42c92a9a8b9"
     },
     "openssl": {
       "Package": "openssl",
@@ -2735,14 +2736,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.2.0",
+      "Version": "0.2.0.9011",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
-      "RemoteRef": "v0.2.0",
-      "RemoteSha": "1ff0f084cb7591d45a175bdb204bc3217a5c74a4",
+      "RemoteRef": "main",
+      "RemoteSha": "1e34763b71442fc4f12627813aff4017143a4f6a",
       "Requirements": [
         "R",
         "glue",
@@ -2750,9 +2751,10 @@
         "logger",
         "methods",
         "shiny",
+        "utils",
         "withr"
       ],
-      "Hash": "d341d1a17a11547595503a1e88c1fe73"
+      "Hash": "a9ded0afdde2e0a6f6c00a4e87f7f1d3"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
