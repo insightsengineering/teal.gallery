@@ -1617,21 +1617,21 @@
     },
     "nestcolor": {
       "Package": "nestcolor",
-      "Version": "0.1.2.9015",
+      "Version": "0.1.2.9016",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "nestcolor",
       "RemoteRef": "main",
-      "RemoteSha": "fe8b71c02b41f82260300b519433f5f21c22b89b",
+      "RemoteSha": "40c4ed47d50e2ce16adc204ce562e9ab0e51985c",
       "Requirements": [
         "R",
         "checkmate",
         "ggplot2",
         "lifecycle"
       ],
-      "Hash": "99e7ce8743d681af12ef2050b10e1502"
+      "Hash": "62ed54b9ebe666189151b1743abc328c"
     },
     "nlme": {
       "Package": "nlme",
@@ -1678,11 +1678,12 @@
     },
     "officer": {
       "Package": "officer",
-      "Version": "0.6.6",
+      "Version": "0.6.7",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R6",
+        "cli",
         "grDevices",
         "graphics",
         "openssl",
@@ -1693,7 +1694,7 @@
         "xml2",
         "zip"
       ],
-      "Hash": "dc703d9a479e428a15dc6f82e268387e"
+      "Hash": "d6c0a4e796301a5d252de42c92a9a8b9"
     },
     "openssl": {
       "Package": "openssl",
@@ -2421,14 +2422,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9069",
+      "Version": "0.15.2.9070",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "e6db5cafbab56d8ac9c4dd55b2c1200f00e7a968",
+      "RemoteSha": "d82ce144da212d763971e6dc2bb6e5094b6d2b5b",
       "Requirements": [
         "R",
         "checkmate",
@@ -2448,7 +2449,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "a5d5db85a54390882f8e0c2a2096d1af"
+      "Hash": "db78bfeddd28c259f14a095bb2217cad"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2726,14 +2727,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.6.9003",
+      "Version": "0.9.6.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "45e2a4bcca2220e20e9a2fc02c80bc35a1b6400a",
+      "RemoteSha": "eae5ff2bec8bc736ff1f5155928cc993b8bb80e2",
       "Requirements": [
         "MASS",
         "R",
@@ -2763,7 +2764,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "780114062574f1cb6eac4a13143e7cc9"
+      "Hash": "98bfd1bdfa2a87482efdf1e78a9c82b1"
     },
     "tern.gee": {
       "Package": "tern.gee",
