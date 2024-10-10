@@ -42,7 +42,7 @@ data <- within(data, {
   # to use other treatment variables it is easiest to rename to ARM and process as ARM
 
   # convenience function: simply reduces typing effort especially if there are a lot of treatment arms
-  # run once to create treatment mapping code for assigning arm_mapping variable below
+  # run once to create treatment mapping code for assigning .arm_mapping variable below
   # this function writes the code framework to the console
   # copy code lines from console and provide right hand side values as desired
   # maptrt(df_arm = ADSL$TRT01P, code = "M")
@@ -50,8 +50,8 @@ data <- within(data, {
   # ARM mapping: used to map dose values as ARM values or to abbreviate long treatment values for improved display
   # "original ARM value" = "displayed treatment value".
   # the customized values may be the same value as original if this functionality isn't needed
-  # but the arm_mapping still needs to be defined
-  arm_mapping <- list(
+  # but the .arm_mapping still needs to be defined
+  .arm_mapping <- list(
     "A: Drug X" = "Drug X 100mg",
     "C: Combination" = "Combination 100mg",
     "B: Placebo" = "Placebo"
@@ -87,19 +87,17 @@ data <- within(data, {
         TRUE ~ as.numeric(NA)
       ),
       TRTORD = .make_label(TRTORD, "Treatment Order"),
-      TRT01P = as.character(arm_mapping[match(TRT01P, names(arm_mapping))]),
+      TRT01P = as.character(.arm_mapping[match(TRT01P, names(.arm_mapping))]),
       TRT01P = factor(ARM) %>% reorder(TRTORD),
       TRT01P = .make_label(TRT01P, "Planned Treatment for Period 01")
     )
 
   # capture state of variable labels to apply back onto variables after data filtering
-  adsl_labels <- teal.data::col_labels(ADSL)
-  date_vars_adsl <- names(ADSL)[vapply(ADSL, function(x) inherits(x, c("Date", "POSIXct", "POSIXlt")), logical(1))]
-  char_vars_adsl <- names(Filter(isTRUE, sapply(ADSL, is.character)))
+  .char_vars_adsl <- names(Filter(isTRUE, sapply(ADSL, is.character)))
 
   # set all character class variables to class factor required by NEST functions
   ADSL <- ADSL %>%
-    mutate_at(char_vars_adsl, factor)
+    mutate_at(.char_vars_adsl, factor)
 
   # post process the ADLB data to subset records per specification
   # goshawk expects the following variables: AVISITCD, AVALU, BASE2, CHG2, LBSTRESC, LOQFL, PCHG2
@@ -126,7 +124,7 @@ data <- within(data, {
 
   set.seed(1, kind = "Mersenne-Twister") # Reproducible code due to `sample` calls
 
-  ADLB_SUBSET <- ADLB %>%
+  .ADLB_SUBSET <- ADLB %>%
     filter(!is.na(AVAL)) %>%
     filter(ITTFL == "Y" & toupper(AVISIT) %like any% c("SCREEN%", "BASE%", "%WEEK%", "%FOLLOW%")) %>%
     select(c(
@@ -180,9 +178,9 @@ data <- within(data, {
     )) %>%
     ungroup()
 
-  attr(ADLB_SUBSET[["LBSTRESC"]], "label") <- "Character Result/Finding in Std Format"
-  attr(ADLB_SUBSET[["ANRLO"]], "label") <- "Analysis Normal Range Lower Limit"
-  attr(ADLB_SUBSET[["ANRHI"]], "label") <- "Analysis Normal Range Upper Limit"
+  attr(.ADLB_SUBSET[["LBSTRESC"]], "label") <- "Character Result/Finding in Std Format"
+  attr(.ADLB_SUBSET[["ANRLO"]], "label") <- "Analysis Normal Range Lower Limit"
+  attr(.ADLB_SUBSET[["ANRHI"]], "label") <- "Analysis Normal Range Upper Limit"
 
   ################################################################################
   # END: SPA Input Required
@@ -194,7 +192,7 @@ data <- within(data, {
 
   # identify the minimum non-zero value for AVAL for each PARAMCD.
   # non-zero minimum value used for log2 transformed analysis values
-  PARAM_MINS <- ADLB_SUBSET %>%
+  .PARAM_MINS <- .ADLB_SUBSET %>%
     select(USUBJID, PARAMCD, AVAL) %>%
     group_by(PARAMCD) %>%
     summarise(AVAL_MIN = min(AVAL, na.rm = TRUE), .groups = "drop") %>%
@@ -202,7 +200,7 @@ data <- within(data, {
 
   # post process the data to create several new variables and adjust existing record specific values per specification
   # - adjust existing BASELINE record values where values are missing
-  ADLB_SUPED1 <- ADLB_SUBSET %>%
+  .ADLB_SUPED1 <- .ADLB_SUBSET %>%
     mutate(BASE2 = .keep_label(ifelse(toupper(AVISIT) == "SCREENING" & is.na(BASE2), AVAL, BASE2), BASE2)) %>%
     mutate(CHG2 = .keep_label(ifelse(toupper(AVISIT) == "SCREENING" & is.na(CHG2), 0, CHG2), CHG2)) %>%
     mutate(PCHG2 = .keep_label(ifelse(toupper(AVISIT) == "SCREENING" & is.na(PCHG2), 0, PCHG2), PCHG2)) %>%
@@ -213,7 +211,7 @@ data <- within(data, {
 
   # Inconsequential Warning issued: Warning: "PARAMCD" has different attributes on LHS and RHS of join.
   # merge minimum AVAL value onto the ADLB data to calculate the log2 variables. preserve the variable order
-  ADLB_SUPED2 <- inner_join(PARAM_MINS, ADLB_SUPED1, by = "PARAMCD")[, union(names(ADLB_SUPED1), names(PARAM_MINS))] %>%
+  .ADLB_SUPED2 <- inner_join(.PARAM_MINS, .ADLB_SUPED1, by = "PARAMCD")[, union(names(.ADLB_SUPED1), names(.PARAM_MINS))] %>%
     # visit values
     # excludes biomarkers where log2 is not appropriate: for example assay value already log2
     mutate(AVALL2 = .make_label(
@@ -256,11 +254,11 @@ data <- within(data, {
   # create final data set used by goshawk
   # all data set passed into a goshawk app must have all of the columns
   # `AVISITCD`, `BASE`, `BASE2`, `AVALU`, `LBSTRESC`, `LOQFL`, `CHG2`, and `PCHG2`.
-  ADLB <- ADLB_SUPED2 %>%
+  ADLB <- .ADLB_SUPED2 %>%
     mutate(
-      TRT01P = as.character(arm_mapping[match(TRT01P, names(arm_mapping))]),
+      TRT01P = as.character(.arm_mapping[match(TRT01P, names(.arm_mapping))]),
       TRT01P = .make_label(factor(TRT01P) %>% reorder(TRTORD), "Planned Treatment for Period 01"),
-      TRT01A = as.character(arm_mapping[match(TRT01A, names(arm_mapping))]),
+      TRT01A = as.character(.arm_mapping[match(TRT01A, names(.arm_mapping))]),
       TRT01A = .make_label(factor(TRT01A) %>% reorder(TRTORD), "Actual Treatment for Period 01"),
       LOQFL = .make_label(LOQFL, "Limit of Quantification"),
       AVISITCD = .make_label(factor(AVISITCD) %>% reorder(AVISITCDN), "Analysis Visit Window Code"),
@@ -276,8 +274,8 @@ data <- within(data, {
   #  - value assigned to AVAL is x/2 and y respectively. LOQFL is assigned "Y"
   #  - other LBSTRESC value formats will need to be pre-pocessed so that AVAL and LOQFL are assigned as desired
   # LBSTRESC is required in order to use the h_identify_loq_values function. if this is not available then LBSTRESC <- AVAL
-  ADLB_LOQS <- goshawk:::h_identify_loq_values(ADLB, flag_var = "LOQFL")
-  ADLB <- left_join(ADLB, ADLB_LOQS, by = "PARAM")
+  .ADLB_LOQS <- goshawk:::h_identify_loq_values(ADLB, flag_var = "LOQFL")
+  ADLB <- left_join(ADLB, .ADLB_LOQS, by = "PARAM")
   ################################################################################
   # END: Generic Data Post Processing
   ################################################################################
@@ -305,7 +303,7 @@ app_owner_uid <- "John_Doe"
 shape_manual <- c("N" = 1, "Y" = 2, "NA" = 0)
 
 # for consistency: assign treatment colors to match those used in other outputs. left hand side values need to
-# match values on right hand side of arm_mapping done above
+# match values on right hand side of .arm_mapping done above
 color_manual <- c(
   "Drug X 100mg" = "#1e90ff",
   "Combination 100mg" = "#bb9990",
