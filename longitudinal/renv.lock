@@ -729,14 +729,14 @@
     },
     "data.table": {
       "Package": "data.table",
-      "Version": "1.16.0",
+      "Version": "1.16.2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "methods"
       ],
-      "Hash": "fb24e05d4a91d8b1c7ff8e284bde834a"
+      "Hash": "2e00b378fc3be69c865120d9f313039a"
     },
     "desc": {
       "Package": "desc",
@@ -870,13 +870,13 @@
     },
     "evaluate": {
       "Package": "evaluate",
-      "Version": "1.0.0",
+      "Version": "1.0.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "6b567375113ceb7d9f800de4dd42218e"
+      "Hash": "3fd29944b231036ad67c3edb32e02201"
     },
     "expm": {
       "Package": "expm",
@@ -1014,14 +1014,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.9.9001",
+      "Version": "0.5.9.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "85be9d52a6c1a3e3a9bad490f1ff7eb6a1bed92f",
+      "RemoteSha": "b3c8c91767fb08b3cd498455f492549f6e786f84",
       "Requirements": [
         "R",
         "checkmate",
@@ -1031,7 +1031,7 @@
         "methods",
         "stringi"
       ],
-      "Hash": "8ae18cedf8f603245cc496e27c825381"
+      "Hash": "3e7f9e7997b797c979385c7007ddbeda"
     },
     "fs": {
       "Package": "fs",
@@ -1260,14 +1260,14 @@
     },
     "goshawk": {
       "Package": "goshawk",
-      "Version": "0.1.18.9004",
+      "Version": "0.1.18.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "4e0f76bb6445c60a545a7382e4714ea3fb240d14",
+      "RemoteSha": "d8439aabbf609eea709b55ffa2eab61790d1770e",
       "Requirements": [
         "R",
         "checkmate",
@@ -1283,7 +1283,7 @@
         "rlang",
         "stringr"
       ],
-      "Hash": "80afe78723924d2ef3b1a5e6cdafc664"
+      "Hash": "6bb4f3c024009ab6e7e110c7013a3792"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -1865,7 +1865,7 @@
       "Package": "officer",
       "Version": "0.6.7",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R6",
         "cli",
@@ -2178,9 +2178,9 @@
     },
     "random.cdisc.data": {
       "Package": "random.cdisc.data",
-      "Version": "0.3.15",
+      "Version": "0.3.16",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "checkmate",
@@ -2194,7 +2194,7 @@
         "tidyr",
         "yaml"
       ],
-      "Hash": "c92edb70a24230a0b30f961c431c9fdf"
+      "Hash": "0d7f0d6d1145b4ba10bc650b538830d1"
     },
     "rappdirs": {
       "Package": "rappdirs",
@@ -2745,14 +2745,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.2.0.9013",
+      "Version": "0.2.0.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "31455d96fce8ccf9a1a1983e4f23744a31666323",
+      "RemoteSha": "55abf5539607ceb0193ebf71015ee8df31b0c388",
       "Requirements": [
         "DT",
         "R",
@@ -2776,7 +2776,7 @@
         "teal.transform",
         "teal.widgets"
       ],
-      "Hash": "019d038b4faec13e2093df5f27316d01"
+      "Hash": "e78b82931355383e5dd0add61673aadd"
     },
     "teal.logger": {
       "Package": "teal.logger",
