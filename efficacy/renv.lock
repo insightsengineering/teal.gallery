@@ -643,14 +643,14 @@
     },
     "data.table": {
       "Package": "data.table",
-      "Version": "1.16.0",
+      "Version": "1.16.2",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "methods"
       ],
-      "Hash": "fb24e05d4a91d8b1c7ff8e284bde834a"
+      "Hash": "2e00b378fc3be69c865120d9f313039a"
     },
     "desc": {
       "Package": "desc",
@@ -768,13 +768,13 @@
     },
     "evaluate": {
       "Package": "evaluate",
-      "Version": "1.0.0",
+      "Version": "1.0.1",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "6b567375113ceb7d9f800de4dd42218e"
+      "Hash": "3fd29944b231036ad67c3edb32e02201"
     },
     "fansi": {
       "Package": "fansi",
@@ -901,14 +901,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.9.9001",
+      "Version": "0.5.9.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "85be9d52a6c1a3e3a9bad490f1ff7eb6a1bed92f",
+      "RemoteSha": "b3c8c91767fb08b3cd498455f492549f6e786f84",
       "Requirements": [
         "R",
         "checkmate",
@@ -918,7 +918,7 @@
         "methods",
         "stringi"
       ],
-      "Hash": "8ae18cedf8f603245cc496e27c825381"
+      "Hash": "3e7f9e7997b797c979385c7007ddbeda"
     },
     "fs": {
       "Package": "fs",
@@ -1981,9 +1981,9 @@
     },
     "random.cdisc.data": {
       "Package": "random.cdisc.data",
-      "Version": "0.3.15",
+      "Version": "0.3.16",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "checkmate",
@@ -1997,7 +1997,7 @@
         "tidyr",
         "yaml"
       ],
-      "Hash": "c92edb70a24230a0b30f961c431c9fdf"
+      "Hash": "0d7f0d6d1145b4ba10bc650b538830d1"
     },
     "rappdirs": {
       "Package": "rappdirs",
