@@ -1719,7 +1719,7 @@
       "Package": "renv",
       "Version": "1.0.11",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
