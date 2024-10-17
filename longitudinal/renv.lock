@@ -1235,14 +1235,14 @@
     },
     "goshawk": {
       "Package": "goshawk",
-      "Version": "0.1.18.9005",
+      "Version": "0.1.18.9006",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "d8439aabbf609eea709b55ffa2eab61790d1770e",
+      "RemoteSha": "13bfbaf6b565544d2fdb53cd7da4b5195ca1b7a6",
       "Requirements": [
         "R",
         "checkmate",
@@ -1258,7 +1258,7 @@
         "rlang",
         "stringr"
       ],
-      "Hash": "6bb4f3c024009ab6e7e110c7013a3792"
+      "Hash": "3287ac42620248f072e5c5ad47c9fd75"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -2345,10 +2345,10 @@
     },
     "rstudioapi": {
       "Package": "rstudioapi",
-      "Version": "0.16.0",
+      "Version": "0.17.0",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "96710351d642b70e8f02ddeb237c46a7"
+      "Hash": "fb9f5fce8f609e9b66f0bea5c783f88a"
     },
     "rtables": {
       "Package": "rtables",
