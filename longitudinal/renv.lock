@@ -1588,13 +1588,14 @@
     },
     "logger": {
       "Package": "logger",
-      "Version": "0.3.0",
+      "Version": "0.4.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
+        "R",
         "utils"
       ],
-      "Hash": "c145edf05cc128e6ffcfa5d872c46329"
+      "Hash": "f25d781d5bc7757e08cf38c741a5ad1c"
     },
     "lubridate": {
       "Package": "lubridate",
@@ -2124,9 +2125,9 @@
     },
     "quantreg": {
       "Package": "quantreg",
-      "Version": "5.98",
+      "Version": "5.99",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "MASS",
         "Matrix",
@@ -2138,7 +2139,7 @@
         "stats",
         "survival"
       ],
-      "Hash": "017561f17632c065388b7062da030952"
+      "Hash": "c6e207b874494a7ac4d52f02dcd7d3af"
     },
     "ragg": {
       "Package": "ragg",
@@ -2345,10 +2346,10 @@
     },
     "rstudioapi": {
       "Package": "rstudioapi",
-      "Version": "0.17.0",
+      "Version": "0.17.1",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "fb9f5fce8f609e9b66f0bea5c783f88a"
+      "Hash": "5f90cd73946d706cfe26024294236113"
     },
     "rtables": {
       "Package": "rtables",
