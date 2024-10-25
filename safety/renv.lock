@@ -2452,7 +2452,7 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.2.0",
+      "Version": "0.3.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2462,9 +2462,10 @@
         "logger",
         "methods",
         "shiny",
+        "utils",
         "withr"
       ],
-      "Hash": "ceeba20ebeb84344b1b81255e50b925f"
+      "Hash": "b5d3366368999eb2262c2a646a1f0c87"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
