@@ -1276,7 +1276,7 @@
     },
     "gtable": {
       "Package": "gtable",
-      "Version": "0.3.5",
+      "Version": "0.3.6",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1285,9 +1285,10 @@
         "glue",
         "grid",
         "lifecycle",
-        "rlang"
+        "rlang",
+        "stats"
       ],
-      "Hash": "e18861963cbc65a27736e02b3cd3c4a0"
+      "Hash": "de949855009e2d4d0e52a844e30617ae"
     },
     "haven": {
       "Package": "haven",
@@ -2702,14 +2703,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.2.0.9015",
+      "Version": "0.2.0.9016",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "1000d058efe85e5baa122cc3e1ae32776e7216f8",
+      "RemoteSha": "9b576702a1514f46362f630b2aa0f7bf4d94b7fd",
       "Requirements": [
         "DT",
         "R",
@@ -2733,7 +2734,7 @@
         "teal.transform",
         "teal.widgets"
       ],
-      "Hash": "9dd2f430fb0e394f5e284022121ec682"
+      "Hash": "b901a8b6d3c2a54eafbbdc07c3375353"
     },
     "teal.logger": {
       "Package": "teal.logger",
