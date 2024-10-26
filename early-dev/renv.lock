@@ -1221,7 +1221,7 @@
     },
     "gtable": {
       "Package": "gtable",
-      "Version": "0.3.5",
+      "Version": "0.3.6",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1230,9 +1230,10 @@
         "glue",
         "grid",
         "lifecycle",
-        "rlang"
+        "rlang",
+        "stats"
       ],
-      "Hash": "e18861963cbc65a27736e02b3cd3c4a0"
+      "Hash": "de949855009e2d4d0e52a844e30617ae"
     },
     "haven": {
       "Package": "haven",
