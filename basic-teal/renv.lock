@@ -523,7 +523,7 @@
     },
     "gtable": {
       "Package": "gtable",
-      "Version": "0.3.5",
+      "Version": "0.3.6",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -532,9 +532,10 @@
         "glue",
         "grid",
         "lifecycle",
-        "rlang"
+        "rlang",
+        "stats"
       ],
-      "Hash": "e18861963cbc65a27736e02b3cd3c4a0"
+      "Hash": "de949855009e2d4d0e52a844e30617ae"
     },
     "highr": {
       "Package": "highr",
@@ -1234,14 +1235,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9074",
+      "Version": "0.15.2.9076",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "a1087d2d3ff0c62393c3d5277cd5f184d543e2d9",
+      "RemoteSha": "3f7409dfcc8b17d02029b039c1ca20ec735bf2ce",
       "Requirements": [
         "R",
         "checkmate",
@@ -1261,7 +1262,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "80569b60a03181ba057b8ddd0ae96ace"
+      "Hash": "9719c1a6e3265baf885c98cdf0185394"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -1359,14 +1360,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.1.9012",
+      "Version": "0.5.1.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "aa05f7feb26bb32fbb5f069ec3e9e77d17450022",
+      "RemoteSha": "e07256a0d14e06b6556dc28a221ded65c2e55efc",
       "Requirements": [
         "R",
         "R6",
@@ -1380,6 +1381,7 @@
         "logger",
         "methods",
         "plotly",
+        "rlang",
         "shiny",
         "shinyWidgets",
         "shinycssloaders",
@@ -1389,7 +1391,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "4159be42519277f3235dac50aacac0b8"
+      "Hash": "119e40b00cd4c4cc854d2f83da6df33b"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
