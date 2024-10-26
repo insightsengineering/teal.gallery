@@ -52,7 +52,29 @@
       }
     ]
   },
+  "Bioconductor": {
+    "Version": "3.18"
+  },
   "Packages": {
+    "BiocManager": {
+      "Package": "BiocManager",
+      "Version": "1.30.25",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "utils"
+      ],
+      "Hash": "3aec5928ca10897d7a0a1205aae64627"
+    },
+    "BiocVersion": {
+      "Package": "BiocVersion",
+      "Version": "3.18.1",
+      "Source": "Bioconductor",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "2ecaed86684f5fae76ed5530f9d29c4a"
+    },
     "DT": {
       "Package": "DT",
       "Version": "0.33",
@@ -1301,18 +1323,19 @@
     },
     "gtable": {
       "Package": "gtable",
-      "Version": "0.3.5",
+      "Version": "0.3.6",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "cli",
         "glue",
         "grid",
         "lifecycle",
-        "rlang"
+        "rlang",
+        "stats"
       ],
-      "Hash": "e18861963cbc65a27736e02b3cd3c4a0"
+      "Hash": "de949855009e2d4d0e52a844e30617ae"
     },
     "haven": {
       "Package": "haven",
@@ -1818,6 +1841,19 @@
         "stats"
       ],
       "Hash": "77c61d51ce0f36e3c1a76e6b295aab31"
+    },
+    "nestcolor": {
+      "Package": "nestcolor",
+      "Version": "0.1.2",
+      "Source": "Bioconductor",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "checkmate",
+        "ggplot2",
+        "lifecycle"
+      ],
+      "Hash": "1b54abe1a145b4df499a273baaea4475"
     },
     "nlme": {
       "Package": "nlme",
@@ -2673,14 +2709,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9074",
+      "Version": "0.15.2.9076",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "a1087d2d3ff0c62393c3d5277cd5f184d543e2d9",
+      "RemoteSha": "3f7409dfcc8b17d02029b039c1ca20ec735bf2ce",
       "Requirements": [
         "R",
         "checkmate",
@@ -2700,7 +2736,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "80569b60a03181ba057b8ddd0ae96ace"
+      "Hash": "9719c1a6e3265baf885c98cdf0185394"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -2746,14 +2782,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.2.0.9015",
+      "Version": "0.2.0.9016",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "1000d058efe85e5baa122cc3e1ae32776e7216f8",
+      "RemoteSha": "9b576702a1514f46362f630b2aa0f7bf4d94b7fd",
       "Requirements": [
         "DT",
         "R",
@@ -2777,7 +2813,7 @@
         "teal.transform",
         "teal.widgets"
       ],
-      "Hash": "9dd2f430fb0e394f5e284022121ec682"
+      "Hash": "b901a8b6d3c2a54eafbbdc07c3375353"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -2803,14 +2839,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.1.9029",
+      "Version": "0.9.1.9030",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "af36c1740e9016cab0fbf3fd9d48959472a7d90c",
+      "RemoteSha": "5cf76ac2f85f84d81ae0b2f0ad564b31b5022773",
       "Requirements": [
         "DT",
         "R",
@@ -2845,18 +2881,18 @@
         "utils",
         "vistime"
       ],
-      "Hash": "e513ddff4c9010198efb011153a7f459"
+      "Hash": "8846d3c378466470d7a45bae2e8e184d"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9051",
+      "Version": "0.3.0.9052",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "643644eb0d839c755cc796f6074b6f8c4b9b59ea",
+      "RemoteSha": "0ea551b583ec739c7a4b01b70b7e8bce9b5133e7",
       "Requirements": [
         "DT",
         "R",
@@ -2887,7 +2923,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "d4edf879237be777e1ee45e053a73e29"
+      "Hash": "7e4a52d945b504bca01f5eb14f008c69"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -2921,14 +2957,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.1.9012",
+      "Version": "0.5.1.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "aa05f7feb26bb32fbb5f069ec3e9e77d17450022",
+      "RemoteSha": "e07256a0d14e06b6556dc28a221ded65c2e55efc",
       "Requirements": [
         "R",
         "R6",
@@ -2942,6 +2978,7 @@
         "logger",
         "methods",
         "plotly",
+        "rlang",
         "shiny",
         "shinyWidgets",
         "shinycssloaders",
@@ -2951,7 +2988,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "4159be42519277f3235dac50aacac0b8"
+      "Hash": "119e40b00cd4c4cc854d2f83da6df33b"
     },
     "teal.transform": {
       "Package": "teal.transform",
@@ -3013,14 +3050,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.6.9008",
+      "Version": "0.9.6.9010",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "cf9fbb0a0ff4b4a1bd8b11d97eceff8f283b1b7f",
+      "RemoteSha": "7fb0fda22d5fe515524bca2079f213e62b097a93",
       "Requirements": [
         "MASS",
         "R",
@@ -3041,6 +3078,7 @@
         "lifecycle",
         "magrittr",
         "methods",
+        "nestcolor",
         "rlang",
         "rtables",
         "scales",
@@ -3050,7 +3088,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "485b9eba009ffd784ca16f460b713ad9"
+      "Hash": "dcbd0ae13b26073c2ae1d3ac0c587b44"
     },
     "tern.gee": {
       "Package": "tern.gee",
