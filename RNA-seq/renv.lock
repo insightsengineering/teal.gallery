@@ -1331,7 +1331,7 @@
     },
     "flextable": {
       "Package": "flextable",
-      "Version": "0.9.6",
+      "Version": "0.9.7",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -1351,7 +1351,7 @@
         "uuid",
         "xml2"
       ],
-      "Hash": "b10ea358275721a0e90080d4a55a1a38"
+      "Hash": "e3201bd3a94311654ff35cf2ddc3343e"
     },
     "fontBitstreamVera": {
       "Package": "fontBitstreamVera",
