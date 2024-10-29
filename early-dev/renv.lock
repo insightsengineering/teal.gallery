@@ -901,7 +901,7 @@
       "Package": "flextable",
       "Version": "0.9.7",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "data.table",
         "gdtools",
@@ -996,14 +996,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.9.9002",
+      "Version": "0.5.9.9003",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "b3c8c91767fb08b3cd498455f492549f6e786f84",
+      "RemoteSha": "84e8c3ebd37529c1c2aeaee4735038ad2e00a387",
       "Requirements": [
         "R",
         "checkmate",
@@ -1013,7 +1013,7 @@
         "methods",
         "stringi"
       ],
-      "Hash": "3e7f9e7997b797c979385c7007ddbeda"
+      "Hash": "72c0b5fd9c0c8bf0395e4056aa15955c"
     },
     "fs": {
       "Package": "fs",
@@ -1907,9 +1907,9 @@
     },
     "pkgbuild": {
       "Package": "pkgbuild",
-      "Version": "1.4.4",
+      "Version": "1.4.5",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -1918,7 +1918,7 @@
         "desc",
         "processx"
       ],
-      "Hash": "a29e8e134a460a01e0ca67a4763c595b"
+      "Hash": "30eaaab94db72652e72e3475c1b55278"
     },
     "pkgconfig": {
       "Package": "pkgconfig",
@@ -2080,14 +2080,14 @@
     },
     "ps": {
       "Package": "ps",
-      "Version": "1.8.0",
+      "Version": "1.8.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "4b9c8485b0c7eecdf0a9ba5132a45576"
+      "Hash": "b4404b1de13758dea1c0484ad0d48563"
     },
     "purrr": {
       "Package": "purrr",
@@ -2628,14 +2628,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9076",
+      "Version": "0.15.2.9078",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "3f7409dfcc8b17d02029b039c1ca20ec735bf2ce",
+      "RemoteSha": "977ea9e266df05579db05b2cf9d996a4434c101e",
       "Requirements": [
         "R",
         "checkmate",
@@ -2655,7 +2655,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "9719c1a6e3265baf885c98cdf0185394"
+      "Hash": "0be00cbcb8097c923593774486eb5ae0"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -3298,15 +3298,15 @@
     },
     "withr": {
       "Package": "withr",
-      "Version": "3.0.1",
+      "Version": "3.0.2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "grDevices",
         "graphics"
       ],
-      "Hash": "07909200e8bbe90426fbfeb73e1e27aa"
+      "Hash": "cc2d62c76458d425210d1eb1478b30b4"
     },
     "xfun": {
       "Package": "xfun",
