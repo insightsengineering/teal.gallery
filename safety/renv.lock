@@ -188,16 +188,16 @@
     },
     "R.oo": {
       "Package": "R.oo",
-      "Version": "1.26.0",
+      "Version": "1.27.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "R.methodsS3",
         "methods",
         "utils"
       ],
-      "Hash": "4fed809e53ddb5407b3da3d0f572e591"
+      "Hash": "6ac79ff194202248cf946fe3a5d6d498"
     },
     "R.utils": {
       "Package": "R.utils",
@@ -2637,14 +2637,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.1.9014",
+      "Version": "0.5.1.9015",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "e07256a0d14e06b6556dc28a221ded65c2e55efc",
+      "RemoteSha": "25f41015bc1ed8b9c5301b8cf1ae48cbf7c96f2c",
       "Requirements": [
         "R",
         "R6",
@@ -2668,7 +2668,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "119e40b00cd4c4cc854d2f83da6df33b"
+      "Hash": "56743fcb933b14992ba737275736b94f"
     },
     "teal.transform": {
       "Package": "teal.transform",
@@ -2730,14 +2730,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.6.9011",
+      "Version": "0.9.6.9012",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "08adee91c5d9e12833912108bee9e636c7ea4f48",
+      "RemoteSha": "65a09b86fb30567e84027b2eae21dd5bfd8a3ec4",
       "Requirements": [
         "MASS",
         "R",
@@ -2768,18 +2768,18 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "cb0d319504e0e4fd1d9fc7601f17b4fb"
+      "Hash": "efbb9bc057105343a96266f1bc02bbb2"
     },
     "tern.gee": {
       "Package": "tern.gee",
-      "Version": "0.1.5.9003",
+      "Version": "0.1.5.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.gee",
       "RemoteRef": "main",
-      "RemoteSha": "a6a31c7eb3dbc28e00b13ef2b6a40ba15112d790",
+      "RemoteSha": "458172da93ed5b2239a6e8970dd28f5f3882b5db",
       "Requirements": [
         "R",
         "checkmate",
@@ -2792,18 +2792,18 @@
         "stats",
         "tern"
       ],
-      "Hash": "6b4f948ab77131597c37545ba70cf4b6"
+      "Hash": "16b594cefa39d487a2712ab1212a4082"
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
-      "Version": "0.3.2.9000",
+      "Version": "0.3.2.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "0638d8a9696299c1ae58b777640fefd6d5f3fd2d",
+      "RemoteSha": "a4254e89d53ad3eaf91529fe12a22879461699d5",
       "Requirements": [
         "R",
         "checkmate",
@@ -2823,7 +2823,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "506932afd661bf2880e92e00f0c0f7d0"
+      "Hash": "5e5e9537a2ab0a4f645187dac20f96b4"
     },
     "testthat": {
       "Package": "testthat",
@@ -2938,13 +2938,13 @@
     },
     "tinytex": {
       "Package": "tinytex",
-      "Version": "0.53",
+      "Version": "0.54",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
         "xfun"
       ],
-      "Hash": "9db859e8aabbb474293dde3097839420"
+      "Hash": "3ec7e3ddcacc2d34a9046941222bf94d"
     },
     "tzdb": {
       "Package": "tzdb",
