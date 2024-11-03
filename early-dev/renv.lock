@@ -279,14 +279,14 @@
     },
     "Rcpp": {
       "Package": "Rcpp",
-      "Version": "1.0.13",
+      "Version": "1.0.13-1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "methods",
         "utils"
       ],
-      "Hash": "f27411eb6d9c3dada5edd444b8416675"
+      "Hash": "6b868847b365672d6c1677b1608da9ed"
     },
     "RcppArmadillo": {
       "Package": "RcppArmadillo",
@@ -2966,14 +2966,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.6.9012",
+      "Version": "0.9.6.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "65a09b86fb30567e84027b2eae21dd5bfd8a3ec4",
+      "RemoteSha": "435fd51a95e24eb5524826e093706e238df592c4",
       "Requirements": [
         "MASS",
         "R",
@@ -3004,7 +3004,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "efbb9bc057105343a96266f1bc02bbb2"
+      "Hash": "fcc55ff46c869e8d5efc516778bc1b8f"
     },
     "tern.gee": {
       "Package": "tern.gee",
