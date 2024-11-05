@@ -1021,7 +1021,7 @@
     },
     "gdtools": {
       "Package": "gdtools",
-      "Version": "0.4.0",
+      "Version": "0.4.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1032,7 +1032,7 @@
         "systemfonts",
         "tools"
       ],
-      "Hash": "e8e09897fee8d96f6bb02bf841177d20"
+      "Hash": "169e77416ce3f7ac73fc975909dd5455"
     },
     "geeM": {
       "Package": "geeM",
@@ -1786,14 +1786,14 @@
     },
     "mvtnorm": {
       "Package": "mvtnorm",
-      "Version": "1.3-1",
+      "Version": "1.3-2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "stats"
       ],
-      "Hash": "77c61d51ce0f36e3c1a76e6b295aab31"
+      "Hash": "9e8405eacb262c0a939e121650247f4b"
     },
     "nlme": {
       "Package": "nlme",
@@ -2240,16 +2240,6 @@
       "Repository": "RSPM",
       "Hash": "cbff1b666c6fa6d21202f07e2318d4f1"
     },
-    "rematch2": {
-      "Package": "rematch2",
-      "Version": "2.1.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "tibble"
-      ],
-      "Hash": "76c9e04c712a05848ae7a23d2f170a40"
-    },
     "renv": {
       "Package": "renv",
       "Version": "1.0.11",
@@ -2290,7 +2280,7 @@
     },
     "rmarkdown": {
       "Package": "rmarkdown",
-      "Version": "2.28",
+      "Version": "2.29",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2309,7 +2299,7 @@
         "xfun",
         "yaml"
       ],
-      "Hash": "062470668513dcda416927085ee9bdc7"
+      "Hash": "df99277f63d01c34e95e3d2f06a79736"
     },
     "robslopes": {
       "Package": "robslopes",
@@ -3238,7 +3228,7 @@
     },
     "waldo": {
       "Package": "waldo",
-      "Version": "0.5.3",
+      "Version": "0.6.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -3247,11 +3237,9 @@
         "diffobj",
         "glue",
         "methods",
-        "rematch2",
-        "rlang",
-        "tibble"
+        "rlang"
       ],
-      "Hash": "16aa934a49658677d8041df9017329b9"
+      "Hash": "53ec6571dc7a321797cde0abe007ff53"
     },
     "withr": {
       "Package": "withr",
