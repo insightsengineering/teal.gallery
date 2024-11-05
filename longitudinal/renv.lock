@@ -1068,9 +1068,9 @@
     },
     "gdtools": {
       "Package": "gdtools",
-      "Version": "0.4.0",
+      "Version": "0.4.1",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "Rcpp",
@@ -1079,7 +1079,7 @@
         "systemfonts",
         "tools"
       ],
-      "Hash": "e8e09897fee8d96f6bb02bf841177d20"
+      "Hash": "169e77416ce3f7ac73fc975909dd5455"
     },
     "geeM": {
       "Package": "geeM",
@@ -1833,14 +1833,14 @@
     },
     "mvtnorm": {
       "Package": "mvtnorm",
-      "Version": "1.3-1",
+      "Version": "1.3-2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "stats"
       ],
-      "Hash": "77c61d51ce0f36e3c1a76e6b295aab31"
+      "Hash": "9e8405eacb262c0a939e121650247f4b"
     },
     "nestcolor": {
       "Package": "nestcolor",
@@ -2300,16 +2300,6 @@
       "Repository": "RSPM",
       "Hash": "cbff1b666c6fa6d21202f07e2318d4f1"
     },
-    "rematch2": {
-      "Package": "rematch2",
-      "Version": "2.1.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "tibble"
-      ],
-      "Hash": "76c9e04c712a05848ae7a23d2f170a40"
-    },
     "renv": {
       "Package": "renv",
       "Version": "1.0.11",
@@ -2350,9 +2340,9 @@
     },
     "rmarkdown": {
       "Package": "rmarkdown",
-      "Version": "2.28",
+      "Version": "2.29",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "bslib",
@@ -2369,7 +2359,7 @@
         "xfun",
         "yaml"
       ],
-      "Hash": "062470668513dcda416927085ee9bdc7"
+      "Hash": "df99277f63d01c34e95e3d2f06a79736"
     },
     "robslopes": {
       "Package": "robslopes",
@@ -2747,7 +2737,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
       "RemoteRef": "main",
-      "RemoteSha": "86aa2652211584b210fedd798b8442514c51e76d",
+      "RemoteSha": "622cb09599f12c0e1827a7d603fd57927fe76fab",
       "Requirements": [
         "R",
         "checkmate",
@@ -2756,7 +2746,7 @@
         "methods",
         "rlang"
       ],
-      "Hash": "7a22f5f066c3954bde618a6aa08927b2"
+      "Hash": "51cb6ea370482bff4426ffb0fc4b55c6"
     },
     "teal.data": {
       "Package": "teal.data",
@@ -2846,7 +2836,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "5cf76ac2f85f84d81ae0b2f0ad564b31b5022773",
+      "RemoteSha": "5b9192679cf2e670584a81c815bb1ec4267c4c7a",
       "Requirements": [
         "DT",
         "R",
@@ -2881,18 +2871,18 @@
         "utils",
         "vistime"
       ],
-      "Hash": "8846d3c378466470d7a45bae2e8e184d"
+      "Hash": "e5801834713adccee9c0635ff6167459"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9052",
+      "Version": "0.3.0.9053",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "0ea551b583ec739c7a4b01b70b7e8bce9b5133e7",
+      "RemoteSha": "e67d7f2b46f302ccd2ac41d942f30bf6f68609d3",
       "Requirements": [
         "DT",
         "R",
@@ -2923,7 +2913,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "7e4a52d945b504bca01f5eb14f008c69"
+      "Hash": "ebd79d630d413562f2ff5860f1f63b8a"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -2964,7 +2954,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "25f41015bc1ed8b9c5301b8cf1ae48cbf7c96f2c",
+      "RemoteSha": "a3d9a0f10000a484a534dc1d84184d573a8a21a8",
       "Requirements": [
         "R",
         "R6",
@@ -2988,7 +2978,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "56743fcb933b14992ba737275736b94f"
+      "Hash": "f4fe11693929506e53ebf74cbee85019"
     },
     "teal.transform": {
       "Package": "teal.transform",
@@ -3365,20 +3355,18 @@
     },
     "waldo": {
       "Package": "waldo",
-      "Version": "0.5.3",
+      "Version": "0.6.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "cli",
         "diffobj",
         "glue",
         "methods",
-        "rematch2",
-        "rlang",
-        "tibble"
+        "rlang"
       ],
-      "Hash": "16aa934a49658677d8041df9017329b9"
+      "Hash": "53ec6571dc7a321797cde0abe007ff53"
     },
     "withr": {
       "Package": "withr",
