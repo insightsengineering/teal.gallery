@@ -461,7 +461,7 @@
     },
     "gdtools": {
       "Package": "gdtools",
-      "Version": "0.4.0",
+      "Version": "0.4.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -472,7 +472,7 @@
         "systemfonts",
         "tools"
       ],
-      "Hash": "e8e09897fee8d96f6bb02bf841177d20"
+      "Hash": "169e77416ce3f7ac73fc975909dd5455"
     },
     "generics": {
       "Package": "generics",
@@ -981,7 +981,7 @@
     },
     "rmarkdown": {
       "Package": "rmarkdown",
-      "Version": "2.28",
+      "Version": "2.29",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1000,7 +1000,7 @@
         "xfun",
         "yaml"
       ],
-      "Hash": "062470668513dcda416927085ee9bdc7"
+      "Hash": "df99277f63d01c34e95e3d2f06a79736"
     },
     "rprojroot": {
       "Package": "rprojroot",
@@ -1273,7 +1273,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
       "RemoteRef": "main",
-      "RemoteSha": "86aa2652211584b210fedd798b8442514c51e76d",
+      "RemoteSha": "622cb09599f12c0e1827a7d603fd57927fe76fab",
       "Requirements": [
         "R",
         "checkmate",
@@ -1282,7 +1282,7 @@
         "methods",
         "rlang"
       ],
-      "Hash": "7a22f5f066c3954bde618a6aa08927b2"
+      "Hash": "51cb6ea370482bff4426ffb0fc4b55c6"
     },
     "teal.data": {
       "Package": "teal.data",
@@ -1367,7 +1367,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "25f41015bc1ed8b9c5301b8cf1ae48cbf7c96f2c",
+      "RemoteSha": "a3d9a0f10000a484a534dc1d84184d573a8a21a8",
       "Requirements": [
         "R",
         "R6",
@@ -1391,7 +1391,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "56743fcb933b14992ba737275736b94f"
+      "Hash": "f4fe11693929506e53ebf74cbee85019"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
