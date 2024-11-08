@@ -1830,7 +1830,7 @@
     },
     "parallelly": {
       "Package": "parallelly",
-      "Version": "1.38.0",
+      "Version": "1.39.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1838,7 +1838,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "6e8b139c1904f5e9e14c69db64453bbe"
+      "Hash": "1d60a6e27e3f1753945cf305735dda19"
     },
     "pbkrtest": {
       "Package": "pbkrtest",
@@ -2642,14 +2642,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.3.0.9001",
+      "Version": "0.3.0.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "4728b9b6368316829f3fc644b033c64b69c1fc4b",
+      "RemoteSha": "45317ba5cf7c34e92c1c72815d36a21b440ecf21",
       "Requirements": [
         "R",
         "glue",
@@ -2660,7 +2660,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "6fe319557103268cb78fac860ca51303"
+      "Hash": "06a17d4ec1167f7fb134dbe983c52b96"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
@@ -3174,7 +3174,7 @@
     },
     "waldo": {
       "Package": "waldo",
-      "Version": "0.6.0",
+      "Version": "0.6.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -3185,7 +3185,7 @@
         "methods",
         "rlang"
       ],
-      "Hash": "53ec6571dc7a321797cde0abe007ff53"
+      "Hash": "52f574062a7b66e56926988c3fbdb3b7"
     },
     "withr": {
       "Package": "withr",
