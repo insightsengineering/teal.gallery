@@ -2414,14 +2414,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9084",
+      "Version": "0.15.2.9085",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "a27edf194cd4adb77a715ffee0862cafb51e7c66",
+      "RemoteSha": "d9fb47dfaef4cfcb0a4086c9105cc0448279b51c",
       "Requirements": [
         "R",
         "checkmate",
@@ -2443,18 +2443,18 @@
         "tools",
         "utils"
       ],
-      "Hash": "c0dfbf08a3ad83e104b8e37a572e17a7"
+      "Hash": "71c7b7369fd3f9a4d095bd11cab1ebff"
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.5.0.9014",
+      "Version": "0.5.0.9015",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
       "RemoteRef": "main",
-      "RemoteSha": "a235176a92f7b0c3dd55a47b43fb0b64eba5d92f",
+      "RemoteSha": "bd5ef47893d1577913e2523cada879fdf92c4464",
       "Requirements": [
         "R",
         "checkmate",
@@ -2463,18 +2463,18 @@
         "methods",
         "rlang"
       ],
-      "Hash": "54d972bfeb5a847e1391c3e2f303811a"
+      "Hash": "02dce1548493d1139cb3de06076585e7"
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.6.0.9017",
+      "Version": "0.6.0.9020",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "169180d5c3a4732bff02fe265b1a31f6b4d0592b",
+      "RemoteSha": "bf89a7da0c45fab453417f99086bfd19e25886af",
       "Requirements": [
         "R",
         "checkmate",
@@ -2485,7 +2485,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "ef2bbad763614a368d14e563735a4327"
+      "Hash": "f50c9a3583907161b5afd2095bbceb09"
     },
     "teal.logger": {
       "Package": "teal.logger",
