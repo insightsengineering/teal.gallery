@@ -1831,14 +1831,14 @@
     },
     "osprey": {
       "Package": "osprey",
-      "Version": "0.1.16.9015",
+      "Version": "0.1.16.9016",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "osprey",
       "RemoteRef": "main",
-      "RemoteSha": "13264769f50465eee8d9ee08468cf8afe806f919",
+      "RemoteSha": "1c2b97f551b3e8f1f62351f20ad16595003b4d99",
       "Requirements": [
         "DescTools",
         "R",
@@ -1857,7 +1857,7 @@
         "tibble",
         "tidyr"
       ],
-      "Hash": "ce963e283ef6af48141839bb1e7eaa60"
+      "Hash": "4f1c8eff131fe7e2cb80df8765aeb78f"
     },
     "parallelly": {
       "Package": "parallelly",
