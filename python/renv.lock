@@ -545,13 +545,13 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "6.0.0",
+      "Version": "6.0.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "ff51697d9205fe715f29e7171e874c6e"
+      "Hash": "e8ba62486230951fcd2b881c5be23f96"
     },
     "data.table": {
       "Package": "data.table",
@@ -890,7 +890,7 @@
     },
     "ggpmisc": {
       "Package": "ggpmisc",
-      "Version": "0.6.0",
+      "Version": "0.6.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -915,7 +915,7 @@
         "stats",
         "tibble"
       ],
-      "Hash": "e0e669a53c9e39482705df3de75ec054"
+      "Hash": "28f50b2d86cc2af9f878d62ac2bf9870"
     },
     "ggpp": {
       "Package": "ggpp",
@@ -1704,7 +1704,7 @@
     },
     "reticulate": {
       "Package": "reticulate",
-      "Version": "1.39.0",
+      "Version": "1.40.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1722,7 +1722,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "e1a5d04397edc1580c5e0ed1dbdccf76"
+      "Hash": "04740f615607c4e6099356ff6d6694ee"
     },
     "rlang": {
       "Package": "rlang",
