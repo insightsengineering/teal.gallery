@@ -405,7 +405,7 @@
     },
     "fontawesome": {
       "Package": "fontawesome",
-      "Version": "0.5.2",
+      "Version": "0.5.3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -413,7 +413,7 @@
         "htmltools",
         "rlang"
       ],
-      "Hash": "c2efdd5f0bcd1ea861c2d4e2a883a67d"
+      "Hash": "bd1297f9b5b1fc1372d19e2c4cd82215"
     },
     "fontquiver": {
       "Package": "fontquiver",
