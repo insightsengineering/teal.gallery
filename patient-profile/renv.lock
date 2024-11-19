@@ -247,7 +247,7 @@
     },
     "RcppArmadillo": {
       "Package": "RcppArmadillo",
-      "Version": "14.0.2-1",
+      "Version": "14.2.0-1",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -257,7 +257,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "edff747eebfb8f2e18eed194e000caa1"
+      "Hash": "ce9c35ab9ea9c6ef4e27a08868cdb32b"
     },
     "RcppEigen": {
       "Package": "RcppEigen",
@@ -2403,14 +2403,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9086",
+      "Version": "0.15.2.9087",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "2115e7f5f1f44ff0a5053c40e99747d712876545",
+      "RemoteSha": "f9d33a11949a2670003064c1cf26363e77e8f20e",
       "Requirements": [
         "R",
         "checkmate",
@@ -2432,7 +2432,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "1d84d3d4254bcec2c6bbd28a0dbaa9cf"
+      "Hash": "83ae7c4410bbd3b6d6013f497d20dc51"
     },
     "teal.code": {
       "Package": "teal.code",
