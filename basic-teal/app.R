@@ -1,4 +1,5 @@
 library(teal)
+library(rtables.officer)
 
 data <- teal_data()
 data <- within(data, {

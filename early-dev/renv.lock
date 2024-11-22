@@ -2324,14 +2324,13 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.10.9004",
+      "Version": "0.6.10.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
-      "RemoteRef": "main",
-      "RemoteSha": "f423094039e6ef97e2664133c7c4b0ee682c25e7",
+      "RemoteUsername": "insightsengineering",
+      "RemoteSha": "88428b3a533f3e48f10d874925af36f754af404b",
       "Requirements": [
         "R",
         "checkmate",
@@ -2343,7 +2342,32 @@
         "stats",
         "stringi"
       ],
-      "Hash": "36a0e3e509521265ab2fed9c32206c95"
+      "Hash": "bdcec735f5b5e529737b606007e8365a"
+    },
+    "rtables.officer": {
+      "Package": "rtables.officer",
+      "Version": "0.0.1.9006",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "rtables.officer",
+      "RemoteRef": "main",
+      "RemoteSha": "84456ac1915996f3535107a2192ffce25755852a",
+      "Requirements": [
+        "R",
+        "checkmate",
+        "flextable",
+        "formatters",
+        "lifecycle",
+        "magrittr",
+        "methods",
+        "officer",
+        "rtables",
+        "stats",
+        "stringi"
+      ],
+      "Hash": "39952c09d16280a7595e6c4c0a5fcd78"
     },
     "sass": {
       "Package": "sass",
