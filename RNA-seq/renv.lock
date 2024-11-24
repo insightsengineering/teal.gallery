@@ -2395,7 +2395,7 @@
       "Package": "quantreg",
       "Version": "5.99.1",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "MASS",
         "Matrix",
