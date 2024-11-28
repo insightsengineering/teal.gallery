@@ -1144,14 +1144,14 @@
     },
     "later": {
       "Package": "later",
-      "Version": "1.4.0",
+      "Version": "1.4.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "Rcpp",
         "rlang"
       ],
-      "Hash": "dd8a8b6833989ba10fba1bf1ee7d3860"
+      "Hash": "501744395cac0bab0fbcfab9375ae92c"
     },
     "lattice": {
       "Package": "lattice",
@@ -1612,7 +1612,7 @@
     },
     "promises": {
       "Package": "promises",
-      "Version": "1.3.1",
+      "Version": "1.3.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1624,7 +1624,7 @@
         "rlang",
         "stats"
       ],
-      "Hash": "08049fb8ae7205a0f8f83da772761e3a"
+      "Hash": "c84fd4f75ea1f5434735e08b7f50fbca"
     },
     "purrr": {
       "Package": "purrr",
