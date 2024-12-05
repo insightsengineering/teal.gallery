@@ -578,13 +578,13 @@
     },
     "cpp11": {
       "Package": "cpp11",
-      "Version": "0.5.0",
+      "Version": "0.5.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "91570bba75d0c9d3f1040c835cee8fba"
+      "Hash": "9df43854f1c84685d095ed6270b52387"
     },
     "crayon": {
       "Package": "crayon",
@@ -1685,7 +1685,7 @@
     },
     "parallelly": {
       "Package": "parallelly",
-      "Version": "1.40.0",
+      "Version": "1.40.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1693,7 +1693,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "6305da08f57fcc64dce7c82e1c25a10a"
+      "Hash": "9951cf3fcae168ebd0349ce4251508bd"
     },
     "pbkrtest": {
       "Package": "pbkrtest",
