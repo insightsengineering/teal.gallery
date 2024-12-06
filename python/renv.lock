@@ -1219,13 +1219,10 @@
     },
     "lmodel2": {
       "Package": "lmodel2",
-      "Version": "1.7-3",
+      "Version": "1.7-4",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Requirements": [
-        "R"
-      ],
-      "Hash": "d6402cf7948749ef56bc8d9c8099bfbe"
+      "Hash": "2cbcf3330f0f02eb4869ebdaaa4f2d7d"
     },
     "logger": {
       "Package": "logger",
