@@ -1052,9 +1052,9 @@
     },
     "cluster": {
       "Package": "cluster",
-      "Version": "2.1.6",
+      "Version": "2.1.7",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "grDevices",
@@ -1062,7 +1062,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "0aaa05204035dc43ea0004b9c76611dd"
+      "Hash": "669a8ff0ccc1d9ea17639c773978b44e"
     },
     "codetools": {
       "Package": "codetools",
@@ -1988,16 +1988,16 @@
     },
     "lubridate": {
       "Package": "lubridate",
-      "Version": "1.9.3",
+      "Version": "1.9.4",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "generics",
         "methods",
         "timechange"
       ],
-      "Hash": "680ad542fbcf801442c83a6ac5a2126c"
+      "Hash": "be38bc740fc51783a78edb5a157e4104"
     },
     "magrittr": {
       "Package": "magrittr",
