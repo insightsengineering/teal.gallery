@@ -77,10 +77,10 @@
     },
     "BH": {
       "Package": "BH",
-      "Version": "1.84.0-0",
+      "Version": "1.87.0-1",
       "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "a8235afbcd6316e6e91433ea47661013"
+      "Repository": "BioC.CRAN",
+      "Hash": "468d9a03ba57f22ebde50060fd13ba9f"
     },
     "Biobase": {
       "Package": "Biobase",
@@ -1052,9 +1052,9 @@
     },
     "cluster": {
       "Package": "cluster",
-      "Version": "2.1.7",
+      "Version": "2.1.8",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "grDevices",
@@ -1062,7 +1062,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "669a8ff0ccc1d9ea17639c773978b44e"
+      "Hash": "b361779da7f8b129a1859b6cf243ba58"
     },
     "codetools": {
       "Package": "codetools",
@@ -1287,9 +1287,9 @@
     },
     "emmeans": {
       "Package": "emmeans",
-      "Version": "1.10.5",
+      "Version": "1.10.6",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "estimability",
@@ -1300,7 +1300,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "5c42da2936ccaa3802b4893a65553dc4"
+      "Hash": "6b0c6fcbdbefe525d2ee713f95880f90"
     },
     "estimability": {
       "Package": "estimability",
@@ -1663,14 +1663,14 @@
     },
     "hermes": {
       "Package": "hermes",
-      "Version": "1.7.2.9003",
+      "Version": "1.7.2.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "hermes",
       "RemoteRef": "main",
-      "RemoteSha": "e7eb4b4ef6393bd5d64e89fb9dc6111b33ca0f02",
+      "RemoteSha": "acd1bf0c10a48975607e1cca8d999bb219efe40f",
       "Requirements": [
         "Biobase",
         "BiocGenerics",
@@ -1706,7 +1706,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "f450b11c3b01fe845e9996f9cc7f6947"
+      "Hash": "996103fc476988b60f67f4166f88c29b"
     },
     "highr": {
       "Package": "highr",
@@ -2212,13 +2212,13 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.2.2",
+      "Version": "2.3.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "askpass"
       ],
-      "Hash": "d413e0fef796c9401a4419485f709ca1"
+      "Hash": "5bfe2927efa9f87766ca9605301ea48f"
     },
     "pbkrtest": {
       "Package": "pbkrtest",
@@ -2240,12 +2240,11 @@
     },
     "pillar": {
       "Package": "pillar",
-      "Version": "1.9.0",
+      "Version": "1.10.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "cli",
-        "fansi",
         "glue",
         "lifecycle",
         "rlang",
@@ -2253,7 +2252,7 @@
         "utils",
         "vctrs"
       ],
-      "Hash": "15da5a8412f317beeee6175fbc76f4bb"
+      "Hash": "101ca350beea21261a15ba169d7a8513"
     },
     "pkgconfig": {
       "Package": "pkgconfig",
@@ -2593,9 +2592,9 @@
     },
     "shiny": {
       "Package": "shiny",
-      "Version": "1.9.1",
+      "Version": "1.10.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -2622,7 +2621,7 @@
         "withr",
         "xtable"
       ],
-      "Hash": "6a293995a66e12c48d13aa1f957d09c7"
+      "Hash": "4b4477baa9a939c5577e5ddb4bf01f28"
     },
     "shinyRadioMatrix": {
       "Package": "shinyRadioMatrix",
@@ -2806,9 +2805,9 @@
     },
     "survival": {
       "Package": "survival",
-      "Version": "3.7-0",
+      "Version": "3.8-3",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "Matrix",
         "R",
@@ -2818,7 +2817,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "5aaa9cbaf4aba20f8e06fdea1850a398"
+      "Hash": "fe42836742a4f065b3f3f5de81fccab9"
     },
     "sys": {
       "Package": "sys",
@@ -2900,14 +2899,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.3.0.9002",
+      "Version": "0.3.0.9003",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "45317ba5cf7c34e92c1c72815d36a21b440ecf21",
+      "RemoteSha": "1838b749ee443ddd05b8ba3b7c34d816151c8c4b",
       "Requirements": [
         "R",
         "glue",
@@ -2918,7 +2917,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "06a17d4ec1167f7fb134dbe983c52b96"
+      "Hash": "4c9f8520096e0afcc538c1346f6de946"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
@@ -2960,14 +2959,14 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9024",
+      "Version": "0.1.6.9026",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "ed9523ad14669b8e42ffc87a641abe74cdbf4257",
+      "RemoteSha": "b5ef1ef5b065a7f2cfad8e60b0a4e1a5d0fb18f6",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -2994,7 +2993,7 @@
         "tern",
         "utils"
       ],
-      "Hash": "fa72df4a89ba8b6d20858d5e853a5f0a"
+      "Hash": "c533a4803ba4b6aa6cd7e0335da48c8f"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
