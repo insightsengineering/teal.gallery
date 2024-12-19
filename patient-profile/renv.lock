@@ -1685,7 +1685,7 @@
     },
     "parallelly": {
       "Package": "parallelly",
-      "Version": "1.40.1",
+      "Version": "1.41.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1693,7 +1693,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "9951cf3fcae168ebd0349ce4251508bd"
+      "Hash": "f5ae11e8e15ee84950752e7b01c55295"
     },
     "pbkrtest": {
       "Package": "pbkrtest",
