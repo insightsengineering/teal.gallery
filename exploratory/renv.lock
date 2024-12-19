@@ -781,14 +781,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.9.9007",
+      "Version": "0.5.9.9008",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "46819af63119e1456437c1bbbb3cc45521ddd834",
+      "RemoteSha": "7bc76bb0a9434d8c4d0f9f1cf8b3380331af319e",
       "Requirements": [
         "R",
         "checkmate",
@@ -798,7 +798,7 @@
         "methods",
         "stringi"
       ],
-      "Hash": "95608bf64cc8877e28645c79c3cf58ae"
+      "Hash": "d5050c8cb291a54bb13d25692dd96500"
     },
     "fs": {
       "Package": "fs",
@@ -1786,14 +1786,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.10.9012",
+      "Version": "0.6.10.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "ce0dd36e1b9ad0381c22bf2c465b95dac66b511a",
+      "RemoteSha": "cc11c7e94031581c294bf058a8972bc6159f0df7",
       "Requirements": [
         "R",
         "checkmate",
@@ -1805,7 +1805,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "30736e0532cd0cc690b40b7d8f73cf64"
+      "Hash": "ed1af908457f4874fce1f07f4e1b60e9"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
@@ -2117,14 +2117,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9092",
+      "Version": "0.15.2.9093",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "f538cf61a606ba6e82286051af084fe0ed70a055",
+      "RemoteSha": "97db125107643cd5380ac20362177118ed5de497",
       "Requirements": [
         "R",
         "checkmate",
@@ -2146,7 +2146,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "a15275ddc99e26e377a8621ec738f1ed"
+      "Hash": "56c1432194d94932321568cadc429442"
     },
     "teal.code": {
       "Package": "teal.code",
