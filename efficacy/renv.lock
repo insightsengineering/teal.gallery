@@ -2118,14 +2118,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.10.9013",
+      "Version": "0.6.10.9014",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "cc11c7e94031581c294bf058a8972bc6159f0df7",
+      "RemoteSha": "9baa8831a9e63cc1c5129ba42e7b4d4f3c1b188e",
       "Requirements": [
         "R",
         "checkmate",
@@ -2137,7 +2137,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "ed1af908457f4874fce1f07f4e1b60e9"
+      "Hash": "25b0c90153d3aa3ac68639e0d821c8fd"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
@@ -2438,14 +2438,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9096",
+      "Version": "0.15.2.9097",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "52cbc4e5f96739645be514ec902813225d0debdb",
+      "RemoteSha": "997da60fd983200f98e4dcaf12fa768e53291a1a",
       "Requirements": [
         "R",
         "checkmate",
@@ -2467,7 +2467,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "777aadac574db2e3e7a743b96e6f6992"
+      "Hash": "83cf094404de2a9d425a9f4039407699"
     },
     "teal.code": {
       "Package": "teal.code",
