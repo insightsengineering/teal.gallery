@@ -2801,14 +2801,14 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.2.0.9019",
+      "Version": "0.2.0.9020",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "c63d8d70af21638eb27dd55ad9d05e9fe606e3ca",
+      "RemoteSha": "d0e9e32dd02170ae6d42948aabb448689032a11e",
       "Requirements": [
         "DT",
         "R",
@@ -2832,7 +2832,7 @@
         "teal.transform",
         "teal.widgets"
       ],
-      "Hash": "074ec481446b4a131a710c1f9dac29e0"
+      "Hash": "5f22b11132ec9ae34127a3a0a3d7feda"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -3071,14 +3071,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.6.9017",
+      "Version": "0.9.6.9018",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "a79dffdfbb833b35b1e8bcf0441d58e54daecf6f",
+      "RemoteSha": "d2b633878b1ee079b9a93a021b4457833b817cfd",
       "Requirements": [
         "MASS",
         "R",
@@ -3109,7 +3109,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "5d1e826b69252d18ba0e4ba917ef6d28"
+      "Hash": "b634afbd5e69e9108e8d014ab9561317"
     },
     "tern.gee": {
       "Package": "tern.gee",
