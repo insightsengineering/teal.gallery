@@ -727,7 +727,7 @@
       "Package": "XML",
       "Version": "3.99-0.18",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "methods",
@@ -2136,7 +2136,7 @@
       "Package": "nnet",
       "Version": "7.3-20",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "stats",
