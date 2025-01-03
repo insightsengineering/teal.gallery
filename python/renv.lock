@@ -1464,7 +1464,7 @@
       "Package": "nnet",
       "Version": "7.3-20",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "stats",
