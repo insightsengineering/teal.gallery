@@ -270,13 +270,13 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "6.0.1",
+      "Version": "6.1.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "e8ba62486230951fcd2b881c5be23f96"
+      "Hash": "8dd23d308c751efdf675124aad4bf5d7"
     },
     "data.table": {
       "Package": "data.table",
