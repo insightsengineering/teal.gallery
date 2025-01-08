@@ -567,7 +567,7 @@
       "Package": "curl",
       "Version": "6.1.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
@@ -1532,7 +1532,7 @@
     },
     "pillar": {
       "Package": "pillar",
-      "Version": "1.10.0",
+      "Version": "1.10.1",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -1544,7 +1544,7 @@
         "utils",
         "vctrs"
       ],
-      "Hash": "101ca350beea21261a15ba169d7a8513"
+      "Hash": "8b16b6097daef84cd3c40a6a7c5c9d86"
     },
     "pkgconfig": {
       "Package": "pkgconfig",
@@ -2172,17 +2172,18 @@
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.5.0.9021",
+      "Version": "0.5.0.9022",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
       "RemoteRef": "main",
-      "RemoteSha": "b38563879a34f822afc4b57d07b4ce6c1a7527c4",
+      "RemoteSha": "0eeaf0abb3699292a11b14404bcc56c1048bf59c",
       "Requirements": [
         "R",
         "checkmate",
+        "cli",
         "grDevices",
         "lifecycle",
         "methods",
@@ -2190,18 +2191,18 @@
         "stats",
         "utils"
       ],
-      "Hash": "f77099ce1647f1e71470e620e355e449"
+      "Hash": "75f680e7397bdfc361533fb49a060db7"
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.6.0.9023",
+      "Version": "0.6.0.9024",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "f8869c16413660f45c7b22850df619fb1c5daa08",
+      "RemoteSha": "5a67fecc94f4491f6cbddacf676542af7ebe4e23",
       "Requirements": [
         "R",
         "checkmate",
@@ -2212,7 +2213,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "7e2eb7354bde74c31f615c6eadce8c20"
+      "Hash": "8ebf05c1d607eed98f9acd761ff84007"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -2595,7 +2596,7 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.49",
+      "Version": "0.50",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -2604,7 +2605,7 @@
         "stats",
         "tools"
       ],
-      "Hash": "8687398773806cfff9401a2feca96298"
+      "Hash": "44ab88837d3f8dfc66a837299b887fa6"
     },
     "xml2": {
       "Package": "xml2",
