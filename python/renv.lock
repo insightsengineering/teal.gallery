@@ -772,7 +772,7 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.9",
+      "Version": "0.5.10",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -784,7 +784,7 @@
         "methods",
         "stringi"
       ],
-      "Hash": "8be2fff2bd140e59cc3bc32fa761de26"
+      "Hash": "7bc8ef94c677c0e7d6f207bb702736b7"
     },
     "fs": {
       "Package": "fs",
