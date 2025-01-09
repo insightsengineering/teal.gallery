@@ -282,7 +282,7 @@
     },
     "TMB": {
       "Package": "TMB",
-      "Version": "1.9.15",
+      "Version": "1.9.16",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -294,7 +294,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "a9c26d0c76fdcde77410b88197efa7bf"
+      "Hash": "ab41aa976351076a1840842a4e415d7f"
     },
     "abind": {
       "Package": "abind",
@@ -881,7 +881,7 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.9",
+      "Version": "0.5.10",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -893,7 +893,7 @@
         "methods",
         "stringi"
       ],
-      "Hash": "8be2fff2bd140e59cc3bc32fa761de26"
+      "Hash": "7bc8ef94c677c0e7d6f207bb702736b7"
     },
     "fs": {
       "Package": "fs",
@@ -1321,11 +1321,12 @@
     },
     "labelled": {
       "Package": "labelled",
-      "Version": "2.13.0",
+      "Version": "2.14.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
+        "cli",
         "dplyr",
         "haven",
         "lifecycle",
@@ -1335,7 +1336,7 @@
         "tidyselect",
         "vctrs"
       ],
-      "Hash": "ad4b6d757624221aec6220b8c78defeb"
+      "Hash": "be115c6af900d820c263a73ec8dea03c"
     },
     "later": {
       "Package": "later",
@@ -1833,7 +1834,7 @@
     },
     "processx": {
       "Package": "processx",
-      "Version": "3.8.4",
+      "Version": "3.8.5",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1842,7 +1843,7 @@
         "ps",
         "utils"
       ],
-      "Hash": "0c90a7d71988856bad2a2a45dd871bb9"
+      "Hash": "790b1edafbd9980aeb8c3d77e3b0ba33"
     },
     "productplots": {
       "Package": "productplots",
