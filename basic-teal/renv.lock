@@ -429,14 +429,14 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.9.9008",
+      "Version": "0.5.10.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "7bc76bb0a9434d8c4d0f9f1cf8b3380331af319e",
+      "RemoteSha": "4c248a25db7ad73e98221029053d9e73498882db",
       "Requirements": [
         "R",
         "checkmate",
@@ -446,7 +446,7 @@
         "methods",
         "stringi"
       ],
-      "Hash": "d5050c8cb291a54bb13d25692dd96500"
+      "Hash": "5762d2ca3ea96af7bf2a1dfb5fd59109"
     },
     "fs": {
       "Package": "fs",
@@ -1264,14 +1264,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9097",
+      "Version": "0.15.2.9098",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "997da60fd983200f98e4dcaf12fa768e53291a1a",
+      "RemoteSha": "e07fc33b7dd612141e589b6e41a598d9e37051dc",
       "Requirements": [
         "R",
         "checkmate",
@@ -1293,7 +1293,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "83cf094404de2a9d425a9f4039407699"
+      "Hash": "06b123bde91e10bbca91781546a7faaf"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -1320,14 +1320,14 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.6.0.9024",
+      "Version": "0.6.0.9025",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "5a67fecc94f4491f6cbddacf676542af7ebe4e23",
+      "RemoteSha": "7b8ec2e0d8eca883a144e29755e12ce23a0ff147",
       "Requirements": [
         "R",
         "checkmate",
@@ -1338,7 +1338,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "8ebf05c1d607eed98f9acd761ff84007"
+      "Hash": "8f13e5f307825444f63db73416a91f9a"
     },
     "teal.logger": {
       "Package": "teal.logger",
