@@ -1676,13 +1676,13 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.3.0",
+      "Version": "2.3.1",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "askpass"
       ],
-      "Hash": "5bfe2927efa9f87766ca9605301ea48f"
+      "Hash": "37a7f0abce0349f5950ce49f38c7626b"
     },
     "parallelly": {
       "Package": "parallelly",
@@ -2044,7 +2044,7 @@
     },
     "rlistings": {
       "Package": "rlistings",
-      "Version": "0.2.9",
+      "Version": "0.2.10",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2057,7 +2057,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "de6d9714857cae1cc672bbad3f3d0f34"
+      "Hash": "7b83855c95b57ced345e2a8b84e4ebba"
     },
     "rmarkdown": {
       "Package": "rmarkdown",
