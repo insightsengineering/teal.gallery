@@ -325,13 +325,13 @@
     },
     "evaluate": {
       "Package": "evaluate",
-      "Version": "1.0.1",
+      "Version": "1.0.3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "3fd29944b231036ad67c3edb32e02201"
+      "Hash": "e9651417729bbe7472e32b5027370e79"
     },
     "fansi": {
       "Package": "fansi",
@@ -822,13 +822,13 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.3.0",
+      "Version": "2.3.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "askpass"
       ],
-      "Hash": "5bfe2927efa9f87766ca9605301ea48f"
+      "Hash": "37a7f0abce0349f5950ce49f38c7626b"
     },
     "pillar": {
       "Package": "pillar",
@@ -963,7 +963,7 @@
     },
     "rlistings": {
       "Package": "rlistings",
-      "Version": "0.2.9",
+      "Version": "0.2.10",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -976,7 +976,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "de6d9714857cae1cc672bbad3f3d0f34"
+      "Hash": "7b83855c95b57ced345e2a8b84e4ebba"
     },
     "rmarkdown": {
       "Package": "rmarkdown",
@@ -1013,14 +1013,14 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.10.9014",
+      "Version": "0.6.11.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "9baa8831a9e63cc1c5129ba42e7b4d4f3c1b188e",
+      "RemoteSha": "af0f7caf16ee2cb4dc438c4440bfbe759d6f3ca3",
       "Requirements": [
         "R",
         "checkmate",
@@ -1032,18 +1032,18 @@
         "stats",
         "stringi"
       ],
-      "Hash": "25b0c90153d3aa3ac68639e0d821c8fd"
+      "Hash": "4b128f8db113ad20241f49116f9e99ce"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
-      "Version": "0.0.1.9010",
+      "Version": "0.0.1.9012",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables.officer",
       "RemoteRef": "main",
-      "RemoteSha": "a7fca83a362907c0161aafa472ccf36f851f8918",
+      "RemoteSha": "9afc5a8b67bb1d23dda3a38e771360c3540aba05",
       "Requirements": [
         "R",
         "checkmate",
@@ -1057,7 +1057,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "ca28a7a5e7d72e2403a2869def5f2cb8"
+      "Hash": "1aae4a546b66d3db8840da5879b159cf"
     },
     "sass": {
       "Package": "sass",
