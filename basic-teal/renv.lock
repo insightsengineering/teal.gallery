@@ -325,13 +325,13 @@
     },
     "evaluate": {
       "Package": "evaluate",
-      "Version": "1.0.1",
+      "Version": "1.0.3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "3fd29944b231036ad67c3edb32e02201"
+      "Hash": "e9651417729bbe7472e32b5027370e79"
     },
     "fansi": {
       "Package": "fansi",
@@ -991,7 +991,7 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.10",
+      "Version": "0.6.11",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1005,7 +1005,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "1907d8ff958d4e8d62549fcc0a0c7985"
+      "Hash": "3959cd66d4c2c84dffc6c524872e690e"
     },
     "sass": {
       "Package": "sass",
