@@ -230,9 +230,6 @@ footer <- tags$p(
 ## Setup App
 app <- init(
   data = data,
-  title = build_app_title("Early Development Analysis Teal Demo App", nest_logo),
-  header = header,
-  footer = footer,
   filter = teal_slices(
     count_type = "all",
     teal_slice(dataname = "ADSL", varname = "SAFFL", selected = "Y"),
@@ -435,7 +432,13 @@ app <- init(
       plot_height = c(1200, 400, 5000)
     )
   )
-)
+) |>
+  modify_title(
+    title = "Early Development Analysis Teal Demo App",
+    favicon = nest_logo
+  ) |>
+  modify_header(header = header) |>
+  modify_footer(footer = footer)
 
 ## Start Teal Shiny App ----
 shinyApp(app$ui, app$server)

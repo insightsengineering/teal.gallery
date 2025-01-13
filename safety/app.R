@@ -177,9 +177,6 @@ footer <- tags$p(
 ## Setup App
 app <- teal::init(
   data = data,
-  title = build_app_title("Safety Analysis Teal Demo App", nest_logo),
-  header = header,
-  footer = footer,
   # Set initial filter state as safety-evaluable population
   filter = teal_slices(
     count_type = "all",
@@ -494,6 +491,12 @@ app <- teal::init(
       plot_height = c(1000L, 200L, 4000L)
     )
   )
-)
+) |>
+  modify_title(
+    title = "Safety Analysis Teal Demo App",
+    favicon = nest_logo
+  ) |>
+  modify_header(header = header) |>
+  modify_footer(footer = footer)
 
 shinyApp(app$ui, app$server)

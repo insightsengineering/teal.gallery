@@ -105,9 +105,6 @@ footer <- tags$p(
 
 app <- teal::init(
   data = data,
-  title = build_app_title("Python Dataset Teal Demo App", nest_logo),
-  header = header,
-  footer = footer,
   modules = modules(
     tm_data_table("Data Table"),
     tm_variable_browser("Variable Browser"),
@@ -155,6 +152,12 @@ app <- teal::init(
       )
     )
   )
-)
+) |>
+  modify_title(
+    title = "Python Dataset Teal Demo App",
+    favicon = nest_logo
+  ) |>
+  modify_header(header = header) |>
+  modify_footer(footer = footer)
 
 shinyApp(app$ui, app$server)

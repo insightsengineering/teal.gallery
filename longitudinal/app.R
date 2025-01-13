@@ -436,9 +436,6 @@ footer <- tags$p(
 
 app <- teal::init(
   data = data,
-  title = build_app_title("Longitudinal Analysis Teal Demo App", nest_logo),
-  header = header,
-  footer = footer,
   filter = teal_slices(
     count_type = "all",
     teal_slice(dataname = "ADSL", varname = "SEX"),
@@ -773,6 +770,12 @@ app <- teal::init(
       )
     )
   )
-)
+) |>
+  modify_title(
+    title = "Longitudinal Analysis Teal Demo App",
+    favicon = nest_logo
+  ) |>
+  modify_header(header = header) |>
+  modify_footer(footer = footer)
 
 shinyApp(app$ui, app$server)
