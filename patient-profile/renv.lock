@@ -1535,14 +1535,14 @@
     },
     "mmrm": {
       "Package": "mmrm",
-      "Version": "0.3.14.9001",
+      "Version": "0.3.14.9002",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "108618ed18923a436e5f28c44ea6ac9f97743d9c",
+      "RemoteSha": "b2e4b36fe8f2db3196fce5166294955333ab6cdb",
       "Requirements": [
         "Matrix",
         "R",
@@ -1562,7 +1562,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "abcf7fbe981293b1a73fc07f01db95dc"
+      "Hash": "c5e2fc2ceb1b579df68e3d59abc6a551"
     },
     "modelr": {
       "Package": "modelr",
@@ -2156,14 +2156,14 @@
     },
     "rtables.officer": {
       "Package": "rtables.officer",
-      "Version": "0.0.1.9012",
+      "Version": "0.0.1.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables.officer",
       "RemoteRef": "main",
-      "RemoteSha": "9afc5a8b67bb1d23dda3a38e771360c3540aba05",
+      "RemoteSha": "758a33dc28e4d1ac99a6bedd56bc6f692985603d",
       "Requirements": [
         "R",
         "checkmate",
@@ -2177,7 +2177,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "1aae4a546b66d3db8840da5879b159cf"
+      "Hash": "0dffd22d123125ce5823ac47f511b4be"
     },
     "sass": {
       "Package": "sass",
@@ -2852,9 +2852,9 @@
     },
     "testthat": {
       "Package": "testthat",
-      "Version": "3.2.2",
+      "Version": "3.2.3",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -2877,7 +2877,7 @@
         "waldo",
         "withr"
       ],
-      "Hash": "6773967afbe2f74c87021e72c1bb05c0"
+      "Hash": "42f889439ccb14c55fc3d75c9c755056"
     },
     "textshaping": {
       "Package": "textshaping",
