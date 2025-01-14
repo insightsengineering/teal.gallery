@@ -2729,9 +2729,9 @@
     },
     "testthat": {
       "Package": "testthat",
-      "Version": "3.2.2",
+      "Version": "3.2.3",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -2754,7 +2754,7 @@
         "waldo",
         "withr"
       ],
-      "Hash": "6773967afbe2f74c87021e72c1bb05c0"
+      "Hash": "42f889439ccb14c55fc3d75c9c755056"
     },
     "textshaping": {
       "Package": "textshaping",
