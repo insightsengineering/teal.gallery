@@ -1845,14 +1845,14 @@
     },
     "rtables.officer": {
       "Package": "rtables.officer",
-      "Version": "0.0.1.9012",
+      "Version": "0.0.1.9013",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables.officer",
       "RemoteRef": "main",
-      "RemoteSha": "9afc5a8b67bb1d23dda3a38e771360c3540aba05",
+      "RemoteSha": "758a33dc28e4d1ac99a6bedd56bc6f692985603d",
       "Requirements": [
         "R",
         "checkmate",
@@ -1866,7 +1866,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "1aae4a546b66d3db8840da5879b159cf"
+      "Hash": "0dffd22d123125ce5823ac47f511b4be"
     },
     "sandwich": {
       "Package": "sandwich",
