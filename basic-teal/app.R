@@ -70,6 +70,5 @@ app <- init(
   ) |>
   modify_header(header = header) |>
   modify_footer(footer = footer)
-app$ui
 
 shinyApp(app$ui, app$server)
