@@ -2531,14 +2531,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.3.0.9003",
+      "Version": "0.3.0.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "1838b749ee443ddd05b8ba3b7c34d816151c8c4b",
+      "RemoteSha": "144171f776dd0cdd3aa5d2131ed6e514a0e6b2ad",
       "Requirements": [
         "R",
         "glue",
@@ -2549,18 +2549,18 @@
         "utils",
         "withr"
       ],
-      "Hash": "4c9f8520096e0afcc538c1346f6de946"
+      "Hash": "d99e1151db7939b1aa18f9c328f0561a"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.1.9043",
+      "Version": "0.9.1.9045",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "dccf80fd227c35df6239592d2ab0ed1230395ff9",
+      "RemoteSha": "0876b315e0454f1e893776d89a077145234a07b3",
       "Requirements": [
         "DT",
         "R",
@@ -2595,7 +2595,7 @@
         "utils",
         "vistime"
       ],
-      "Hash": "b35fa16c641200488269155afa08d962"
+      "Hash": "6cb91c8857dd0d27721dc83c78674f63"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
@@ -2642,14 +2642,14 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.1.9021",
+      "Version": "0.3.1.9023",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "81531dc13192d48ea8db29a7449b2e977c59041f",
+      "RemoteSha": "5c18d08cddb6be2ef6d042cae7f36bd78b4a021b",
       "Requirements": [
         "R6",
         "bslib",
@@ -2669,7 +2669,7 @@
         "yaml",
         "zip"
       ],
-      "Hash": "ac19413ad841b338833c155b2a24f229"
+      "Hash": "3dff9bd9d88ae69d2bdad2ce8de0bf0f"
     },
     "teal.slice": {
       "Package": "teal.slice",
