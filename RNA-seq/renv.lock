@@ -2913,14 +2913,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.3.0.9003",
+      "Version": "0.3.0.9004",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "1838b749ee443ddd05b8ba3b7c34d816151c8c4b",
+      "RemoteSha": "144171f776dd0cdd3aa5d2131ed6e514a0e6b2ad",
       "Requirements": [
         "R",
         "glue",
@@ -2931,7 +2931,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "4c9f8520096e0afcc538c1346f6de946"
+      "Hash": "d99e1151db7939b1aa18f9c328f0561a"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
