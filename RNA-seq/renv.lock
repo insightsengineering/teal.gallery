@@ -2973,14 +2973,14 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9026",
+      "Version": "0.1.6.9027",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "b5ef1ef5b065a7f2cfad8e60b0a4e1a5d0fb18f6",
+      "RemoteSha": "4f07c33c9bba84047219be1cdd76f05b60f054a8",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -3007,7 +3007,7 @@
         "tern",
         "utils"
       ],
-      "Hash": "c533a4803ba4b6aa6cd7e0335da48c8f"
+      "Hash": "f29862840d09a90dcf8e55d9287309aa"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
