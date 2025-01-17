@@ -2119,15 +2119,18 @@
     },
     "systemfonts": {
       "Package": "systemfonts",
-      "Version": "1.1.0",
+      "Version": "1.2.0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "cpp11",
-        "lifecycle"
+        "grid",
+        "jsonlite",
+        "lifecycle",
+        "utils"
       ],
-      "Hash": "213b6b8ed5afbf934843e6c3b090d418"
+      "Hash": "0ef5db15b3a48a5f97f5329c8a956058"
     },
     "teal": {
       "Package": "teal",
@@ -2340,14 +2343,14 @@
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.5.0.9021",
+      "Version": "0.5.0.9022",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.transform",
       "RemoteRef": "main",
-      "RemoteSha": "73412928025cd3cd53b42053e1bcfd5fb0dce493",
+      "RemoteSha": "4c6d52fea0283f2ba16f1fc6c6b92508429f9942",
       "Requirements": [
         "R",
         "checkmate",
@@ -2366,7 +2369,7 @@
         "tidyr",
         "tidyselect"
       ],
-      "Hash": "50c6314ffd603ea57b69bbf1539585e8"
+      "Hash": "ad44ca06a03047a22973a91658d39cf6"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
@@ -2398,14 +2401,14 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.6.9018",
+      "Version": "0.9.6.9019",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "d2b633878b1ee079b9a93a021b4457833b817cfd",
+      "RemoteSha": "519a04bb66ea2b98653ea9b09bbfad7f5d51c884",
       "Requirements": [
         "MASS",
         "R",
@@ -2436,7 +2439,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "b634afbd5e69e9108e8d014ab9561317"
+      "Hash": "1682dfa7e16a2e7b795034946ecb0f89"
     },
     "textshaping": {
       "Package": "textshaping",
