@@ -2498,14 +2498,14 @@
     },
     "rlang": {
       "Package": "rlang",
-      "Version": "1.1.4",
+      "Version": "1.1.5",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "3eec01f8b1dee337674b2e34ab1f9bc1"
+      "Hash": "724dcc1490cd7071ee75ca2994a5446e"
     },
     "rmarkdown": {
       "Package": "rmarkdown",
@@ -3115,7 +3115,7 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.6",
+      "Version": "0.9.7",
       "Source": "Repository",
       "Repository": "BioC.CRAN",
       "Requirements": [
@@ -3138,6 +3138,7 @@
         "lifecycle",
         "magrittr",
         "methods",
+        "nestcolor",
         "rlang",
         "rtables",
         "scales",
@@ -3147,7 +3148,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "35fe86bc358b15525217e775f5318d33"
+      "Hash": "7dd26b7a4e5fb7553ca3ab19c68b22c0"
     },
     "textshaping": {
       "Package": "textshaping",
