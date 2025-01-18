@@ -952,14 +952,14 @@
     },
     "rlang": {
       "Package": "rlang",
-      "Version": "1.1.4",
+      "Version": "1.1.5",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "3eec01f8b1dee337674b2e34ab1f9bc1"
+      "Hash": "724dcc1490cd7071ee75ca2994a5446e"
     },
     "rlistings": {
       "Package": "rlistings",
@@ -1036,14 +1036,14 @@
     },
     "rtables.officer": {
       "Package": "rtables.officer",
-      "Version": "0.0.1.9013",
+      "Version": "0.0.2.9001",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables.officer",
       "RemoteRef": "main",
-      "RemoteSha": "758a33dc28e4d1ac99a6bedd56bc6f692985603d",
+      "RemoteSha": "921e1582b2447f3121ea3d2a28d4f152a1966c98",
       "Requirements": [
         "R",
         "checkmate",
@@ -1057,7 +1057,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "0dffd22d123125ce5823ac47f511b4be"
+      "Hash": "a7c50f80ab273a82937229dbff8612d1"
     },
     "sass": {
       "Package": "sass",
@@ -1267,18 +1267,19 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9103",
+      "Version": "0.15.2.9106",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "637e6b6b9f799f6c4c29984e35daef784bb3d064",
+      "RemoteSha": "fef0e98ba16b8260e00a93010011fa1424a0d6d7",
       "Requirements": [
         "R",
         "checkmate",
         "cli",
+        "htmltools",
         "jsonlite",
         "lifecycle",
         "logger",
@@ -1296,7 +1297,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "3f52991eca60d71bb7d644147745de06"
+      "Hash": "d3f26bf9c095189f48396025289f2d01"
     },
     "teal.code": {
       "Package": "teal.code",
