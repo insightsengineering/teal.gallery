@@ -38,9 +38,6 @@ footer <- tags$p(
 
 app <- init(
   data = data,
-  title = build_app_title("RNA-Seq Analysis Teal Demo App", nest_logo),
-  header = header,
-  footer = footer,
   modules = modules(
     tm_front_page(
       label = "App Info",
@@ -84,7 +81,13 @@ app <- init(
       mae_name = "MAE"
     )
   )
-)
+) |>
+  modify_title(
+    title = "RNA-Seq Analysis Teal Demo App",
+    favicon = nest_logo
+  ) |>
+  modify_header(header = header) |>
+  modify_footer(footer = footer)
 
 ## Not run:
 shinyApp(app$ui, app$server)

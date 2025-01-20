@@ -62,10 +62,13 @@ footer <- tags$p(
 app <- init(
   data = data,
   filter = filters,
-  modules = modules(example_module()),
-  title = build_app_title("Basic Teal Demo App", nest_logo),
-  header = header,
-  footer = footer
-)
+  modules = modules(example_module())
+) |>
+  modify_title(
+    title = "Basic Teal Demo App",
+    favicon = nest_logo
+  ) |>
+  modify_header(header = header) |>
+  modify_footer(footer = footer)
 
 shinyApp(app$ui, app$server)
