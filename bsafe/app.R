@@ -2,12 +2,12 @@ library(teal)
 library(bsafe)
 library(teal.modules.bsafe)
 
-data <- read.csv("combined.csv")
+data <- teal.modules.bsafe::test_data
 
 data <- teal.data::teal_data(
   bsafe_data = data,
   code = expression({
-    bsafe_data <- read.csv("combined.csv")
+    bsafe_data <- teal.modules.bsafe::test_data
   })
 ) |>
   teal.data::verify()
