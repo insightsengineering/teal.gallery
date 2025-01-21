@@ -3,6 +3,26 @@
     "Version": "4.4.1",
     "Repositories": [
       {
+        "Name": "BioCsoft",
+        "URL": "https://bioconductor.org/packages/3.19/bioc"
+      },
+      {
+        "Name": "BioCann",
+        "URL": "https://bioconductor.org/packages/3.19/data/annotation"
+      },
+      {
+        "Name": "BioCexp",
+        "URL": "https://bioconductor.org/packages/3.19/data/experiment"
+      },
+      {
+        "Name": "BioCworkflows",
+        "URL": "https://bioconductor.org/packages/3.19/workflows"
+      },
+      {
+        "Name": "BioCbooks",
+        "URL": "https://bioconductor.org/packages/3.19/books"
+      },
+      {
         "Name": "CRAN",
         "URL": "https://packagemanager.posit.co/cran/latest"
       }
@@ -861,7 +881,7 @@
     },
     "boot": {
       "Package": "boot",
-      "Version": "1.3-30",
+      "Version": "1.3-31",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -869,7 +889,7 @@
         "graphics",
         "stats"
       ],
-      "Hash": "96abeed416a286d4a0f52e550b612343"
+      "Hash": "de2a4646c18661d6a0a08ec67f40b7ed"
     },
     "broom": {
       "Package": "broom",
@@ -1017,7 +1037,7 @@
     },
     "cluster": {
       "Package": "cluster",
-      "Version": "2.1.6",
+      "Version": "2.1.8",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1027,7 +1047,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "0aaa05204035dc43ea0004b9c76611dd"
+      "Hash": "b361779da7f8b129a1859b6cf243ba58"
     },
     "codetools": {
       "Package": "codetools",
@@ -1467,8 +1487,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "formatters",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "formatters",
+      "RemoteRef": "main",
       "RemoteSha": "4c248a25db7ad73e98221029053d9e73498882db",
       "Requirements": [
         "R",
@@ -1479,7 +1500,7 @@
         "methods",
         "stringi"
       ],
-      "Hash": "8f2be9bbc1469584d60b267536088df5"
+      "Hash": "5762d2ca3ea96af7bf2a1dfb5fd59109"
     },
     "fs": {
       "Package": "fs",
@@ -2272,20 +2293,21 @@
     },
     "nestcolor": {
       "Package": "nestcolor",
-      "Version": "0.1.2.9017",
+      "Version": "0.1.3.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "nestcolor",
       "RemoteUsername": "insightsengineering",
-      "RemoteSha": "3d2ce62de8f47434a97677202b77f945947e529f",
+      "RemoteRepo": "nestcolor",
+      "RemoteRef": "main",
+      "RemoteSha": "f2a1559926431d8abd1ec32c6b30ae08b87b166b",
       "Requirements": [
         "R",
         "checkmate",
         "ggplot2",
         "lifecycle"
       ],
-      "Hash": "9245f5d415af9c2b7f3c7b221d143cc5"
+      "Hash": "0498a54eaab9378e01a8bf34979375bd"
     },
     "nlme": {
       "Package": "nlme",
@@ -2310,7 +2332,7 @@
     },
     "nnet": {
       "Package": "nnet",
-      "Version": "7.3-19",
+      "Version": "7.3-20",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2318,7 +2340,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "2c797b46eea7fb58ede195bc0b1f1138"
+      "Hash": "c955edf99ff24a32e96bd0a22645af60"
     },
     "nortest": {
       "Package": "nortest",
@@ -2586,8 +2608,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "random.cdisc.data",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "random.cdisc.data",
+      "RemoteRef": "main",
       "RemoteSha": "a65bfbe3aea3884c7a0ddbc97479e7abcf6bc14f",
       "Requirements": [
         "R",
@@ -2602,7 +2625,7 @@
         "tidyr",
         "yaml"
       ],
-      "Hash": "726aaf68e4ed9c1b42b251d466efd5b8"
+      "Hash": "3fe6afa208c0e6cde2c892b0ad769863"
     },
     "rappdirs": {
       "Package": "rappdirs",
@@ -2643,7 +2666,7 @@
       "Package": "renv",
       "Version": "1.0.11",
       "Source": "Repository",
-      "Repository": "https://packagemanager.posit.co/cran/2024-10-29",
+      "Repository": "RSPM",
       "Requirements": [
         "utils"
       ],
@@ -2676,8 +2699,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "rlistings",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "rlistings",
+      "RemoteRef": "main",
       "RemoteSha": "31052be4296f2df181a8e8bb81bbc238e39967cd",
       "Requirements": [
         "checkmate",
@@ -2689,7 +2713,7 @@
         "tibble",
         "utils"
       ],
-      "Hash": "c60406965509a259804cda039287b2c9"
+      "Hash": "57b32c17e1548e5a81de4b80141fa327"
     },
     "rmarkdown": {
       "Package": "rmarkdown",
@@ -2730,8 +2754,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "rtables",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "rtables",
+      "RemoteRef": "main",
       "RemoteSha": "44b7eefc6a91923dfc44fb20325d29351e8c6465",
       "Requirements": [
         "R",
@@ -2744,7 +2769,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "cb037b250fb24797cc3f784c1e94e0e1"
+      "Hash": "1fae7e15a9806a7dc0cd240b9ae510b5"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
@@ -2752,8 +2777,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "rtables.officer",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "rtables.officer",
+      "RemoteRef": "main",
       "RemoteSha": "921e1582b2447f3121ea3d2a28d4f152a1966c98",
       "Requirements": [
         "R",
@@ -2768,7 +2794,7 @@
         "stats",
         "stringi"
       ],
-      "Hash": "6eab19c959ee3469d62c13712b0c4d2c"
+      "Hash": "a7c50f80ab273a82937229dbff8612d1"
     },
     "sandwich": {
       "Package": "sandwich",
@@ -3067,7 +3093,7 @@
     },
     "survival": {
       "Package": "survival",
-      "Version": "3.6-4",
+      "Version": "3.8-3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -3079,7 +3105,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "e6e3071f471513e4b85f98ca041303c7"
+      "Hash": "fe42836742a4f065b3f3f5de81fccab9"
     },
     "sys": {
       "Package": "sys",
@@ -3110,8 +3136,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "teal",
+      "RemoteRef": "main",
       "RemoteSha": "d404babfff1c93000db8875c7140646f977371ad",
       "Requirements": [
         "R",
@@ -3135,7 +3162,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "02f6540baa147126978598ecef9f7a59"
+      "Hash": "3cd73b65379e1467ed7ab0ff68650fd3"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -3143,8 +3170,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.code",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "teal.code",
+      "RemoteRef": "main",
       "RemoteSha": "0eeaf0abb3699292a11b14404bcc56c1048bf59c",
       "Requirements": [
         "R",
@@ -3157,7 +3185,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "9fd5a19515a73f8b5ed8368d3c55a24e"
+      "Hash": "75f680e7397bdfc361533fb49a060db7"
     },
     "teal.data": {
       "Package": "teal.data",
@@ -3165,8 +3193,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.data",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "teal.data",
+      "RemoteRef": "main",
       "RemoteSha": "972dce7286072f74e95abf532d8416aca5bc5c86",
       "Requirements": [
         "R",
@@ -3178,7 +3207,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "59a427dde8d8d584dbc5afa1324b8985"
+      "Hash": "8835fb322986b5d6dbc3bb8916e04ec5"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -3186,8 +3215,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.logger",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "teal.logger",
+      "RemoteRef": "main",
       "RemoteSha": "144171f776dd0cdd3aa5d2131ed6e514a0e6b2ad",
       "Requirements": [
         "R",
@@ -3199,17 +3229,18 @@
         "utils",
         "withr"
       ],
-      "Hash": "749cb62de9eb0d492e63963978a86d22"
+      "Hash": "d99e1151db7939b1aa18f9c328f0561a"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9065",
+      "Version": "0.3.0.9067",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.modules.general",
       "RemoteUsername": "insightsengineering",
-      "RemoteSha": "8ce4546363bedde504c615214295cb1b33118036",
+      "RemoteRepo": "teal.modules.general",
+      "RemoteRef": "main",
+      "RemoteSha": "572f7b89c6e98f5023911687ed5db5db722c0dc6",
       "Requirements": [
         "DT",
         "MASS",
@@ -3256,17 +3287,18 @@
         "tools",
         "utils"
       ],
-      "Hash": "adb8c6726538bf5077708183b898ef64"
+      "Hash": "a6097d27620e2be022366f85dae17fca"
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9026",
+      "Version": "0.1.6.9027",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.modules.hermes",
       "RemoteUsername": "insightsengineering",
-      "RemoteSha": "b5ef1ef5b065a7f2cfad8e60b0a4e1a5d0fb18f6",
+      "RemoteRepo": "teal.modules.hermes",
+      "RemoteRef": "main",
+      "RemoteSha": "4f07c33c9bba84047219be1cdd76f05b60f054a8",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -3293,7 +3325,7 @@
         "tern",
         "utils"
       ],
-      "Hash": "0c29e27cdbb4adf624f723e0088d239b"
+      "Hash": "f29862840d09a90dcf8e55d9287309aa"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -3301,8 +3333,8 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.reporter",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
       "RemoteSha": "5c18d08cddb6be2ef6d042cae7f36bd78b4a021b",
       "Requirements": [
@@ -3332,8 +3364,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.slice",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "teal.slice",
+      "RemoteRef": "main",
       "RemoteSha": "f6e04bf21c105e153bcbf365e4aebbabfa50af25",
       "Requirements": [
         "R",
@@ -3358,7 +3391,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "5f0977d33999c976685802f2d6998f93"
+      "Hash": "0a4c5e3088a8c9ba3c823b8ef0182d03"
     },
     "teal.transform": {
       "Package": "teal.transform",
@@ -3366,8 +3399,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.transform",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "teal.transform",
+      "RemoteRef": "main",
       "RemoteSha": "4c6d52fea0283f2ba16f1fc6c6b92508429f9942",
       "Requirements": [
         "R",
@@ -3387,7 +3421,7 @@
         "tidyr",
         "tidyselect"
       ],
-      "Hash": "b4a2ea07f7f27f0107582912a2bdf22a"
+      "Hash": "ad44ca06a03047a22973a91658d39cf6"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
@@ -3395,8 +3429,8 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.widgets",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
       "RemoteSha": "4d13a321ae2a9e7cab228d0060fa420ae28adcc1",
       "Requirements": [
@@ -3423,8 +3457,9 @@
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "tern",
       "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "tern",
+      "RemoteRef": "main",
       "RemoteSha": "c1d1d4eaa3f4be7592cad73101060518c695abb5",
       "Requirements": [
         "MASS",
@@ -3456,7 +3491,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "88dff76baaa6f22efc6db43d2b3f9f1d"
+      "Hash": "688f770f4603a6382f9962d3b7b07645"
     },
     "textshaping": {
       "Package": "textshaping",
