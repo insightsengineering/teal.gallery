@@ -52,9 +52,6 @@
       }
     ]
   },
-   "Bioconductor": {
-    "Version": "3.19"
-  },
   "Packages": {
     "DT": {
       "Package": "DT",
