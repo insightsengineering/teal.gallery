@@ -124,9 +124,6 @@ app <- init(
     example_module("Module with only iris transformation", transformers = my_transformers[1]),
     example_module("Module with no transformations")
   ),
-  title = build_app_title("Custom Transform Teal App", nest_logo),
-  header = header,
-  footer = footer
 )
 
 shinyApp(app$ui, app$server)
