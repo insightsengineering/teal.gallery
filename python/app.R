@@ -157,7 +157,7 @@ app <- teal::init(
     title = "Python Dataset Teal Demo App",
     favicon = nest_logo
   ) |>
-  modify_header(header = header) |>
-  modify_footer(footer = footer)
+  modify_header(header) |>
+  modify_footer(footer)
 
 shinyApp(app$ui, app$server)
