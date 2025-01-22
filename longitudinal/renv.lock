@@ -1375,14 +1375,14 @@
     },
     "goshawk": {
       "Package": "goshawk",
-      "Version": "0.1.18.9008",
+      "Version": "0.1.18.9009",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "3d255eecb166d25bb1b15ee31b109630c41d7371",
+      "RemoteSha": "3bd904607447aa5bd492ac57ad5181cf06af817b",
       "Requirements": [
         "R",
         "checkmate",
@@ -1398,7 +1398,7 @@
         "rlang",
         "stringr"
       ],
-      "Hash": "3a1b4594ba9a836b27fa801cb3a4a7be"
+      "Hash": "45f7f64ba062a2d1d33d9e3998853002"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -1974,7 +1974,7 @@
       "Package": "nestcolor",
       "Version": "0.1.3",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "checkmate",
@@ -2889,7 +2889,7 @@
       "Package": "systemfonts",
       "Version": "1.2.1",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "cpp11",
@@ -3039,14 +3039,14 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.1.9048",
+      "Version": "0.9.1.9049",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "34af59021e68ae64aa46113774e7e0a171758353",
+      "RemoteSha": "8ca4130c0e42ab859411dda756ee1cacf477a4a0",
       "Requirements": [
         "DT",
         "R",
@@ -3081,18 +3081,18 @@
         "utils",
         "vistime"
       ],
-      "Hash": "d5d962822c3725e80b2df3242d48237d"
+      "Hash": "980fbcbbeb860f6c018e8d25e04e757d"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9067",
+      "Version": "0.3.0.9068",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "572f7b89c6e98f5023911687ed5db5db722c0dc6",
+      "RemoteSha": "a5a000e854338c943dd62c1475491476aeab51f9",
       "Requirements": [
         "DT",
         "MASS",
@@ -3139,7 +3139,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "a6097d27620e2be022366f85dae17fca"
+      "Hash": "6a53dadccffb6ccbd47c65e661684c4c"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -3395,7 +3395,7 @@
       "Package": "textshaping",
       "Version": "1.0.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "cpp11",
