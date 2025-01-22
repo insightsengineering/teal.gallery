@@ -2154,7 +2154,7 @@
       "Package": "systemfonts",
       "Version": "1.2.1",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "cpp11",
@@ -2269,14 +2269,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9067",
+      "Version": "0.3.0.9068",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "572f7b89c6e98f5023911687ed5db5db722c0dc6",
+      "RemoteSha": "a5a000e854338c943dd62c1475491476aeab51f9",
       "Requirements": [
         "DT",
         "MASS",
@@ -2323,7 +2323,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "a6097d27620e2be022366f85dae17fca"
+      "Hash": "6a53dadccffb6ccbd47c65e661684c4c"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -2495,7 +2495,7 @@
       "Package": "textshaping",
       "Version": "1.0.0",
       "Source": "Repository",
-      "Repository": "BioC.CRAN",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "cpp11",
