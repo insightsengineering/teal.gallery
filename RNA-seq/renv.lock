@@ -3233,14 +3233,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9067",
+      "Version": "0.3.0.9068",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "572f7b89c6e98f5023911687ed5db5db722c0dc6",
+      "RemoteSha": "a5a000e854338c943dd62c1475491476aeab51f9",
       "Requirements": [
         "DT",
         "MASS",
@@ -3287,18 +3287,18 @@
         "tools",
         "utils"
       ],
-      "Hash": "a6097d27620e2be022366f85dae17fca"
+      "Hash": "6a53dadccffb6ccbd47c65e661684c4c"
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9027",
+      "Version": "0.1.6.9028",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "4f07c33c9bba84047219be1cdd76f05b60f054a8",
+      "RemoteSha": "f91610751bb48e8b19c6ce0ad785f3e47c81c4be",
       "Requirements": [
         "DT",
         "MultiAssayExperiment",
@@ -3325,7 +3325,7 @@
         "tern",
         "utils"
       ],
-      "Hash": "f29862840d09a90dcf8e55d9287309aa"
+      "Hash": "45f547ba34b1570b6bc2780c7a7df68f"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
