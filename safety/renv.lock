@@ -2669,14 +2669,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9108",
+      "Version": "0.15.2.9109",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "d404babfff1c93000db8875c7140646f977371ad",
+      "RemoteSha": "bee212676f816291d139372d057b2f7cbf6a3fa9",
       "Requirements": [
         "R",
         "checkmate",
@@ -2699,7 +2699,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "3cd73b65379e1467ed7ab0ff68650fd3"
+      "Hash": "69f76504d08ac09d0cb52e05c46480de"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -3040,14 +3040,14 @@
     },
     "tern.gee": {
       "Package": "tern.gee",
-      "Version": "0.1.5.9004",
+      "Version": "0.1.5.9005",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.gee",
       "RemoteRef": "main",
-      "RemoteSha": "458172da93ed5b2239a6e8970dd28f5f3882b5db",
+      "RemoteSha": "cf28474b1b7c2bf83e0965d5f36514b72bd3aded",
       "Requirements": [
         "R",
         "checkmate",
@@ -3060,7 +3060,7 @@
         "stats",
         "tern"
       ],
-      "Hash": "16b594cefa39d487a2712ab1212a4082"
+      "Hash": "6c779afcc2fb7d0d4816d3bacfccc9bf"
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
