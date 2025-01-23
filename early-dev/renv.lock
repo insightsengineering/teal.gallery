@@ -2953,14 +2953,14 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.3.0.9004",
+      "Version": "0.3.1.9000",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "144171f776dd0cdd3aa5d2131ed6e514a0e6b2ad",
+      "RemoteSha": "3f91f05b3503a5e092e251e178951f03b2aff2e0",
       "Requirements": [
         "R",
         "glue",
@@ -2971,7 +2971,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "d99e1151db7939b1aa18f9c328f0561a"
+      "Hash": "5347896ce269d8ab2153184296525c6a"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
@@ -3111,14 +3111,14 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.1.9023",
+      "Version": "0.3.1.9024",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "5c18d08cddb6be2ef6d042cae7f36bd78b4a021b",
+      "RemoteSha": "c678ca2d105a804c376c1e5e0b7b00e62918ea19",
       "Requirements": [
         "R6",
         "bslib",
@@ -3138,7 +3138,7 @@
         "yaml",
         "zip"
       ],
-      "Hash": "3dff9bd9d88ae69d2bdad2ce8de0bf0f"
+      "Hash": "8f29964d7a6dc41de28b3f29347a39ee"
     },
     "teal.slice": {
       "Package": "teal.slice",
@@ -3301,14 +3301,14 @@
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
-      "Version": "0.3.2.9002",
+      "Version": "0.3.2.9003",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "a4254e89d53ad3eaf91529fe12a22879461699d5",
+      "RemoteSha": "e56597a86dbeefb3123cf87da77345f097008ee1",
       "Requirements": [
         "R",
         "checkmate",
@@ -3328,7 +3328,7 @@
         "tern",
         "tidyr"
       ],
-      "Hash": "5e5e9537a2ab0a4f645187dac20f96b4"
+      "Hash": "fd4cc554611df2b82f44cdc7dbd81637"
     },
     "testthat": {
       "Package": "testthat",
