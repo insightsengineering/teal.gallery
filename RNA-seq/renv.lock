@@ -3,6 +3,26 @@
     "Version": "4.4.1",
     "Repositories": [
       {
+        "Name": "BioCsoft",
+        "URL": "https://bioconductor.org/packages/3.19/bioc"
+      },
+      {
+        "Name": "BioCann",
+        "URL": "https://bioconductor.org/packages/3.19/data/annotation"
+      },
+      {
+        "Name": "BioCexp",
+        "URL": "https://bioconductor.org/packages/3.19/data/experiment"
+      },
+      {
+        "Name": "BioCworkflows",
+        "URL": "https://bioconductor.org/packages/3.19/workflows"
+      },
+      {
+        "Name": "BioCbooks",
+        "URL": "https://bioconductor.org/packages/3.19/books"
+      },
+      {
         "Name": "CRAN",
         "URL": "https://cloud.r-project.org"
       }
@@ -56,7 +76,13 @@
       "Package": "BiocBaseUtils",
       "Version": "1.6.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19"
+      "Repository": "Bioconductor 3.19",
+      "Requirements": [
+        "R",
+        "methods",
+        "utils"
+      ],
+      "Hash": "7fcaec00d8feb85919c022d9e4237133"
     },
     "BiocFileCache": {
       "Package": "BiocFileCache",
@@ -390,7 +416,7 @@
     },
     "MASS": {
       "Package": "MASS",
-      "Version": "7.3-61",
+      "Version": "7.3-64",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -401,11 +427,11 @@
         "stats",
         "utils"
       ],
-      "Hash": "0cafd6f0500e5deba33be22c46bf6055"
+      "Hash": "49d2d8090b74c1179df1aff16201caf8"
     },
     "Matrix": {
       "Package": "Matrix",
-      "Version": "1.7-0",
+      "Version": "1.7-1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -418,7 +444,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "1920b2f11133b12350024297d8a4ff4a"
+      "Hash": "5122bb14d8736372411f955e1b16bc8a"
     },
     "MatrixGenerics": {
       "Package": "MatrixGenerics",
@@ -999,7 +1025,7 @@
     },
     "cluster": {
       "Package": "cluster",
-      "Version": "2.1.6",
+      "Version": "2.1.8",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1009,7 +1035,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "0aaa05204035dc43ea0004b9c76611dd"
+      "Hash": "b361779da7f8b129a1859b6cf243ba58"
     },
     "codetools": {
       "Package": "codetools",
@@ -1217,7 +1243,7 @@
     },
     "edgeR": {
       "Package": "edgeR",
-      "Version": "4.2.1",
+      "Version": "4.2.2",
       "Source": "Bioconductor",
       "Repository": "Bioconductor 3.19",
       "Requirements": [
@@ -1230,7 +1256,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "729daec53b663926458ccde421f5c2fb"
+      "Hash": "4c31c0395110252e4ec7cf4ee9cbebb6"
     },
     "emmeans": {
       "Package": "emmeans",
@@ -1617,7 +1643,43 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "hermes",
       "RemoteRef": "main",
-      "RemoteSha": "acd1bf0c10a48975607e1cca8d999bb219efe40f"
+      "RemoteSha": "acd1bf0c10a48975607e1cca8d999bb219efe40f",
+      "Requirements": [
+        "Biobase",
+        "BiocGenerics",
+        "ComplexHeatmap",
+        "DESeq2",
+        "EnvStats",
+        "GenomicRanges",
+        "IRanges",
+        "MultiAssayExperiment",
+        "R",
+        "R6",
+        "Rdpack",
+        "S4Vectors",
+        "SummarizedExperiment",
+        "assertthat",
+        "biomaRt",
+        "checkmate",
+        "circlize",
+        "dplyr",
+        "edgeR",
+        "forcats",
+        "ggfortify",
+        "ggplot2",
+        "ggrepel",
+        "lifecycle",
+        "limma",
+        "magrittr",
+        "matrixStats",
+        "methods",
+        "purrr",
+        "rlang",
+        "stats",
+        "tidyr",
+        "utils"
+      ],
+      "Hash": "996103fc476988b60f67f4166f88c29b"
     },
     "highr": {
       "Package": "highr",
@@ -1707,7 +1769,7 @@
     },
     "httr2": {
       "Package": "httr2",
-      "Version": "1.0.5",
+      "Version": "1.1.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1724,7 +1786,7 @@
         "vctrs",
         "withr"
       ],
-      "Hash": "d84e4c33206aaace37714901ac2b00c3"
+      "Hash": "0f14199bbd820a9fca398f2df40994f1"
     },
     "isoband": {
       "Package": "isoband",
@@ -1922,7 +1984,7 @@
     },
     "lubridate": {
       "Package": "lubridate",
-      "Version": "1.9.3",
+      "Version": "1.9.4",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1931,7 +1993,7 @@
         "methods",
         "timechange"
       ],
-      "Hash": "680ad542fbcf801442c83a6ac5a2126c"
+      "Hash": "be38bc740fc51783a78edb5a157e4104"
     },
     "magrittr": {
       "Package": "magrittr",
@@ -2089,7 +2151,7 @@
     },
     "nnet": {
       "Package": "nnet",
-      "Version": "7.3-19",
+      "Version": "7.3-20",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2097,7 +2159,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "2c797b46eea7fb58ede195bc0b1f1138"
+      "Hash": "c955edf99ff24a32e96bd0a22645af60"
     },
     "nortest": {
       "Package": "nortest",
@@ -2747,7 +2809,7 @@
     },
     "survival": {
       "Package": "survival",
-      "Version": "3.7-0",
+      "Version": "3.8-3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2759,7 +2821,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "5aaa9cbaf4aba20f8e06fdea1850a398"
+      "Hash": "fe42836742a4f065b3f3f5de81fccab9"
     },
     "sys": {
       "Package": "sys",
@@ -2907,7 +2969,34 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "f91610751bb48e8b19c6ce0ad785f3e47c81c4be"
+      "RemoteSha": "f91610751bb48e8b19c6ce0ad785f3e47c81c4be",
+      "Requirements": [
+        "DT",
+        "MultiAssayExperiment",
+        "R",
+        "S4Vectors",
+        "SummarizedExperiment",
+        "checkmate",
+        "edgeR",
+        "forcats",
+        "ggplot2",
+        "hermes",
+        "lifecycle",
+        "rtables",
+        "shiny",
+        "shinyRadioMatrix",
+        "shinyWidgets",
+        "stats",
+        "stringr",
+        "teal",
+        "teal.data",
+        "teal.logger",
+        "teal.reporter",
+        "teal.widgets",
+        "tern",
+        "utils"
+      ],
+      "Hash": "45f547ba34b1570b6bc2780c7a7df68f"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
