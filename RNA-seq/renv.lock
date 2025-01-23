@@ -55,8 +55,8 @@
     "BiocBaseUtils": {
       "Package": "BiocBaseUtils",
       "Version": "1.6.0",
-      "Source": "Repository",
-      "Repository": "BioCsoft"
+      "Source": "Bioconductor",
+      "Repository": "Bioconductor 3.19"
     },
     "BiocFileCache": {
       "Package": "BiocFileCache",
