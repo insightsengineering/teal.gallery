@@ -2122,7 +2122,7 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.3.0",
+      "Version": "0.3.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2135,7 +2135,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "b5d3366368999eb2262c2a646a1f0c87"
+      "Hash": "5ac4ed4b2d7ed6e16138601902fb048f"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
