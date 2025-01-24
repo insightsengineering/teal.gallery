@@ -26,7 +26,7 @@
     },
     "Matrix": {
       "Package": "Matrix",
-      "Version": "1.7-1",
+      "Version": "1.7-2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -39,7 +39,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "5122bb14d8736372411f955e1b16bc8a"
+      "Hash": "f6a81550f166acbe2cd5229e9ca079b9"
     },
     "R.cache": {
       "Package": "R.cache",
@@ -270,13 +270,13 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "6.1.0",
+      "Version": "6.2.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "8dd23d308c751efdf675124aad4bf5d7"
+      "Hash": "b580cbb010099fd990df6bfe44459e1a"
     },
     "data.table": {
       "Package": "data.table",
@@ -1268,14 +1268,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9109",
+      "Version": "0.15.2.9110",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "bee212676f816291d139372d057b2f7cbf6a3fa9",
+      "RemoteSha": "ef2eb9bae9ee1b9184aaf70dcee904b1b716e16f",
       "Requirements": [
         "R",
         "checkmate",
@@ -1298,7 +1298,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "69f76504d08ac09d0cb52e05c46480de"
+      "Hash": "8a1b0ab60c23a8b9a2cd9af5105875eb"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -1400,14 +1400,14 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.1.9023",
+      "Version": "0.5.1.9024",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "2dbdda216f1dcd721aea293473b164e5ac727d20",
+      "RemoteSha": "37b3c675f629846b8890409b65aeab347e1fe1c7",
       "Requirements": [
         "R",
         "R6",
@@ -1431,7 +1431,7 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "99fb875c0b7e1061ebadf91f5ce57d55"
+      "Hash": "c9b7152e1e3d9f5efde49df41f79e9fa"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
