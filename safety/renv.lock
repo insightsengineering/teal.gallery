@@ -2125,6 +2125,26 @@
       ],
       "Hash": "3959cd66d4c2c84dffc6c524872e690e"
     },
+    "rtables.officer": {
+      "Package": "rtables.officer",
+      "Version": "0.0.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "checkmate",
+        "flextable",
+        "formatters",
+        "lifecycle",
+        "magrittr",
+        "methods",
+        "officer",
+        "rtables",
+        "stats",
+        "stringi"
+      ],
+      "Hash": "d699a5351f7e4233271abdb4f05d70e1"
+    },
     "sass": {
       "Package": "sass",
       "Version": "0.4.9",
@@ -2558,7 +2578,7 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.1",
+      "Version": "0.4.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2570,14 +2590,17 @@
         "htmltools",
         "knitr",
         "lifecycle",
+        "rlistings",
         "rmarkdown",
+        "rtables",
+        "rtables.officer",
         "shiny",
         "shinyWidgets",
         "shinybusy",
         "yaml",
         "zip"
       ],
-      "Hash": "b09a5fb625dc8bff3965f58ba69e8fb3"
+      "Hash": "74947b260483c3dabe881f41827e283b"
     },
     "teal.slice": {
       "Package": "teal.slice",
