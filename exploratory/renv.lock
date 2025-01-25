@@ -1723,6 +1723,23 @@
       ],
       "Hash": "724dcc1490cd7071ee75ca2994a5446e"
     },
+    "rlistings": {
+      "Package": "rlistings",
+      "Version": "0.2.10",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "checkmate",
+        "formatters",
+        "grDevices",
+        "grid",
+        "methods",
+        "stats",
+        "tibble",
+        "utils"
+      ],
+      "Hash": "7b83855c95b57ced345e2a8b84e4ebba"
+    },
     "rmarkdown": {
       "Package": "rmarkdown",
       "Version": "2.29",
@@ -1773,6 +1790,26 @@
         "stringi"
       ],
       "Hash": "3959cd66d4c2c84dffc6c524872e690e"
+    },
+    "rtables.officer": {
+      "Package": "rtables.officer",
+      "Version": "0.0.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "R",
+        "checkmate",
+        "flextable",
+        "formatters",
+        "lifecycle",
+        "magrittr",
+        "methods",
+        "officer",
+        "rtables",
+        "stats",
+        "stringi"
+      ],
+      "Hash": "d699a5351f7e4233271abdb4f05d70e1"
     },
     "sandwich": {
       "Package": "sandwich",
@@ -2177,9 +2214,9 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.1",
+      "Version": "0.4.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "R6",
         "bslib",
@@ -2189,14 +2226,17 @@
         "htmltools",
         "knitr",
         "lifecycle",
+        "rlistings",
         "rmarkdown",
+        "rtables",
+        "rtables.officer",
         "shiny",
         "shinyWidgets",
         "shinybusy",
         "yaml",
         "zip"
       ],
-      "Hash": "b09a5fb625dc8bff3965f58ba69e8fb3"
+      "Hash": "74947b260483c3dabe881f41827e283b"
     },
     "teal.slice": {
       "Package": "teal.slice",
