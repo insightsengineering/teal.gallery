@@ -82,9 +82,9 @@
     },
     "DescTools": {
       "Package": "DescTools",
-      "Version": "0.99.58",
+      "Version": "0.99.59",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "Exact",
         "MASS",
@@ -108,7 +108,7 @@
         "utils",
         "withr"
       ],
-      "Hash": "05a7a9c2329ea71842bc234d3596e1a3"
+      "Hash": "60aea3ab405a250f027f9fe8e2a2baca"
     },
     "Exact": {
       "Package": "Exact",
