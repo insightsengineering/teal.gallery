@@ -1417,7 +1417,7 @@
     },
     "nlme": {
       "Package": "nlme",
-      "Version": "3.1-166",
+      "Version": "3.1-167",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1427,7 +1427,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "ccbb8846be320b627e6aa2b4616a2ded"
+      "Hash": "abd9318b4073223646c0f9d3ed641904"
     },
     "nloptr": {
       "Package": "nloptr",
@@ -2149,18 +2149,21 @@
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.5.0",
+      "Version": "0.6.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
         "checkmate",
+        "cli",
         "grDevices",
         "lifecycle",
         "methods",
-        "rlang"
+        "rlang",
+        "stats",
+        "utils"
       ],
-      "Hash": "b10128cf6d4ac18bb77463f4958ff29d"
+      "Hash": "c8382e22ce5b7e98c2d5311f3e5b0376"
     },
     "teal.data": {
       "Package": "teal.data",
