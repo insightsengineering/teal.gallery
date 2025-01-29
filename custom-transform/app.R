@@ -1,6 +1,6 @@
 library(teal)
 
-my_transformers <- list(
+my_transformators <- list(
   teal_transform_module(
     label = "Keep first n-observations from IRIS",
     ui = function(id) {
@@ -90,7 +90,6 @@ data <- within(data, {
   CO2[factors] <- lapply(CO2[factors], as.character)
 })
 join_keys(data) <- default_cdisc_join_keys[c("ADSL", "ADTTE")]
-teal.data::datanames(data) <- c("ADSL", "ADTTE", "iris", "CO2")
 
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 app_source <- "https://github.com/insightsengineering/teal.gallery/tree/main/basic-teal"
@@ -120,10 +119,16 @@ app <- init(
     teal_slice("ADSL", "AGE", selected = c(18L, 65L))
   ),
   modules = modules(
-    example_module("Module with transformations", transformers = my_transformers),
-    example_module("Module with only iris transformation", transformers = my_transformers[1]),
+    example_module("Module with transformations", transformators = my_transformators),
+    example_module("Module with only iris transformation", transformators = my_transformators[1]),
     example_module("Module with no transformations")
-  ),
-)
+  )
+) |>
+  modify_title(
+    title = "Safety Analysis Teal Demo App",
+    favicon = nest_logo
+  ) |>
+  modify_header(header) |>
+  modify_footer(footer)
 
 shinyApp(app$ui, app$server)

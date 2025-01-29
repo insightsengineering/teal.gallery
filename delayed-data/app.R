@@ -42,28 +42,6 @@ data <- teal_data_module(
   once = FALSE
 )
 
-filters <- teal_slices(
-  teal_slice(dataname = "mtcars", varname = "gear", multiple = FALSE),
-  teal_slice(dataname = "iris", varname = "Species"),
-  teal_slice(dataname = "iris", varname = "Sepal.Length"),
-  teal_slice(
-    dataname = "iris", varname = "Species3",
-    fixed = TRUE, anchored = FALSE
-  ),
-  teal_slice(
-    dataname = "iris", varname = "Species4",
-    fixed = FALSE, anchored = TRUE, multiple = TRUE
-  ),
-  teal_slice(
-    dataname = "iris", varname = "Species5",
-    fixed = TRUE, anchored = TRUE
-  ),
-  teal_slice(
-    dataname = "iris", id = "custom_expr", title = "Custom Expression",
-    expr = "Sepal.Width > 2.5 & Petal.Length > 1.5",
-  )
-)
-
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 app_source <- "https://github.com/insightsengineering/teal.gallery/tree/main/basic-teal"
 gh_issues_page <- "https://github.com/insightsengineering/teal.gallery/issues"
@@ -87,13 +65,15 @@ footer <- tags$p(
 
 app <- init(
   data = data,
-  filter = filters,
   modules = modules(
     example_module()
-  ),
-  title = build_app_title("Delayed Data Teal App", nest_logo),
-  header = header,
-  footer = footer
-)
+  )
+) |>
+  modify_title(
+    title = "Safety Analysis Teal Demo App",
+    favicon = nest_logo
+  ) |>
+  modify_header(header) |>
+  modify_footer(footer)
 
 shinyApp(app$ui, app$server)
