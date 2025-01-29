@@ -38,7 +38,7 @@ jobs:
     name: Publish 🗞
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/insightsengineering/rstudio:2024.03.05
+      image: ghcr.io/insightsengineering/rstudio:2024.10.15
     if: >
       !contains(github.event.commits[0].message, '[skip deploy]')
     strategy:
@@ -148,7 +148,7 @@ jobs:
           lockfile <- renv::lockfile_read()
           pkg_name_structure <- ifelse("${{ matrix.channel }}" == "stable", "%s/%s@*release", "%s/%s")
           unreleased_packages <- c(
-            "osprey", "hermes", "goshawk", "teal.osprey",
+            "osprey", "hermes", "goshawk", "teal.osprey", "teal.logger",
             "teal.modules.hermes", "teal.goshawk", "nestcolor"
           )
           for (package in lockfile$Packages) {

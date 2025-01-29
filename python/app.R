@@ -25,20 +25,20 @@ data <- teal_data_module(
           teal_data(),
           "
             library(reticulate)
-            python_dependencies <- c(\"pip\", \"numpy\", \"pandas\") # @linksto py_dict
-            virtualenv_dir <- Sys.getenv(\"VIRTUALENV_NAME\", \"example_env_name\") # @linksto py_dict
-            python_path <- Sys.getenv(\"PYTHON_PATH\") # @linksto py_dict
-            if (python_path == \"\") python_path <- NULL
+            .python_dependencies <- c(\"pip\", \"numpy\", \"pandas\") # @linksto .py_dict
+            .virtualenv_dir <- Sys.getenv(\"VIRTUALENV_NAME\", \"example_env_name\") # @linksto .py_dict
+            .python_path <- Sys.getenv(\"PYTHON_PATH\") # @linksto .py_dict
+            if (.python_path == \"\") .python_path <- NULL
             reticulate::virtualenv_create(
-              envname = virtualenv_dir, python = python_path
-            ) # @linksto py_dict
+              envname = .virtualenv_dir, python = .python_path
+            ) # @linksto .py_dict
             reticulate::virtualenv_install(
-              virtualenv_dir,
-              packages = python_dependencies,
+              .virtualenv_dir,
+              packages = .python_dependencies,
               ignore_installed = TRUE
-            ) # @linksto py_dict
-            reticulate::use_virtualenv(virtualenv_dir, required = TRUE) # @linksto py_dict
-            iris_raw <- cbind(id = seq_len(nrow(iris)), iris) # @linksto py_dict
+            ) # @linksto .py_dict
+            reticulate::use_virtualenv(.virtualenv_dir, required = TRUE) # @linksto .py_dict
+            iris_raw <- cbind(id = seq_len(nrow(iris)), iris) # @linksto .py_dict
           "
         )
 
@@ -47,35 +47,34 @@ data <- teal_data_module(
           data,
           {
             # python code needs to be un-indented
-            python_code <- "
-import pandas as pd
-data = r.iris_raw
-def svd_whiten(dat):
-  import numpy as np
-  X = np.matrix(dat)
-  U, s, Vt = np.linalg.svd(X, full_matrices=False)
-  X_white = np.dot(U, Vt)
-  return X_white
+            .python_code <- "
+              import pandas as pd
+              data = r.iris_raw
+              def svd_whiten(dat):
+                import numpy as np
+                X = np.matrix(dat)
+                U, s, Vt = np.linalg.svd(X, full_matrices=False)
+                X_white = np.dot(U, Vt)
+                return X_white
 
-data_columns = data.columns
-global numeric_cols_ix
-global numeric_cols
-numeric_cols_ix = list(range(5))[1:]
-numeric_cols = [x for i,x in enumerate(data_columns) if i in numeric_cols_ix]
-svd_res = svd_whiten(data.iloc[:, numeric_cols_ix])
-data_new = pd.concat([data, pd.DataFrame(svd_res)], axis = 1)
-data_new.columns = list(data_columns) + [i + '.whiten' for i in numeric_cols]
-data_new = data_new.round(10)
-data_new
+              data_columns = data.columns
+              global numeric_cols_ix
+              global numeric_cols
+              numeric_cols_ix = list(range(5))[1:]
+              numeric_cols = [x for i,x in enumerate(data_columns) if i in numeric_cols_ix]
+              svd_res = svd_whiten(data.iloc[:, numeric_cols_ix])
+              data_new = pd.concat([data, pd.DataFrame(svd_res)], axis = 1)
+              data_new.columns = list(data_columns) + [i + '.whiten' for i in numeric_cols]
+              data_new = data_new.round(10)
+              data_new
             "
             withr::with_options(
               list(reticulate.engine.environment = environment()),
-              py_dict <- py_run_string(python_code)
+              .py_dict <- py_run_string(.python_code)
             )
-            IRIS <- py_dict$data_new
+            IRIS <- .py_dict$data_new
           }
         )
-        datanames(data) <- c("IRIS")
         data
       })
     })
@@ -106,9 +105,6 @@ footer <- tags$p(
 
 app <- teal::init(
   data = data,
-  title = build_app_title("Python Dataset Teal Demo App", nest_logo),
-  header = header,
-  footer = footer,
   modules = modules(
     tm_data_table("Data Table"),
     tm_variable_browser("Variable Browser"),
@@ -156,6 +152,12 @@ app <- teal::init(
       )
     )
   )
-)
+) |>
+  modify_title(
+    title = "Python Dataset Teal Demo App",
+    favicon = nest_logo
+  ) |>
+  modify_header(header) |>
+  modify_footer(footer)
 
 shinyApp(app$ui, app$server)
