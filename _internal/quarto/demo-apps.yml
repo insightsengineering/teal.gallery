@@ -2,6 +2,7 @@
   deployment_server: https://genentech.shinyapps.io/
   apps:
     - title: basic-teal
+    - title: teal-as-shiny-module
     - title: delayed-data
     - title: custom-transform
     - title: exploratory
