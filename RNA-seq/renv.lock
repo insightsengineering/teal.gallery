@@ -4,23 +4,23 @@
     "Repositories": [
       {
         "Name": "BioCsoft",
-        "URL": "https://bioconductor.org/packages/3.19/bioc"
+        "URL": "https://bioconductor.org/packages/3.20/bioc"
       },
       {
         "Name": "BioCann",
-        "URL": "https://bioconductor.org/packages/3.19/data/annotation"
+        "URL": "https://bioconductor.org/packages/3.20/data/annotation"
       },
       {
         "Name": "BioCexp",
-        "URL": "https://bioconductor.org/packages/3.19/data/experiment"
+        "URL": "https://bioconductor.org/packages/3.20/data/experiment"
       },
       {
         "Name": "BioCworkflows",
-        "URL": "https://bioconductor.org/packages/3.19/workflows"
+        "URL": "https://bioconductor.org/packages/3.20/workflows"
       },
       {
         "Name": "BioCbooks",
-        "URL": "https://bioconductor.org/packages/3.19/books"
+        "URL": "https://bioconductor.org/packages/3.20/books"
       },
       {
         "Name": "CRAN",
@@ -29,14 +29,14 @@
     ]
   },
   "Bioconductor": {
-    "Version": "3.19"
+    "Version": "3.20"
   },
   "Packages": {
     "AnnotationDbi": {
       "Package": "AnnotationDbi",
-      "Version": "1.66.0",
+      "Version": "1.68.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "Biobase",
         "BiocGenerics",
@@ -50,7 +50,7 @@
         "stats",
         "stats4"
       ],
-      "Hash": "b7df9c597fb5533fc8248d73b8c703ac"
+      "Hash": "62ed471119c2fe7898c1feaa05d397dc"
     },
     "BH": {
       "Package": "BH",
@@ -61,34 +61,34 @@
     },
     "Biobase": {
       "Package": "Biobase",
-      "Version": "2.64.0",
+      "Version": "2.66.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "BiocGenerics",
         "R",
         "methods",
         "utils"
       ],
-      "Hash": "9bc4cabd3bfda461409172213d932813"
+      "Hash": "f6e716bdfed8acfd2d4137be7d4fa8f9"
     },
     "BiocBaseUtils": {
       "Package": "BiocBaseUtils",
-      "Version": "1.6.0",
+      "Version": "1.8.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "R",
         "methods",
         "utils"
       ],
-      "Hash": "7fcaec00d8feb85919c022d9e4237133"
+      "Hash": "5c921c7acec40b69b1d5a7ac9040f3ac"
     },
     "BiocFileCache": {
       "Package": "BiocFileCache",
-      "Version": "2.12.0",
+      "Version": "2.14.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "DBI",
         "R",
@@ -102,13 +102,13 @@
         "stats",
         "utils"
       ],
-      "Hash": "9c3414bcfae204d56080dd0f0a220136"
+      "Hash": "41f12a5ef4f6ea211228b1f84a72bba3"
     },
     "BiocGenerics": {
       "Package": "BiocGenerics",
-      "Version": "0.50.0",
+      "Version": "0.52.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "R",
         "graphics",
@@ -116,7 +116,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "ef32d07aafdd12f24c5827374ae3590d"
+      "Hash": "3a1a587cfadcfcbf849dfc605cbbb965"
     },
     "BiocManager": {
       "Package": "BiocManager",
@@ -130,9 +130,9 @@
     },
     "BiocParallel": {
       "Package": "BiocParallel",
-      "Version": "1.38.0",
+      "Version": "1.40.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "BH",
         "R",
@@ -145,23 +145,23 @@
         "stats",
         "utils"
       ],
-      "Hash": "7b6e79f86e3d1c23f62c5e2052e848d4"
+      "Hash": "632a54622da61a83153e37de1b49554c"
     },
     "BiocVersion": {
       "Package": "BiocVersion",
-      "Version": "3.19.1",
+      "Version": "3.20.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "R"
       ],
-      "Hash": "b892e27fc9659a4c8f8787d34c37b8b2"
+      "Hash": "3c70eb3b78929c0ee452350cea8432a5"
     },
     "Biostrings": {
       "Package": "Biostrings",
-      "Version": "2.72.1",
+      "Version": "2.74.1",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "BiocGenerics",
         "GenomeInfoDb",
@@ -175,13 +175,13 @@
         "stats",
         "utils"
       ],
-      "Hash": "886ff0ed958d6f839ed2e0d01f6853b3"
+      "Hash": "0b723193ff7df55bae3b547d58329026"
     },
     "ComplexHeatmap": {
       "Package": "ComplexHeatmap",
-      "Version": "2.20.0",
+      "Version": "2.22.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "GetoptLong",
         "GlobalOptions",
@@ -203,7 +203,7 @@
         "png",
         "stats"
       ],
-      "Hash": "0308920b8b9315ccfe69bccb66c15485"
+      "Hash": "47f09f2f003b80498c2d30f1d6380f51"
     },
     "DBI": {
       "Package": "DBI",
@@ -218,9 +218,9 @@
     },
     "DESeq2": {
       "Package": "DESeq2",
-      "Version": "1.44.0",
+      "Version": "1.46.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "Biobase",
         "BiocGenerics",
@@ -238,7 +238,7 @@
         "methods",
         "stats4"
       ],
-      "Hash": "a90e0e67215ba95ccb29e93b169caaa4"
+      "Hash": "409e2c98f7a204782765767f1fb6b53d"
     },
     "DT": {
       "Package": "DT",
@@ -259,9 +259,9 @@
     },
     "DelayedArray": {
       "Package": "DelayedArray",
-      "Version": "0.30.1",
+      "Version": "0.32.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "BiocGenerics",
         "IRanges",
@@ -275,7 +275,7 @@
         "stats",
         "stats4"
       ],
-      "Hash": "395472c65cd9d606a1a345687102f299"
+      "Hash": "c4f42dda8d17648382f46b5d0e8a962a"
     },
     "Deriv": {
       "Package": "Deriv",
@@ -313,9 +313,9 @@
     },
     "GenomeInfoDb": {
       "Package": "GenomeInfoDb",
-      "Version": "1.40.1",
+      "Version": "1.42.1",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "BiocGenerics",
         "GenomeInfoDbData",
@@ -328,7 +328,7 @@
         "stats4",
         "utils"
       ],
-      "Hash": "171e9becd9bb948b9e64eb3759208c94"
+      "Hash": "65f7ac310373771d6f956fc0e813a215"
     },
     "GenomeInfoDbData": {
       "Package": "GenomeInfoDbData",
@@ -341,9 +341,9 @@
     },
     "GenomicRanges": {
       "Package": "GenomicRanges",
-      "Version": "1.56.2",
+      "Version": "1.58.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "BiocGenerics",
         "GenomeInfoDb",
@@ -356,7 +356,7 @@
         "stats4",
         "utils"
       ],
-      "Hash": "fecd026026c4d45e3b57eee97bbbba92"
+      "Hash": "41a8ef4550a7da29749cb739b8e701be"
     },
     "GetoptLong": {
       "Package": "GetoptLong",
@@ -386,9 +386,9 @@
     },
     "IRanges": {
       "Package": "IRanges",
-      "Version": "2.38.1",
+      "Version": "2.40.1",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "BiocGenerics",
         "R",
@@ -398,13 +398,13 @@
         "stats4",
         "utils"
       ],
-      "Hash": "066f3c5d6b022ed62c91ce49e4d8f619"
+      "Hash": "54ccfdba2fcf18a43d2836b70625b191"
     },
     "KEGGREST": {
       "Package": "KEGGREST",
-      "Version": "1.44.1",
+      "Version": "1.46.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "Biostrings",
         "R",
@@ -412,7 +412,7 @@
         "methods",
         "png"
       ],
-      "Hash": "017f19c09477c0473073518db9076ac1"
+      "Hash": "55259706a0783463e937c71b998407b7"
     },
     "MASS": {
       "Package": "MASS",
@@ -448,14 +448,14 @@
     },
     "MatrixGenerics": {
       "Package": "MatrixGenerics",
-      "Version": "1.16.0",
+      "Version": "1.18.1",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "matrixStats",
         "methods"
       ],
-      "Hash": "152dbbcde6a9a7c7f3beef79b68cd76a"
+      "Hash": "7e706332a2236f0dee4b610ccabaf20b"
     },
     "MatrixModels": {
       "Package": "MatrixModels",
@@ -472,9 +472,9 @@
     },
     "MultiAssayExperiment": {
       "Package": "MultiAssayExperiment",
-      "Version": "1.30.3",
+      "Version": "1.32.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "Biobase",
         "BiocBaseUtils",
@@ -489,7 +489,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "cd68fb46e774cb0924d7af0ce8c69409"
+      "Hash": "d98a1f59d0158871ec43858e380fc829"
     },
     "R.cache": {
       "Package": "R.cache",
@@ -638,9 +638,9 @@
     },
     "S4Arrays": {
       "Package": "S4Arrays",
-      "Version": "1.4.1",
+      "Version": "1.6.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "BiocGenerics",
         "IRanges",
@@ -652,13 +652,13 @@
         "methods",
         "stats"
       ],
-      "Hash": "deeed4802c5132e88f24a432a1caf5e0"
+      "Hash": "53b78397b6a584e74ded9d2e369b0eec"
     },
     "S4Vectors": {
       "Package": "S4Vectors",
-      "Version": "0.42.1",
+      "Version": "0.44.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "BiocGenerics",
         "R",
@@ -667,13 +667,13 @@
         "stats4",
         "utils"
       ],
-      "Hash": "86398fc7c5f6be4ba29fe23ed08c2da6"
+      "Hash": "20149fcead4dd6f9da3605f98b5220fc"
     },
     "SparseArray": {
       "Package": "SparseArray",
-      "Version": "1.4.8",
+      "Version": "1.6.1",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "BiocGenerics",
         "IRanges",
@@ -688,7 +688,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "97f70ff11c14edd379ee2429228cbb60"
+      "Hash": "380586b6a1817603f12fdcff693e8727"
     },
     "SparseM": {
       "Package": "SparseM",
@@ -706,9 +706,9 @@
     },
     "SummarizedExperiment": {
       "Package": "SummarizedExperiment",
-      "Version": "1.34.0",
+      "Version": "1.36.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "Biobase",
         "BiocGenerics",
@@ -726,7 +726,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "2f6c8cc972ed6aee07c96e3dff729d15"
+      "Hash": "5acddb171281d0859c6610d374eacbee"
     },
     "TH.data": {
       "Package": "TH.data",
@@ -742,9 +742,9 @@
     },
     "UCSC.utils": {
       "Package": "UCSC.utils",
-      "Version": "1.0.0",
+      "Version": "1.2.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "S4Vectors",
         "httr",
@@ -752,13 +752,13 @@
         "methods",
         "stats"
       ],
-      "Hash": "83d45b690bffd09d1980c224ef329f5b"
+      "Hash": "499f71d1787a61fe69c8805798650777"
     },
     "XVector": {
       "Package": "XVector",
-      "Version": "0.44.0",
+      "Version": "0.46.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "BiocGenerics",
         "IRanges",
@@ -769,7 +769,7 @@
         "utils",
         "zlibbioc"
       ],
-      "Hash": "4245b9938ac74c0dbddbebbec6036ab4"
+      "Hash": "fc9af0d482076d1eace4405c44cfecfb"
     },
     "abind": {
       "Package": "abind",
@@ -825,12 +825,13 @@
     },
     "biomaRt": {
       "Package": "biomaRt",
-      "Version": "2.60.1",
+      "Version": "2.62.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "AnnotationDbi",
         "BiocFileCache",
+        "curl",
         "digest",
         "httr2",
         "methods",
@@ -840,7 +841,7 @@
         "utils",
         "xml2"
       ],
-      "Hash": "e53d495b9e6ecd5394acad1d53c3fa22"
+      "Hash": "a9bd61810135394e26cfabbfaea65a9d"
     },
     "bit": {
       "Package": "bit",
@@ -1285,12 +1286,11 @@
     },
     "edgeR": {
       "Package": "edgeR",
-      "Version": "4.2.2",
+      "Version": "4.4.1",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "R",
-        "Rcpp",
         "graphics",
         "limma",
         "locfit",
@@ -1298,7 +1298,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "4c31c0395110252e4ec7cf4ee9cbebb6"
+      "Hash": "fee28529f0a4225ede46e0297d16ed0d"
     },
     "emmeans": {
       "Package": "emmeans",
@@ -1772,9 +1772,9 @@
     },
     "hermes": {
       "Package": "hermes",
-      "Version": "1.8.1",
+      "Version": "1.10.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "Biobase",
         "BiocGenerics",
@@ -1810,7 +1810,7 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "4c249f4921a5a5ebcf51b7f2f1cc54f4"
+      "Hash": "ddf20ae77c007d8c871811d7e1f0dcef"
     },
     "highr": {
       "Package": "highr",
@@ -1902,7 +1902,7 @@
       "Package": "httr2",
       "Version": "1.1.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "BioC.CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -2050,9 +2050,9 @@
     },
     "limma": {
       "Package": "limma",
-      "Version": "3.60.6",
+      "Version": "3.62.2",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
+      "Repository": "Bioconductor 3.20",
       "Requirements": [
         "R",
         "grDevices",
@@ -2062,7 +2062,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "0eccf07d5db97b84a912922e1d29e130"
+      "Hash": "89fb0523764ccd8a5b43072c437efa8f"
     },
     "lme4": {
       "Package": "lme4",
@@ -3166,14 +3166,9 @@
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.5.0.9022",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRepo": "teal.code",
-      "RemoteRef": "main",
-      "RemoteSha": "0eeaf0abb3699292a11b14404bcc56c1048bf59c",
+      "Version": "0.6.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "checkmate",
@@ -3185,7 +3180,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "75f680e7397bdfc361533fb49a060db7"
+      "Hash": "c8382e22ce5b7e98c2d5311f3e5b0376"
     },
     "teal.data": {
       "Package": "teal.data",
@@ -3233,14 +3228,13 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9070",
+      "Version": "0.3.0.9074",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
-      "RemoteRef": "main",
-      "RemoteSha": "77b181330c3acbf726b3cc4b4acd88558c04e646",
+      "RemoteUsername": "insightsengineering",
+      "RemoteSha": "bfe87cce6173b8656d0c64b063ff1a80b4e70512",
       "Requirements": [
         "DT",
         "MASS",
@@ -3287,7 +3281,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "57c4df03c41ef8f0f43eacaca447c337"
+      "Hash": "f6783b3d714e4435b047e5aa22c49583"
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
@@ -3329,14 +3323,9 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.3.1.9024",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRepo": "teal.reporter",
-      "RemoteRef": "main",
-      "RemoteSha": "c678ca2d105a804c376c1e5e0b7b00e62918ea19",
+      "Version": "0.4.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
       "Requirements": [
         "R6",
         "bslib",
@@ -3356,7 +3345,7 @@
         "yaml",
         "zip"
       ],
-      "Hash": "8f29964d7a6dc41de28b3f29347a39ee"
+      "Hash": "74947b260483c3dabe881f41827e283b"
     },
     "teal.slice": {
       "Package": "teal.slice",
@@ -3710,10 +3699,10 @@
     },
     "zlibbioc": {
       "Package": "zlibbioc",
-      "Version": "1.50.0",
+      "Version": "1.52.0",
       "Source": "Bioconductor",
-      "Repository": "Bioconductor 3.19",
-      "Hash": "3db02e3c460e1c852365df117a2b441b"
+      "Repository": "Bioconductor 3.20",
+      "Hash": "89bfb698d6eb2fdf03c923ffd32e0c3f"
     },
     "zoo": {
       "Package": "zoo",
