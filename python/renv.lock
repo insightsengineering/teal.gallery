@@ -2167,7 +2167,7 @@
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.6.0",
+      "Version": "0.7.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2180,7 +2180,7 @@
         "teal.code",
         "utils"
       ],
-      "Hash": "22dd132d65fb21b8efa739855cb632a8"
+      "Hash": "a16eca5cc5e4fa3187a9d09b690ffe4e"
     },
     "teal.logger": {
       "Package": "teal.logger",
