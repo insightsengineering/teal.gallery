@@ -3601,10 +3601,10 @@
     },
     "multcomp": {
       "Package": "multcomp",
-      "Version": "1.4-26",
+      "Version": "1.4-28",
       "Source": "Repository",
       "Title": "Simultaneous Inference in General Parametric Models",
-      "Date": "2024-07-18",
+      "Date": "2025-01-29",
       "Authors@R": "c(person(\"Torsten\", \"Hothorn\", role = c(\"aut\", \"cre\"),  email = \"Torsten.Hothorn@R-project.org\", comment = c(ORCID = \"0000-0001-8301-0471\")),  person(\"Frank\", \"Bretz\", role = \"aut\"),  person(\"Peter\", \"Westfall\", role = \"aut\"), person(\"Richard M.\", \"Heiberger\", role = \"ctb\"), person(\"Andre\", \"Schuetzenmeister\", role = \"ctb\"), person(\"Susan\", \"Scheibe\", role = \"ctb\"))",
       "Description": "Simultaneous tests and confidence intervals for general linear hypotheses in parametric models, including  linear, generalized linear, linear mixed effects, and survival models. The package includes demos reproducing analyzes presented in the book \"Multiple Comparisons Using R\" (Bretz, Hothorn,  Westfall, 2010, CRC Press).",
       "Depends": [
@@ -3632,7 +3632,12 @@
         "ISwR",
         "tram (>= 0.2-5)",
         "fixest (>= 0.10)",
-        "glmmTMB"
+        "glmmTMB",
+        "DoseFinding",
+        "HH",
+        "asd",
+        "gsDesign",
+        "lattice"
       ],
       "URL": "http://multcomp.R-forge.R-project.org, https://www.routledge.com/Multiple-Comparisons-Using-R/Bretz-Hothorn-Westfall/p/book/9781584885740",
       "LazyData": "yes",
@@ -3640,8 +3645,7 @@
       "NeedsCompilation": "no",
       "Author": "Torsten Hothorn [aut, cre] (<https://orcid.org/0000-0001-8301-0471>), Frank Bretz [aut], Peter Westfall [aut], Richard M. Heiberger [ctb], Andre Schuetzenmeister [ctb], Susan Scheibe [ctb]",
       "Maintainer": "Torsten Hothorn <Torsten.Hothorn@R-project.org>",
-      "Repository": "RSPM",
-      "Encoding": "UTF-8"
+      "Repository": "BioC.CRAN"
     },
     "multcompView": {
       "Package": "multcompView",
@@ -5875,10 +5879,10 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.4.0.9000",
+      "Version": "0.4.0.9001",
       "Source": "GitHub",
       "Title": "Reporting Tools for 'shiny' Modules",
-      "Date": "2025-01-24",
+      "Date": "2025-01-29",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0005-1258-4757\")), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for the generation of 'rmarkdown' reports, supporting reproducible research and analysis.",
       "License": "Apache License 2.0",
@@ -5930,7 +5934,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "a953ab3171b4122acb82f7daac74486a36d70a51"
+      "RemoteSha": "e9f9689f04180401ba93d4d35ba56f763aa0269d"
     },
     "teal.slice": {
       "Package": "teal.slice",
@@ -6053,7 +6057,7 @@
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.2.9027",
+      "Version": "0.4.2.9028",
       "Source": "GitHub",
       "Title": "'shiny' Widgets for 'teal' Applications",
       "Date": "2025-01-29",
@@ -6108,7 +6112,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "1e797fba9421d7a210aad4c4f4150774de3de03a"
+      "RemoteSha": "ee998d68044602e308bffee9c879cdbfd61f3ceb"
     },
     "tern": {
       "Package": "tern",
