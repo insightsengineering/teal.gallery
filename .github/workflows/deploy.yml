@@ -11,6 +11,7 @@ on:
       - RNA-seq/**
       - basic-teal/**
       - delayed-data/**
+      - teal-as-shiny-module/**
       - custom-transform/**
       - efficacy/**
       - exploratory/**
