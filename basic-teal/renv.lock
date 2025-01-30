@@ -3662,11 +3662,11 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.5.1.9024",
+      "Version": "0.5.1.9025",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Filter Module for 'teal' Applications",
-      "Date": "2025-01-23",
+      "Date": "2025-01-29",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"Andrew\", \"Bates\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Data filtering module for 'teal' applications.  Allows for interactive filtering of data stored in 'data.frame' and 'MultiAssayExperiment' objects. Also displays filtered and unfiltered observation counts.",
       "License": "Apache License 2.0",
@@ -3692,7 +3692,7 @@
         "shinycssloaders (>= 1.0.0)",
         "shinyjs",
         "shinyWidgets (>= 0.6.2)",
-        "teal.data (>= 0.4.0)",
+        "teal.data (>= 0.7.0)",
         "teal.logger (>= 0.3.1)",
         "teal.widgets (>= 0.4.2)",
         "utils"
@@ -3721,11 +3721,11 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "37b3c675f629846b8890409b65aeab347e1fe1c7"
+      "RemoteSha": "01aebd711cd4ba574820fcfb2af0a65b0bb6c246"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.2.9028",
+      "Version": "0.4.2.9029",
       "Source": "GitHub",
       "Title": "'shiny' Widgets for 'teal' Applications",
       "Date": "2025-01-29",
@@ -3780,7 +3780,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "ee998d68044602e308bffee9c879cdbfd61f3ceb"
+      "RemoteSha": "da411da6f6b658dd090506c2e57e58746b9cb2bc"
     },
     "textshaping": {
       "Package": "textshaping",
