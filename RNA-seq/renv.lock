@@ -313,7 +313,7 @@
     },
     "GenomeInfoDb": {
       "Package": "GenomeInfoDb",
-      "Version": "1.42.1",
+      "Version": "1.42.3",
       "Source": "Bioconductor",
       "Repository": "Bioconductor 3.20",
       "Requirements": [
@@ -328,7 +328,7 @@
         "stats4",
         "utils"
       ],
-      "Hash": "65f7ac310373771d6f956fc0e813a215"
+      "Hash": "0986fd4a99387bd391117f5962282c1f"
     },
     "GenomeInfoDbData": {
       "Package": "GenomeInfoDbData",
@@ -1286,7 +1286,7 @@
     },
     "edgeR": {
       "Package": "edgeR",
-      "Version": "4.4.1",
+      "Version": "4.4.2",
       "Source": "Bioconductor",
       "Repository": "Bioconductor 3.20",
       "Requirements": [
@@ -1298,7 +1298,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "fee28529f0a4225ede46e0297d16ed0d"
+      "Hash": "3e6af1be66c99b9ff32523428da6926c"
     },
     "emmeans": {
       "Package": "emmeans",
@@ -2245,7 +2245,7 @@
     },
     "multcomp": {
       "Package": "multcomp",
-      "Version": "1.4-26",
+      "Version": "1.4-28",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2257,7 +2257,7 @@
         "stats",
         "survival"
       ],
-      "Hash": "ec6f951a557132215fab91912acdd9ef"
+      "Hash": "4a05342d3cdef9ba4dcdd09d6cc31343"
     },
     "multcompView": {
       "Package": "multcompView",
@@ -2575,7 +2575,7 @@
     },
     "quantreg": {
       "Package": "quantreg",
-      "Version": "5.99.1",
+      "Version": "6.00",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -2589,7 +2589,7 @@
         "stats",
         "survival"
       ],
-      "Hash": "c48844cd7961de506a1b4d22b2e082c7"
+      "Hash": "2a91b35971a5eb01e2d0c01664755495"
     },
     "ragg": {
       "Package": "ragg",
@@ -2664,13 +2664,13 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.0.11",
+      "Version": "1.1.0",
       "Source": "Repository",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Requirements": [
         "utils"
       ],
-      "Hash": "47623f66b4e80b3b0587bc5d7b309888"
+      "Hash": "ac77c97ee12af521e554e9b015b80861"
     },
     "rjson": {
       "Package": "rjson",
@@ -3132,14 +3132,14 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9115",
+      "Version": "0.15.2.9117",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "1beb65ae49430714c573fb4a732979391c6edc68",
+      "RemoteSha": "55b3a38995e49884edcd3acfdad3e85734176a4d",
       "Requirements": [
         "R",
         "checkmate",
@@ -3162,7 +3162,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "176f4425f5b32e0071e690843858d867"
+      "Hash": "7afaa78f69e566fc1e33806ee6d6107c"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -3228,14 +3228,14 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9074",
+      "Version": "0.3.0.9075",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "bfe87cce6173b8656d0c64b063ff1a80b4e70512",
+      "RemoteSha": "ee725dd18366b5a785e83ed23f7bfe3ddfe5aac8",
       "Requirements": [
         "DT",
         "MASS",
@@ -3282,7 +3282,7 @@
         "tools",
         "utils"
       ],
-      "Hash": "98ed91644cc5101ac02cdb43c87c03f6"
+      "Hash": "35583472e1a5ceb390c73b2ec0f02157"
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
@@ -3385,14 +3385,14 @@
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.5.0.9025",
+      "Version": "0.5.0.9026",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.transform",
       "RemoteRef": "main",
-      "RemoteSha": "ce7e1f6b7fe5ce25b5e2ea0d2adb034f33992d50",
+      "RemoteSha": "c752f56887bba9cf1b4e514ff84ae767adec96d2",
       "Requirements": [
         "R",
         "checkmate",
@@ -3411,18 +3411,18 @@
         "tidyr",
         "tidyselect"
       ],
-      "Hash": "c40ce75e335b0fd9b726957001ea5a2d"
+      "Hash": "45948b27ba1eab88d3b8729b63a77129"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.2.9029",
+      "Version": "0.4.2.9030",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "da411da6f6b658dd090506c2e57e58746b9cb2bc",
+      "RemoteSha": "66d738d4363634d93dfbbb102c8b074e521e08ba",
       "Requirements": [
         "R",
         "bslib",
@@ -3439,7 +3439,7 @@
         "shinyjs",
         "styler"
       ],
-      "Hash": "43ac45bde549b36780de58eb84447c6f"
+      "Hash": "b4fed5dd6f159eace89e522cc6153bcc"
     },
     "tern": {
       "Package": "tern",
