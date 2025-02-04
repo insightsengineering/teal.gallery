@@ -5572,10 +5572,10 @@
     },
     "locfit": {
       "Package": "locfit",
-      "Version": "1.5-9.10",
+      "Version": "1.5-9.11",
       "Source": "Repository",
       "Title": "Local Regression, Likelihood and Density Estimation",
-      "Date": "2024-06-24",
+      "Date": "2025-01-27",
       "Authors@R": "c(person(\"Catherine\", \"Loader\", role = \"aut\"), person(\"Jiayang\", \"Sun\", role = \"ctb\"), person(\"Lucent Technologies\", role = \"cph\"), person(\"Andy\", \"Liaw\", role = \"cre\",  email=\"andy_liaw@merck.com\"))",
       "Author": "Catherine Loader [aut], Jiayang Sun [ctb], Lucent Technologies [cph], Andy Liaw [cre]",
       "Maintainer": "Andy Liaw <andy_liaw@merck.com>",
@@ -5593,7 +5593,7 @@
       "License": "GPL (>= 2)",
       "SystemRequirements": "USE_C17",
       "NeedsCompilation": "yes",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Encoding": "UTF-8"
     },
     "logger": {
@@ -6294,7 +6294,7 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.3.1",
+      "Version": "2.3.2",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Toolkit for Encryption, Signatures and Certificates Based on OpenSSL",
@@ -6323,7 +6323,7 @@
       "NeedsCompilation": "yes",
       "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>), Oliver Keyes [ctb]",
       "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
-      "Repository": "RSPM"
+      "Repository": "CRAN"
     },
     "pbkrtest": {
       "Package": "pbkrtest",
@@ -8361,7 +8361,7 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9078",
+      "Version": "0.3.0.9079",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "General Modules for 'teal' Applications",
@@ -8412,7 +8412,7 @@
         "teal.data (>= 0.7.0)",
         "teal.logger (>= 0.3.1)",
         "teal.reporter (>= 0.4.0)",
-        "teal.widgets (>= 0.4.0)",
+        "teal.widgets (>= 0.4.3)",
         "tern (>= 0.9.5)",
         "tibble (>= 2.0.0)",
         "tidyr (>= 0.8.3)",
@@ -8447,7 +8447,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "3fbc178210727a77a098e5422ad4db1070d16b06",
+      "RemoteSha": "69dc39e9cc5289c60e94cefd76db5e3d40fa1429",
       "Remotes": "insightsengineering/teal, insightsengineering/teal.transform"
     },
     "teal.modules.hermes": {
