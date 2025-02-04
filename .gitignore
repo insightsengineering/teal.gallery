@@ -59,3 +59,9 @@ rsconnect/
 */README.html
 */shiny_bookmarks
 teal_app.lock
+
+# Node modules
+*/tests/node_modules
+
+# Teal lock file
+*/teal_app.lock
