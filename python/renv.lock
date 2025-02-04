@@ -3947,7 +3947,7 @@
       "NeedsCompilation": "yes",
       "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>), Oliver Keyes [ctb]",
       "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
-      "Repository": "BioC.CRAN"
+      "Repository": "CRAN"
     },
     "pbkrtest": {
       "Package": "pbkrtest",
