@@ -7105,7 +7105,7 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9078",
+      "Version": "0.3.0.9079",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "General Modules for 'teal' Applications",
@@ -7156,7 +7156,7 @@
         "teal.data (>= 0.7.0)",
         "teal.logger (>= 0.3.1)",
         "teal.reporter (>= 0.4.0)",
-        "teal.widgets (>= 0.4.0)",
+        "teal.widgets (>= 0.4.3)",
         "tern (>= 0.9.5)",
         "tibble (>= 2.0.0)",
         "tidyr (>= 0.8.3)",
@@ -7191,7 +7191,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "3fbc178210727a77a098e5422ad4db1070d16b06",
+      "RemoteSha": "69dc39e9cc5289c60e94cefd76db5e3d40fa1429",
       "Remotes": "insightsengineering/teal, insightsengineering/teal.transform"
     },
     "teal.reporter": {
