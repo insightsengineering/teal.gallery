@@ -50,6 +50,7 @@ jobs:
           - basic-teal
           - delayed-data
           - custom-transform
+          - teal-as-shiny-module
           - efficacy
           - exploratory
           - longitudinal
