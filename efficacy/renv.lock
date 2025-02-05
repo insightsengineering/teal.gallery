@@ -6807,7 +6807,7 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9123",
+      "Version": "0.15.2.9124",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Exploratory Web Apps for Analyzing Clinical Trials Data",
@@ -6821,7 +6821,7 @@
         "R (>= 4.1)",
         "shiny (>= 1.8.1)",
         "teal.data (>= 0.7.0)",
-        "teal.slice (>= 0.5.1.9022)"
+        "teal.slice (>= 0.6.0)"
       ],
       "Imports": [
         "checkmate (>= 2.1.0)",
@@ -6875,16 +6875,15 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "546774c20d74638dc4cd550b35d2f0f8ad1978e7",
-      "Remotes": "insightsengineering/teal.slice"
+      "RemoteSha": "82db6d32911b90756924b550829c26eb687d42ae"
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.6.0.9001",
+      "Version": "0.6.0.9002",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Code Storage and Execution Class for 'teal' Applications",
-      "Date": "2025-01-30",
+      "Date": "2025-02-04",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", , \"nikolas.burkoff@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", , \"maciej.nasinski@contractors.roche.com\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", , \"konrad.pagacz@contractors.roche.com\", role = \"aut\"), person(\"Junlue\", \"Zhao\", , \"zhaoj88@gene.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Introduction of 'qenv' S4 class, that facilitates code execution and reproducibility in 'teal' applications.",
       "License": "Apache License 2.0",
@@ -6926,7 +6925,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
       "RemoteRef": "main",
-      "RemoteSha": "da5976a36fa0827a4e55efa6ad78c5aaa4d029c2"
+      "RemoteSha": "b336941dcc830a9b01fc8e206831cc4367599161"
     },
     "teal.data": {
       "Package": "teal.data",
@@ -7318,10 +7317,10 @@
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.5.0.9027",
+      "Version": "0.5.0.9028",
       "Source": "GitHub",
       "Title": "Functions for Extracting and Merging Data in the 'teal' Framework",
-      "Date": "2025-01-31",
+      "Date": "2025-02-04",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "A standardized user interface for column selection, that facilitates dataset merging in 'teal' framework.",
       "License": "Apache License 2.0",
@@ -7345,7 +7344,8 @@
         "teal.logger (>= 0.3.1)",
         "teal.widgets (>= 0.4.2)",
         "tidyr (>= 1.0.0)",
-        "tidyselect"
+        "tidyselect",
+        "utils"
       ],
       "Suggests": [
         "knitr (>= 1.42)",
@@ -7369,7 +7369,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.transform",
       "RemoteRef": "main",
-      "RemoteSha": "1d5d3aadfba53a7de30fd7c3048df58add9022d0"
+      "RemoteSha": "94fa57da962f6523d6bbaef175bb42c4e247a58f"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
