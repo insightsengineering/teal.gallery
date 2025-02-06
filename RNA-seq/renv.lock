@@ -3998,10 +3998,10 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.10.9000",
+      "Version": "0.5.10.9001",
       "Source": "GitHub",
       "Title": "ASCII Formatting for Values and Tables",
-      "Date": "2025-01-09",
+      "Date": "2025-02-05",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\"), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\"), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\"), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "We provide a framework for rendering complex tables to ASCII, and a set of formatters for transforming values or sets of values into ASCII-ready display strings.",
       "License": "Apache License 2.0",
@@ -4044,7 +4044,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "4c248a25db7ad73e98221029053d9e73498882db"
+      "RemoteSha": "ee566c9b53f010edae9d0d9a64af82b41cee7b66"
     },
     "fs": {
       "Package": "fs",
@@ -6867,11 +6867,11 @@
     },
     "random.cdisc.data": {
       "Package": "random.cdisc.data",
-      "Version": "0.3.16.9001",
+      "Version": "0.3.16.9002",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Create Random ADaM Datasets",
-      "Date": "2024-10-30",
+      "Date": "2025-02-05",
       "Authors@R": "c( person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Nick\", \"Paszty\", , \"npaszty@gene.com\", role = \"aut\"), person(\"Jana\", \"Stoilova\", , \"jana.stoilova@roche.com\", role = \"aut\"), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\")), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\"), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\"), person(\"Christopher\", \"DiPietrantonio\", role = \"aut\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "A set of functions to create random Analysis Data Model (ADaM) datasets and cached dataset.  ADaM dataset specifications are described by the Clinical Data Interchange Standards Consortium (CDISC) Analysis Data Model Team.",
       "License": "Apache License 2.0",
@@ -6916,7 +6916,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "random.cdisc.data",
       "RemoteRef": "main",
-      "RemoteSha": "a65bfbe3aea3884c7a0ddbc97479e7abcf6bc14f"
+      "RemoteSha": "68f78c830879eee881b60c0766941da9d6791e2c"
     },
     "rappdirs": {
       "Package": "rappdirs",
@@ -7260,10 +7260,10 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.11.9002",
+      "Version": "0.6.11.9003",
       "Source": "GitHub",
       "Title": "Reporting Tables",
-      "Date": "2025-01-27",
+      "Date": "2025-02-05",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"Original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Daniel\", \"Sabanés Bové\", , \"daniel.sabanes_bove@roche.com\", role = \"ctb\"), person(\"Maximilian\", \"Mordig\", , \"maximilian_oliver.mordig@roche.com\", role = \"ctb\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\"), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\"), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\"), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Reporting tables often have structure that goes beyond simple rectangular data. The 'rtables' package provides a framework for declaring complex multi-level tabulations and then applying them to data. This framework models both tabulation and the resulting tables as hierarchical, tree-like objects which support sibling sub-tables, arbitrary splitting or grouping of data in row and column dimensions, cells containing multiple values, and the concept of contextual summary computations. A convenient pipe-able interface is provided for declaring table layouts and the corresponding computations, and then applying them to data.",
       "License": "Apache License 2.0 | file LICENSE",
@@ -7311,7 +7311,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "f0073484212fb5978ffaef02e01993ac22b3ec77"
+      "RemoteSha": "4df56d13ab99939166f0e8b720ea6e99193f4207"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
@@ -8148,11 +8148,11 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.15.2.9123",
+      "Version": "0.15.2.9125",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Exploratory Web Apps for Analyzing Clinical Trials Data",
-      "Date": "2025-02-04",
+      "Date": "2025-02-05",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\"), person(\"Vedha\", \"Viyash\", , \"vedha.viyash@roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"Tadeusz\", \"Lewandowski\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")), person(\"Maximilian\", \"Mordig\", role = \"ctb\") )",
       "Description": "A 'shiny' based interactive exploration framework for analyzing clinical trials data. 'teal' currently provides a dynamic filtering facility and different data viewers. 'teal' 'shiny' applications are built using standard 'shiny' modules.",
       "License": "Apache License 2.0",
@@ -8162,7 +8162,7 @@
         "R (>= 4.1)",
         "shiny (>= 1.8.1)",
         "teal.data (>= 0.7.0)",
-        "teal.slice (>= 0.5.1.9022)"
+        "teal.slice (>= 0.6.0)"
       ],
       "Imports": [
         "checkmate (>= 2.1.0)",
@@ -8208,7 +8208,7 @@
       "LazyData": "true",
       "Roxygen": "list(markdown = TRUE, packages = c(\"roxy.shinylive\"))",
       "RoxygenNote": "7.3.2",
-      "Collate": "'TealAppDriver.R' 'checkmate.R' 'dummy_functions.R' 'get_rcode_utils.R' 'include_css_js.R' 'modules.R' 'init.R' 'landing_popup_module.R' 'module_bookmark_manager.R' 'module_data_summary.R' 'module_filter_data.R' 'module_filter_manager.R' 'module_init_data.R' 'module_nested_tabs.R' 'module_session_info.R' 'module_snapshot_manager.R' 'module_teal.R' 'module_teal_data.R' 'module_teal_lockfile.R' 'module_teal_with_splash.R' 'module_transform_data.R' 'reporter_previewer_module.R' 'show_rcode_modal.R' 'tdata.R' 'teal.R' 'teal_data_module.R' 'teal_data_module-eval_code.R' 'teal_data_module-within.R' 'teal_data_utils.R' 'teal_modifiers.R' 'teal_reporter.R' 'teal_slices-store.R' 'teal_slices.R' 'teal_transform_module.R' 'utils.R' 'validate_inputs.R' 'validations.R' 'zzz.R'",
+      "Collate": "'TealAppDriver.R' 'checkmate.R' 'dummy_functions.R' 'include_css_js.R' 'modules.R' 'init.R' 'landing_popup_module.R' 'module_bookmark_manager.R' 'module_data_summary.R' 'module_filter_data.R' 'module_filter_manager.R' 'module_init_data.R' 'module_nested_tabs.R' 'module_session_info.R' 'module_snapshot_manager.R' 'module_teal.R' 'module_teal_data.R' 'module_teal_lockfile.R' 'module_teal_with_splash.R' 'module_transform_data.R' 'reporter_previewer_module.R' 'show_rcode_modal.R' 'tdata.R' 'teal.R' 'teal_data_module.R' 'teal_data_module-eval_code.R' 'teal_data_module-within.R' 'teal_data_utils.R' 'teal_modifiers.R' 'teal_reporter.R' 'teal_slices-store.R' 'teal_slices.R' 'teal_transform_module.R' 'utils.R' 'validate_inputs.R' 'validations.R' 'zzz.R'",
       "Author": "Dawid Kaledkowski [aut, cre] (<https://orcid.org/0000-0001-9533-457X>), Pawel Rucki [aut], Aleksander Chlebowski [aut] (<https://orcid.org/0000-0001-5018-6294>), Andre Verissimo [aut] (<https://orcid.org/0000-0002-2212-339X>), Kartikeya Kirar [aut], Vedha Viyash [aut], Marcin Kosinski [aut], Adrian Waddell [aut], Chendi Liao [rev], Dony Unardi [rev], Nikolas Burkoff [aut], Mahmoud Hallal [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], Tadeusz Lewandowski [aut], F. Hoffmann-La Roche AG [cph, fnd], Maximilian Mordig [ctb]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
       "RemoteType": "github",
@@ -8216,8 +8216,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "546774c20d74638dc4cd550b35d2f0f8ad1978e7",
-      "Remotes": "insightsengineering/teal.slice"
+      "RemoteSha": "dd753f85d84d80f20311c578678f3467bb2a2851"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -8452,7 +8451,7 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9032",
+      "Version": "0.1.6.9033",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "RNA-Seq Analysis Modules to Add to a Teal Application",
@@ -8483,10 +8482,10 @@
         "stats",
         "stringr",
         "SummarizedExperiment (>= 1.36.0)",
-        "teal.data (>= 0.6.0.9025)",
-        "teal.logger (>= 0.3.0.9004)",
-        "teal.reporter (>= 0.3.1.9023)",
-        "teal.widgets (>= 0.4.2.9025)",
+        "teal.data (>= 0.7.0)",
+        "teal.logger (>= 0.3.1)",
+        "teal.reporter (>= 0.4.0)",
+        "teal.widgets (>= 0.4.3)",
         "tern (>= 0.9.7)",
         "utils"
       ],
@@ -8522,7 +8521,8 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "872b31b1edc69a3b963a897e537ad58c4624485a"
+      "RemoteSha": "3935cadabbf3bab12fb4cd48c6078c5a888657c6",
+      "Remotes": "insightsengineering/hermes, insightsengineering/teal"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -8642,10 +8642,10 @@
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.5.0.9027",
+      "Version": "0.5.0.9028",
       "Source": "GitHub",
       "Title": "Functions for Extracting and Merging Data in the 'teal' Framework",
-      "Date": "2025-01-31",
+      "Date": "2025-02-04",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "A standardized user interface for column selection, that facilitates dataset merging in 'teal' framework.",
       "License": "Apache License 2.0",
@@ -8669,7 +8669,8 @@
         "teal.logger (>= 0.3.1)",
         "teal.widgets (>= 0.4.2)",
         "tidyr (>= 1.0.0)",
-        "tidyselect"
+        "tidyselect",
+        "utils"
       ],
       "Suggests": [
         "knitr (>= 1.42)",
@@ -8693,7 +8694,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.transform",
       "RemoteRef": "main",
-      "RemoteSha": "1d5d3aadfba53a7de30fd7c3048df58add9022d0"
+      "RemoteSha": "94fa57da962f6523d6bbaef175bb42c4e247a58f"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
