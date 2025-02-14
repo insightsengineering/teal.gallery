@@ -1429,27 +1429,29 @@
     },
     "R6": {
       "Package": "R6",
-      "Version": "2.5.1",
+      "Version": "2.6.0",
       "Source": "Repository",
       "Title": "Encapsulated Classes with Reference Semantics",
-      "Authors@R": "person(\"Winston\", \"Chang\", role = c(\"aut\", \"cre\"), email = \"winston@stdout.org\")",
+      "Authors@R": "c( person(\"Winston\", \"Chang\", , \"winston@posit.co\", role = c(\"aut\", \"cre\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Creates classes with reference semantics, similar to R's built-in reference classes. Compared to reference classes, R6 classes are simpler and lighter-weight, and they are not built on S4 classes so they do not require the methods package. These classes allow public and private members, and they support inheritance, even when the classes are defined in different packages.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://r6.r-lib.org, https://github.com/r-lib/R6",
+      "BugReports": "https://github.com/r-lib/R6/issues",
       "Depends": [
-        "R (>= 3.0)"
+        "R (>= 3.6)"
       ],
       "Suggests": [
-        "testthat",
-        "pryr"
+        "lobstr",
+        "testthat (>= 3.0.0)"
       ],
-      "License": "MIT + file LICENSE",
-      "URL": "https://r6.r-lib.org, https://github.com/r-lib/R6/",
-      "BugReports": "https://github.com/r-lib/R6/issues",
-      "RoxygenNote": "7.1.1",
+      "Config/Needs/website": "tidyverse/tidytemplate, ggplot2, microbenchmark, scales",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.2",
       "NeedsCompilation": "no",
-      "Author": "Winston Chang [aut, cre]",
-      "Maintainer": "Winston Chang <winston@stdout.org>",
-      "Repository": "RSPM",
-      "Encoding": "UTF-8"
+      "Author": "Winston Chang [aut, cre], Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Winston Chang <winston@posit.co>",
+      "Repository": "CRAN"
     },
     "RColorBrewer": {
       "Package": "RColorBrewer",
@@ -8362,11 +8364,11 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9080",
+      "Version": "0.3.0.9081",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "General Modules for 'teal' Applications",
-      "Date": "2025-02-07",
+      "Date": "2025-02-13",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Ondrej\", \"Slama\", , \"ondrej.slama@roche.com\", role = \"ctb\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for viewing data, visualizing data, understanding missing and outlier values within your data and performing simple data analysis.  This extends 'teal' framework that supports reproducible research and analysis.",
       "License": "Apache License 2.0",
@@ -8378,7 +8380,7 @@
         "R (>= 4.1)",
         "shiny (>= 1.6.0)",
         "teal (>= 0.15.2.9103)",
-        "teal.transform (>= 0.5.0.9015)"
+        "teal.transform (>= 0.6.0)"
       ],
       "Imports": [
         "checkmate (>= 2.1.0)",
@@ -8448,8 +8450,8 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "389fe09d309ce491113faafe72f467eb782ba516",
-      "Remotes": "insightsengineering/teal, insightsengineering/teal.transform"
+      "RemoteSha": "8c092aae3ed1cbfd6bc5917376b3bb7b6add8caf",
+      "Remotes": "insightsengineering/teal"
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
