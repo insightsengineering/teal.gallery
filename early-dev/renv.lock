@@ -5733,7 +5733,7 @@
     },
     "ps": {
       "Package": "ps",
-      "Version": "1.8.1",
+      "Version": "1.9.0",
       "Source": "Repository",
       "Title": "List, Query, Manipulate System Processes",
       "Authors@R": "c( person(\"Jay\", \"Loden\", role = \"aut\"), person(\"Dave\", \"Daeschler\", role = \"aut\"), person(\"Giampaolo\", \"Rodola'\", role = \"aut\"), person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = c(\"aut\", \"cre\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
@@ -5768,7 +5768,7 @@
       "NeedsCompilation": "yes",
       "Author": "Jay Loden [aut], Dave Daeschler [aut], Giampaolo Rodola' [aut], Gábor Csárdi [aut, cre], Posit Software, PBC [cph, fnd]",
       "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
-      "Repository": "RSPM"
+      "Repository": "BioC.CRAN"
     },
     "purrr": {
       "Package": "purrr",
@@ -7553,11 +7553,11 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9081",
+      "Version": "0.3.0.9082",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "General Modules for 'teal' Applications",
-      "Date": "2025-02-13",
+      "Date": "2025-02-18",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Ondrej\", \"Slama\", , \"ondrej.slama@roche.com\", role = \"ctb\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for viewing data, visualizing data, understanding missing and outlier values within your data and performing simple data analysis.  This extends 'teal' framework that supports reproducible research and analysis.",
       "License": "Apache License 2.0",
@@ -7639,7 +7639,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "8c092aae3ed1cbfd6bc5917376b3bb7b6add8caf",
+      "RemoteSha": "8cd7d7190102dbe26cdd4be9616ed4fa46ba0ad4",
       "Remotes": "insightsengineering/teal"
     },
     "teal.osprey": {
@@ -8012,11 +8012,11 @@
     },
     "tern.gee": {
       "Package": "tern.gee",
-      "Version": "0.1.5.9005",
+      "Version": "0.1.5.9006",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Tables and Graphs for Generalized Estimating Equations (GEE) Model Fits",
-      "Date": "2025-01-23",
+      "Date": "2025-02-18",
       "Authors@R": "c( person(\"Daniel\", \"Sabanés Bové\", , \"daniel@rconis.com\", role = \"aut\"), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Generalized estimating equations (GEE) are a popular choice for analyzing longitudinal binary outcomes. This package provides an interface for fitting GEE, currently for logistic regression, within the 'tern' <https://cran.r-project.org/package=tern> framework (Zhu, Sabanés Bové et al., 2023) and tabulate results easily using 'rtables' <https://cran.r-project.org/package=rtables> (Becker, Waddell et al., 2023).  It builds on 'geepack' <doi:10.18637/jss.v015.i02> (Højsgaard, Halekoh and Yan, 2006) for the actual GEE model fitting.",
       "License": "Apache License 2.0",
@@ -8041,7 +8041,7 @@
         "knitr (>= 1.42)",
         "rmarkdown (>= 2.23)",
         "testthat (>= 3.1)",
-        "vdiffr (>= 1.0.0)",
+        "vdiffr (>= 1.0.7)",
         "withr (>= 2.0.0)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
@@ -8059,7 +8059,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.gee",
       "RemoteRef": "main",
-      "RemoteSha": "cf28474b1b7c2bf83e0965d5f36514b72bd3aded"
+      "RemoteSha": "1edd3090388382b7d6d133248aa9cfc17a91f7c1"
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
