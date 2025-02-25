@@ -13,7 +13,6 @@ data <- within(data, {
     dplyr::mutate(is_event = CNSR == 0)
   MAE <- hermes::multi_assay_experiment
 })
-datanames(data) <- c("ADTTE", "MAE")
 
 ## App header and footer ----
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
@@ -39,9 +38,6 @@ footer <- tags$p(
 
 app <- init(
   data = data,
-  title = build_app_title("RNA-Seq Analysis Teal Demo App", nest_logo),
-  header = header,
-  footer = footer,
   modules = modules(
     tm_front_page(
       label = "App Info",
@@ -85,7 +81,13 @@ app <- init(
       mae_name = "MAE"
     )
   )
-)
+) |>
+  modify_title(
+    title = "RNA-Seq Analysis Teal Demo App",
+    favicon = nest_logo
+  ) |>
+  modify_header(header) |>
+  modify_footer(footer)
 
 ## Not run:
 shinyApp(app$ui, app$server)
