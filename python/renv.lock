@@ -327,7 +327,7 @@
     },
     "R.utils": {
       "Package": "R.utils",
-      "Version": "2.12.3",
+      "Version": "2.13.0",
       "Source": "Repository",
       "Depends": [
         "R (>= 2.14.0)",
@@ -4551,7 +4551,7 @@
     },
     "reticulate": {
       "Package": "reticulate",
-      "Version": "1.40.0",
+      "Version": "1.41.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Interface to 'Python'",
