@@ -168,6 +168,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td><a href="https://genentech.shinyapps.io/NEST_basic-teal_dev/">basic-teal</a></td>
 </tr>
 <tr class="even">
+<td><a href="https://genentech.shinyapps.io/NEST_delayed-data">delayed-data</a></td>
+<td><a href="https://genentech.shinyapps.io/NEST_delayed-data_dev/">delayed-data</a></td>
+</tr>
+<tr class="odd">
+<td><a href="https://genentech.shinyapps.io/NEST_custom-transform">custom-transform</a></td>
+<td><a href="https://genentech.shinyapps.io/NEST_custom-transform_dev/">custom-transform</a></td>
+</tr>
+<tr class="even">
 <td><a href="https://genentech.shinyapps.io/NEST_exploratory_stable/">exploratory</a></td>
 <td><a href="https://genentech.shinyapps.io/NEST_exploratory_dev/">exploratory</a></td>
 </tr>
@@ -233,7 +241,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 class="anchored" data-anchor-id="hard-requirements">Hard requirements</h4>
 <ol type="1">
 <li>Copy each sample app into a file named <code>app.R</code> into a sensible folder name inside it’s own directory. The directory has to be named with the <code>APP_NAME</code>.</li>
-<li>Update the <code>_internal/quarto/demo-apps.yml</code> with a new <code>app/title</code>. This should be the <code>APP_NAME</code>.</li>
+<li>Update the <code>_internal/quarto/demo-apps.yml</code> with a new <code>app/title</code>. This should be the <code>APP_NAME</code>. Also, edit the <code>.github/workflows/deploy.yml</code> with the path to the new app so it can be deployed.</li>
 <li>Run the <code>_internal/utils/generate_app_readme.R</code> to generate the readme for the app inside it’s own directory.</li>
 </ol>
 </section>
@@ -241,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 class="anchored" data-anchor-id="optionalsoft-requirements">Optional/Soft requirements</h4>
 <ol type="1">
 <li>You can snapshot the teal app dependencies using <code>{renv}</code> but make sure to snapshot using GitHub references to the teal packages.</li>
-<li>Create a GIF recording (<a href="https://getkap.co/">KAP</a> is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. (It can be done by recording using KAP in 1470x840 px and rendering 5fps and downsizing 33%). Place the GIF inside the <code>_internal/quarto/assets/img</code> directory. Also, make sure that the name of the GIF is <code>APP_NAME.gif</code>. Also, make sure to place a static image with the name dimention called <code>APP_NAME.png</code> that will be displayed in the demo page when the card is not hovered.</li>
+<li>Create a GIF recording (<a href="https://www.cockos.com/licecap/">LICEcap</a> is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. Place the GIF inside the <code>_internal/quarto/assets/img</code> directory. Also, make sure that the name of the GIF is <code>APP_NAME.gif</code>. Also, make sure to place a static image with the name dimention called <code>APP_NAME.png</code> that will be displayed in the demo page when the card is not hovered.</li>
 <li>Add front-end tests with the help of cypress. Copy the contents of the <code>js</code> directory within some other app’s directory inside your app directory to get the node dependencies. Place the cypress tests inside the <code>tests/cypress</code> inside your app’s directory. Please refer to an existing app’s tests so that the <code>.github/deploy.yaml</code> will automaticall run the cypress tests.</li>
 </ol>
 
