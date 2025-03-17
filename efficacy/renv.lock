@@ -136,11 +136,11 @@
     },
     "MASS": {
       "Package": "MASS",
-      "Version": "7.3-64",
+      "Version": "7.3-65",
       "Source": "Repository",
       "Priority": "recommended",
-      "Date": "2025-01-06",
-      "Revision": "$Rev: 3680 $",
+      "Date": "2025-02-19",
+      "Revision": "$Rev: 3681 $",
       "Depends": [
         "R (>= 4.4.0)",
         "grDevices",
@@ -168,7 +168,7 @@
       "NeedsCompilation": "yes",
       "Author": "Brian Ripley [aut, cre, cph], Bill Venables [aut, cph], Douglas M. Bates [ctb], Kurt Hornik [trl] (partial port ca 1998), Albrecht Gebhardt [trl] (partial port ca 1998), David Firth [ctb] (support functions for polr)",
       "Maintainer": "Brian Ripley <Brian.Ripley@R-project.org>",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Encoding": "UTF-8"
     },
     "MESS": {
@@ -222,10 +222,10 @@
     },
     "Matrix": {
       "Package": "Matrix",
-      "Version": "1.7-2",
+      "Version": "1.7-3",
       "Source": "Repository",
       "VersionNote": "do also bump src/version.h, inst/include/Matrix/version.h",
-      "Date": "2025-01-20",
+      "Date": "2025-03-05",
       "Priority": "recommended",
       "Title": "Sparse and Dense Matrix Classes and Methods",
       "Description": "A rich hierarchy of sparse and dense matrix classes, including general, symmetric, triangular, and diagonal matrices with numeric, logical, or pattern entries.  Efficient methods for operating on such matrices, often wrapping the 'BLAS', 'LAPACK', and 'SuiteSparse' libraries.",
@@ -555,11 +555,11 @@
     },
     "Rdpack": {
       "Package": "Rdpack",
-      "Version": "2.6.2",
+      "Version": "2.6.3",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Update and Manipulate Rd Documentation Objects",
-      "Authors@R": "c( person(given = c(\"Georgi\", \"N.\"), family = \"Boshnakov\",  role = c(\"aut\", \"cre\"),  email = \"georgi.boshnakov@manchester.ac.uk\"),  person(given = \"Duncan\",  family = \"Murdoch\",  role = \"ctb\", email = \"murdoch.duncan@gmail.com\") )",
+      "Authors@R": "c( person(given = c(\"Georgi\", \"N.\"), family = \"Boshnakov\",  role = c(\"aut\", \"cre\"),  email = \"georgi.boshnakov@manchester.ac.uk\", comment = c(ORCID = \"0000-0003-2839-346X\")), person(given = \"Duncan\",  family = \"Murdoch\",  role = \"ctb\", email = \"murdoch.duncan@gmail.com\") )",
       "Description": "Functions for manipulation of R documentation objects, including functions reprompt() and ereprompt() for updating 'Rd' documentation for functions, methods and classes; 'Rd' macros for citations and import of references from 'bibtex' files for use in 'Rd' files and 'roxygen2' comments; 'Rd' macros for evaluating and inserting snippets of 'R' code and the results of its evaluation or creating graphics on the fly; and many functions for manipulation of references and Rd files.",
       "URL": "https://geobosh.github.io/Rdpack/ (doc), https://github.com/GeoBosh/Rdpack (devel)",
       "BugReports": "https://github.com/GeoBosh/Rdpack/issues",
@@ -583,10 +583,9 @@
       "LazyLoad": "yes",
       "RoxygenNote": "7.1.1",
       "NeedsCompilation": "no",
-      "Author": "Georgi N. Boshnakov [aut, cre], Duncan Murdoch [ctb]",
+      "Author": "Georgi N. Boshnakov [aut, cre] (<https://orcid.org/0000-0003-2839-346X>), Duncan Murdoch [ctb]",
       "Maintainer": "Georgi N. Boshnakov <georgi.boshnakov@manchester.ac.uk>",
-      "Repository": "RSPM",
-      "Encoding": "UTF-8"
+      "Repository": "BioC.CRAN"
     },
     "SparseM": {
       "Package": "SparseM",
@@ -653,11 +652,11 @@
     },
     "TMB": {
       "Package": "TMB",
-      "Version": "1.9.16",
+      "Version": "1.9.17",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Template Model Builder: A General Random Effect Tool Inspired by 'ADMB'",
-      "Date": "2025-01-08",
+      "Date": "2025-03-08",
       "Authors@R": "c(person(\"Kasper\",\"Kristensen\",role=c(\"aut\",\"cre\",\"cph\"),email=\"kaskr@dtu.dk\"), person(\"Brad\",\"Bell\",role=\"cph\"), person(\"Hans\",\"Skaug\",role=\"ctb\"), person(\"Arni\",\"Magnusson\",role=\"ctb\"), person(\"Casper\",\"Berg\",role=\"ctb\"), person(\"Anders\",\"Nielsen\",role=\"ctb\"), person(\"Martin\",\"Maechler\",role=\"ctb\"), person(\"Theo\",\"Michelot\",role=\"ctb\"), person(\"Mollie\",\"Brooks\",role=\"ctb\"), person(\"Alex\",\"Forrence\",role=\"ctb\"), person(\"Christoffer\",\"Moesgaard Albertsen\",role=\"ctb\"), person(\"Cole\",\"Monnahan\",role=\"ctb\") )",
       "Maintainer": "Kasper Kristensen <kaskr@dtu.dk>",
       "Author": "Kasper Kristensen [aut, cre, cph], Brad Bell [cph], Hans Skaug [ctb], Arni Magnusson [ctb], Casper Berg [ctb], Anders Nielsen [ctb], Martin Maechler [ctb], Theo Michelot [ctb], Mollie Brooks [ctb], Alex Forrence [ctb], Christoffer Moesgaard Albertsen [ctb], Cole Monnahan [ctb]",
@@ -686,7 +685,7 @@
       ],
       "RoxygenNote": "7.2.3",
       "NeedsCompilation": "yes",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Encoding": "UTF-8"
     },
     "abind": {
@@ -803,19 +802,15 @@
     },
     "bit": {
       "Package": "bit",
-      "Version": "4.5.0.1",
+      "Version": "4.6.0",
       "Source": "Repository",
-      "Type": "Package",
       "Title": "Classes and Methods for Fast Memory-Efficient Boolean Selections",
-      "Date": "2024-09-17",
-      "Authors@R": "c(person(given = \"Jens\", family = \"Oehlschlägel\", role = c(\"aut\", \"cre\"), email = \"Jens.Oehlschlaegel@truecluster.com\"), person(given = \"Brian\", family = \"Ripley\", role = \"ctb\"))",
-      "Author": "Jens Oehlschlägel [aut, cre], Brian Ripley [ctb]",
-      "Maintainer": "Jens Oehlschlägel <Jens.Oehlschlaegel@truecluster.com>",
+      "Authors@R": "c( person(\"Michael\", \"Chirico\", email = \"MichaelChirico4@gmail.com\", role = c(\"aut\", \"cre\")), person(\"Jens\", \"Oehlschlägel\", role = \"aut\"), person(\"Brian\", \"Ripley\", role = \"ctb\") )",
       "Depends": [
         "R (>= 3.4.0)"
       ],
       "Suggests": [
-        "testthat (>= 0.11.0)",
+        "testthat (>= 3.0.0)",
         "roxygen2",
         "knitr",
         "markdown",
@@ -829,11 +824,14 @@
       "LazyLoad": "yes",
       "ByteCompile": "yes",
       "Encoding": "UTF-8",
-      "URL": "https://github.com/truecluster/bit",
+      "URL": "https://github.com/r-lib/bit",
       "VignetteBuilder": "knitr, rmarkdown",
       "RoxygenNote": "7.3.2",
+      "Config/testthat/edition": "3",
       "NeedsCompilation": "yes",
-      "Repository": "RSPM"
+      "Author": "Michael Chirico [aut, cre], Jens Oehlschlägel [aut], Brian Ripley [ctb]",
+      "Maintainer": "Michael Chirico <MichaelChirico4@gmail.com>",
+      "Repository": "CRAN"
     },
     "bit64": {
       "Package": "bit64",
@@ -1041,6 +1039,40 @@
       "Author": "David Robinson [aut], Alex Hayes [aut] (<https://orcid.org/0000-0002-4985-5160>), Simon Couch [aut, cre] (<https://orcid.org/0000-0001-5676-5107>), Posit Software, PBC [cph, fnd], Indrajeet Patil [ctb] (<https://orcid.org/0000-0003-1995-6531>), Derek Chiu [ctb], Matthieu Gomez [ctb], Boris Demeshev [ctb], Dieter Menne [ctb], Benjamin Nutter [ctb], Luke Johnston [ctb], Ben Bolker [ctb], Francois Briatte [ctb], Jeffrey Arnold [ctb], Jonah Gabry [ctb], Luciano Selzer [ctb], Gavin Simpson [ctb], Jens Preussner [ctb], Jay Hesselberth [ctb], Hadley Wickham [ctb], Matthew Lincoln [ctb], Alessandro Gasparini [ctb], Lukasz Komsta [ctb], Frederick Novometsky [ctb], Wilson Freitas [ctb], Michelle Evans [ctb], Jason Cory Brunson [ctb], Simon Jackson [ctb], Ben Whalley [ctb], Karissa Whiting [ctb], Yves Rosseel [ctb], Michael Kuehn [ctb], Jorge Cimentada [ctb], Erle Holgersen [ctb], Karl Dunkle Werner [ctb] (<https://orcid.org/0000-0003-0523-7309>), Ethan Christensen [ctb], Steven Pav [ctb], Paul PJ [ctb], Ben Schneider [ctb], Patrick Kennedy [ctb], Lily Medina [ctb], Brian Fannin [ctb], Jason Muhlenkamp [ctb], Matt Lehman [ctb], Bill Denney [ctb] (<https://orcid.org/0000-0002-5759-428X>), Nic Crane [ctb], Andrew Bates [ctb], Vincent Arel-Bundock [ctb] (<https://orcid.org/0000-0003-2042-7063>), Hideaki Hayashi [ctb], Luis Tobalina [ctb], Annie Wang [ctb], Wei Yang Tham [ctb], Clara Wang [ctb], Abby Smith [ctb] (<https://orcid.org/0000-0002-3207-0375>), Jasper Cooper [ctb] (<https://orcid.org/0000-0002-8639-3188>), E Auden Krauska [ctb] (<https://orcid.org/0000-0002-1466-5850>), Alex Wang [ctb], Malcolm Barrett [ctb] (<https://orcid.org/0000-0003-0299-5825>), Charles Gray [ctb] (<https://orcid.org/0000-0002-9978-011X>), Jared Wilber [ctb], Vilmantas Gegzna [ctb] (<https://orcid.org/0000-0002-9500-5167>), Eduard Szoecs [ctb], Frederik Aust [ctb] (<https://orcid.org/0000-0003-4900-788X>), Angus Moore [ctb], Nick Williams [ctb], Marius Barth [ctb] (<https://orcid.org/0000-0002-3421-6665>), Bruna Wundervald [ctb] (<https://orcid.org/0000-0001-8163-220X>), Joyce Cahoon [ctb] (<https://orcid.org/0000-0001-7217-4702>), Grant McDermott [ctb] (<https://orcid.org/0000-0001-7883-8573>), Kevin Zarca [ctb], Shiro Kuriwaki [ctb] (<https://orcid.org/0000-0002-5687-2647>), Lukas Wallrich [ctb] (<https://orcid.org/0000-0003-2121-5177>), James Martherus [ctb] (<https://orcid.org/0000-0002-8285-3300>), Chuliang Xiao [ctb] (<https://orcid.org/0000-0002-8466-9398>), Joseph Larmarange [ctb], Max Kuhn [ctb], Michal Bojanowski [ctb], Hakon Malmedal [ctb], Clara Wang [ctb], Sergio Oller [ctb], Luke Sonnet [ctb], Jim Hester [ctb], Ben Schneider [ctb], Bernie Gray [ctb] (<https://orcid.org/0000-0001-9190-6032>), Mara Averick [ctb], Aaron Jacobs [ctb], Andreas Bender [ctb], Sven Templer [ctb], Paul-Christian Buerkner [ctb], Matthew Kay [ctb], Erwan Le Pennec [ctb], Johan Junkka [ctb], Hao Zhu [ctb], Benjamin Soltoff [ctb], Zoe Wilkinson Saldana [ctb], Tyler Littlefield [ctb], Charles T. Gray [ctb], Shabbh E. Banks [ctb], Serina Robinson [ctb], Roger Bivand [ctb], Riinu Ots [ctb], Nicholas Williams [ctb], Nina Jakobsen [ctb], Michael Weylandt [ctb], Lisa Lendway [ctb], Karl Hailperin [ctb], Josue Rodriguez [ctb], Jenny Bryan [ctb], Chris Jarvis [ctb], Greg Macfarlane [ctb], Brian Mannakee [ctb], Drew Tyre [ctb], Shreyas Singh [ctb], Laurens Geffert [ctb], Hong Ooi [ctb], Henrik Bengtsson [ctb], Eduard Szocs [ctb], David Hugh-Jones [ctb], Matthieu Stigler [ctb], Hugo Tavares [ctb] (<https://orcid.org/0000-0001-9373-2726>), R. Willem Vervoort [ctb], Brenton M. Wiernik [ctb], Josh Yamamoto [ctb], Jasme Lee [ctb], Taren Sanders [ctb] (<https://orcid.org/0000-0002-4504-6008>), Ilaria Prosdocimi [ctb] (<https://orcid.org/0000-0001-8565-094X>), Daniel D. Sjoberg [ctb] (<https://orcid.org/0000-0003-0862-2018>), Alex Reinhart [ctb] (<https://orcid.org/0000-0002-6658-514X>)",
       "Maintainer": "Simon Couch <simon.couch@posit.co>",
       "Repository": "RSPM"
+    },
+    "bsicons": {
+      "Package": "bsicons",
+      "Version": "0.1.2",
+      "Source": "Repository",
+      "Title": "Easily Work with 'Bootstrap' Icons",
+      "Authors@R": "c( person(\"Carson\", \"Sievert\", , \"carson@posit.co\", role = c(\"cre\", \"aut\"), comment = c(ORCID = \"0000-0002-4958-2844\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")), person(\"Mark\", \"Otto\", role = \"cph\", comment = \"Bootstrap icons maintainer\") )",
+      "Description": "Easily use 'Bootstrap' icons inside 'Shiny' apps and 'R Markdown' documents. More generally, icons can be inserted in any 'htmltools' document through inline 'SVG'.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://github.com/rstudio/bsicons",
+      "BugReports": "https://github.com/rstudio/bsicons/issues",
+      "Depends": [
+        "R (>= 2.10)"
+      ],
+      "Imports": [
+        "cli",
+        "htmltools",
+        "rlang",
+        "utils"
+      ],
+      "Suggests": [
+        "bslib",
+        "processx",
+        "testthat",
+        "webshot2",
+        "withr"
+      ],
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.2.3",
+      "NeedsCompilation": "no",
+      "Author": "Carson Sievert [cre, aut] (<https://orcid.org/0000-0002-4958-2844>), Posit Software, PBC [cph, fnd], Mark Otto [cph] (Bootstrap icons maintainer)",
+      "Maintainer": "Carson Sievert <carson@posit.co>",
+      "Repository": "CRAN"
     },
     "bslib": {
       "Package": "bslib",
@@ -1586,7 +1618,7 @@
     },
     "cpp11": {
       "Package": "cpp11",
-      "Version": "0.5.1",
+      "Version": "0.5.2",
       "Source": "Repository",
       "Title": "A C++11 Interface for R's C Interface",
       "Authors@R": "c( person(\"Davis\", \"Vaughan\", email = \"davis@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0003-4777-038X\")), person(\"Jim\",\"Hester\", role = \"aut\", comment = c(ORCID = \"0000-0002-2739-7082\")), person(\"Romain\", \"François\", role = \"aut\", comment = c(ORCID = \"0000-0002-2444-4226\")), person(\"Benjamin\", \"Kietzman\", role = \"ctb\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
@@ -1629,7 +1661,7 @@
       "NeedsCompilation": "no",
       "Author": "Davis Vaughan [aut, cre] (<https://orcid.org/0000-0003-4777-038X>), Jim Hester [aut] (<https://orcid.org/0000-0002-2739-7082>), Romain François [aut] (<https://orcid.org/0000-0002-2444-4226>), Benjamin Kietzman [ctb], Posit Software, PBC [cph, fnd]",
       "Maintainer": "Davis Vaughan <davis@posit.co>",
-      "Repository": "RSPM"
+      "Repository": "CRAN"
     },
     "crayon": {
       "Package": "crayon",
@@ -2433,10 +2465,10 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.10.9002",
+      "Version": "0.5.10.9004",
       "Source": "GitHub",
       "Title": "ASCII Formatting for Values and Tables",
-      "Date": "2025-02-24",
+      "Date": "2025-03-13",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\"), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\"), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\"), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "We provide a framework for rendering complex tables to ASCII, and a set of formatters for transforming values or sets of values into ASCII-ready display strings.",
       "License": "Apache License 2.0",
@@ -2479,7 +2511,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "fcc4fb86c1ff7753fa52ded1a79df1aa39987a58"
+      "RemoteSha": "6e8386676a49128268b4ee0cbb28f3811bdc1375"
     },
     "fs": {
       "Package": "fs",
@@ -3631,7 +3663,7 @@
     },
     "jsonlite": {
       "Package": "jsonlite",
-      "Version": "1.9.0",
+      "Version": "1.9.1",
       "Source": "Repository",
       "Title": "A Simple and Robust JSON Parser and Generator for R",
       "License": "MIT + file LICENSE",
@@ -3657,7 +3689,7 @@
       "Encoding": "UTF-8",
       "NeedsCompilation": "yes",
       "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>), Duncan Temple Lang [ctb], Lloyd Hilaiel [cph] (author of bundled libyajl)",
-      "Repository": "BioC.CRAN"
+      "Repository": "CRAN"
     },
     "kinship2": {
       "Package": "kinship2",
@@ -3689,11 +3721,11 @@
     },
     "knitr": {
       "Package": "knitr",
-      "Version": "1.49",
+      "Version": "1.50",
       "Source": "Repository",
       "Type": "Package",
       "Title": "A General-Purpose Package for Dynamic Report Generation in R",
-      "Authors@R": "c( person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")), person(\"Abhraneel\", \"Sarma\", role = \"ctb\"), person(\"Adam\", \"Vogt\", role = \"ctb\"), person(\"Alastair\", \"Andrew\", role = \"ctb\"), person(\"Alex\", \"Zvoleff\", role = \"ctb\"), person(\"Amar\", \"Al-Zubaidi\", role = \"ctb\"), person(\"Andre\", \"Simon\", role = \"ctb\", comment = \"the CSS files under inst/themes/ were derived from the Highlight package http://www.andre-simon.de\"), person(\"Aron\", \"Atkins\", role = \"ctb\"), person(\"Aaron\", \"Wolen\", role = \"ctb\"), person(\"Ashley\", \"Manton\", role = \"ctb\"), person(\"Atsushi\", \"Yasumoto\", role = \"ctb\", comment = c(ORCID = \"0000-0002-8335-495X\")), person(\"Ben\", \"Baumer\", role = \"ctb\"), person(\"Brian\", \"Diggs\", role = \"ctb\"), person(\"Brian\", \"Zhang\", role = \"ctb\"), person(\"Bulat\", \"Yapparov\", role = \"ctb\"), person(\"Cassio\", \"Pereira\", role = \"ctb\"), person(\"Christophe\", \"Dervieux\", role = \"ctb\"), person(\"David\", \"Hall\", role = \"ctb\"), person(\"David\", \"Hugh-Jones\", role = \"ctb\"), person(\"David\", \"Robinson\", role = \"ctb\"), person(\"Doug\", \"Hemken\", role = \"ctb\"), person(\"Duncan\", \"Murdoch\", role = \"ctb\"), person(\"Elio\", \"Campitelli\", role = \"ctb\"), person(\"Ellis\", \"Hughes\", role = \"ctb\"), person(\"Emily\", \"Riederer\", role = \"ctb\"), person(\"Fabian\", \"Hirschmann\", role = \"ctb\"), person(\"Fitch\", \"Simeon\", role = \"ctb\"), person(\"Forest\", \"Fang\", role = \"ctb\"), person(c(\"Frank\", \"E\", \"Harrell\", \"Jr\"), role = \"ctb\", comment = \"the Sweavel package at inst/misc/Sweavel.sty\"), person(\"Garrick\", \"Aden-Buie\", role = \"ctb\"), person(\"Gregoire\", \"Detrez\", role = \"ctb\"), person(\"Hadley\", \"Wickham\", role = \"ctb\"), person(\"Hao\", \"Zhu\", role = \"ctb\"), person(\"Heewon\", \"Jeon\", role = \"ctb\"), person(\"Henrik\", \"Bengtsson\", role = \"ctb\"), person(\"Hiroaki\", \"Yutani\", role = \"ctb\"), person(\"Ian\", \"Lyttle\", role = \"ctb\"), person(\"Hodges\", \"Daniel\", role = \"ctb\"), person(\"Jacob\", \"Bien\", role = \"ctb\"), person(\"Jake\", \"Burkhead\", role = \"ctb\"), person(\"James\", \"Manton\", role = \"ctb\"), person(\"Jared\", \"Lander\", role = \"ctb\"), person(\"Jason\", \"Punyon\", role = \"ctb\"), person(\"Javier\", \"Luraschi\", role = \"ctb\"), person(\"Jeff\", \"Arnold\", role = \"ctb\"), person(\"Jenny\", \"Bryan\", role = \"ctb\"), person(\"Jeremy\", \"Ashkenas\", role = c(\"ctb\", \"cph\"), comment = \"the CSS file at inst/misc/docco-classic.css\"), person(\"Jeremy\", \"Stephens\", role = \"ctb\"), person(\"Jim\", \"Hester\", role = \"ctb\"), person(\"Joe\", \"Cheng\", role = \"ctb\"), person(\"Johannes\", \"Ranke\", role = \"ctb\"), person(\"John\", \"Honaker\", role = \"ctb\"), person(\"John\", \"Muschelli\", role = \"ctb\"), person(\"Jonathan\", \"Keane\", role = \"ctb\"), person(\"JJ\", \"Allaire\", role = \"ctb\"), person(\"Johan\", \"Toloe\", role = \"ctb\"), person(\"Jonathan\", \"Sidi\", role = \"ctb\"), person(\"Joseph\", \"Larmarange\", role = \"ctb\"), person(\"Julien\", \"Barnier\", role = \"ctb\"), person(\"Kaiyin\", \"Zhong\", role = \"ctb\"), person(\"Kamil\", \"Slowikowski\", role = \"ctb\"), person(\"Karl\", \"Forner\", role = \"ctb\"), person(c(\"Kevin\", \"K.\"), \"Smith\", role = \"ctb\"), person(\"Kirill\", \"Mueller\", role = \"ctb\"), person(\"Kohske\", \"Takahashi\", role = \"ctb\"), person(\"Lorenz\", \"Walthert\", role = \"ctb\"), person(\"Lucas\", \"Gallindo\", role = \"ctb\"), person(\"Marius\", \"Hofert\", role = \"ctb\"), person(\"Martin\", \"Modrák\", role = \"ctb\"), person(\"Michael\", \"Chirico\", role = \"ctb\"), person(\"Michael\", \"Friendly\", role = \"ctb\"), person(\"Michal\", \"Bojanowski\", role = \"ctb\"), person(\"Michel\", \"Kuhlmann\", role = \"ctb\"), person(\"Miller\", \"Patrick\", role = \"ctb\"), person(\"Nacho\", \"Caballero\", role = \"ctb\"), person(\"Nick\", \"Salkowski\", role = \"ctb\"), person(\"Niels Richard\", \"Hansen\", role = \"ctb\"), person(\"Noam\", \"Ross\", role = \"ctb\"), person(\"Obada\", \"Mahdi\", role = \"ctb\"), person(\"Pavel N.\", \"Krivitsky\", role = \"ctb\", comment=c(ORCID = \"0000-0002-9101-3362\")), person(\"Pedro\", \"Faria\", role = \"ctb\"), person(\"Qiang\", \"Li\", role = \"ctb\"), person(\"Ramnath\", \"Vaidyanathan\", role = \"ctb\"), person(\"Richard\", \"Cotton\", role = \"ctb\"), person(\"Robert\", \"Krzyzanowski\", role = \"ctb\"), person(\"Rodrigo\", \"Copetti\", role = \"ctb\"), person(\"Romain\", \"Francois\", role = \"ctb\"), person(\"Ruaridh\", \"Williamson\", role = \"ctb\"), person(\"Sagiru\", \"Mati\", role = \"ctb\", comment = c(ORCID = \"0000-0003-1413-3974\")), person(\"Scott\", \"Kostyshak\", role = \"ctb\"), person(\"Sebastian\", \"Meyer\", role = \"ctb\"), person(\"Sietse\", \"Brouwer\", role = \"ctb\"), person(c(\"Simon\", \"de\"), \"Bernard\", role = \"ctb\"), person(\"Sylvain\", \"Rousseau\", role = \"ctb\"), person(\"Taiyun\", \"Wei\", role = \"ctb\"), person(\"Thibaut\", \"Assus\", role = \"ctb\"), person(\"Thibaut\", \"Lamadon\", role = \"ctb\"), person(\"Thomas\", \"Leeper\", role = \"ctb\"), person(\"Tim\", \"Mastny\", role = \"ctb\"), person(\"Tom\", \"Torsney-Weir\", role = \"ctb\"), person(\"Trevor\", \"Davis\", role = \"ctb\"), person(\"Viktoras\", \"Veitas\", role = \"ctb\"), person(\"Weicheng\", \"Zhu\", role = \"ctb\"), person(\"Wush\", \"Wu\", role = \"ctb\"), person(\"Zachary\", \"Foster\", role = \"ctb\"), person(\"Zhian N.\", \"Kamvar\", role = \"ctb\", comment = c(ORCID = \"0000-0003-1458-7108\")), person(given = \"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Authors@R": "c( person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\", URL = \"https://yihui.org\")), person(\"Abhraneel\", \"Sarma\", role = \"ctb\"), person(\"Adam\", \"Vogt\", role = \"ctb\"), person(\"Alastair\", \"Andrew\", role = \"ctb\"), person(\"Alex\", \"Zvoleff\", role = \"ctb\"), person(\"Amar\", \"Al-Zubaidi\", role = \"ctb\"), person(\"Andre\", \"Simon\", role = \"ctb\", comment = \"the CSS files under inst/themes/ were derived from the Highlight package http://www.andre-simon.de\"), person(\"Aron\", \"Atkins\", role = \"ctb\"), person(\"Aaron\", \"Wolen\", role = \"ctb\"), person(\"Ashley\", \"Manton\", role = \"ctb\"), person(\"Atsushi\", \"Yasumoto\", role = \"ctb\", comment = c(ORCID = \"0000-0002-8335-495X\")), person(\"Ben\", \"Baumer\", role = \"ctb\"), person(\"Brian\", \"Diggs\", role = \"ctb\"), person(\"Brian\", \"Zhang\", role = \"ctb\"), person(\"Bulat\", \"Yapparov\", role = \"ctb\"), person(\"Cassio\", \"Pereira\", role = \"ctb\"), person(\"Christophe\", \"Dervieux\", role = \"ctb\"), person(\"David\", \"Hall\", role = \"ctb\"), person(\"David\", \"Hugh-Jones\", role = \"ctb\"), person(\"David\", \"Robinson\", role = \"ctb\"), person(\"Doug\", \"Hemken\", role = \"ctb\"), person(\"Duncan\", \"Murdoch\", role = \"ctb\"), person(\"Elio\", \"Campitelli\", role = \"ctb\"), person(\"Ellis\", \"Hughes\", role = \"ctb\"), person(\"Emily\", \"Riederer\", role = \"ctb\"), person(\"Fabian\", \"Hirschmann\", role = \"ctb\"), person(\"Fitch\", \"Simeon\", role = \"ctb\"), person(\"Forest\", \"Fang\", role = \"ctb\"), person(c(\"Frank\", \"E\", \"Harrell\", \"Jr\"), role = \"ctb\", comment = \"the Sweavel package at inst/misc/Sweavel.sty\"), person(\"Garrick\", \"Aden-Buie\", role = \"ctb\"), person(\"Gregoire\", \"Detrez\", role = \"ctb\"), person(\"Hadley\", \"Wickham\", role = \"ctb\"), person(\"Hao\", \"Zhu\", role = \"ctb\"), person(\"Heewon\", \"Jeon\", role = \"ctb\"), person(\"Henrik\", \"Bengtsson\", role = \"ctb\"), person(\"Hiroaki\", \"Yutani\", role = \"ctb\"), person(\"Ian\", \"Lyttle\", role = \"ctb\"), person(\"Hodges\", \"Daniel\", role = \"ctb\"), person(\"Jacob\", \"Bien\", role = \"ctb\"), person(\"Jake\", \"Burkhead\", role = \"ctb\"), person(\"James\", \"Manton\", role = \"ctb\"), person(\"Jared\", \"Lander\", role = \"ctb\"), person(\"Jason\", \"Punyon\", role = \"ctb\"), person(\"Javier\", \"Luraschi\", role = \"ctb\"), person(\"Jeff\", \"Arnold\", role = \"ctb\"), person(\"Jenny\", \"Bryan\", role = \"ctb\"), person(\"Jeremy\", \"Ashkenas\", role = c(\"ctb\", \"cph\"), comment = \"the CSS file at inst/misc/docco-classic.css\"), person(\"Jeremy\", \"Stephens\", role = \"ctb\"), person(\"Jim\", \"Hester\", role = \"ctb\"), person(\"Joe\", \"Cheng\", role = \"ctb\"), person(\"Johannes\", \"Ranke\", role = \"ctb\"), person(\"John\", \"Honaker\", role = \"ctb\"), person(\"John\", \"Muschelli\", role = \"ctb\"), person(\"Jonathan\", \"Keane\", role = \"ctb\"), person(\"JJ\", \"Allaire\", role = \"ctb\"), person(\"Johan\", \"Toloe\", role = \"ctb\"), person(\"Jonathan\", \"Sidi\", role = \"ctb\"), person(\"Joseph\", \"Larmarange\", role = \"ctb\"), person(\"Julien\", \"Barnier\", role = \"ctb\"), person(\"Kaiyin\", \"Zhong\", role = \"ctb\"), person(\"Kamil\", \"Slowikowski\", role = \"ctb\"), person(\"Karl\", \"Forner\", role = \"ctb\"), person(c(\"Kevin\", \"K.\"), \"Smith\", role = \"ctb\"), person(\"Kirill\", \"Mueller\", role = \"ctb\"), person(\"Kohske\", \"Takahashi\", role = \"ctb\"), person(\"Lorenz\", \"Walthert\", role = \"ctb\"), person(\"Lucas\", \"Gallindo\", role = \"ctb\"), person(\"Marius\", \"Hofert\", role = \"ctb\"), person(\"Martin\", \"Modrák\", role = \"ctb\"), person(\"Michael\", \"Chirico\", role = \"ctb\"), person(\"Michael\", \"Friendly\", role = \"ctb\"), person(\"Michal\", \"Bojanowski\", role = \"ctb\"), person(\"Michel\", \"Kuhlmann\", role = \"ctb\"), person(\"Miller\", \"Patrick\", role = \"ctb\"), person(\"Nacho\", \"Caballero\", role = \"ctb\"), person(\"Nick\", \"Salkowski\", role = \"ctb\"), person(\"Niels Richard\", \"Hansen\", role = \"ctb\"), person(\"Noam\", \"Ross\", role = \"ctb\"), person(\"Obada\", \"Mahdi\", role = \"ctb\"), person(\"Pavel N.\", \"Krivitsky\", role = \"ctb\", comment=c(ORCID = \"0000-0002-9101-3362\")), person(\"Pedro\", \"Faria\", role = \"ctb\"), person(\"Qiang\", \"Li\", role = \"ctb\"), person(\"Ramnath\", \"Vaidyanathan\", role = \"ctb\"), person(\"Richard\", \"Cotton\", role = \"ctb\"), person(\"Robert\", \"Krzyzanowski\", role = \"ctb\"), person(\"Rodrigo\", \"Copetti\", role = \"ctb\"), person(\"Romain\", \"Francois\", role = \"ctb\"), person(\"Ruaridh\", \"Williamson\", role = \"ctb\"), person(\"Sagiru\", \"Mati\", role = \"ctb\", comment = c(ORCID = \"0000-0003-1413-3974\")), person(\"Scott\", \"Kostyshak\", role = \"ctb\"), person(\"Sebastian\", \"Meyer\", role = \"ctb\"), person(\"Sietse\", \"Brouwer\", role = \"ctb\"), person(c(\"Simon\", \"de\"), \"Bernard\", role = \"ctb\"), person(\"Sylvain\", \"Rousseau\", role = \"ctb\"), person(\"Taiyun\", \"Wei\", role = \"ctb\"), person(\"Thibaut\", \"Assus\", role = \"ctb\"), person(\"Thibaut\", \"Lamadon\", role = \"ctb\"), person(\"Thomas\", \"Leeper\", role = \"ctb\"), person(\"Tim\", \"Mastny\", role = \"ctb\"), person(\"Tom\", \"Torsney-Weir\", role = \"ctb\"), person(\"Trevor\", \"Davis\", role = \"ctb\"), person(\"Viktoras\", \"Veitas\", role = \"ctb\"), person(\"Weicheng\", \"Zhu\", role = \"ctb\"), person(\"Wush\", \"Wu\", role = \"ctb\"), person(\"Zachary\", \"Foster\", role = \"ctb\"), person(\"Zhian N.\", \"Kamvar\", role = \"ctb\", comment = c(ORCID = \"0000-0003-1458-7108\")), person(given = \"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Provides a general-purpose tool for dynamic report generation in R using Literate Programming techniques.",
       "Depends": [
         "R (>= 3.6.0)"
@@ -3703,7 +3735,7 @@
         "highr (>= 0.11)",
         "methods",
         "tools",
-        "xfun (>= 0.48)",
+        "xfun (>= 0.51)",
         "yaml (>= 2.1.19)"
       ],
       "Suggests": [
@@ -3733,7 +3765,7 @@
         "testit",
         "tibble",
         "tikzDevice (>= 0.10)",
-        "tinytex (>= 0.46)",
+        "tinytex (>= 0.56)",
         "webshot",
         "rstudioapi",
         "svglite"
@@ -3744,12 +3776,12 @@
       "Encoding": "UTF-8",
       "VignetteBuilder": "litedown, knitr",
       "SystemRequirements": "Package vignettes based on R Markdown v2 or reStructuredText require Pandoc (http://pandoc.org). The function rst2pdf() requires rst2pdf (https://github.com/rst2pdf/rst2pdf).",
-      "Collate": "'block.R' 'cache.R' 'utils.R' 'citation.R' 'hooks-html.R' 'plot.R' 'defaults.R' 'concordance.R' 'engine.R' 'highlight.R' 'themes.R' 'header.R' 'hooks-asciidoc.R' 'hooks-chunk.R' 'hooks-extra.R' 'hooks-latex.R' 'hooks-md.R' 'hooks-rst.R' 'hooks-textile.R' 'hooks.R' 'output.R' 'package.R' 'pandoc.R' 'params.R' 'parser.R' 'pattern.R' 'rocco.R' 'spin.R' 'table.R' 'template.R' 'utils-conversion.R' 'utils-rd2html.R' 'utils-string.R' 'utils-sweave.R' 'utils-upload.R' 'utils-vignettes.R' 'zzz.R'",
+      "Collate": "'block.R' 'cache.R' 'citation.R' 'hooks-html.R' 'plot.R' 'utils.R' 'defaults.R' 'concordance.R' 'engine.R' 'highlight.R' 'themes.R' 'header.R' 'hooks-asciidoc.R' 'hooks-chunk.R' 'hooks-extra.R' 'hooks-latex.R' 'hooks-md.R' 'hooks-rst.R' 'hooks-textile.R' 'hooks.R' 'output.R' 'package.R' 'pandoc.R' 'params.R' 'parser.R' 'pattern.R' 'rocco.R' 'spin.R' 'table.R' 'template.R' 'utils-conversion.R' 'utils-rd2html.R' 'utils-string.R' 'utils-sweave.R' 'utils-upload.R' 'utils-vignettes.R' 'zzz.R'",
       "RoxygenNote": "7.3.2",
       "NeedsCompilation": "no",
-      "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>), Abhraneel Sarma [ctb], Adam Vogt [ctb], Alastair Andrew [ctb], Alex Zvoleff [ctb], Amar Al-Zubaidi [ctb], Andre Simon [ctb] (the CSS files under inst/themes/ were derived from the Highlight package http://www.andre-simon.de), Aron Atkins [ctb], Aaron Wolen [ctb], Ashley Manton [ctb], Atsushi Yasumoto [ctb] (<https://orcid.org/0000-0002-8335-495X>), Ben Baumer [ctb], Brian Diggs [ctb], Brian Zhang [ctb], Bulat Yapparov [ctb], Cassio Pereira [ctb], Christophe Dervieux [ctb], David Hall [ctb], David Hugh-Jones [ctb], David Robinson [ctb], Doug Hemken [ctb], Duncan Murdoch [ctb], Elio Campitelli [ctb], Ellis Hughes [ctb], Emily Riederer [ctb], Fabian Hirschmann [ctb], Fitch Simeon [ctb], Forest Fang [ctb], Frank E Harrell Jr [ctb] (the Sweavel package at inst/misc/Sweavel.sty), Garrick Aden-Buie [ctb], Gregoire Detrez [ctb], Hadley Wickham [ctb], Hao Zhu [ctb], Heewon Jeon [ctb], Henrik Bengtsson [ctb], Hiroaki Yutani [ctb], Ian Lyttle [ctb], Hodges Daniel [ctb], Jacob Bien [ctb], Jake Burkhead [ctb], James Manton [ctb], Jared Lander [ctb], Jason Punyon [ctb], Javier Luraschi [ctb], Jeff Arnold [ctb], Jenny Bryan [ctb], Jeremy Ashkenas [ctb, cph] (the CSS file at inst/misc/docco-classic.css), Jeremy Stephens [ctb], Jim Hester [ctb], Joe Cheng [ctb], Johannes Ranke [ctb], John Honaker [ctb], John Muschelli [ctb], Jonathan Keane [ctb], JJ Allaire [ctb], Johan Toloe [ctb], Jonathan Sidi [ctb], Joseph Larmarange [ctb], Julien Barnier [ctb], Kaiyin Zhong [ctb], Kamil Slowikowski [ctb], Karl Forner [ctb], Kevin K. Smith [ctb], Kirill Mueller [ctb], Kohske Takahashi [ctb], Lorenz Walthert [ctb], Lucas Gallindo [ctb], Marius Hofert [ctb], Martin Modrák [ctb], Michael Chirico [ctb], Michael Friendly [ctb], Michal Bojanowski [ctb], Michel Kuhlmann [ctb], Miller Patrick [ctb], Nacho Caballero [ctb], Nick Salkowski [ctb], Niels Richard Hansen [ctb], Noam Ross [ctb], Obada Mahdi [ctb], Pavel N. Krivitsky [ctb] (<https://orcid.org/0000-0002-9101-3362>), Pedro Faria [ctb], Qiang Li [ctb], Ramnath Vaidyanathan [ctb], Richard Cotton [ctb], Robert Krzyzanowski [ctb], Rodrigo Copetti [ctb], Romain Francois [ctb], Ruaridh Williamson [ctb], Sagiru Mati [ctb] (<https://orcid.org/0000-0003-1413-3974>), Scott Kostyshak [ctb], Sebastian Meyer [ctb], Sietse Brouwer [ctb], Simon de Bernard [ctb], Sylvain Rousseau [ctb], Taiyun Wei [ctb], Thibaut Assus [ctb], Thibaut Lamadon [ctb], Thomas Leeper [ctb], Tim Mastny [ctb], Tom Torsney-Weir [ctb], Trevor Davis [ctb], Viktoras Veitas [ctb], Weicheng Zhu [ctb], Wush Wu [ctb], Zachary Foster [ctb], Zhian N. Kamvar [ctb] (<https://orcid.org/0000-0003-1458-7108>), Posit Software, PBC [cph, fnd]",
+      "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>, https://yihui.org), Abhraneel Sarma [ctb], Adam Vogt [ctb], Alastair Andrew [ctb], Alex Zvoleff [ctb], Amar Al-Zubaidi [ctb], Andre Simon [ctb] (the CSS files under inst/themes/ were derived from the Highlight package http://www.andre-simon.de), Aron Atkins [ctb], Aaron Wolen [ctb], Ashley Manton [ctb], Atsushi Yasumoto [ctb] (<https://orcid.org/0000-0002-8335-495X>), Ben Baumer [ctb], Brian Diggs [ctb], Brian Zhang [ctb], Bulat Yapparov [ctb], Cassio Pereira [ctb], Christophe Dervieux [ctb], David Hall [ctb], David Hugh-Jones [ctb], David Robinson [ctb], Doug Hemken [ctb], Duncan Murdoch [ctb], Elio Campitelli [ctb], Ellis Hughes [ctb], Emily Riederer [ctb], Fabian Hirschmann [ctb], Fitch Simeon [ctb], Forest Fang [ctb], Frank E Harrell Jr [ctb] (the Sweavel package at inst/misc/Sweavel.sty), Garrick Aden-Buie [ctb], Gregoire Detrez [ctb], Hadley Wickham [ctb], Hao Zhu [ctb], Heewon Jeon [ctb], Henrik Bengtsson [ctb], Hiroaki Yutani [ctb], Ian Lyttle [ctb], Hodges Daniel [ctb], Jacob Bien [ctb], Jake Burkhead [ctb], James Manton [ctb], Jared Lander [ctb], Jason Punyon [ctb], Javier Luraschi [ctb], Jeff Arnold [ctb], Jenny Bryan [ctb], Jeremy Ashkenas [ctb, cph] (the CSS file at inst/misc/docco-classic.css), Jeremy Stephens [ctb], Jim Hester [ctb], Joe Cheng [ctb], Johannes Ranke [ctb], John Honaker [ctb], John Muschelli [ctb], Jonathan Keane [ctb], JJ Allaire [ctb], Johan Toloe [ctb], Jonathan Sidi [ctb], Joseph Larmarange [ctb], Julien Barnier [ctb], Kaiyin Zhong [ctb], Kamil Slowikowski [ctb], Karl Forner [ctb], Kevin K. Smith [ctb], Kirill Mueller [ctb], Kohske Takahashi [ctb], Lorenz Walthert [ctb], Lucas Gallindo [ctb], Marius Hofert [ctb], Martin Modrák [ctb], Michael Chirico [ctb], Michael Friendly [ctb], Michal Bojanowski [ctb], Michel Kuhlmann [ctb], Miller Patrick [ctb], Nacho Caballero [ctb], Nick Salkowski [ctb], Niels Richard Hansen [ctb], Noam Ross [ctb], Obada Mahdi [ctb], Pavel N. Krivitsky [ctb] (<https://orcid.org/0000-0002-9101-3362>), Pedro Faria [ctb], Qiang Li [ctb], Ramnath Vaidyanathan [ctb], Richard Cotton [ctb], Robert Krzyzanowski [ctb], Rodrigo Copetti [ctb], Romain Francois [ctb], Ruaridh Williamson [ctb], Sagiru Mati [ctb] (<https://orcid.org/0000-0003-1413-3974>), Scott Kostyshak [ctb], Sebastian Meyer [ctb], Sietse Brouwer [ctb], Simon de Bernard [ctb], Sylvain Rousseau [ctb], Taiyun Wei [ctb], Thibaut Assus [ctb], Thibaut Lamadon [ctb], Thomas Leeper [ctb], Tim Mastny [ctb], Tom Torsney-Weir [ctb], Trevor Davis [ctb], Viktoras Veitas [ctb], Weicheng Zhu [ctb], Wush Wu [ctb], Zachary Foster [ctb], Zhian N. Kamvar [ctb] (<https://orcid.org/0000-0003-1458-7108>), Posit Software, PBC [cph, fnd]",
       "Maintainer": "Yihui Xie <xie@yihui.name>",
-      "Repository": "RSPM"
+      "Repository": "BioC.CRAN"
     },
     "labeling": {
       "Package": "labeling",
@@ -4335,7 +4367,7 @@
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Mixed Models for Repeated Measures",
-      "Authors@R": "c( person(\"Daniel\", \"Sabanes Bove\", , \"daniel.sabanes_bove@rconis.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-0176-9239\")), person(\"Liming\", \"Li\", , \"liming.li@roche.com\", role = \"aut\"), person(\"Julia\", \"Dedic\", , \"julia.dedic@roche.com\", role = \"aut\"), person(\"Doug\", \"Kelkhoff\", , \"doug.kelkhoff@roche.com\", role = \"aut\"), person(\"Kevin\", \"Kunzmann\", , \"kevin.kunzmann@boehringer-ingelheim.com\", role = \"aut\"), person(\"Brian Matthew\", \"Lang\", , \"brian.lang@msd.com\", role = \"aut\"), person(\"Christian\", \"Stock\", , \"christian.stock@boehringer-ingelheim.com\", role = \"aut\"), person(\"Ya\", \"Wang\", , \"ya.wang10@gilead.com\", role = \"aut\"), person(\"Craig\", \"Gower-Page\", , \"craig.gower-page@roche.com\", role = \"ctb\"), person(\"Dan\", \"James\", , \"dan.james@astrazeneca.com\", role = \"aut\"), person(\"Jonathan\", \"Sidi\", , \"yoni@pinpointstrategies.io\", role = \"aut\"), person(\"Daniel\", \"Leibovitz\", , \"daniel.leibovitz@roche.com\", role = \"aut\"), person(\"Daniel D.\", \"Sjoberg\", , \"sjobergd@gene.com\", role = \"aut\", comment = c(ORCID = \"0000-0003-0862-2018\")), person(\"Lukas A.\", \"Widmer\", role = \"ctb\", comment = c(ORCID = \"0000-0003-1471-3493\")), person(\"Boehringer Ingelheim Ltd.\", role = c(\"cph\", \"fnd\")), person(\"Gilead Sciences, Inc.\", role = c(\"cph\", \"fnd\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")), person(\"Merck Sharp & Dohme, Inc.\", role = c(\"cph\", \"fnd\")), person(\"AstraZeneca plc\", role = c(\"cph\", \"fnd\")), person(\"inferential.biostatistics GmbH\", role = c(\"cph\", \"fnd\")) )",
+      "Authors@R": "c( person(\"Daniel\", \"Sabanes Bove\", , \"daniel.sabanes_bove@rconis.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-0176-9239\")), person(\"Liming\", \"Li\", , \"liming.li1@astrazeneca.com\", role = \"aut\", comment = c(ORCID = \"0009-0008-6870-0878\")), person(\"Julia\", \"Dedic\", , \"julia.dedic@roche.com\", role = \"aut\"), person(\"Doug\", \"Kelkhoff\", , \"doug.kelkhoff@roche.com\", role = \"aut\"), person(\"Kevin\", \"Kunzmann\", , \"kevin.kunzmann@boehringer-ingelheim.com\", role = \"aut\"), person(\"Brian Matthew\", \"Lang\", , \"brian.lang@msd.com\", role = \"aut\"), person(\"Christian\", \"Stock\", , \"christian.stock@boehringer-ingelheim.com\", role = \"aut\"), person(\"Ya\", \"Wang\", , \"ya.wang10@gilead.com\", role = \"aut\"), person(\"Craig\", \"Gower-Page\", , \"craig.gower-page@roche.com\", role = \"ctb\"), person(\"Dan\", \"James\", , \"dan.james@astrazeneca.com\", role = \"aut\"), person(\"Jonathan\", \"Sidi\", , \"yoni@pinpointstrategies.io\", role = \"aut\"), person(\"Daniel\", \"Leibovitz\", , \"daniel.leibovitz@roche.com\", role = \"aut\"), person(\"Daniel D.\", \"Sjoberg\", , \"sjobergd@gene.com\", role = \"aut\", comment = c(ORCID = \"0000-0003-0862-2018\")), person(\"Lukas A.\", \"Widmer\", role = \"ctb\", comment = c(ORCID = \"0000-0003-1471-3493\")), person(\"Boehringer Ingelheim Ltd.\", role = c(\"cph\", \"fnd\")), person(\"Gilead Sciences, Inc.\", role = c(\"cph\", \"fnd\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")), person(\"Merck Sharp & Dohme, Inc.\", role = c(\"cph\", \"fnd\")), person(\"AstraZeneca plc\", role = c(\"cph\", \"fnd\")), person(\"inferential.biostatistics GmbH\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Mixed models for repeated measures (MMRM) are a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials and beyond; see Cnaan, Laird and Slasor (1997) <doi:10.1002/(SICI)1097-0258(19971030)16:20%3C2349::AID-SIM667%3E3.0.CO;2-E> for a tutorial and Mallinckrodt, Lane, Schnell, Peng and Mancuso (2008) <doi:10.1177/009286150804200402> for a review. This package implements MMRM based on the marginal linear model without random effects using Template Model Builder ('TMB') which enables fast and robust model fitting. Users can specify a variety of covariance matrices, weight observations, fit models with restricted or standard maximum likelihood inference, perform hypothesis testing with Satterthwaite or Kenward-Roger adjustment, and extract least square means estimates by using 'emmeans'.",
       "License": "Apache License 2.0",
       "URL": "https://openpharma.github.io/mmrm/",
@@ -4403,14 +4435,14 @@
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.2",
       "Collate": "'between-within.R' 'catch-routine-registration.R' 'component.R' 'cov_struct.R' 'data.R' 'empirical.R' 'fit.R' 'kenwardroger.R' 'mmrm-methods.R' 'mmrm-package.R' 'utils.R' 'residual.R' 'utils-nse.R' 'utils-formula.R' 'satterthwaite.R' 'skipping.R' 'tidiers.R' 'testing.R' 'tmb-methods.R' 'tmb.R' 'interop-emmeans.R' 'interop-parsnip.R' 'interop-car.R' 'zzz.R'",
-      "Author": "Daniel Sabanes Bove [aut, cre] (<https://orcid.org/0000-0002-0176-9239>), Liming Li [aut], Julia Dedic [aut], Doug Kelkhoff [aut], Kevin Kunzmann [aut], Brian Matthew Lang [aut], Christian Stock [aut], Ya Wang [aut], Craig Gower-Page [ctb], Dan James [aut], Jonathan Sidi [aut], Daniel Leibovitz [aut], Daniel D. Sjoberg [aut] (<https://orcid.org/0000-0003-0862-2018>), Lukas A. Widmer [ctb] (<https://orcid.org/0000-0003-1471-3493>), Boehringer Ingelheim Ltd. [cph, fnd], Gilead Sciences, Inc. [cph, fnd], F. Hoffmann-La Roche AG [cph, fnd], Merck Sharp & Dohme, Inc. [cph, fnd], AstraZeneca plc [cph, fnd], inferential.biostatistics GmbH [cph, fnd]",
+      "Author": "Daniel Sabanes Bove [aut, cre] (<https://orcid.org/0000-0002-0176-9239>), Liming Li [aut] (<https://orcid.org/0009-0008-6870-0878>), Julia Dedic [aut], Doug Kelkhoff [aut], Kevin Kunzmann [aut], Brian Matthew Lang [aut], Christian Stock [aut], Ya Wang [aut], Craig Gower-Page [ctb], Dan James [aut], Jonathan Sidi [aut], Daniel Leibovitz [aut], Daniel D. Sjoberg [aut] (<https://orcid.org/0000-0003-0862-2018>), Lukas A. Widmer [ctb] (<https://orcid.org/0000-0003-1471-3493>), Boehringer Ingelheim Ltd. [cph, fnd], Gilead Sciences, Inc. [cph, fnd], F. Hoffmann-La Roche AG [cph, fnd], Merck Sharp & Dohme, Inc. [cph, fnd], AstraZeneca plc [cph, fnd], inferential.biostatistics GmbH [cph, fnd]",
       "Maintainer": "Daniel Sabanes Bove <daniel.sabanes_bove@rconis.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "b2e4b36fe8f2db3196fce5166294955333ab6cdb"
+      "RemoteSha": "7d27878b1772b305b8e63ad809c2b8a7e8f7538d"
     },
     "modelr": {
       "Package": "modelr",
@@ -4689,17 +4721,16 @@
     },
     "nloptr": {
       "Package": "nloptr",
-      "Version": "2.1.1",
+      "Version": "2.2.1",
       "Source": "Repository",
       "Type": "Package",
       "Title": "R Interface to NLopt",
-      "Authors@R": "c(person(\"Jelmer\", \"Ypma\", role = \"aut\", email = \"uctpjyy@ucl.ac.uk\"), person(c(\"Steven\", \"G.\"), \"Johnson\", role = \"aut\", comment = \"author of the NLopt C library\"), person(\"Aymeric\", \"Stamm\", role = c(\"ctb\", \"cre\"), email = \"aymeric.stamm@cnrs.fr\", comment = c(ORCID = \"0000-0002-8725-3654\")), person(c(\"Hans\", \"W.\"), \"Borchers\", role = \"ctb\", email = \"hwborchers@googlemail.com\"), person(\"Dirk\", \"Eddelbuettel\", role = \"ctb\", email = \"edd@debian.org\"), person(\"Brian\", \"Ripley\", role = \"ctb\", comment = \"build process on multiple OS\"), person(\"Kurt\", \"Hornik\", role = \"ctb\", comment = \"build process on multiple OS\"), person(\"Julien\", \"Chiquet\", role = \"ctb\"), person(\"Avraham\", \"Adler\", role = \"ctb\",  email = \"Avraham.Adler@gmail.com\", comment = c(ORCID = \"0000-0002-3039-0703\")), person(\"Xiongtao\", \"Dai\", role = \"ctb\"), person(\"Jeroen\", \"Ooms\", role = \"ctb\", email = \"jeroen@berkeley.edu\"))",
+      "Authors@R": "c(person(\"Jelmer\", \"Ypma\", role = \"aut\", email = \"uctpjyy@ucl.ac.uk\"), person(c(\"Steven\", \"G.\"), \"Johnson\", role = \"aut\", comment = \"author of the NLopt C library\"), person(\"Aymeric\", \"Stamm\", role = c(\"ctb\", \"cre\"), email = \"aymeric.stamm@cnrs.fr\", comment = c(ORCID = \"0000-0002-8725-3654\")), person(c(\"Hans\", \"W.\"), \"Borchers\", role = \"ctb\", email = \"hwborchers@googlemail.com\"), person(\"Dirk\", \"Eddelbuettel\", role = \"ctb\", email = \"edd@debian.org\"), person(\"Brian\", \"Ripley\", role = \"ctb\", comment = \"build process on multiple OS\"), person(\"Kurt\", \"Hornik\", role = \"ctb\", comment = \"build process on multiple OS\"), person(\"Julien\", \"Chiquet\", role = \"ctb\"), person(\"Avraham\", \"Adler\", role = \"ctb\",  email = \"Avraham.Adler@gmail.com\", comment = c(ORCID = \"0000-0002-3039-0703\")), person(\"Xiongtao\", \"Dai\", role = \"ctb\"), person(\"Jeroen\", \"Ooms\", role = \"ctb\", email = \"jeroen@berkeley.edu\"), person(\"Tomas\", \"Kalibera\", role = \"ctb\"), person(\"Mikael\", \"Jagan\", role = \"ctb\"))",
       "Description": "Solve optimization problems using an R interface to NLopt. NLopt is a  free/open-source library for nonlinear optimization, providing a common interface for a number of different free optimization routines available online as well as original implementations of various other algorithms. See <https://nlopt.readthedocs.io/en/latest/NLopt_Algorithms/> for more information on the available algorithms. Building from included sources  requires 'CMake'. On Linux and 'macOS', if a suitable system build of  NLopt (2.7.0 or later) is found, it is used; otherwise, it is built  from included sources via 'CMake'. On Windows, NLopt is obtained through  'rwinlib' for 'R <= 4.1.x' or grabbed from the appropriate toolchain for 'R >= 4.2.0'.",
       "License": "LGPL (>= 3)",
       "SystemRequirements": "cmake (>= 3.2.0) which is used only on Linux or macOS systems when no system build of nlopt (>= 2.7.0) can be found.",
-      "Biarch": "true",
       "Encoding": "UTF-8",
-      "RoxygenNote": "7.3.1",
+      "RoxygenNote": "7.3.2",
       "Suggests": [
         "knitr",
         "rmarkdown",
@@ -4710,9 +4741,10 @@
       "URL": "https://github.com/astamm/nloptr, https://astamm.github.io/nloptr/",
       "BugReports": "https://github.com/astamm/nloptr/issues",
       "NeedsCompilation": "yes",
-      "Author": "Jelmer Ypma [aut], Steven G. Johnson [aut] (author of the NLopt C library), Aymeric Stamm [ctb, cre] (<https://orcid.org/0000-0002-8725-3654>), Hans W. Borchers [ctb], Dirk Eddelbuettel [ctb], Brian Ripley [ctb] (build process on multiple OS), Kurt Hornik [ctb] (build process on multiple OS), Julien Chiquet [ctb], Avraham Adler [ctb] (<https://orcid.org/0000-0002-3039-0703>), Xiongtao Dai [ctb], Jeroen Ooms [ctb]",
+      "UseLTO": "yes",
+      "Author": "Jelmer Ypma [aut], Steven G. Johnson [aut] (author of the NLopt C library), Aymeric Stamm [ctb, cre] (<https://orcid.org/0000-0002-8725-3654>), Hans W. Borchers [ctb], Dirk Eddelbuettel [ctb], Brian Ripley [ctb] (build process on multiple OS), Kurt Hornik [ctb] (build process on multiple OS), Julien Chiquet [ctb], Avraham Adler [ctb] (<https://orcid.org/0000-0002-3039-0703>), Xiongtao Dai [ctb], Jeroen Ooms [ctb], Tomas Kalibera [ctb], Mikael Jagan [ctb]",
       "Maintainer": "Aymeric Stamm <aymeric.stamm@cnrs.fr>",
-      "Repository": "RSPM"
+      "Repository": "BioC.CRAN"
     },
     "nnet": {
       "Package": "nnet",
@@ -5497,13 +5529,13 @@
     },
     "quantreg": {
       "Package": "quantreg",
-      "Version": "6.00",
+      "Version": "6.1",
       "Source": "Repository",
       "Title": "Quantile Regression",
       "Description": "Estimation and inference methods for models for conditional quantile functions:  Linear and nonlinear parametric and non-parametric (total variation penalized) models  for conditional quantiles of a univariate response and several methods for handling censored survival data.  Portfolio selection methods based on expected shortfall risk are also now included. See Koenker, R. (2005) Quantile Regression, Cambridge U. Press, <doi:10.1017/CBO9780511754098> and Koenker, R. et al. (2017) Handbook of Quantile Regression,  CRC Press, <doi:10.1201/9781315120256>.",
       "Authors@R": "c( person(\"Roger\", \"Koenker\",  role = c(\"cre\",\"aut\"), email =  \"rkoenker@illinois.edu\"), person(\"Stephen\", \"Portnoy\",  role = c(\"ctb\"),  comment = \"Contributions to Censored QR code\", email =  \"sportnoy@illinois.edu\"), person(c(\"Pin\", \"Tian\"), \"Ng\",  role = c(\"ctb\"),  comment = \"Contributions to Sparse QR code\", email =  \"pin.ng@nau.edu\"), person(\"Blaise\", \"Melly\",  role = c(\"ctb\"),  comment = \"Contributions to preprocessing code\", email =  \"mellyblaise@gmail.com\"), person(\"Achim\", \"Zeileis\",  role = c(\"ctb\"),  comment = \"Contributions to dynrq code essentially identical to his dynlm code\",  email =  \"Achim.Zeileis@uibk.ac.at\"), person(\"Philip\", \"Grosjean\",  role = c(\"ctb\"),  comment = \"Contributions to nlrq code\", email =  \"phgrosjean@sciviews.org\"), person(\"Cleve\", \"Moler\",  role = c(\"ctb\"),  comment = \"author of several linpack routines\"), person(\"Yousef\", \"Saad\",  role = c(\"ctb\"),  comment = \"author of sparskit2\"), person(\"Victor\", \"Chernozhukov\",  role = c(\"ctb\"),  comment = \"contributions to extreme value inference code\"), person(\"Ivan\", \"Fernandez-Val\",  role = c(\"ctb\"),  comment = \"contributions to extreme value inference code\"), person(\"Martin\", \"Maechler\", role = \"ctb\", comment = c(\"tweaks (src/chlfct.f, 'tiny','Large')\", ORCID = \"0000-0002-8685-9910\")), person(c(\"Brian\", \"D\"), \"Ripley\",  role = c(\"trl\",\"ctb\"),  comment = \"Initial (2001) R port from S (to my everlasting shame --  how could I have been so slow to adopt R!) and for numerous other  suggestions and useful advice\", email =  \"ripley@stats.ox.ac.uk\"))",
       "Maintainer": "Roger Koenker <rkoenker@illinois.edu>",
-      "Repository": "RSPM",
+      "Repository": "CRAN",
       "Depends": [
         "R (>= 3.5)",
         "stats",
@@ -5759,7 +5791,7 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.1.1",
+      "Version": "1.1.2",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Project Environments",
@@ -5808,7 +5840,7 @@
       "NeedsCompilation": "no",
       "Author": "Kevin Ushey [aut, cre] (<https://orcid.org/0000-0003-2880-7407>), Hadley Wickham [aut] (<https://orcid.org/0000-0003-4757-117X>), Posit Software, PBC [cph, fnd]",
       "Maintainer": "Kevin Ushey <kevin@rstudio.com>",
-      "Repository": "RSPM"
+      "Repository": "CRAN"
     },
     "rlang": {
       "Package": "rlang",
@@ -5992,10 +6024,10 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.11.9007",
+      "Version": "0.6.11.9012",
       "Source": "GitHub",
       "Title": "Reporting Tables",
-      "Date": "2025-02-24",
+      "Date": "2025-03-14",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"Original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Daniel\", \"Sabanés Bové\", , \"daniel.sabanes_bove@roche.com\", role = \"ctb\"), person(\"Maximilian\", \"Mordig\", , \"maximilian_oliver.mordig@roche.com\", role = \"ctb\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\"), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\"), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\"), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Reporting tables often have structure that goes beyond simple rectangular data. The 'rtables' package provides a framework for declaring complex multi-level tabulations and then applying them to data. This framework models both tabulation and the resulting tables as hierarchical, tree-like objects which support sibling sub-tables, arbitrary splitting or grouping of data in row and column dimensions, cells containing multiple values, and the concept of contextual summary computations. A convenient pipe-able interface is provided for declaring table layouts and the corresponding computations, and then applying them to data.",
       "License": "Apache License 2.0 | file LICENSE",
@@ -6044,7 +6076,8 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "aece54c627d09209970f829291e21c2c6dbf5f53"
+      "RemoteSha": "5769787ebdb1d952cf50708fba42f641fc19d478",
+      "Remotes": "insightsengineering/formatters@main"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
@@ -6810,11 +6843,11 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.16.0.9000",
+      "Version": "0.16.0.9003",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Exploratory Web Apps for Analyzing Clinical Trials Data",
-      "Date": "2025-02-24",
+      "Date": "2025-03-11",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\"), person(\"Vedha\", \"Viyash\", , \"vedha.viyash@roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"Tadeusz\", \"Lewandowski\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")), person(\"Maximilian\", \"Mordig\", role = \"ctb\") )",
       "Description": "A 'shiny' based interactive exploration framework for analyzing clinical trials data. 'teal' currently provides a dynamic filtering facility and different data viewers. 'teal' 'shiny' applications are built using standard 'shiny' modules.",
       "License": "Apache License 2.0",
@@ -6824,9 +6857,11 @@
         "R (>= 4.1)",
         "shiny (>= 1.8.1)",
         "teal.data (>= 0.7.0)",
-        "teal.slice (>= 0.6.0)"
+        "teal.slice (>= 0.6.0.9001)"
       ],
       "Imports": [
+        "bsicons",
+        "bslib (>= 0.8.0)",
         "checkmate (>= 2.1.0)",
         "cli",
         "htmltools",
@@ -6839,13 +6874,12 @@
         "stats",
         "teal.code (>= 0.6.1)",
         "teal.logger (>= 0.3.2)",
-        "teal.reporter (>= 0.4.0)",
-        "teal.widgets (>= 0.4.3)",
+        "teal.reporter (>= 0.4.0.9004)",
+        "teal.widgets (>= 0.4.3.9001)",
         "tools",
         "utils"
       ],
       "Suggests": [
-        "bslib",
         "ggplot2 (>= 3.4.0)",
         "knitr (>= 1.42)",
         "mirai (>= 1.1.1)",
@@ -6878,7 +6912,8 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "e8373eef279e459049b0fd2f3eac390c9bbb51c8"
+      "RemoteSha": "7458d67d72afbe5d5bfa4dd4f646ce80190e6385",
+      "Remotes": "insightsengineering/teal.reporter@main, insightsengineering/teal.slice@main, insightsengineering/teal.widgets@main"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -7027,10 +7062,10 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.9.1.9068",
+      "Version": "0.10.0.9001",
       "Source": "GitHub",
       "Title": "'teal' Modules for Standard Clinical Outputs",
-      "Date": "2025-02-24",
+      "Date": "2025-03-11",
       "Authors@R": "c( person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"Jana\", \"Stoilova\", , \"jana.stoilova@roche.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\"), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\"), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Rosemary\", \"Li\", , \"li.yaqiong@gene.com\", role = \"aut\"), person(\"Heng\", \"Wang\", , \"wang.heng@gene.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Vaakesan\", \"Sundrelingam\", role = \"ctb\"), person(\"Francois\", \"Collin\", role = \"ctb\"), person(\"Imanol\", \"Zubizarreta\", role = \"ctb\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Provides user-friendly tools for creating and customizing clinical trial reports. By leveraging the 'teal' framework, this package provides 'teal' modules to easily create an interactive panel that allows for seamless adjustments to data presentation, thereby streamlining the creation of detailed and accurate reports.",
       "License": "Apache License 2.0",
@@ -7038,12 +7073,13 @@
       "BugReports": "https://github.com/insightsengineering/teal.modules.clinical/issues",
       "Depends": [
         "R (>= 4.0)",
-        "teal (>= 0.16.0)",
+        "teal (>= 0.16.0.9002)",
         "teal.transform (>= 0.6.0)",
         "tern (>= 0.9.7)"
       ],
       "Imports": [
         "broom (>= 0.7.10)",
+        "bslib (>= 0.8.0)",
         "checkmate (>= 2.1.0)",
         "cowplot (>= 0.7.0)",
         "dplyr (>= 1.0.5)",
@@ -7062,11 +7098,11 @@
         "shinyvalidate",
         "shinyWidgets (>= 0.5.1)",
         "stats",
-        "teal.code (>= 0.6.0)",
+        "teal.code (>= 0.6.1)",
         "teal.data (>= 0.7.0)",
-        "teal.logger (>= 0.3.1)",
-        "teal.reporter (>= 0.4.0)",
-        "teal.widgets (>= 0.4.3)",
+        "teal.logger (>= 0.3.2)",
+        "teal.reporter (>= 0.4.0.9004)",
+        "teal.widgets (>= 0.4.3.9001)",
         "tern.gee (>= 0.1.5)",
         "tern.mmrm (>= 0.3.1)",
         "utils",
@@ -7102,15 +7138,16 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "8bd5c56ef2b54124d2963359daf8bf8fe053b180"
+      "RemoteSha": "f2558446d32a6d26b9de9afac26f42eb18c0da68",
+      "Remotes": "insightsengineering/teal.reporter@main, insightsengineering/teal.widgets@main, insightsengineering/teal@main"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.3.0.9090",
+      "Version": "0.4.0.9001",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "General Modules for 'teal' Applications",
-      "Date": "2025-02-24",
+      "Date": "2025-03-11",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Ondrej\", \"Slama\", , \"ondrej.slama@roche.com\", role = \"ctb\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for viewing data, visualizing data, understanding missing and outlier values within your data and performing simple data analysis.  This extends 'teal' framework that supports reproducible research and analysis.",
       "License": "Apache License 2.0",
@@ -7121,10 +7158,11 @@
         "ggplot2 (>= 3.4.0)",
         "R (>= 4.1)",
         "shiny (>= 1.6.0)",
-        "teal (>= 0.16.0)",
+        "teal (>= 0.16.0.9002)",
         "teal.transform (>= 0.6.0)"
       ],
       "Imports": [
+        "bslib (>= 0.8.0)",
         "checkmate (>= 2.1.0)",
         "colourpicker (>= 1.3.0)",
         "dplyr (>= 1.0.5)",
@@ -7142,8 +7180,8 @@
         "jsonlite (>= 1.8.9)",
         "lattice (>= 0.18-4)",
         "lifecycle (>= 0.2.0)",
-        "MASS (>= 7.3-61)",
-        "rtables (>= 0.6.8)",
+        "MASS (>= 7.3-60)",
+        "rtables (>= 0.6.11)",
         "scales (>= 1.3.0)",
         "shinyjs (>= 2.1.0)",
         "shinyTree (>= 0.2.8)",
@@ -7152,12 +7190,12 @@
         "sparkline (>= 2.0)",
         "stats",
         "stringr (>= 1.4.1)",
-        "teal.code (>= 0.6.0)",
+        "teal.code (>= 0.6.1)",
         "teal.data (>= 0.7.0)",
-        "teal.logger (>= 0.3.1)",
-        "teal.reporter (>= 0.4.0)",
-        "teal.widgets (>= 0.4.3)",
-        "tern (>= 0.9.5)",
+        "teal.logger (>= 0.3.2)",
+        "teal.reporter (>= 0.4.0.9004)",
+        "teal.widgets (>= 0.4.3.9001)",
+        "tern (>= 0.9.7)",
         "tibble (>= 2.0.0)",
         "tidyr (>= 0.8.3)",
         "tools",
@@ -7191,21 +7229,22 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "690b32bebf06c641f2d0d5a757d48f06ac5cf3f0"
+      "RemoteSha": "d3e9699f22cea2d2527874fa74509b046bdbdfa6",
+      "Remotes": "insightsengineering/teal.reporter@main, insightsengineering/teal.widgets@main, insightsengineering/teal@main"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.4.0.9003",
+      "Version": "0.4.0.9004",
       "Source": "GitHub",
       "Title": "Reporting Tools for 'shiny' Modules",
-      "Date": "2025-01-31",
+      "Date": "2025-03-11",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0005-1258-4757\")), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for the generation of 'rmarkdown' reports, supporting reproducible research and analysis.",
       "License": "Apache License 2.0",
       "URL": "https://github.com/insightsengineering/teal.reporter, https://insightsengineering.github.io/teal.reporter/",
       "BugReports": "https://github.com/insightsengineering/teal.reporter/issues",
       "Imports": [
-        "bslib",
+        "bslib (>= 0.8.0)",
         "checkmate (>= 2.1.0)",
         "flextable (>= 0.9.2)",
         "grid",
@@ -7250,15 +7289,15 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "b19bdd307fe24c9678a984beb57bc6e9e5c1643f"
+      "RemoteSha": "204f2672fc6acb80999aa289de0f33340ad8e4c0"
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.6.0.9000",
+      "Version": "0.6.0.9002",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Filter Module for 'teal' Applications",
-      "Date": "2025-02-04",
+      "Date": "2025-03-14",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"Andrew\", \"Bates\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Data filtering module for 'teal' applications.  Allows for interactive filtering of data stored in 'data.frame' and 'MultiAssayExperiment' objects. Also displays filtered and unfiltered observation counts.",
       "License": "Apache License 2.0",
@@ -7268,7 +7307,8 @@
         "R (>= 4.0)"
       ],
       "Imports": [
-        "bslib (>= 0.4.0)",
+        "bsicons",
+        "bslib (>= 0.8.0)",
         "checkmate (>= 2.1.0)",
         "dplyr (>= 1.0.5)",
         "grDevices",
@@ -7313,7 +7353,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "7f261e0e59a95c29dd511ef64099c53c9617baf4"
+      "RemoteSha": "168a0170e384b9e6eb97538b9555e1f92b3421ec"
     },
     "teal.transform": {
       "Package": "teal.transform",
@@ -7374,10 +7414,10 @@
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.3.9000",
+      "Version": "0.4.3.9001",
       "Source": "GitHub",
       "Title": "'shiny' Widgets for 'teal' Applications",
-      "Date": "2025-01-31",
+      "Date": "2025-03-11",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Collection of 'shiny' widgets to support 'teal' applications. Enables the manipulation of application layout and plot or table settings.",
       "License": "Apache License 2.0",
@@ -7429,21 +7469,21 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "ec4a5eed3915e4fa905a45e28b38ca13e78d09ac"
+      "RemoteSha": "b9fc8170dc4cb851e44d340910055d97eecfcd28"
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.7.9008",
+      "Version": "0.9.7.9017",
       "Source": "GitHub",
       "Title": "Create Common TLGs Used in Clinical Trials",
-      "Date": "2025-02-24",
+      "Date": "2025-03-13",
       "Authors@R": "c( person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\")), person(\"Daniel\", \"Sabanés Bové\", , \"daniel.sabanes_bove@roche.com\", role = \"aut\"), person(\"Jana\", \"Stoilova\", , \"jana.stoilova@roche.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\"), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\"), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"aut\"), person(\"Heng\", \"Wang\", , \"wang.heng@gene.com\", role = \"aut\"), person(\"Francois\", \"Collin\", role = \"aut\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"aut\"), person(\"Jennifer\", \"Li\", , \"li.jing@gene.com\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Table, Listings, and Graphs (TLG) library for common outputs used in clinical trials.",
       "License": "Apache License 2.0",
       "URL": "https://insightsengineering.github.io/tern/, https://github.com/insightsengineering/tern/",
       "BugReports": "https://github.com/insightsengineering/tern/issues",
       "Depends": [
-        "R (>= 3.6)",
+        "R (>= 4.4.0)",
         "rtables (>= 0.6.11)"
       ],
       "Imports": [
@@ -7469,7 +7509,7 @@
         "rlang (>= 1.1.0)",
         "scales (>= 1.2.0)",
         "stats",
-        "survival (>= 3.6-4)",
+        "survival (>= 3.8-3)",
         "tibble (>= 2.0.0)",
         "tidyr (>= 0.8.3)",
         "utils"
@@ -7502,15 +7542,15 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "22e51e2c3270521f3729d32177a0d8a6be8b2cb7"
+      "RemoteSha": "00d657e532db955ffee6e7c76daa51409117dfa7"
     },
     "tern.gee": {
       "Package": "tern.gee",
-      "Version": "0.1.5.9007",
+      "Version": "0.1.5.9008",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Tables and Graphs for Generalized Estimating Equations (GEE) Model Fits",
-      "Date": "2025-02-21",
+      "Date": "2025-03-13",
       "Authors@R": "c( person(\"Daniel\", \"Sabanés Bové\", , \"daniel@rconis.com\", role = \"aut\"), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Generalized estimating equations (GEE) are a popular choice for analyzing longitudinal binary outcomes. This package provides an interface for fitting GEE, currently for logistic regression, within the 'tern' <https://cran.r-project.org/package=tern> framework (Zhu, Sabanés Bové et al., 2023) and tabulate results easily using 'rtables' <https://cran.r-project.org/package=rtables> (Becker, Waddell et al., 2023).  It builds on 'geepack' <doi:10.18637/jss.v015.i02> (Højsgaard, Halekoh and Yan, 2006) for the actual GEE model fitting.",
       "License": "Apache License 2.0",
@@ -7553,14 +7593,14 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.gee",
       "RemoteRef": "main",
-      "RemoteSha": "b226e7b69bf4e345f82ff4361d9a7d4b90338416"
+      "RemoteSha": "3eca3b92830e8e008ec9ba49ff4847a05cd89fe0"
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
-      "Version": "0.3.2.9004",
+      "Version": "0.3.2.9005",
       "Source": "GitHub",
       "Title": "Tables and Graphs for Mixed Models for Repeated Measures (MMRM)",
-      "Date": "2025-02-21",
+      "Date": "2025-03-14",
       "Authors@R": "c( person(\"Daniel\", \"Sabanés Bové\", , \"daniel@rconis.com\", role = \"aut\"), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"Godwin\", \"Yung\", , \"yungg@gene.com\", role = \"aut\"), person(\"Francois\", \"Collin\", role = \"aut\"), person(\"Julia\", \"Dedic\", , \"julia.dedic@roche.com\", role = \"aut\"), person(\"Jana\", \"Stoilova\", , \"jana.stoilova@roche.com\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Mixed models for repeated measures (MMRM) are a popular choice for analyzing longitudinal continuous outcomes in randomized clinical trials and beyond; see for example Cnaan, Laird and Slasor (1997) <doi:10.1002/(SICI)1097-0258(19971030)16:20%3C2349::AID-SIM667%3E3.0.CO;2-E>. This package provides an interface for fitting MMRM within the 'tern' <https://cran.r-project.org/package=tern> framework by Zhu et al. (2023) and tabulate results easily using 'rtables' <https://cran.r-project.org/package=rtables> by Becker et al. (2023). It builds on 'mmrm' <https://cran.r-project.org/package=mmrm> by Sabanés Bové et al. (2023) for the actual MMRM computations.",
       "License": "Apache License 2.0",
@@ -7615,7 +7655,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "80cbfe61acc24807f8757adccd6ec3cec50dad2a"
+      "RemoteSha": "f0b7373ff6f47450911613bbc75de1382664a61c"
     },
     "testthat": {
       "Package": "testthat",
@@ -7911,7 +7951,7 @@
     },
     "tinytex": {
       "Package": "tinytex",
-      "Version": "0.55",
+      "Version": "0.56",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Helper Functions to Install and Maintain TeX Live, and Compile LaTeX Documents",
@@ -7932,11 +7972,11 @@
       "NeedsCompilation": "no",
       "Author": "Yihui Xie [aut, cre, cph] (<https://orcid.org/0000-0003-0645-5666>), Posit Software, PBC [cph, fnd], Christophe Dervieux [ctb] (<https://orcid.org/0000-0003-4474-2498>), Devon Ryan [ctb] (<https://orcid.org/0000-0002-8549-0971>), Ethan Heinzen [ctb], Fernando Cagua [ctb]",
       "Maintainer": "Yihui Xie <xie@yihui.name>",
-      "Repository": "BioC.CRAN"
+      "Repository": "CRAN"
     },
     "tzdb": {
       "Package": "tzdb",
-      "Version": "0.4.0",
+      "Version": "0.5.0",
       "Source": "Repository",
       "Title": "Time Zone Database Information",
       "Authors@R": "c( person(\"Davis\", \"Vaughan\", , \"davis@posit.co\", role = c(\"aut\", \"cre\")), person(\"Howard\", \"Hinnant\", role = \"cph\", comment = \"Author of the included date library\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
@@ -7945,24 +7985,24 @@
       "URL": "https://tzdb.r-lib.org, https://github.com/r-lib/tzdb",
       "BugReports": "https://github.com/r-lib/tzdb/issues",
       "Depends": [
-        "R (>= 3.5.0)"
+        "R (>= 4.0.0)"
       ],
       "Suggests": [
         "covr",
         "testthat (>= 3.0.0)"
       ],
       "LinkingTo": [
-        "cpp11 (>= 0.4.2)"
+        "cpp11 (>= 0.5.2)"
       ],
       "Biarch": "yes",
       "Config/Needs/website": "tidyverse/tidytemplate",
       "Config/testthat/edition": "3",
       "Encoding": "UTF-8",
-      "RoxygenNote": "7.2.3",
+      "RoxygenNote": "7.3.2",
       "NeedsCompilation": "yes",
       "Author": "Davis Vaughan [aut, cre], Howard Hinnant [cph] (Author of the included date library), Posit Software, PBC [cph, fnd]",
       "Maintainer": "Davis Vaughan <davis@posit.co>",
-      "Repository": "RSPM"
+      "Repository": "BioC.CRAN"
     },
     "utf8": {
       "Package": "utf8",
@@ -8326,13 +8366,13 @@
     },
     "xml2": {
       "Package": "xml2",
-      "Version": "1.3.6",
+      "Version": "1.3.8",
       "Source": "Repository",
       "Title": "Parse XML",
-      "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\")), person(\"Jim\", \"Hester\", role = \"aut\"), person(\"Jeroen\", \"Ooms\", role = \"aut\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")), person(\"R Foundation\", role = \"ctb\", comment = \"Copy of R-project homepage cached as example\") )",
-      "Description": "Work with XML files using a simple, consistent interface. Built on top of the 'libxml2' C library.",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", role = \"aut\"), person(\"Jim\", \"Hester\", role = \"aut\"), person(\"Jeroen\", \"Ooms\", email = \"jeroenooms@gmail.com\", role = c(\"aut\", \"cre\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")), person(\"R Foundation\", role = \"ctb\", comment = \"Copy of R-project homepage cached as example\") )",
+      "Description": "Bindings to 'libxml2' for working with XML data using a simple,  consistent interface based on 'XPath' expressions. Also supports XML schema validation; for 'XSLT' transformations see the 'xslt' package.",
       "License": "MIT + file LICENSE",
-      "URL": "https://xml2.r-lib.org/, https://github.com/r-lib/xml2",
+      "URL": "https://xml2.r-lib.org, https://r-lib.r-universe.dev/xml2",
       "BugReports": "https://github.com/r-lib/xml2/issues",
       "Depends": [
         "R (>= 3.6.0)"
@@ -8350,7 +8390,8 @@
         "magrittr",
         "mockery",
         "rmarkdown",
-        "testthat (>= 3.0.0)"
+        "testthat (>= 3.2.0)",
+        "xslt"
       ],
       "VignetteBuilder": "knitr",
       "Config/Needs/website": "tidyverse/tidytemplate",
@@ -8360,9 +8401,9 @@
       "Collate": "'S4.R' 'as_list.R' 'xml_parse.R' 'as_xml_document.R' 'classes.R' 'format.R' 'import-standalone-obj-type.R' 'import-standalone-purrr.R' 'import-standalone-types-check.R' 'init.R' 'nodeset_apply.R' 'paths.R' 'utils.R' 'xml2-package.R' 'xml_attr.R' 'xml_children.R' 'xml_document.R' 'xml_find.R' 'xml_missing.R' 'xml_modify.R' 'xml_name.R' 'xml_namespaces.R' 'xml_node.R' 'xml_nodeset.R' 'xml_path.R' 'xml_schema.R' 'xml_serialize.R' 'xml_structure.R' 'xml_text.R' 'xml_type.R' 'xml_url.R' 'xml_write.R' 'zzz.R'",
       "Config/testthat/edition": "3",
       "NeedsCompilation": "yes",
-      "Author": "Hadley Wickham [aut, cre], Jim Hester [aut], Jeroen Ooms [aut], Posit Software, PBC [cph, fnd], R Foundation [ctb] (Copy of R-project homepage cached as example)",
-      "Maintainer": "Hadley Wickham <hadley@posit.co>",
-      "Repository": "RSPM"
+      "Author": "Hadley Wickham [aut], Jim Hester [aut], Jeroen Ooms [aut, cre], Posit Software, PBC [cph, fnd], R Foundation [ctb] (Copy of R-project homepage cached as example)",
+      "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
+      "Repository": "BioC.CRAN"
     },
     "xtable": {
       "Package": "xtable",
