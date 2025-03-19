@@ -2587,7 +2587,7 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.1.2",
+      "Version": "1.1.3",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Project Environments",
