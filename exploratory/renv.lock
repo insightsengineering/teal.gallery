@@ -4701,10 +4701,10 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.11.9015",
+      "Version": "0.6.11.9016",
       "Source": "GitHub",
       "Title": "Reporting Tables",
-      "Date": "2025-03-31",
+      "Date": "2025-04-02",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"Original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Daniel\", \"Sabanés Bové\", , \"daniel.sabanes_bove@roche.com\", role = \"ctb\"), person(\"Maximilian\", \"Mordig\", , \"maximilian_oliver.mordig@roche.com\", role = \"ctb\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\"), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\"), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\"), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Reporting tables often have structure that goes beyond simple rectangular data. The 'rtables' package provides a framework for declaring complex multi-level tabulations and then applying them to data. This framework models both tabulation and the resulting tables as hierarchical, tree-like objects which support sibling sub-tables, arbitrary splitting or grouping of data in row and column dimensions, cells containing multiple values, and the concept of contextual summary computations. A convenient pipe-able interface is provided for declaring table layouts and the corresponding computations, and then applying them to data.",
       "License": "Apache License 2.0 | file LICENSE",
@@ -4753,7 +4753,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "7b249a380f14741e7294268f64d1886235a6a8c1",
+      "RemoteSha": "0cdc507b2355d9963e22e41aef194757d6ed1ea0",
       "Remotes": "insightsengineering/formatters@main"
     },
     "rtables.officer": {
@@ -5716,11 +5716,11 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.4.0.9001",
+      "Version": "0.4.1.9000",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "General Modules for 'teal' Applications",
-      "Date": "2025-03-11",
+      "Date": "2025-04-01",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Ondrej\", \"Slama\", , \"ondrej.slama@roche.com\", role = \"ctb\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for viewing data, visualizing data, understanding missing and outlier values within your data and performing simple data analysis.  This extends 'teal' framework that supports reproducible research and analysis.",
       "License": "Apache License 2.0",
@@ -5802,7 +5802,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "d3e9699f22cea2d2527874fa74509b046bdbdfa6",
+      "RemoteSha": "e8dc0e83f90bdb0dc992de70014c3714a81f2c69",
       "Remotes": "insightsengineering/teal.reporter@main, insightsengineering/teal.widgets@main, insightsengineering/teal@main"
     },
     "teal.reporter": {
@@ -6540,7 +6540,7 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.51",
+      "Version": "0.52",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Supporting Functions for Packages Maintained by 'Yihui Xie'",
@@ -6564,18 +6564,15 @@
         "mime",
         "litedown (>= 0.4)",
         "commonmark",
-        "knitr (>= 1.47)",
+        "knitr (>= 1.50)",
         "remotes",
         "pak",
-        "rhub",
-        "renv",
         "curl",
         "xml2",
         "jsonlite",
         "magick",
         "yaml",
-        "qs",
-        "rmarkdown"
+        "qs"
       ],
       "License": "MIT + file LICENSE",
       "URL": "https://github.com/yihui/xfun",
