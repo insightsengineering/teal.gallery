@@ -8442,11 +8442,11 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.1.6.9033",
+      "Version": "0.2.0.9000",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "RNA-Seq Analysis Modules to Add to a Teal Application",
-      "Date": "2025-02-04",
+      "Date": "2025-04-03",
       "Authors@R": "c( person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"cre\"), person(\"Daniel\", \"Sabanés Bové\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Dinakar\", \"Kulkarni\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Namrata\", \"Bhatia\", role = \"aut\"), person(\"Dawid\", \"Kaledkowski\", role = \"aut\"), person(\"Pawel\", \"Rucki\", role = \"aut\"), person(\"Jeff\", \"Luong\", role = \"aut\"), person(\"Stefanie\", \"Bienert\", role = \"aut\"), person(\"Haocheng\", \"Li\", role = \"aut\"), person(\"Lyndsee Midori\", \"Zhang\", role = \"aut\"), person(\"Sorin\", \"Voicu\", role = \"ctb\"), person(\"Benoit\", \"Falquet\", role = \"ctb\"), person(\"Mahmoud\", \"Hallal\", role = \"ctb\"), person(\"Tim\", \"Treis\", role = \"ctb\"), person(\"Vedha\", \"Viyash\", role = \"ctb\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "RNA-seq analysis teal modules based on the `hermes` package.",
       "License": "Apache License 2.0 | file LICENSE",
@@ -8456,7 +8456,7 @@
         "ggplot2",
         "R (>= 4.1)",
         "shiny",
-        "teal (>= 0.15.2.9103)"
+        "teal (>= 0.16.0)"
       ],
       "Imports": [
         "checkmate",
@@ -8474,7 +8474,7 @@
         "stringr",
         "SummarizedExperiment (>= 1.36.0)",
         "teal.data (>= 0.7.0)",
-        "teal.logger (>= 0.3.1)",
+        "teal.logger (>= 0.3.2)",
         "teal.reporter (>= 0.4.0)",
         "teal.widgets (>= 0.4.3)",
         "tern (>= 0.9.7)",
@@ -8512,8 +8512,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "3935cadabbf3bab12fb4cd48c6078c5a888657c6",
-      "Remotes": "insightsengineering/hermes, insightsengineering/teal"
+      "RemoteSha": "52d8f16980d16fca45ee6558e558edcfc47decc7"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
