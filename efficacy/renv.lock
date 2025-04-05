@@ -6685,7 +6685,7 @@
     },
     "systemfonts": {
       "Package": "systemfonts",
-      "Version": "1.2.1",
+      "Version": "1.2.2",
       "Source": "Repository",
       "Type": "Package",
       "Title": "System Native Font Finding",
@@ -6724,7 +6724,7 @@
       "NeedsCompilation": "yes",
       "Author": "Thomas Lin Pedersen [aut, cre] (<https://orcid.org/0000-0002-5147-4711>), Jeroen Ooms [aut] (<https://orcid.org/0000-0002-4035-0289>), Devon Govett [aut] (Author of font-manager), Posit, PBC [cph, fnd]",
       "Maintainer": "Thomas Lin Pedersen <thomas.pedersen@posit.co>",
-      "Repository": "CRAN"
+      "Repository": "RSPM"
     },
     "teal": {
       "Package": "teal",
