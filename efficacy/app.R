@@ -12,12 +12,12 @@ data <- within(data, {
   library(sparkline)
 
   ADSL <- radsl(seed = 1)
-  adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
+  .adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
 
-  char_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.character)))
+  .char_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.character)))
 
-  adsl_labels <- c(
-    adsl_labels,
+  .adsl_labels <- c(
+    .adsl_labels,
     AGEGR1 = "Age Group"
   )
   ADSL <- ADSL %>%
@@ -27,19 +27,19 @@ data <- within(data, {
         AGE >= 45 ~ ">=45"
       ))
     ) %>%
-    mutate_at(char_vars_asl, factor)
+    mutate_at(.char_vars_asl, factor)
 
-  teal.data::col_labels(ADSL) <- adsl_labels
+  teal.data::col_labels(ADSL) <- .adsl_labels
 
   ADTTE <- radtte(ADSL, seed = 1)
 
   ADRS <- radrs(ADSL, seed = 1)
-  adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
+  .adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
   ADRS <- filter(ADRS, PARAMCD == "BESRSPI" | AVISIT == "FOLLOW UP")
-  teal.data::col_labels(ADRS) <- adrs_labels
+  teal.data::col_labels(ADRS) <- .adrs_labels
 
   ADQS <- radqs(ADSL, seed = 1)
-  adqs_labels <- teal.data::col_labels(ADQS, fill = FALSE)
+  .adqs_labels <- teal.data::col_labels(ADQS, fill = FALSE)
   ADQS <- ADQS %>%
     filter(ABLFL != "Y" & ABLFL2 != "Y") %>%
     filter(AVISIT %in% c("WEEK 1 DAY 8", "WEEK 2 DAY 15", "WEEK 3 DAY 22")) %>%
@@ -50,15 +50,11 @@ data <- within(data, {
         as.numeric() %>%
         as.factor()
     )
-  teal.data::col_labels(ADQS) <- adqs_labels
+  teal.data::col_labels(ADQS) <- .adqs_labels
 })
 
-# set datanames
-datanames <- c("ADSL", "ADTTE", "ADRS", "ADQS")
-datanames(data) <- datanames
-
 # set join_keys
-join_keys(data) <- default_cdisc_join_keys[datanames]
+join_keys(data) <- default_cdisc_join_keys[c("ADSL", "ADTTE", "ADRS", "ADQS")]
 
 ## Reusable Configuration For Modules
 ADSL <- data[["ADSL"]]
@@ -155,9 +151,6 @@ footer <- tags$p(
 ## Setup App
 app <- init(
   data = data,
-  title = build_app_title("Efficacy Analysis Teal Demo App", nest_logo),
-  header = header,
-  footer = footer,
   filter = teal_slices(
     count_type = "all",
     teal_slice(dataname = "ADSL", varname = "ITTFL", selected = "Y"),
@@ -303,6 +296,12 @@ app <- init(
       paramcd = cs_paramcd_qs
     )
   )
-)
+) |>
+  modify_title(
+    title = "Efficacy Analysis Teal Demo App",
+    favicon = nest_logo
+  ) |>
+  modify_header(header) |>
+  modify_footer(footer)
 
 shinyApp(app$ui, app$server)
