@@ -6819,7 +6819,7 @@
     },
     "ragg": {
       "Package": "ragg",
-      "Version": "1.3.3",
+      "Version": "1.4.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Graphic Devices Based on AGG",
@@ -6845,12 +6845,13 @@
       ],
       "Config/Needs/website": "ggplot2, devoid, magick, bench, tidyr, ggridges, hexbin, sessioninfo, pkgdown, tidyverse/tidytemplate",
       "Encoding": "UTF-8",
-      "RoxygenNote": "7.3.1",
+      "RoxygenNote": "7.3.2",
       "SystemRequirements": "freetype2, libpng, libtiff, libjpeg",
       "Config/testthat/edition": "3",
+      "Config/build/compilation-database": "true",
       "NeedsCompilation": "yes",
       "Author": "Thomas Lin Pedersen [cre, aut] (<https://orcid.org/0000-0002-5147-4711>), Maxim Shemanarev [aut, cph] (Author of AGG), Tony Juricic [ctb, cph] (Contributor to AGG), Milan Marusinec [ctb, cph] (Contributor to AGG), Spencer Garrett [ctb] (Contributor to AGG), Posit, PBC [cph, fnd]",
-      "Repository": "RSPM"
+      "Repository": "CRAN"
     },
     "random.cdisc.data": {
       "Package": "random.cdisc.data",
@@ -8437,11 +8438,11 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.2.0.9000",
+      "Version": "0.2.0.9001",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "RNA-Seq Analysis Modules to Add to a Teal Application",
-      "Date": "2025-04-03",
+      "Date": "2025-04-10",
       "Authors@R": "c( person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"cre\"), person(\"Daniel\", \"Sabanés Bové\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Dinakar\", \"Kulkarni\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Namrata\", \"Bhatia\", role = \"aut\"), person(\"Dawid\", \"Kaledkowski\", role = \"aut\"), person(\"Pawel\", \"Rucki\", role = \"aut\"), person(\"Jeff\", \"Luong\", role = \"aut\"), person(\"Stefanie\", \"Bienert\", role = \"aut\"), person(\"Haocheng\", \"Li\", role = \"aut\"), person(\"Lyndsee Midori\", \"Zhang\", role = \"aut\"), person(\"Sorin\", \"Voicu\", role = \"ctb\"), person(\"Benoit\", \"Falquet\", role = \"ctb\"), person(\"Mahmoud\", \"Hallal\", role = \"ctb\"), person(\"Tim\", \"Treis\", role = \"ctb\"), person(\"Vedha\", \"Viyash\", role = \"ctb\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "RNA-seq analysis teal modules based on the `hermes` package.",
       "License": "Apache License 2.0 | file LICENSE",
@@ -8454,6 +8455,7 @@
         "teal (>= 0.16.0)"
       ],
       "Imports": [
+        "bslib",
         "checkmate",
         "DT (>= 0.3)",
         "edgeR",
@@ -8507,7 +8509,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "52d8f16980d16fca45ee6558e558edcfc47decc7"
+      "RemoteSha": "99237204ab6293ec5a34e3c73cdcd8f9e24db114"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -9469,9 +9471,9 @@
     },
     "zoo": {
       "Package": "zoo",
-      "Version": "1.8-13",
+      "Version": "1.8-14",
       "Source": "Repository",
-      "Date": "2025-02-20",
+      "Date": "2025-04-09",
       "Title": "S3 Infrastructure for Regular and Irregular Time Series (Z's Ordered Observations)",
       "Authors@R": "c(person(given = \"Achim\", family = \"Zeileis\", role = c(\"aut\", \"cre\"), email = \"Achim.Zeileis@R-project.org\", comment = c(ORCID = \"0000-0003-0918-3766\")), person(given = \"Gabor\", family = \"Grothendieck\", role = \"aut\", email = \"ggrothendieck@gmail.com\"), person(given = c(\"Jeffrey\", \"A.\"), family = \"Ryan\", role = \"aut\", email = \"jeff.a.ryan@gmail.com\"), person(given = c(\"Joshua\", \"M.\"), family = \"Ulrich\", role = \"ctb\", email = \"josh.m.ulrich@gmail.com\"), person(given = \"Felix\", family = \"Andrews\", role = \"ctb\", email = \"felix@nfrac.org\"))",
       "Description": "An S3 class with methods for totally ordered indexed observations. It is particularly aimed at irregular time series of numeric vectors/matrices and factors. zoo's key design goals are independence of a particular index/date/time class and consistency with ts and base R by providing methods to extend standard generics.",
@@ -9483,7 +9485,7 @@
         "AER",
         "coda",
         "chron",
-        "ggplot2 (>= 3.0.0)",
+        "ggplot2 (>= 3.5.0)",
         "mondate",
         "scales",
         "stinepack",
