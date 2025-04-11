@@ -5577,7 +5577,7 @@
     },
     "ragg": {
       "Package": "ragg",
-      "Version": "1.3.3",
+      "Version": "1.4.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Graphic Devices Based on AGG",
@@ -5603,12 +5603,13 @@
       ],
       "Config/Needs/website": "ggplot2, devoid, magick, bench, tidyr, ggridges, hexbin, sessioninfo, pkgdown, tidyverse/tidytemplate",
       "Encoding": "UTF-8",
-      "RoxygenNote": "7.3.1",
+      "RoxygenNote": "7.3.2",
       "SystemRequirements": "freetype2, libpng, libtiff, libjpeg",
       "Config/testthat/edition": "3",
+      "Config/build/compilation-database": "true",
       "NeedsCompilation": "yes",
       "Author": "Thomas Lin Pedersen [cre, aut] (<https://orcid.org/0000-0002-5147-4711>), Maxim Shemanarev [aut, cph] (Author of AGG), Tony Juricic [ctb, cph] (Contributor to AGG), Milan Marusinec [ctb, cph] (Contributor to AGG), Spencer Garrett [ctb] (Contributor to AGG), Posit, PBC [cph, fnd]",
-      "Repository": "RSPM"
+      "Repository": "CRAN"
     },
     "random.cdisc.data": {
       "Package": "random.cdisc.data",
@@ -7073,10 +7074,10 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.10.0.9003",
+      "Version": "0.10.0.9004",
       "Source": "GitHub",
       "Title": "'teal' Modules for Standard Clinical Outputs",
-      "Date": "2025-04-07",
+      "Date": "2025-04-10",
       "Authors@R": "c( person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"Jana\", \"Stoilova\", , \"jana.stoilova@roche.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\"), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\"), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Rosemary\", \"Li\", , \"li.yaqiong@gene.com\", role = \"aut\"), person(\"Heng\", \"Wang\", , \"wang.heng@gene.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Vaakesan\", \"Sundrelingam\", role = \"ctb\"), person(\"Francois\", \"Collin\", role = \"ctb\"), person(\"Imanol\", \"Zubizarreta\", role = \"ctb\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Provides user-friendly tools for creating and customizing clinical trial reports. By leveraging the 'teal' framework, this package provides 'teal' modules to easily create an interactive panel that allows for seamless adjustments to data presentation, thereby streamlining the creation of detailed and accurate reports.",
       "License": "Apache License 2.0",
@@ -7149,7 +7150,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "b70725938d9ea76eaaf687917fc54923f8fcadf6",
+      "RemoteSha": "d54a73a9cc91da3dd46e80c9ee4bc63fba9cfd7d",
       "Remotes": "insightsengineering/teal.reporter@main, insightsengineering/teal.widgets@main, insightsengineering/teal@main, insightsengineering/tern@main"
     },
     "teal.modules.general": {
@@ -8528,9 +8529,9 @@
     },
     "zoo": {
       "Package": "zoo",
-      "Version": "1.8-13",
+      "Version": "1.8-14",
       "Source": "Repository",
-      "Date": "2025-02-20",
+      "Date": "2025-04-09",
       "Title": "S3 Infrastructure for Regular and Irregular Time Series (Z's Ordered Observations)",
       "Authors@R": "c(person(given = \"Achim\", family = \"Zeileis\", role = c(\"aut\", \"cre\"), email = \"Achim.Zeileis@R-project.org\", comment = c(ORCID = \"0000-0003-0918-3766\")), person(given = \"Gabor\", family = \"Grothendieck\", role = \"aut\", email = \"ggrothendieck@gmail.com\"), person(given = c(\"Jeffrey\", \"A.\"), family = \"Ryan\", role = \"aut\", email = \"jeff.a.ryan@gmail.com\"), person(given = c(\"Joshua\", \"M.\"), family = \"Ulrich\", role = \"ctb\", email = \"josh.m.ulrich@gmail.com\"), person(given = \"Felix\", family = \"Andrews\", role = \"ctb\", email = \"felix@nfrac.org\"))",
       "Description": "An S3 class with methods for totally ordered indexed observations. It is particularly aimed at irregular time series of numeric vectors/matrices and factors. zoo's key design goals are independence of a particular index/date/time class and consistency with ts and base R by providing methods to extend standard generics.",
@@ -8542,7 +8543,7 @@
         "AER",
         "coda",
         "chron",
-        "ggplot2 (>= 3.0.0)",
+        "ggplot2 (>= 3.5.0)",
         "mondate",
         "scales",
         "stinepack",
@@ -8565,7 +8566,7 @@
       "NeedsCompilation": "yes",
       "Author": "Achim Zeileis [aut, cre] (<https://orcid.org/0000-0003-0918-3766>), Gabor Grothendieck [aut], Jeffrey A. Ryan [aut], Joshua M. Ulrich [ctb], Felix Andrews [ctb]",
       "Maintainer": "Achim Zeileis <Achim.Zeileis@R-project.org>",
-      "Repository": "BioC.CRAN"
+      "Repository": "CRAN"
     }
   }
 }
