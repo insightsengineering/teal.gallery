@@ -6076,8 +6076,8 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables.officer",
-      "RemoteRef": "v0.1.0-rc1",
-      "RemoteSha": "767bc7bae21e2bf55a426479ac5c5e7baed864a3"
+      "RemoteRef": "v0.1.0-rc2",
+      "RemoteSha": "15242f69be50f0fd5ce627b6fcf7bae2713b3822"
     },
     "sandwich": {
       "Package": "sandwich",
