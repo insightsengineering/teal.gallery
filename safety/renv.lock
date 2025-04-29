@@ -4760,7 +4760,7 @@
     },
     "pbkrtest": {
       "Package": "pbkrtest",
-      "Version": "0.5.3",
+      "Version": "0.5.4",
       "Source": "Repository",
       "Title": "Parametric Bootstrap, Kenward-Roger and Satterthwaite Based Methods for Test in Mixed Models",
       "Authors@R": "c( person(given = \"Ulrich\", family = \"Halekoh\", email = \"uhalekoh@health.sdu.dk\", role = c(\"aut\", \"cph\")), person(given = \"Søren\", family = \"Højsgaard\", email = \"sorenh@math.aau.dk\", role = c(\"aut\", \"cre\", \"cph\")) )",
@@ -4778,7 +4778,7 @@
         "methods",
         "numDeriv",
         "Matrix (>= 1.2.3)",
-        "doBy"
+        "doBy (>= 4.6.22)"
       ],
       "Suggests": [
         "markdown",
@@ -4788,11 +4788,11 @@
       "VignetteBuilder": "knitr",
       "License": "GPL (>= 2)",
       "ByteCompile": "Yes",
-      "RoxygenNote": "7.3.1",
+      "RoxygenNote": "7.3.2",
       "LazyData": "true",
       "NeedsCompilation": "no",
       "Author": "Ulrich Halekoh [aut, cph], Søren Højsgaard [aut, cre, cph]",
-      "Repository": "RSPM"
+      "Repository": "CRAN"
     },
     "pillar": {
       "Package": "pillar",
