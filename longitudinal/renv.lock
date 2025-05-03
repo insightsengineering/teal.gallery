@@ -387,7 +387,7 @@
     },
     "R.cache": {
       "Package": "R.cache",
-      "Version": "0.16.0",
+      "Version": "0.17.0",
       "Source": "Repository",
       "Depends": [
         "R (>= 2.14.0)"
@@ -408,10 +408,9 @@
       "LazyLoad": "TRUE",
       "URL": "https://github.com/HenrikBengtsson/R.cache",
       "BugReports": "https://github.com/HenrikBengtsson/R.cache/issues",
-      "RoxygenNote": "7.2.1",
+      "Encoding": "UTF-8",
       "NeedsCompilation": "no",
-      "Repository": "RSPM",
-      "Encoding": "UTF-8"
+      "Repository": "CRAN"
     },
     "R.methodsS3": {
       "Package": "R.methodsS3",
@@ -441,7 +440,7 @@
     },
     "R.oo": {
       "Package": "R.oo",
-      "Version": "1.27.0",
+      "Version": "1.27.1",
       "Source": "Repository",
       "Depends": [
         "R (>= 2.13.0)",
@@ -461,11 +460,10 @@
       "Description": "Methods and classes for object-oriented programming in R with or without references.  Large effort has been made on making definition of methods as simple as possible with a minimum of maintenance for package developers.  The package has been developed since 2001 and is now considered very stable.  This is a cross-platform package implemented in pure R that defines standard S3 classes without any tricks.",
       "License": "LGPL (>= 2.1)",
       "LazyLoad": "TRUE",
-      "URL": "https://github.com/HenrikBengtsson/R.oo",
+      "URL": "https://henrikbengtsson.github.io/R.oo/, https://github.com/HenrikBengtsson/R.oo",
       "BugReports": "https://github.com/HenrikBengtsson/R.oo/issues",
       "NeedsCompilation": "no",
-      "Repository": "RSPM",
-      "Encoding": "UTF-8"
+      "Repository": "CRAN"
     },
     "R.utils": {
       "Package": "R.utils",
