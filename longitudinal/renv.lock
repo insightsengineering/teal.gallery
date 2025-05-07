@@ -4072,7 +4072,7 @@
     },
     "labelled": {
       "Package": "labelled",
-      "Version": "2.14.0",
+      "Version": "2.14.1",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Manipulating Labelled Data",
@@ -4115,8 +4115,8 @@
       "Config/testthat/edition": "3",
       "Config/Needs/check": "memisc",
       "NeedsCompilation": "no",
-      "Author": "Joseph Larmarange [aut, cre] (<https://orcid.org/0000-0001-7097-700X>), Daniel Ludecke [ctb], Hadley Wickham [ctb], Michal Bojanowski [ctb], François Briatte [ctb]",
-      "Repository": "RSPM"
+      "Author": "Joseph Larmarange [aut, cre] (ORCID: <https://orcid.org/0000-0001-7097-700X>), Daniel Ludecke [ctb], Hadley Wickham [ctb], Michal Bojanowski [ctb], François Briatte [ctb]",
+      "Repository": "CRAN"
     },
     "later": {
       "Package": "later",
