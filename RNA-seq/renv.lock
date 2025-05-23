@@ -8421,11 +8421,11 @@
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
-      "Version": "0.2.0.9003",
+      "Version": "0.2.0.9004",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "RNA-Seq Analysis Modules to Add to a Teal Application",
-      "Date": "2025-05-20",
+      "Date": "2025-05-23",
       "Authors@R": "c( person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"cre\"), person(\"Daniel\", \"Sabanés Bové\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Dinakar\", \"Kulkarni\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Namrata\", \"Bhatia\", role = \"aut\"), person(\"Dawid\", \"Kaledkowski\", role = \"aut\"), person(\"Pawel\", \"Rucki\", role = \"aut\"), person(\"Jeff\", \"Luong\", role = \"aut\"), person(\"Stefanie\", \"Bienert\", role = \"aut\"), person(\"Haocheng\", \"Li\", role = \"aut\"), person(\"Lyndsee Midori\", \"Zhang\", role = \"aut\"), person(\"Sorin\", \"Voicu\", role = \"ctb\"), person(\"Benoit\", \"Falquet\", role = \"ctb\"), person(\"Mahmoud\", \"Hallal\", role = \"ctb\"), person(\"Tim\", \"Treis\", role = \"ctb\"), person(\"Vedha\", \"Viyash\", role = \"ctb\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "RNA-seq analysis teal modules based on the `hermes` package.",
       "License": "Apache License 2.0 | file LICENSE",
@@ -8492,7 +8492,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.hermes",
       "RemoteRef": "main",
-      "RemoteSha": "3b82a81e74b8176e185548d76f16fd9cd6d638c8",
+      "RemoteSha": "f90a9d3f8db87882479b96275ecf0a1ca37fc121",
       "Remotes": "insightsengineering/teal.reporter@main, insightsengineering/teal.widgets@main, insightsengineering/teal@main"
     },
     "teal.reporter": {
@@ -8620,10 +8620,10 @@
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.6.0.9001",
+      "Version": "0.6.0.9002",
       "Source": "GitHub",
       "Title": "Functions for Extracting and Merging Data in the 'teal' Framework",
-      "Date": "2025-03-17",
+      "Date": "2025-05-23",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "A standardized user interface for column selection, that facilitates dataset merging in 'teal' framework.",
       "License": "Apache License 2.0",
@@ -8635,6 +8635,7 @@
       "Imports": [
         "checkmate (>= 2.1.0)",
         "dplyr (>= 1.1.0)",
+        "htmltools",
         "lifecycle (>= 0.2.0)",
         "logger (>= 0.2.0)",
         "methods",
@@ -8651,6 +8652,7 @@
         "utils"
       ],
       "Suggests": [
+        "bslib (>= 0.8.0)",
         "knitr (>= 1.42)",
         "rmarkdown (>= 2.23)",
         "roxy.shinylive (>= 1.0.0)",
@@ -8673,7 +8675,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.transform",
       "RemoteRef": "main",
-      "RemoteSha": "eebceece6338bdc8b83e4432723e9bd5424a0d3d",
+      "RemoteSha": "e928a893838cb06ae75884792b98c4a91492c2d9",
       "Remotes": "insightsengineering/teal.widgets"
     },
     "teal.widgets": {
