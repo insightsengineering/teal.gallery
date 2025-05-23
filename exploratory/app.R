@@ -311,7 +311,7 @@ app <- init(
       coord_flip = FALSE
     ),
     tm_g_scatterplotmatrix(
-      label = "Scatterplot matrix",
+      label = "Scatterplot Matrix",
       variables = adsl_extracted_multi
     ),
     tm_g_scatterplot(
