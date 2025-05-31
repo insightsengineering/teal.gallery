@@ -2124,7 +2124,7 @@
     },
     "officer": {
       "Package": "officer",
-      "Version": "0.6.9",
+      "Version": "0.6.10",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Manipulation of Microsoft Word and PowerPoint Documents",
