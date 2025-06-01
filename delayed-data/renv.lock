@@ -948,7 +948,7 @@
     },
     "flextable": {
       "Package": "flextable",
-      "Version": "0.9.8",
+      "Version": "0.9.9",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Functions for Tabular Reporting",
@@ -965,7 +965,7 @@
         "grid",
         "htmltools",
         "knitr",
-        "officer (>= 0.6.7)",
+        "officer (>= 0.6.10)",
         "ragg",
         "rlang",
         "rmarkdown (>= 2.0)",
