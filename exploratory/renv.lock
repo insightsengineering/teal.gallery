@@ -1298,7 +1298,7 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "6.2.3",
+      "Version": "6.3.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "A Modern and Flexible Web Client for R",
