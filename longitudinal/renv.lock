@@ -1857,7 +1857,7 @@
     },
     "data.table": {
       "Package": "data.table",
-      "Version": "1.17.4",
+      "Version": "1.17.6",
       "Source": "Repository",
       "Title": "Extension of `data.frame`",
       "Depends": [
@@ -6450,7 +6450,7 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.12.9003",
+      "Version": "0.6.12.9004",
       "Source": "GitHub",
       "Title": "Reporting Tables",
       "Date": "2025-06-17",
@@ -6463,7 +6463,7 @@
         "formatters (>= 0.5.11)",
         "magrittr (>= 1.5)",
         "methods",
-        "R (>= 3.3)"
+        "R (>= 4.1)"
       ],
       "Imports": [
         "checkmate (>= 2.1.0)",
@@ -6502,7 +6502,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "b846b098575a7b2913e87afa9ae2ccdaf69a042f"
+      "RemoteSha": "34b3f07ef32c4623b840ad2f07ee67ba19d93fb1"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
