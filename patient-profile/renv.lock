@@ -93,11 +93,11 @@
     },
     "Deriv": {
       "Package": "Deriv",
-      "Version": "4.1.6",
+      "Version": "4.2.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Symbolic Differentiation",
-      "Date": "2024-09-12",
+      "Date": "2025-06-20",
       "Authors@R": "c(person(given=\"Andrew\", family=\"Clausen\", role=\"aut\"), person(given=\"Serguei\", family=\"Sokol\", role=c(\"aut\", \"cre\"), email=\"sokol@insa-toulouse.fr\", comment = c(ORCID = \"0000-0002-5674-3327\")), person(given=\"Andreas\", family=\"Rappold\", role=\"ctb\", email=\"arappold@gmx.at\"))",
       "Description": "R-based solution for symbolic differentiation. It admits user-defined function as well as function substitution in arguments of functions to be differentiated. Some symbolic simplification is part of the work.",
       "License": "GPL (>= 3)",
@@ -109,8 +109,9 @@
       "Imports": [
         "methods"
       ],
+      "Encoding": "UTF-8",
       "NeedsCompilation": "no",
-      "Author": "Andrew Clausen [aut], Serguei Sokol [aut, cre] (<https://orcid.org/0000-0002-5674-3327>), Andreas Rappold [ctb]",
+      "Author": "Andrew Clausen [aut], Serguei Sokol [aut, cre] (ORCID: <https://orcid.org/0000-0002-5674-3327>), Andreas Rappold [ctb]",
       "Maintainer": "Serguei Sokol <sokol@insa-toulouse.fr>",
       "Repository": "CRAN"
     },
@@ -5862,10 +5863,10 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.12",
+      "Version": "0.6.13",
       "Source": "GitHub",
       "Title": "Reporting Tables",
-      "Date": "2025-04-10",
+      "Date": "2025-06-17",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"Original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Daniel\", \"Sabanés Bové\", , \"daniel.sabanes_bove@roche.com\", role = \"ctb\"), person(\"Maximilian\", \"Mordig\", , \"maximilian_oliver.mordig@roche.com\", role = \"ctb\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Reporting tables often have structure that goes beyond simple rectangular data. The 'rtables' package provides a framework for declaring complex multi-level tabulations and then applying them to data. This framework models both tabulation and the resulting tables as hierarchical, tree-like objects which support sibling sub-tables, arbitrary splitting or grouping of data in row and column dimensions, cells containing multiple values, and the concept of contextual summary computations. A convenient pipe-able interface is provided for declaring table layouts and the corresponding computations, and then applying them to data.",
       "License": "Apache License 2.0 | file LICENSE",
@@ -5875,7 +5876,7 @@
         "formatters (>= 0.5.11)",
         "magrittr (>= 1.5)",
         "methods",
-        "R (>= 3.3)"
+        "R (>= 4.1)"
       ],
       "Imports": [
         "checkmate (>= 2.1.0)",
@@ -5913,8 +5914,8 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
-      "RemoteRef": "v0.6.12",
-      "RemoteSha": "bd59a5cb88c837a04753eb6192e34e7382879bbb"
+      "RemoteRef": "v0.6.13",
+      "RemoteSha": "ae9f1db9cd8e997dfbad8eb9725aa343a6e1abc5"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
