@@ -2722,10 +2722,10 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.12.9004",
+      "Version": "0.6.13.9000",
       "Source": "GitHub",
       "Title": "Reporting Tables",
-      "Date": "2025-06-17",
+      "Date": "2025-06-20",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"Original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Daniel\", \"Sabanés Bové\", , \"daniel.sabanes_bove@roche.com\", role = \"ctb\"), person(\"Maximilian\", \"Mordig\", , \"maximilian_oliver.mordig@roche.com\", role = \"ctb\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Reporting tables often have structure that goes beyond simple rectangular data. The 'rtables' package provides a framework for declaring complex multi-level tabulations and then applying them to data. This framework models both tabulation and the resulting tables as hierarchical, tree-like objects which support sibling sub-tables, arbitrary splitting or grouping of data in row and column dimensions, cells containing multiple values, and the concept of contextual summary computations. A convenient pipe-able interface is provided for declaring table layouts and the corresponding computations, and then applying them to data.",
       "License": "Apache License 2.0 | file LICENSE",
@@ -2774,7 +2774,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "34b3f07ef32c4623b840ad2f07ee67ba19d93fb1"
+      "RemoteSha": "b080090fac1b4b4470bf172ce01c993dee5038db"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
@@ -3539,10 +3539,10 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.3.2.9000",
+      "Version": "0.3.2.9001",
       "Source": "GitHub",
       "Title": "Logging Setup for the 'teal' Family of Packages",
-      "Date": "2025-02-14",
+      "Date": "2025-06-20",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Utilizing the 'logger' framework to record events within a package, specific to 'teal' family of packages.  Supports logging namespaces, hierarchical logging, various log destinations, vectorization, and more.",
       "License": "Apache License 2.0",
@@ -3554,7 +3554,7 @@
       "Imports": [
         "glue (>= 1.0.0)",
         "lifecycle (>= 0.2.0)",
-        "logger (>= 0.3.0)",
+        "logger (>= 0.4.0)",
         "methods",
         "shiny (>= 1.6.0)",
         "utils",
@@ -3562,8 +3562,8 @@
       ],
       "Suggests": [
         "knitr (>= 1.42)",
-        "rmarkdown (>= 2.23)",
-        "testthat (>= 3.1.7)"
+        "rmarkdown (>= 2.27)",
+        "testthat (>= 3.2.3)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
       "RdMacros": "lifecycle",
@@ -3581,7 +3581,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "800a6511cecf11f2df99600d864abc3dd073654a"
+      "RemoteSha": "b98ca96becac9132bc3e728d449e6667d9fc4b8d"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
