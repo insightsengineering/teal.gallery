@@ -7304,18 +7304,18 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.8.433",
+      "Version": "0.9.9",
       "Source": "GitHub",
       "Title": "Create Common TLGs Used in Clinical Trials",
-      "Date": "2025-04-07",
+      "Date": "2025-06-18",
       "Authors@R": "c( person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"Daniel\", \"Sabanés Bové\", , \"daniel.sabanes_bove@roche.com\", role = \"aut\"), person(\"Jana\", \"Stoilova\", , \"jana.stoilova@roche.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Heng\", \"Wang\", , \"wang.heng@gene.com\", role = \"aut\"), person(\"Francois\", \"Collin\", role = \"aut\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"aut\"), person(\"Jennifer\", \"Li\", , \"li.jing@gene.com\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Table, Listings, and Graphs (TLG) library for common outputs used in clinical trials.",
       "License": "Apache License 2.0",
       "URL": "https://insightsengineering.github.io/tern/, https://github.com/insightsengineering/tern/",
       "BugReports": "https://github.com/insightsengineering/tern/issues",
       "Depends": [
-        "R (>= 4.3.3)",
-        "rtables (>= 0.6.12)"
+        "R (>= 4.4.0)",
+        "rtables (>= 0.6.13)"
       ],
       "Imports": [
         "broom (>= 0.5.4)",
@@ -7372,8 +7372,8 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
-      "RemoteRef": "v0.9.8.433",
-      "RemoteSha": "23060091a8f4b44e4399cbc3a1cd4429e47e7d9d"
+      "RemoteRef": "v0.9.9",
+      "RemoteSha": "2c53de16b05ee565b827b543ae8fb0d8552ab4f5"
     },
     "tern.gee": {
       "Package": "tern.gee",
