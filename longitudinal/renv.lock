@@ -3146,11 +3146,11 @@
     },
     "ggpp": {
       "Package": "ggpp",
-      "Version": "0.5.8-1",
+      "Version": "0.5.9",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Grammar Extensions to 'ggplot2'",
-      "Date": "2024-06-30",
+      "Date": "2025-06-27",
       "Authors@R": "c( person(\"Pedro J.\", \"Aphalo\", email = \"pedro.aphalo@helsinki.fi\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0003-3385-972X\")), person(\"Kamil\", \"Slowikowski\", role = \"ctb\", comment = c(ORCID = \"0000-0002-2843-6370\")), person(\"Michał\", \"Krassowski\", role = \"ctb\", comment = c(ORCID = \"0000-0002-9638-7785\")), person(\"Daniel\", \"Sabanés Bové\", role = \"ctb\"), person(\"Stella\", \"Banjo\", role = \"ctb\") )",
       "Maintainer": "Pedro J. Aphalo <pedro.aphalo@helsinki.fi>",
       "Description": "Extensions to 'ggplot2' respecting the grammar of graphics  paradigm. Geometries: geom_table(), geom_plot() and geom_grob() add insets to  plots using native data coordinates, while geom_table_npc(), geom_plot_npc() and geom_grob_npc() do the same using \"npc\" coordinates through new  aesthetics \"npcx\" and \"npcy\". Statistics: select observations based on 2D  density. Positions: radial nudging away from a center point and nudging away from a line or curve; combined stacking and nudging; combined dodging and nudging.",
@@ -3159,7 +3159,7 @@
       "LazyLoad": "TRUE",
       "ByteCompile": "TRUE",
       "Depends": [
-        "R (>= 4.0.0)",
+        "R (>= 4.1.0)",
         "ggplot2 (>= 3.5.0)"
       ],
       "Imports": [
@@ -3193,12 +3193,12 @@
       "URL": "https://docs.r4photobiology.info/ggpp/, https://github.com/aphalo/ggpp",
       "BugReports": "https://github.com/aphalo/ggpp/issues",
       "Encoding": "UTF-8",
-      "RoxygenNote": "7.3.1",
+      "RoxygenNote": "7.3.2",
       "VignetteBuilder": "knitr",
-      "Collate": "'annotate.r' 'compute-npc.r' 'dark-or-light.R' 'example-data.R' 'geom-grob.R' 'ggpp-legend-draw.R' 'utilities.R' 'ggp2-margins.R' 'geom-label-linked.r' 'geom-label-npc.r' 'geom-label-pairwise.r' 'geom-margin-arrow.r' 'geom-margin-grob.r' 'geom-margin-point.r' 'geom-plot.R' 'geom-point-linked.r' 'geom-quadrant-lines.R' 'geom-table.R' 'geom-text-linked.r' 'geom-text-npc.r' 'geom-text-pairwise.R' 'ggpp.R' 'position-nudge-center.R' 'position-nudge-dodge.R' 'position-nudge-dodge2.R' 'position-nudge-jitter.R' 'position-nudge-line.R' 'position-nudge-stack.R' 'position-nudge-to.R' 'scale-continuous-npc.r' 'stat-apply.R' 'stat-dens1d-filter.r' 'stat-dens1d-labels.r' 'stat-dens2d-filter.r' 'stat-dens2d-labels.r' 'stat-format-table.R' 'stat-functions.R' 'stat-panel-counts.R' 'stat-quadrant-counts.R' 'try-data-frame.R' 'weather-data.R' 'wrap-labels.R'",
+      "Collate": "'annotate.r' 'compute-npc.r' 'dark-or-light.R' 'example-data.R' 'geom-grob.R' 'ggpp-legend-draw.R' 'utilities.R' 'ggp2-margins.R' 'geom-label-linked.r' 'geom-label-npc.r' 'geom-label-pairwise.r' 'geom-margin-arrow.r' 'geom-margin-grob.r' 'geom-margin-point.r' 'geom-plot.R' 'geom-point-linked.r' 'geom-quadrant-lines.R' 'geom-table.R' 'geom-text-linked.r' 'geom-text-npc.r' 'geom-text-pairwise.R' 'ggpp.R' 'position-dodge-nudge-to.R' 'position-dodge-nudge.R' 'position-dodge2-nudge.R' 'position-dodge2nudge-to.R' 'position-jitter-nudge.R' 'position-nudge-center.R' 'position-nudge-line.R' 'position-stack-nudge.R' 'position-stacknudge-to.R' 'scale-continuous-npc.r' 'stat-apply.R' 'stat-dens1d-filter.r' 'stat-dens1d-labels.r' 'stat-dens2d-filter.r' 'stat-dens2d-labels.r' 'stat-format-table.R' 'stat-functions.R' 'stat-panel-counts.R' 'stat-quadrant-counts.R' 'try-data-frame.R' 'weather-data.R' 'wrap-labels.R'",
       "NeedsCompilation": "no",
-      "Author": "Pedro J. Aphalo [aut, cre] (<https://orcid.org/0000-0003-3385-972X>), Kamil Slowikowski [ctb] (<https://orcid.org/0000-0002-2843-6370>), Michał Krassowski [ctb] (<https://orcid.org/0000-0002-9638-7785>), Daniel Sabanés Bové [ctb], Stella Banjo [ctb]",
-      "Repository": "RSPM"
+      "Author": "Pedro J. Aphalo [aut, cre] (ORCID: <https://orcid.org/0000-0003-3385-972X>), Kamil Slowikowski [ctb] (ORCID: <https://orcid.org/0000-0002-2843-6370>), Michał Krassowski [ctb] (ORCID: <https://orcid.org/0000-0002-9638-7785>), Daniel Sabanés Bové [ctb], Stella Banjo [ctb]",
+      "Repository": "CRAN"
     },
     "ggrepel": {
       "Package": "ggrepel",
@@ -4653,7 +4653,7 @@
     },
     "mmrm": {
       "Package": "mmrm",
-      "Version": "0.3.15",
+      "Version": "0.3.15.9001",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Mixed Models for Repeated Measures",
@@ -4732,7 +4732,7 @@
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "8350c1551fab9c15ba15dd03ae32eb92e970a5fc"
+      "RemoteSha": "a542f4fe6afdb26babf833e9ce6ce3a3a5428b61"
     },
     "modelr": {
       "Package": "modelr",
