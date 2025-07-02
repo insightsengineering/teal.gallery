@@ -6710,7 +6710,7 @@
       "Repository": "RSPM",
       "Encoding": "UTF-8"
     },
-     "shiny": {
+    "shiny": {
       "Package": "shiny",
       "Version": "1.10.0",
       "Source": "Repository",
