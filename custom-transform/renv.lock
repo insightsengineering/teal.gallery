@@ -2888,7 +2888,7 @@
     },
     "shiny": {
       "Package": "shiny",
-      "Version": "1.11.0",
+      "Version": "1.11.1",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Web Application Framework for R",
