@@ -2102,7 +2102,7 @@
     },
     "pillar": {
       "Package": "pillar",
-      "Version": "1.10.2",
+      "Version": "1.11.0",
       "Source": "Repository",
       "Title": "Coloured Formatting for Columns",
       "Authors@R": "c(person(given = \"Kirill\", family = \"M\\u00fcller\", role = c(\"aut\", \"cre\"), email = \"kirill@cynkra.com\", comment = c(ORCID = \"0000-0002-1416-3412\")), person(given = \"Hadley\", family = \"Wickham\", role = \"aut\"), person(given = \"RStudio\", role = \"cph\"))",
@@ -2153,7 +2153,7 @@
       "Config/gha/extra-packages": "units=?ignore-before-r=4.3.0",
       "Config/Needs/website": "tidyverse/tidytemplate",
       "NeedsCompilation": "no",
-      "Author": "Kirill Müller [aut, cre] (<https://orcid.org/0000-0002-1416-3412>), Hadley Wickham [aut], RStudio [cph]",
+      "Author": "Kirill Müller [aut, cre] (ORCID: <https://orcid.org/0000-0002-1416-3412>), Hadley Wickham [aut], RStudio [cph]",
       "Maintainer": "Kirill Müller <kirill@cynkra.com>",
       "Repository": "CRAN"
     },
