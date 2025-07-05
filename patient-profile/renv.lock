@@ -4802,7 +4802,7 @@
     },
     "pillar": {
       "Package": "pillar",
-      "Version": "1.10.2",
+      "Version": "1.11.0",
       "Source": "Repository",
       "Title": "Coloured Formatting for Columns",
       "Authors@R": "c(person(given = \"Kirill\", family = \"M\\u00fcller\", role = c(\"aut\", \"cre\"), email = \"kirill@cynkra.com\", comment = c(ORCID = \"0000-0002-1416-3412\")), person(given = \"Hadley\", family = \"Wickham\", role = \"aut\"), person(given = \"RStudio\", role = \"cph\"))",
@@ -4853,7 +4853,7 @@
       "Config/gha/extra-packages": "units=?ignore-before-r=4.3.0",
       "Config/Needs/website": "tidyverse/tidytemplate",
       "NeedsCompilation": "no",
-      "Author": "Kirill Müller [aut, cre] (<https://orcid.org/0000-0002-1416-3412>), Hadley Wickham [aut], RStudio [cph]",
+      "Author": "Kirill Müller [aut, cre] (ORCID: <https://orcid.org/0000-0002-1416-3412>), Hadley Wickham [aut], RStudio [cph]",
       "Maintainer": "Kirill Müller <kirill@cynkra.com>",
       "Repository": "CRAN"
     },
@@ -7475,7 +7475,7 @@
     },
     "tern.mmrm": {
       "Package": "tern.mmrm",
-      "Version": "0.3.2.9006",
+      "Version": "0.3.3",
       "Source": "GitHub",
       "Title": "Tables and Graphs for Mixed Models for Repeated Measures (MMRM)",
       "Date": "2025-07-03",
@@ -7486,14 +7486,14 @@
       "BugReports": "https://github.com/insightsengineering/tern.mmrm/issues",
       "Depends": [
         "R (>= 3.6)",
-        "tern (>= 0.9.7)"
+        "tern (>= 0.9.9)"
       ],
       "Imports": [
         "checkmate (>= 2.1.0)",
         "cowplot",
         "dplyr (>= 1.1.0)",
         "emmeans (>= 1.10.4)",
-        "formatters (>= 0.5.10)",
+        "formatters (>= 0.5.11)",
         "generics",
         "ggplot2",
         "lifecycle (>= 0.2.0)",
@@ -7501,7 +7501,7 @@
         "mmrm (>= 0.3.5)",
         "parallelly (>= 1.25.0)",
         "rlang (>= 1.0.1)",
-        "rtables (>= 0.6.11)",
+        "rtables (>= 0.6.13)",
         "stats",
         "tidyr (>= 0.8.3)"
       ],
@@ -7533,7 +7533,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern.mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "0ad86f8b45de01f149c2ef06310da0d97bc69f27"
+      "RemoteSha": "d75349112c88011667b274636673a7db5cdab4d4"
     },
     "testthat": {
       "Package": "testthat",
