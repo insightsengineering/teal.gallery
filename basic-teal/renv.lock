@@ -3481,10 +3481,10 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.3.2.9001",
+      "Version": "0.4.0.9000",
       "Source": "GitHub",
       "Title": "Logging Setup for the 'teal' Family of Packages",
-      "Date": "2025-06-20",
+      "Date": "2025-07-08",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Utilizing the 'logger' framework to record events within a package, specific to 'teal' family of packages.  Supports logging namespaces, hierarchical logging, various log destinations, vectorization, and more.",
       "License": "Apache License 2.0",
@@ -3523,7 +3523,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "b98ca96becac9132bc3e728d449e6667d9fc4b8d"
+      "RemoteSha": "6285da29aedfd01e945714210a2031d1b75fa22e"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
