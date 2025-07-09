@@ -857,6 +857,22 @@
       "Maintainer": "Michael Chirico <michaelchirico4@gmail.com>",
       "Repository": "RSPM"
     },
+    "bitops": {
+      "Package": "bitops",
+      "Version": "1.0-9",
+      "Source": "Repository",
+      "Date": "2024-10-03",
+      "Authors@R": "c( person(\"Steve\", \"Dutky\", role = \"aut\", email = \"sdutky@terpalum.umd.edu\", comment = \"S original; then (after MM's port) revised and modified\"), person(\"Martin\", \"Maechler\", role = c(\"cre\", \"aut\"), email = \"maechler@stat.math.ethz.ch\", comment = c(\"Initial R port; tweaks\", ORCID = \"0000-0002-8685-9910\")))",
+      "Title": "Bitwise Operations",
+      "Description": "Functions for bitwise operations on integer vectors.",
+      "License": "GPL (>= 2)",
+      "URL": "https://github.com/mmaechler/R-bitops",
+      "BugReports": "https://github.com/mmaechler/R-bitops/issues",
+      "NeedsCompilation": "yes",
+      "Author": "Steve Dutky [aut] (S original; then (after MM's port) revised and modified), Martin Maechler [cre, aut] (Initial R port; tweaks, <https://orcid.org/0000-0002-8685-9910>)",
+      "Maintainer": "Martin Maechler <maechler@stat.math.ethz.ch>",
+      "Repository": "CRAN"
+    },
     "boot": {
       "Package": "boot",
       "Version": "1.3-31",
@@ -1123,6 +1139,31 @@
       "Author": "Carson Sievert [aut, cre] (<https://orcid.org/0000-0002-4958-2844>), Joe Cheng [aut], Garrick Aden-Buie [aut] (<https://orcid.org/0000-0002-7111-0077>), Posit Software, PBC [cph, fnd], Bootstrap contributors [ctb] (Bootstrap library), Twitter, Inc [cph] (Bootstrap library), Javi Aguilar [ctb, cph] (Bootstrap colorpicker library), Thomas Park [ctb, cph] (Bootswatch library), PayPal [ctb, cph] (Bootstrap accessibility plugin)",
       "Maintainer": "Carson Sievert <carson@posit.co>",
       "Repository": "CRAN"
+    },
+    "caTools": {
+      "Package": "caTools",
+      "Version": "1.18.3",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Tools: Moving Window Statistics, GIF, Base64, ROC AUC, etc",
+      "Date": "2024-09-04",
+      "Authors@R": "c(person(given = \"Jarek\", family = \"Tuszynski\", role = \"aut\", email = \"jaroslaw.w.tuszynski@saic.com\"), person(given = \"Michael\", family = \"Dietze\", role = \"cre\", email = \"michael.dietze@uni-goettingen.de\"))",
+      "Maintainer": "Michael Dietze <michael.dietze@uni-goettingen.de>",
+      "Depends": [
+        "R (>= 3.6.0)"
+      ],
+      "Imports": [
+        "bitops"
+      ],
+      "Suggests": [
+        "MASS",
+        "rpart"
+      ],
+      "Description": "Contains several basic utility functions including: moving (rolling, running) window statistic functions, read/write for GIF and ENVI binary files, fast calculation of AUC, LogitBoost classifier, base64 encoder/decoder, round-off-error-free sum and cumsum, etc.",
+      "License": "GPL-3",
+      "NeedsCompilation": "yes",
+      "Repository": "CRAN",
+      "Author": "Jarek Tuszynski [aut], Michael Dietze [cre]"
     },
     "cachem": {
       "Package": "cachem",
@@ -2829,14 +2870,14 @@
     },
     "ggpmisc": {
       "Package": "ggpmisc",
-      "Version": "0.6.1",
+      "Version": "0.6.2",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Miscellaneous Extensions to 'ggplot2'",
-      "Date": "2024-11-13",
+      "Date": "2025-07-08",
       "Authors@R": "c( person(\"Pedro J.\", \"Aphalo\", email = \"pedro.aphalo@helsinki.fi\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0003-3385-972X\")), person(\"Kamil\", \"Slowikowski\", role = \"ctb\", comment = c(ORCID = \"0000-0002-2843-6370\")), person(\"Samer\", \"Mouksassi\", email = \"samermouksassi@gmail.com\", role = \"ctb\", comment = c(ORCID = \"0000-0002-7152-6654\")) )",
       "Maintainer": "Pedro J. Aphalo <pedro.aphalo@helsinki.fi>",
-      "Description": "Extensions to 'ggplot2' respecting the grammar of graphics paradigm. Statistics: locate and tag peaks and valleys; label plot with the equation of a fitted polynomial or other types of models; labels with P-value, R^2 or adjusted R^2 or information criteria for fitted models; label with ANOVA table for fitted models; label with summary for fitted models. Model fit classes for which suitable methods are provided by package 'broom' and 'broom.mixed' are supported. Scales and stats to build volcano and quadrant plots based on outcomes, fold changes, p-values and false  discovery rates.",
+      "Description": "Extensions to 'ggplot2' respecting the grammar of graphics paradigm. Statistics: locate and tag peaks and valleys; label plot with the equation of a fitted polynomial or other types of models including major axis, quantile and robust and resistant regression. Labels for P-value,  R^2 or adjusted R^2 or information criteria for fitted models; parametric and non-parametric correlation; label with ANOVA table for fitted models;  label with summary table for fitted models; annotations for multiple  comparisons with adjusted P-values. Model fit classes for which suitable  methods are provided by package 'broom' and 'broom.mixed' are supported as  well as user-defined wrappers on model fit functions. Scales and stats to build volcano and quadrant plots based on outcomes, fold changes, p-values and false discovery rates.",
       "License": "GPL (>= 2)",
       "LazyLoad": "TRUE",
       "ByteCompile": "TRUE",
@@ -2856,13 +2897,15 @@
         "polynom (>= 1.4-1)",
         "quantreg (>= 5.97)",
         "lmodel2 (>= 1.7-3)",
+        "nlme (>= 3.1-160)",
         "splus2R (>= 1.3-5)",
         "multcomp (>= 1.4-25)",
         "multcompView (>= 0.1-10)",
         "tibble (>= 3.2.1)",
         "plyr (>= 1.8.9)",
         "dplyr (>= 1.1.4)",
-        "lubridate (>= 1.9.3)"
+        "lubridate (>= 1.9.3)",
+        "caTools (>= 1.18.3)"
       ],
       "Suggests": [
         "knitr (>= 1.45)",
@@ -2870,9 +2913,9 @@
         "ggrepel (>= 0.9.5)",
         "broom (>= 1.0.3)",
         "broom.mixed (>= 0.2.9.5)",
-        "nlme (>= 3.1-160)",
         "gginnards (>= 0.1.0-1)",
         "ggtext (>= 0.1.2)",
+        "robustbase (>= 0.99-4-1)",
         "testthat",
         "vdiffr"
       ],
@@ -2881,9 +2924,10 @@
       "Encoding": "UTF-8",
       "RoxygenNote": "7.3.2",
       "VignetteBuilder": "knitr",
+      "Config/Needs/website": "rmarkdown",
       "NeedsCompilation": "no",
-      "Author": "Pedro J. Aphalo [aut, cre] (<https://orcid.org/0000-0003-3385-972X>), Kamil Slowikowski [ctb] (<https://orcid.org/0000-0002-2843-6370>), Samer Mouksassi [ctb] (<https://orcid.org/0000-0002-7152-6654>)",
-      "Repository": "RSPM"
+      "Author": "Pedro J. Aphalo [aut, cre] (ORCID: <https://orcid.org/0000-0003-3385-972X>), Kamil Slowikowski [ctb] (ORCID: <https://orcid.org/0000-0002-2843-6370>), Samer Mouksassi [ctb] (ORCID: <https://orcid.org/0000-0002-7152-6654>)",
+      "Repository": "CRAN"
     },
     "ggpp": {
       "Package": "ggpp",
@@ -6891,10 +6935,10 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.3.2.9001",
+      "Version": "0.4.0.9000",
       "Source": "GitHub",
       "Title": "Logging Setup for the 'teal' Family of Packages",
-      "Date": "2025-06-20",
+      "Date": "2025-07-08",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Utilizing the 'logger' framework to record events within a package, specific to 'teal' family of packages.  Supports logging namespaces, hierarchical logging, various log destinations, vectorization, and more.",
       "License": "Apache License 2.0",
@@ -6933,7 +6977,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
       "RemoteRef": "main",
-      "RemoteSha": "b98ca96becac9132bc3e728d449e6667d9fc4b8d"
+      "RemoteSha": "6285da29aedfd01e945714210a2031d1b75fa22e"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
@@ -7018,11 +7062,11 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.4.1.9005",
+      "Version": "0.4.1.9006",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "General Modules for 'teal' Applications",
-      "Date": "2025-06-23",
+      "Date": "2025-07-08",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Ondrej\", \"Slama\", , \"ondrej.slama@roche.com\", role = \"ctb\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for viewing data, visualizing data, understanding missing and outlier values within your data and performing simple data analysis.  This extends 'teal' framework that supports reproducible research and analysis.",
       "License": "Apache License 2.0",
@@ -7104,7 +7148,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "72afb3018b534bd9cee94bcc4bfb63fcea16f89a",
+      "RemoteSha": "c6c008df4b550b8507b7d39f6f767bb85c554164",
       "Remotes": "insightsengineering/teal.logger@main, insightsengineering/teal.reporter@main, insightsengineering/teal.transform@main, insightsengineering/teal.widgets@main, insightsengineering/teal@main"
     },
     "teal.reporter": {
