@@ -3410,10 +3410,10 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.3.2",
+      "Version": "0.4.0",
       "Source": "Repository",
       "Title": "Logging Setup for the 'teal' Family of Packages",
-      "Date": "2025-02-13",
+      "Date": "2025-07-03",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Utilizing the 'logger' framework to record events within a package, specific to 'teal' family of packages.  Supports logging namespaces, hierarchical logging, various log destinations, vectorization, and more.",
       "License": "Apache License 2.0",
@@ -3425,7 +3425,7 @@
       "Imports": [
         "glue (>= 1.0.0)",
         "lifecycle (>= 0.2.0)",
-        "logger (>= 0.3.0)",
+        "logger (>= 0.4.0)",
         "methods",
         "shiny (>= 1.6.0)",
         "utils",
@@ -3433,8 +3433,8 @@
       ],
       "Suggests": [
         "knitr (>= 1.42)",
-        "rmarkdown (>= 2.23)",
-        "testthat (>= 3.1.7)"
+        "rmarkdown (>= 2.27)",
+        "testthat (>= 3.2.3)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
       "RdMacros": "lifecycle",
