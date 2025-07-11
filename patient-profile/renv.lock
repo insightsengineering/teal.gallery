@@ -1736,7 +1736,7 @@
     },
     "data.table": {
       "Package": "data.table",
-      "Version": "1.17.6",
+      "Version": "1.17.8",
       "Source": "Repository",
       "Title": "Extension of `data.frame`",
       "Depends": [
@@ -2409,10 +2409,10 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.11.9000",
+      "Version": "0.5.11.9001",
       "Source": "GitHub",
       "Title": "ASCII Formatting for Values and Tables",
-      "Date": "2025-04-09",
+      "Date": "2025-07-10",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "We provide a framework for rendering complex tables to ASCII, and a set of formatters for transforming values or sets of values into ASCII-ready display strings.",
       "License": "Apache License 2.0",
@@ -2455,7 +2455,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "1190e67c933c2cbead0ccabab19394d7750f0c35"
+      "RemoteSha": "1f75511fee6e25082ee15ad0c0173655570079ed"
     },
     "fs": {
       "Package": "fs",
@@ -5378,16 +5378,16 @@
     },
     "purrr": {
       "Package": "purrr",
-      "Version": "1.0.4",
+      "Version": "1.1.0",
       "Source": "Repository",
       "Title": "Functional Programming Tools",
-      "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0003-4757-117X\")), person(\"Lionel\", \"Henry\", , \"lionel@posit.co\", role = \"aut\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"), comment = c(ROR = \"03wc8by49\")) )",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0003-4757-117X\")), person(\"Lionel\", \"Henry\", , \"lionel@posit.co\", role = \"aut\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"), comment = c(ROR = \"https://ror.org/03wc8by49\")) )",
       "Description": "A complete and consistent functional programming toolkit for R.",
       "License": "MIT + file LICENSE",
       "URL": "https://purrr.tidyverse.org/, https://github.com/tidyverse/purrr",
       "BugReports": "https://github.com/tidyverse/purrr/issues",
       "Depends": [
-        "R (>= 4.0)"
+        "R (>= 4.1)"
       ],
       "Imports": [
         "cli (>= 3.6.1)",
@@ -5397,11 +5397,13 @@
         "vctrs (>= 0.6.3)"
       ],
       "Suggests": [
+        "carrier (>= 0.2.0)",
         "covr",
         "dplyr (>= 0.7.8)",
         "httr",
         "knitr",
         "lubridate",
+        "mirai (>= 2.4.0)",
         "rmarkdown",
         "testthat (>= 3.0.0)",
         "tibble",
@@ -5419,7 +5421,7 @@
       "Encoding": "UTF-8",
       "RoxygenNote": "7.3.2",
       "NeedsCompilation": "yes",
-      "Author": "Hadley Wickham [aut, cre] (<https://orcid.org/0000-0003-4757-117X>), Lionel Henry [aut], Posit Software, PBC [cph, fnd] (03wc8by49)",
+      "Author": "Hadley Wickham [aut, cre] (ORCID: <https://orcid.org/0000-0003-4757-117X>), Lionel Henry [aut], Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
       "Maintainer": "Hadley Wickham <hadley@posit.co>",
       "Repository": "CRAN"
     },
@@ -6981,10 +6983,10 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.10.0.9009",
+      "Version": "0.10.0.9010",
       "Source": "GitHub",
       "Title": "'teal' Modules for Standard Clinical Outputs",
-      "Date": "2025-06-24",
+      "Date": "2025-07-10",
       "Authors@R": "c( person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"Jana\", \"Stoilova\", , \"jana.stoilova@roche.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\"), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\"), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Rosemary\", \"Li\", , \"li.yaqiong@gene.com\", role = \"aut\"), person(\"Heng\", \"Wang\", , \"wang.heng@gene.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Vaakesan\", \"Sundrelingam\", role = \"ctb\"), person(\"Francois\", \"Collin\", role = \"ctb\"), person(\"Imanol\", \"Zubizarreta\", role = \"ctb\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Provides user-friendly tools for creating and customizing clinical trial reports. By leveraging the 'teal' framework, this package provides 'teal' modules to easily create an interactive panel that allows for seamless adjustments to data presentation, thereby streamlining the creation of detailed and accurate reports.",
       "License": "Apache License 2.0",
@@ -7019,7 +7021,7 @@
         "stats",
         "teal.code (>= 0.6.1)",
         "teal.data (>= 0.7.0)",
-        "teal.logger (>= 0.3.2)",
+        "teal.logger (>= 0.4.0)",
         "teal.reporter (>= 0.4.0.9004)",
         "teal.widgets (>= 0.4.3.9001)",
         "tern.gee (>= 0.1.5)",
@@ -7030,7 +7032,7 @@
       "Suggests": [
         "forcats (>= 1.0.0)",
         "knitr (>= 1.42)",
-        "logger (>= 0.2.0)",
+        "logger (>= 0.4.0)",
         "lubridate (>= 1.7.9)",
         "nestcolor (>= 0.1.0)",
         "pkgload (>= 1.4.0)",
@@ -7057,16 +7059,16 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteRef": "main",
-      "RemoteSha": "a23d9bb62b34170effee382fdf3cea695cbe581b",
+      "RemoteSha": "f09f4b9d087adba1e9b07ddf5cd6dafda908fe2c",
       "Remotes": "insightsengineering/teal.reporter@main, insightsengineering/teal.widgets@main, insightsengineering/teal@main, insightsengineering/tern@main"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.4.1.9006",
+      "Version": "0.4.1.9010",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "General Modules for 'teal' Applications",
-      "Date": "2025-07-08",
+      "Date": "2025-07-10",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Ondrej\", \"Slama\", , \"ondrej.slama@roche.com\", role = \"ctb\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for viewing data, visualizing data, understanding missing and outlier values within your data and performing simple data analysis.  This extends 'teal' framework that supports reproducible research and analysis.",
       "License": "Apache License 2.0",
@@ -7111,7 +7113,7 @@
         "stringr (>= 1.4.1)",
         "teal.code (>= 0.6.1)",
         "teal.data (>= 0.7.0)",
-        "teal.logger (>= 0.3.2.9001)",
+        "teal.logger (>= 0.4.0)",
         "teal.reporter (>= 0.4.0.9004)",
         "teal.widgets (>= 0.4.3.9005)",
         "tern (>= 0.9.7)",
@@ -7122,7 +7124,7 @@
       ],
       "Suggests": [
         "knitr (>= 1.42)",
-        "logger (>= 0.2.0)",
+        "logger (>= 0.4.0)",
         "nestcolor (>= 0.1.0)",
         "pkgload",
         "rlang (>= 1.0.0)",
@@ -7148,8 +7150,8 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "c6c008df4b550b8507b7d39f6f767bb85c554164",
-      "Remotes": "insightsengineering/teal.logger@main, insightsengineering/teal.reporter@main, insightsengineering/teal.transform@main, insightsengineering/teal.widgets@main, insightsengineering/teal@main"
+      "RemoteSha": "9cfb13c3daa7665ae9d9b39e036338b1417ddf43",
+      "Remotes": "insightsengineering/teal.reporter@main, insightsengineering/teal.transform@main, insightsengineering/teal.widgets@main, insightsengineering/teal@main"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -7212,11 +7214,11 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.6.0.9005",
+      "Version": "0.6.0.9006",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Filter Module for 'teal' Applications",
-      "Date": "2025-06-24",
+      "Date": "2025-07-10",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"Andrew\", \"Bates\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Data filtering module for 'teal' applications.  Allows for interactive filtering of data stored in 'data.frame' and 'MultiAssayExperiment' objects. Also displays filtered and unfiltered observation counts.",
       "License": "Apache License 2.0",
@@ -7234,7 +7236,7 @@
         "htmltools (>= 0.5.4)",
         "jsonlite (>= 2.0.0)",
         "lifecycle (>= 0.2.0)",
-        "logger (>= 0.3.0)",
+        "logger (>= 0.4.0)",
         "methods",
         "plotly (>= 4.10.4)",
         "R6 (>= 2.2.0)",
@@ -7244,7 +7246,7 @@
         "shinyjs (>= 2.1.0)",
         "shinyWidgets (>= 0.6.2)",
         "teal.data (>= 0.7.0)",
-        "teal.logger (>= 0.3.1)",
+        "teal.logger (>= 0.4.0)",
         "teal.widgets (>= 0.4.3)",
         "utils"
       ],
@@ -7272,7 +7274,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "3ec53a9cb849e29e637c618652e57ffc2ada6eb6"
+      "RemoteSha": "ff535db33d40c50bddcae9e7c9301c55b49ed1ba"
     },
     "teal.transform": {
       "Package": "teal.transform",
