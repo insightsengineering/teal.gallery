@@ -5,10 +5,10 @@ describe("app", () => {
 
   it("Starts", () => {});
 
-  it("Has 8 tabs", () => {
+  it("Has 12 tabs", () => {
     cy.get("ul.teal-modules-tree a.module-button", { timeout: 30000 }).should(
       "have.length",
-      8
+      12
     );
   });
 
