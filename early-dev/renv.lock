@@ -6068,17 +6068,17 @@
     },
     "rlistings": {
       "Package": "rlistings",
-      "Version": "0.2.10",
+      "Version": "0.2.11",
       "Source": "Repository",
       "Title": "Clinical Trial Style Data Readout Listings",
-      "Date": "2025-01-07",
-      "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\"), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\"), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
+      "Date": "2025-04-10",
+      "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Listings are often part of the submission of clinical trial data in regulatory settings.  We provide a framework for the specific formatting features often used when displaying large datasets in that context.",
       "License": "Apache License 2.0",
       "URL": "https://insightsengineering.github.io/rlistings/, https://github.com/insightsengineering/rlistings/",
       "BugReports": "https://github.com/insightsengineering/rlistings/issues",
       "Depends": [
-        "formatters (>= 0.5.10)",
+        "formatters (>= 0.5.11)",
         "methods",
         "tibble (>= 2.0.0)"
       ],
@@ -6106,9 +6106,9 @@
       "Language": "en-US",
       "RoxygenNote": "7.3.2",
       "NeedsCompilation": "no",
-      "Author": "Gabriel Becker [aut] (original creator of the package), Adrian Waddell [aut], Joe Zhu [aut, cre] (<https://orcid.org/0000-0001-7566-2787>), Davide Garolini [aut], Emily de la Rua [aut], Abinaya Yogasekaram [ctb], F. Hoffmann-La Roche AG [cph, fnd]",
+      "Author": "Gabriel Becker [aut] (original creator of the package), Adrian Waddell [aut], Joe Zhu [aut, cre] (<https://orcid.org/0000-0001-7566-2787>), Davide Garolini [aut] (<https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (<https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [ctb] (<https://orcid.org/0009-0005-2083-1105>), F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Joe Zhu <joe.zhu@roche.com>",
-      "Repository": "RSPM"
+      "Repository": "CRAN"
     },
     "rmarkdown": {
       "Package": "rmarkdown",
