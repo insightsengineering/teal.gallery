@@ -3043,11 +3043,11 @@
     },
     "glmnet": {
       "Package": "glmnet",
-      "Version": "4.1-9",
+      "Version": "4.1-10",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Lasso and Elastic-Net Regularized Generalized Linear Models",
-      "Date": "2025-05-16",
+      "Date": "2025-07-15",
       "Authors@R": "c(person(\"Jerome\", \"Friedman\", role=c(\"aut\")), person(\"Trevor\", \"Hastie\", role=c(\"aut\", \"cre\"), email = \"hastie@stanford.edu\"), person(\"Rob\", \"Tibshirani\", role=c(\"aut\")), person(\"Balasubramanian\", \"Narasimhan\", role=c(\"aut\")), person(\"Kenneth\",\"Tay\",role=c(\"aut\")), person(\"Noah\", \"Simon\", role=c(\"aut\")), person(\"Junyang\", \"Qian\", role=c(\"ctb\")), person(\"James\", \"Yang\", role=c(\"aut\")))",
       "Depends": [
         "R (>= 3.6.0)",
