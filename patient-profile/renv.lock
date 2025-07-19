@@ -4380,7 +4380,7 @@
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "a542f4fe6afdb26babf833e9ce6ce3a3a5428b61"
+      "RemoteSha": "204098df36bc1cda1a69cc457c9f7f2c62c88dc1"
     },
     "modelr": {
       "Package": "modelr",
@@ -4810,7 +4810,7 @@
     },
     "pbkrtest": {
       "Package": "pbkrtest",
-      "Version": "0.5.4",
+      "Version": "0.5.5",
       "Source": "Repository",
       "Title": "Parametric Bootstrap, Kenward-Roger and Satterthwaite Based Methods for Test in Mixed Models",
       "Authors@R": "c( person(given = \"Ulrich\", family = \"Halekoh\", email = \"uhalekoh@health.sdu.dk\", role = c(\"aut\", \"cph\")), person(given = \"Søren\", family = \"Højsgaard\", email = \"sorenh@math.aau.dk\", role = c(\"aut\", \"cre\", \"cph\")) )",
@@ -4831,6 +4831,7 @@
         "doBy (>= 4.6.22)"
       ],
       "Suggests": [
+        "nlme",
         "markdown",
         "knitr"
       ],
