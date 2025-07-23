@@ -1993,6 +1993,33 @@
       "Maintainer": "Hadley Wickham <hadley@posit.co>",
       "Repository": "RSPM"
     },
+    "ellipsis": {
+      "Package": "ellipsis",
+      "Version": "0.3.2",
+      "Source": "Repository",
+      "Title": "Tools for Working with ...",
+      "Description": "The ellipsis is a powerful tool for extending functions. Unfortunately  this power comes at a cost: misspelled arguments will be silently ignored.  The ellipsis package provides a collection of functions to catch problems and alert the user.",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = c(\"aut\", \"cre\")), person(\"RStudio\", role = \"cph\") )",
+      "License": "MIT + file LICENSE",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.1.1",
+      "URL": "https://ellipsis.r-lib.org, https://github.com/r-lib/ellipsis",
+      "BugReports": "https://github.com/r-lib/ellipsis/issues",
+      "Depends": [
+        "R (>= 3.2)"
+      ],
+      "Imports": [
+        "rlang (>= 0.3.0)"
+      ],
+      "Suggests": [
+        "covr",
+        "testthat"
+      ],
+      "NeedsCompilation": "yes",
+      "Author": "Hadley Wickham [aut, cre], RStudio [cph]",
+      "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
+      "Repository": "CRAN"
+    },
     "emmeans": {
       "Package": "emmeans",
       "Version": "1.11.2",
@@ -2583,12 +2610,11 @@
     },
     "geeasy": {
       "Package": "geeasy",
-      "Version": "0.1.2",
+      "Version": "0.1.3",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Solve Generalized Estimating Equations for Clustered Data",
       "Authors@R": "c(person(\"Anne Helby\", \"Petersen\", role = c(\"aut\"), email = \"ahpe@sund.ku.dk\"), person(\"Lee\", \"McDaniel\", role = \"aut\", comment = \"Author of geeM\"), person(\"Claus\", \"Ekstrøm\", role = \"ctb\", comment = \"Wrote code for drop1 methods\"), person(\"Søren\", \"Højsgaard\", role = c(\"aut\", \"cre\"), email=\"sorenh@math.aau.dk\", comment = \"Author of geepack\"))",
-      "Date": "2024-04-29",
       "Maintainer": "Søren Højsgaard <sorenh@math.aau.dk>",
       "Depends": [
         "geepack",
@@ -2608,12 +2634,12 @@
       ],
       "Description": "Estimation of generalized linear models with correlated/clustered observations by use of generalized estimating equations (GEE). See e.g. Halekoh and Højsgaard, (2005, <doi:10.18637/jss.v015.i02>), for details. Several types of clustering are supported, including exchangeable variance structures, AR1 structures, M-dependent, user-specified variance structures and more. The model fitting computations are performed using modified code from the 'geeM' package, while the interface and output objects have been written to resemble the 'geepack' package. The package also contains additional tools for working with and inspecting results from the 'geepack' package, e.g. a 'confint' method for 'geeglm' objects from 'geepack'.",
       "License": "GPL-3",
-      "RoxygenNote": "7.3.1",
+      "RoxygenNote": "7.3.2",
       "Encoding": "UTF-8",
       "Language": "en-US",
       "NeedsCompilation": "no",
       "Author": "Anne Helby Petersen [aut], Lee McDaniel [aut] (Author of geeM), Claus Ekstrøm [ctb] (Wrote code for drop1 methods), Søren Højsgaard [aut, cre] (Author of geepack)",
-      "Repository": "RSPM"
+      "Repository": "CRAN"
     },
     "geepack": {
       "Package": "geepack",
@@ -3913,6 +3939,66 @@
       "Repository": "RSPM",
       "Encoding": "UTF-8"
     },
+    "learnr": {
+      "Package": "learnr",
+      "Version": "0.11.5",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Interactive Tutorials for R",
+      "Authors@R": "c( person(\"Garrick\", \"Aden-Buie\", , \"garrick@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-7111-0077\")), person(\"Barret\", \"Schloerke\", , \"barret@posit.co\", role = \"aut\", comment = c(ORCID = \"0000-0001-9986-114X\")), person(\"JJ\", \"Allaire\", , \"jj@posit.co\", role = c(\"aut\", \"ccp\")), person(\"Alexander\", \"Rossell Hayes\", , \"alex.rossellhayes@posit.co\", role = \"aut\", comment = c(ORCID = \"0000-0001-9412-0457\")), person(\"Nischal\", \"Shrestha\", , \"nischal@posit.co\", role = \"ctb\", comment = c(ORCID = \"0000-0003-3321-1712\")), person(\"Angela\", \"Li\", , \"angelali921@gmail.com\", role = \"ctb\", comment = \"vignette\"), person(\"Posit, PBC\", role = c(\"cph\", \"fnd\")), person(, \"Ajax.org B.V.\", role = c(\"ctb\", \"cph\"), comment = \"Ace library\"), person(\"Zeno\", \"Rocha\", role = c(\"ctb\", \"cph\"), comment = \"clipboard.js library\"), person(\"Nick\", \"Payne\", role = c(\"ctb\", \"cph\"), comment = \"Bootbox library\"), person(\"Jake\", \"Archibald\", role = c(\"ctb\", \"cph\"), comment = \"idb-keyval library\"), person(\"i18next authors\", role = c(\"ctb\", \"cph\"), comment = \"i18next library\") )",
+      "Description": "Create interactive tutorials using R Markdown. Use a combination of narrative, figures, videos, exercises, and quizzes to create self-paced tutorials for learning about R and R packages.",
+      "License": "Apache License (>= 2.0)",
+      "URL": "https://rstudio.github.io/learnr/, https://github.com/rstudio/learnr",
+      "BugReports": "https://github.com/rstudio/learnr/issues",
+      "Imports": [
+        "checkmate",
+        "digest",
+        "ellipsis (>= 0.2.0.1)",
+        "evaluate",
+        "htmltools (>= 0.3.5)",
+        "htmlwidgets",
+        "jsonlite",
+        "knitr (>= 1.31)",
+        "lifecycle",
+        "markdown (>= 1.3)",
+        "parallel",
+        "promises",
+        "rappdirs",
+        "renv (>= 0.8.0)",
+        "rlang",
+        "rmarkdown (>= 1.12.0)",
+        "rprojroot",
+        "shiny (>= 1.0)",
+        "stats",
+        "utils",
+        "withr"
+      ],
+      "Suggests": [
+        "bslib",
+        "callr",
+        "curl",
+        "DBI (>= 0.4-1)",
+        "httpuv",
+        "later",
+        "reticulate",
+        "RSQLite",
+        "rstudioapi (>= 0.11)",
+        "shinytest2",
+        "sortable",
+        "testthat (>= 3.0.3)"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/connect": "rsconnect",
+      "Config/Needs/coverage": "covr",
+      "Config/Needs/website": "pkgdown, tidyverse/tidytemplate",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.2.3",
+      "SystemRequirements": "pandoc (>= 1.14) - http://pandoc.org",
+      "NeedsCompilation": "no",
+      "Author": "Garrick Aden-Buie [aut, cre] (<https://orcid.org/0000-0002-7111-0077>), Barret Schloerke [aut] (<https://orcid.org/0000-0001-9986-114X>), JJ Allaire [aut, ccp], Alexander Rossell Hayes [aut] (<https://orcid.org/0000-0001-9412-0457>), Nischal Shrestha [ctb] (<https://orcid.org/0000-0003-3321-1712>), Angela Li [ctb] (vignette), Posit, PBC [cph, fnd], Ajax.org B.V. [ctb, cph] (Ace library), Zeno Rocha [ctb, cph] (clipboard.js library), Nick Payne [ctb, cph] (Bootbox library), Jake Archibald [ctb, cph] (idb-keyval library), i18next authors [ctb, cph] (i18next library)",
+      "Maintainer": "Garrick Aden-Buie <garrick@posit.co>",
+      "Repository": "CRAN"
+    },
     "lifecycle": {
       "Package": "lifecycle",
       "Version": "1.0.4",
@@ -3953,6 +4039,38 @@
       "Author": "Lionel Henry [aut, cre], Hadley Wickham [aut] (<https://orcid.org/0000-0003-4757-117X>), Posit Software, PBC [cph, fnd]",
       "Maintainer": "Lionel Henry <lionel@posit.co>",
       "Repository": "RSPM"
+    },
+    "litedown": {
+      "Package": "litedown",
+      "Version": "0.7",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "A Lightweight Version of R Markdown",
+      "Authors@R": "c( person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\", URL = \"https://yihui.org\")), person(\"Tim\", \"Taylor\", role = \"ctb\", comment = c(ORCID = \"0000-0002-8587-7113\")), person() )",
+      "Description": "Render R Markdown to Markdown (without using 'knitr'), and Markdown to lightweight HTML or 'LaTeX' documents with the 'commonmark' package (instead of 'Pandoc'). Some missing Markdown features in 'commonmark' are also supported, such as raw HTML or 'LaTeX' blocks, 'LaTeX' math, superscripts, subscripts, footnotes, element attributes, and appendices, but not all 'Pandoc' Markdown features are (or will be) supported. With additional JavaScript and CSS, you can also create HTML slides and articles. This package can be viewed as a trimmed-down version of R Markdown and 'knitr'. It does not aim at rich Markdown features or a large variety of output formats (the primary formats are HTML and 'LaTeX'). Book and website projects of multiple input documents are also supported.",
+      "Depends": [
+        "R (>= 3.2.0)"
+      ],
+      "Imports": [
+        "utils",
+        "commonmark (>= 1.9.5)",
+        "xfun (>= 0.52)"
+      ],
+      "Suggests": [
+        "rbibutils",
+        "rstudioapi",
+        "tinytex"
+      ],
+      "License": "MIT + file LICENSE",
+      "URL": "https://github.com/yihui/litedown",
+      "BugReports": "https://github.com/yihui/litedown/issues",
+      "VignetteBuilder": "litedown",
+      "RoxygenNote": "7.3.2",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "no",
+      "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>, https://yihui.org), Tim Taylor [ctb] (<https://orcid.org/0000-0002-8587-7113>)",
+      "Maintainer": "Yihui Xie <xie@yihui.name>",
+      "Repository": "CRAN"
     },
     "lme4": {
       "Package": "lme4",
@@ -4166,6 +4284,38 @@
       "Author": "Stefan Milton Bache [aut, cph] (Original author and creator of magrittr), Hadley Wickham [aut], Lionel Henry [cre], RStudio [cph, fnd]",
       "Maintainer": "Lionel Henry <lionel@rstudio.com>",
       "Repository": "RSPM"
+    },
+    "markdown": {
+      "Package": "markdown",
+      "Version": "2.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Render Markdown with 'commonmark'",
+      "Authors@R": "c( person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")), person(\"JJ\", \"Allaire\", role = \"aut\"), person(\"Jeffrey\", \"Horner\", role = \"aut\"), person(\"Henrik\", \"Bengtsson\", role = \"ctb\"), person(\"Jim\", \"Hester\", role = \"ctb\"), person(\"Yixuan\", \"Qiu\", role = \"ctb\"), person(\"Kohske\", \"Takahashi\", role = \"ctb\"), person(\"Adam\", \"November\", role = \"ctb\"), person(\"Nacho\", \"Caballero\", role = \"ctb\"), person(\"Jeroen\", \"Ooms\", role = \"ctb\"), person(\"Thomas\", \"Leeper\", role = \"ctb\"), person(\"Joe\", \"Cheng\", role = \"ctb\"), person(\"Andrzej\", \"Oles\", role = \"ctb\"), person(given = \"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Description": "Render Markdown to full and lightweight HTML/LaTeX documents with the 'commonmark' package. This package has been superseded by 'litedown'.",
+      "Depends": [
+        "R (>= 2.11.1)"
+      ],
+      "Imports": [
+        "utils",
+        "xfun",
+        "litedown (>= 0.6)"
+      ],
+      "Suggests": [
+        "knitr",
+        "rmarkdown (>= 2.18)",
+        "yaml",
+        "RCurl"
+      ],
+      "License": "MIT + file LICENSE",
+      "URL": "https://github.com/rstudio/markdown",
+      "BugReports": "https://github.com/rstudio/markdown/issues",
+      "RoxygenNote": "7.3.2",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "no",
+      "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>), JJ Allaire [aut], Jeffrey Horner [aut], Henrik Bengtsson [ctb], Jim Hester [ctb], Yixuan Qiu [ctb], Kohske Takahashi [ctb], Adam November [ctb], Nacho Caballero [ctb], Jeroen Ooms [ctb], Thomas Leeper [ctb], Joe Cheng [ctb], Andrzej Oles [ctb], Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Yihui Xie <xie@yihui.name>",
+      "Repository": "CRAN"
     },
     "memoise": {
       "Package": "memoise",
@@ -6510,6 +6660,49 @@
       "Maintainer": "Carson Sievert <carson@posit.co>",
       "Repository": "RSPM"
     },
+    "sortable": {
+      "Package": "sortable",
+      "Version": "0.5.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Drag-and-Drop in 'shiny' Apps with 'SortableJS'",
+      "Authors@R": "c(person(given = \"Andrie\", family = \"de Vries\", role = c(\"cre\", \"aut\"), email = \"apdevries@gmail.com\"), person(given = \"Barret\", family = \"Schloerke\", role = \"aut\", email = \"barret@rstudio.com\"), person(given = \"Kenton\", family = \"Russell\", role = c(\"aut\", \"ccp\"), email = \"kent.russell@timelyportfolio.com\", comment = \"Original author\"), person(\"RStudio\", role = c(\"cph\", \"fnd\")), person(given = \"Lebedev\", family = \"Konstantin\", role = \"cph\", comment = \"'SortableJS', https://sortablejs.github.io/Sortable/\"))",
+      "Description": "Enables drag-and-drop behaviour in Shiny apps, by exposing the  functionality of the 'SortableJS' <https://sortablejs.github.io/Sortable/>  JavaScript library as an 'htmlwidget'.  You can use this in Shiny apps and widgets, 'learnr' tutorials as well as  R Markdown. In addition, provides a custom 'learnr' question type -  'question_rank()' - that allows ranking questions with drag-and-drop.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://rstudio.github.io/sortable/",
+      "BugReports": "https://github.com/rstudio/sortable/issues",
+      "Imports": [
+        "htmltools",
+        "htmlwidgets",
+        "learnr (>= 0.10.0)",
+        "shiny",
+        "assertthat",
+        "jsonlite",
+        "utils",
+        "ellipsis",
+        "rlang"
+      ],
+      "Suggests": [
+        "base64enc",
+        "knitr",
+        "testthat (>= 2.1.0)",
+        "withr",
+        "rmarkdown",
+        "magrittr",
+        "webshot",
+        "spelling",
+        "covr"
+      ],
+      "VignetteBuilder": "knitr",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.2.3",
+      "Language": "en-US",
+      "Config/testthat/edition": "3",
+      "NeedsCompilation": "no",
+      "Author": "Andrie de Vries [cre, aut], Barret Schloerke [aut], Kenton Russell [aut, ccp] (Original author), RStudio [cph, fnd], Lebedev Konstantin [cph] ('SortableJS', https://sortablejs.github.io/Sortable/)",
+      "Maintainer": "Andrie de Vries <apdevries@gmail.com>",
+      "Repository": "CRAN"
+    },
     "sourcetools": {
       "Package": "sourcetools",
       "Version": "0.1.7-1",
@@ -6868,16 +7061,16 @@
       "LazyData": "true",
       "Roxygen": "list(markdown = TRUE, packages = c(\"roxy.shinylive\"))",
       "RoxygenNote": "7.3.2",
-      "Collate": "'TealAppDriver.R' 'checkmate.R' 'dummy_functions.R' 'include_css_js.R' 'modules.R' 'init.R' 'landing_popup_module.R' 'module_bookmark_manager.R' 'module_data_summary.R' 'module_filter_data.R' 'module_filter_manager.R' 'module_init_data.R' 'module_nested_tabs.R' 'module_session_info.R' 'module_snapshot_manager.R' 'module_teal.R' 'module_teal_data.R' 'module_teal_lockfile.R' 'module_teal_with_splash.R' 'module_transform_data.R' 'reporter_previewer_module.R' 'show_rcode_modal.R' 'tdata.R' 'teal.R' 'teal_data_module.R' 'teal_data_module-eval_code.R' 'teal_data_module-within.R' 'teal_data_utils.R' 'teal_modifiers.R' 'teal_reporter.R' 'teal_slices-store.R' 'teal_slices.R' 'teal_transform_module.R' 'utils.R' 'validate_inputs.R' 'validations.R' 'zzz.R'",
+      "Collate": "'TealAppDriver.R' 'checkmate.R' 'dummy_functions.R' 'include_css_js.R' 'modules.R' 'init.R' 'landing_popup_module.R' 'module_bookmark_manager.R' 'module_data_summary.R' 'module_filter_data.R' 'module_filter_manager.R' 'module_init_data.R' 'module_nested_tabs.R' 'module_session_info.R' 'module_snapshot_manager.R' 'module_teal.R' 'module_teal_data.R' 'module_teal_lockfile.R' 'module_teal_with_splash.R' 'module_transform_data.R' 'reporter_previewer_module.R' 'show_rcode_modal.R' 'tdata.R' 'teal.R' 'teal_data_module.R' 'teal_data_module-eval_code.R' 'teal_data_module-within.R' 'teal_data_utils.R' 'teal_modifiers.R' 'teal_navbar.R' 'teal_reporter.R' 'teal_slices-store.R' 'teal_slices.R' 'teal_transform_module.R' 'utils.R' 'validate_inputs.R' 'validations.R' 'zzz.R'",
       "Author": "Dawid Kaledkowski [aut, cre] (<https://orcid.org/0000-0001-9533-457X>), Pawel Rucki [aut], Aleksander Chlebowski [aut] (<https://orcid.org/0000-0001-5018-6294>), Andre Verissimo [aut] (<https://orcid.org/0000-0002-2212-339X>), Kartikeya Kirar [aut], Vedha Viyash [aut], Marcin Kosinski [aut], Adrian Waddell [aut], Dony Unardi [rev], Nina Qi [rev], Nikolas Burkoff [aut], Mahmoud Hallal [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], Tadeusz Lewandowski [aut], Chendi Liao [rev], F. Hoffmann-La Roche AG [cph, fnd], Maximilian Mordig [ctb]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
-      "RemoteRef": "main",
-      "RemoteSha": "6569bb3f547b2a1e0d1922038bda4a34590a1af8",
-      "Remotes": "insightsengineering/teal.reporter@main, insightsengineering/teal.slice@main, insightsengineering/teal.widgets@main"
+      "RemoteRef": "test",
+      "RemoteSha": "044286c4dd34e25dec0d7e65052899712c603d00",
+      "Remotes": "insightsengineering/teal.reporter@redesign-ui-ux@main, insightsengineering/teal.slice@main, insightsengineering/teal.widgets@main"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -7210,6 +7403,7 @@
       "URL": "https://github.com/insightsengineering/teal.reporter, https://insightsengineering.github.io/teal.reporter/",
       "BugReports": "https://github.com/insightsengineering/teal.reporter/issues",
       "Imports": [
+        "bsicons",
         "bslib (>= 0.8.0)",
         "checkmate (>= 2.1.0)",
         "flextable (>= 0.9.2)",
@@ -7223,8 +7417,10 @@
         "rtables (>= 0.6.11)",
         "rtables.officer (>= 0.0.2)",
         "shiny (>= 1.6.0)",
+        "shinyjs",
         "shinybusy (>= 0.3.2)",
         "shinyWidgets (>= 0.5.1)",
+        "sortable (>= 0.5.0)",
         "yaml (>= 1.1.0)",
         "zip (>= 1.1.0)"
       ],
@@ -7254,16 +7450,16 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
-      "RemoteRef": "main",
-      "RemoteSha": "204f2672fc6acb80999aa289de0f33340ad8e4c0"
+      "RemoteRef": "test",
+      "RemoteSha": "4902461abb5f8d449cf7b6062f82f3100def07aa"
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.6.0.9006",
+      "Version": "0.6.0.9007",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Filter Module for 'teal' Applications",
-      "Date": "2025-07-10",
+      "Date": "2025-07-23",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"Andrew\", \"Bates\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Data filtering module for 'teal' applications.  Allows for interactive filtering of data stored in 'data.frame' and 'MultiAssayExperiment' objects. Also displays filtered and unfiltered observation counts.",
       "License": "Apache License 2.0",
@@ -7319,7 +7515,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "ff535db33d40c50bddcae9e7c9301c55b49ed1ba"
+      "RemoteSha": "466fbe08f0c209978a2730baf0fc261455f4b20b"
     },
     "teal.transform": {
       "Package": "teal.transform",
