@@ -2507,12 +2507,11 @@
     },
     "geeasy": {
       "Package": "geeasy",
-      "Version": "0.1.2",
+      "Version": "0.1.3",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Solve Generalized Estimating Equations for Clustered Data",
       "Authors@R": "c(person(\"Anne Helby\", \"Petersen\", role = c(\"aut\"), email = \"ahpe@sund.ku.dk\"), person(\"Lee\", \"McDaniel\", role = \"aut\", comment = \"Author of geeM\"), person(\"Claus\", \"Ekstrøm\", role = \"ctb\", comment = \"Wrote code for drop1 methods\"), person(\"Søren\", \"Højsgaard\", role = c(\"aut\", \"cre\"), email=\"sorenh@math.aau.dk\", comment = \"Author of geepack\"))",
-      "Date": "2024-04-29",
       "Maintainer": "Søren Højsgaard <sorenh@math.aau.dk>",
       "Depends": [
         "geepack",
@@ -2532,12 +2531,12 @@
       ],
       "Description": "Estimation of generalized linear models with correlated/clustered observations by use of generalized estimating equations (GEE). See e.g. Halekoh and Højsgaard, (2005, <doi:10.18637/jss.v015.i02>), for details. Several types of clustering are supported, including exchangeable variance structures, AR1 structures, M-dependent, user-specified variance structures and more. The model fitting computations are performed using modified code from the 'geeM' package, while the interface and output objects have been written to resemble the 'geepack' package. The package also contains additional tools for working with and inspecting results from the 'geepack' package, e.g. a 'confint' method for 'geeglm' objects from 'geepack'.",
       "License": "GPL-3",
-      "RoxygenNote": "7.3.1",
+      "RoxygenNote": "7.3.2",
       "Encoding": "UTF-8",
       "Language": "en-US",
       "NeedsCompilation": "no",
       "Author": "Anne Helby Petersen [aut], Lee McDaniel [aut] (Author of geeM), Claus Ekstrøm [ctb] (Wrote code for drop1 methods), Søren Højsgaard [aut, cre] (Author of geepack)",
-      "Repository": "CRAN"
+      "Repository": "RSPM"
     },
     "geepack": {
       "Package": "geepack",
@@ -3018,11 +3017,11 @@
     },
     "glmnet": {
       "Package": "glmnet",
-      "Version": "4.1-9",
+      "Version": "4.1-10",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Lasso and Elastic-Net Regularized Generalized Linear Models",
-      "Date": "2025-05-16",
+      "Date": "2025-07-15",
       "Authors@R": "c(person(\"Jerome\", \"Friedman\", role=c(\"aut\")), person(\"Trevor\", \"Hastie\", role=c(\"aut\", \"cre\"), email = \"hastie@stanford.edu\"), person(\"Rob\", \"Tibshirani\", role=c(\"aut\")), person(\"Balasubramanian\", \"Narasimhan\", role=c(\"aut\")), person(\"Kenneth\",\"Tay\",role=c(\"aut\")), person(\"Noah\", \"Simon\", role=c(\"aut\")), person(\"Junyang\", \"Qian\", role=c(\"ctb\")), person(\"James\", \"Yang\", role=c(\"aut\")))",
       "Depends": [
         "R (>= 3.6.0)",
@@ -4745,7 +4744,7 @@
     },
     "pbkrtest": {
       "Package": "pbkrtest",
-      "Version": "0.5.4",
+      "Version": "0.5.5",
       "Source": "Repository",
       "Title": "Parametric Bootstrap, Kenward-Roger and Satterthwaite Based Methods for Test in Mixed Models",
       "Authors@R": "c( person(given = \"Ulrich\", family = \"Halekoh\", email = \"uhalekoh@health.sdu.dk\", role = c(\"aut\", \"cph\")), person(given = \"Søren\", family = \"Højsgaard\", email = \"sorenh@math.aau.dk\", role = c(\"aut\", \"cre\", \"cph\")) )",
@@ -4766,6 +4765,7 @@
         "doBy (>= 4.6.22)"
       ],
       "Suggests": [
+        "nlme",
         "markdown",
         "knitr"
       ],
