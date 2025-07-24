@@ -2532,12 +2532,11 @@
     },
     "geeasy": {
       "Package": "geeasy",
-      "Version": "0.1.2",
+      "Version": "0.1.3",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Solve Generalized Estimating Equations for Clustered Data",
       "Authors@R": "c(person(\"Anne Helby\", \"Petersen\", role = c(\"aut\"), email = \"ahpe@sund.ku.dk\"), person(\"Lee\", \"McDaniel\", role = \"aut\", comment = \"Author of geeM\"), person(\"Claus\", \"Ekstrøm\", role = \"ctb\", comment = \"Wrote code for drop1 methods\"), person(\"Søren\", \"Højsgaard\", role = c(\"aut\", \"cre\"), email=\"sorenh@math.aau.dk\", comment = \"Author of geepack\"))",
-      "Date": "2024-04-29",
       "Maintainer": "Søren Højsgaard <sorenh@math.aau.dk>",
       "Depends": [
         "geepack",
@@ -2557,12 +2556,12 @@
       ],
       "Description": "Estimation of generalized linear models with correlated/clustered observations by use of generalized estimating equations (GEE). See e.g. Halekoh and Højsgaard, (2005, <doi:10.18637/jss.v015.i02>), for details. Several types of clustering are supported, including exchangeable variance structures, AR1 structures, M-dependent, user-specified variance structures and more. The model fitting computations are performed using modified code from the 'geeM' package, while the interface and output objects have been written to resemble the 'geepack' package. The package also contains additional tools for working with and inspecting results from the 'geepack' package, e.g. a 'confint' method for 'geeglm' objects from 'geepack'.",
       "License": "GPL-3",
-      "RoxygenNote": "7.3.1",
+      "RoxygenNote": "7.3.2",
       "Encoding": "UTF-8",
       "Language": "en-US",
       "NeedsCompilation": "no",
       "Author": "Anne Helby Petersen [aut], Lee McDaniel [aut] (Author of geeM), Claus Ekstrøm [ctb] (Wrote code for drop1 methods), Søren Højsgaard [aut, cre] (Author of geepack)",
-      "Repository": "RSPM"
+      "Repository": "CRAN"
     },
     "geepack": {
       "Package": "geepack",
@@ -4746,7 +4745,7 @@
     },
     "parallelly": {
       "Package": "parallelly",
-      "Version": "1.45.0",
+      "Version": "1.45.1",
       "Source": "Repository",
       "Title": "Enhancing the 'parallel' Package",
       "Imports": [
