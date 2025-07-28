@@ -5,10 +5,10 @@ describe("app", () => {
 
   it("Starts", () => {});
 
-  it("Has 10 tabs", () => {
+  it("Has 9 tabs", () => {
     cy.get("ul.teal-modules-tree a.module-button", { timeout: 30000 }).should(
       "have.length",
-      10
+      9
     );
   });
 
@@ -23,11 +23,13 @@ describe("app", () => {
           cy.log(`Navigating to: ${$el2[0].innerText}`);
         });
 
-        cy.get(".dropdown.nav-item-custom").trigger("mouseover");
+        cy.contains(".dropdown.nav-item-custom", "Modules").trigger(
+          "mouseover"
+        );
         cy.get(".dropdown-menu").should("have.class", "show");
         cy.get("@tealTab").click();
         cy.get("@tealTab").invoke("attr", "href").as("hrefTab");
-        cy.get(".dropdown.nav-item-custom").trigger("mouseout");
+        cy.contains(".dropdown.nav-item-custom", "Modules").trigger("mouseout");
         cy.get("html").not(".shiny-busy");
       });
     });
