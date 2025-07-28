@@ -7,7 +7,7 @@ describe("app", () => {
 
   it("Starts", () => {});
 
-  it("Has 16 tabs", () => {
+  it("Has 15 tabs", () => {
     cy.get("ul.teal-modules-tree a.module-button", { timeout: 30000 }).should(
       "have.length",
       15
@@ -26,7 +26,7 @@ describe("app", () => {
         });
 
         cy.contains(".dropdown.nav-item-custom", "Module").realHover();
-        cy.get(".dropdown-menu").should("have.class", "show");
+        cy.get(".dropdown-menu").should("have.css", "opacity", "1");
         cy.get("@tealTab").click();
         cy.get("@tealTab").invoke("attr", "href").as("hrefTab");
         cy.contains(".dropdown.nav-item-custom", "Module").trigger("mouseout");

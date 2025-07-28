@@ -26,7 +26,7 @@ describe("app", () => {
         });
 
         cy.contains(".dropdown.nav-item-custom", "Module").realHover();
-        cy.get(".dropdown-menu").should("have.class", "show");
+        cy.get(".dropdown-menu").should("have.css", "opacity", "1");
         cy.get("@tealTab").click();
         cy.get("@tealTab").invoke("attr", "href").as("hrefTab");
         cy.contains(".dropdown.nav-item-custom", "Module").trigger("mouseout");
