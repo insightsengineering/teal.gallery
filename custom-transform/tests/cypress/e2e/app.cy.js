@@ -1,3 +1,5 @@
+import "cypress-real-events";
+
 describe("app", () => {
   beforeEach(() => {
     cy.visit("/");
@@ -23,13 +25,11 @@ describe("app", () => {
           cy.log(`Navigating to: ${$el2[0].innerText}`);
         });
 
-        cy.contains(".dropdown.nav-item-custom", "Modules").trigger(
-          "mouseover"
-        );
+        cy.contains(".dropdown.nav-item-custom", "Module").realHover();
         cy.get(".dropdown-menu").should("have.class", "show");
         cy.get("@tealTab").click();
         cy.get("@tealTab").invoke("attr", "href").as("hrefTab");
-        cy.contains(".dropdown.nav-item-custom", "Modules").trigger("mouseout");
+        cy.contains(".dropdown.nav-item-custom", "Module").trigger("mouseout");
         cy.get("html").not(".shiny-busy");
       });
     });

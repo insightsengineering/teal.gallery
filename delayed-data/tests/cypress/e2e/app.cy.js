@@ -1,3 +1,5 @@
+import "cypress-real-events";
+
 describe("app", () => {
   beforeEach(() => {
     cy.visit("/");
