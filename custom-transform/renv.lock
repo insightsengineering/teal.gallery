@@ -3836,7 +3836,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "d25d66566edc63004bb835b8b80bfa874457aa99"
+      "RemoteSha": "1a5c567f01b205adfb897fdedb8b4241bed6efda"
     },
     "teal.slice": {
       "Package": "teal.slice",
