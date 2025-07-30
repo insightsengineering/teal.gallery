@@ -2483,7 +2483,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "e9ee91d7a7fb43719432f6cddcbdfe34476e7cff"
+      "RemoteSha": "f9c181b7acb630200d2040b32c75a4290d879624"
     },
     "fs": {
       "Package": "fs",
@@ -6150,7 +6150,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "b080090fac1b4b4470bf172ce01c993dee5038db"
+      "RemoteSha": "98951cd6fe102ed1a6670a0d92506d677b3f1c91"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
@@ -7669,7 +7669,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "dd8dfdfd53be76c30b2656117b682842edb9fc5e"
+      "RemoteSha": "6f03202a2290a06a4354f0acf421930191244f86"
     },
     "tern.gee": {
       "Package": "tern.gee",
