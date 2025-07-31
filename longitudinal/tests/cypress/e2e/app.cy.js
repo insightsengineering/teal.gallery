@@ -30,7 +30,7 @@ describe("app", () => {
         cy.get("@tealTab").click();
         cy.get("@tealTab").invoke("attr", "href").as("hrefTab");
 
-        cy.waitForShinyIdle();
+        cy.waitForShinyStabilityAndCheckError();
       });
     });
   });
