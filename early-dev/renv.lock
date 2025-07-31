@@ -2694,7 +2694,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "e9ee91d7a7fb43719432f6cddcbdfe34476e7cff"
+      "RemoteSha": "f9c181b7acb630200d2040b32c75a4290d879624"
     },
     "fs": {
       "Package": "fs",
@@ -4828,7 +4828,7 @@
     },
     "mosaicCore": {
       "Package": "mosaicCore",
-      "Version": "0.9.4.0",
+      "Version": "0.9.5",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Common Utilities for Other MOSAIC-Family Packages",
@@ -4850,17 +4850,18 @@
         "testthat",
         "mosaicCalc (>= 0.5.9)"
       ],
-      "Author": "Randall Pruim <rpruim@calvin.edu>, Daniel T. Kaplan <kaplan@macalester.edu>, Nicholas J. Horton <nhorton@amherst.edu>",
-      "Maintainer": "Randall Pruim <rpruim@calvin.edu>",
+      "Authors@R": "c(person(given = \"Randall\", family = \"Pruim\", role = c(\"aut\", \"cre\"), email = \"rpruim@calvin.edu\"), person(given = c(\"Daniel\", \"T.\"), family = \"Kaplan\", role = \"aut\", email = \"kaplan@macalester.edu\"), person(given = c(\"Nicholas\", \"J.\"), family = \"Horton\", role = \"aut\", email = \"nhorton@amherst.edu\"))",
       "Description": "Common utilities used in other MOSAIC-family packages are  collected here.",
       "License": "GPL (>= 2)",
       "LazyLoad": "yes",
       "URL": "https://github.com/ProjectMOSAIC/mosaicCore",
       "BugReports": "https://github.com/ProjectMOSAIC/mosaicCore/issues",
-      "RoxygenNote": "7.2.3",
+      "RoxygenNote": "7.3.2",
       "Encoding": "UTF-8",
       "NeedsCompilation": "no",
-      "Repository": "RSPM"
+      "Author": "Randall Pruim [aut, cre], Daniel T. Kaplan [aut], Nicholas J. Horton [aut]",
+      "Maintainer": "Randall Pruim <rpruim@calvin.edu>",
+      "Repository": "CRAN"
     },
     "multcomp": {
       "Package": "multcomp",
@@ -6590,7 +6591,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "b080090fac1b4b4470bf172ce01c993dee5038db"
+      "RemoteSha": "98951cd6fe102ed1a6670a0d92506d677b3f1c91"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
@@ -7909,7 +7910,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "d25d66566edc63004bb835b8b80bfa874457aa99"
+      "RemoteSha": "1a5c567f01b205adfb897fdedb8b4241bed6efda"
     },
     "teal.slice": {
       "Package": "teal.slice",
@@ -8039,10 +8040,10 @@
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.3.9010",
+      "Version": "0.4.3.9011",
       "Source": "GitHub",
       "Title": "'shiny' Widgets for 'teal' Applications",
-      "Date": "2025-07-23",
+      "Date": "2025-07-30",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Collection of 'shiny' widgets to support 'teal' applications. Enables the manipulation of application layout and plot or table settings.",
       "License": "Apache License 2.0",
@@ -8094,7 +8095,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "8db0294a6bc6d6f336a61dc5e28c13391ad24c95"
+      "RemoteSha": "4b83e2ee88bf1c78d9e3c5285916df4f19589490"
     },
     "tern": {
       "Package": "tern",
@@ -8167,7 +8168,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "dd8dfdfd53be76c30b2656117b682842edb9fc5e"
+      "RemoteSha": "6f03202a2290a06a4354f0acf421930191244f86"
     },
     "tern.gee": {
       "Package": "tern.gee",
