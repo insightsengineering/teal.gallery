@@ -1,9 +1,6 @@
 # attach required packages
-devtools::load_all("../../teal.widgets")
-devtools::load_all("../../teal")
-devtools::load_all("../../teal.reporter")
 library(teal.goshawk)
-devtools::load_all("../../teal.modules.clinical")
+library(teal.modules.clinical)
 library(teal.modules.general)
 options(shiny.useragg = FALSE, shiny.sanitize.errors = FALSE)
 
