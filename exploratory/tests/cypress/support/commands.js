@@ -3,6 +3,7 @@ Cypress.on("uncaught:exception", (err, runnable) => {
     err.message.includes(
       "ResizeObserver loop completed with undelivered notifications"
     ) ||
+    err.message.includes("ResizeObserver loop limit exceeded") ||
     err.message.includes(
       "Cannot read properties of undefined (reading 'onResize')"
     )
