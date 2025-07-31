@@ -4389,7 +4389,7 @@
     },
     "mosaicCore": {
       "Package": "mosaicCore",
-      "Version": "0.9.4.0",
+      "Version": "0.9.5",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Common Utilities for Other MOSAIC-Family Packages",
@@ -4411,17 +4411,18 @@
         "testthat",
         "mosaicCalc (>= 0.5.9)"
       ],
-      "Author": "Randall Pruim <rpruim@calvin.edu>, Daniel T. Kaplan <kaplan@macalester.edu>, Nicholas J. Horton <nhorton@amherst.edu>",
-      "Maintainer": "Randall Pruim <rpruim@calvin.edu>",
+      "Authors@R": "c(person(given = \"Randall\", family = \"Pruim\", role = c(\"aut\", \"cre\"), email = \"rpruim@calvin.edu\"), person(given = c(\"Daniel\", \"T.\"), family = \"Kaplan\", role = \"aut\", email = \"kaplan@macalester.edu\"), person(given = c(\"Nicholas\", \"J.\"), family = \"Horton\", role = \"aut\", email = \"nhorton@amherst.edu\"))",
       "Description": "Common utilities used in other MOSAIC-family packages are  collected here.",
       "License": "GPL (>= 2)",
       "LazyLoad": "yes",
       "URL": "https://github.com/ProjectMOSAIC/mosaicCore",
       "BugReports": "https://github.com/ProjectMOSAIC/mosaicCore/issues",
-      "RoxygenNote": "7.2.3",
+      "RoxygenNote": "7.3.2",
       "Encoding": "UTF-8",
       "NeedsCompilation": "no",
-      "Repository": "RSPM"
+      "Author": "Randall Pruim [aut, cre], Daniel T. Kaplan [aut], Nicholas J. Horton [aut]",
+      "Maintainer": "Randall Pruim <rpruim@calvin.edu>",
+      "Repository": "CRAN"
     },
     "multcomp": {
       "Package": "multcomp",
