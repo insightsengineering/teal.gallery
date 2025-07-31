@@ -29,8 +29,8 @@ describe("app", () => {
         cy.get(".dropdown-menu").should("have.css", "opacity", "1");
         cy.get("@tealTab").click();
         cy.get("@tealTab").invoke("attr", "href").as("hrefTab");
-        cy.contains(".dropdown.nav-item-custom", "Module").trigger("mouseout");
-        cy.get("html").not(".shiny-busy");
+
+        cy.waitForShinyIdle();
       });
     });
   });

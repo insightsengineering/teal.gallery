@@ -30,6 +30,6 @@ describe("app", () => {
   it("After closing the popup, the module is loaded without any errors", () => {
     cy.contains("button", "Load Datasets").click();
     cy.get(".modal-content .modal-footer button").click();
-    cy.get("html").not(".shiny-busy");
+    cy.waitForShinyIdle();
   });
 });
