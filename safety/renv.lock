@@ -2668,7 +2668,7 @@
     },
     "ggformula": {
       "Package": "ggformula",
-      "Version": "0.12.0",
+      "Version": "0.12.2",
       "Source": "Repository",
       "Title": "Formula Interface to the Grammar of Graphics",
       "Description": "Provides a formula interface to 'ggplot2' graphics.",
@@ -2715,7 +2715,7 @@
         "quantreg"
       ],
       "VignetteBuilder": "knitr",
-      "RoxygenNote": "7.2.3",
+      "RoxygenNote": "7.3.2",
       "Encoding": "UTF-8",
       "URL": "https://github.com/ProjectMOSAIC/ggformula",
       "BugReports": "https://github.com/ProjectMOSAIC/ggformula/issues",
@@ -2723,7 +2723,7 @@
       "NeedsCompilation": "no",
       "Author": "Daniel Kaplan [aut], Randall Pruim [aut, cre]",
       "Maintainer": "Randall Pruim <rpruim@calvin.edu>",
-      "Repository": "RSPM"
+      "Repository": "CRAN"
     },
     "ggmosaic": {
       "Package": "ggmosaic",
