@@ -2940,7 +2940,7 @@
     },
     "ggformula": {
       "Package": "ggformula",
-      "Version": "0.12.0",
+      "Version": "0.12.2",
       "Source": "Repository",
       "Title": "Formula Interface to the Grammar of Graphics",
       "Description": "Provides a formula interface to 'ggplot2' graphics.",
@@ -2987,7 +2987,7 @@
         "quantreg"
       ],
       "VignetteBuilder": "knitr",
-      "RoxygenNote": "7.2.3",
+      "RoxygenNote": "7.3.2",
       "Encoding": "UTF-8",
       "URL": "https://github.com/ProjectMOSAIC/ggformula",
       "BugReports": "https://github.com/ProjectMOSAIC/ggformula/issues",
@@ -2995,7 +2995,7 @@
       "NeedsCompilation": "no",
       "Author": "Daniel Kaplan [aut], Randall Pruim [aut, cre]",
       "Maintainer": "Randall Pruim <rpruim@calvin.edu>",
-      "Repository": "RSPM"
+      "Repository": "CRAN"
     },
     "ggmosaic": {
       "Package": "ggmosaic",
@@ -4936,7 +4936,7 @@
     },
     "mosaicCore": {
       "Package": "mosaicCore",
-      "Version": "0.9.4.0",
+      "Version": "0.9.5",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Common Utilities for Other MOSAIC-Family Packages",
@@ -4958,17 +4958,18 @@
         "testthat",
         "mosaicCalc (>= 0.5.9)"
       ],
-      "Author": "Randall Pruim <rpruim@calvin.edu>, Daniel T. Kaplan <kaplan@macalester.edu>, Nicholas J. Horton <nhorton@amherst.edu>",
-      "Maintainer": "Randall Pruim <rpruim@calvin.edu>",
+      "Authors@R": "c(person(given = \"Randall\", family = \"Pruim\", role = c(\"aut\", \"cre\"), email = \"rpruim@calvin.edu\"), person(given = c(\"Daniel\", \"T.\"), family = \"Kaplan\", role = \"aut\", email = \"kaplan@macalester.edu\"), person(given = c(\"Nicholas\", \"J.\"), family = \"Horton\", role = \"aut\", email = \"nhorton@amherst.edu\"))",
       "Description": "Common utilities used in other MOSAIC-family packages are  collected here.",
       "License": "GPL (>= 2)",
       "LazyLoad": "yes",
       "URL": "https://github.com/ProjectMOSAIC/mosaicCore",
       "BugReports": "https://github.com/ProjectMOSAIC/mosaicCore/issues",
-      "RoxygenNote": "7.2.3",
+      "RoxygenNote": "7.3.2",
       "Encoding": "UTF-8",
       "NeedsCompilation": "no",
-      "Repository": "RSPM"
+      "Author": "Randall Pruim [aut, cre], Daniel T. Kaplan [aut], Nicholas J. Horton [aut]",
+      "Maintainer": "Randall Pruim <rpruim@calvin.edu>",
+      "Repository": "CRAN"
     },
     "multcomp": {
       "Package": "multcomp",
@@ -7468,11 +7469,11 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.16.0.9018",
+      "Version": "0.16.0.9019",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Exploratory Web Apps for Analyzing Clinical Trials Data",
-      "Date": "2025-07-24",
+      "Date": "2025-07-31",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\"), person(\"Vedha\", \"Viyash\", , \"vedha.viyash@roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"Nina\", \"Qi\", , \"qi.ting@gene.com\", role = \"rev\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"Tadeusz\", \"Lewandowski\", role = \"aut\"), person(\"Chendi\", \"Liao\", role = \"rev\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")), person(\"Maximilian\", \"Mordig\", role = \"ctb\") )",
       "Description": "A 'shiny' based interactive exploration framework for analyzing clinical trials data. 'teal' currently provides a dynamic filtering facility and different data viewers. 'teal' 'shiny' applications are built using standard 'shiny' modules.",
       "License": "Apache License 2.0",
@@ -7537,7 +7538,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "705ab1e1253293de738dc2c41c50f54cbbfa8714",
+      "RemoteSha": "f22ce7b298e0ec26dfa8828e328e9b4a7998ee74",
       "Remotes": "insightsengineering/teal.reporter@main, insightsengineering/teal.slice@main, insightsengineering/teal.widgets@main"
     },
     "teal.code": {
@@ -8118,10 +8119,10 @@
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.3.9010",
+      "Version": "0.4.3.9011",
       "Source": "GitHub",
       "Title": "'shiny' Widgets for 'teal' Applications",
-      "Date": "2025-07-23",
+      "Date": "2025-07-30",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Collection of 'shiny' widgets to support 'teal' applications. Enables the manipulation of application layout and plot or table settings.",
       "License": "Apache License 2.0",
@@ -8173,7 +8174,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "8db0294a6bc6d6f336a61dc5e28c13391ad24c95"
+      "RemoteSha": "4b83e2ee88bf1c78d9e3c5285916df4f19589490"
     },
     "tern": {
       "Package": "tern",
