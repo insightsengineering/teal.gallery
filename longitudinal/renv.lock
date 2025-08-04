@@ -4893,7 +4893,7 @@
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "cf823ddeae9a6fc932eb0aa83d325b6f08d96003"
+      "RemoteSha": "27ce058ca9f12a5e010f2c81a20e16b154053455"
     },
     "modelr": {
       "Package": "modelr",
