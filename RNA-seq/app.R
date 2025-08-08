@@ -46,11 +46,11 @@ app <- init(
         Packages = c("teal.modules.hermes", "teal.modules.general", "random.cdisc.data", "hermes")
       ))
     ),
-    tm_g_quality(
+    teal.modules.hermes::tm_g_quality(
       label = "Quality Control",
       mae_name = "MAE"
     ),
-    tm_g_pca(
+    teal.modules.hermes::tm_g_pca(
       label = "PCA plot",
       mae_name = "MAE"
     ),
@@ -58,24 +58,24 @@ app <- init(
       label = "Scatterplot",
       mae_name = "MAE"
     ),
-    tm_g_boxplot(
+    teal.modules.hermes::tm_g_boxplot(
       label = "Boxplot",
       mae_name = "MAE"
     ),
-    tm_g_barplot(
+    teal.modules.hermes::tm_g_barplot(
       label = "Barplot",
       mae_name = "MAE"
     ),
-    tm_g_volcanoplot(
+    teal.modules.hermes::tm_g_volcanoplot(
       label = "Volcanoplot",
       mae_name = "MAE"
     ),
-    tm_g_forest_tte(
+    teal.modules.hermes::tm_g_forest_tte(
       label = "Forestplot",
       adtte_name = "ADTTE",
       mae_name = "MAE"
     ),
-    tm_g_km(
+    teal.modules.hermes::tm_g_km(
       label = "Kaplan-Meier",
       adtte_name = "ADTTE",
       mae_name = "MAE"
