@@ -1316,7 +1316,7 @@
     },
     "checkmate": {
       "Package": "checkmate",
-      "Version": "2.3.2",
+      "Version": "2.3.3",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Fast and Versatile Argument Checks",
@@ -1353,9 +1353,9 @@
       "VignetteBuilder": "knitr",
       "RoxygenNote": "7.3.2",
       "Collate": "'AssertCollection.R' 'allMissing.R' 'anyInfinite.R' 'anyMissing.R' 'anyNaN.R' 'asInteger.R' 'assert.R' 'helper.R' 'makeExpectation.R' 'makeTest.R' 'makeAssertion.R' 'checkAccess.R' 'checkArray.R' 'checkAtomic.R' 'checkAtomicVector.R' 'checkCharacter.R' 'checkChoice.R' 'checkClass.R' 'checkComplex.R' 'checkCount.R' 'checkDataFrame.R' 'checkDataTable.R' 'checkDate.R' 'checkDirectoryExists.R' 'checkDisjunct.R' 'checkDouble.R' 'checkEnvironment.R' 'checkFALSE.R' 'checkFactor.R' 'checkFileExists.R' 'checkFlag.R' 'checkFormula.R' 'checkFunction.R' 'checkInt.R' 'checkInteger.R' 'checkIntegerish.R' 'checkList.R' 'checkLogical.R' 'checkMatrix.R' 'checkMultiClass.R' 'checkNamed.R' 'checkNames.R' 'checkNull.R' 'checkNumber.R' 'checkNumeric.R' 'checkOS.R' 'checkPOSIXct.R' 'checkPathForOutput.R' 'checkPermutation.R' 'checkR6.R' 'checkRaw.R' 'checkScalar.R' 'checkScalarNA.R' 'checkSetEqual.R' 'checkString.R' 'checkSubset.R' 'checkTRUE.R' 'checkTibble.R' 'checkVector.R' 'coalesce.R' 'isIntegerish.R' 'matchArg.R' 'qassert.R' 'qassertr.R' 'vname.R' 'wfwl.R' 'zzz.R'",
-      "Author": "Michel Lang [cre, aut] (<https://orcid.org/0000-0001-9754-0393>), Bernd Bischl [ctb], Dénes Tóth [ctb] (<https://orcid.org/0000-0003-4262-3217>)",
+      "Author": "Michel Lang [cre, aut] (ORCID: <https://orcid.org/0000-0001-9754-0393>), Bernd Bischl [ctb], Dénes Tóth [ctb] (ORCID: <https://orcid.org/0000-0003-4262-3217>)",
       "Maintainer": "Michel Lang <michellang@gmail.com>",
-      "Repository": "RSPM"
+      "Repository": "CRAN"
     },
     "cli": {
       "Package": "cli",
@@ -6961,11 +6961,11 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.16.0.9028",
+      "Version": "0.16.0.9029",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Exploratory Web Apps for Analyzing Clinical Trials Data",
-      "Date": "2025-08-14",
+      "Date": "2025-08-18",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\"), person(\"Vedha\", \"Viyash\", , \"vedha.viyash@roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"Nina\", \"Qi\", , \"qi.ting@gene.com\", role = \"rev\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"Tadeusz\", \"Lewandowski\", role = \"aut\"), person(\"Chendi\", \"Liao\", role = \"rev\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")), person(\"Maximilian\", \"Mordig\", role = \"ctb\") )",
       "Description": "A 'shiny' based interactive exploration framework for analyzing clinical trials data. 'teal' currently provides a dynamic filtering facility and different data viewers. 'teal' 'shiny' applications are built using standard 'shiny' modules.",
       "License": "Apache License 2.0",
@@ -7030,16 +7030,16 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "4bc60d517bf591bc74ca98b150f2c901de4832b3",
+      "RemoteSha": "5d59b048933b776503031165a4f56b2445f54aff",
       "Remotes": "insightsengineering/teal.reporter@main, insightsengineering/teal.slice@main, insightsengineering/teal.widgets@main"
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.6.1.9006",
+      "Version": "0.7.0.9000",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Code Storage and Execution Class for 'teal' Applications",
-      "Date": "2025-08-12",
+      "Date": "2025-08-19",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", , \"nikolas.burkoff@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", , \"maciej.nasinski@contractors.roche.com\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", , \"konrad.pagacz@contractors.roche.com\", role = \"aut\"), person(\"Junlue\", \"Zhao\", , \"zhaoj88@gene.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Introduction of 'qenv' S4 class, that facilitates code execution and reproducibility in 'teal' applications.",
       "License": "Apache License 2.0",
@@ -7082,7 +7082,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
       "RemoteRef": "main",
-      "RemoteSha": "d630c10040b0ae96c7cb12204b0a94a33ccc0cd2"
+      "RemoteSha": "b32cd73028c09780e363649f823dbbf2e05b9b82"
     },
     "teal.data": {
       "Package": "teal.data",
@@ -7353,10 +7353,10 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.4.0.9009",
+      "Version": "0.5.0.9000",
       "Source": "GitHub",
       "Title": "Reporting Tools for 'shiny' Modules",
-      "Date": "2025-08-13",
+      "Date": "2025-08-18",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0005-1258-4757\")), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for the generation of 'rmarkdown' reports, supporting reproducible research and analysis.",
       "License": "Apache License 2.0",
@@ -7411,7 +7411,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "831c64d840baf102e7f58e994433bb884f1a7c69"
+      "RemoteSha": "e8dd172d9fedfed0c133e98ed627ec9442dde78a"
     },
     "teal.slice": {
       "Package": "teal.slice",
@@ -8434,7 +8434,7 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.52",
+      "Version": "0.53",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Supporting Functions for Packages Maintained by 'Yihui Xie'",
@@ -8456,7 +8456,7 @@
         "rstudioapi",
         "tinytex (>= 0.30)",
         "mime",
-        "litedown (>= 0.4)",
+        "litedown (>= 0.6)",
         "commonmark",
         "knitr (>= 1.50)",
         "remotes",
@@ -8466,6 +8466,7 @@
         "jsonlite",
         "magick",
         "yaml",
+        "data.table",
         "qs"
       ],
       "License": "MIT + file LICENSE",
@@ -8475,7 +8476,7 @@
       "RoxygenNote": "7.3.2",
       "VignetteBuilder": "litedown",
       "NeedsCompilation": "yes",
-      "Author": "Yihui Xie [aut, cre, cph] (<https://orcid.org/0000-0003-0645-5666>, https://yihui.org), Wush Wu [ctb], Daijiang Li [ctb], Xianying Tan [ctb], Salim Brüggemann [ctb] (<https://orcid.org/0000-0002-5329-5987>), Christophe Dervieux [ctb]",
+      "Author": "Yihui Xie [aut, cre, cph] (ORCID: <https://orcid.org/0000-0003-0645-5666>, URL: https://yihui.org), Wush Wu [ctb], Daijiang Li [ctb], Xianying Tan [ctb], Salim Brüggemann [ctb] (ORCID: <https://orcid.org/0000-0002-5329-5987>), Christophe Dervieux [ctb]",
       "Maintainer": "Yihui Xie <xie@yihui.name>",
       "Repository": "CRAN"
     },
