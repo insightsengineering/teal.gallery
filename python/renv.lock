@@ -3055,35 +3055,37 @@
     },
     "later": {
       "Package": "later",
-      "Version": "1.4.2",
+      "Version": "1.4.3",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Utilities for Scheduling Functions to Execute Later with Event Loops",
-      "Authors@R": "c( person(\"Winston\", \"Chang\", role = c(\"aut\", \"cre\"), email = \"winston@posit.co\"), person(\"Joe\", \"Cheng\", role = c(\"aut\"), email = \"joe@posit.co\"), person(\"Charlie\", \"Gao\", role = c(\"aut\"), email = \"charlie.gao@shikokuchuo.net\", comment = c(ORCID = \"0000-0002-0750-061X\")), person(family = \"Posit Software, PBC\", role = \"cph\"), person(\"Marcus\", \"Geelnard\", role = c(\"ctb\", \"cph\"), comment = \"TinyCThread library, https://tinycthread.github.io/\"), person(\"Evan\", \"Nemerson\", role = c(\"ctb\", \"cph\"), comment = \"TinyCThread library, https://tinycthread.github.io/\") )",
+      "Authors@R": "c( person(\"Winston\", \"Chang\", , \"winston@posit.co\", role = \"aut\"), person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = \"aut\"), person(\"Charlie\", \"Gao\", , \"charlie.gao@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-0750-061X\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"), comment = c(ROR = \"03wc8by49\")), person(\"Marcus\", \"Geelnard\", role = c(\"ctb\", \"cph\"), comment = \"TinyCThread library, https://tinycthread.github.io/\"), person(\"Evan\", \"Nemerson\", role = c(\"ctb\", \"cph\"), comment = \"TinyCThread library, https://tinycthread.github.io/\") )",
       "Description": "Executes arbitrary R or C functions some time after the current time, after the R execution stack has emptied. The functions are scheduled in an event loop.",
-      "URL": "https://r-lib.github.io/later/, https://github.com/r-lib/later",
-      "BugReports": "https://github.com/r-lib/later/issues",
       "License": "MIT + file LICENSE",
+      "URL": "https://later.r-lib.org, https://github.com/r-lib/later",
+      "BugReports": "https://github.com/r-lib/later/issues",
       "Imports": [
         "Rcpp (>= 0.12.9)",
         "rlang"
       ],
-      "LinkingTo": [
-        "Rcpp"
-      ],
-      "RoxygenNote": "7.3.2",
       "Suggests": [
         "knitr",
         "nanonext",
-        "R6",
         "rmarkdown",
-        "testthat (>= 2.1.0)"
+        "testthat (>= 3.0.0)"
+      ],
+      "LinkingTo": [
+        "Rcpp"
       ],
       "VignetteBuilder": "knitr",
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "Config/usethis/last-upkeep": "2025-07-18",
       "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.2",
       "NeedsCompilation": "yes",
-      "Author": "Winston Chang [aut, cre], Joe Cheng [aut], Charlie Gao [aut] (<https://orcid.org/0000-0002-0750-061X>), Posit Software, PBC [cph], Marcus Geelnard [ctb, cph] (TinyCThread library, https://tinycthread.github.io/), Evan Nemerson [ctb, cph] (TinyCThread library, https://tinycthread.github.io/)",
-      "Maintainer": "Winston Chang <winston@posit.co>",
+      "Author": "Winston Chang [aut], Joe Cheng [aut], Charlie Gao [aut, cre] (ORCID: <https://orcid.org/0000-0002-0750-061X>), Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>), Marcus Geelnard [ctb, cph] (TinyCThread library, https://tinycthread.github.io/), Evan Nemerson [ctb, cph] (TinyCThread library, https://tinycthread.github.io/)",
+      "Maintainer": "Charlie Gao <charlie.gao@posit.co>",
       "Repository": "CRAN"
     },
     "lattice": {
@@ -6818,7 +6820,7 @@
     },
     "xml2": {
       "Package": "xml2",
-      "Version": "1.3.8",
+      "Version": "1.4.0",
       "Source": "Repository",
       "Title": "Parse XML",
       "Authors@R": "c( person(\"Hadley\", \"Wickham\", role = \"aut\"), person(\"Jim\", \"Hester\", role = \"aut\"), person(\"Jeroen\", \"Ooms\", email = \"jeroenooms@gmail.com\", role = c(\"aut\", \"cre\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")), person(\"R Foundation\", role = \"ctb\", comment = \"Copy of R-project homepage cached as example\") )",
@@ -6848,7 +6850,7 @@
       "VignetteBuilder": "knitr",
       "Config/Needs/website": "tidyverse/tidytemplate",
       "Encoding": "UTF-8",
-      "RoxygenNote": "7.2.3",
+      "RoxygenNote": "7.3.2",
       "SystemRequirements": "libxml2: libxml2-dev (deb), libxml2-devel (rpm)",
       "Collate": "'S4.R' 'as_list.R' 'xml_parse.R' 'as_xml_document.R' 'classes.R' 'format.R' 'import-standalone-obj-type.R' 'import-standalone-purrr.R' 'import-standalone-types-check.R' 'init.R' 'nodeset_apply.R' 'paths.R' 'utils.R' 'xml2-package.R' 'xml_attr.R' 'xml_children.R' 'xml_document.R' 'xml_find.R' 'xml_missing.R' 'xml_modify.R' 'xml_name.R' 'xml_namespaces.R' 'xml_node.R' 'xml_nodeset.R' 'xml_path.R' 'xml_schema.R' 'xml_serialize.R' 'xml_structure.R' 'xml_text.R' 'xml_type.R' 'xml_url.R' 'xml_write.R' 'zzz.R'",
       "Config/testthat/edition": "3",
