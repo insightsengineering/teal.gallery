@@ -2406,7 +2406,7 @@
     },
     "flextable": {
       "Package": "flextable",
-      "Version": "0.9.9",
+      "Version": "0.9.10",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Functions for Tabular Reporting",
