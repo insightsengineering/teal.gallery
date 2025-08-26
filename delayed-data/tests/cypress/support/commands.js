@@ -1,33 +1,57 @@
-Cypress.Commands.add(
-  "waitForStabilityAndCatchError",
-  (selector, stabilityPeriod = 300) => {
-    let lastInnerHTML = "";
-    let timesRun = 0;
-    const checkInterval = 100;
-    const maxTimesRun = stabilityPeriod / checkInterval;
+Cypress.on("uncaught:exception", (err, runnable) => {
+  if (
+    err.message.includes(
+      "ResizeObserver loop completed with undelivered notifications"
+    ) ||
+    err.message.includes("ResizeObserver loop limit exceeded") ||
+    err.message.includes(
+      "Cannot read properties of undefined (reading 'onResize')"
+    )
+  ) {
+    return false;
+  }
+  return true;
+});
 
-    function checkForChanges() {
-      cy.get(selector).then(($el) => {
-        // Check for shiny-output-error class anywhere in the body
-        if (Cypress.$("body").find(".shiny-output-error").length > 0) {
-          throw new Error(
-            "shiny-output-error class detected during stability check"
-          );
-        }
+Cypress.Commands.add("waitForShinyStabilityAndCheckError", () => {
+  const idleFor = 2000; // ms of stable (no .shiny-busy)
+  const checkInterval = 200; // ms, less frequent to avoid ResizeObserver spam
+  const timeout = 10000; // ms
+  let stableStart = null;
+  const start = Date.now();
 
-        const currentInnerHTML = $el.prop("innerHTML");
-        if (currentInnerHTML !== lastInnerHTML) {
-          lastInnerHTML = currentInnerHTML;
-          timesRun = 0;
-        } else if (timesRun < maxTimesRun) {
-          timesRun += 1;
-        } else {
+  function check() {
+    cy.get("html").then(($el) => {
+      const isBusy = $el.hasClass("shiny-busy");
+      const now = Date.now();
+
+      if (!isBusy) {
+        if (stableStart === null) stableStart = now;
+        if (now - stableStart >= idleFor) {
+          cy.wait(300).then(() => {
+            cy.get("body").then(($body) => {
+              const error = $body.find(
+                ".shiny-output-error:not(.shiny-output-error-validation)"
+              );
+              if (error.length > 0) {
+                throw new Error(
+                  "Detected .shiny-output-error without .shiny-output-error-validation!"
+                );
+              }
+            });
+          });
           return;
         }
-        cy.wait(checkInterval).then(checkForChanges);
-      });
-    }
+      } else {
+        stableStart = null;
+      }
 
-    checkForChanges();
+      if (now - start > timeout) {
+        throw new Error("Timed out waiting for Shiny to become idle");
+      }
+      cy.wait(checkInterval).then(check);
+    });
   }
-);
+
+  check();
+});

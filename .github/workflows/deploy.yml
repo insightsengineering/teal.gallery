@@ -174,7 +174,7 @@ jobs:
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         uses: cypress-io/github-action@v6
         with:
-          build: npm install cypress --save-dev
+          build: npm i
           working-directory: ${{ matrix.directory }}/tests
           start: npm run run-app
           wait-on: "http://localhost:3333"

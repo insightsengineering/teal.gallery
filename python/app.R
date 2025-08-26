@@ -24,21 +24,21 @@ data <- teal_data_module(
         data <- teal.code::eval_code(
           teal_data(),
           "
-            library(reticulate)
-            .python_dependencies <- c(\"pip\", \"numpy\", \"pandas\") # @linksto .py_dict
-            .virtualenv_dir <- Sys.getenv(\"VIRTUALENV_NAME\", \"example_env_name\") # @linksto .py_dict
-            .python_path <- Sys.getenv(\"PYTHON_PATH\") # @linksto .py_dict
-            if (.python_path == \"\") .python_path <- NULL
-            reticulate::virtualenv_create(
-              envname = .virtualenv_dir, python = .python_path
-            ) # @linksto .py_dict
-            reticulate::virtualenv_install(
-              .virtualenv_dir,
-              packages = .python_dependencies,
-              ignore_installed = TRUE
-            ) # @linksto .py_dict
-            reticulate::use_virtualenv(.virtualenv_dir, required = TRUE) # @linksto .py_dict
-            iris_raw <- cbind(id = seq_len(nrow(iris)), iris) # @linksto .py_dict
+library(reticulate)
+.python_dependencies <- c(\"pip\", \"numpy\", \"pandas\") # @linksto .py_dict
+.virtualenv_dir <- Sys.getenv(\"VIRTUALENV_NAME\", \"example_env_name\") # @linksto .py_dict
+.python_path <- Sys.getenv(\"PYTHON_PATH\") # @linksto .py_dict
+if (.python_path == \"\") .python_path <- NULL
+reticulate::virtualenv_create(
+  envname = .virtualenv_dir, python = .python_path
+) # @linksto .py_dict
+reticulate::virtualenv_install(
+  .virtualenv_dir,
+  packages = .python_dependencies,
+  ignore_installed = TRUE
+) # @linksto .py_dict
+reticulate::use_virtualenv(.virtualenv_dir, required = TRUE) # @linksto .py_dict
+iris_raw <- cbind(id = seq_len(nrow(iris)), iris) # @linksto .py_dict
           "
         )
 
@@ -48,14 +48,14 @@ data <- teal_data_module(
           {
             # python code needs to be un-indented
             .python_code <- "
-              import pandas as pd
-              data = r.iris_raw
-              def svd_whiten(dat):
-                import numpy as np
-                X = np.matrix(dat)
-                U, s, Vt = np.linalg.svd(X, full_matrices=False)
-                X_white = np.dot(U, Vt)
-                return X_white
+import pandas as pd
+data = r.iris_raw
+def svd_whiten(dat):
+  import numpy as np
+  X = np.matrix(dat)
+  U, s, Vt = np.linalg.svd(X, full_matrices=False)
+  X_white = np.dot(U, Vt)
+  return X_white
 
               data_columns = data.columns
               global numeric_cols_ix

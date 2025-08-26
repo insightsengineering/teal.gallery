@@ -480,7 +480,7 @@ app <- teal::init(
     tm_g_lineplot(
       label = "Line Plot",
       dataname = "ADLB",
-      strata = cs_arm_var,
+      group_var = cs_arm_var,
       x = choices_selected(variable_choices(ADLB, "AVISIT"), "AVISIT", fixed = TRUE),
       y = choices_selected(variable_choices(ADLB, c(
         "AVAL", "BASE", "CHG", "PCHG"
