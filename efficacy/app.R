@@ -119,10 +119,7 @@ demog_vars_asl <- names(ADSL)[!(names(ADSL) %in% c("USUBJID", "STUDYID", date_va
 # ARMCD is given in a delayed fashion using value choices and
 # ARM is given with the ref and comp levels supplied explicitly
 arm_ref_comp <- list(
-  ARMCD = list(
-    ref = value_choices("ADSL", var_choices = "ARMCD", var_label = "ARM", subset = "ARM A"),
-    comp = value_choices("ADSL", var_choices = "ARMCD", var_label = "ARM", subset = c("ARM B", "ARM C"))
-  ),
+  ARMCD = list(ref = "ARM A", comp = c("ARM B", "ARM C")),
   ARM = list(ref = "A: Drug X", comp = c("B: Placebo", "C: Combination"))
 )
 
