@@ -2176,7 +2176,7 @@
     },
     "ggExtra": {
       "Package": "ggExtra",
-      "Version": "0.10.1",
+      "Version": "0.11.0",
       "Source": "Repository",
       "Title": "Add Marginal Histograms to 'ggplot2', and More 'ggplot2' Enhancements",
       "Authors@R": "c( person(\"Dean\", \"Attali\", , \"daattali@gmail.com\", role = c(\"aut\", \"cre\")), person(\"Christopher\", \"Baker\", , \"chriscrewbaker@gmail.com\", role = \"aut\") )",
@@ -2214,6 +2214,7 @@
       "SystemRequirements": "pandoc with https support",
       "VignetteBuilder": "knitr",
       "RoxygenNote": "7.2.3",
+      "Encoding": "UTF-8",
       "NeedsCompilation": "no",
       "Author": "Dean Attali [aut, cre], Christopher Baker [aut]",
       "Maintainer": "Dean Attali <daattali@gmail.com>",
@@ -6266,7 +6267,7 @@
     },
     "textshaping": {
       "Package": "textshaping",
-      "Version": "1.0.1",
+      "Version": "1.0.2",
       "Source": "Repository",
       "Title": "Bindings to the 'HarfBuzz' and 'Fribidi' Libraries for Text Shaping",
       "Authors@R": "c( person(\"Thomas Lin\", \"Pedersen\", , \"thomas.pedersen@posit.co\", role = c(\"cre\", \"aut\"), comment = c(ORCID = \"0000-0002-5147-4711\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"), comment = c(ROR = \"03wc8by49\")) )",
