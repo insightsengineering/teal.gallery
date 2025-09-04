@@ -39,7 +39,7 @@ jobs:
     name: Publish 🗞
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/insightsengineering/rstudio:2025.08.05
+      image: ghcr.io/insightsengineering/rstudio:2024.10.15
     if: >
       !contains(github.event.commits[0].message, '[skip deploy]')
     strategy:
@@ -109,6 +109,11 @@ jobs:
             libgbm-dev \
             libnotify-dev \
             libgconf-2-4 \
+            libfreetype6-dev \
+            libpng-dev \
+            libtiff5-dev \
+            libjpeg-dev \
+            libwebp-dev \
             xvfb
           if [ " ${{ matrix.directory }}" == "python" ]
           then {
