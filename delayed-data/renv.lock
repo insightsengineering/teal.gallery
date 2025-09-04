@@ -2240,7 +2240,7 @@
     },
     "officer": {
       "Package": "officer",
-      "Version": "0.6.10",
+      "Version": "0.7.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Manipulation of Microsoft Word and PowerPoint Documents",
@@ -2276,7 +2276,7 @@
       ],
       "Encoding": "UTF-8",
       "RoxygenNote": "7.3.2",
-      "Collate": "'core_properties.R' 'custom_properties.R' 'defunct.R' 'dev-utils.R' 'docx_add.R' 'docx_comments.R' 'docx_cursor.R' 'docx_part.R' 'docx_replace.R' 'docx_section.R' 'docx_settings.R' 'empty_content.R' 'formatting_properties.R' 'fortify_docx.R' 'fortify_pptx.R' 'knitr_utils.R' 'officer.R' 'ooxml.R' 'ooxml_block_objects.R' 'ooxml_run_objects.R' 'openxml_content_type.R' 'openxml_document.R' 'pack_folder.R' 'ph_location.R' 'post-proc.R' 'ppt_class_dir_collection.R' 'ppt_classes.R' 'ppt_notes.R' 'ppt_ph_dedupe_layout.R' 'ppt_ph_manipulate.R' 'ppt_ph_rename_layout.R' 'ppt_ph_with_methods.R' 'pptx_informations.R' 'pptx_layout_helper.R' 'pptx_matrix.R' 'utils.R' 'pptx_slide_manip.R' 'read_docx.R' 'read_docx_styles.R' 'read_pptx.R' 'read_xlsx.R' 'relationship.R' 'rtf.R' 'shape_properties.R' 'shorcuts.R' 'docx_append_context.R' 'utils-xml.R' 'deprecated.R'",
+      "Collate": "'core_properties.R' 'custom_properties.R' 'defunct.R' 'dev-utils.R' 'docx_add.R' 'docx_comments.R' 'docx_cursor.R' 'docx_part.R' 'docx_replace.R' 'docx_section.R' 'docx_settings.R' 'empty_content.R' 'formatting_properties.R' 'fortify_docx.R' 'fortify_pptx.R' 'knitr_utils.R' 'officer.R' 'ooxml.R' 'ooxml_block_objects.R' 'ooxml_run_objects.R' 'openxml_content_type.R' 'openxml_document.R' 'pack_folder.R' 'ph_location.R' 'post-proc.R' 'ppt_class_dir_collection.R' 'ppt_classes.R' 'ppt_notes.R' 'ppt_ph_dedupe_layout.R' 'ppt_ph_manipulate.R' 'ppt_ph_rename_layout.R' 'ppt_ph_with_methods.R' 'pptx_informations.R' 'pptx_layout_helper.R' 'pptx_matrix.R' 'utils.R' 'pptx_slide_manip.R' 'read_docx.R' 'read_docx_styles.R' 'read_pptx.R' 'read_xlsx.R' 'relationship.R' 'rtf.R' 'shape_properties.R' 'shorcuts.R' 'docx_append_context.R' 'utils-xml.R' 'deprecated.R' 'zzz.R'",
       "NeedsCompilation": "no",
       "Author": "David Gohel [aut, cre], Stefan Moog [aut], Mark Heckmann [aut] (ORCID: <https://orcid.org/0000-0002-0736-7417>), ArData [cph], Frank Hangler [ctb] (function body_replace_all_text), Liz Sander [ctb] (several documentation fixes), Anton Victorson [ctb] (fixes xml structures), Jon Calder [ctb] (update vignettes), John Harrold [ctb] (function annotate_base), John Muschelli [ctb] (google doc compatibility), Bill Denney [ctb] (ORCID: <https://orcid.org/0000-0002-5759-428X>, function as.matrix.rpptx), Nikolai Beck [ctb] (set speaker notes for .pptx documents), Greg Leleu [ctb] (fields functionality in ppt), Majid Eismann [ctb], Hongyuan Jia [ctb] (ORCID: <https://orcid.org/0000-0002-0075-8183>), Michael Stackhouse [ctb]",
       "Maintainer": "David Gohel <david.gohel@ardata.fr>",
@@ -2569,11 +2569,11 @@
     },
     "ragg": {
       "Package": "ragg",
-      "Version": "1.4.0",
+      "Version": "1.5.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Graphic Devices Based on AGG",
-      "Authors@R": "c( person(\"Thomas Lin\", \"Pedersen\", , \"thomas.pedersen@posit.co\", role = c(\"cre\", \"aut\"), comment = c(ORCID = \"0000-0002-5147-4711\")), person(\"Maxim\", \"Shemanarev\", role = c(\"aut\", \"cph\"), comment = \"Author of AGG\"), person(\"Tony\", \"Juricic\", , \"tonygeek@yahoo.com\", role = c(\"ctb\", \"cph\"), comment = \"Contributor to AGG\"), person(\"Milan\", \"Marusinec\", , \"milan@marusinec.sk\", role = c(\"ctb\", \"cph\"), comment = \"Contributor to AGG\"), person(\"Spencer\", \"Garrett\", role = \"ctb\", comment = \"Contributor to AGG\"), person(\"Posit, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Authors@R": "c( person(\"Thomas Lin\", \"Pedersen\", , \"thomas.pedersen@posit.co\", role = c(\"cre\", \"aut\"), comment = c(ORCID = \"0000-0002-5147-4711\")), person(\"Maxim\", \"Shemanarev\", role = c(\"aut\", \"cph\"), comment = \"Author of AGG\"), person(\"Tony\", \"Juricic\", , \"tonygeek@yahoo.com\", role = c(\"ctb\", \"cph\"), comment = \"Contributor to AGG\"), person(\"Milan\", \"Marusinec\", , \"milan@marusinec.sk\", role = c(\"ctb\", \"cph\"), comment = \"Contributor to AGG\"), person(\"Spencer\", \"Garrett\", role = \"ctb\", comment = \"Contributor to AGG\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"), comment = c(ROR = \"03wc8by49\")) )",
       "Maintainer": "Thomas Lin Pedersen <thomas.pedersen@posit.co>",
       "Description": "Anti-Grain Geometry (AGG) is a high-quality and high-performance 2D drawing library. The 'ragg' package provides a set of graphic devices based on AGG to use as alternative to the raster devices provided through the 'grDevices' package.",
       "License": "MIT + file LICENSE",
@@ -2593,14 +2593,15 @@
         "systemfonts",
         "textshaping"
       ],
+      "Config/build/compilation-database": "true",
       "Config/Needs/website": "ggplot2, devoid, magick, bench, tidyr, ggridges, hexbin, sessioninfo, pkgdown, tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "Config/usethis/last-upkeep": "2025-04-25",
       "Encoding": "UTF-8",
       "RoxygenNote": "7.3.2",
-      "SystemRequirements": "freetype2, libpng, libtiff, libjpeg",
-      "Config/testthat/edition": "3",
-      "Config/build/compilation-database": "true",
+      "SystemRequirements": "freetype2, libpng, libtiff, libjpeg, libwebp, libwebpmux",
       "NeedsCompilation": "yes",
-      "Author": "Thomas Lin Pedersen [cre, aut] (<https://orcid.org/0000-0002-5147-4711>), Maxim Shemanarev [aut, cph] (Author of AGG), Tony Juricic [ctb, cph] (Contributor to AGG), Milan Marusinec [ctb, cph] (Contributor to AGG), Spencer Garrett [ctb] (Contributor to AGG), Posit, PBC [cph, fnd]",
+      "Author": "Thomas Lin Pedersen [cre, aut] (ORCID: <https://orcid.org/0000-0002-5147-4711>), Maxim Shemanarev [aut, cph] (Author of AGG), Tony Juricic [ctb, cph] (Contributor to AGG), Milan Marusinec [ctb, cph] (Contributor to AGG), Spencer Garrett [ctb] (Contributor to AGG), Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
       "Repository": "CRAN"
     },
     "rappdirs": {
@@ -2929,10 +2930,10 @@
     },
     "rtables.officer": {
       "Package": "rtables.officer",
-      "Version": "0.1.0.9000",
+      "Version": "0.1.0.9001",
       "Source": "GitHub",
       "Title": "Exporting Tools for 'rtables'",
-      "Date": "2025-04-22",
+      "Date": "2025-09-03",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"ctb\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Designed to create and display complex tables with R, the 'rtables' R package allows cells in an 'rtables' object to contain any high-dimensional data structure, which can then be displayed with cell-specific formatting instructions. Additionally, the 'rtables.officer' package supports export formats related to the Microsoft Office software suite, including Microsoft Word ('docx') and Microsoft PowerPoint ('pptx').",
       "License": "Apache License 2.0",
@@ -2985,7 +2986,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables.officer",
       "RemoteRef": "main",
-      "RemoteSha": "319bf7008d63dd6533c1dfbfec8ae006c9a21a3c"
+      "RemoteSha": "dc9ab486949afb46e056aaf5182600dae83319e7"
     },
     "sass": {
       "Package": "sass",
@@ -3530,11 +3531,11 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "1.0.0.9000",
+      "Version": "1.0.0.9001",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Exploratory Web Apps for Analyzing Clinical Trials Data",
-      "Date": "2025-08-20",
+      "Date": "2025-09-03",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\"), person(\"Vedha\", \"Viyash\", , \"vedha.viyash@roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"Nina\", \"Qi\", , \"qi.ting@gene.com\", role = \"rev\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"Tadeusz\", \"Lewandowski\", role = \"aut\"), person(\"Chendi\", \"Liao\", role = \"rev\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")), person(\"Maximilian\", \"Mordig\", role = \"ctb\") )",
       "Description": "A 'shiny' based interactive exploration framework for analyzing clinical trials data. 'teal' currently provides a dynamic filtering facility and different data viewers. 'teal' 'shiny' applications are built using standard 'shiny' modules.",
       "License": "Apache License 2.0",
@@ -3599,7 +3600,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "fa47a1c564e1e9992472de75b6e484c6900938e3"
+      "RemoteSha": "ad6cabdf84e34bb98b36fcce2c896fbbb45f8a54"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -3933,7 +3934,7 @@
     },
     "textshaping": {
       "Package": "textshaping",
-      "Version": "1.0.2",
+      "Version": "1.0.3",
       "Source": "Repository",
       "Title": "Bindings to the 'HarfBuzz' and 'Fribidi' Libraries for Text Shaping",
       "Authors@R": "c( person(\"Thomas Lin\", \"Pedersen\", , \"thomas.pedersen@posit.co\", role = c(\"cre\", \"aut\"), comment = c(ORCID = \"0000-0002-5147-4711\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"), comment = c(ROR = \"03wc8by49\")) )",
