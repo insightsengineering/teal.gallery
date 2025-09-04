@@ -109,6 +109,11 @@ jobs:
             libgbm-dev \
             libnotify-dev \
             libgconf-2-4 \
+            libfreetype6-dev \
+            libpng-dev \
+            libtiff5-dev \
+            libjpeg-dev \
+            libwebp-dev \
             xvfb
           if [ " ${{ matrix.directory }}" == "python" ]
           then {
