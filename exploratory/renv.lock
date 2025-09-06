@@ -5255,10 +5255,10 @@
     },
     "rtables.officer": {
       "Package": "rtables.officer",
-      "Version": "0.1.0.9001",
+      "Version": "0.1.0.9002",
       "Source": "GitHub",
       "Title": "Exporting Tools for 'rtables'",
-      "Date": "2025-09-03",
+      "Date": "2025-09-05",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"ctb\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Designed to create and display complex tables with R, the 'rtables' R package allows cells in an 'rtables' object to contain any high-dimensional data structure, which can then be displayed with cell-specific formatting instructions. Additionally, the 'rtables.officer' package supports export formats related to the Microsoft Office software suite, including Microsoft Word ('docx') and Microsoft PowerPoint ('pptx').",
       "License": "Apache License 2.0",
@@ -5276,7 +5276,7 @@
         "checkmate (>= 2.1.0)",
         "flextable (>= 0.9.6)",
         "lifecycle (>= 0.2.0)",
-        "officer (>= 0.6.6)",
+        "officer (>= 0.7.0)",
         "stats",
         "stringi (>= 1.6)"
       ],
@@ -5311,7 +5311,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables.officer",
       "RemoteRef": "main",
-      "RemoteSha": "dc9ab486949afb46e056aaf5182600dae83319e7"
+      "RemoteSha": "d7b24e05c99efdd06d1e8a8aa7c6f0e745528c1d"
     },
     "sandwich": {
       "Package": "sandwich",
