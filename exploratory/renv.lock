@@ -6304,11 +6304,11 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.5.0.9001",
+      "Version": "0.5.0.9002",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "General Modules for 'teal' Applications",
-      "Date": "2025-09-09",
+      "Date": "2025-09-15",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Ondrej\", \"Slama\", , \"ondrej.slama@roche.com\", role = \"ctb\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for viewing data, visualizing data, understanding missing and outlier values within your data and performing simple data analysis.  This extends 'teal' framework that supports reproducible research and analysis.",
       "License": "Apache License 2.0",
@@ -6390,7 +6390,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "28ce7262ffe55a508ab5a42f438ad3bc8d6d0b00",
+      "RemoteSha": "56e2abc90ff0a42ae43863a639ff194c5663d89f",
       "Remotes": "insightsengineering/teal, insightsengineering/teal.reporter"
     },
     "teal.reporter": {
