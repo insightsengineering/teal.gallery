@@ -12,7 +12,7 @@
 
 ### View the deployed app
 
-Deployed app: <https://genentech.shinyapps.io/NEST_basic-teal_stable>
+Deployed app: <https://rinpharma.shinyapps.io/NEST_basic-teal_stable>
 
 ### Preview the app
 
