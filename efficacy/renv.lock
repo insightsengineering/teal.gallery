@@ -4921,7 +4921,7 @@
       "LazyData": "true",
       "NeedsCompilation": "yes",
       "Roxygen": "list(markdown = TRUE)",
-      "RoxygenNote": "7.3.2.9000",
+      "RoxygenNote": "7.3.3",
       "Collate": "'between-within.R' 'catch-routine-registration.R' 'component.R' 'cov_struct.R' 'data.R' 'empirical.R' 'fit.R' 'kenwardroger.R' 'mmrm-methods.R' 'mmrm-package.R' 'utils.R' 'residual.R' 'utils-nse.R' 'utils-formula.R' 'satterthwaite.R' 'skipping.R' 'tidiers.R' 'testing.R' 'tmb-methods.R' 'tmb.R' 'interop-emmeans.R' 'interop-parsnip.R' 'interop-car.R' 'zzz.R'",
       "Author": "Daniel Sabanes Bove [aut, cre] (<https://orcid.org/0000-0002-0176-9239>), Liming Li [aut] (<https://orcid.org/0009-0008-6870-0878>), Julia Dedic [aut], Doug Kelkhoff [aut], Kevin Kunzmann [aut], Brian Matthew Lang [aut], Christian Stock [aut], Ya Wang [aut], Craig Gower-Page [ctb], Dan James [aut], Jonathan Sidi [aut], Daniel Leibovitz [aut], Daniel D. Sjoberg [aut] (<https://orcid.org/0000-0003-0862-2018>), Nikolas Ivan Krieger [aut] (<https://orcid.org/0000-0002-4581-3545>), Lukas A. Widmer [ctb] (<https://orcid.org/0000-0003-1471-3493>), Boehringer Ingelheim Ltd. [cph, fnd], Gilead Sciences, Inc. [cph, fnd], F. Hoffmann-La Roche AG [cph, fnd], Merck Sharp & Dohme, Inc. [cph, fnd], AstraZeneca plc [cph, fnd], inferential.biostatistics GmbH [cph, fnd]",
       "Maintainer": "Daniel Sabanes Bove <daniel.sabanes_bove@rconis.com>",
@@ -4930,7 +4930,7 @@
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "7fee9982138ca5ece456251a17a29ed7529736fe"
+      "RemoteSha": "1d118cdf505f2f9aa1a885396e43f873fae053a7"
     },
     "modelr": {
       "Package": "modelr",
@@ -7736,11 +7736,11 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.5.0.9001",
+      "Version": "0.5.0.9002",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "General Modules for 'teal' Applications",
-      "Date": "2025-09-09",
+      "Date": "2025-09-15",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Ondrej\", \"Slama\", , \"ondrej.slama@roche.com\", role = \"ctb\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for viewing data, visualizing data, understanding missing and outlier values within your data and performing simple data analysis.  This extends 'teal' framework that supports reproducible research and analysis.",
       "License": "Apache License 2.0",
@@ -7822,7 +7822,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "28ce7262ffe55a508ab5a42f438ad3bc8d6d0b00",
+      "RemoteSha": "56e2abc90ff0a42ae43863a639ff194c5663d89f",
       "Remotes": "insightsengineering/teal, insightsengineering/teal.reporter"
     },
     "teal.reporter": {
