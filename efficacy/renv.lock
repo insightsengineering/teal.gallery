@@ -3852,7 +3852,7 @@
     },
     "labelled": {
       "Package": "labelled",
-      "Version": "2.14.1",
+      "Version": "2.15.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Manipulating Labelled Data",
@@ -3881,7 +3881,8 @@
         "rmarkdown",
         "questionr",
         "snakecase",
-        "spelling"
+        "spelling",
+        "survey"
       ],
       "Enhances": [
         "memisc"
@@ -3890,7 +3891,7 @@
       "BugReports": "https://github.com/larmarange/labelled/issues",
       "VignetteBuilder": "knitr",
       "LazyData": "true",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "Language": "en-US",
       "Config/testthat/edition": "3",
       "Config/Needs/check": "memisc",
