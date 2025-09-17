@@ -4169,7 +4169,7 @@
     },
     "labelled": {
       "Package": "labelled",
-      "Version": "2.14.1",
+      "Version": "2.15.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Manipulating Labelled Data",
@@ -4198,7 +4198,8 @@
         "rmarkdown",
         "questionr",
         "snakecase",
-        "spelling"
+        "spelling",
+        "survey"
       ],
       "Enhances": [
         "memisc"
@@ -4207,7 +4208,7 @@
       "BugReports": "https://github.com/larmarange/labelled/issues",
       "VignetteBuilder": "knitr",
       "LazyData": "true",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "Language": "en-US",
       "Config/testthat/edition": "3",
       "Config/Needs/check": "memisc",
@@ -7827,10 +7828,10 @@
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.5.0.9003",
+      "Version": "0.5.0.9004",
       "Source": "GitHub",
       "Title": "Reporting Tools for 'shiny' Modules",
-      "Date": "2025-09-11",
+      "Date": "2025-09-16",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0005-1258-4757\")), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for the generation of 'rmarkdown' reports, supporting reproducible research and analysis.",
       "License": "Apache License 2.0",
@@ -7896,7 +7897,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "cbde4478969190636b787ab3b309ab598ec06c93"
+      "RemoteSha": "87d063710aa15eb4066502fbee8b8d208783faaf"
     },
     "teal.slice": {
       "Package": "teal.slice",
