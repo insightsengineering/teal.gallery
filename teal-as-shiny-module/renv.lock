@@ -254,6 +254,28 @@
       "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
       "Repository": "CRAN"
     },
+    "assertthat": {
+      "Package": "assertthat",
+      "Version": "0.2.1",
+      "Source": "Repository",
+      "Title": "Easy Pre and Post Assertions",
+      "Authors@R": "person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", c(\"aut\", \"cre\"))",
+      "Description": "An extension to stopifnot() that makes it easy to declare  the pre and post conditions that you code should satisfy, while also  producing friendly error messages so that your users know what's gone wrong.",
+      "License": "GPL-3",
+      "Imports": [
+        "tools"
+      ],
+      "Suggests": [
+        "testthat",
+        "covr"
+      ],
+      "RoxygenNote": "6.0.1",
+      "Collate": "'assert-that.r' 'on-failure.r' 'assertions-file.r' 'assertions-scalar.R' 'assertions.r' 'base.r' 'base-comparison.r' 'base-is.r' 'base-logical.r' 'base-misc.r' 'utils.r' 'validate-that.R'",
+      "NeedsCompilation": "no",
+      "Author": "Hadley Wickham [aut, cre]",
+      "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
+      "Repository": "CRAN"
+    },
     "backports": {
       "Package": "backports",
       "Version": "1.5.0",
@@ -766,6 +788,33 @@
       "Maintainer": "Hadley Wickham <hadley@posit.co>",
       "Repository": "CRAN"
     },
+    "ellipsis": {
+      "Package": "ellipsis",
+      "Version": "0.3.2",
+      "Source": "Repository",
+      "Title": "Tools for Working with ...",
+      "Description": "The ellipsis is a powerful tool for extending functions. Unfortunately  this power comes at a cost: misspelled arguments will be silently ignored.  The ellipsis package provides a collection of functions to catch problems and alert the user.",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = c(\"aut\", \"cre\")), person(\"RStudio\", role = \"cph\") )",
+      "License": "MIT + file LICENSE",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.1.1",
+      "URL": "https://ellipsis.r-lib.org, https://github.com/r-lib/ellipsis",
+      "BugReports": "https://github.com/r-lib/ellipsis/issues",
+      "Depends": [
+        "R (>= 3.2)"
+      ],
+      "Imports": [
+        "rlang (>= 0.3.0)"
+      ],
+      "Suggests": [
+        "covr",
+        "testthat"
+      ],
+      "NeedsCompilation": "yes",
+      "Author": "Hadley Wickham [aut, cre], RStudio [cph]",
+      "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
+      "Repository": "CRAN"
+    },
     "evaluate": {
       "Package": "evaluate",
       "Version": "1.0.5",
@@ -1012,10 +1061,10 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.11.9001",
+      "Version": "0.5.11",
       "Source": "GitHub",
       "Title": "ASCII Formatting for Values and Tables",
-      "Date": "2025-07-10",
+      "Date": "2025-04-08",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "We provide a framework for rendering complex tables to ASCII, and a set of formatters for transforming values or sets of values into ASCII-ready display strings.",
       "License": "Apache License 2.0",
@@ -1057,8 +1106,8 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
-      "RemoteRef": "main",
-      "RemoteSha": "1f75511fee6e25082ee15ad0c0173655570079ed"
+      "RemoteRef": "v0.5.11",
+      "RemoteSha": "1d34f8a1048685df1e0d932b4b3112ad2313354c"
     },
     "fs": {
       "Package": "fs",
@@ -1742,6 +1791,66 @@
       "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
       "Repository": "CRAN"
     },
+    "learnr": {
+      "Package": "learnr",
+      "Version": "0.11.5",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Interactive Tutorials for R",
+      "Authors@R": "c( person(\"Garrick\", \"Aden-Buie\", , \"garrick@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-7111-0077\")), person(\"Barret\", \"Schloerke\", , \"barret@posit.co\", role = \"aut\", comment = c(ORCID = \"0000-0001-9986-114X\")), person(\"JJ\", \"Allaire\", , \"jj@posit.co\", role = c(\"aut\", \"ccp\")), person(\"Alexander\", \"Rossell Hayes\", , \"alex.rossellhayes@posit.co\", role = \"aut\", comment = c(ORCID = \"0000-0001-9412-0457\")), person(\"Nischal\", \"Shrestha\", , \"nischal@posit.co\", role = \"ctb\", comment = c(ORCID = \"0000-0003-3321-1712\")), person(\"Angela\", \"Li\", , \"angelali921@gmail.com\", role = \"ctb\", comment = \"vignette\"), person(\"Posit, PBC\", role = c(\"cph\", \"fnd\")), person(, \"Ajax.org B.V.\", role = c(\"ctb\", \"cph\"), comment = \"Ace library\"), person(\"Zeno\", \"Rocha\", role = c(\"ctb\", \"cph\"), comment = \"clipboard.js library\"), person(\"Nick\", \"Payne\", role = c(\"ctb\", \"cph\"), comment = \"Bootbox library\"), person(\"Jake\", \"Archibald\", role = c(\"ctb\", \"cph\"), comment = \"idb-keyval library\"), person(\"i18next authors\", role = c(\"ctb\", \"cph\"), comment = \"i18next library\") )",
+      "Description": "Create interactive tutorials using R Markdown. Use a combination of narrative, figures, videos, exercises, and quizzes to create self-paced tutorials for learning about R and R packages.",
+      "License": "Apache License (>= 2.0)",
+      "URL": "https://rstudio.github.io/learnr/, https://github.com/rstudio/learnr",
+      "BugReports": "https://github.com/rstudio/learnr/issues",
+      "Imports": [
+        "checkmate",
+        "digest",
+        "ellipsis (>= 0.2.0.1)",
+        "evaluate",
+        "htmltools (>= 0.3.5)",
+        "htmlwidgets",
+        "jsonlite",
+        "knitr (>= 1.31)",
+        "lifecycle",
+        "markdown (>= 1.3)",
+        "parallel",
+        "promises",
+        "rappdirs",
+        "renv (>= 0.8.0)",
+        "rlang",
+        "rmarkdown (>= 1.12.0)",
+        "rprojroot",
+        "shiny (>= 1.0)",
+        "stats",
+        "utils",
+        "withr"
+      ],
+      "Suggests": [
+        "bslib",
+        "callr",
+        "curl",
+        "DBI (>= 0.4-1)",
+        "httpuv",
+        "later",
+        "reticulate",
+        "RSQLite",
+        "rstudioapi (>= 0.11)",
+        "shinytest2",
+        "sortable",
+        "testthat (>= 3.0.3)"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/connect": "rsconnect",
+      "Config/Needs/coverage": "covr",
+      "Config/Needs/website": "pkgdown, tidyverse/tidytemplate",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.2.3",
+      "SystemRequirements": "pandoc (>= 1.14) - http://pandoc.org",
+      "NeedsCompilation": "no",
+      "Author": "Garrick Aden-Buie [aut, cre] (<https://orcid.org/0000-0002-7111-0077>), Barret Schloerke [aut] (<https://orcid.org/0000-0001-9986-114X>), JJ Allaire [aut, ccp], Alexander Rossell Hayes [aut] (<https://orcid.org/0000-0001-9412-0457>), Nischal Shrestha [ctb] (<https://orcid.org/0000-0003-3321-1712>), Angela Li [ctb] (vignette), Posit, PBC [cph, fnd], Ajax.org B.V. [ctb, cph] (Ace library), Zeno Rocha [ctb, cph] (clipboard.js library), Nick Payne [ctb, cph] (Bootbox library), Jake Archibald [ctb, cph] (idb-keyval library), i18next authors [ctb, cph] (i18next library)",
+      "Maintainer": "Garrick Aden-Buie <garrick@posit.co>",
+      "Repository": "CRAN"
+    },
     "lifecycle": {
       "Package": "lifecycle",
       "Version": "1.0.4",
@@ -1781,6 +1890,38 @@
       "NeedsCompilation": "no",
       "Author": "Lionel Henry [aut, cre], Hadley Wickham [aut] (<https://orcid.org/0000-0003-4757-117X>), Posit Software, PBC [cph, fnd]",
       "Maintainer": "Lionel Henry <lionel@posit.co>",
+      "Repository": "CRAN"
+    },
+    "litedown": {
+      "Package": "litedown",
+      "Version": "0.7",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "A Lightweight Version of R Markdown",
+      "Authors@R": "c( person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\", URL = \"https://yihui.org\")), person(\"Tim\", \"Taylor\", role = \"ctb\", comment = c(ORCID = \"0000-0002-8587-7113\")), person() )",
+      "Description": "Render R Markdown to Markdown (without using 'knitr'), and Markdown to lightweight HTML or 'LaTeX' documents with the 'commonmark' package (instead of 'Pandoc'). Some missing Markdown features in 'commonmark' are also supported, such as raw HTML or 'LaTeX' blocks, 'LaTeX' math, superscripts, subscripts, footnotes, element attributes, and appendices, but not all 'Pandoc' Markdown features are (or will be) supported. With additional JavaScript and CSS, you can also create HTML slides and articles. This package can be viewed as a trimmed-down version of R Markdown and 'knitr'. It does not aim at rich Markdown features or a large variety of output formats (the primary formats are HTML and 'LaTeX'). Book and website projects of multiple input documents are also supported.",
+      "Depends": [
+        "R (>= 3.2.0)"
+      ],
+      "Imports": [
+        "utils",
+        "commonmark (>= 1.9.5)",
+        "xfun (>= 0.52)"
+      ],
+      "Suggests": [
+        "rbibutils",
+        "rstudioapi",
+        "tinytex"
+      ],
+      "License": "MIT + file LICENSE",
+      "URL": "https://github.com/yihui/litedown",
+      "BugReports": "https://github.com/yihui/litedown/issues",
+      "VignetteBuilder": "litedown",
+      "RoxygenNote": "7.3.2",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "no",
+      "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>, https://yihui.org), Tim Taylor [ctb] (<https://orcid.org/0000-0002-8587-7113>)",
+      "Maintainer": "Yihui Xie <xie@yihui.name>",
       "Repository": "CRAN"
     },
     "logger": {
@@ -1869,6 +2010,38 @@
       "NeedsCompilation": "yes",
       "Author": "Stefan Milton Bache [aut, cph] (Original author and creator of magrittr), Hadley Wickham [aut], Lionel Henry [cre], Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
       "Maintainer": "Lionel Henry <lionel@posit.co>",
+      "Repository": "CRAN"
+    },
+    "markdown": {
+      "Package": "markdown",
+      "Version": "2.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Render Markdown with 'commonmark'",
+      "Authors@R": "c( person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")), person(\"JJ\", \"Allaire\", role = \"aut\"), person(\"Jeffrey\", \"Horner\", role = \"aut\"), person(\"Henrik\", \"Bengtsson\", role = \"ctb\"), person(\"Jim\", \"Hester\", role = \"ctb\"), person(\"Yixuan\", \"Qiu\", role = \"ctb\"), person(\"Kohske\", \"Takahashi\", role = \"ctb\"), person(\"Adam\", \"November\", role = \"ctb\"), person(\"Nacho\", \"Caballero\", role = \"ctb\"), person(\"Jeroen\", \"Ooms\", role = \"ctb\"), person(\"Thomas\", \"Leeper\", role = \"ctb\"), person(\"Joe\", \"Cheng\", role = \"ctb\"), person(\"Andrzej\", \"Oles\", role = \"ctb\"), person(given = \"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Description": "Render Markdown to full and lightweight HTML/LaTeX documents with the 'commonmark' package. This package has been superseded by 'litedown'.",
+      "Depends": [
+        "R (>= 2.11.1)"
+      ],
+      "Imports": [
+        "utils",
+        "xfun",
+        "litedown (>= 0.6)"
+      ],
+      "Suggests": [
+        "knitr",
+        "rmarkdown (>= 2.18)",
+        "yaml",
+        "RCurl"
+      ],
+      "License": "MIT + file LICENSE",
+      "URL": "https://github.com/rstudio/markdown",
+      "BugReports": "https://github.com/rstudio/markdown/issues",
+      "RoxygenNote": "7.3.2",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "no",
+      "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>), JJ Allaire [aut], Jeffrey Horner [aut], Henrik Bengtsson [ctb], Jim Hester [ctb], Yixuan Qiu [ctb], Kohske Takahashi [ctb], Adam November [ctb], Nacho Caballero [ctb], Jeroen Ooms [ctb], Thomas Leeper [ctb], Joe Cheng [ctb], Andrzej Oles [ctb], Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Yihui Xie <xie@yihui.name>",
       "Repository": "CRAN"
     },
     "memoise": {
@@ -2558,10 +2731,10 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.13.9000",
+      "Version": "0.6.13",
       "Source": "GitHub",
       "Title": "Reporting Tables",
-      "Date": "2025-06-20",
+      "Date": "2025-06-17",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"Original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Daniel\", \"Sabanés Bové\", , \"daniel.sabanes_bove@roche.com\", role = \"ctb\"), person(\"Maximilian\", \"Mordig\", , \"maximilian_oliver.mordig@roche.com\", role = \"ctb\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Reporting tables often have structure that goes beyond simple rectangular data. The 'rtables' package provides a framework for declaring complex multi-level tabulations and then applying them to data. This framework models both tabulation and the resulting tables as hierarchical, tree-like objects which support sibling sub-tables, arbitrary splitting or grouping of data in row and column dimensions, cells containing multiple values, and the concept of contextual summary computations. A convenient pipe-able interface is provided for declaring table layouts and the corresponding computations, and then applying them to data.",
       "License": "Apache License 2.0 | file LICENSE",
@@ -2609,15 +2782,15 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
-      "RemoteRef": "main",
-      "RemoteSha": "b080090fac1b4b4470bf172ce01c993dee5038db"
+      "RemoteRef": "v0.6.13",
+      "RemoteSha": "ae9f1db9cd8e997dfbad8eb9725aa343a6e1abc5"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
-      "Version": "0.1.0.9000",
+      "Version": "0.1.1",
       "Source": "GitHub",
       "Title": "Exporting Tools for 'rtables'",
-      "Date": "2025-04-22",
+      "Date": "2025-09-11",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"ctb\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Designed to create and display complex tables with R, the 'rtables' R package allows cells in an 'rtables' object to contain any high-dimensional data structure, which can then be displayed with cell-specific formatting instructions. Additionally, the 'rtables.officer' package supports export formats related to the Microsoft Office software suite, including Microsoft Word ('docx') and Microsoft PowerPoint ('pptx').",
       "License": "Apache License 2.0",
@@ -2635,7 +2808,7 @@
         "checkmate (>= 2.1.0)",
         "flextable (>= 0.9.6)",
         "lifecycle (>= 0.2.0)",
-        "officer (>= 0.6.6)",
+        "officer (>= 0.7.0)",
         "stats",
         "stringi (>= 1.6)"
       ],
@@ -2661,7 +2834,7 @@
       "Language": "en-US",
       "LazyData": "true",
       "Roxygen": "list(markdown = TRUE)",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "Collate": "'add_flextable_separators.R' 'as_flextable.R' 'export_as_docx.R' 'package.R' 'theme_defaults.R'",
       "Author": "Gabriel Becker [ctb], Davide Garolini [aut] (<https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (<https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [aut] (<https://orcid.org/0009-0005-2083-1105>), Joe Zhu [aut, cre] (<https://orcid.org/0000-0001-7566-2787>), F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Joe Zhu <joe.zhu@roche.com>",
@@ -2669,8 +2842,8 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables.officer",
-      "RemoteRef": "main",
-      "RemoteSha": "319bf7008d63dd6533c1dfbfec8ae006c9a21a3c"
+      "RemoteRef": "v0.1.1",
+      "RemoteSha": "53f6b8414f3c75453f815272aec8b8467f7ff1bc"
     },
     "sass": {
       "Package": "sass",
@@ -2957,6 +3130,49 @@
       "Maintainer": "Dean Attali <daattali@gmail.com>",
       "Repository": "CRAN"
     },
+    "sortable": {
+      "Package": "sortable",
+      "Version": "0.5.0",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Drag-and-Drop in 'shiny' Apps with 'SortableJS'",
+      "Authors@R": "c(person(given = \"Andrie\", family = \"de Vries\", role = c(\"cre\", \"aut\"), email = \"apdevries@gmail.com\"), person(given = \"Barret\", family = \"Schloerke\", role = \"aut\", email = \"barret@rstudio.com\"), person(given = \"Kenton\", family = \"Russell\", role = c(\"aut\", \"ccp\"), email = \"kent.russell@timelyportfolio.com\", comment = \"Original author\"), person(\"RStudio\", role = c(\"cph\", \"fnd\")), person(given = \"Lebedev\", family = \"Konstantin\", role = \"cph\", comment = \"'SortableJS', https://sortablejs.github.io/Sortable/\"))",
+      "Description": "Enables drag-and-drop behaviour in Shiny apps, by exposing the  functionality of the 'SortableJS' <https://sortablejs.github.io/Sortable/>  JavaScript library as an 'htmlwidget'.  You can use this in Shiny apps and widgets, 'learnr' tutorials as well as  R Markdown. In addition, provides a custom 'learnr' question type -  'question_rank()' - that allows ranking questions with drag-and-drop.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://rstudio.github.io/sortable/",
+      "BugReports": "https://github.com/rstudio/sortable/issues",
+      "Imports": [
+        "htmltools",
+        "htmlwidgets",
+        "learnr (>= 0.10.0)",
+        "shiny",
+        "assertthat",
+        "jsonlite",
+        "utils",
+        "ellipsis",
+        "rlang"
+      ],
+      "Suggests": [
+        "base64enc",
+        "knitr",
+        "testthat (>= 2.1.0)",
+        "withr",
+        "rmarkdown",
+        "magrittr",
+        "webshot",
+        "spelling",
+        "covr"
+      ],
+      "VignetteBuilder": "knitr",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.2.3",
+      "Language": "en-US",
+      "Config/testthat/edition": "3",
+      "NeedsCompilation": "no",
+      "Author": "Andrie de Vries [cre, aut], Barret Schloerke [aut], Kenton Russell [aut, ccp] (Original author), RStudio [cph, fnd], Lebedev Konstantin [cph] ('SortableJS', https://sortablejs.github.io/Sortable/)",
+      "Maintainer": "Andrie de Vries <apdevries@gmail.com>",
+      "Repository": "CRAN"
+    },
     "sourcetools": {
       "Package": "sourcetools",
       "Version": "0.1.7-1",
@@ -3172,11 +3388,11 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.16.0.9012",
+      "Version": "1.0.0",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Exploratory Web Apps for Analyzing Clinical Trials Data",
-      "Date": "2025-07-11",
+      "Date": "2025-08-18",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\"), person(\"Vedha\", \"Viyash\", , \"vedha.viyash@roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"Nina\", \"Qi\", , \"qi.ting@gene.com\", role = \"rev\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"Tadeusz\", \"Lewandowski\", role = \"aut\"), person(\"Chendi\", \"Liao\", role = \"rev\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")), person(\"Maximilian\", \"Mordig\", role = \"ctb\") )",
       "Description": "A 'shiny' based interactive exploration framework for analyzing clinical trials data. 'teal' currently provides a dynamic filtering facility and different data viewers. 'teal' 'shiny' applications are built using standard 'shiny' modules.",
       "License": "Apache License 2.0",
@@ -3185,8 +3401,8 @@
       "Depends": [
         "R (>= 4.1)",
         "shiny (>= 1.8.1)",
-        "teal.data (>= 0.7.0)",
-        "teal.slice (>= 0.6.0.9001)"
+        "teal.data (>= 0.8.0)",
+        "teal.slice (>= 0.7.0)"
       ],
       "Imports": [
         "bsicons",
@@ -3201,10 +3417,10 @@
         "rlang (>= 1.0.0)",
         "shinyjs",
         "stats",
-        "teal.code (>= 0.6.1)",
+        "teal.code (>= 0.7.0)",
         "teal.logger (>= 0.4.0)",
-        "teal.reporter (>= 0.4.0.9004)",
-        "teal.widgets (>= 0.4.3.9001)",
+        "teal.reporter (>= 0.5.0)",
+        "teal.widgets (>= 0.5.0)",
         "tools",
         "utils"
       ],
@@ -3226,7 +3442,7 @@
       ],
       "VignetteBuilder": "knitr, rmarkdown",
       "RdMacros": "lifecycle",
-      "Config/Needs/verdepcheck": "rstudio/shiny, insightsengineering/teal.data, insightsengineering/teal.slice, mllg/checkmate, jeroen/jsonlite, r-lib/lifecycle, daroczig/logger, shikokuchuo/mirai, r-lib/cli, shikokuchuo/nanonext, rstudio/renv, r-lib/rlang, daattali/shinyjs, insightsengineering/teal.code, insightsengineering/teal.logger, insightsengineering/teal.reporter, insightsengineering/teal.widgets, rstudio/bslib, yihui/knitr, bioc::MultiAssayExperiment, r-lib/R6, rstudio/rmarkdown, tidyverse/rvest, rstudio/shinytest2, rstudio/shinyvalidate, r-lib/testthat, r-lib/withr, yaml=vubiostat/r-yaml, rstudio/htmltools, bioc::matrixStats, insightsengineering/roxy.shinylive",
+      "Config/Needs/verdepcheck": "rstudio/shiny, insightsengineering/teal.data, insightsengineering/teal.slice, mllg/checkmate, jeroen/jsonlite, r-lib/lifecycle, daroczig/logger, r-lib/mirai, r-lib/cli, r-lib/nanonext, rstudio/renv, r-lib/rlang, daattali/shinyjs, insightsengineering/teal.code, insightsengineering/teal.logger, insightsengineering/teal.reporter, insightsengineering/teal.widgets, rstudio/bslib, yihui/knitr, bioc::MultiAssayExperiment, r-lib/R6, rstudio/rmarkdown, tidyverse/rvest, rstudio/shinytest2, rstudio/shinyvalidate, r-lib/testthat, r-lib/withr, yaml=vubiostat/r-yaml, rstudio/htmltools, bioc::matrixStats, insightsengineering/roxy.shinylive",
       "Config/Needs/website": "insightsengineering/nesttemplate",
       "Encoding": "UTF-8",
       "Language": "en-US",
@@ -3240,17 +3456,16 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
-      "RemoteRef": "main",
-      "RemoteSha": "526dcac68cf07410e7af480aaa07629078e06352",
-      "Remotes": "insightsengineering/teal.reporter@main, insightsengineering/teal.slice@main, insightsengineering/teal.widgets@main"
+      "RemoteRef": "v1.0.0",
+      "RemoteSha": "75dd87bd096c681acb5abf2e8570c8eae5740907"
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.6.1.9004",
+      "Version": "0.7.0",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Code Storage and Execution Class for 'teal' Applications",
-      "Date": "2025-06-30",
+      "Date": "2025-08-12",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", , \"nikolas.burkoff@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", , \"maciej.nasinski@contractors.roche.com\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", , \"konrad.pagacz@contractors.roche.com\", role = \"aut\"), person(\"Junlue\", \"Zhao\", , \"zhaoj88@gene.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Introduction of 'qenv' S4 class, that facilitates code execution and reproducibility in 'teal' applications.",
       "License": "Apache License 2.0",
@@ -3292,16 +3507,16 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
-      "RemoteRef": "main",
-      "RemoteSha": "cb36b37232c9ea1fe824f1c36635441beafc6fa2"
+      "RemoteRef": "v0.7.0",
+      "RemoteSha": "3c673f0434ede241f731e332631f31e8444990d8"
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.7.0.9004",
+      "Version": "0.8.0",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Data Model for 'teal' Applications",
-      "Date": "2025-06-12",
+      "Date": "2025-08-18",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Provides a 'teal_data' class as a unified data model for 'teal' applications focusing on reproducibility and relational data.",
       "License": "Apache License 2.0",
@@ -3309,10 +3524,10 @@
       "BugReports": "https://github.com/insightsengineering/teal.data/issues",
       "Depends": [
         "R (>= 4.0)",
-        "teal.code (>= 0.6.1.9002)"
+        "teal.code (>= 0.7.0)"
       ],
       "Imports": [
-        "checkmate (>= 2.1.0)",
+        "checkmate (>= 2.3.0)",
         "lifecycle (>= 0.2.0)",
         "methods",
         "rlang (>= 1.1.0)",
@@ -3321,13 +3536,14 @@
       ],
       "Suggests": [
         "knitr (>= 1.42)",
+        "random.cdisc.data (>= 0.2.1)",
         "rmarkdown (>= 2.23)",
         "testthat (>= 3.2.2)",
-        "withr (>= 2.0.0)"
+        "withr (>= 3.0.0)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
       "RdMacros": "lifecycle",
-      "Config/Needs/verdepcheck": "insightsengineering/teal.code, mllg/checkmate, r-lib/lifecycle, r-lib/rlang, yihui/knitr, rstudio/rmarkdown, r-lib/testthat, r-lib/withr",
+      "Config/Needs/verdepcheck": "insightsengineering/teal.code, mllg/checkmate, r-lib/lifecycle, r-lib/rlang, yihui/knitr, rstudio/rmarkdown, insightsengineering/random.cdisc.data, r-lib/testthat, r-lib/withr",
       "Config/Needs/website": "insightsengineering/nesttemplate",
       "Encoding": "UTF-8",
       "Language": "en-US",
@@ -3341,16 +3557,15 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
-      "RemoteRef": "main",
-      "RemoteSha": "ff69c52bb575ecaac3d957686aa006c3836b1b85",
-      "Remotes": "insightsengineering/teal.code@main"
+      "RemoteRef": "v0.8.0",
+      "RemoteSha": "cfefa4b0a896e5911cbfcdba2be55cd4cdf43f68"
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.4.0.9000",
+      "Version": "0.4.0",
       "Source": "GitHub",
       "Title": "Logging Setup for the 'teal' Family of Packages",
-      "Date": "2025-07-08",
+      "Date": "2025-07-03",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Utilizing the 'logger' framework to record events within a package, specific to 'teal' family of packages.  Supports logging namespaces, hierarchical logging, various log destinations, vectorization, and more.",
       "License": "Apache License 2.0",
@@ -3388,21 +3603,22 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
-      "RemoteRef": "main",
-      "RemoteSha": "6285da29aedfd01e945714210a2031d1b75fa22e"
+      "RemoteRef": "v0.4.0",
+      "RemoteSha": "23ce087b619571e728c98a5636db805172b57a5d"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.4.0.9004",
+      "Version": "0.5.0",
       "Source": "GitHub",
       "Title": "Reporting Tools for 'shiny' Modules",
-      "Date": "2025-03-11",
+      "Date": "2025-08-17",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0005-1258-4757\")), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for the generation of 'rmarkdown' reports, supporting reproducible research and analysis.",
       "License": "Apache License 2.0",
       "URL": "https://github.com/insightsengineering/teal.reporter, https://insightsengineering.github.io/teal.reporter/",
       "BugReports": "https://github.com/insightsengineering/teal.reporter/issues",
       "Imports": [
+        "bsicons",
         "bslib (>= 0.8.0)",
         "checkmate (>= 2.1.0)",
         "flextable (>= 0.9.2)",
@@ -3415,9 +3631,11 @@
         "rmarkdown (>= 2.23)",
         "rtables (>= 0.6.11)",
         "rtables.officer (>= 0.0.2)",
-        "shiny (>= 1.6.0)",
+        "shiny (>= 1.8.1)",
         "shinybusy (>= 0.3.2)",
+        "shinyjs",
         "shinyWidgets (>= 0.5.1)",
+        "sortable (>= 0.5.0)",
         "yaml (>= 1.1.0)",
         "zip (>= 1.1.0)"
       ],
@@ -3447,16 +3665,16 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
-      "RemoteRef": "main",
-      "RemoteSha": "204f2672fc6acb80999aa289de0f33340ad8e4c0"
+      "RemoteRef": "v0.5.0",
+      "RemoteSha": "5a8bce1eafd3ac3829751d5348f430d4ee02e055"
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.6.0.9006",
+      "Version": "0.7.0",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Filter Module for 'teal' Applications",
-      "Date": "2025-07-10",
+      "Date": "2025-08-19",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"Andrew\", \"Bates\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Data filtering module for 'teal' applications.  Allows for interactive filtering of data stored in 'data.frame' and 'MultiAssayExperiment' objects. Also displays filtered and unfiltered observation counts.",
       "License": "Apache License 2.0",
@@ -3473,32 +3691,32 @@
         "grDevices",
         "htmltools (>= 0.5.4)",
         "jsonlite (>= 2.0.0)",
-        "lifecycle (>= 0.2.0)",
         "logger (>= 0.4.0)",
         "methods",
         "plotly (>= 4.10.4)",
         "R6 (>= 2.2.0)",
         "rlang (>= 1.0.0)",
-        "shiny (>= 1.6.0)",
+        "shiny (>= 1.8.1)",
         "shinycssloaders (>= 1.0.0)",
         "shinyjs (>= 2.1.0)",
         "shinyWidgets (>= 0.6.2)",
-        "teal.data (>= 0.7.0)",
+        "teal.data (>= 0.8.0)",
         "teal.logger (>= 0.4.0)",
-        "teal.widgets (>= 0.4.3)",
+        "teal.widgets (>= 0.5.0)",
         "utils"
       ],
       "Suggests": [
+        "DT (>= 0.13)",
         "knitr (>= 1.42)",
         "MultiAssayExperiment",
         "rmarkdown (>= 2.23)",
+        "shinytest2 (>= 0.4.1)",
         "SummarizedExperiment",
         "testthat (>= 3.2.2)",
         "withr (>= 3.0.2)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
-      "RdMacros": "lifecycle",
-      "Config/Needs/verdepcheck": "rstudio/shiny, rstudio/bslib, mllg/checkmate, tidyverse/dplyr, rstudio/htmltools, jeroen/jsonlite, r-lib/lifecycle, daroczig/logger, plotly/plotly, r-lib/R6, daattali/shinycssloaders, daattali/shinyjs, dreamRs/shinyWidgets, insightsengineering/teal.data, insightsengineering/teal.logger, insightsengineering/teal.widgets, yihui/knitr, bioc::MultiAssayExperiment, bioc::SummarizedExperiment, rstudio/rmarkdown, r-lib/testthat, r-lib/withr, bioc::matrixStats",
+      "Config/Needs/verdepcheck": "rstudio/shiny, rstudio/bslib, mllg/checkmate, tidyverse/dplyr, rstudio/htmltools, jeroen/jsonlite, daroczig/logger, plotly/plotly, r-lib/R6, daattali/shinycssloaders, daattali/shinyjs, dreamRs/shinyWidgets, insightsengineering/teal.data, insightsengineering/teal.logger, insightsengineering/teal.widgets, rstudio/DT, yihui/knitr, bioc::MultiAssayExperiment, bioc::SummarizedExperiment, rstudio/rmarkdown, r-lib/testthat, r-lib/withr, bioc::matrixStats",
       "Config/Needs/website": "insightsengineering/nesttemplate",
       "Encoding": "UTF-8",
       "Language": "en-US",
@@ -3511,15 +3729,15 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
-      "RemoteRef": "main",
-      "RemoteSha": "ff535db33d40c50bddcae9e7c9301c55b49ed1ba"
+      "RemoteRef": "v0.7.0",
+      "RemoteSha": "64ea49b1bb2cf33dd57aa4fb86b8628fa9fbd7f3"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.4.3.9007",
+      "Version": "0.5.0",
       "Source": "GitHub",
       "Title": "'shiny' Widgets for 'teal' Applications",
-      "Date": "2025-06-25",
+      "Date": "2025-08-19",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Collection of 'shiny' widgets to support 'teal' applications. Enables the manipulation of application layout and plot or table settings.",
       "License": "Apache License 2.0",
@@ -3537,8 +3755,8 @@
         "htmltools (>= 0.5.4)",
         "lifecycle (>= 0.2.0)",
         "methods",
-        "rtables (>= 0.6.6)",
-        "shiny (>= 1.6.0)",
+        "rtables (>= 0.6.12)",
+        "shiny (>= 1.8.1)",
         "shinyjs (>= 2.1.0)",
         "shinyWidgets (>= 0.5.1)",
         "styler (>= 1.2.0)"
@@ -3570,8 +3788,8 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
-      "RemoteRef": "main",
-      "RemoteSha": "c56c784da583c62bc9f52cd85aac54d8af47e10f"
+      "RemoteRef": "v0.5.0",
+      "RemoteSha": "bea55d086b7e92e51b0a711ff7c7cd001fae669d"
     },
     "textshaping": {
       "Package": "textshaping",
