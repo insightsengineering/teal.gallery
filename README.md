@@ -15,17 +15,17 @@ The Stable version of the apps use the latest released packages while the dev ve
 
 | Stable version                                                                 | Dev version                                                                   |
 | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
-| [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_stable/)           | [basic-teal](https://genentech.shinyapps.io/NEST_basic-teal_dev/)             |
-| [delayed-data](https://genentech.shinyapps.io/NEST_delayed-data)               | [delayed-data](https://genentech.shinyapps.io/NEST_delayed-data_dev/)         |
-| [custom-transform](https://genentech.shinyapps.io/NEST_custom-transform)       | [custom-transform](https://genentech.shinyapps.io/NEST_custom-transform_dev/) |
-| [exploratory](https://genentech.shinyapps.io/NEST_exploratory_stable/)         | [exploratory](https://genentech.shinyapps.io/NEST_exploratory_dev/)           |
-| [safety](https://genentech.shinyapps.io/NEST_safety_stable/)                   | [safety](https://genentech.shinyapps.io/NEST_safety_dev/)                     |
-| [efficacy](https://genentech.shinyapps.io/NEST_efficacy_stable/)               | [efficacy](https://genentech.shinyapps.io/NEST_efficacy_dev/)                 |
-| [patient-profile](https://genentech.shinyapps.io/NEST_patient-profile_stable/) | [patient-profile](https://genentech.shinyapps.io/NEST_patient-profile_dev/)   |
-| [early-dev](https://genentech.shinyapps.io/NEST_early-dev_stable/)             | [early-dev](https://genentech.shinyapps.io/NEST_early-dev_dev/)               |
-| [longitudinal](https://genentech.shinyapps.io/NEST_longitudinal_stable/)       | [longitudinal](https://genentech.shinyapps.io/NEST_longitudinal_dev/)         |
-| [RNA-seq](https://genentech.shinyapps.io/NEST_RNA-seq_stable/)                 | [RNA-seq](https://genentech.shinyapps.io/NEST_RNA-seq_dev/)                   |
-| [python](https://genentech.shinyapps.io/NEST_python_stable/)                   | [python](https://genentech.shinyapps.io/NEST_python_dev/)                     |
+| [basic-teal](https://rinpharma.shinyapps.io/NEST_basic-teal_stable/)           | [basic-teal](https://rinpharma.shinyapps.io/NEST_basic-teal_dev/)             |
+| [delayed-data](https://rinpharma.shinyapps.io/NEST_delayed-data)               | [delayed-data](https://rinpharma.shinyapps.io/NEST_delayed-data_dev/)         |
+| [custom-transform](https://rinpharma.shinyapps.io/NEST_custom-transform)       | [custom-transform](https://rinpharma.shinyapps.io/NEST_custom-transform_dev/) |
+| [exploratory](https://rinpharma.shinyapps.io/NEST_exploratory_stable/)         | [exploratory](https://rinpharma.shinyapps.io/NEST_exploratory_dev/)           |
+| [safety](https://rinpharma.shinyapps.io/NEST_safety_stable/)                   | [safety](https://rinpharma.shinyapps.io/NEST_safety_dev/)                     |
+| [efficacy](https://rinpharma.shinyapps.io/NEST_efficacy_stable/)               | [efficacy](https://rinpharma.shinyapps.io/NEST_efficacy_dev/)                 |
+| [patient-profile](https://rinpharma.shinyapps.io/NEST_patient-profile_stable/) | [patient-profile](https://rinpharma.shinyapps.io/NEST_patient-profile_dev/)   |
+| [early-dev](https://rinpharma.shinyapps.io/NEST_early-dev_stable/)             | [early-dev](https://rinpharma.shinyapps.io/NEST_early-dev_dev/)               |
+| [longitudinal](https://rinpharma.shinyapps.io/NEST_longitudinal_stable/)       | [longitudinal](https://rinpharma.shinyapps.io/NEST_longitudinal_dev/)         |
+| [RNA-seq](https://rinpharma.shinyapps.io/NEST_RNA-seq_stable/)                 | [RNA-seq](https://rinpharma.shinyapps.io/NEST_RNA-seq_dev/)                   |
+| [python](https://rinpharma.shinyapps.io/NEST_python_stable/)                   | [python](https://rinpharma.shinyapps.io/NEST_python_dev/)                     |
 
 ## Running the apps
 

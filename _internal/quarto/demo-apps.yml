@@ -1,5 +1,5 @@
 - category: Teal Gallery Demo
-  deployment_server: https://genentech.shinyapps.io/
+  deployment_server: https://rinpharma.shinyapps.io/
   apps:
     - title: basic-teal
     - title: teal-as-shiny-module

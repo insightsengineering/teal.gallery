@@ -25,7 +25,7 @@ on:
     - cron: "12 3 * * *"
 
 env:
-  SHINYAPPSIO_ACCOUNT: genentech
+  SHINYAPPSIO_ACCOUNT: rinpharma
   APP_PREFIX: NEST
   GITHUB_PAT: ${{ secrets.REPO_GITHUB_TOKEN }}
 
