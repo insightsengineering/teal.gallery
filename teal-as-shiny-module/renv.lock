@@ -3753,7 +3753,7 @@
     },
     "systemfonts": {
       "Package": "systemfonts",
-      "Version": "1.3.0",
+      "Version": "1.3.1",
       "Source": "Repository",
       "Type": "Package",
       "Title": "System Native Font Finding",
