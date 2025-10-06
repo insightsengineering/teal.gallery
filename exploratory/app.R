@@ -1,4 +1,6 @@
-library(teal.modules.general)
+pkgload::load_all("teal.transform")
+pkgload::load_all("teal")
+pkgload::load_all("teal.modules.general")
 options(
   shiny.useragg = FALSE,
   teal.ggplot2_args = teal.widgets::ggplot2_args(labs = list(caption = "NEST PROJECT"))
@@ -102,35 +104,12 @@ app <- init(
     tm_missing_data("Missing Data"),
     tm_g_distribution(
       "Distribution",
-      dist_var = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL, subset = names(Filter(isTRUE, sapply(ADSL, is.numeric)))),
-          selected = "BMRKR1",
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      dist_var = picks(
+        datasets("ADSL"),
+        variables(where(is.numeric), "BMRKR1")
       ),
-      strata_var = data_extract_spec(
-        dataname = "ADSL",
-        filter = filter_spec(
-          vars = choices_selected(
-            variable_choices(ADSL, names(Filter(isTRUE, sapply(ADSL, is.factor)))),
-            selected = NULL
-          ),
-          multiple = TRUE
-        )
-      ),
-      group_var = data_extract_spec(
-        dataname = "ADSL",
-        filter = filter_spec(
-          vars = choices_selected(
-            variable_choices(ADSL, names(Filter(isTRUE, sapply(ADSL, is.factor)))),
-            selected = NULL
-          ),
-          multiple = TRUE
-        )
-      )
+      strata_var = picks(datasets("ADSL"), variables(where(is.factor), selected = NULL), values()),
+      group_var = picks(datasets("ADSL"), variables(where(is.factor), selected = NULL), values())
     ),
     tm_outliers(
       "Outliers",
@@ -190,22 +169,6 @@ app <- init(
           selected = "AVAL",
           multiple = FALSE,
           fixed = FALSE
-        ),
-        filter = list(
-          filter_spec(
-            vars = "PARAMCD",
-            choices = value_choices(ADLB, "PARAMCD", "PARAM"),
-            selected = levels(ADLB$PARAMCD)[1],
-            multiple = FALSE,
-            label = "Select lab:"
-          ),
-          filter_spec(
-            vars = "AVISIT",
-            choices = levels(ADLB$AVISIT),
-            selected = levels(ADLB$AVISIT)[1],
-            multiple = FALSE,
-            label = "Select visit:"
-          )
         )
       ),
       row_facet = data_extract_spec(
@@ -226,6 +189,10 @@ app <- init(
           fixed = FALSE
         )
       ),
+      transformators = list(
+        teal_transform_filter(picks(datasets("ADLB"), variables("PARAMCD"), values())),
+        teal_transform_filter(picks(datasets("ADLB"), variables("AVISIT"), values()))
+      ),
       use_density = FALSE,
       plot_height = c(600L, 200L, 2000L),
       ggtheme = "gray"
@@ -243,33 +210,20 @@ app <- init(
       ),
       regressor = data_extract_spec(
         dataname = "ADRS",
-        filter = filter_spec(
-          vars = "PARAMCD",
-          sep = " - ",
-          choices = value_choices(ADRS, "PARAMCD", "PARAM", c("BESRSPI", "INVET")),
-          selected = "BESRSPI",
-          multiple = FALSE,
-          label = "Choose endpoint"
-        ),
         select = select_spec(
           choices = variable_choices(ADRS, c("AVALC", "AVAL")),
           selected = "AVALC",
           multiple = FALSE,
           fixed = FALSE
         )
+      ),
+      transformators = list(
+        teal_transform_filter(picks(datasets("ADRS"), variables("PARAMCD"), values(selected = "BESRSPI")))
       )
     ),
     tm_g_response(
       response = data_extract_spec(
         dataname = "ADRS",
-        filter = filter_spec(
-          vars = "PARAMCD",
-          sep = " - ",
-          choices = value_choices(ADRS, "PARAMCD", "PARAM", c("BESRSPI", "INVET")),
-          selected = "BESRSPI",
-          multiple = FALSE,
-          label = "Choose endpoint"
-        ),
         select = select_spec(
           choices = variable_choices(ADRS, subset = names(Filter(isTRUE, sapply(ADRS, is.factor)))),
           selected = "AVALC",
@@ -304,6 +258,9 @@ app <- init(
           fixed = FALSE
         )
       ),
+      transformators = list(
+        teal_transform_filter(picks(datasets("ADRS"), variables("PARAMCD"), values(selected = "BESRSPI")))
+      ),
       coord_flip = FALSE
     ),
     tm_g_scatterplotmatrix(
@@ -320,50 +277,25 @@ app <- init(
     ),
     tm_g_scatterplot(
       "Scatterplot",
-      x = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL),
-          selected = "AGE",
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      x = picks(
+        datasets("ADSL"),
+        variables(selected = "AGE")
       ),
-      y = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL),
-          selected = "BMRKR1",
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      y = picks(
+        datasets("ADSL"),
+        variables(selected = "BMRKR1")
       ),
-      row_facet = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL, subset = names(Filter(isTRUE, sapply(ADSL, is.factor)))),
-          selected = NULL,
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      row_facet = picks(
+        datasets("ADSL"),
+        variables(choices = where(is.factor), selected = NULL)
       ),
-      col_facet = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL, subset = names(Filter(isTRUE, sapply(ADSL, is.factor)))),
-          selected = NULL,
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      col_facet = picks(
+        datasets("ADSL"),
+        variables(choices = where(is.factor), selected = NULL)
       ),
-      color_by = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL, subset = names(Filter(isTRUE, sapply(ADSL, is.factor)))),
-          selected = NULL,
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      color_by = picks(
+        datasets("ADSL"),
+        variables(choices = where(is.factor), selected = NULL)
       ),
       size = 3, alpha = 1,
       plot_height = c(600L, 200L, 2000L)
