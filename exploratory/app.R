@@ -111,87 +111,60 @@ app <- init(
       strata_var = picks(datasets("ADSL"), variables(where(is.factor), selected = NULL), values()),
       group_var = picks(datasets("ADSL"), variables(where(is.factor), selected = NULL), values())
     ),
-    tm_outliers(
-      "Outliers",
-      outlier_var = data_extract_spec(
-        dataname = "ADLB",
-        select = select_spec(
-          choices = variable_choices(ADLB, c("AVAL", "CHG", "PCHG", "BASE")),
-          selected = "AVAL",
-          multiple = FALSE,
-          fixed = FALSE
-        )
-      ),
-      categorical_var = data_extract_spec(
-        dataname = "ADLB",
-        select = select_spec(
-          choices = variable_choices(ADLB, c("PARAM", "PARAMCD")),
-          selected = NULL,
-          multiple = FALSE,
-          fixed = FALSE
-        )
-      )
-    ),
+    # tm_outliers(
+    #   "Outliers",
+    #   outlier_var = picks(
+    #     datasets("ADLB"),
+    #     variables(choices = c("AVAL", "CHG", "PCHG", "BASE"), selected = "AVAL"),
+    #     values()
+    #   ),
+    #   categorical_var = picks(
+    #     datasets("ADLB"),
+    #     variables(choices = c("PARAM", "PARAMCD"), selected = NULL),
+    #     values()
+    #   )
+    # ),
     tm_g_association(
-      ref = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL),
-          selected = "AGE",
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      ref = picks(
+        datasets("ADSL"),
+        variables(selected = "AGE"),
+        values()
       ),
-      vars = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL),
-          selected = "ARMCD",
-          multiple = TRUE,
-          fixed = FALSE
-        )
+      vars = picks(
+        datasets("ADSL"),
+        variables(selected = "ARMCD", multiple = TRUE),
+        values()
       )
     ),
     tm_g_bivariate(
-      x = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL),
-          selected = "AGE",
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      x = picks(
+        datasets("ADSL"),
+        variables(selected = "AGE"),
+        values()
       ),
-      y = data_extract_spec(
-        dataname = "ADLB",
-        select = select_spec(
-          choices = variable_choices(ADLB, c("AVAL", "CHG", "PCHG", "ANRIND", "BASE")),
-          selected = "AVAL",
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      y = picks(
+        datasets("ADLB"),
+        variables(choices = c("AVAL", "CHG", "PCHG", "ANRIND", "BASE"), selected = "AVAL"),
+        values()
       ),
-      row_facet = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL, subset = names(Filter(isTRUE, sapply(ADSL, is.factor)))),
-          selected = NULL,
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      row_facet = picks(
+        datasets("ADSL"),
+        variables(choices = where(is.factor), selected = NULL),
+        values()
       ),
-      col_facet = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL, subset = names(Filter(isTRUE, sapply(ADSL, is.factor)))),
-          selected = NULL,
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      col_facet = picks(
+        datasets("ADSL"),
+        variables(choices = where(is.factor), selected = NULL),
+        values()
       ),
       transformators = list(
-        teal_transform_filter(picks(datasets("ADLB"), variables("PARAMCD"), values())),
-        teal_transform_filter(picks(datasets("ADLB"), variables("AVISIT"), values()))
+        teal_transform_filter(
+          picks(
+            datasets("ADLB"),
+            variables(choices = c("PARAMCD", "AVISIT"), selected = c("PARAMCD", "AVISIT")),
+            values(selected = 1, multiple = FALSE)
+          )
+        )
       ),
       use_density = FALSE,
       plot_height = c(600L, 200L, 2000L),
@@ -199,64 +172,40 @@ app <- init(
     ),
     tm_a_regression(
       label = "Regression",
-      response = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL, subset = names(Filter(isTRUE, sapply(ADSL, is.numeric)))),
-          selected = "BMRKR1",
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      response = picks(
+        datasets("ADSL"),
+        variables(choices = where(is.numeric), selected = "BMRKR1"),
+        values()
       ),
-      regressor = data_extract_spec(
-        dataname = "ADRS",
-        select = select_spec(
-          choices = variable_choices(ADRS, c("AVALC", "AVAL")),
-          selected = "AVALC",
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      regressor = picks(
+        datasets("ADRS"),
+        variables(choices = c("AVALC", "AVAL"), selected = "AVALC"),
+        values()
       ),
       transformators = list(
         teal_transform_filter(picks(datasets("ADRS"), variables("PARAMCD"), values(selected = "BESRSPI")))
       )
     ),
     tm_g_response(
-      response = data_extract_spec(
-        dataname = "ADRS",
-        select = select_spec(
-          choices = variable_choices(ADRS, subset = names(Filter(isTRUE, sapply(ADRS, is.factor)))),
-          selected = "AVALC",
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      response = picks(
+        datasets("ADRS"),
+        variables(choices = where(is.factor), selected = "AVALC"),
+        values()
       ),
-      x = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL, subset = names(Filter(isTRUE, sapply(ADSL, is.factor)))),
-          selected = "STRATA2",
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      x = picks(
+        datasets("ADSL"),
+        variables(choices = where(is.factor), selected = "STRATA2"),
+        values()
       ),
-      row_facet = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL, subset = names(Filter(isTRUE, sapply(ADSL, is.factor)))),
-          selected = NULL,
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      row_facet = picks(
+        datasets("ADSL"),
+        variables(choices = where(is.factor), selected = NULL),
+        values()
       ),
-      col_facet = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL, subset = names(Filter(isTRUE, sapply(ADSL, is.factor)))),
-          selected = NULL,
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      col_facet = picks(
+        datasets("ADSL"),
+        variables(choices = where(is.factor), selected = NULL),
+        values()
       ),
       transformators = list(
         teal_transform_filter(picks(datasets("ADRS"), variables("PARAMCD"), values(selected = "BESRSPI")))
@@ -265,13 +214,10 @@ app <- init(
     ),
     tm_g_scatterplotmatrix(
       label = "Scatterplot Matrix",
-      variables = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL),
-          selected = c("AGE", "BMRKR1"),
-          multiple = TRUE,
-          fixed = FALSE
+      variables = list(
+        picks(
+          datasets("ADSL"),
+          variables(selected = c("AGE", "BMRKR1"))
         )
       )
     ),
@@ -279,59 +225,53 @@ app <- init(
       "Scatterplot",
       x = picks(
         datasets("ADSL"),
-        variables(selected = "AGE")
+        variables(selected = "AGE"),
+        values()
       ),
       y = picks(
         datasets("ADSL"),
-        variables(selected = "BMRKR1")
+        variables(selected = "BMRKR1"),
+        values()
       ),
       row_facet = picks(
         datasets("ADSL"),
-        variables(choices = where(is.factor), selected = NULL)
+        variables(choices = where(is.factor), selected = NULL),
+        values()
       ),
       col_facet = picks(
         datasets("ADSL"),
-        variables(choices = where(is.factor), selected = NULL)
+        variables(choices = where(is.factor), selected = NULL),
+        values()
       ),
       color_by = picks(
         datasets("ADSL"),
-        variables(choices = where(is.factor), selected = NULL)
+        variables(choices = where(is.factor), selected = NULL),
+        values()
       ),
       size = 3, alpha = 1,
       plot_height = c(600L, 200L, 2000L)
     ),
     tm_t_crosstable(
       "Table Choices",
-      x = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL, subset = names(Filter(isTRUE, sapply(ADSL, is.factor)))),
-          selected = "STRATA2",
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      x = picks(
+        datasets("ADSL"),
+        variables(choices = where(is.factor), selected = "STRATA2", multiple = TRUE),
+        values()
       ),
-      y = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL),
-          selected = "ARMCD",
-          multiple = FALSE,
-          fixed = FALSE
-        )
+      y = picks(
+        datasets("ADSL"),
+        variables(selected = "ARMCD"),
+        values()
       )
     ),
     tm_a_pca(
       "Principal Component Analysis",
-      dat = data_extract_spec(
-        dataname = "ADLBPCA",
-        select = select_spec(
-          choices = variable_choices(ADLBPCA, names(Filter(isTRUE, sapply(ADLBPCA, is.numeric)))),
-          selected = c("ALT - WEEK 5 DAY 36", "CRP - WEEK 5 DAY 36", "IGA - WEEK 5 DAY 36"),
-          multiple = TRUE,
-          fixed = FALSE,
-          label = "Variable"
-        ),
+      dat = picks(
+        datasets("ADLBPCA"),
+        variables(
+          choices = where(is.numeric),
+          selected = c("ALT - WEEK 5 DAY 36", "CRP - WEEK 5 DAY 36", "IGA - WEEK 5 DAY 36")
+        )
       ),
       plot_height = c(600L, 200L, 2000L),
       plot_width = c(600L, 200L, 2000L)
