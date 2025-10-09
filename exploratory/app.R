@@ -1,6 +1,4 @@
-pkgload::load_all("teal.transform")
-pkgload::load_all("teal")
-pkgload::load_all("teal.modules.general")
+library(teal.modules.general)
 options(
   shiny.useragg = FALSE,
   teal.ggplot2_args = teal.widgets::ggplot2_args(labs = list(caption = "NEST PROJECT"))
