@@ -8142,11 +8142,11 @@
     },
     "statmod": {
       "Package": "statmod",
-      "Version": "1.5.0",
+      "Version": "1.5.1",
       "Source": "Repository",
-      "Date": "2022-12-28",
+      "Date": "2025-10-08",
       "Title": "Statistical Modeling",
-      "Author": "Gordon Smyth [cre, aut], Lizhong Chen [aut], Yifang Hu [ctb], Peter Dunn [ctb], Belinda Phipson [ctb], Yunshun Chen [ctb]",
+      "Authors@R": "c(person(given = \"Gordon\", family = \"Smyth\", role = c(\"cre\", \"aut\"), email = \"smyth@wehi.edu.au\"), person(given = \"Lizhong\", family = \"Chen\", role = \"aut\"), person(given = \"Yifang\", family = \"Hu\", role = \"ctb\"), person(given = \"Peter\", family = \"Dunn\", role = \"ctb\"), person(given = \"Belinda\", family = \"Phipson\", role = \"ctb\"), person(given = \"Yunshun\", family = \"Chen\", role = \"ctb\"))",
       "Maintainer": "Gordon Smyth <smyth@wehi.edu.au>",
       "Depends": [
         "R (>= 3.0.0)"
@@ -8162,6 +8162,7 @@
       "Description": "A collection of algorithms and functions to aid statistical modeling. Includes limiting dilution analysis (aka ELDA), growth curve comparisons, mixed linear models, heteroscedastic regression, inverse-Gaussian probability calculations, Gauss quadrature and a secure convergence algorithm for nonlinear models. Also includes advanced generalized linear model functions including Tweedie and Digamma distributional families, secure convergence and exact distributional calculations for unit deviances.",
       "License": "GPL-2 | GPL-3",
       "NeedsCompilation": "yes",
+      "Author": "Gordon Smyth [cre, aut], Lizhong Chen [aut], Yifang Hu [ctb], Peter Dunn [ctb], Belinda Phipson [ctb], Yunshun Chen [ctb]",
       "Repository": "CRAN"
     },
     "stringi": {
