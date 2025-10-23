@@ -2922,46 +2922,6 @@
       "Maintainer": "David Gohel <david.gohel@ardata.fr>",
       "Repository": "CRAN"
     },
-    "ggmosaic": {
-      "Package": "ggmosaic",
-      "Version": "0.3.3",
-      "Source": "Repository",
-      "Title": "Mosaic Plots in the 'ggplot2' Framework",
-      "Authors@R": "c(person(given = \"Haley\", family = \"Jeppson\", role = c(\"aut\", \"cre\"), email = \"hjeppson@iastate.edu\"), person(given = \"Heike\", family = \"Hofmann\", role = \"aut\", email = \"hofmann@iastate.edu\"), person(given = \"Di\", family = \"Cook\", role = \"aut\", email = \"dicook@monash.edu\"), person(given = \"Hadley\", family = \"Wickham\", role = \"ctb\", email = \"hadley@rstudio.com\"))",
-      "Description": "Mosaic plots in the 'ggplot2' framework. Mosaic plot functionality is provided in a single 'ggplot2' layer by calling the geom 'mosaic'.",
-      "License": "GPL (>= 2)",
-      "URL": "https://github.com/haleyjeppson/ggmosaic",
-      "BugReports": "https://github.com/haleyjeppson/ggmosaic",
-      "Depends": [
-        "ggplot2 (>= 3.3.0)",
-        "R (>= 3.5.0)"
-      ],
-      "Imports": [
-        "productplots",
-        "dplyr",
-        "plotly (>= 4.5.5)",
-        "purrr",
-        "rlang",
-        "tidyr",
-        "ggrepel",
-        "scales"
-      ],
-      "Suggests": [
-        "gridExtra",
-        "knitr",
-        "NHANES",
-        "rmarkdown",
-        "patchwork"
-      ],
-      "VignetteBuilder": "knitr",
-      "Encoding": "UTF-8",
-      "LazyData": "true",
-      "RoxygenNote": "7.1.1",
-      "NeedsCompilation": "no",
-      "Author": "Haley Jeppson [aut, cre], Heike Hofmann [aut], Di Cook [aut], Hadley Wickham [ctb]",
-      "Maintainer": "Haley Jeppson <hjeppson@iastate.edu>",
-      "Repository": "RSPM"
-    },
     "ggplot2": {
       "Package": "ggplot2",
       "Version": "4.0.0",
@@ -3912,7 +3872,7 @@
     },
     "labelled": {
       "Package": "labelled",
-      "Version": "2.15.0",
+      "Version": "2.16.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Manipulating Labelled Data",
@@ -3932,17 +3892,19 @@
         "rlang (>= 1.1.0)",
         "vctrs",
         "stringr",
-        "tidyr",
+        "tidyr (>= 1.3.0)",
         "tidyselect"
       ],
       "Suggests": [
-        "testthat (>= 3.2.0)",
+        "gt",
         "knitr",
         "rmarkdown",
+        "purrr",
         "questionr",
         "snakecase",
         "spelling",
-        "survey"
+        "survey",
+        "testthat (>= 3.2.0)"
       ],
       "Enhances": [
         "memisc"
@@ -5073,6 +5035,42 @@
       "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
       "Repository": "CRAN"
     },
+    "otel": {
+      "Package": "otel",
+      "Version": "0.2.0",
+      "Source": "Repository",
+      "Title": "OpenTelemetry R API",
+      "Authors@R": "person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = c(\"aut\", \"cre\"))",
+      "Description": "High-quality, ubiquitous, and portable telemetry to enable effective observability. OpenTelemetry is a collection of tools, APIs, and SDKs used to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) for analysis in order to understand your software's performance and behavior. This package implements the OpenTelemetry API: <https://opentelemetry.io/docs/specs/otel/>. Use this package as a dependency if you want to instrument your R package for OpenTelemetry.",
+      "License": "MIT + file LICENSE",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.2.9000",
+      "Depends": [
+        "R (>= 3.6.0)"
+      ],
+      "Suggests": [
+        "callr",
+        "cli",
+        "glue",
+        "jsonlite",
+        "otelsdk",
+        "processx",
+        "shiny",
+        "spelling",
+        "testthat (>= 3.0.0)",
+        "utils",
+        "withr"
+      ],
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "URL": "https://otel.r-lib.org, https://github.com/r-lib/otel",
+      "Additional_repositories": "https://github.com/r-lib/otelsdk/releases/download/devel",
+      "BugReports": "https://github.com/r-lib/otel/issues",
+      "NeedsCompilation": "no",
+      "Author": "Gábor Csárdi [aut, cre]",
+      "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
+      "Repository": "CRAN"
+    },
     "parallelly": {
       "Package": "parallelly",
       "Version": "1.45.1",
@@ -5529,32 +5527,6 @@
       "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
       "Repository": "CRAN"
     },
-    "productplots": {
-      "Package": "productplots",
-      "Version": "0.1.1",
-      "Source": "Repository",
-      "Title": "Product Plots for R",
-      "Description": "Framework for visualising tables of counts, proportions and probabilities. The framework is called product plots, alluding to the computation of area as a product of height and width, and the statistical concept of generating a joint distribution from the product of conditional and marginal distributions. The framework, with extensions, is sufficient to encompass over 20 visualisations previously described in fields of statistical graphics and 'infovis', including bar charts, mosaic plots, 'treemaps', equal area plots and fluctuation diagrams.",
-      "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", c(\"aut\", \"cre\")), person(\"Heike\", \"Hofmann\", , \"heike.hofmann@gmail.com\", role = \"aut\") )",
-      "Imports": [
-        "plyr",
-        "ggplot2"
-      ],
-      "Suggests": [
-        "reshape2",
-        "testthat",
-        "covr"
-      ],
-      "License": "GPL-2",
-      "LazyData": "true",
-      "RoxygenNote": "5.0.1",
-      "URL": "https://github.com/hadley/productplots",
-      "BugReports": "https://github.com/hadley/productplots/issues",
-      "NeedsCompilation": "no",
-      "Author": "Hadley Wickham [aut, cre], Heike Hofmann [aut]",
-      "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-      "Repository": "CRAN"
-    },
     "progress": {
       "Package": "progress",
       "Version": "1.2.3",
@@ -5590,36 +5562,38 @@
     },
     "promises": {
       "Package": "promises",
-      "Version": "1.3.3",
+      "Version": "1.4.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Abstractions for Promise-Based Asynchronous Programming",
-      "Authors@R": "c( person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = c(\"aut\", \"cre\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"), comment = c(ROR = \"03wc8by49\")) )",
+      "Authors@R": "c( person(\"Joe\", \"Cheng\", , \"joe@posit.co\", role = \"aut\"), person(\"Barret\", \"Schloerke\", , \"barret@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9986-114X\")), person(\"Winston\", \"Chang\", , \"winston@posit.co\", role = \"aut\", comment = c(ORCID = \"0000-0002-1576-2126\")), person(\"Charlie\", \"Gao\", , \"charlie.gao@posit.co\", role = \"aut\", comment = c(ORCID = \"0000-0002-0750-061X\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"), comment = c(ROR = \"03wc8by49\")) )",
       "Description": "Provides fundamental abstractions for doing asynchronous programming in R using promises. Asynchronous programming is useful for allowing a single R process to orchestrate multiple tasks in the background while also attending to something else. Semantics are similar to 'JavaScript' promises, but with a syntax that is idiomatic R.",
       "License": "MIT + file LICENSE",
       "URL": "https://rstudio.github.io/promises/, https://github.com/rstudio/promises",
       "BugReports": "https://github.com/rstudio/promises/issues",
+      "Depends": [
+        "R (>= 4.1.0)"
+      ],
       "Imports": [
         "fastmap (>= 1.1.0)",
         "later",
+        "lifecycle",
         "magrittr (>= 1.5)",
+        "otel (>= 0.2.0)",
         "R6",
-        "Rcpp",
-        "rlang",
-        "stats"
+        "rlang"
       ],
       "Suggests": [
         "future (>= 1.21.0)",
         "knitr",
+        "mirai",
+        "otelsdk (>= 0.2.0)",
         "purrr",
+        "Rcpp",
         "rmarkdown",
         "spelling",
         "testthat (>= 3.0.0)",
         "vembedr"
-      ],
-      "LinkingTo": [
-        "later",
-        "Rcpp"
       ],
       "VignetteBuilder": "knitr",
       "Config/Needs/website": "rsconnect, tidyverse/tidytemplate",
@@ -5627,10 +5601,10 @@
       "Config/usethis/last-upkeep": "2025-05-27",
       "Encoding": "UTF-8",
       "Language": "en-US",
-      "RoxygenNote": "7.3.2",
-      "NeedsCompilation": "yes",
-      "Author": "Joe Cheng [aut, cre], Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
-      "Maintainer": "Joe Cheng <joe@posit.co>",
+      "RoxygenNote": "7.3.3",
+      "NeedsCompilation": "no",
+      "Author": "Joe Cheng [aut], Barret Schloerke [aut, cre] (ORCID: <https://orcid.org/0000-0001-9986-114X>), Winston Chang [aut] (ORCID: <https://orcid.org/0000-0002-1576-2126>), Charlie Gao [aut] (ORCID: <https://orcid.org/0000-0002-0750-061X>), Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
+      "Maintainer": "Barret Schloerke <barret@posit.co>",
       "Repository": "CRAN"
     },
     "ps": {
@@ -7409,18 +7383,17 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.5.0",
+      "Version": "0.5.1",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "General Modules for 'teal' Applications",
-      "Date": "2025-08-20",
+      "Date": "2025-10-22",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Ondrej\", \"Slama\", , \"ondrej.slama@roche.com\", role = \"ctb\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for viewing data, visualizing data, understanding missing and outlier values within your data and performing simple data analysis.  This extends 'teal' framework that supports reproducible research and analysis.",
       "License": "Apache License 2.0",
       "URL": "https://insightsengineering.github.io/teal.modules.general/, https://github.com/insightsengineering/teal.modules.general/",
       "BugReports": "https://github.com/insightsengineering/teal.modules.general/issues",
       "Depends": [
-        "ggmosaic (>= 0.3.0)",
         "ggplot2 (>= 3.4.0)",
         "R (>= 4.1)",
         "shiny (>= 1.8.1)",
@@ -7494,8 +7467,8 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
-      "RemoteRef": "v0.5.0",
-      "RemoteSha": "62aaefb0cd01b1e563a76b56581866868934d457"
+      "RemoteRef": "v0.5.1",
+      "RemoteSha": "f69982f0c5fd17396df57492c308f235703c8f57"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
