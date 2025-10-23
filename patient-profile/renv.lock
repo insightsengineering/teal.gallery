@@ -4944,6 +4944,7 @@
         "utils"
       ],
       "Suggests": [
+        "broom",
         "broom.helpers",
         "car (>= 3.1.2)",
         "cli",
@@ -4994,7 +4995,7 @@
       "RemoteUsername": "openpharma",
       "RemoteRepo": "mmrm",
       "RemoteRef": "main",
-      "RemoteSha": "51a4c6962ab0913bf8ca843fde2dfb2f6f2d96b5"
+      "RemoteSha": "07c62f780e7addb3c21bf8d23484aaf16f8e9f94"
     },
     "modelr": {
       "Package": "modelr",
