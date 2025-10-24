@@ -159,8 +159,8 @@ app <- init(
         teal_transform_filter(
           picks(
             datasets("ADLB"),
-            variables(choices = c("PARAMCD", "AVISIT"), selected = c("PARAMCD", "AVISIT")),
-            values(selected = 1, multiple = FALSE)
+            variables(choices = c("PARAMCD", "AVISIT"), selected = c("PARAMCD", "AVISIT"), fixed = TRUE),
+            values(multiple = FALSE)
           )
         )
       ),
