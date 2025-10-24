@@ -20,6 +20,7 @@ data <- within(data, {
   # depending on if the data are SUBJECT LEVEL ANALYSIS DATASET or BASIC DATA STRUCTURE
   # if for example outcome variables are added to ADSL then do also add them as columns to ADLB
   # this is needed to be able to use plot splitting by outcome functionality
+  set.seed(1) # @linksto ADSL ADLB
   ADSL <- radsl(seed = 1)
   ADLB <- radlb(ADSL, seed = 1)
 

@@ -13,7 +13,7 @@
 ### View the deployed app
 
 Deployed app:
-<https://genentech.shinyapps.io/NEST_custom-transform_stable>
+<https://rinpharma.shinyapps.io/NEST_custom-transform_stable>
 
 ### Preview the app
 

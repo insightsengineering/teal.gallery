@@ -25,7 +25,7 @@ on:
     - cron: "12 3 * * *"
 
 env:
-  SHINYAPPSIO_ACCOUNT: genentech
+  SHINYAPPSIO_ACCOUNT: rinpharma
   APP_PREFIX: NEST
   GITHUB_PAT: ${{ secrets.REPO_GITHUB_TOKEN }}
 
@@ -109,6 +109,11 @@ jobs:
             libgbm-dev \
             libnotify-dev \
             libgconf-2-4 \
+            libfreetype6-dev \
+            libpng-dev \
+            libtiff5-dev \
+            libjpeg-dev \
+            libwebp-dev \
             xvfb
           if [ " ${{ matrix.directory }}" == "python" ]
           then {
@@ -174,7 +179,7 @@ jobs:
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         uses: cypress-io/github-action@v6
         with:
-          build: npm install cypress --save-dev
+          build: npm i
           working-directory: ${{ matrix.directory }}/tests
           start: npm run run-app
           wait-on: "http://localhost:3333"
