@@ -48,27 +48,6 @@ ADLB <- data[["ADLB"]]
 ADLBPCA <- data[["ADLBPCA"]]
 
 
-## App header and footer ----
-nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
-app_source <- "https://github.com/insightsengineering/teal.gallery/tree/main/exploratory"
-gh_issues_page <- "https://github.com/insightsengineering/teal.gallery/issues"
-
-header <- tags$span(
-  style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-  tags$span("My first teal app", style = "font-size: 30px;"),
-  tags$span(
-    style = "display: flex; align-items: center;",
-    tags$img(src = nest_logo, alt = "NEST logo", height = "45px", style = "margin-right:10px;"),
-    tags$span(style = "font-size: 24px;", "NEST @ Roche")
-  )
-)
-
-footer <- tags$p(
-  "This teal app is brought to you by the NEST Team at Roche/Genentech.
-        For more information, please visit:",
-  tags$a(href = app_source, target = "_blank", "Source Code"), ", ",
-  tags$a(href = gh_issues_page, target = "_blank", "Report Issues")
-)
 
 app <- init(
   data = data,
@@ -100,61 +79,10 @@ app <- init(
     tm_data_table("Data Table"),
     tm_variable_browser("Variable Browser"),
     tm_missing_data("Missing Data"),
-    tm_g_distribution(
-      "Distribution",
-      dist_var = picks(
-        datasets("ADSL"),
-        variables(where(is.numeric), "BMRKR1")
-      ),
-      strata_var = picks(datasets("ADSL"), variables(where(is.factor), selected = NULL), values()),
-      group_var = picks(datasets("ADSL"), variables(where(is.factor), selected = NULL), values())
-    ),
-    # tm_outliers(
-    #   "Outliers",
-    #   outlier_var = picks(
-    #     datasets("ADLB"),
-    #     variables(choices = c("AVAL", "CHG", "PCHG", "BASE"), selected = "AVAL"),
-    #     values()
-    #   ),
-    #   categorical_var = picks(
-    #     datasets("ADLB"),
-    #     variables(choices = c("PARAM", "PARAMCD"), selected = NULL),
-    #     values()
-    #   )
-    # ),
-    tm_g_association(
-      ref = picks(
-        datasets("ADSL"),
-        variables(selected = "AGE"),
-        values()
-      ),
-      vars = picks(
-        datasets("ADSL"),
-        variables(selected = "ARMCD", multiple = TRUE),
-        values()
-      )
-    ),
+    tm_g_distribution("Distribution"),
+    # tm_outliers("Outliers"),
+    tm_g_association(),
     tm_g_bivariate(
-      x = picks(
-        datasets("ADSL"),
-        variables(selected = "AGE"),
-        values()
-      ),
-      y = picks(
-        datasets("ADLB"),
-        variables(choices = c("AVAL", "CHG", "PCHG", "ANRIND", "BASE"), selected = "AVAL"),
-        values()
-      ),
-      row_facet = picks(
-        datasets("ADSL"),
-        variables(choices = where(is.factor), selected = NULL),
-        values()
-      ),
-      col_facet = picks(
-        datasets("ADSL"),
-        variables(choices = where(is.factor), selected = NULL),
-        values()
-      ),
       transformators = list(
         teal_transform_filter(
           picks(
@@ -170,117 +98,53 @@ app <- init(
     ),
     tm_a_regression(
       label = "Regression",
-      response = picks(
-        datasets("ADSL"),
-        variables(choices = where(is.numeric), selected = "BMRKR1"),
-        values()
-      ),
-      regressor = picks(
-        datasets("ADRS"),
-        variables(choices = c("AVALC", "AVAL"), selected = "AVALC"),
-        values()
-      ),
       transformators = list(
         teal_transform_filter(picks(datasets("ADRS"), variables("PARAMCD"), values(selected = "BESRSPI")))
       )
     ),
     tm_g_response(
-      response = picks(
-        datasets("ADRS"),
-        variables(choices = where(is.factor), selected = "AVALC"),
-        values()
-      ),
-      x = picks(
-        datasets("ADSL"),
-        variables(choices = where(is.factor), selected = "STRATA2"),
-        values()
-      ),
-      row_facet = picks(
-        datasets("ADSL"),
-        variables(choices = where(is.factor), selected = NULL),
-        values()
-      ),
-      col_facet = picks(
-        datasets("ADSL"),
-        variables(choices = where(is.factor), selected = NULL),
-        values()
-      ),
       transformators = list(
         teal_transform_filter(picks(datasets("ADRS"), variables("PARAMCD"), values(selected = "BESRSPI")))
       ),
       coord_flip = FALSE
     ),
-    tm_g_scatterplotmatrix(
-      label = "Scatterplot Matrix",
-      variables = list(
-        picks(
-          datasets("ADSL"),
-          variables(selected = c("AGE", "BMRKR1"))
-        )
-      )
-    ),
-    tm_g_scatterplot(
-      "Scatterplot",
-      x = picks(
-        datasets("ADSL"),
-        variables(selected = "AGE"),
-        values()
-      ),
-      y = picks(
-        datasets("ADSL"),
-        variables(selected = "BMRKR1"),
-        values()
-      ),
-      row_facet = picks(
-        datasets("ADSL"),
-        variables(choices = where(is.factor), selected = NULL),
-        values()
-      ),
-      col_facet = picks(
-        datasets("ADSL"),
-        variables(choices = where(is.factor), selected = NULL),
-        values()
-      ),
-      color_by = picks(
-        datasets("ADSL"),
-        variables(choices = where(is.factor), selected = NULL),
-        values()
-      ),
-      size = 3, alpha = 1,
-      plot_height = c(600L, 200L, 2000L)
-    ),
-    tm_t_crosstable(
-      "Table Choices",
-      x = picks(
-        datasets("ADSL"),
-        variables(choices = where(is.factor), selected = "STRATA2", multiple = TRUE),
-        values()
-      ),
-      y = picks(
-        datasets("ADSL"),
-        variables(selected = "ARMCD"),
-        values()
-      )
-    ),
-    tm_a_pca(
-      "Principal Component Analysis",
-      dat = picks(
-        datasets("ADLBPCA"),
-        variables(
-          choices = where(is.numeric),
-          selected = c("ALT - WEEK 5 DAY 36", "CRP - WEEK 5 DAY 36", "IGA - WEEK 5 DAY 36")
-        )
-      ),
-      plot_height = c(600L, 200L, 2000L),
-      plot_width = c(600L, 200L, 2000L)
-    )
+    tm_g_scatterplotmatrix(label = "Scatterplot Matrix"),
+    tm_g_scatterplot("Scatterplot", size = 3, alpha = 1, plot_height = c(600L, 200L, 2000L)),
+    tm_t_crosstable("Table Choices"),
+    tm_a_pca("Principal Component Analysis", plot_height = c(600L, 200L, 2000L), plot_width = c(600L, 200L, 2000L))
   )
 ) |>
   modify_title(
     title = "Exploratory Analysis Teal Demo App",
-    favicon = nest_logo
+    favicon = "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
   ) |>
-  modify_header(header) |>
-  modify_footer(footer)
+  modify_header(
+    tags$span(
+      style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
+      tags$span("My first teal app", style = "font-size: 30px;"),
+      tags$span(
+        style = "display: flex; align-items: center;",
+        tags$img(
+          src = "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png",
+          alt = "NEST logo", height = "45px", style = "margin-right:10px;"
+        ),
+        tags$span(style = "font-size: 24px;", "NEST @ Roche")
+      )
+    )
+  ) |>
+  modify_footer(
+    tags$p(
+      "This teal app is brought to you by the NEST Team at Roche/Genentech.
+        For more information, please visit:",
+      tags$a(
+        href = "https://github.com/insightsengineering/teal.gallery/tree/main/exploratory",
+        target = "_blank", "Source Code"
+      ), ", ",
+      tags$a(
+        href = "https://github.com/insightsengineering/teal.gallery/issues",
+        target = "_blank", "Report Issues"
+      )
+    )
+  )
 
 shinyApp(app$ui, app$server)
