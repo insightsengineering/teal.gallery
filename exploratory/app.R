@@ -41,35 +41,6 @@ data <- within(data, {
 
 join_keys(data) <- default_cdisc_join_keys[c("ADSL", "ADRS", "ADLB", "ADLBPCA")]
 
-## Reusable Configuration For Modules
-ADSL <- data[["ADSL"]]
-ADRS <- data[["ADRS"]]
-ADLB <- data[["ADLB"]]
-ADLBPCA <- data[["ADLBPCA"]]
-
-
-## App header and footer ----
-nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
-app_source <- "https://github.com/insightsengineering/teal.gallery/tree/main/exploratory"
-gh_issues_page <- "https://github.com/insightsengineering/teal.gallery/issues"
-
-header <- tags$span(
-  style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-  tags$span("My first teal app", style = "font-size: 30px;"),
-  tags$span(
-    style = "display: flex; align-items: center;",
-    tags$img(src = nest_logo, alt = "NEST logo", height = "45px", style = "margin-right:10px;"),
-    tags$span(style = "font-size: 24px;", "NEST @ Roche")
-  )
-)
-
-footer <- tags$p(
-  "This teal app is brought to you by the NEST Team at Roche/Genentech.
-        For more information, please visit:",
-  tags$a(href = app_source, target = "_blank", "Source Code"), ", ",
-  tags$a(href = gh_issues_page, target = "_blank", "Report Issues")
-)
-
 app <- init(
   data = data,
   filter = teal_slices(
@@ -278,9 +249,35 @@ app <- init(
 ) |>
   modify_title(
     title = "Exploratory Analysis Teal Demo App",
-    favicon = nest_logo
+    favicon = "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
   ) |>
-  modify_header(header) |>
-  modify_footer(footer)
+  modify_header(
+    tags$span(
+      style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
+      tags$span("My first teal app", style = "font-size: 30px;"),
+      tags$span(
+        style = "display: flex; align-items: center;",
+        tags$img(
+          src = "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png",
+          alt = "NEST logo", height = "45px", style = "margin-right:10px;"
+        ),
+        tags$span(style = "font-size: 24px;", "NEST @ Roche")
+      )
+    )
+  ) |>
+  modify_footer(
+    tags$p(
+      "This teal app is brought to you by the NEST Team at Roche/Genentech.
+        For more information, please visit:",
+      tags$a(
+        href = "https://github.com/insightsengineering/teal.gallery/tree/main/exploratory",
+        target = "_blank", "Source Code"
+      ), ", ",
+      tags$a(
+        href = "https://github.com/insightsengineering/teal.gallery/issues",
+        target = "_blank", "Report Issues"
+      )
+    )
+  )
 
 shinyApp(app$ui, app$server)
