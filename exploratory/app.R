@@ -41,14 +41,6 @@ data <- within(data, {
 
 join_keys(data) <- default_cdisc_join_keys[c("ADSL", "ADRS", "ADLB", "ADLBPCA")]
 
-## Reusable Configuration For Modules
-ADSL <- data[["ADSL"]]
-ADRS <- data[["ADRS"]]
-ADLB <- data[["ADLB"]]
-ADLBPCA <- data[["ADLBPCA"]]
-
-
-
 app <- init(
   data = data,
   filter = teal_slices(
