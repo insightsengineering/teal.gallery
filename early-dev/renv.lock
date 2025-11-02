@@ -5940,7 +5940,7 @@
     },
     "promises": {
       "Package": "promises",
-      "Version": "1.4.0",
+      "Version": "1.5.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Abstractions for Promise-Based Asynchronous Programming",
