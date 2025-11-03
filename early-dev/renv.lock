@@ -4716,7 +4716,7 @@
     },
     "litedown": {
       "Package": "litedown",
-      "Version": "0.7",
+      "Version": "0.8",
       "Source": "Repository",
       "Type": "Package",
       "Title": "A Lightweight Version of R Markdown",
@@ -4727,8 +4727,8 @@
       ],
       "Imports": [
         "utils",
-        "commonmark (>= 1.9.5)",
-        "xfun (>= 0.52)"
+        "commonmark (>= 2.0.0)",
+        "xfun (>= 0.54)"
       ],
       "Suggests": [
         "rbibutils",
@@ -4739,10 +4739,10 @@
       "URL": "https://github.com/yihui/litedown",
       "BugReports": "https://github.com/yihui/litedown/issues",
       "VignetteBuilder": "litedown",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "Encoding": "UTF-8",
       "NeedsCompilation": "no",
-      "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>, https://yihui.org), Tim Taylor [ctb] (<https://orcid.org/0000-0002-8587-7113>)",
+      "Author": "Yihui Xie [aut, cre] (ORCID: <https://orcid.org/0000-0003-0645-5666>, URL: https://yihui.org), Tim Taylor [ctb] (ORCID: <https://orcid.org/0000-0002-8587-7113>)",
       "Maintainer": "Yihui Xie <xie@yihui.name>",
       "Repository": "CRAN"
     },
@@ -6259,7 +6259,7 @@
     },
     "promises": {
       "Package": "promises",
-      "Version": "1.4.0",
+      "Version": "1.5.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Abstractions for Promise-Based Asynchronous Programming",
