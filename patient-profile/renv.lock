@@ -6187,11 +6187,11 @@
     },
     "rbibutils": {
       "Package": "rbibutils",
-      "Version": "2.3",
+      "Version": "2.4",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Read 'Bibtex' Files and Convert Between Bibliography Formats",
-      "Authors@R": "c( person(given = c(\"Georgi\", \"N.\"), family = \"Boshnakov\",  role = c(\"aut\", \"cre\"), \t email = \"georgi.boshnakov@manchester.ac.uk\", comment = \"R port, R code, new C code and modifications to bibutils' C code, conversion to Bibentry (R and C code)\" ), person(given = \"Chris\", family = \"Putman\", role = \"aut\", comment = \"src/*, author of the bibutils libraries, https://sourceforge.net/projects/bibutils/\"), person(given = \"Richard\", family = \"Mathar\", role = \"ctb\", comment = \"src/addsout.c\"), person(given = \"Johannes\", family = \"Wilm\", role = \"ctb\", comment = \"src/biblatexin.c, src/bltypes.c\"), person(\"R Core Team\", role = \"ctb\", comment = \"base R's bibentry and bibstyle implementation\") )",
+      "Authors@R": "c( person(given = c(\"Georgi\", \"N.\"), family = \"Boshnakov\",  role = c(\"aut\", \"cre\"), \t email = \"georgi.boshnakov@manchester.ac.uk\", comment = c(\"R port, R code, new C code and modifications to bibutils' C code, conversion to Bibentry (R and C code)\", comment = c(ORCID = \"0000-0003-2839-346X\")) ), person(given = \"Chris\", family = \"Putman\", role = \"aut\", comment = \"src/*, author of the bibutils libraries, https://sourceforge.net/projects/bibutils/\"), person(given = \"Richard\", family = \"Mathar\", role = \"ctb\", comment = \"src/addsout.c\"), person(given = \"Johannes\", family = \"Wilm\", role = \"ctb\", comment = \"src/biblatexin.c, src/bltypes.c\"), person(\"R Core Team\", role = \"ctb\", comment = \"base R's bibentry and bibstyle implementation\") )",
       "Description": "Read and write 'Bibtex' files. Convert between bibliography formats, including 'Bibtex', 'Biblatex', 'PubMed', 'Endnote', and 'Bibentry'.  Includes a port of the 'bibutils' utilities by Chris Putnam <https://sourceforge.net/projects/bibutils/>. Supports all bibliography formats and character encodings implemented in 'bibutils'.",
       "License": "GPL-2",
       "URL": "https://geobosh.github.io/rbibutils/ (doc), https://github.com/GeoBosh/rbibutils (devel)",
@@ -6209,9 +6209,9 @@
       "Encoding": "UTF-8",
       "NeedsCompilation": "yes",
       "Config/Needs/memcheck": "devtools, rcmdcheck",
-      "Author": "Georgi N. Boshnakov [aut, cre] (R port, R code, new C code and modifications to bibutils' C code, conversion to Bibentry (R and C code)), Chris Putman [aut] (src/*, author of the bibutils libraries, https://sourceforge.net/projects/bibutils/), Richard Mathar [ctb] (src/addsout.c), Johannes Wilm [ctb] (src/biblatexin.c, src/bltypes.c), R Core Team [ctb] (base R's bibentry and bibstyle implementation)",
+      "Author": "Georgi N. Boshnakov [aut, cre] (R port, R code, new C code and modifications to bibutils' C code, conversion to Bibentry (R and C code), comment.ORCID: 0000-0003-2839-346X), Chris Putman [aut] (src/*, author of the bibutils libraries, https://sourceforge.net/projects/bibutils/), Richard Mathar [ctb] (src/addsout.c), Johannes Wilm [ctb] (src/biblatexin.c, src/bltypes.c), R Core Team [ctb] (base R's bibentry and bibstyle implementation)",
       "Maintainer": "Georgi N. Boshnakov <georgi.boshnakov@manchester.ac.uk>",
-      "Repository": "RSPM"
+      "Repository": "CRAN"
     },
     "reactR": {
       "Package": "reactR",
@@ -7944,11 +7944,11 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.7.0.9000",
+      "Version": "0.7.0.9001",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Filter Module for 'teal' Applications",
-      "Date": "2025-08-20",
+      "Date": "2025-11-07",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"Andrew\", \"Bates\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Data filtering module for 'teal' applications.  Allows for interactive filtering of data stored in 'data.frame' and 'MultiAssayExperiment' objects. Also displays filtered and unfiltered observation counts.",
       "License": "Apache License 2.0",
@@ -7984,6 +7984,7 @@
         "knitr (>= 1.42)",
         "MultiAssayExperiment",
         "rmarkdown (>= 2.23)",
+        "rvest (>= 1.0.0)",
         "shinytest2 (>= 0.4.1)",
         "SummarizedExperiment",
         "testthat (>= 3.2.2)",
@@ -7996,7 +7997,7 @@
       "Language": "en-US",
       "LazyData": "true",
       "Roxygen": "list(markdown = TRUE)",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "Author": "Dawid Kaledkowski [aut, cre] (<https://orcid.org/0000-0001-9533-457X>), Pawel Rucki [aut], Aleksander Chlebowski [aut] (<https://orcid.org/0000-0001-5018-6294>), Andre Verissimo [aut] (<https://orcid.org/0000-0002-2212-339X>), Kartikeya Kirar [aut], Marcin Kosinski [aut], Chendi Liao [rev], Dony Unardi [rev], Andrew Bates [aut], Mahmoud Hallal [aut], Nikolas Burkoff [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
       "RemoteType": "github",
@@ -8004,7 +8005,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "1d3c647b68b3447670c9e181de6deb62dcf5d6c2"
+      "RemoteSha": "edb9b4c837ad35aaeedecb9edcfcf3ffda40f564"
     },
     "teal.transform": {
       "Package": "teal.transform",
