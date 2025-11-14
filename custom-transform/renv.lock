@@ -1794,7 +1794,7 @@
     },
     "learnr": {
       "Package": "learnr",
-      "Version": "0.11.5",
+      "Version": "0.11.6",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Interactive Tutorials for R",
@@ -1806,7 +1806,6 @@
       "Imports": [
         "checkmate",
         "digest",
-        "ellipsis (>= 0.2.0.1)",
         "evaluate",
         "htmltools (>= 0.3.5)",
         "htmlwidgets",
@@ -1818,7 +1817,7 @@
         "promises",
         "rappdirs",
         "renv (>= 0.8.0)",
-        "rlang",
+        "rlang (>= 1.0.0)",
         "rmarkdown (>= 1.12.0)",
         "rprojroot",
         "shiny (>= 1.0)",
@@ -1845,10 +1844,10 @@
       "Config/Needs/coverage": "covr",
       "Config/Needs/website": "pkgdown, tidyverse/tidytemplate",
       "Encoding": "UTF-8",
-      "RoxygenNote": "7.2.3",
+      "RoxygenNote": "7.3.3",
       "SystemRequirements": "pandoc (>= 1.14) - http://pandoc.org",
       "NeedsCompilation": "no",
-      "Author": "Garrick Aden-Buie [aut, cre] (<https://orcid.org/0000-0002-7111-0077>), Barret Schloerke [aut] (<https://orcid.org/0000-0001-9986-114X>), JJ Allaire [aut, ccp], Alexander Rossell Hayes [aut] (<https://orcid.org/0000-0001-9412-0457>), Nischal Shrestha [ctb] (<https://orcid.org/0000-0003-3321-1712>), Angela Li [ctb] (vignette), Posit, PBC [cph, fnd], Ajax.org B.V. [ctb, cph] (Ace library), Zeno Rocha [ctb, cph] (clipboard.js library), Nick Payne [ctb, cph] (Bootbox library), Jake Archibald [ctb, cph] (idb-keyval library), i18next authors [ctb, cph] (i18next library)",
+      "Author": "Garrick Aden-Buie [aut, cre] (ORCID: <https://orcid.org/0000-0002-7111-0077>), Barret Schloerke [aut] (ORCID: <https://orcid.org/0000-0001-9986-114X>), JJ Allaire [aut, ccp], Alexander Rossell Hayes [aut] (ORCID: <https://orcid.org/0000-0001-9412-0457>), Nischal Shrestha [ctb] (ORCID: <https://orcid.org/0000-0003-3321-1712>), Angela Li [ctb] (vignette), Posit, PBC [cph, fnd], Ajax.org B.V. [ctb, cph] (Ace library), Zeno Rocha [ctb, cph] (clipboard.js library), Nick Payne [ctb, cph] (Bootbox library), Jake Archibald [ctb, cph] (idb-keyval library), i18next authors [ctb, cph] (i18next library)",
       "Maintainer": "Garrick Aden-Buie <garrick@posit.co>",
       "Repository": "CRAN"
     },
