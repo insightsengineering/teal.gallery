@@ -770,10 +770,10 @@
     },
     "TH.data": {
       "Package": "TH.data",
-      "Version": "1.1-4",
+      "Version": "1.1-5",
       "Source": "Repository",
       "Title": "TH's Data Archive",
-      "Date": "2025-09-02",
+      "Date": "2025-11-17",
       "Authors@R": "c(person(\"Torsten\", \"Hothorn\", role = c(\"aut\", \"cre\"), email = \"Torsten.Hothorn@R-project.org\"))",
       "Description": "Contains data sets used in other packages Torsten Hothorn maintains.",
       "Depends": [
@@ -9581,7 +9581,7 @@
     },
     "xml2": {
       "Package": "xml2",
-      "Version": "1.4.1",
+      "Version": "1.5.0",
       "Source": "Repository",
       "Title": "Parse XML",
       "Authors@R": "c( person(\"Hadley\", \"Wickham\", role = \"aut\"), person(\"Jim\", \"Hester\", role = \"aut\"), person(\"Jeroen\", \"Ooms\", email = \"jeroenooms@gmail.com\", role = c(\"aut\", \"cre\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")), person(\"R Foundation\", role = \"ctb\", comment = \"Copy of R-project homepage cached as example\") )",
