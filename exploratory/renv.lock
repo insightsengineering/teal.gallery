@@ -2214,10 +2214,10 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.11.9002",
+      "Version": "0.5.11.9003",
       "Source": "GitHub",
       "Title": "ASCII Formatting for Values and Tables",
-      "Date": "2025-07-25",
+      "Date": "2025-11-24",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "We provide a framework for rendering complex tables to ASCII, and a set of formatters for transforming values or sets of values into ASCII-ready display strings.",
       "License": "Apache License 2.0",
@@ -2230,18 +2230,21 @@
       "Imports": [
         "checkmate (>= 2.1.0)",
         "grid",
-        "htmltools (>= 0.5.3)",
+        "htmltools (>= 0.5.8.1)",
         "lifecycle (>= 0.2.0)",
         "stringi (>= 1.7.12)"
       ],
       "Suggests": [
+        "digest (>= 0.6.37)",
         "dplyr (>= 1.0.9)",
         "gt (>= 0.10.0)",
         "huxtable (>= 2.0.0)",
-        "knitr (>= 1.42)",
+        "knitr (>= 1.50)",
+        "processx (>= 3.8.4)",
         "r2rtf (>= 0.3.2)",
-        "rmarkdown (>= 2.23)",
-        "testthat (>= 3.0.4)",
+        "rmarkdown (>= 2.28)",
+        "sass (>= 0.4.9)",
+        "testthat (>= 3.2.1.1)",
         "withr (>= 2.0.0)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
@@ -2251,7 +2254,7 @@
       "Language": "en-US",
       "LazyData": "true",
       "Roxygen": "list(markdown = TRUE)",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "Collate": "'data.R' 'format_value.R' 'matrix_form.R' 'generics.R' 'labels.R' 'mpf_exporters.R' 'package.R' 'page_size.R' 'pagination.R' 'tostring.R' 'utils.R' 'zzz.R'",
       "Author": "Gabriel Becker [aut] (original creator of the package), Adrian Waddell [aut], Davide Garolini [aut] (<https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (<https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [ctb] (<https://orcid.org/0009-0005-2083-1105>), Joe Zhu [aut, cre] (<https://orcid.org/0000-0001-7566-2787>), F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Joe Zhu <joe.zhu@roche.com>",
@@ -2260,7 +2263,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "f9c181b7acb630200d2040b32c75a4290d879624"
+      "RemoteSha": "3d73fc575aed5a2a836849a4397b27aa43f842f8"
     },
     "fs": {
       "Package": "fs",
@@ -6286,11 +6289,11 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.5.1.9014",
+      "Version": "0.5.1.9015",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "General Modules for 'teal' Applications",
-      "Date": "2025-11-19",
+      "Date": "2025-11-24",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Ondrej\", \"Slama\", , \"ondrej.slama@roche.com\", role = \"ctb\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for viewing data, visualizing data, understanding missing and outlier values within your data and performing simple data analysis.  This extends 'teal' framework that supports reproducible research and analysis.",
       "License": "Apache License 2.0",
@@ -6371,7 +6374,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "ac4deefcc5fa28dfa671e7698e37829dcd4e411f",
+      "RemoteSha": "1bb0988ff1576ae6b9f733edc8090588e8558261",
       "Remotes": "insightsengineering/teal, insightsengineering/teal.reporter"
     },
     "teal.reporter": {
