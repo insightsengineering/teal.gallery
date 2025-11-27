@@ -5224,10 +5224,10 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.14.9000",
+      "Version": "0.6.14.9002",
       "Source": "GitHub",
       "Title": "Reporting Tables",
-      "Date": "2025-11-18",
+      "Date": "2025-11-26",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"Original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Daniel\", \"Sabanés Bové\", , \"daniel.sabanes_bove@roche.com\", role = \"ctb\"), person(\"Maximilian\", \"Mordig\", , \"maximilian_oliver.mordig@roche.com\", role = \"ctb\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Reporting tables often have structure that goes beyond simple rectangular data. The 'rtables' package provides a framework for declaring complex multi-level tabulations and then applying them to data. This framework models both tabulation and the resulting tables as hierarchical, tree-like objects which support sibling sub-tables, arbitrary splitting or grouping of data in row and column dimensions, cells containing multiple values, and the concept of contextual summary computations. A convenient pipe-able interface is provided for declaring table layouts and the corresponding computations, and then applying them to data.",
       "License": "Apache License 2.0 | file LICENSE",
@@ -5235,19 +5235,19 @@
       "BugReports": "https://github.com/insightsengineering/rtables/issues",
       "Depends": [
         "formatters (>= 0.5.11)",
-        "magrittr (>= 1.5)",
+        "magrittr (>= 2.0.3)",
         "methods",
         "R (>= 4.1)"
       ],
       "Imports": [
         "checkmate (>= 2.1.0)",
-        "htmltools (>= 0.5.4)",
-        "lifecycle (>= 0.2.0)",
+        "htmltools (>= 0.5.8.1)",
+        "lifecycle (>= 1.0.4)",
         "stats",
-        "stringi (>= 1.6)"
+        "stringi (>= 1.8.4)"
       ],
       "Suggests": [
-        "broom (>= 1.0.5)",
+        "broom (>= 1.0.8)",
         "car (>= 3.0-13)",
         "dplyr (>= 1.0.5)",
         "knitr (>= 1.42)",
@@ -5276,7 +5276,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "5beee1ca4fe0c10840939336d48ff4bb57c8be35"
+      "RemoteSha": "cdbe15db6d76e92e9e85281dedf2fbfc45a9893c"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
@@ -6289,11 +6289,11 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.5.1.9016",
+      "Version": "0.5.1.9017",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "General Modules for 'teal' Applications",
-      "Date": "2025-11-25",
+      "Date": "2025-11-26",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Ondrej\", \"Slama\", , \"ondrej.slama@roche.com\", role = \"ctb\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for viewing data, visualizing data, understanding missing and outlier values within your data and performing simple data analysis.  This extends 'teal' framework that supports reproducible research and analysis.",
       "License": "Apache License 2.0",
@@ -6374,7 +6374,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "f55d14245f4e20d7a7f795a12e2327e8163e2963",
+      "RemoteSha": "8a94c04ceabf28cd841ce001168e45db72803120",
       "Remotes": "insightsengineering/teal, insightsengineering/teal.reporter"
     },
     "teal.reporter": {
