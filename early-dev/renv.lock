@@ -3404,14 +3404,14 @@
     },
     "ggpmisc": {
       "Package": "ggpmisc",
-      "Version": "0.6.2",
+      "Version": "0.6.3",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Miscellaneous Extensions to 'ggplot2'",
-      "Date": "2025-07-08",
+      "Date": "2025-11-29",
       "Authors@R": "c( person(\"Pedro J.\", \"Aphalo\", email = \"pedro.aphalo@helsinki.fi\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0003-3385-972X\")), person(\"Kamil\", \"Slowikowski\", role = \"ctb\", comment = c(ORCID = \"0000-0002-2843-6370\")), person(\"Samer\", \"Mouksassi\", email = \"samermouksassi@gmail.com\", role = \"ctb\", comment = c(ORCID = \"0000-0002-7152-6654\")) )",
       "Maintainer": "Pedro J. Aphalo <pedro.aphalo@helsinki.fi>",
-      "Description": "Extensions to 'ggplot2' respecting the grammar of graphics paradigm. Statistics: locate and tag peaks and valleys; label plot with the equation of a fitted polynomial or other types of models including major axis, quantile and robust and resistant regression. Labels for P-value,  R^2 or adjusted R^2 or information criteria for fitted models; parametric and non-parametric correlation; label with ANOVA table for fitted models;  label with summary table for fitted models; annotations for multiple  comparisons with adjusted P-values. Model fit classes for which suitable  methods are provided by package 'broom' and 'broom.mixed' are supported as  well as user-defined wrappers on model fit functions. Scales and stats to build volcano and quadrant plots based on outcomes, fold changes, p-values and false discovery rates.",
+      "Description": "Extensions to 'ggplot2' respecting the grammar of graphics paradigm. Statistics: locate and tag peaks and valleys; label plot with the equation of a fitted polynomial or other types of models including major axis, quantile and robust and resistant regression. Labels for P-value,  R^2 or adjusted R^2 or information criteria for fitted models; parametric and non-parametric correlation; label with ANOVA table for fitted models;  label with summary table for fitted models; annotations for multiple  comparisons with adjusted P-values. Model fit classes for which suitable  methods are provided by package 'broom' and 'broom.mixed' are supported as  well as user-defined wrappers on model fit functions. Scales and stats to  build volcano and quadrant plots based on outcomes, fold changes, p-values and false discovery rates.",
       "License": "GPL (>= 2)",
       "LazyLoad": "TRUE",
       "ByteCompile": "TRUE",
@@ -3426,18 +3426,20 @@
         "scales (>= 1.3.0)",
         "rlang (>= 1.1.3)",
         "generics (>= 0.1.3)",
-        "MASS (>= 7.3-60.0.1)",
+        "MASS (>= 7.3-60)",
         "confintr (>= 1.0.2)",
         "polynom (>= 1.4-1)",
-        "quantreg (>= 5.97)",
-        "lmodel2 (>= 1.7-3)",
+        "quantreg (>= 6.0)",
+        "lmodel2 (>= 1.7-4)",
         "nlme (>= 3.1-160)",
         "splus2R (>= 1.3-5)",
         "multcomp (>= 1.4-25)",
         "multcompView (>= 0.1-10)",
+        "mixtools (>= 2.0.0)",
         "tibble (>= 3.2.1)",
         "plyr (>= 1.8.9)",
         "dplyr (>= 1.1.4)",
+        "tidyr (>= 1.3.0)",
         "lubridate (>= 1.9.3)",
         "caTools (>= 1.18.3)"
       ],
@@ -3447,16 +3449,16 @@
         "ggrepel (>= 0.9.5)",
         "broom (>= 1.0.3)",
         "broom.mixed (>= 0.2.9.5)",
-        "gginnards (>= 0.1.0-1)",
-        "ggtext (>= 0.1.2)",
         "robustbase (>= 0.99-4-1)",
+        "gginnards (>= 0.2.0)",
+        "ggtext (>= 0.1.2)",
         "testthat",
         "vdiffr"
       ],
       "URL": "https://docs.r4photobiology.info/ggpmisc/, https://github.com/aphalo/ggpmisc",
       "BugReports": "https://github.com/aphalo/ggpmisc/issues",
       "Encoding": "UTF-8",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "VignetteBuilder": "knitr",
       "Config/Needs/website": "rmarkdown",
       "NeedsCompilation": "no",
@@ -4354,6 +4356,29 @@
       "Maintainer": "Richard Iannone <riannone@me.com>",
       "Repository": "CRAN"
     },
+    "kernlab": {
+      "Package": "kernlab",
+      "Version": "0.9-33",
+      "Source": "Repository",
+      "Title": "Kernel-Based Machine Learning Lab",
+      "Authors@R": "c(person(\"Alexandros\", \"Karatzoglou\", role = c(\"aut\", \"cre\"), email = \"alexandros.karatzoglou@gmail.com\"), person(\"Alex\", \"Smola\", role = \"aut\"), person(\"Kurt\", \"Hornik\", role = \"aut\", email = \"Kurt.Hornik@R-project.org\", comment = c(ORCID = \"0000-0003-4198-9911\")), person(\"National ICT Australia (NICTA)\", role = \"cph\"), person(c(\"Michael\", \"A.\"), \"Maniscalco\", role = c(\"ctb\", \"cph\")), person(c(\"Choon\", \"Hui\"), \"Teo\", role = \"ctb\"))",
+      "Description": "Kernel-based machine learning methods for classification, regression, clustering, novelty detection, quantile regression and dimensionality reduction.  Among other methods 'kernlab' includes Support Vector Machines, Spectral Clustering, Kernel PCA, Gaussian Processes and a QP solver.",
+      "Depends": [
+        "R (>= 2.10)"
+      ],
+      "Imports": [
+        "methods",
+        "stats",
+        "grDevices",
+        "graphics"
+      ],
+      "LazyLoad": "Yes",
+      "License": "GPL-2",
+      "NeedsCompilation": "yes",
+      "Author": "Alexandros Karatzoglou [aut, cre], Alex Smola [aut], Kurt Hornik [aut] (<https://orcid.org/0000-0003-4198-9911>), National ICT Australia (NICTA) [cph], Michael A. Maniscalco [ctb, cph], Choon Hui Teo [ctb]",
+      "Maintainer": "Alexandros Karatzoglou <alexandros.karatzoglou@gmail.com>",
+      "Repository": "CRAN"
+    },
     "kinship2": {
       "Package": "kinship2",
       "Version": "1.9.6.2",
@@ -5169,6 +5194,33 @@
       "NeedsCompilation": "yes",
       "Repository": "CRAN",
       "Author": "Douglas Bates [aut], Katharine M. Mullen [aut, cre], John C. Nash [aut], Ravi Varadhan [aut]"
+    },
+    "mixtools": {
+      "Package": "mixtools",
+      "Version": "2.0.0.1",
+      "Source": "Repository",
+      "Date": "2022-12-04",
+      "Title": "Tools for Analyzing Finite Mixture Models",
+      "Authors@R": "c(person(\"Derek\", \"Young\", role = c(\"aut\", \"cre\"), email = \"derek.young@uky.edu\", comment = c(ORCID = \"0000-0002-3048-3803\")), person(\"Tatiana\", \"Benaglia\", role = \"aut\"), person(\"Didier\", \"Chauveau\", role = \"aut\"), person(\"David\", \"Hunter\", role = \"aut\"), person(\"Kedai\", \"Cheng\", role = \"aut\"), person(\"Ryan\", \"Elmore\", role = \"ctb\"), person(\"Thomas\", \"Hettmansperger\", role = \"ctb\"), person(\"Hoben\", \"Thomas\", role = \"ctb\"), person(\"Fengjuan\", \"Xuan\", role = \"ctb\"))",
+      "Depends": [
+        "R (>= 4.0.0)"
+      ],
+      "Imports": [
+        "kernlab",
+        "MASS",
+        "plotly",
+        "scales",
+        "segmented",
+        "stats",
+        "survival"
+      ],
+      "URL": "https://github.com/dsy109/mixtools",
+      "Description": "Analyzes finite mixture models for various parametric and semiparametric settings.  This includes mixtures of parametric distributions (normal, multivariate normal, multinomial, gamma), various Reliability Mixture Models (RMMs), mixtures-of-regressions settings (linear regression, logistic regression, Poisson regression, linear regression with changepoints, predictor-dependent mixing proportions, random effects regressions, hierarchical mixtures-of-experts), and tools for selecting the number of components (bootstrapping the likelihood ratio test statistic, mixturegrams, and model selection criteria).  Bayesian estimation of mixtures-of-linear-regressions models is available as well as a novel data depth method for obtaining credible bands.  This package is based upon work supported by the National Science Foundation under Grant No. SES-0518772 and the Chan Zuckerberg Initiative: Essential Open Source Software for Science (Grant No. 2020-255193).",
+      "License": "GPL (>= 2)",
+      "NeedsCompilation": "yes",
+      "Author": "Derek Young [aut, cre] (<https://orcid.org/0000-0002-3048-3803>), Tatiana Benaglia [aut], Didier Chauveau [aut], David Hunter [aut], Kedai Cheng [aut], Ryan Elmore [ctb], Thomas Hettmansperger [ctb], Hoben Thomas [ctb], Fengjuan Xuan [ctb]",
+      "Maintainer": "Derek Young <derek.young@uky.edu>",
+      "Repository": "CRAN"
     },
     "mmrm": {
       "Package": "mmrm",
@@ -7358,6 +7410,27 @@
       "NeedsCompilation": "no",
       "Author": "Hadley Wickham [aut], Thomas Lin Pedersen [cre, aut] (<https://orcid.org/0000-0002-5147-4711>), Dana Seidel [aut], Posit Software, PBC [cph, fnd] (03wc8by49)",
       "Maintainer": "Thomas Lin Pedersen <thomas.pedersen@posit.co>",
+      "Repository": "CRAN"
+    },
+    "segmented": {
+      "Package": "segmented",
+      "Version": "2.1-4",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Regression Models with Break-Points / Change-Points Estimation (with Possibly Random Effects)",
+      "Date": "2025-02-26",
+      "Authors@R": "c(person(given = c(\"Vito\",\"M.\",\"R.\"), family = \"Muggeo\", role = c(\"aut\", \"cre\"), email = \"vito.muggeo@unipa.it\", comment=c(ORCID=\"0000-0002-3386-4054\")))",
+      "Maintainer": "Vito M. R. Muggeo <vito.muggeo@unipa.it>",
+      "Description": "Fitting regression models where, in addition to possible linear terms, one or more covariates have segmented (i.e., broken-line or piece-wise linear) or stepmented (i.e. piece-wise constant) effects. Multiple breakpoints for the same variable are allowed.  The estimation method is discussed in Muggeo (2003, <doi:10.1002/sim.1545>) and  illustrated in Muggeo (2008, <https://www.r-project.org/doc/Rnews/Rnews_2008-1.pdf>). An approach for hypothesis testing is presented  in Muggeo (2016, <doi:10.1080/00949655.2016.1149855>), and interval estimation for the breakpoint is discussed in Muggeo (2017, <doi:10.1111/anzs.12200>).  Segmented mixed models, i.e. random effects in the change point, are discussed in Muggeo (2014, <doi:10.1177/1471082X13504721>). Estimation of piecewise-constant relationships and changepoints (mean-shift models) is  discussed in Fasola et al. (2018, <doi:10.1007/s00180-017-0740-4>).",
+      "Depends": [
+        "R (>= 3.5.0)",
+        "MASS",
+        "nlme"
+      ],
+      "License": "GPL",
+      "NeedsCompilation": "no",
+      "Author": "Vito M. R. Muggeo [aut, cre] (<https://orcid.org/0000-0002-3386-4054>)",
+      "RoxygenNote": "7.3.1",
       "Repository": "CRAN"
     },
     "shape": {
