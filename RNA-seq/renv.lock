@@ -1963,6 +1963,36 @@
       "Maintainer": "Torsten Hothorn <Torsten.Hothorn@R-project.org>",
       "Repository": "CRAN"
     },
+    "TTR": {
+      "Package": "TTR",
+      "Version": "0.24.4",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Technical Trading Rules",
+      "Authors@R": "c( person(given=\"Joshua\", family=\"Ulrich\", role=c(\"cre\",\"aut\"), email=\"josh.m.ulrich@gmail.com\"), person(given=c(\"Ethan\",\"B.\"), family=\"Smith\", role=\"ctb\") )",
+      "Imports": [
+        "xts (>= 0.10-0)",
+        "zoo",
+        "curl"
+      ],
+      "LinkingTo": [
+        "xts"
+      ],
+      "Enhances": [
+        "quantmod"
+      ],
+      "Suggests": [
+        "RUnit"
+      ],
+      "Description": "A collection of over 50 technical indicators for creating technical trading rules. The package also provides fast implementations of common rolling-window functions, and several volatility calculations.",
+      "License": "GPL (>= 2)",
+      "URL": "https://github.com/joshuaulrich/TTR",
+      "BugReports": "https://github.com/joshuaulrich/TTR/issues",
+      "NeedsCompilation": "yes",
+      "Author": "Joshua Ulrich [cre, aut], Ethan B. Smith [ctb]",
+      "Maintainer": "Joshua Ulrich <josh.m.ulrich@gmail.com>",
+      "Repository": "CRAN"
+    },
     "UCSC.utils": {
       "Package": "UCSC.utils",
       "Version": "1.2.0",
@@ -2762,7 +2792,7 @@
     },
     "cards": {
       "Package": "cards",
-      "Version": "0.7.0",
+      "Version": "0.7.1",
       "Source": "Repository",
       "Title": "Analysis Results Data",
       "Authors@R": "c( person(\"Daniel D.\", \"Sjoberg\", , \"danield.sjoberg@gmail.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0003-0862-2018\")), person(\"Becca\", \"Krouse\", , \"becca.z.krouse@gsk.com\", role = \"aut\"), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Malan\", \"Bosman\", , \"malanbos@gmail.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-3020-195X\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")), person(\"GlaxoSmithKline Research & Development Limited\", role = \"cph\") )",
@@ -2774,16 +2804,16 @@
         "R (>= 4.1)"
       ],
       "Imports": [
-        "cli (>= 3.6.1)",
-        "dplyr (>= 1.1.2)",
-        "glue (>= 1.6.2)",
-        "lifecycle (>= 1.0.3)",
-        "rlang (>= 1.1.1)",
-        "tidyr (>= 1.3.0)",
-        "tidyselect (>= 1.2.0)"
+        "cli (>= 3.6.5)",
+        "dplyr (>= 1.1.4)",
+        "glue (>= 1.8.0)",
+        "lifecycle (>= 1.0.4)",
+        "rlang (>= 1.1.6)",
+        "tidyr (>= 1.3.1)",
+        "tidyselect (>= 1.2.1)"
       ],
       "Suggests": [
-        "testthat (>= 3.2.0)",
+        "testthat (>= 3.2.3)",
         "withr (>= 3.0.0)"
       ],
       "Config/Needs/coverage": "hms",
@@ -2793,7 +2823,7 @@
       "Encoding": "UTF-8",
       "Language": "en-US",
       "LazyData": "true",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "NeedsCompilation": "no",
       "Author": "Daniel D. Sjoberg [aut, cre] (ORCID: <https://orcid.org/0000-0003-0862-2018>), Becca Krouse [aut], Emily de la Rua [aut] (ORCID: <https://orcid.org/0009-0000-8738-5561>), Malan Bosman [aut] (ORCID: <https://orcid.org/0000-0002-3020-195X>), F. Hoffmann-La Roche AG [cph, fnd], GlaxoSmithKline Research & Development Limited [cph]",
       "Maintainer": "Daniel D. Sjoberg <danield.sjoberg@gmail.com>",
@@ -3546,7 +3576,7 @@
     },
     "doBy": {
       "Package": "doBy",
-      "Version": "4.7.0",
+      "Version": "4.7.1",
       "Source": "Repository",
       "Title": "Groupwise Statistics, LSmeans, Linear Estimates, Utilities",
       "Authors@R": "c( person(given = \"Ulrich\", family = \"Halekoh\", email = \"uhalekoh@health.sdu.dk\", role = c(\"aut\", \"cph\")), person(given = \"Søren\", family = \"Højsgaard\", email = \"sorenh@math.aau.dk\", role = c(\"aut\", \"cre\", \"cph\")) )",
@@ -3567,12 +3597,14 @@
         "cowplot",
         "Deriv",
         "dplyr",
+        "forecast",
         "ggplot2",
         "MASS",
         "Matrix",
         "modelr",
         "microbenchmark",
         "rlang",
+        "purrr",
         "tibble",
         "tidyr"
       ],
@@ -3581,12 +3613,13 @@
         "knitr",
         "lme4",
         "markdown",
+        "rmarkdown",
         "multcomp",
         "pbkrtest (>= 0.5.2)",
         "survival",
         "testthat (>= 2.1.0)"
       ],
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "NeedsCompilation": "no",
       "Author": "Ulrich Halekoh [aut, cph], Søren Højsgaard [aut, cre, cph]",
       "Maintainer": "Søren Højsgaard <sorenh@math.aau.dk>",
@@ -4216,6 +4249,63 @@
       "Maintainer": "Folashade Daniel <fdaniel@microsoft.com>",
       "Repository": "CRAN"
     },
+    "forecast": {
+      "Package": "forecast",
+      "Version": "8.24.0",
+      "Source": "Repository",
+      "Title": "Forecasting Functions for Time Series and Linear Models",
+      "Description": "Methods and tools for displaying and analysing univariate time series forecasts including exponential smoothing via state space models and automatic ARIMA modelling.",
+      "Depends": [
+        "R (>= 3.5.0)"
+      ],
+      "Imports": [
+        "colorspace",
+        "fracdiff",
+        "generics (>= 0.1.2)",
+        "ggplot2 (>= 2.2.1)",
+        "graphics",
+        "lmtest",
+        "magrittr",
+        "nnet",
+        "parallel",
+        "Rcpp (>= 0.11.0)",
+        "stats",
+        "timeDate",
+        "tseries",
+        "urca",
+        "withr",
+        "zoo"
+      ],
+      "Suggests": [
+        "forecTheta",
+        "knitr",
+        "methods",
+        "rmarkdown",
+        "rticles",
+        "scales",
+        "seasonal",
+        "testthat (>= 3.0.0)",
+        "uroot"
+      ],
+      "LinkingTo": [
+        "Rcpp (>= 0.11.0)",
+        "RcppArmadillo (>= 0.2.35)"
+      ],
+      "LazyData": "yes",
+      "ByteCompile": "TRUE",
+      "Authors@R": "c( person(\"Rob\", \"Hyndman\", email = \"Rob.Hyndman@monash.edu\", role = c(\"aut\", \"cre\", \"cph\"), comment = c(ORCID = \"0000-0002-2140-5352\")), person(\"George\", \"Athanasopoulos\", role = \"aut\", comment = c(ORCID = \"0000-0002-5389-2802\")), person(\"Christoph\", \"Bergmeir\", role = \"aut\", comment = c(ORCID = \"0000-0002-3665-9021\")), person(\"Gabriel\", \"Caceres\", role = \"aut\", comment = c(ORCID = \"0000-0002-2947-2023\")), person(\"Leanne\", \"Chhay\", role = \"aut\"), person(\"Kirill\", \"Kuroptev\", role = \"aut\"), person(\"Mitchell\", \"O'Hara-Wild\", role = \"aut\", comment = c(ORCID = \"0000-0001-6729-7695\")), person(\"Fotios\", \"Petropoulos\", role = \"aut\", comment = c(ORCID = \"0000-0003-3039-4955\")), person(\"Slava\", \"Razbash\", role = \"aut\"), person(\"Earo\", \"Wang\", role = \"aut\", comment = c(ORCID = \"0000-0001-6448-5260\")), person(\"Farah\", \"Yasmeen\", role = \"aut\", comment = c(ORCID = \"0000-0002-1479-5401\")), person(\"Federico\", \"Garza\", role = \"ctb\"), person(\"Daniele\", \"Girolimetto\", role = \"ctb\"), person(\"Ross\", \"Ihaka\", role = c(\"ctb\", \"cph\")), person(\"R Core Team\", role = c(\"ctb\", \"cph\")), person(\"Daniel\", \"Reid\", role = \"ctb\"), person(\"David\", \"Shaub\", role = \"ctb\"), person(\"Yuan\", \"Tang\", role = \"ctb\", comment = c(ORCID = \"0000-0001-5243-233X\")), person(\"Xiaoqian\", \"Wang\", role = \"ctb\"), person(\"Zhenyu\", \"Zhou\", role = \"ctb\") )",
+      "BugReports": "https://github.com/robjhyndman/forecast/issues",
+      "License": "GPL-3",
+      "URL": "https://pkg.robjhyndman.com/forecast/, https://github.com/robjhyndman/forecast",
+      "VignetteBuilder": "knitr",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.2",
+      "Config/testthat/edition": "3",
+      "NeedsCompilation": "yes",
+      "Author": "Rob Hyndman [aut, cre, cph] (<https://orcid.org/0000-0002-2140-5352>), George Athanasopoulos [aut] (<https://orcid.org/0000-0002-5389-2802>), Christoph Bergmeir [aut] (<https://orcid.org/0000-0002-3665-9021>), Gabriel Caceres [aut] (<https://orcid.org/0000-0002-2947-2023>), Leanne Chhay [aut], Kirill Kuroptev [aut], Mitchell O'Hara-Wild [aut] (<https://orcid.org/0000-0001-6729-7695>), Fotios Petropoulos [aut] (<https://orcid.org/0000-0003-3039-4955>), Slava Razbash [aut], Earo Wang [aut] (<https://orcid.org/0000-0001-6448-5260>), Farah Yasmeen [aut] (<https://orcid.org/0000-0002-1479-5401>), Federico Garza [ctb], Daniele Girolimetto [ctb], Ross Ihaka [ctb, cph], R Core Team [ctb, cph], Daniel Reid [ctb], David Shaub [ctb], Yuan Tang [ctb] (<https://orcid.org/0000-0001-5243-233X>), Xiaoqian Wang [ctb], Zhenyu Zhou [ctb]",
+      "Maintainer": "Rob Hyndman <Rob.Hyndman@monash.edu>",
+      "Repository": "CRAN"
+    },
     "formatR": {
       "Package": "formatR",
       "Version": "1.14",
@@ -4294,6 +4384,32 @@
       "RemoteRepo": "formatters",
       "RemoteRef": "v0.5.11",
       "RemoteSha": "1d34f8a1048685df1e0d932b4b3112ad2313354c"
+    },
+    "fracdiff": {
+      "Package": "fracdiff",
+      "Version": "1.5-3",
+      "Source": "Repository",
+      "VersionNote": "Released 1.5-0 on 2019-12-09, 1.5-1 on 2020-01-20, 1.5-2 on 2022-10-31",
+      "Date": "2024-02-01",
+      "Title": "Fractionally Differenced ARIMA aka ARFIMA(P,d,q) Models",
+      "Authors@R": "c(person(\"Martin\",\"Maechler\", role=c(\"aut\",\"cre\"), email=\"maechler@stat.math.ethz.ch\", comment = c(ORCID = \"0000-0002-8685-9910\")) , person(\"Chris\", \"Fraley\", role=c(\"ctb\",\"cph\"), comment = \"S original; Fortran code\") , person(\"Friedrich\", \"Leisch\", role = \"ctb\", comment = c(\"R port\", ORCID = \"0000-0001-7278-1983\")) , person(\"Valderio\", \"Reisen\", role=\"ctb\", comment = \"fdGPH() & fdSperio()\") , person(\"Artur\",  \"Lemonte\",  role=\"ctb\", comment = \"fdGPH() & fdSperio()\") , person(\"Rob\", \"Hyndman\", email=\"Rob.Hyndman@monash.edu\", role=\"ctb\", comment = c(\"residuals() & fitted()\", ORCID = \"0000-0002-2140-5352\")) )",
+      "Description": "Maximum likelihood estimation of the parameters of a fractionally differenced ARIMA(p,d,q) model (Haslett and Raftery, Appl.Statistics, 1989); including inference and basic methods.  Some alternative algorithms to estimate \"H\".",
+      "Imports": [
+        "stats"
+      ],
+      "Suggests": [
+        "longmemo",
+        "forecast",
+        "urca"
+      ],
+      "License": "GPL (>= 2)",
+      "URL": "https://github.com/mmaechler/fracdiff",
+      "BugReports": "https://github.com/mmaechler/fracdiff/issues",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "yes",
+      "Author": "Martin Maechler [aut, cre] (<https://orcid.org/0000-0002-8685-9910>), Chris Fraley [ctb, cph] (S original; Fortran code), Friedrich Leisch [ctb] (R port, <https://orcid.org/0000-0001-7278-1983>), Valderio Reisen [ctb] (fdGPH() & fdSperio()), Artur Lemonte [ctb] (fdGPH() & fdSperio()), Rob Hyndman [ctb] (residuals() & fitted(), <https://orcid.org/0000-0002-2140-5352>)",
+      "Maintainer": "Martin Maechler <maechler@stat.math.ethz.ch>",
+      "Repository": "CRAN"
     },
     "fs": {
       "Package": "fs",
@@ -5983,10 +6099,10 @@
     },
     "lme4": {
       "Package": "lme4",
-      "Version": "1.1-37",
+      "Version": "1.1-38",
       "Source": "Repository",
       "Title": "Linear Mixed-Effects Models using 'Eigen' and S4",
-      "Authors@R": "c( person(\"Douglas\",\"Bates\", role=\"aut\", comment=c(ORCID=\"0000-0001-8316-9503\")), person(\"Martin\",\"Maechler\", role=\"aut\", comment=c(ORCID=\"0000-0002-8685-9910\")), person(\"Ben\",\"Bolker\",email=\"bbolker+lme4@gmail.com\", role=c(\"aut\",\"cre\"), comment=c(ORCID=\"0000-0002-2127-0443\")), person(\"Steven\",\"Walker\",role=\"aut\", comment=c(ORCID=\"0000-0002-4394-9078\")), person(\"Rune Haubo Bojesen\",\"Christensen\", role=\"ctb\", comment=c(ORCID=\"0000-0002-4494-3399\")), person(\"Henrik\",\"Singmann\", role=\"ctb\", comment=c(ORCID=\"0000-0002-4842-3657\")), person(\"Bin\", \"Dai\", role=\"ctb\"), person(\"Fabian\", \"Scheipl\", role=\"ctb\", comment=c(ORCID=\"0000-0001-8172-3603\")), person(\"Gabor\", \"Grothendieck\", role=\"ctb\"), person(\"Peter\", \"Green\", role=\"ctb\", comment=c(ORCID=\"0000-0002-0238-9852\")), person(\"John\", \"Fox\", role=\"ctb\"), person(\"Alexander\", \"Bauer\", role=\"ctb\"), person(\"Pavel N.\", \"Krivitsky\", role=c(\"ctb\",\"cph\"), comment=c(ORCID=\"0000-0002-9101-3362\", \"shared copyright on simulate.formula\")), person(\"Emi\", \"Tanaka\", role = \"ctb\", comment = c(ORCID=\"0000-0002-1455-259X\")), person(\"Mikael\", \"Jagan\", role = \"ctb\", comment = c(ORCID=\"0000-0002-3542-2938\")), person(\"Ross D.\", \"Boylan\", email=\"ross.boylan@ucsf.edu\", role=(\"ctb\"), comment = c(ORCID=\"0009-0003-4123-8090\")) )",
+      "Authors@R": "c( person(\"Douglas\",\"Bates\", role=\"aut\", comment=c(ORCID=\"0000-0001-8316-9503\")), person(\"Martin\",\"Maechler\", role=\"aut\", comment=c(ORCID=\"0000-0002-8685-9910\")), person(\"Ben\",\"Bolker\",email=\"bbolker+lme4@gmail.com\", role=c(\"aut\",\"cre\"), comment=c(ORCID=\"0000-0002-2127-0443\")), person(\"Steven\",\"Walker\",role=\"aut\", comment=c(ORCID=\"0000-0002-4394-9078\")), person(\"Rune Haubo Bojesen\",\"Christensen\", role=\"ctb\", comment=c(ORCID=\"0000-0002-4494-3399\")), person(\"Henrik\",\"Singmann\", role=\"ctb\", comment=c(ORCID=\"0000-0002-4842-3657\")), person(\"Bin\", \"Dai\", role=\"ctb\"), person(\"Fabian\", \"Scheipl\", role=\"ctb\", comment=c(ORCID=\"0000-0001-8172-3603\")), person(\"Gabor\", \"Grothendieck\", role=\"ctb\"), person(\"Peter\", \"Green\", role=\"ctb\", comment=c(ORCID=\"0000-0002-0238-9852\")), person(\"John\", \"Fox\", role=\"ctb\"), person(\"Alexander\", \"Bauer\", role=\"ctb\"), person(\"Pavel N.\", \"Krivitsky\", role=c(\"ctb\",\"cph\"), comment=c(ORCID=\"0000-0002-9101-3362\", \"shared copyright on simulate.formula\")), person(\"Emi\", \"Tanaka\", role = \"ctb\", comment = c(ORCID=\"0000-0002-1455-259X\")), person(\"Mikael\", \"Jagan\", role = \"ctb\", comment = c(ORCID=\"0000-0002-3542-2938\")), person(\"Ross D.\", \"Boylan\", email=\"ross.boylan@ucsf.edu\", role=(\"ctb\"), comment = c(ORCID=\"0009-0003-4123-8090\")), person(\"Anna\", \"Ly\", role = \"ctb\", comment = c(ORCID = \"0000-0002-0210-0342\")) )",
       "Description": "Fit linear and generalized linear mixed-effects models. The models and their components are represented using S4 classes and methods.  The core computational algorithms are implemented using the 'Eigen' C++ library for numerical linear algebra and 'RcppEigen' \"glue\".",
       "Depends": [
         "R (>= 3.6.0)",
@@ -5997,7 +6113,7 @@
       "LinkingTo": [
         "Rcpp (>= 0.10.5)",
         "RcppEigen (>= 0.3.3.9.4)",
-        "Matrix (>= 1.2-3)"
+        "Matrix (>= 1.5-0)"
       ],
       "Imports": [
         "graphics",
@@ -6011,8 +6127,11 @@
         "nlme (>= 3.1-123)",
         "minqa (>= 1.1.15)",
         "nloptr (>= 1.0.4)",
-        "reformulas (>= 0.3.0)"
+        "reformulas (>= 0.3.0)",
+        "rlang",
+        "Rdpack"
       ],
+      "RdMacros": "Rdpack",
       "Suggests": [
         "knitr",
         "rmarkdown",
@@ -6034,6 +6153,10 @@
         "tibble",
         "merDeriv"
       ],
+      "Enhances": [
+        "DHARMa",
+        "performance"
+      ],
       "VignetteBuilder": "knitr",
       "LazyData": "yes",
       "License": "GPL (>= 2)",
@@ -6041,7 +6164,7 @@
       "BugReports": "https://github.com/lme4/lme4/issues",
       "Encoding": "UTF-8",
       "NeedsCompilation": "yes",
-      "Author": "Douglas Bates [aut] (<https://orcid.org/0000-0001-8316-9503>), Martin Maechler [aut] (<https://orcid.org/0000-0002-8685-9910>), Ben Bolker [aut, cre] (<https://orcid.org/0000-0002-2127-0443>), Steven Walker [aut] (<https://orcid.org/0000-0002-4394-9078>), Rune Haubo Bojesen Christensen [ctb] (<https://orcid.org/0000-0002-4494-3399>), Henrik Singmann [ctb] (<https://orcid.org/0000-0002-4842-3657>), Bin Dai [ctb], Fabian Scheipl [ctb] (<https://orcid.org/0000-0001-8172-3603>), Gabor Grothendieck [ctb], Peter Green [ctb] (<https://orcid.org/0000-0002-0238-9852>), John Fox [ctb], Alexander Bauer [ctb], Pavel N. Krivitsky [ctb, cph] (<https://orcid.org/0000-0002-9101-3362>, shared copyright on simulate.formula), Emi Tanaka [ctb] (<https://orcid.org/0000-0002-1455-259X>), Mikael Jagan [ctb] (<https://orcid.org/0000-0002-3542-2938>), Ross D. Boylan [ctb] (<https://orcid.org/0009-0003-4123-8090>)",
+      "Author": "Douglas Bates [aut] (ORCID: <https://orcid.org/0000-0001-8316-9503>), Martin Maechler [aut] (ORCID: <https://orcid.org/0000-0002-8685-9910>), Ben Bolker [aut, cre] (ORCID: <https://orcid.org/0000-0002-2127-0443>), Steven Walker [aut] (ORCID: <https://orcid.org/0000-0002-4394-9078>), Rune Haubo Bojesen Christensen [ctb] (ORCID: <https://orcid.org/0000-0002-4494-3399>), Henrik Singmann [ctb] (ORCID: <https://orcid.org/0000-0002-4842-3657>), Bin Dai [ctb], Fabian Scheipl [ctb] (ORCID: <https://orcid.org/0000-0001-8172-3603>), Gabor Grothendieck [ctb], Peter Green [ctb] (ORCID: <https://orcid.org/0000-0002-0238-9852>), John Fox [ctb], Alexander Bauer [ctb], Pavel N. Krivitsky [ctb, cph] (ORCID: <https://orcid.org/0000-0002-9101-3362>, shared copyright on simulate.formula), Emi Tanaka [ctb] (ORCID: <https://orcid.org/0000-0002-1455-259X>), Mikael Jagan [ctb] (ORCID: <https://orcid.org/0000-0002-3542-2938>), Ross D. Boylan [ctb] (ORCID: <https://orcid.org/0009-0003-4123-8090>), Anna Ly [ctb] (ORCID: <https://orcid.org/0000-0002-0210-0342>)",
       "Maintainer": "Ben Bolker <bbolker+lme4@gmail.com>",
       "Repository": "CRAN"
     },
@@ -6058,6 +6181,38 @@
       "NeedsCompilation": "no",
       "Author": "Pierre Legendre [aut], Jari Oksanen [cre]",
       "Maintainer": "Jari Oksanen <jhoksane@gmail.com>",
+      "Repository": "CRAN"
+    },
+    "lmtest": {
+      "Package": "lmtest",
+      "Version": "0.9-40",
+      "Source": "Repository",
+      "Title": "Testing Linear Regression Models",
+      "Date": "2022-03-21",
+      "Authors@R": "c(person(given = \"Torsten\", family = \"Hothorn\", role = \"aut\", email = \"Torsten.Hothorn@R-project.org\", comment = c(ORCID = \"0000-0001-8301-0471\")), person(given = \"Achim\", family = \"Zeileis\", role = c(\"aut\", \"cre\"), email = \"Achim.Zeileis@R-project.org\", comment = c(ORCID = \"0000-0003-0918-3766\")), person(given = c(\"Richard\", \"W.\"), family = \"Farebrother\", role = \"aut\", comment = \"pan.f\"), person(given = \"Clint\", family = \"Cummins\", role = \"aut\", comment = \"pan.f\"), person(given = \"Giovanni\", family = \"Millo\", role = \"ctb\"), person(given = \"David\", family = \"Mitchell\", role = \"ctb\"))",
+      "Description": "A collection of tests, data sets, and examples for diagnostic checking in linear regression models. Furthermore, some generic tools for inference in parametric models are provided.",
+      "LazyData": "yes",
+      "Depends": [
+        "R (>= 3.0.0)",
+        "stats",
+        "zoo"
+      ],
+      "Suggests": [
+        "car",
+        "strucchange",
+        "sandwich",
+        "dynlm",
+        "stats4",
+        "survival",
+        "AER"
+      ],
+      "Imports": [
+        "graphics"
+      ],
+      "License": "GPL-2 | GPL-3",
+      "NeedsCompilation": "yes",
+      "Author": "Torsten Hothorn [aut] (<https://orcid.org/0000-0001-8301-0471>), Achim Zeileis [aut, cre] (<https://orcid.org/0000-0003-0918-3766>), Richard W. Farebrother [aut] (pan.f), Clint Cummins [aut] (pan.f), Giovanni Millo [ctb], David Mitchell [ctb]",
+      "Maintainer": "Achim Zeileis <Achim.Zeileis@R-project.org>",
       "Repository": "CRAN"
     },
     "locfit": {
@@ -7327,6 +7482,60 @@
       "NeedsCompilation": "yes",
       "Author": "Hadley Wickham [aut, cre] (ORCID: <https://orcid.org/0000-0003-4757-117X>), Lionel Henry [aut], Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
       "Maintainer": "Hadley Wickham <hadley@posit.co>",
+      "Repository": "CRAN"
+    },
+    "quadprog": {
+      "Package": "quadprog",
+      "Version": "1.5-8",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Functions to Solve Quadratic Programming Problems",
+      "Date": "2019-11-20",
+      "Author": "S original by Berwin A. Turlach <Berwin.Turlach@gmail.com>  R port by Andreas Weingessel <Andreas.Weingessel@ci.tuwien.ac.at> Fortran contributions from Cleve Moler (dposl/LINPACK and (a modified version of) dpodi/LINPACK)",
+      "Maintainer": "Berwin A. Turlach <Berwin.Turlach@gmail.com>",
+      "Description": "This package contains routines and documentation for solving quadratic programming problems.",
+      "Depends": [
+        "R (>= 3.1.0)"
+      ],
+      "License": "GPL (>= 2)",
+      "NeedsCompilation": "yes",
+      "Repository": "CRAN"
+    },
+    "quantmod": {
+      "Package": "quantmod",
+      "Version": "0.4.28",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Quantitative Financial Modelling Framework",
+      "Authors@R": "c( person(given=c(\"Jeffrey\",\"A.\"), family=\"Ryan\", role=c(\"aut\",\"cph\")), person(given=c(\"Joshua\",\"M.\"), family=\"Ulrich\", role=c(\"cre\",\"aut\"), email=\"josh.m.ulrich@gmail.com\"), person(given=c(\"Ethan\",\"B.\"), family=\"Smith\", role=\"ctb\"), person(given=\"Wouter\", family=\"Thielen\", role=\"ctb\"), person(given=\"Paul\", family=\"Teetor\", role=\"ctb\"), person(given=\"Steve\", family=\"Bronder\", role=\"ctb\") )",
+      "Depends": [
+        "R (>= 3.2.0)",
+        "xts(>= 0.9-0)",
+        "zoo",
+        "TTR(>= 0.2)",
+        "methods"
+      ],
+      "Imports": [
+        "curl",
+        "jsonlite(>= 1.1)"
+      ],
+      "Suggests": [
+        "DBI",
+        "RMySQL",
+        "RSQLite",
+        "timeSeries",
+        "xml2",
+        "downloader",
+        "tinytest"
+      ],
+      "Description": "Specify, build, trade, and analyse quantitative financial trading strategies.",
+      "LazyLoad": "yes",
+      "License": "GPL-3",
+      "URL": "https://www.quantmod.com/, https://github.com/joshuaulrich/quantmod",
+      "BugReports": "https://github.com/joshuaulrich/quantmod/issues",
+      "NeedsCompilation": "no",
+      "Author": "Jeffrey A. Ryan [aut, cph], Joshua M. Ulrich [cre, aut], Ethan B. Smith [ctb], Wouter Thielen [ctb], Paul Teetor [ctb], Steve Bronder [ctb]",
+      "Maintainer": "Joshua M. Ulrich <josh.m.ulrich@gmail.com>",
       "Repository": "CRAN"
     },
     "quantreg": {
@@ -9013,10 +9222,10 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.4.0",
+      "Version": "0.4.1",
       "Source": "GitHub",
       "Title": "Logging Setup for the 'teal' Family of Packages",
-      "Date": "2025-07-03",
+      "Date": "2025-12-01",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Utilizing the 'logger' framework to record events within a package, specific to 'teal' family of packages.  Supports logging namespaces, hierarchical logging, various log destinations, vectorization, and more.",
       "License": "Apache License 2.0",
@@ -9027,7 +9236,6 @@
       ],
       "Imports": [
         "glue (>= 1.0.0)",
-        "lifecycle (>= 0.2.0)",
         "logger (>= 0.4.0)",
         "methods",
         "shiny (>= 1.6.0)",
@@ -9040,22 +9248,21 @@
         "testthat (>= 3.2.3)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
-      "RdMacros": "lifecycle",
-      "Config/Needs/verdepcheck": "tidyverse/glue, r-lib/lifecycle, daroczig/logger, rstudio/shiny, r-lib/withr, yihui/knitr, rstudio/rmarkdown, r-lib/testthat",
+      "Config/Needs/verdepcheck": "tidyverse/glue, daroczig/logger, rstudio/shiny, r-lib/withr, yihui/knitr, rstudio/rmarkdown, r-lib/testthat",
       "Config/Needs/website": "insightsengineering/nesttemplate",
       "Encoding": "UTF-8",
       "Language": "en-US",
       "LazyData": "true",
       "Roxygen": "list(markdown = TRUE)",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "Author": "Dawid Kaledkowski [aut, cre], Konrad Pagacz [aut], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
-      "RemoteRef": "v0.4.0",
-      "RemoteSha": "23ce087b619571e728c98a5636db805172b57a5d"
+      "RemoteRef": "v0.4.1",
+      "RemoteSha": "0c68c712417eddb13d5adf148c74b81e1547edc2"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
@@ -9295,11 +9502,11 @@
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.7.0",
+      "Version": "0.7.1",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Filter Module for 'teal' Applications",
-      "Date": "2025-08-19",
+      "Date": "2025-12-01",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = \"rev\"), person(\"Andrew\", \"Bates\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Data filtering module for 'teal' applications.  Allows for interactive filtering of data stored in 'data.frame' and 'MultiAssayExperiment' objects. Also displays filtered and unfiltered observation counts.",
       "License": "Apache License 2.0",
@@ -9335,6 +9542,7 @@
         "knitr (>= 1.42)",
         "MultiAssayExperiment",
         "rmarkdown (>= 2.23)",
+        "rvest (>= 1.0.0)",
         "shinytest2 (>= 0.4.1)",
         "SummarizedExperiment",
         "testthat (>= 3.2.2)",
@@ -9347,22 +9555,22 @@
       "Language": "en-US",
       "LazyData": "true",
       "Roxygen": "list(markdown = TRUE)",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "Author": "Dawid Kaledkowski [aut, cre] (<https://orcid.org/0000-0001-9533-457X>), Pawel Rucki [aut], Aleksander Chlebowski [aut] (<https://orcid.org/0000-0001-5018-6294>), Andre Verissimo [aut] (<https://orcid.org/0000-0002-2212-339X>), Kartikeya Kirar [aut], Marcin Kosinski [aut], Chendi Liao [rev], Dony Unardi [rev], Andrew Bates [aut], Mahmoud Hallal [aut], Nikolas Burkoff [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
-      "RemoteRef": "v0.7.0",
-      "RemoteSha": "64ea49b1bb2cf33dd57aa4fb86b8628fa9fbd7f3"
+      "RemoteRef": "v0.7.1",
+      "RemoteSha": "211a57747842082a15dcf246a708f41c929d43ce"
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.7.0",
+      "Version": "0.7.1",
       "Source": "GitHub",
       "Title": "Functions for Extracting and Merging Data in the 'teal' Framework",
-      "Date": "2025-08-12",
+      "Date": "2025-12-01",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "A standardized user interface for column selection, that facilitates dataset merging in 'teal' framework.",
       "License": "Apache License 2.0",
@@ -9404,22 +9612,22 @@
       "Language": "en-US",
       "LazyData": "true",
       "Roxygen": "list(markdown = TRUE)",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "Author": "Dawid Kaledkowski [aut, cre], Pawel Rucki [aut], Mahmoud Hallal [aut], Nikolas Burkoff [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.transform",
-      "RemoteRef": "v0.7.0",
-      "RemoteSha": "ddcdbf4b1de7ae250832da5e439fa71329c64546"
+      "RemoteRef": "v0.7.1-rc1",
+      "RemoteSha": "857687cb12b6c1e2cad8eae0847f1963bbf67058"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.5.0",
+      "Version": "0.5.1",
       "Source": "GitHub",
       "Title": "'shiny' Widgets for 'teal' Applications",
-      "Date": "2025-08-19",
+      "Date": "2025-12-01",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Collection of 'shiny' widgets to support 'teal' applications. Enables the manipulation of application layout and plot or table settings.",
       "License": "Apache License 2.0",
@@ -9459,19 +9667,20 @@
       "VignetteBuilder": "knitr, rmarkdown",
       "Config/Needs/verdepcheck": "rstudio/bslib, mllg/checkmate, tidyverse/ggplot2, rstudio/htmltools, r-lib/lifecycle, insightsengineering/rtables, rstudio/shiny, daattali/shinyjs, dreamRs/shinyWidgets, r-lib/styler, rstudio/DT, yihui/knitr, deepayan/lattice, tidyverse/magrittr, cran/png, tidyverse/rvest, rstudio/rmarkdown, rstudio/shinytest2, rstudio/shinyvalidate, r-lib/testthat, r-lib/withr",
       "Config/Needs/website": "insightsengineering/nesttemplate",
+      "Config/testthat/edition": "3",
       "Encoding": "UTF-8",
       "Language": "en-US",
       "LazyData": "true",
       "Roxygen": "list(markdown = TRUE)",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "Author": "Dawid Kaledkowski [aut, cre], Pawel Rucki [aut], Mahmoud Hallal [aut], Nikolas Burkoff [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
-      "RemoteRef": "v0.5.0",
-      "RemoteSha": "bea55d086b7e92e51b0a711ff7c7cd001fae669d"
+      "RemoteRef": "v0.5.1",
+      "RemoteSha": "982b5829e7573da8453e8172f56612668d137f6c"
     },
     "tern": {
       "Package": "tern",
@@ -9747,6 +9956,34 @@
       "Maintainer": "Lionel Henry <lionel@posit.co>",
       "Repository": "RSPM"
     },
+    "timeDate": {
+      "Package": "timeDate",
+      "Version": "4051.111",
+      "Source": "Repository",
+      "Title": "Rmetrics - Chronological and Calendar Objects",
+      "Authors@R": "c(person(\"Diethelm\", \"Wuertz\", role=\"aut\", comment = \"original code\") , person(\"Tobias\", \"Setz\", role = c(\"aut\"), email = \"tobias.setz@live.com\") , person(\"Yohan\", \"Chalabi\", role = \"aut\") , person(\"Martin\",\"Maechler\", role = \"ctb\", email = \"maechler@stat.math.ethz.ch\", comment = c(ORCID = \"0000-0002-8685-9910\")) , person(given = c(\"Joe\", \"W.\"), family = \"Byers\", role = \"ctb\") , person(given = c(\"Georgi\", \"N.\"), family = \"Boshnakov\",  role = c(\"cre\", \"aut\"), email = \"georgi.boshnakov@manchester.ac.uk\", comment = c(ORCID = \"0000-0003-2839-346X\")) )",
+      "Description": "The 'timeDate' class fulfils the conventions of the ISO 8601  standard as well as of the ANSI C and POSIX standards. Beyond these standards it provides the \"Financial Center\" concept which allows to handle data records collected in different time  zones and mix them up to have always the proper time stamps with  respect to your personal financial center, or alternatively to the GMT reference time. It can thus also handle time stamps from historical  data records from the same time zone, even if the financial  centers changed day light saving times at different calendar dates.",
+      "Depends": [
+        "R (>= 3.6.0)",
+        "methods"
+      ],
+      "Imports": [
+        "graphics",
+        "utils",
+        "stats"
+      ],
+      "Suggests": [
+        "RUnit"
+      ],
+      "License": "GPL (>= 2)",
+      "Encoding": "UTF-8",
+      "URL": "https://geobosh.github.io/timeDateDoc/ (doc), https://r-forge.r-project.org/scm/viewvc.php/pkg/timeDate/?root=rmetrics (devel), https://www.rmetrics.org",
+      "BugReports": "https://r-forge.r-project.org/projects/rmetrics",
+      "NeedsCompilation": "no",
+      "Author": "Diethelm Wuertz [aut] (original code), Tobias Setz [aut], Yohan Chalabi [aut], Martin Maechler [ctb] (ORCID: <https://orcid.org/0000-0002-8685-9910>), Joe W. Byers [ctb], Georgi N. Boshnakov [cre, aut] (ORCID: <https://orcid.org/0000-0003-2839-346X>)",
+      "Maintainer": "Georgi N. Boshnakov <georgi.boshnakov@manchester.ac.uk>",
+      "Repository": "CRAN"
+    },
     "timechange": {
       "Package": "timechange",
       "Version": "0.3.0",
@@ -9798,6 +10035,55 @@
       "NeedsCompilation": "no",
       "Author": "Yihui Xie [aut, cre, cph] (ORCID: <https://orcid.org/0000-0003-0645-5666>), Posit Software, PBC [cph, fnd], Christophe Dervieux [ctb] (ORCID: <https://orcid.org/0000-0003-4474-2498>), Devon Ryan [ctb] (ORCID: <https://orcid.org/0000-0002-8549-0971>), Ethan Heinzen [ctb], Fernando Cagua [ctb]",
       "Maintainer": "Yihui Xie <xie@yihui.name>",
+      "Repository": "CRAN"
+    },
+    "tseries": {
+      "Package": "tseries",
+      "Version": "0.10-58",
+      "Source": "Repository",
+      "Title": "Time Series Analysis and Computational Finance",
+      "Authors@R": "c(person(\"Adrian\", \"Trapletti\", role = \"aut\", email = \"adrian@trapletti.org\"), person(\"Kurt\", \"Hornik\", role = c(\"aut\", \"cre\"), email = \"Kurt.Hornik@R-project.org\", comment = c(ORCID = \"0000-0003-4198-9911\")), person(\"Blake\", \"LeBaron\", role = \"ctb\", comment = \"BDS test code\"))",
+      "Description": "Time series analysis and computational finance.",
+      "Depends": [
+        "R (>= 3.4.0)"
+      ],
+      "Imports": [
+        "graphics",
+        "stats",
+        "utils",
+        "quadprog",
+        "zoo",
+        "quantmod (>= 0.4-9)",
+        "jsonlite"
+      ],
+      "License": "GPL-2 | GPL-3",
+      "NeedsCompilation": "yes",
+      "Author": "Adrian Trapletti [aut], Kurt Hornik [aut, cre] (<https://orcid.org/0000-0003-4198-9911>), Blake LeBaron [ctb] (BDS test code)",
+      "Maintainer": "Kurt Hornik <Kurt.Hornik@R-project.org>",
+      "Repository": "CRAN"
+    },
+    "urca": {
+      "Package": "urca",
+      "Version": "1.3-4",
+      "Source": "Repository",
+      "Date": "2024-05-25",
+      "Title": "Unit Root and Cointegration Tests for Time Series Data",
+      "Authors@R": "c(person(\"Bernhard\", \"Pfaff\", email = \"bernhard@pfaffikus.de\", role = c(\"aut\", \"cre\")), person(\"Eric\", \"Zivot\",email = \"ezivot@u.washington.edu\", role = \"ctb\"), person(\"Matthieu\", \"Stigler\", role = \"ctb\"))",
+      "Depends": [
+        "R (>= 2.0.0)",
+        "methods"
+      ],
+      "Imports": [
+        "nlme",
+        "graphics",
+        "stats"
+      ],
+      "LazyLoad": "yes",
+      "Description": "Unit root and cointegration tests encountered in applied  econometric analysis are implemented.",
+      "License": "GPL (>= 2)",
+      "NeedsCompilation": "yes",
+      "Author": "Bernhard Pfaff [aut, cre], Eric Zivot [ctb], Matthieu Stigler [ctb]",
+      "Maintainer": "Bernhard Pfaff <bernhard@pfaffikus.de>",
       "Repository": "CRAN"
     },
     "utf8": {
