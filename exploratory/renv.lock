@@ -2396,10 +2396,10 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.11.9005",
+      "Version": "0.5.12.9000",
       "Source": "GitHub",
       "Title": "ASCII Formatting for Values and Tables",
-      "Date": "2025-12-05",
+      "Date": "2025-12-08",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "We provide a framework for rendering complex tables to ASCII, and a set of formatters for transforming values or sets of values into ASCII-ready display strings.",
       "License": "Apache License 2.0",
@@ -2445,7 +2445,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
       "RemoteRef": "main",
-      "RemoteSha": "b3f321865e390e19ab3add75a716bb27cd10d5c3"
+      "RemoteSha": "343a81b9bb3e605d113d201e6710ce6697263561"
     },
     "fracdiff": {
       "Package": "fracdiff",
@@ -5449,19 +5449,20 @@
     },
     "rlistings": {
       "Package": "rlistings",
-      "Version": "0.2.12",
+      "Version": "0.2.13",
       "Source": "Repository",
       "Title": "Clinical Trial Style Data Readout Listings",
-      "Date": "2025-05-28",
+      "Date": "2025-12-05",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Listings are often part of the submission of clinical trial data in regulatory settings.  We provide a framework for the specific formatting features often used when displaying large datasets in that context.",
       "License": "Apache License 2.0",
       "URL": "https://insightsengineering.github.io/rlistings/, https://github.com/insightsengineering/rlistings/",
       "BugReports": "https://github.com/insightsengineering/rlistings/issues",
       "Depends": [
-        "formatters (>= 0.5.11)",
+        "formatters (>= 0.5.12)",
         "methods",
-        "tibble (>= 2.0.0)"
+        "R (>= 4.1.0)",
+        "tibble (>= 3.2.1)"
       ],
       "Imports": [
         "checkmate (>= 2.1.0)",
@@ -5471,13 +5472,14 @@
         "utils"
       ],
       "Suggests": [
-        "dplyr (>= 1.0.2)",
-        "knitr (>= 1.42)",
-        "lifecycle (>= 0.2.0)",
-        "rmarkdown (>= 2.23)",
-        "stringi (>= 1.6)",
-        "testthat (>= 3.1.5)",
-        "withr (>= 2.0.0)"
+        "dplyr (>= 1.1.4)",
+        "knitr (>= 1.50)",
+        "lifecycle (>= 1.0.4)",
+        "processx (>= 3.8.6)",
+        "rmarkdown (>= 2.29)",
+        "stringi (>= 1.8.7)",
+        "testthat (>= 3.2.3)",
+        "withr (>= 3.0.2)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
       "Config/Needs/verdepcheck": "insightsengineering/formatters, tidyverse/tibble, mllg/checkmate, tidyverse/dplyr, yihui/knitr, r-lib/lifecycle, rstudio/rmarkdown, gagolews/stringi, r-lib/testthat, r-lib/withr",
@@ -5485,7 +5487,7 @@
       "Config/testthat/edition": "3",
       "Encoding": "UTF-8",
       "Language": "en-US",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "NeedsCompilation": "no",
       "Author": "Gabriel Becker [aut] (original creator of the package), Adrian Waddell [aut], Joe Zhu [aut, cre] (ORCID: <https://orcid.org/0000-0001-7566-2787>), Davide Garolini [aut] (ORCID: <https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (ORCID: <https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [ctb] (ORCID: <https://orcid.org/0009-0005-2083-1105>), F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Joe Zhu <joe.zhu@roche.com>",
@@ -5583,17 +5585,17 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.14.9002",
+      "Version": "0.6.14.9003",
       "Source": "GitHub",
       "Title": "Reporting Tables",
-      "Date": "2025-11-26",
+      "Date": "2025-12-08",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"Original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Daniel\", \"Sabanés Bové\", , \"daniel.sabanes_bove@roche.com\", role = \"ctb\"), person(\"Maximilian\", \"Mordig\", , \"maximilian_oliver.mordig@roche.com\", role = \"ctb\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Reporting tables often have structure that goes beyond simple rectangular data. The 'rtables' package provides a framework for declaring complex multi-level tabulations and then applying them to data. This framework models both tabulation and the resulting tables as hierarchical, tree-like objects which support sibling sub-tables, arbitrary splitting or grouping of data in row and column dimensions, cells containing multiple values, and the concept of contextual summary computations. A convenient pipe-able interface is provided for declaring table layouts and the corresponding computations, and then applying them to data.",
       "License": "Apache License 2.0 | file LICENSE",
       "URL": "https://github.com/insightsengineering/rtables, https://insightsengineering.github.io/rtables/",
       "BugReports": "https://github.com/insightsengineering/rtables/issues",
       "Depends": [
-        "formatters (>= 0.5.11)",
+        "formatters (>= 0.5.12)",
         "magrittr (>= 2.0.3)",
         "methods",
         "R (>= 4.1)"
@@ -5635,7 +5637,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "cdbe15db6d76e92e9e85281dedf2fbfc45a9893c"
+      "RemoteSha": "9b817fe2dab45ac6a436d4659004321e45bac6fa"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
@@ -6671,7 +6673,7 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.5.1.9019",
+      "Version": "0.6.0",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "General Modules for 'teal' Applications",
@@ -6685,7 +6687,7 @@
         "ggplot2 (>= 3.5.0)",
         "R (>= 4.1)",
         "shiny (>= 1.8.1)",
-        "teal (>= 1.0.0.9003)",
+        "teal (>= 1.1.0)",
         "teal.transform (>= 0.7.0)"
       ],
       "Imports": [
@@ -6721,7 +6723,7 @@
         "teal.code (>= 0.7.0)",
         "teal.data (>= 0.8.0)",
         "teal.logger (>= 0.4.0)",
-        "teal.reporter (>= 0.5.0.9001)",
+        "teal.reporter (>= 0.6.0)",
         "teal.widgets (>= 0.5.0)",
         "tern (>= 0.9.7)",
         "tibble (>= 2.0.0)",
@@ -6756,8 +6758,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "fa652ba82994bc596ed17ffbaddd86c290527c16",
-      "Remotes": "insightsengineering/teal, insightsengineering/teal.reporter"
+      "RemoteSha": "3976fc5c8dc5861219aee4a1eccc4b7246db0a62"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -6899,7 +6900,7 @@
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.7.0.9001",
+      "Version": "0.7.1",
       "Source": "GitHub",
       "Title": "Functions for Extracting and Merging Data in the 'teal' Framework",
       "Date": "2025-12-01",
@@ -6952,7 +6953,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.transform",
       "RemoteRef": "main",
-      "RemoteSha": "abc5e1beca3f0be950f1e4d700002a0f67229859"
+      "RemoteSha": "31f20bde25b3f78a06cf9684ec99e67897145986"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
