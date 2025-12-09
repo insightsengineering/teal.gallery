@@ -3022,10 +3022,10 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.11",
+      "Version": "0.5.12",
       "Source": "GitHub",
       "Title": "ASCII Formatting for Values and Tables",
-      "Date": "2025-04-08",
+      "Date": "2025-12-05",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "We provide a framework for rendering complex tables to ASCII, and a set of formatters for transforming values or sets of values into ASCII-ready display strings.",
       "License": "Apache License 2.0",
@@ -3038,18 +3038,21 @@
       "Imports": [
         "checkmate (>= 2.1.0)",
         "grid",
-        "htmltools (>= 0.5.3)",
+        "htmltools (>= 0.5.8.1)",
         "lifecycle (>= 0.2.0)",
         "stringi (>= 1.7.12)"
       ],
       "Suggests": [
+        "digest (>= 0.6.37)",
         "dplyr (>= 1.0.9)",
         "gt (>= 0.10.0)",
         "huxtable (>= 2.0.0)",
-        "knitr (>= 1.42)",
+        "knitr (>= 1.50)",
+        "processx (>= 3.8.4)",
         "r2rtf (>= 0.3.2)",
-        "rmarkdown (>= 2.23)",
-        "testthat (>= 3.0.4)",
+        "rmarkdown (>= 2.28)",
+        "sass (>= 0.4.9)",
+        "testthat (>= 3.2.1.1)",
         "withr (>= 2.0.0)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
@@ -3059,7 +3062,7 @@
       "Language": "en-US",
       "LazyData": "true",
       "Roxygen": "list(markdown = TRUE)",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "Collate": "'data.R' 'format_value.R' 'matrix_form.R' 'generics.R' 'labels.R' 'mpf_exporters.R' 'package.R' 'page_size.R' 'pagination.R' 'tostring.R' 'utils.R' 'zzz.R'",
       "Author": "Gabriel Becker [aut] (original creator of the package), Adrian Waddell [aut], Davide Garolini [aut] (<https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (<https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [ctb] (<https://orcid.org/0009-0005-2083-1105>), Joe Zhu [aut, cre] (<https://orcid.org/0000-0001-7566-2787>), F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Joe Zhu <joe.zhu@roche.com>",
@@ -3067,8 +3070,8 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
-      "RemoteRef": "v0.5.11",
-      "RemoteSha": "1d34f8a1048685df1e0d932b4b3112ad2313354c"
+      "RemoteRef": "v0.5.12",
+      "RemoteSha": "d581c8a1e0c01740f3be96a803a61c1cbe66fb05"
     },
     "fracdiff": {
       "Package": "fracdiff",
@@ -7227,19 +7230,20 @@
     },
     "rlistings": {
       "Package": "rlistings",
-      "Version": "0.2.12",
+      "Version": "0.2.13",
       "Source": "Repository",
       "Title": "Clinical Trial Style Data Readout Listings",
-      "Date": "2025-05-28",
+      "Date": "2025-12-05",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Listings are often part of the submission of clinical trial data in regulatory settings.  We provide a framework for the specific formatting features often used when displaying large datasets in that context.",
       "License": "Apache License 2.0",
       "URL": "https://insightsengineering.github.io/rlistings/, https://github.com/insightsengineering/rlistings/",
       "BugReports": "https://github.com/insightsengineering/rlistings/issues",
       "Depends": [
-        "formatters (>= 0.5.11)",
+        "formatters (>= 0.5.12)",
         "methods",
-        "tibble (>= 2.0.0)"
+        "R (>= 4.1.0)",
+        "tibble (>= 3.2.1)"
       ],
       "Imports": [
         "checkmate (>= 2.1.0)",
@@ -7249,13 +7253,14 @@
         "utils"
       ],
       "Suggests": [
-        "dplyr (>= 1.0.2)",
-        "knitr (>= 1.42)",
-        "lifecycle (>= 0.2.0)",
-        "rmarkdown (>= 2.23)",
-        "stringi (>= 1.6)",
-        "testthat (>= 3.1.5)",
-        "withr (>= 2.0.0)"
+        "dplyr (>= 1.1.4)",
+        "knitr (>= 1.50)",
+        "lifecycle (>= 1.0.4)",
+        "processx (>= 3.8.6)",
+        "rmarkdown (>= 2.29)",
+        "stringi (>= 1.8.7)",
+        "testthat (>= 3.2.3)",
+        "withr (>= 3.0.2)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
       "Config/Needs/verdepcheck": "insightsengineering/formatters, tidyverse/tibble, mllg/checkmate, tidyverse/dplyr, yihui/knitr, r-lib/lifecycle, rstudio/rmarkdown, gagolews/stringi, r-lib/testthat, r-lib/withr",
@@ -7263,7 +7268,7 @@
       "Config/testthat/edition": "3",
       "Encoding": "UTF-8",
       "Language": "en-US",
-      "RoxygenNote": "7.3.2",
+      "RoxygenNote": "7.3.3",
       "NeedsCompilation": "no",
       "Author": "Gabriel Becker [aut] (original creator of the package), Adrian Waddell [aut], Joe Zhu [aut, cre] (ORCID: <https://orcid.org/0000-0001-7566-2787>), Davide Garolini [aut] (ORCID: <https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (ORCID: <https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [ctb] (ORCID: <https://orcid.org/0009-0005-2083-1105>), F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Joe Zhu <joe.zhu@roche.com>",
