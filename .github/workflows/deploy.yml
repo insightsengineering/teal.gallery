@@ -109,6 +109,11 @@ jobs:
             libgbm-dev \
             libnotify-dev \
             libgconf-2-4 \
+            libfreetype6-dev \
+            libpng-dev \
+            libtiff5-dev \
+            libjpeg-dev \
+            libwebp-dev \
             xvfb
           if [ " ${{ matrix.directory }}" == "python" ]
           then {
@@ -133,6 +138,7 @@ jobs:
 
       - name: Update renv.lock file with updated GitHub packages
         shell: Rscript {0}
+        if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         run: |
           setwd("${{ matrix.directory }}")
           lockfile <- renv::lockfile_read()
