@@ -57,16 +57,16 @@ def svd_whiten(dat):
   X_white = np.dot(U, Vt)
   return X_white
 
-              data_columns = data.columns
-              global numeric_cols_ix
-              global numeric_cols
-              numeric_cols_ix = list(range(5))[1:]
-              numeric_cols = [x for i,x in enumerate(data_columns) if i in numeric_cols_ix]
-              svd_res = svd_whiten(data.iloc[:, numeric_cols_ix])
-              data_new = pd.concat([data, pd.DataFrame(svd_res)], axis = 1)
-              data_new.columns = list(data_columns) + [i + '.whiten' for i in numeric_cols]
-              data_new = data_new.round(10)
-              data_new
+data_columns = data.columns
+global numeric_cols_ix
+global numeric_cols
+numeric_cols_ix = list(range(5))[1:]
+numeric_cols = [x for i,x in enumerate(data_columns) if i in numeric_cols_ix]
+svd_res = svd_whiten(data.iloc[:, numeric_cols_ix])
+data_new = pd.concat([data, pd.DataFrame(svd_res)], axis = 1)
+data_new.columns = list(data_columns) + [i + '.whiten' for i in numeric_cols]
+data_new = data_new.round(10)
+data_new
             "
             withr::with_options(
               list(reticulate.engine.environment = environment()),
