@@ -141,6 +141,7 @@ jobs:
         shell: Rscript {0}
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         run: |
+          renv::install("cli", prompt = FALSE)
           setwd("${{ matrix.directory }}")
           lockfile <- renv::lockfile_read()
           pkg_name_structure <- ifelse("${{ matrix.channel }}" == "stable", "%s/%s@*release", "%s/%s")
