@@ -265,7 +265,7 @@ app <- init(
         arm_var = cs_arm_var,
         flag_var_anl = choices_selected(
           choices = variable_choices(ADAE, c("AEREL1", "AEREL2")),
-          selected = NULL
+          selected = "AEREL1"
         ),
         plot_height = c(800, 200, 2000)
       ),
