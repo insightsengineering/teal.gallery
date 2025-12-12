@@ -28,6 +28,7 @@ env:
   SHINYAPPSIO_ACCOUNT: rinpharma
   APP_PREFIX: NEST
   GITHUB_PAT: ${{ secrets.REPO_GITHUB_TOKEN }}
+  RENV_CONFIG_PAK_ENABLED: TRUE
 
 jobs:
   deploy:
@@ -136,6 +137,11 @@ jobs:
           key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/renv.lock', matrix.directory)) }}
           restore-keys: ${{ env.CACHE_KEY }}-
 
+      - name: Install required R packages
+        shell: Rscript {0}
+        run: |
+          install.packages(c("pak", "cli"))
+
       - name: Update renv.lock file with updated GitHub packages
         shell: Rscript {0}
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
@@ -144,19 +150,19 @@ jobs:
           lockfile <- renv::lockfile_read()
           pkg_name_structure <- ifelse("${{ matrix.channel }}" == "stable", "%s/%s@*release", "%s/%s")
           unreleased_packages <- c(
-            "osprey", "hermes", "goshawk", "teal.osprey",
-            "teal.modules.hermes", "teal.goshawk"
+            "osprey", "hermes", "goshawk", "teal.osprey", "teal.modules.hermes", "teal.goshawk"
           )
           for (package in lockfile$Packages) {
               if (package$Source == "GitHub") {
-                print(package$Package)
-                  if (package$Package %in% unreleased_packages) {
-                    print(paste0("Recording ", package$Package, " from main"))
-                    renv::record(sprintf("%s/%s", package$RemoteUsername, package$Package))
-                  } else {
-                    print(paste0("Recording ", package$Package, " from stable"))
-                    renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
-                  }
+                cli::cli_h3("'{package$Package}' from GitHub source")
+                pkg_ref <- sprintf(pkg_name_structure, package$RemoteUsername, package$Package)
+                pkg_extra <- "released"
+                if (package$Package %in% unreleased_packages) { # exceptions
+                  pkg_ref <- sprintf("%s/%s", package$RemoteUsername, package$Package)
+                  pkg_extra <- "unreleased"
+                }
+                cli::cli_alert_info("Recording '{package$Package}' ({pkg_extra}) with reference: '{pkg_ref}'")
+                renv::record(pkg_ref)
               }
           }
 
