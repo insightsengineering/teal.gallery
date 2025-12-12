@@ -137,11 +137,15 @@ jobs:
           key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/renv.lock', matrix.directory)) }}
           restore-keys: ${{ env.CACHE_KEY }}-
 
+      - name: Install required R packages for this action
+        shell: Rscript {0}
+        run: |
+          install.packages(c("cli"))
+
       - name: Update renv.lock file with updated GitHub packages
         shell: Rscript {0}
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         run: |
-          renv::install("cli", prompt = FALSE)
           setwd("${{ matrix.directory }}")
           lockfile <- renv::lockfile_read()
           pkg_name_structure <- ifelse("${{ matrix.channel }}" == "stable", "%s/%s@*release", "%s/%s")
