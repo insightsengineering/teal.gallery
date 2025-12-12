@@ -140,7 +140,7 @@ jobs:
       - name: Install required R packages for this action
         shell: Rscript {0}
         run: |
-          install.packages(c("cli"))
+          install.packages(c("pak", "cli"))
 
       - name: Update renv.lock file with updated GitHub packages
         shell: Rscript {0}
