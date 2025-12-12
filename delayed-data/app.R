@@ -17,29 +17,24 @@ data <- teal_data_module(
   server = function(id, ...) {
     moduleServer(id, function(input, output, session) {
       eventReactive(input$load, {
-
-        data <- teal.data::teal_data()
-
-        if ("iris" %in% input$datasets) {
-          data <- within(data, {
-            iris <- iris
-          })
-        }
-        if ("mtcars" %in% input$datasets) {
-          data <- within(data, {
-            mtcars <- mtcars
-          })
-        }
-        if ("CO2" %in% input$datasets) {
-          data <- within(data, {
-            CO2 <- CO2
-          })
-        }
-        if ("airquality" %in% input$datasets) {
-          data <- within(data, {
-            airquality <- airquality
-          })
-        }
+        data <- teal.data::teal_data() |>
+          within(
+            {
+              if ("iris" %in% datasets) {
+                iris <- iris
+              }
+              if ("mtcars" %in% datasets) {
+                mtcars <- mtcars
+              }
+              if ("CO2" %in% datasets) {
+                CO2 <- CO2
+              }
+              if ("airquality" %in% datasets) {
+                airquality <- airquality
+              }
+            },
+            datasets = input$datasets
+          )
         data
       })
     })
