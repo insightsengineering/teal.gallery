@@ -5592,12 +5592,8 @@
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "mmrm",
-      "RemoteUsername": "openpharma",
-      "RemotePkgRef": "openpharma/mmrm",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "f381467f6940b88d04bd7e51f15f08e349bf5e1b",
-      "Author": "Daniel Sabanes Bove [aut, cre] (<https://orcid.org/0000-0002-0176-9239>), Liming Li [aut] (<https://orcid.org/0009-0008-6870-0878>), Julia Dedic [aut], Doug Kelkhoff [aut], Kevin Kunzmann [aut], Brian Matthew Lang [aut], Christian Stock [aut], Ya Wang [aut], Craig Gower-Page [ctb], Dan James [aut], Jonathan Sidi [aut], Daniel Leibovitz [aut], Daniel D. Sjoberg [aut] (<https://orcid.org/0000-0003-0862-2018>), Nikolas Ivan Krieger [aut] (<https://orcid.org/0000-0002-4581-3545>), Lukas A. Widmer [ctb] (<https://orcid.org/0000-0003-1471-3493>), Boehringer Ingelheim Ltd. [cph, fnd], Gilead Sciences, Inc. [cph, fnd], F. Hoffmann-La Roche AG [cph, fnd], Merck Sharp & Dohme, Inc. [cph, fnd], AstraZeneca plc [cph, fnd], inferential.biostatistics GmbH [cph, fnd]",
-      "Maintainer": "Daniel Sabanes Bove <daniel.sabanes_bove@rconis.com>"
+      "RemoteRef": "v0.3.16",
+      "RemoteSha": "f381467f6940b88d04bd7e51f15f08e349bf5e1b"
     },
     "modelr": {
       "Package": "modelr",
@@ -6573,11 +6569,11 @@
     },
     "proxy": {
       "Package": "proxy",
-      "Version": "0.4-27",
+      "Version": "0.4-28",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Distance and Similarity Measures",
-      "Authors@R": "c(person(given = \"David\", family = \"Meyer\", role = c(\"aut\", \"cre\"), email = \"David.Meyer@R-project.org\"), person(given = \"Christian\", family = \"Buchta\", role = \"aut\"))",
+      "Authors@R": "c(person(given = \"David\", family = \"Meyer\", role = c(\"aut\", \"cre\"), email = \"David.Meyer@R-project.org\", comment = c(ORCID = \"0000-0002-5196-3048\")),\t     person(given = \"Christian\", family = \"Buchta\", role = \"aut\"))",
       "Description": "Provides an extensible framework for the efficient calculation of auto- and cross-proximities, along with implementations of the most popular ones.",
       "Depends": [
         "R (>= 3.4.0)"
@@ -6590,9 +6586,9 @@
         "cba"
       ],
       "Collate": "registry.R database.R dist.R similarities.R dissimilarities.R util.R seal.R",
-      "License": "GPL-2",
+      "License": "GPL-2 | GPL-3",
       "NeedsCompilation": "yes",
-      "Author": "David Meyer [aut, cre], Christian Buchta [aut]",
+      "Author": "David Meyer [aut, cre] (ORCID: <https://orcid.org/0000-0002-5196-3048>), Christian Buchta [aut]",
       "Maintainer": "David Meyer <David.Meyer@R-project.org>",
       "Repository": "CRAN"
     },
