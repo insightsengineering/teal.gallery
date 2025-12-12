@@ -152,20 +152,22 @@ jobs:
           unreleased_packages <- c(
             "osprey", "hermes", "goshawk", "teal.osprey", "teal.modules.hermes", "teal.goshawk"
           )
-          for (package in lockfile$Packages) {
-              if (package$Source == "GitHub") {
-                cli::cli_h3("'{package$Package}' from GitHub source")
-                pkg_ref <- sprintf(pkg_name_structure, package$RemoteUsername, package$Package)
-                pkg_extra <- "released"
-                if (package$Package %in% unreleased_packages) { # exceptions
-                  pkg_ref <- sprintf("%s/%s", package$RemoteUsername, package$Package)
-                  pkg_extra <- "unreleased"
-                }
-                cli::cli_alert_info("Recording '{package$Package}' ({pkg_extra}) with reference: '{pkg_ref}'")
-                renv::record(pkg_ref)
+          recorded_packages <- vapply(lockfile$Packages, function(package) {
+            if (package$Source == "GitHub") {
+              cli::cli_h3("'{package$Package}' from GitHub source")
+              pkg_ref <- sprintf(pkg_name_structure, package$RemoteUsername, package$Package)
+              pkg_extra <- "released"
+              if (package$Package %in% unreleased_packages) { # exceptions
+                pkg_ref <- sprintf("%s/%s", package$RemoteUsername, package$Package)
+                pkg_extra <- "unreleased"
               }
-          }
-
+              cli::cli_alert_info("Recording '{package$Package}' ({pkg_extra}) with reference: '{pkg_ref}'")
+              pkg_ref
+            } else {
+              NA_character_
+            }
+          }, character(1L), USE.NAMES = FALSE)
+          renv::record(recorded_packages[!is.na(recorded_packages)])
       - name: Install R packages using renv and update the renv snapshot
         shell: Rscript {0}
         working-directory: ${{ matrix.directory }}
