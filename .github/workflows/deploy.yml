@@ -137,7 +137,7 @@ jobs:
           key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/renv.lock', matrix.directory)) }}
           restore-keys: ${{ env.CACHE_KEY }}-
 
-      - name: Install required R packages for this action
+      - name: Install required R packages
         shell: Rscript {0}
         run: |
           install.packages(c("pak", "cli"))
