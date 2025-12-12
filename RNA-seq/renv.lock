@@ -802,7 +802,8 @@
       "NeedsCompilation": "no",
       "Author": "Achim Zeileis [aut, cre] (<https://orcid.org/0000-0003-0918-3766>), Yves Croissant [aut]",
       "Maintainer": "Achim Zeileis <Achim.Zeileis@R-project.org>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "GenomeInfoDb": {
       "Package": "GenomeInfoDb",
@@ -1359,7 +1360,8 @@
       "URL": "https://github.com/HenrikBengtsson/R.methodsS3",
       "BugReports": "https://github.com/HenrikBengtsson/R.methodsS3/issues",
       "NeedsCompilation": "no",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "R.oo": {
       "Package": "R.oo",
@@ -1459,7 +1461,8 @@
       "Description": "Provides color schemes for maps (and other graphics) designed by Cynthia Brewer as described at http://colorbrewer2.org.",
       "License": "Apache License 2.0",
       "NeedsCompilation": "no",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "RSQLite": {
       "Package": "RSQLite",
@@ -1619,7 +1622,8 @@
       "NeedsCompilation": "yes",
       "Author": "Doug Bates [aut] (<https://orcid.org/0000-0001-8316-9503>), Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>), Romain Francois [aut] (<https://orcid.org/0000-0002-2444-4226>), Yixuan Qiu [aut] (<https://orcid.org/0000-0003-0109-6692>), Authors of Eigen [cph] (Authorship and copyright in included Eigen library as detailed in inst/COPYRIGHTS)",
       "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "Rdpack": {
       "Package": "Rdpack",
@@ -1653,7 +1657,8 @@
       "NeedsCompilation": "no",
       "Author": "Georgi N. Boshnakov [aut, cre] (<https://orcid.org/0000-0003-2839-346X>), Duncan Murdoch [ctb]",
       "Maintainer": "Georgi N. Boshnakov <georgi.boshnakov@manchester.ac.uk>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "S4Arrays": {
       "Package": "S4Arrays",
@@ -1863,7 +1868,8 @@
       "URL": "http://www.econ.uiuc.edu/~roger/research/sparse/sparse.html",
       "NeedsCompilation": "yes",
       "Author": "Roger Koenker [cre, aut], Pin Tian Ng [ctb] (Contributions to Sparse QR code), Yousef Saad [ctb] (author of sparskit2), Ben Shaby [ctb] (author of chol2csr), Martin Maechler [ctb] (chol() tweaks; S4, <https://orcid.org/0000-0002-8685-9910>)",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "SummarizedExperiment": {
       "Package": "SummarizedExperiment",
@@ -2133,7 +2139,8 @@
       "License": "MIT + file LICENSE",
       "NeedsCompilation": "no",
       "Author": "Tony Plate [aut, cre], Richard Heiberger [aut]",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "askpass": {
       "Package": "askpass",
@@ -2180,7 +2187,8 @@
       "NeedsCompilation": "no",
       "Author": "Hadley Wickham [aut, cre]",
       "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "backports": {
       "Package": "backports",
@@ -2221,7 +2229,8 @@
       "License": "GPL-2 | GPL-3",
       "URL": "http://www.rforge.net/base64enc",
       "NeedsCompilation": "yes",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "bigD": {
       "Package": "bigD",
@@ -2762,7 +2771,8 @@
       "NeedsCompilation": "no",
       "Author": "John Fox [aut, cre], Sanford Weisberg [aut], Brad Price [aut], Daniel Adler [ctb], Douglas Bates [ctb], Gabriel Baud-Bovy [ctb], Ben Bolker [ctb], Steve Ellison [ctb], David Firth [ctb], Michael Friendly [ctb], Gregor Gorjanc [ctb], Spencer Graves [ctb], Richard Heiberger [ctb], Pavel Krivitsky [ctb], Rafael Laboissiere [ctb], Martin Maechler [ctb], Georges Monette [ctb], Duncan Murdoch [ctb], Henric Nilsson [ctb], Derek Ogle [ctb], Brian Ripley [ctb], Tom Short [ctb], William Venables [ctb], Steve Walker [ctb], David Winsemius [ctb], Achim Zeileis [ctb], R-Core [ctb]",
       "Maintainer": "John Fox <jfox@mcmaster.ca>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "carData": {
       "Package": "carData",
@@ -2784,11 +2794,12 @@
       "URL": "https://r-forge.r-project.org/projects/car/, https://CRAN.R-project.org/package=carData, https://socialsciences.mcmaster.ca/jfox/Books/Companion/index.html",
       "Author": "John Fox [aut, cre], Sanford Weisberg [aut], Brad Price [aut]",
       "Maintainer": "John Fox <jfox@mcmaster.ca>",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Repository/R-Forge/Project": "car",
       "Repository/R-Forge/Revision": "694",
       "Repository/R-Forge/DateTimeStamp": "2022-01-05 19:40:37",
-      "NeedsCompilation": "no"
+      "NeedsCompilation": "no",
+      "Encoding": "UTF-8"
     },
     "cards": {
       "Package": "cards",
@@ -3110,7 +3121,8 @@
       "URL": "https://gitlab.com/luke-tierney/codetools",
       "License": "GPL",
       "NeedsCompilation": "no",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "colorspace": {
       "Package": "colorspace",
@@ -3899,7 +3911,8 @@
       "NeedsCompilation": "no",
       "Author": "Russell Lenth [aut, cre, cph]",
       "Maintainer": "Russell Lenth <russell-lenth@uiowa.edu>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "evaluate": {
       "Package": "evaluate",
@@ -4247,7 +4260,8 @@
       "NeedsCompilation": "no",
       "Author": "Folashade Daniel [cre], Hong Ooi [ctb], Rich Calaway [ctb], Microsoft [aut, cph], Steve Weston [aut]",
       "Maintainer": "Folashade Daniel <fdaniel@microsoft.com>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "forecast": {
       "Package": "forecast",
@@ -4379,7 +4393,7 @@
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.3",
       "Collate": "'data.R' 'format_value.R' 'matrix_form.R' 'generics.R' 'labels.R' 'mpf_exporters.R' 'package.R' 'page_size.R' 'pagination.R' 'tostring.R' 'utils.R' 'zzz.R'",
-      "Author": "Gabriel Becker [aut] (original creator of the package), Adrian Waddell [aut], Davide Garolini [aut] (<https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (<https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [ctb] (<https://orcid.org/0009-0005-2083-1105>), Joe Zhu [aut, cre] (<https://orcid.org/0000-0001-7566-2787>), F. Hoffmann-La Roche AG [cph, fnd]",
+      "Author": "Gabriel Becker [aut] (original creator of the package), Adrian Waddell [aut], Davide Garolini [aut] (ORCID: <https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (ORCID: <https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [ctb] (ORCID: <https://orcid.org/0009-0005-2083-1105>), Joe Zhu [aut, cre] (ORCID: <https://orcid.org/0000-0001-7566-2787>), F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Joe Zhu <joe.zhu@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
@@ -4985,7 +4999,8 @@
       "NeedsCompilation": "yes",
       "Author": "Julian Faraway [aut], George Marsaglia [aut], John Marsaglia [aut], Adrian Baddeley [aut, cre]",
       "Maintainer": "Adrian Baddeley <Adrian.Baddeley@curtin.edu.au>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -5015,7 +5030,8 @@
       "NeedsCompilation": "no",
       "Author": "Baptiste Auguie [aut, cre], Anton Antonov [ctb]",
       "Maintainer": "Baptiste Auguie <baptiste.auguie@gmail.com>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "gt": {
       "Package": "gt",
@@ -5619,7 +5635,8 @@
       "NeedsCompilation": "no",
       "Author": "Folashade Daniel [cre], Revolution Analytics [aut, cph], Steve Weston [aut]",
       "Maintainer": "Folashade Daniel <fdaniel@microsoft.com>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "jquerylib": {
       "Package": "jquerylib",
@@ -5801,7 +5818,8 @@
         "stats",
         "graphics"
       ],
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "lambda.r": {
       "Package": "lambda.r",
@@ -5899,7 +5917,8 @@
       "NeedsCompilation": "yes",
       "Author": "Deepayan Sarkar [aut, cre] (<https://orcid.org/0000-0003-4107-1553>), Felix Andrews [ctb], Kevin Wright [ctb] (documentation), Neil Klepeis [ctb], Johan Larsson [ctb] (miscellaneous improvements), Zhijian (Jason) Wen [cph] (filled contour code), Paul Murrell [ctb], Stefan Eng [ctb] (violin plot improvements), Achim Zeileis [ctb] (modern colors), Alexandre Courtiol [ctb] (generics for larrows, lpolygon, lrect and lsegments)",
       "Maintainer": "Deepayan Sarkar <deepayan.sarkar@r-project.org>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "lazyeval": {
       "Package": "lazyeval",
@@ -5924,7 +5943,8 @@
       "NeedsCompilation": "yes",
       "Author": "Hadley Wickham [aut, cre], RStudio [cph]",
       "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "learnr": {
       "Package": "learnr",
@@ -6190,7 +6210,8 @@
       "NeedsCompilation": "no",
       "Author": "Pierre Legendre [aut], Jari Oksanen [cre]",
       "Maintainer": "Jari Oksanen <jhoksane@gmail.com>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "lmtest": {
       "Package": "lmtest",
@@ -6381,7 +6402,7 @@
       "NeedsCompilation": "yes",
       "Author": "Stefan Milton Bache [aut, cph] (Original author and creator of magrittr), Hadley Wickham [aut], Lionel Henry [cre], Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
       "Maintainer": "Lionel Henry <lionel@posit.co>",
-      "Repository": "CRAN"
+      "Repository": "https://packagemanager.posit.co/cran/__linux__/jammy/latest"
     },
     "markdown": {
       "Package": "markdown",
@@ -6536,7 +6557,8 @@
       "NeedsCompilation": "yes",
       "Author": "Olaf Mersmann [aut], Claudia Beleites [ctb], Rainer Hurling [ctb], Ari Friedman [ctb], Joshua M. Ulrich [cre]",
       "Maintainer": "Joshua M. Ulrich <josh.m.ulrich@gmail.com>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "mime": {
       "Package": "mime",
@@ -6601,8 +6623,9 @@
       ],
       "SystemRequirements": "GNU make",
       "NeedsCompilation": "yes",
-      "Repository": "CRAN",
-      "Author": "Douglas Bates [aut], Katharine M. Mullen [aut, cre], John C. Nash [aut], Ravi Varadhan [aut]"
+      "Repository": "RSPM",
+      "Author": "Douglas Bates [aut], Katharine M. Mullen [aut, cre], John C. Nash [aut], Ravi Varadhan [aut]",
+      "Encoding": "UTF-8"
     },
     "mixtools": {
       "Package": "mixtools",
@@ -6739,7 +6762,8 @@
       ],
       "RoxygenNote": "7.2.3",
       "NeedsCompilation": "no",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "mvtnorm": {
       "Package": "mvtnorm",
@@ -6764,7 +6788,8 @@
       "NeedsCompilation": "yes",
       "Author": "Alan Genz [aut], Frank Bretz [aut], Tetsuhisa Miwa [aut], Xuefei Mi [aut], Friedrich Leisch [ctb], Fabian Scheipl [ctb], Bjoern Bornkamp [ctb] (<https://orcid.org/0000-0002-6294-8185>), Martin Maechler [ctb] (<https://orcid.org/0000-0002-8685-9910>), Torsten Hothorn [aut, cre] (<https://orcid.org/0000-0001-8301-0471>)",
       "Maintainer": "Torsten Hothorn <Torsten.Hothorn@R-project.org>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "nestcolor": {
       "Package": "nestcolor",
@@ -6800,7 +6825,7 @@
       "LazyData": "true",
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.2",
-      "Author": "Joe Zhu [aut, cre] (<https://orcid.org/0000-0001-7566-2787>), Emily de la Rua [aut], F. Hoffmann-La Roche AG [cph, fnd]",
+      "Author": "Joe Zhu [aut, cre] (ORCID: <https://orcid.org/0000-0001-7566-2787>), Emily de la Rua [aut], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Joe Zhu <joe.zhu@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
@@ -6929,7 +6954,8 @@
       "Maintainer": "Paul Gilbert <pgilbert.ttv9z@ncf.ca>",
       "URL": "http://optimizer.r-forge.r-project.org/",
       "NeedsCompilation": "no",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "officer": {
       "Package": "officer",
@@ -7044,7 +7070,7 @@
       "NeedsCompilation": "no",
       "Author": "Gábor Csárdi [aut, cre]",
       "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
-      "Repository": "CRAN"
+      "Repository": "https://packagemanager.posit.co/cran/__linux__/jammy/2025-10-29"
     },
     "pbkrtest": {
       "Package": "pbkrtest",
@@ -7337,7 +7363,8 @@
         "rmarkdown"
       ],
       "VignetteBuilder": "knitr",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "prettyunits": {
       "Package": "prettyunits",
@@ -7508,7 +7535,8 @@
       ],
       "License": "GPL (>= 2)",
       "NeedsCompilation": "yes",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "quantmod": {
       "Package": "quantmod",
@@ -7555,7 +7583,7 @@
       "Description": "Estimation and inference methods for models for conditional quantile functions:  Linear and nonlinear parametric and non-parametric (total variation penalized) models  for conditional quantiles of a univariate response and several methods for handling censored survival data.  Portfolio selection methods based on expected shortfall risk are also now included. See Koenker, R. (2005) Quantile Regression, Cambridge U. Press, <doi:10.1017/CBO9780511754098> and Koenker, R. et al. (2017) Handbook of Quantile Regression,  CRC Press, <doi:10.1201/9781315120256>.",
       "Authors@R": "c( person(\"Roger\", \"Koenker\",  role = c(\"cre\",\"aut\"), email =  \"rkoenker@illinois.edu\"), person(\"Stephen\", \"Portnoy\",  role = c(\"ctb\"),  comment = \"Contributions to Censored QR code\", email =  \"sportnoy@illinois.edu\"), person(c(\"Pin\", \"Tian\"), \"Ng\",  role = c(\"ctb\"),  comment = \"Contributions to Sparse QR code\", email =  \"pin.ng@nau.edu\"), person(\"Blaise\", \"Melly\",  role = c(\"ctb\"),  comment = \"Contributions to preprocessing code\", email =  \"mellyblaise@gmail.com\"), person(\"Achim\", \"Zeileis\",  role = c(\"ctb\"),  comment = \"Contributions to dynrq code essentially identical to his dynlm code\",  email =  \"Achim.Zeileis@uibk.ac.at\"), person(\"Philip\", \"Grosjean\",  role = c(\"ctb\"),  comment = \"Contributions to nlrq code\", email =  \"phgrosjean@sciviews.org\"), person(\"Cleve\", \"Moler\",  role = c(\"ctb\"),  comment = \"author of several linpack routines\"), person(\"Yousef\", \"Saad\",  role = c(\"ctb\"),  comment = \"author of sparskit2\"), person(\"Victor\", \"Chernozhukov\",  role = c(\"ctb\"),  comment = \"contributions to extreme value inference code\"), person(\"Ivan\", \"Fernandez-Val\",  role = c(\"ctb\"),  comment = \"contributions to extreme value inference code\"), person(\"Martin\", \"Maechler\", role = \"ctb\", comment = c(\"tweaks (src/chlfct.f, 'tiny','Large')\", ORCID = \"0000-0002-8685-9910\")), person(c(\"Brian\", \"D\"), \"Ripley\",  role = c(\"trl\",\"ctb\"),  comment = \"Initial (2001) R port from S (to my everlasting shame --  how could I have been so slow to adopt R!) and for numerous other  suggestions and useful advice\", email =  \"ripley@stats.ox.ac.uk\"))",
       "Maintainer": "Roger Koenker <rkoenker@illinois.edu>",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Depends": [
         "R (>= 3.5)",
         "stats",
@@ -7583,7 +7611,8 @@
       "URL": "https://www.r-project.org",
       "NeedsCompilation": "yes",
       "VignetteBuilder": "R.rsp",
-      "Author": "Roger Koenker [cre, aut], Stephen Portnoy [ctb] (Contributions to Censored QR code), Pin Tian Ng [ctb] (Contributions to Sparse QR code), Blaise Melly [ctb] (Contributions to preprocessing code), Achim Zeileis [ctb] (Contributions to dynrq code essentially identical to his dynlm code), Philip Grosjean [ctb] (Contributions to nlrq code), Cleve Moler [ctb] (author of several linpack routines), Yousef Saad [ctb] (author of sparskit2), Victor Chernozhukov [ctb] (contributions to extreme value inference code), Ivan Fernandez-Val [ctb] (contributions to extreme value inference code), Martin Maechler [ctb] (tweaks (src/chlfct.f, 'tiny','Large'), <https://orcid.org/0000-0002-8685-9910>), Brian D Ripley [trl, ctb] (Initial (2001) R port from S (to my everlasting shame -- how could I have been so slow to adopt R!) and for numerous other suggestions and useful advice)"
+      "Author": "Roger Koenker [cre, aut], Stephen Portnoy [ctb] (Contributions to Censored QR code), Pin Tian Ng [ctb] (Contributions to Sparse QR code), Blaise Melly [ctb] (Contributions to preprocessing code), Achim Zeileis [ctb] (Contributions to dynrq code essentially identical to his dynlm code), Philip Grosjean [ctb] (Contributions to nlrq code), Cleve Moler [ctb] (author of several linpack routines), Yousef Saad [ctb] (author of sparskit2), Victor Chernozhukov [ctb] (contributions to extreme value inference code), Ivan Fernandez-Val [ctb] (contributions to extreme value inference code), Martin Maechler [ctb] (tweaks (src/chlfct.f, 'tiny','Large'), <https://orcid.org/0000-0002-8685-9910>), Brian D Ripley [trl, ctb] (Initial (2001) R port from S (to my everlasting shame -- how could I have been so slow to adopt R!) and for numerous other suggestions and useful advice)",
+      "Encoding": "UTF-8"
     },
     "ragg": {
       "Package": "ragg",
@@ -8000,7 +8029,7 @@
       "Language": "en-US",
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.3",
-      "Author": "Gabriel Becker [aut] (original creator of the package), Adrian Waddell [aut], Joe Zhu [aut, cre] (<https://orcid.org/0000-0001-7566-2787>), Davide Garolini [aut] (<https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (<https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [ctb] (<https://orcid.org/0009-0005-2083-1105>), F. Hoffmann-La Roche AG [cph, fnd]",
+      "Author": "Gabriel Becker [aut] (original creator of the package), Adrian Waddell [aut], Joe Zhu [aut, cre] (ORCID: <https://orcid.org/0000-0001-7566-2787>), Davide Garolini [aut] (ORCID: <https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (ORCID: <https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [ctb] (ORCID: <https://orcid.org/0009-0005-2083-1105>), F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Joe Zhu <joe.zhu@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
@@ -8147,7 +8176,7 @@
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.3",
       "Collate": "'00tabletrees.R' 'Viewer.R' 'argument_conventions.R' 'as_html.R' 'utils.R' 'colby_constructors.R' 'compare_rtables.R' 'format_rcell.R' 'indent.R' 'make_subset_expr.R' 'custom_split_funs.R' 'default_split_funs.R' 'make_split_fun.R' 'summary.R' 'package.R' 'tree_accessors.R' 'tt_afun_utils.R' 'tt_as_df.R' 'tt_compare_tables.R' 'tt_compatibility.R' 'tt_dotabulation.R' 'tt_paginate.R' 'tt_pos_and_access.R' 'tt_showmethods.R' 'tt_sort.R' 'tt_test_afuns.R' 'tt_toString.R' 'tt_export.R' 'index_footnotes.R' 'tt_from_df.R' 'validate_table_struct.R' 'zzz_constants.R'",
-      "Author": "Gabriel Becker [aut] (Original creator of the package), Adrian Waddell [aut], Daniel Sabanés Bové [ctb], Maximilian Mordig [ctb], Davide Garolini [aut] (<https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (<https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [ctb] (<https://orcid.org/0009-0005-2083-1105>), Joe Zhu [aut, cre] (<https://orcid.org/0000-0001-7566-2787>), F. Hoffmann-La Roche AG [cph, fnd]",
+      "Author": "Gabriel Becker [aut] (Original creator of the package), Adrian Waddell [aut], Daniel Sabanés Bové [ctb], Maximilian Mordig [ctb], Davide Garolini [aut] (ORCID: <https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (ORCID: <https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [ctb] (ORCID: <https://orcid.org/0009-0005-2083-1105>), Joe Zhu [aut, cre] (ORCID: <https://orcid.org/0000-0001-7566-2787>), F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Joe Zhu <joe.zhu@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
@@ -8207,7 +8236,7 @@
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.3",
       "Collate": "'add_flextable_separators.R' 'as_flextable.R' 'export_as_docx.R' 'package.R' 'theme_defaults.R'",
-      "Author": "Gabriel Becker [ctb], Davide Garolini [aut] (<https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (<https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [aut] (<https://orcid.org/0009-0005-2083-1105>), Joe Zhu [aut, cre] (<https://orcid.org/0000-0001-7566-2787>), F. Hoffmann-La Roche AG [cph, fnd]",
+      "Author": "Gabriel Becker [ctb], Davide Garolini [aut] (ORCID: <https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (ORCID: <https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [aut] (ORCID: <https://orcid.org/0009-0005-2083-1105>), Joe Zhu [aut, cre] (ORCID: <https://orcid.org/0000-0001-7566-2787>), F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Joe Zhu <joe.zhu@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
@@ -8256,7 +8285,8 @@
       "NeedsCompilation": "no",
       "Author": "Achim Zeileis [aut, cre] (<https://orcid.org/0000-0003-0918-3766>), Thomas Lumley [aut] (<https://orcid.org/0000-0003-4255-5437>), Nathaniel Graham [ctb] (<https://orcid.org/0009-0002-1215-5256>), Susanne Koell [ctb]",
       "Maintainer": "Achim Zeileis <Achim.Zeileis@R-project.org>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "sass": {
       "Package": "sass",
@@ -8377,7 +8407,8 @@
       "Description": "Functions for plotting graphical shapes such as ellipses, circles, cylinders, arrows, ...",
       "License": "GPL (>= 3)",
       "NeedsCompilation": "no",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "shiny": {
       "Package": "shiny",
@@ -8785,7 +8816,8 @@
       "VignetteBuilder": "knitr",
       "NeedsCompilation": "no",
       "Author": "Ramnath Vaidyanathan [aut, cre], Kent Russell [aut, ctb], Gareth Watts [aut, cph] (jquery.sparkline library in htmlwidgets/lib, https://github.com/gwatts/jquery.sparkline), jQuery Foundation [cph] (jQuery library), jQuery contributors [ctb, cph] (jQuery library; authors listed in inst/htmlwidgets/lib/jquery/jquery-AUTHORS.txt)",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "splus2R": {
       "Package": "splus2R",
@@ -8807,7 +8839,8 @@
       "NeedsCompilation": "yes",
       "Author": "William Constantine [aut], Tim Hesterberg [aut], Knut Wittkowski [ctb], Tingting Song [ctb], Bill Dunlap [ctb], Stephen Kaluzny [ctb, cre]",
       "Maintainer": "Stephen Kaluzny <spkaluzny@gmail.com>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "statmod": {
       "Package": "statmod",
@@ -9124,7 +9157,7 @@
       "Roxygen": "list(markdown = TRUE, packages = c(\"roxy.shinylive\"))",
       "RoxygenNote": "7.3.3",
       "Collate": "'TealAppDriver.R' 'after.R' 'checkmate.R' 'dummy_functions.R' 'include_css_js.R' 'modules.R' 'init.R' 'module_bookmark_manager.R' 'module_data_summary.R' 'module_filter_data.R' 'module_filter_manager.R' 'module_init_data.R' 'module_nested_tabs.R' 'module_session_info.R' 'module_snapshot_manager.R' 'module_source_code.R' 'module_teal.R' 'module_teal_lockfile.R' 'module_teal_reporter.R' 'module_transform_data.R' 'module_validate_error.R' 'reporter_previewer_module.R' 'teal.R' 'teal_data_module.R' 'teal_data_module-eval_code.R' 'teal_data_module-within.R' 'teal_data_utils.R' 'teal_modifiers.R' 'teal_slices-store.R' 'teal_slices.R' 'teal_transform_module.R' 'utils.R' 'validate_inputs.R' 'validations.R' 'zzz.R'",
-      "Author": "Dawid Kaledkowski [aut, cre] (<https://orcid.org/0000-0001-9533-457X>), Pawel Rucki [aut], Aleksander Chlebowski [aut] (<https://orcid.org/0000-0001-5018-6294>), Andre Verissimo [aut] (<https://orcid.org/0000-0002-2212-339X>), Kartikeya Kirar [aut], Vedha Viyash [aut], Marcin Kosinski [aut], Adrian Waddell [aut], Dony Unardi [rev], Nina Qi [rev], Nikolas Burkoff [aut], Mahmoud Hallal [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], Tadeusz Lewandowski [aut], Chendi Liao [rev], F. Hoffmann-La Roche AG [cph, fnd], Maximilian Mordig [ctb]",
+      "Author": "Dawid Kaledkowski [aut, cre] (ORCID: <https://orcid.org/0000-0001-9533-457X>), Pawel Rucki [aut], Aleksander Chlebowski [aut] (ORCID: <https://orcid.org/0000-0001-5018-6294>), Andre Verissimo [aut] (ORCID: <https://orcid.org/0000-0002-2212-339X>), Kartikeya Kirar [aut], Vedha Viyash [aut], Marcin Kosinski [aut], Adrian Waddell [aut], Dony Unardi [rev], Nina Qi [rev], Nikolas Burkoff [aut], Mahmoud Hallal [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], Tadeusz Lewandowski [aut], Chendi Liao [rev], F. Hoffmann-La Roche AG [cph, fnd], Maximilian Mordig [ctb]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
@@ -9225,7 +9258,7 @@
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.2",
       "Collate": "'cdisc_data.R' 'data.R' 'formatters_var_labels.R' 'deprecated.R' 'dummy_function.R' 'join_key.R' 'join_keys-c.R' 'join_keys-extract.R' 'join_keys-names.R' 'join_keys-parents.R' 'join_keys-print.R' 'join_keys-utils.R' 'join_keys.R' 'teal.data.R' 'teal_data-class.R' 'teal_data-constructor.R' 'teal_data-extract.R' 'teal_data-get_code.R' 'teal_data-names.R' 'teal_data-show.R' 'topological_sort.R' 'verify.R' 'zzz.R'",
-      "Author": "Dawid Kaledkowski [aut, cre] (<https://orcid.org/0000-0001-9533-457X>), Aleksander Chlebowski [aut] (<https://orcid.org/0000-0001-5018-6294>), Marcin Kosinski [aut], Andre Verissimo [aut] (<https://orcid.org/0000-0002-2212-339X>), Pawel Rucki [aut], Mahmoud Hallal [aut], Nikolas Burkoff [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], Chendi Liao [rev], Dony Unardi [rev], F. Hoffmann-La Roche AG [cph, fnd]",
+      "Author": "Dawid Kaledkowski [aut, cre] (ORCID: <https://orcid.org/0000-0001-9533-457X>), Aleksander Chlebowski [aut] (ORCID: <https://orcid.org/0000-0001-5018-6294>), Marcin Kosinski [aut], Andre Verissimo [aut] (ORCID: <https://orcid.org/0000-0002-2212-339X>), Pawel Rucki [aut], Mahmoud Hallal [aut], Nikolas Burkoff [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], Chendi Liao [rev], Dony Unardi [rev], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
@@ -9280,11 +9313,11 @@
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.5.1.9019",
+      "Version": "0.6.0.9001",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "General Modules for 'teal' Applications",
-      "Date": "2025-12-03",
+      "Date": "2025-12-12",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = c(\"aut\", \"cre\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Ondrej\", \"Slama\", , \"ondrej.slama@roche.com\", role = \"ctb\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for viewing data, visualizing data, understanding missing and outlier values within your data and performing simple data analysis.  This extends 'teal' framework that supports reproducible research and analysis.",
       "License": "Apache License 2.0",
@@ -9294,7 +9327,7 @@
         "ggplot2 (>= 3.5.0)",
         "R (>= 4.1)",
         "shiny (>= 1.8.1)",
-        "teal (>= 1.0.0.9003)",
+        "teal (>= 1.1.0)",
         "teal.transform (>= 0.7.0)"
       ],
       "Imports": [
@@ -9330,7 +9363,7 @@
         "teal.code (>= 0.7.0)",
         "teal.data (>= 0.8.0)",
         "teal.logger (>= 0.4.0)",
-        "teal.reporter (>= 0.5.0.9001)",
+        "teal.reporter (>= 0.6.0)",
         "teal.widgets (>= 0.5.0)",
         "tern (>= 0.9.7)",
         "tibble (>= 2.0.0)",
@@ -9365,8 +9398,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.modules.general",
       "RemoteRef": "main",
-      "RemoteSha": "fa652ba82994bc596ed17ffbaddd86c290527c16",
-      "Remotes": "insightsengineering/teal, insightsengineering/teal.reporter"
+      "RemoteSha": "6604ddefaae0f85577fa6065d65b4bd23f41afa6"
     },
     "teal.modules.hermes": {
       "Package": "teal.modules.hermes",
@@ -9506,7 +9538,7 @@
       "LazyData": "true",
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.3",
-      "Author": "Dawid Kaledkowski [aut, cre] (<https://orcid.org/0000-0001-9533-457X>), Kartikeya Kirar [aut] (<https://orcid.org/0009-0005-1258-4757>), Marcin Kosinski [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Mahmoud Hallal [aut], Chendi Liao [rev], Dony Unardi [rev], F. Hoffmann-La Roche AG [cph, fnd]",
+      "Author": "Dawid Kaledkowski [aut, cre] (ORCID: <https://orcid.org/0000-0001-9533-457X>), Kartikeya Kirar [aut] (ORCID: <https://orcid.org/0009-0005-1258-4757>), Marcin Kosinski [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Mahmoud Hallal [aut], Chendi Liao [rev], Dony Unardi [rev], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
@@ -9571,7 +9603,7 @@
       "LazyData": "true",
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.3",
-      "Author": "Dawid Kaledkowski [aut, cre] (<https://orcid.org/0000-0001-9533-457X>), Pawel Rucki [aut], Aleksander Chlebowski [aut] (<https://orcid.org/0000-0001-5018-6294>), Andre Verissimo [aut] (<https://orcid.org/0000-0002-2212-339X>), Kartikeya Kirar [aut], Marcin Kosinski [aut], Chendi Liao [rev], Dony Unardi [rev], Andrew Bates [aut], Mahmoud Hallal [aut], Nikolas Burkoff [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], F. Hoffmann-La Roche AG [cph, fnd]",
+      "Author": "Dawid Kaledkowski [aut, cre] (ORCID: <https://orcid.org/0000-0001-9533-457X>), Pawel Rucki [aut], Aleksander Chlebowski [aut] (ORCID: <https://orcid.org/0000-0001-5018-6294>), Andre Verissimo [aut] (ORCID: <https://orcid.org/0000-0002-2212-339X>), Kartikeya Kirar [aut], Marcin Kosinski [aut], Chendi Liao [rev], Dony Unardi [rev], Andrew Bates [aut], Mahmoud Hallal [aut], Nikolas Burkoff [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
@@ -9762,7 +9794,7 @@
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.3",
       "Collate": "'formatting_functions.R' 'abnormal.R' 'abnormal_by_baseline.R' 'abnormal_by_marked.R' 'abnormal_by_worst_grade.R' 'abnormal_lab_worsen_by_baseline.R' 'analyze_colvars_functions.R' 'analyze_functions.R' 'analyze_variables.R' 'analyze_vars_in_cols.R' 'argument_convention.R' 'bland_altman.R' 'combination_function.R' 'compare_variables.R' 'control_incidence_rate.R' 'control_logistic.R' 'control_step.R' 'control_survival.R' 'count_cumulative.R' 'count_missed_doses.R' 'count_occurrences.R' 'count_occurrences_by_grade.R' 'count_patients_events_in_cols.R' 'count_patients_with_event.R' 'count_patients_with_flags.R' 'count_values.R' 'cox_regression.R' 'cox_regression_inter.R' 'coxph.R' 'd_pkparam.R' 'data.R' 'decorate_grob.R' 'desctools_binom_diff.R' 'df_explicit_na.R' 'estimate_multinomial_rsp.R' 'estimate_proportion.R' 'fit_rsp_step.R' 'fit_survival_step.R' 'g_forest.R' 'g_ipp.R' 'g_km.R' 'g_lineplot.R' 'g_step.R' 'g_waterfall.R' 'h_adsl_adlb_merge_using_worst_flag.R' 'h_biomarkers_subgroups.R' 'h_cox_regression.R' 'h_incidence_rate.R' 'h_km.R' 'h_logistic_regression.R' 'h_map_for_count_abnormal.R' 'h_pkparam_sort.R' 'h_response_biomarkers_subgroups.R' 'h_response_subgroups.R' 'h_stack_by_baskets.R' 'h_step.R' 'h_survival_biomarkers_subgroups.R' 'h_survival_duration_subgroups.R' 'imputation_rule.R' 'incidence_rate.R' 'logistic_regression.R' 'missing_data.R' 'odds_ratio.R' 'package.R' 'prop_diff.R' 'prop_diff_test.R' 'prune_occurrences.R' 'response_biomarkers_subgroups.R' 'response_subgroups.R' 'riskdiff.R' 'rtables_access.R' 'score_occurrences.R' 'split_cols_by_groups.R' 'stat.R' 'summarize_ancova.R' 'summarize_change.R' 'summarize_colvars.R' 'summarize_coxreg.R' 'summarize_functions.R' 'summarize_glm_count.R' 'summarize_num_patients.R' 'summarize_patients_exposure_in_cols.R' 'survival_biomarkers_subgroups.R' 'survival_coxph_pairwise.R' 'survival_duration_subgroups.R' 'survival_time.R' 'survival_timepoint.R' 'utils.R' 'utils_checkmate.R' 'utils_default_stats_formats_labels.R' 'utils_factor.R' 'utils_ggplot.R' 'utils_grid.R' 'utils_rtables.R' 'utils_split_funs.R'",
-      "Author": "Joe Zhu [aut, cre] (<https://orcid.org/0000-0001-7566-2787>), Daniel Sabanés Bové [aut], Jana Stoilova [aut], Davide Garolini [aut] (<https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (<https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [aut] (<https://orcid.org/0009-0005-2083-1105>), Heng Wang [aut], Francois Collin [aut], Adrian Waddell [aut], Pawel Rucki [aut], Chendi Liao [aut], Jennifer Li [aut], F. Hoffmann-La Roche AG [cph, fnd]",
+      "Author": "Joe Zhu [aut, cre] (ORCID: <https://orcid.org/0000-0001-7566-2787>), Daniel Sabanés Bové [aut], Jana Stoilova [aut], Davide Garolini [aut] (ORCID: <https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (ORCID: <https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [aut] (ORCID: <https://orcid.org/0009-0005-2083-1105>), Heng Wang [aut], Francois Collin [aut], Adrian Waddell [aut], Pawel Rucki [aut], Chendi Liao [aut], Jennifer Li [aut], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Joe Zhu <joe.zhu@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
@@ -10149,7 +10181,8 @@
       "URL": "https://www.rforge.net/uuid",
       "BugReports": "https://github.com/s-u/uuid/issues",
       "NeedsCompilation": "yes",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "vctrs": {
       "Package": "vctrs",
@@ -10377,9 +10410,10 @@
         "R (>= 2.10.0)"
       ],
       "License": "GPL (>= 2)",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "NeedsCompilation": "no",
-      "Author": "David B. Dahl [aut], David Scott [aut, cre], Charles Roosen [aut], Arni Magnusson [aut], Jonathan Swinton [aut], Ajay Shah [ctb], Arne Henningsen [ctb], Benno Puetz [ctb], Bernhard Pfaff [ctb], Claudio Agostinelli [ctb], Claudius Loehnert [ctb], David Mitchell [ctb], David Whiting [ctb], Fernando da Rosa [ctb], Guido Gay [ctb], Guido Schulz [ctb], Ian Fellows [ctb], Jeff Laake [ctb], John Walker [ctb], Jun Yan [ctb], Liviu Andronic [ctb], Markus Loecher [ctb], Martin Gubri [ctb], Matthieu Stigler [ctb], Robert Castelo [ctb], Seth Falcon [ctb], Stefan Edwards [ctb], Sven Garbade [ctb], Uwe Ligges [ctb]"
+      "Author": "David B. Dahl [aut], David Scott [aut, cre], Charles Roosen [aut], Arni Magnusson [aut], Jonathan Swinton [aut], Ajay Shah [ctb], Arne Henningsen [ctb], Benno Puetz [ctb], Bernhard Pfaff [ctb], Claudio Agostinelli [ctb], Claudius Loehnert [ctb], David Mitchell [ctb], David Whiting [ctb], Fernando da Rosa [ctb], Guido Gay [ctb], Guido Schulz [ctb], Ian Fellows [ctb], Jeff Laake [ctb], John Walker [ctb], Jun Yan [ctb], Liviu Andronic [ctb], Markus Loecher [ctb], Martin Gubri [ctb], Matthieu Stigler [ctb], Robert Castelo [ctb], Seth Falcon [ctb], Stefan Edwards [ctb], Sven Garbade [ctb], Uwe Ligges [ctb]",
+      "Encoding": "UTF-8"
     },
     "xts": {
       "Package": "xts",
