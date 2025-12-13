@@ -6862,7 +6862,7 @@
       "RemoteUsername": "insightsengineering",
       "RemotePkgRef": "insightsengineering/teal.modules.general@*release",
       "RemoteRef": "HEAD",
-      "RemoteSha": "934c296993267fa9f7323c9cc4196fc23ca844e0",
+      "RemoteSha": "3976fc5c8dc5861219aee4a1eccc4b7246db0a62",
       "NeedsCompilation": "no",
       "Author": "Dawid Kaledkowski [aut, cre], Pawel Rucki [aut], Mahmoud Hallal [aut], Ondrej Slama [ctb], Maciej Nasinski [aut], Konrad Pagacz [aut], Nikolas Burkoff [aut], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>"
@@ -7060,7 +7060,7 @@
       "RemoteUsername": "insightsengineering",
       "RemotePkgRef": "insightsengineering/teal.transform@*release",
       "RemoteRef": "HEAD",
-      "RemoteSha": "857687cb12b6c1e2cad8eae0847f1963bbf67058",
+      "RemoteSha": "31f20bde25b3f78a06cf9684ec99e67897145986",
       "NeedsCompilation": "no",
       "Author": "Dawid Kaledkowski [aut, cre], Pawel Rucki [aut], Mahmoud Hallal [aut], Nikolas Burkoff [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>"
