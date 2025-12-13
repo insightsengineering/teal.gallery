@@ -8572,7 +8572,7 @@
       "RemoteUsername": "insightsengineering",
       "RemotePkgRef": "insightsengineering/teal.modules.clinical@*release",
       "RemoteRef": "HEAD",
-      "RemoteSha": "fcde0ec33dd1723e440ef703e67e7f5cdf534b23",
+      "RemoteSha": "fb2dbd4cb75958ed717463b64ad09db4bebb4fcd",
       "NeedsCompilation": "no",
       "Author": "Joe Zhu [aut] (<https://orcid.org/0000-0001-7566-2787>), Jana Stoilova [aut], Davide Garolini [aut], Emily de la Rua [aut], Abinaya Yogasekaram [aut], Mahmoud Hallal [aut], Dawid Kaledkowski [aut, cre], Rosemary Li [aut], Heng Wang [aut], Pawel Rucki [aut], Nikolas Burkoff [aut], Konrad Pagacz [aut], Vaakesan Sundrelingam [ctb], Francois Collin [ctb], Imanol Zubizarreta [ctb], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>"
@@ -8662,7 +8662,7 @@
       "RemoteUsername": "insightsengineering",
       "RemotePkgRef": "insightsengineering/teal.modules.general@*release",
       "RemoteRef": "HEAD",
-      "RemoteSha": "934c296993267fa9f7323c9cc4196fc23ca844e0",
+      "RemoteSha": "3976fc5c8dc5861219aee4a1eccc4b7246db0a62",
       "NeedsCompilation": "no",
       "Author": "Dawid Kaledkowski [aut, cre], Pawel Rucki [aut], Mahmoud Hallal [aut], Ondrej Slama [ctb], Maciej Nasinski [aut], Konrad Pagacz [aut], Nikolas Burkoff [aut], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>"
@@ -8920,7 +8920,7 @@
       "RemoteUsername": "insightsengineering",
       "RemotePkgRef": "insightsengineering/teal.transform@*release",
       "RemoteRef": "HEAD",
-      "RemoteSha": "857687cb12b6c1e2cad8eae0847f1963bbf67058",
+      "RemoteSha": "31f20bde25b3f78a06cf9684ec99e67897145986",
       "NeedsCompilation": "no",
       "Author": "Dawid Kaledkowski [aut, cre], Pawel Rucki [aut], Mahmoud Hallal [aut], Nikolas Burkoff [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dawid Kaledkowski <dawid.kaledkowski@roche.com>"
