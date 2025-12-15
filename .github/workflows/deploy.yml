@@ -174,11 +174,13 @@ jobs:
         shell: Rscript {0}
         working-directory: ${{ matrix.directory }}
         run: |
-          lockfile_pkgs <- renv::lockfile_read()$Package
           github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
-          withr::with_envvar(
+          lockfile_pkgs <- withr::with_envvar(
             new = list(RENV_CONFIG_PAK_ENABLED = FALSE),
-            code = renv::restore(packages = "BiocManager")
+            code = {
+              renv::restore(packages = "BiocManager")
+              renv::lockfile_read()$Package
+            }
           )
           renv::restore(clean = TRUE)
           renv::update(exclude = github_pkgs)
