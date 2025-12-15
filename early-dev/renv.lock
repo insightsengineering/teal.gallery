@@ -807,11 +807,11 @@
     },
     "TMB": {
       "Package": "TMB",
-      "Version": "1.9.18",
+      "Version": "1.9.19",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Template Model Builder: A General Random Effect Tool Inspired by 'ADMB'",
-      "Date": "2025-10-13",
+      "Date": "2025-12-15",
       "Authors@R": "c(person(\"Kasper\",\"Kristensen\",role=c(\"aut\",\"cre\",\"cph\"),email=\"kaskr@dtu.dk\"), person(\"Brad\",\"Bell\",role=\"cph\"), person(\"Hans\",\"Skaug\",role=\"ctb\"), person(\"Arni\",\"Magnusson\",role=\"ctb\"), person(\"Casper\",\"Berg\",role=\"ctb\"), person(\"Anders\",\"Nielsen\",role=\"ctb\"), person(\"Martin\",\"Maechler\",role=\"ctb\"), person(\"Theo\",\"Michelot\",role=\"ctb\"), person(\"Mollie\",\"Brooks\",role=\"ctb\"), person(\"Alex\",\"Forrence\",role=\"ctb\"), person(\"Christoffer\",\"Moesgaard Albertsen\",role=\"ctb\"), person(\"Cole\",\"Monnahan\",role=\"ctb\") )",
       "Maintainer": "Kasper Kristensen <kaskr@dtu.dk>",
       "Author": "Kasper Kristensen [aut, cre, cph], Brad Bell [cph], Hans Skaug [ctb], Arni Magnusson [ctb], Casper Berg [ctb], Anders Nielsen [ctb], Martin Maechler [ctb], Theo Michelot [ctb], Mollie Brooks [ctb], Alex Forrence [ctb], Christoffer Moesgaard Albertsen [ctb], Cole Monnahan [ctb]",
@@ -8643,10 +8643,10 @@
     },
     "teal.osprey": {
       "Package": "teal.osprey",
-      "Version": "0.4.0.9001",
+      "Version": "0.4.0.9002",
       "Source": "GitHub",
       "Title": "'teal' Modules for TLG Functions in Osprey",
-      "Date": "2025-12-12",
+      "Date": "2025-12-15",
       "Authors@R": "c( person(\"Nina\", \"Qi\", , \"qit3@gene.com\", role = c(\"aut\", \"cre\")), person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"aut\"), person(\"Liming\", \"Li\", , \"liming.li@roche.com\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Molly\", \"He\", role = \"ctb\"), person(\"Carolyn\", \"Zhang\", role = \"ctb\"), person(\"Tina\", \"Cho\", role = \"ctb\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Community efforts to collect 'teal' modules for TLGs defined in 'osprey' package.  Enables 'teal' app developers to create 'shiny' applications with a use of 'osprey' analysis functions.",
       "License": "Apache License 2.0",
@@ -8696,7 +8696,7 @@
       "RemoteUsername": "insightsengineering",
       "RemotePkgRef": "insightsengineering/teal.osprey",
       "RemoteRef": "HEAD",
-      "RemoteSha": "4d364b28b35ee37e15e4888141d71d156869a496",
+      "RemoteSha": "d7877d50d9ec0fd11b660d1f5be0b9379dabfd92",
       "NeedsCompilation": "no",
       "Author": "Nina Qi [aut, cre], Dawid Kaledkowski [aut], Chendi Liao [aut], Liming Li [aut], Konrad Pagacz [aut], Molly He [ctb], Carolyn Zhang [ctb], Tina Cho [ctb], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Nina Qi <qit3@gene.com>"
@@ -10091,9 +10091,9 @@
     },
     "zoo": {
       "Package": "zoo",
-      "Version": "1.8-14",
+      "Version": "1.8-15",
       "Source": "Repository",
-      "Date": "2025-04-09",
+      "Date": "2025-12-15",
       "Title": "S3 Infrastructure for Regular and Irregular Time Series (Z's Ordered Observations)",
       "Authors@R": "c(person(given = \"Achim\", family = \"Zeileis\", role = c(\"aut\", \"cre\"), email = \"Achim.Zeileis@R-project.org\", comment = c(ORCID = \"0000-0003-0918-3766\")), person(given = \"Gabor\", family = \"Grothendieck\", role = \"aut\", email = \"ggrothendieck@gmail.com\"), person(given = c(\"Jeffrey\", \"A.\"), family = \"Ryan\", role = \"aut\", email = \"jeff.a.ryan@gmail.com\"), person(given = c(\"Joshua\", \"M.\"), family = \"Ulrich\", role = \"ctb\", email = \"josh.m.ulrich@gmail.com\"), person(given = \"Felix\", family = \"Andrews\", role = \"ctb\", email = \"felix@nfrac.org\"))",
       "Description": "An S3 class with methods for totally ordered indexed observations. It is particularly aimed at irregular time series of numeric vectors/matrices and factors. zoo's key design goals are independence of a particular index/date/time class and consistency with ts and base R by providing methods to extend standard generics.",
@@ -10126,7 +10126,7 @@
       "License": "GPL-2 | GPL-3",
       "URL": "https://zoo.R-Forge.R-project.org/",
       "NeedsCompilation": "yes",
-      "Author": "Achim Zeileis [aut, cre] (<https://orcid.org/0000-0003-0918-3766>), Gabor Grothendieck [aut], Jeffrey A. Ryan [aut], Joshua M. Ulrich [ctb], Felix Andrews [ctb]",
+      "Author": "Achim Zeileis [aut, cre] (ORCID: <https://orcid.org/0000-0003-0918-3766>), Gabor Grothendieck [aut], Jeffrey A. Ryan [aut], Joshua M. Ulrich [ctb], Felix Andrews [ctb]",
       "Maintainer": "Achim Zeileis <Achim.Zeileis@R-project.org>",
       "Repository": "CRAN"
     }
