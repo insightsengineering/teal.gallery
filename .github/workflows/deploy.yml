@@ -174,7 +174,6 @@ jobs:
         shell: Rscript {0}
         working-directory: ${{ matrix.directory }}
         run: |
-          github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
           lockfile_pkgs <- withr::with_envvar(
             new = list(RENV_CONFIG_PAK_ENABLED = FALSE),
             code = {
@@ -182,6 +181,7 @@ jobs:
               renv::lockfile_read()$Package
             }
           )
+          github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
           renv::restore(clean = TRUE)
           renv::update(exclude = github_pkgs)
           renv::snapshot()
