@@ -141,7 +141,8 @@ jobs:
       - name: Install required R packages
         shell: Rscript {0}
         run: |
-          install.packages(c("pak", "cli"))
+          install.packages("pak")
+          pak::pkg_install(c("withr", "cli"))
 
       - name: Update renv.lock file with updated GitHub packages
         shell: Rscript {0}
@@ -175,6 +176,10 @@ jobs:
         run: |
           lockfile_pkgs <- renv::lockfile_read()$Package
           github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
+          withr::with_envvar(
+            new = list(RENV_CONFIG_PAK_ENABLED = FALSE),
+            code = renv::restore(packages = "BiocManager")
+          )
           renv::restore(clean = TRUE)
           renv::update(exclude = github_pkgs)
           renv::snapshot()
