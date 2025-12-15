@@ -145,6 +145,8 @@ jobs:
           pak::pkg_install(c("withr", "cli", "pkgcache"))
           if (packageVersion("pak") <= package_version("0.9.1")) { # remove after next version of pak is released
             pak::pkg_install("r-lib/pak")
+            pak::pkg_install("rstudio/renv")
+            pak::pak("BiocManager")
           }
 
       - name: Update renv.lock file with updated GitHub packages
@@ -160,6 +162,9 @@ jobs:
           recorded_packages <- vapply(lockfile$Packages, function(package) {
             if (package$Source == "GitHub") {
               cli::cli_h3("'{package$Package}' from GitHub source")
+              if (package$Package == "mmrm") {
+                print(package)
+              }
               pkg_ref <- sprintf(pkg_name_structure, package$RemoteUsername, package$Package)
               pkg_extra <- "released"
               if (package$Package %in% unreleased_packages) { # exceptions
