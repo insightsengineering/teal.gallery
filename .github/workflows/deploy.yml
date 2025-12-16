@@ -67,7 +67,11 @@ jobs:
       - name: Set channel related constants
         run: |
           if [ "${{ matrix.channel }}" == "stable" ]; then
-            echo "BRANCH_NAME=${GITHUB_REF##*/}" >> $GITHUB_ENV
+            if [ "${GITHUB_REF##*/}" == "dev" ]; then
+              echo "BRANCH_NAME=main" >> $GITHUB_ENV
+            else
+              echo "BRANCH_NAME=${GITHUB_REF##*/}" >> $GITHUB_ENV
+            fi
           elif [ "${{ matrix.channel }}" == "dev" ]; then
             echo "BRANCH_NAME=dev" >> $GITHUB_ENV
           else
