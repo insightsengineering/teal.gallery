@@ -142,11 +142,12 @@ jobs:
         shell: Rscript {0}
         run: |
           install.packages("pak")
-          pak::pkg_install(c("withr", "cli", "pkgcache"))
+          pak::pkg_install(c("withr", "cli")
           if (packageVersion("pak") <= package_version("0.9.1")) { # remove after next version of pak is released
             pak::pkg_install("r-lib/pak")
             pak::pkg_install("rstudio/renv")
             pak::pak("BiocManager")
+            renv:::renv_pak_init(stream = "devel", force = TRUE)
           }
 
       - name: Update renv.lock file with updated GitHub packages
