@@ -149,12 +149,12 @@ jobs:
       - name: Install required R packages
         shell: Rscript {0}
         run: |
-          install.packages("pak")
+          if (requireNamespace("pak", quietly = TRUE) {
+            pak::pak_update()
+          } else {
+            install.packages("pak")
+          }
           pak::pkg_install("cli")
-
-      - name: Print the new renv.lock file for ${{ matrix.directory }}
-        working-directory: ${{ matrix.directory }}
-        run: cat renv.lock
 
       - name: Update renv.lock file with updated GitHub packages
         shell: Rscript {0}
