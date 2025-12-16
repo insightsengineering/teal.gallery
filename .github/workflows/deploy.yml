@@ -75,9 +75,9 @@ jobs:
             exit 1
           fi
 
-          if [ "${{matrix.director}}" == "RNA-seq" ]; then # https://github.com/rstudio/renv/issues/1628
-            echo "RENV_CONFIG_PAK_ENABLED=FALSE" >> $GITHUB_ENV
-          fi
+      - name: Disable pak for RNA-seq
+        if: matrix.directory == 'RNA-seq'
+        run: echo "RENV_CONFIG_PAK_ENABLED=FALSE" >> $GITHUB_ENV # https://github.com/rstudio/renv/issues/1628
 
       - name: Setup job token 🔑
         id: github-token
