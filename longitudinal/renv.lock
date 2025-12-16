@@ -5516,7 +5516,7 @@
     "mmrm": {
       "Package": "mmrm",
       "Version": "0.3.16",
-      "Source": "Repository",
+      "Source": "GitHub",
       "Type": "Package",
       "Title": "Mixed Models for Repeated Measures",
       "Authors@R": "c( person(\"Daniel\", \"Sabanes Bove\", , \"daniel.sabanes_bove@rconis.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-0176-9239\")), person(\"Liming\", \"Li\", , \"liming.li1@astrazeneca.com\", role = \"aut\", comment = c(ORCID = \"0009-0008-6870-0878\")), person(\"Julia\", \"Dedic\", , \"julia.dedic@roche.com\", role = \"aut\"), person(\"Doug\", \"Kelkhoff\", , \"doug.kelkhoff@roche.com\", role = \"aut\"), person(\"Kevin\", \"Kunzmann\", , \"kevin.kunzmann@boehringer-ingelheim.com\", role = \"aut\"), person(\"Brian Matthew\", \"Lang\", , \"brian.lang@msd.com\", role = \"aut\"), person(\"Christian\", \"Stock\", , \"christian.stock@boehringer-ingelheim.com\", role = \"aut\"), person(\"Ya\", \"Wang\", , \"ya.wang10@gilead.com\", role = \"aut\"), person(\"Craig\", \"Gower-Page\", , \"craig.gower-page@roche.com\", role = \"ctb\"), person(\"Dan\", \"James\", , \"dan.james@astrazeneca.com\", role = \"aut\"), person(\"Jonathan\", \"Sidi\", , \"yoni@pinpointstrategies.io\", role = \"aut\"), person(\"Daniel\", \"Leibovitz\", , \"daniel.leibovitz@roche.com\", role = \"aut\"), person(\"Daniel D.\", \"Sjoberg\", , \"sjobergd@gene.com\", role = \"aut\", comment = c(ORCID = \"0000-0003-0862-2018\")), person(\"Nikolas Ivan\", \"Krieger\", , \"nikolas.krieger@experis.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-4581-3545\")), person(\"Lukas A.\", \"Widmer\", role = \"ctb\", comment = c(ORCID = \"0000-0003-1471-3493\")), person(\"Boehringer Ingelheim Ltd.\", role = c(\"cph\", \"fnd\")), person(\"Gilead Sciences, Inc.\", role = c(\"cph\", \"fnd\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")), person(\"Merck Sharp & Dohme, Inc.\", role = c(\"cph\", \"fnd\")), person(\"AstraZeneca plc\", role = c(\"cph\", \"fnd\")), person(\"inferential.biostatistics GmbH\", role = c(\"cph\", \"fnd\")) )",
@@ -5589,9 +5589,15 @@
       "Roxygen": "list(markdown = TRUE)",
       "RoxygenNote": "7.3.3",
       "Collate": "'between-within.R' 'catch-routine-registration.R' 'component.R' 'cov_struct.R' 'data.R' 'empirical.R' 'fit.R' 'kenwardroger.R' 'mmrm-methods.R' 'mmrm-package.R' 'utils.R' 'residual.R' 'utils-nse.R' 'utils-formula.R' 'satterthwaite.R' 'skipping.R' 'tidiers.R' 'testing.R' 'tmb-methods.R' 'tmb.R' 'interop-emmeans.R' 'interop-parsnip.R' 'interop-car.R' 'zzz.R'",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "mmrm",
+      "RemoteUsername": "openpharma",
+      "RemotePkgRef": "openpharma/mmrm@*release",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "f381467f6940b88d04bd7e51f15f08e349bf5e1b",
       "Author": "Daniel Sabanes Bove [aut, cre] (<https://orcid.org/0000-0002-0176-9239>), Liming Li [aut] (<https://orcid.org/0009-0008-6870-0878>), Julia Dedic [aut], Doug Kelkhoff [aut], Kevin Kunzmann [aut], Brian Matthew Lang [aut], Christian Stock [aut], Ya Wang [aut], Craig Gower-Page [ctb], Dan James [aut], Jonathan Sidi [aut], Daniel Leibovitz [aut], Daniel D. Sjoberg [aut] (<https://orcid.org/0000-0003-0862-2018>), Nikolas Ivan Krieger [aut] (<https://orcid.org/0000-0002-4581-3545>), Lukas A. Widmer [ctb] (<https://orcid.org/0000-0003-1471-3493>), Boehringer Ingelheim Ltd. [cph, fnd], Gilead Sciences, Inc. [cph, fnd], F. Hoffmann-La Roche AG [cph, fnd], Merck Sharp & Dohme, Inc. [cph, fnd], AstraZeneca plc [cph, fnd], inferential.biostatistics GmbH [cph, fnd]",
-      "Maintainer": "Daniel Sabanes Bove <daniel.sabanes_bove@rconis.com>",
-      "Repository": "CRAN"
+      "Maintainer": "Daniel Sabanes Bove <daniel.sabanes_bove@rconis.com>"
     },
     "modelr": {
       "Package": "modelr",

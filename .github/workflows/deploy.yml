@@ -168,10 +168,6 @@ jobs:
           )
           recorded_packages <- vapply(lockfile$Packages, function(package) {
             if (package$Source == "GitHub") {
-              cli::cli_h3("'{package$Package}' from GitHub source")
-              if (package$Package == "mmrm") {
-                print(package)
-              }
               pkg_ref <- sprintf(pkg_name_structure, package$RemoteUsername, package$Package)
               pkg_extra <- "released"
               if (package$Package %in% unreleased_packages) { # exceptions
