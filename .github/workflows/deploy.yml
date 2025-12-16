@@ -150,9 +150,9 @@ jobs:
 
       - name: Update renv.lock file with updated GitHub packages
         shell: Rscript {0}
-        working-directory: ${{ matrix.directory }}
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         run: |
+          setwd("${{ matrix.directory }}")
           lockfile <- renv::lockfile_read()
           pkg_name_structure <- ifelse("${{ matrix.channel }}" == "stable", "%s/%s@*release", "%s/%s")
           unreleased_packages <- c(
