@@ -207,7 +207,7 @@ jobs:
 
       - name: Install deployment-related R package dependencies
         shell: Rscript {0}
-        if: env.BRANCH_NAME == 'main' || env.BRANCH_NAME == 'dev'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
         working-directory: ${{ matrix.directory }}
         run: |
           install.packages(c("BiocManager", "rsconnect"))
