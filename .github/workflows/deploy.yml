@@ -153,7 +153,7 @@ jobs:
       - name: Install required R packages
         shell: Rscript {0}
         run: |
-          if (requireNamespace("pak", quietly = TRUE) {
+          if (requireNamespace("pak", quietly = TRUE)) {
             pak::pak_update()
           } else {
             install.packages("pak")
