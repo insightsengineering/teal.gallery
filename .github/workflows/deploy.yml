@@ -215,7 +215,7 @@ jobs:
       - name: Deploy 🖨 ${{ matrix.directory }} 🎨
         shell: Rscript {0}
         working-directory: ${{ matrix.directory }}
-        if: env.BRANCH_NAME == 'main' || env.BRANCH_NAME == 'dev'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
         run: |
           rsconnect::setAccountInfo(
             name = "${{ env.SHINYAPPSIO_ACCOUNT }}",
@@ -235,7 +235,7 @@ jobs:
           )
 
       - name: Commit and push changes 📌
-        if: env.BRANCH_NAME == 'main' || env.BRANCH_NAME == 'dev'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
         run: |
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions"
