@@ -66,10 +66,22 @@ jobs:
     steps:
       - name: Set channel related constants
         run: |
-          echo "BRANCH_NAME=dev" >> $GITHUB_ENV
           if [ "${{ matrix.channel }}" == "stable" ]; then
-            echo "BRANCH_NAME=main" >> $GITHUB_ENV
+            if [ "${GITHUB_REF##*/}" == "dev" ]; then
+              echo "BRANCH_NAME=main" >> $GITHUB_ENV
+            else
+              echo "BRANCH_NAME=${GITHUB_REF##*/}" >> $GITHUB_ENV
+            fi
+          elif [ "${{ matrix.channel }}" == "dev" ]; then
+            echo "BRANCH_NAME=dev" >> $GITHUB_ENV
+          else
+            echo "Unknown channel: ${{ matrix.channel }}"
+            exit 1
           fi
+
+      - name: Disable pak for RNA-seq
+        if: matrix.directory == 'RNA-seq'
+        run: echo "RENV_CONFIG_PAK_ENABLED=FALSE" >> $GITHUB_ENV # https://github.com/rstudio/renv/issues/1628
 
       - name: Setup job token 🔑
         id: github-token
@@ -141,7 +153,12 @@ jobs:
       - name: Install required R packages
         shell: Rscript {0}
         run: |
-          install.packages(c("pak", "cli"))
+          if (requireNamespace("pak", quietly = TRUE)) {
+            pak::pak_update()
+          } else {
+            install.packages("pak")
+          }
+          pak::pkg_install("cli")
 
       - name: Update renv.lock file with updated GitHub packages
         shell: Rscript {0}
@@ -155,7 +172,6 @@ jobs:
           )
           recorded_packages <- vapply(lockfile$Packages, function(package) {
             if (package$Source == "GitHub") {
-              cli::cli_h3("'{package$Package}' from GitHub source")
               pkg_ref <- sprintf(pkg_name_structure, package$RemoteUsername, package$Package)
               pkg_extra <- "released"
               if (package$Package %in% unreleased_packages) { # exceptions
@@ -195,6 +211,7 @@ jobs:
 
       - name: Install deployment-related R package dependencies
         shell: Rscript {0}
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
         working-directory: ${{ matrix.directory }}
         run: |
           install.packages(c("BiocManager", "rsconnect"))
@@ -202,6 +219,7 @@ jobs:
       - name: Deploy 🖨 ${{ matrix.directory }} 🎨
         shell: Rscript {0}
         working-directory: ${{ matrix.directory }}
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
         run: |
           rsconnect::setAccountInfo(
             name = "${{ env.SHINYAPPSIO_ACCOUNT }}",
@@ -221,6 +239,7 @@ jobs:
           )
 
       - name: Commit and push changes 📌
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
         run: |
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions"
