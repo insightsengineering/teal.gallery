@@ -807,11 +807,11 @@
     },
     "TMB": {
       "Package": "TMB",
-      "Version": "1.9.18",
+      "Version": "1.9.19",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Template Model Builder: A General Random Effect Tool Inspired by 'ADMB'",
-      "Date": "2025-10-13",
+      "Date": "2025-12-15",
       "Authors@R": "c(person(\"Kasper\",\"Kristensen\",role=c(\"aut\",\"cre\",\"cph\"),email=\"kaskr@dtu.dk\"), person(\"Brad\",\"Bell\",role=\"cph\"), person(\"Hans\",\"Skaug\",role=\"ctb\"), person(\"Arni\",\"Magnusson\",role=\"ctb\"), person(\"Casper\",\"Berg\",role=\"ctb\"), person(\"Anders\",\"Nielsen\",role=\"ctb\"), person(\"Martin\",\"Maechler\",role=\"ctb\"), person(\"Theo\",\"Michelot\",role=\"ctb\"), person(\"Mollie\",\"Brooks\",role=\"ctb\"), person(\"Alex\",\"Forrence\",role=\"ctb\"), person(\"Christoffer\",\"Moesgaard Albertsen\",role=\"ctb\"), person(\"Cole\",\"Monnahan\",role=\"ctb\") )",
       "Maintainer": "Kasper Kristensen <kaskr@dtu.dk>",
       "Author": "Kasper Kristensen [aut, cre, cph], Brad Bell [cph], Hans Skaug [ctb], Arni Magnusson [ctb], Casper Berg [ctb], Anders Nielsen [ctb], Martin Maechler [ctb], Theo Michelot [ctb], Mollie Brooks [ctb], Alex Forrence [ctb], Christoffer Moesgaard Albertsen [ctb], Cole Monnahan [ctb]",
@@ -5592,8 +5592,12 @@
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "mmrm",
-      "RemoteRef": "v0.3.16",
-      "RemoteSha": "f381467f6940b88d04bd7e51f15f08e349bf5e1b"
+      "RemoteUsername": "openpharma",
+      "RemotePkgRef": "openpharma/mmrm@*release",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "f381467f6940b88d04bd7e51f15f08e349bf5e1b",
+      "Author": "Daniel Sabanes Bove [aut, cre] (<https://orcid.org/0000-0002-0176-9239>), Liming Li [aut] (<https://orcid.org/0009-0008-6870-0878>), Julia Dedic [aut], Doug Kelkhoff [aut], Kevin Kunzmann [aut], Brian Matthew Lang [aut], Christian Stock [aut], Ya Wang [aut], Craig Gower-Page [ctb], Dan James [aut], Jonathan Sidi [aut], Daniel Leibovitz [aut], Daniel D. Sjoberg [aut] (<https://orcid.org/0000-0003-0862-2018>), Nikolas Ivan Krieger [aut] (<https://orcid.org/0000-0002-4581-3545>), Lukas A. Widmer [ctb] (<https://orcid.org/0000-0003-1471-3493>), Boehringer Ingelheim Ltd. [cph, fnd], Gilead Sciences, Inc. [cph, fnd], F. Hoffmann-La Roche AG [cph, fnd], Merck Sharp & Dohme, Inc. [cph, fnd], AstraZeneca plc [cph, fnd], inferential.biostatistics GmbH [cph, fnd]",
+      "Maintainer": "Daniel Sabanes Bove <daniel.sabanes_bove@rconis.com>"
     },
     "modelr": {
       "Package": "modelr",
@@ -7451,30 +7455,30 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.14",
+      "Version": "0.6.15",
       "Source": "GitHub",
       "Title": "Reporting Tables",
-      "Date": "2025-11-14",
+      "Date": "2025-12-14",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"Original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Daniel\", \"Sabanés Bové\", , \"daniel.sabanes_bove@roche.com\", role = \"ctb\"), person(\"Maximilian\", \"Mordig\", , \"maximilian_oliver.mordig@roche.com\", role = \"ctb\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Reporting tables often have structure that goes beyond simple rectangular data. The 'rtables' package provides a framework for declaring complex multi-level tabulations and then applying them to data. This framework models both tabulation and the resulting tables as hierarchical, tree-like objects which support sibling sub-tables, arbitrary splitting or grouping of data in row and column dimensions, cells containing multiple values, and the concept of contextual summary computations. A convenient pipe-able interface is provided for declaring table layouts and the corresponding computations, and then applying them to data.",
       "License": "Apache License 2.0 | file LICENSE",
       "URL": "https://github.com/insightsengineering/rtables, https://insightsengineering.github.io/rtables/",
       "BugReports": "https://github.com/insightsengineering/rtables/issues",
       "Depends": [
-        "formatters (>= 0.5.11)",
-        "magrittr (>= 1.5)",
+        "formatters (>= 0.5.12)",
+        "magrittr (>= 2.0.3)",
         "methods",
         "R (>= 4.1)"
       ],
       "Imports": [
         "checkmate (>= 2.1.0)",
-        "htmltools (>= 0.5.4)",
-        "lifecycle (>= 0.2.0)",
+        "htmltools (>= 0.5.8.1)",
+        "lifecycle (>= 1.0.4)",
         "stats",
-        "stringi (>= 1.6)"
+        "stringi (>= 1.8.4)"
       ],
       "Suggests": [
-        "broom (>= 1.0.5)",
+        "broom (>= 1.0.8)",
         "car (>= 3.0-13)",
         "dplyr (>= 1.0.5)",
         "knitr (>= 1.42)",
@@ -7501,7 +7505,7 @@
       "RemoteUsername": "insightsengineering",
       "RemotePkgRef": "insightsengineering/rtables@*release",
       "RemoteRef": "HEAD",
-      "RemoteSha": "74775248f67a19d085ff79b567bba776306f90b9",
+      "RemoteSha": "c1e0eeb1fc123788f8b07a2ec4884dd2f35dd0a9",
       "NeedsCompilation": "no",
       "Author": "Gabriel Becker [aut] (Original creator of the package), Adrian Waddell [aut], Daniel Sabanés Bové [ctb], Maximilian Mordig [ctb], Davide Garolini [aut] (<https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (<https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [ctb] (<https://orcid.org/0009-0005-2083-1105>), Joe Zhu [aut, cre] (<https://orcid.org/0000-0001-7566-2787>), F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Joe Zhu <joe.zhu@roche.com>"
