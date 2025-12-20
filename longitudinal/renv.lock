@@ -7327,14 +7327,13 @@
     },
     "robslopes": {
       "Package": "robslopes",
-      "Version": "1.1.3",
+      "Version": "1.1.4",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Fast Algorithms for Robust Slopes",
-      "Date": "2023-04-27",
-      "Author": "Jakob Raymaekers",
-      "Maintainer": "Jakob Raymaekers <j.raymaekers@maastrichtuniversity.nl>",
-      "Description": "Fast algorithms for the Theil-Sen estimator, Siegel's repeated median slope estimator, and Passing-Bablok regression. The implementation is based on algorithms by Dillencourt et. al (1992) <doi:10.1142/S0218195992000020> and Matousek et. al (1998)  <doi:10.1007/PL00009190>. The implementations are detailed in  Raymaekers (2023) <doi:10.32614/RJ-2023-012> and  Raymaekers J., Dufey F. (2022) <arXiv:2202.08060>. All algorithms run in quasilinear time.",
+      "Date": "2025-12-19",
+      "Authors@R": "c(person(given = \"Jakob\", family = \"Raymaekers\", email = \"jakob.raymaekers@uantwerpen.be\", role = c(\"aut\", \"cre\")))",
+      "Description": "Fast algorithms for the Theil-Sen estimator, Siegel's repeated median slope estimator, and Passing-Bablok regression. The implementation is based on algorithms by Dillencourt et. al (1992) <doi:10.1142/S0218195992000020> and Matousek et. al (1998)  <doi:10.1007/PL00009190>. The implementations are detailed in  Raymaekers (2023) <doi:10.32614/RJ-2023-012> and  Raymaekers J., Dufey F. (2022) <doi:10.48550/arXiv.2202.08060>. All algorithms run in quasilinear time.",
       "License": "GPL (>= 2)",
       "Imports": [
         "Rcpp (>= 1.0.5)"
@@ -7344,6 +7343,8 @@
         "RcppArmadillo"
       ],
       "NeedsCompilation": "yes",
+      "Author": "Jakob Raymaekers [aut, cre]",
+      "Maintainer": "Jakob Raymaekers <jakob.raymaekers@uantwerpen.be>",
       "Repository": "CRAN"
     },
     "rootSolve": {
