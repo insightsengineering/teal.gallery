@@ -6547,7 +6547,7 @@
     },
     "proxy": {
       "Package": "proxy",
-      "Version": "0.4-28",
+      "Version": "0.4-29",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Distance and Similarity Measures",
