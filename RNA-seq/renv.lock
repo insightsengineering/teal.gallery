@@ -4460,13 +4460,13 @@
     },
     "futile.logger": {
       "Package": "futile.logger",
-      "Version": "1.4.3",
+      "Version": "1.4.9",
       "Source": "Repository",
       "Type": "Package",
       "Title": "A Logging Utility for R",
-      "Date": "2016-07-10",
-      "Author": "Brian Lee Yung Rowe",
+      "Date": "2025-12-22",
       "Maintainer": "Brian Lee Yung Rowe <r@zatonovo.com>",
+      "Authors@R": "person(given=c(\"Brian\", \"Lee\", \"Yung\"), family=\"Rowe\", role=c(\"aut\", \"cre\"), email=\"r@zatonovo.com\")",
       "Depends": [
         "R (>= 3.0.0)"
       ],
@@ -4476,16 +4476,22 @@
         "futile.options"
       ],
       "Suggests": [
-        "testthat",
-        "jsonlite"
+        "testit",
+        "jsonlite",
+        "httr",
+        "crayon",
+        "rsyslog",
+        "glue"
       ],
       "Description": "Provides a simple yet powerful logging utility. Based loosely on log4j, futile.logger takes advantage of R idioms to make logging a convenient and easy to use replacement for cat and print statements.",
       "License": "LGPL-3",
       "LazyLoad": "yes",
       "NeedsCompilation": "no",
       "ByteCompile": "yes",
-      "Collate": "'options.R' 'appender.R' 'constants.R' 'layout.R' 'logger.R' 'scat.R' 'futile.logger-package.R'",
-      "RoxygenNote": "5.0.1",
+      "Collate": "'options.R' 'appender.R' 'constants.R' 'layout.R' 'logger.R' 'scat.R' 'util.R' 'futile.logger-package.R'",
+      "RoxygenNote": "7.1.2",
+      "URL": "https://github.com/zatonovo/futile.logger",
+      "Author": "Brian Lee Yung Rowe [aut, cre]",
       "Repository": "CRAN"
     },
     "futile.options": {
@@ -8107,10 +8113,10 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.15.9001",
+      "Version": "0.6.15.9002",
       "Source": "GitHub",
       "Title": "Reporting Tables",
-      "Date": "2025-12-23",
+      "Date": "2025-12-29",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"Original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Daniel\", \"Sabanés Bové\", , \"daniel.sabanes_bove@rconis.com\", role = \"ctb\"), person(\"Maximilian\", \"Mordig\", , \"maximilian_oliver.mordig@roche.com\", role = \"ctb\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emilydelarua@gmail.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"ayogasek@gmail.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Reporting tables often have structure that goes beyond simple rectangular data. The 'rtables' package provides a framework for declaring complex multi-level tabulations and then applying them to data. This framework models both tabulation and the resulting tables as hierarchical, tree-like objects which support sibling sub-tables, arbitrary splitting or grouping of data in row and column dimensions, cells containing multiple values, and the concept of contextual summary computations. A convenient pipe-able interface is provided for declaring table layouts and the corresponding computations, and then applying them to data.",
       "License": "Apache License 2.0 | file LICENSE",
@@ -8131,12 +8137,12 @@
       ],
       "Suggests": [
         "broom (>= 1.0.8)",
-        "car (>= 3.0-13)",
+        "car (>= 3.1-3)",
         "dplyr (>= 1.0.5)",
         "knitr (>= 1.42)",
         "lme4 (>= 1.1-35.5)",
         "r2rtf (>= 0.3.2)",
-        "rmarkdown (>= 2.23)",
+        "rmarkdown (>= 2.28)",
         "survival (>= 3.3-1)",
         "testthat (>= 3.3.0)",
         "tibble (>= 3.2.1)",
@@ -8159,7 +8165,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
       "RemoteRef": "main",
-      "RemoteSha": "c0ff10dfa9994858d7d4df6d45874d96b2073c24"
+      "RemoteSha": "f91e51dd861dca633d3e45e6ea00d20bef491933"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
@@ -9706,10 +9712,10 @@
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.9.10.9004",
+      "Version": "0.9.10.9005",
       "Source": "GitHub",
       "Title": "Create Common TLGs Used in Clinical Trials",
-      "Date": "2025-12-25",
+      "Date": "2025-12-29",
       "Authors@R": "c( person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"Daniel\", \"Sabanés Bové\", , \"daniel.sabanes_bove@rconis.com\", role = \"aut\"), person(\"Jana\", \"Stoilova\", , \"stoilova@dnli.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emilydelarua@gmail.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"ayogasek@gmail.com\", role = \"aut\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Heng\", \"Wang\", , \"Heng.Wang21@gilead.com\", role = \"aut\"), person(\"Francois\", \"Collin\", role = \"aut\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", role = \"aut\"), person(\"Jennifer\", \"Li\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Table, Listings, and Graphs (TLG) library for common outputs used in clinical trials.",
       "License": "Apache License 2.0",
@@ -9751,11 +9757,10 @@
         "knitr (>= 1.42)",
         "lattice (>= 0.18-4)",
         "lubridate (>= 1.7.9)",
-        "rmarkdown (>= 2.23)",
-        "sass (>= 0.4.10)",
+        "rmarkdown (>= 2.28)",
         "stringr (>= 1.4.1)",
         "svglite (>= 2.1.2)",
-        "testthat (>= 3.1.9)",
+        "testthat (>= 3.3.0)",
         "withr (>= 2.0.0)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
@@ -9776,7 +9781,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "tern",
       "RemoteRef": "main",
-      "RemoteSha": "ad0e07f5eb6564b4ed344ebd6511426bfbdc2174"
+      "RemoteSha": "11239e367f00213db7b1e68d01db9551cc10c24f"
     },
     "textshaping": {
       "Package": "textshaping",
