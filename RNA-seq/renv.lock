@@ -4460,13 +4460,13 @@
     },
     "futile.logger": {
       "Package": "futile.logger",
-      "Version": "1.4.3",
+      "Version": "1.4.9",
       "Source": "Repository",
       "Type": "Package",
       "Title": "A Logging Utility for R",
-      "Date": "2016-07-10",
-      "Author": "Brian Lee Yung Rowe",
+      "Date": "2025-12-22",
       "Maintainer": "Brian Lee Yung Rowe <r@zatonovo.com>",
+      "Authors@R": "person(given=c(\"Brian\", \"Lee\", \"Yung\"), family=\"Rowe\", role=c(\"aut\", \"cre\"), email=\"r@zatonovo.com\")",
       "Depends": [
         "R (>= 3.0.0)"
       ],
@@ -4476,16 +4476,22 @@
         "futile.options"
       ],
       "Suggests": [
-        "testthat",
-        "jsonlite"
+        "testit",
+        "jsonlite",
+        "httr",
+        "crayon",
+        "rsyslog",
+        "glue"
       ],
       "Description": "Provides a simple yet powerful logging utility. Based loosely on log4j, futile.logger takes advantage of R idioms to make logging a convenient and easy to use replacement for cat and print statements.",
       "License": "LGPL-3",
       "LazyLoad": "yes",
       "NeedsCompilation": "no",
       "ByteCompile": "yes",
-      "Collate": "'options.R' 'appender.R' 'constants.R' 'layout.R' 'logger.R' 'scat.R' 'futile.logger-package.R'",
-      "RoxygenNote": "5.0.1",
+      "Collate": "'options.R' 'appender.R' 'constants.R' 'layout.R' 'logger.R' 'scat.R' 'util.R' 'futile.logger-package.R'",
+      "RoxygenNote": "7.1.2",
+      "URL": "https://github.com/zatonovo/futile.logger",
+      "Author": "Brian Lee Yung Rowe [aut, cre]",
       "Repository": "CRAN"
     },
     "futile.options": {
