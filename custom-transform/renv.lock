@@ -3551,7 +3551,7 @@
     },
     "shinyjs": {
       "Package": "shinyjs",
-      "Version": "2.1.0",
+      "Version": "2.1.1",
       "Source": "Repository",
       "Title": "Easily Improve the User Experience of Your Shiny Apps in Seconds",
       "Authors@R": "person(\"Dean\", \"Attali\",  email = \"daattali@gmail.com\", role = c(\"aut\", \"cre\"), comment= c(ORCID=\"0000-0002-5645-3493\"))",
@@ -3576,10 +3576,10 @@
       ],
       "License": "MIT + file LICENSE",
       "VignetteBuilder": "knitr",
-      "RoxygenNote": "7.1.1",
+      "RoxygenNote": "7.3.3",
       "Encoding": "UTF-8",
       "NeedsCompilation": "no",
-      "Author": "Dean Attali [aut, cre] (<https://orcid.org/0000-0002-5645-3493>)",
+      "Author": "Dean Attali [aut, cre] (ORCID: <https://orcid.org/0000-0002-5645-3493>)",
       "Maintainer": "Dean Attali <daattali@gmail.com>",
       "Repository": "CRAN"
     },
