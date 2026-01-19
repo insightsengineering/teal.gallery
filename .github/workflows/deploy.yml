@@ -144,11 +144,11 @@ jobs:
       - name: Restore renv from cache
         uses: actions/cache@v4
         env:
-          # If renv restore fails, try updating the CACHE key to make sure the new installation happens instead of cache restoration.
-          CACHE_KEY: renv-1.1.6-${{ runner.arch }}-${{ runner.os }}-${{ matrix.directory }}-${{ matrix.channel }}
+          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ matrix.directory }}-${{ matrix.channel }}
         with:
           path: ${{ matrix.directory }}/renv/library
           key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/renv.lock', matrix.directory)) }}
+          restore-keys: ${{ env.CACHE_KEY }}-
 
       - name: Install required R packages
         shell: Rscript {0}
@@ -192,7 +192,7 @@ jobs:
           lockfile_pkgs <- renv::lockfile_read()$Package
           github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
           renv::restore(clean = TRUE)
-          renv::update(exclude = github_pkgs)
+          renv::update(exclude = c(github_pkgs, "renv"))
           renv::snapshot()
 
       - name: Print the new renv.lock file for ${{ matrix.directory }}
