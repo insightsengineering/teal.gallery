@@ -191,6 +191,7 @@ jobs:
         run: |
           lockfile_pkgs <- renv::lockfile_read()$Package
           github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
+          renv::rehash()
           renv::restore(clean = TRUE)
           renv::update(exclude = c(github_pkgs, "renv"))
           renv::snapshot()
