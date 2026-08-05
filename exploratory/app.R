@@ -1,4 +1,5 @@
 library(teal.modules.general)
+library(teal.picks)
 options(
   shiny.useragg = FALSE,
   teal.ggplot2_args = teal.widgets::ggplot2_args(labs = list(caption = "NEST PROJECT"))
@@ -39,163 +40,114 @@ data <- within(data, {
 
 join_keys(data) <- default_cdisc_join_keys[c("ADSL", "ADRS", "ADLB", "ADLBPCA")]
 
-## Reusable Configuration For Modules
+## Reusable configuration for modules ----
+## teal.modules.general (>= 0.8.0) uses `teal.picks` (datasets/variables/values)
+## as the recommended way to select datasets, variables and values in modules.
 ADSL <- data[["ADSL"]]
 ADRS <- data[["ADRS"]]
 ADLB <- data[["ADLB"]]
 ADLBPCA <- data[["ADLBPCA"]]
 
-adsl_extracted_num <- data_extract_spec(
-  dataname = "ADSL",
-  select = select_spec(
-    choices = variable_choices(ADSL),
-    selected = "AGE",
-    multiple = FALSE,
-    fixed = FALSE
-  )
-)
-adsl_extracted_num2 <- data_extract_spec(
-  dataname = "ADSL",
-  select = select_spec(
-    choices = variable_choices(ADSL),
-    selected = "BMRKR1",
-    multiple = FALSE,
-    fixed = FALSE
-  )
-)
-adsl_extracted_fct <- data_extract_spec(
-  dataname = "ADSL",
-  select = select_spec(
-    choices = variable_choices(ADSL),
-    selected = "ARMCD",
-    multiple = FALSE,
-    fixed = FALSE
-  )
-)
 fact_vars_adsl <- names(Filter(isTRUE, sapply(ADSL, is.factor)))
-adsl_extracted_fct2 <- data_extract_spec(
-  dataname = "ADSL",
-  select = select_spec(
-    choices = variable_choices(ADSL, subset = fact_vars_adsl),
-    selected = "STRATA2",
-    multiple = FALSE,
-    fixed = FALSE
-  )
-)
-adsl_extracted_fct3 <- data_extract_spec(
-  dataname = "ADSL",
-  select = select_spec(
-    choices = variable_choices(ADSL),
-    selected = "ARMCD",
-    multiple = TRUE,
-    fixed = FALSE
-  )
-)
 numeric_vars_adsl <- names(Filter(isTRUE, sapply(ADSL, is.numeric)))
-adsl_extracted_numeric <- data_extract_spec(
-  dataname = "ADSL",
-  select = select_spec(
-    choices = variable_choices(ADSL, subset = numeric_vars_adsl),
-    selected = "BMRKR1",
-    multiple = FALSE,
-    fixed = FALSE
-  )
-)
-adsl_extracted_factors <- data_extract_spec(
-  dataname = "ADSL",
-  select = select_spec(
-    choices = variable_choices(ADSL, subset = fact_vars_adsl),
-    selected = NULL,
-    multiple = FALSE,
-    fixed = FALSE
-  )
-)
-
-adsl_extracted_multi <- data_extract_spec(
-  dataname = "ADSL",
-  select = select_spec(
-    choices = variable_choices(ADSL),
-    selected = c("AGE", "BMRKR1"),
-    multiple = TRUE,
-    fixed = FALSE
-  )
-)
-
-adrs_filters <- filter_spec(
-  vars = "PARAMCD",
-  sep = " - ",
-  choices = value_choices(ADRS, "PARAMCD", "PARAM", c("BESRSPI", "INVET")),
-  selected = "BESRSPI",
-  multiple = FALSE,
-  label = "Choose endpoint"
-)
-
-adrs_extracted_response <- data_extract_spec(
-  dataname = "ADRS",
-  filter = adrs_filters,
-  select = select_spec(
-    choices = variable_choices(ADRS, c("AVALC", "AVAL")),
-    selected = "AVALC",
-    multiple = FALSE,
-    fixed = FALSE
-  )
-)
-
 fact_vars_adrs <- names(Filter(isTRUE, sapply(ADRS, is.factor)))
-adrs_extracted_response_fct <- data_extract_spec(
-  dataname = "ADRS",
-  filter = adrs_filters,
-  select = select_spec(
-    choices = variable_choices(ADRS, subset = fact_vars_adrs),
-    selected = "AVALC",
-    multiple = FALSE,
-    fixed = FALSE
-  )
-)
-
-adlb_filter_paramcd <- filter_spec(
-  vars = "PARAMCD",
-  choices = value_choices(ADLB, "PARAMCD", "PARAM"),
-  selected = levels(ADLB$PARAMCD)[1],
-  multiple = FALSE,
-  label = "Select lab:"
-)
-adlb_filter_paramcd2 <- filter_spec(
-  vars = "PARAMCD",
-  choices = value_choices(ADLB, "PARAMCD", "PARAM"),
-  selected = levels(ADLB$PARAMCD)[2],
-  multiple = FALSE,
-  label = "Select lab:"
-)
-adlb_filter_visit <- filter_spec(
-  vars = "AVISIT",
-  choices = levels(ADLB$AVISIT),
-  selected = levels(ADLB$AVISIT)[1],
-  multiple = FALSE,
-  label = "Select visit:"
-)
-adlb_extracted_aval <- data_extract_spec(
-  dataname = "ADLB",
-  select = select_spec(
-    choices = variable_choices(ADLB, c("AVAL", "CHG", "PCHG", "ANRIND", "BASE")),
-    selected = "AVAL",
-    multiple = FALSE,
-    fixed = FALSE
-  ),
-  filter = list(
-    adlb_filter_paramcd,
-    adlb_filter_visit
-  )
-)
-
 numeric_vars_adlbpca <- names(Filter(isTRUE, sapply(ADLBPCA, is.numeric)))
 
-distr_filter_spec <- filter_spec(
-  vars = choices_selected(
-    variable_choices(ADSL, fact_vars_adsl),
-    selected = NULL
+# --- ADSL variable pickers ---
+pick_adsl_age <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL), selected = "AGE", multiple = FALSE)
+)
+pick_adsl_bmrkr1 <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL), selected = "BMRKR1", multiple = FALSE)
+)
+pick_adsl_armcd <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL), selected = "ARMCD", multiple = FALSE)
+)
+pick_adsl_strata2 <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL, subset = fact_vars_adsl), selected = "STRATA2", multiple = FALSE)
+)
+pick_adsl_armcd_multi <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL), selected = "ARMCD", multiple = TRUE)
+)
+pick_adsl_numeric_bmrkr1 <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL, subset = numeric_vars_adsl), selected = "BMRKR1", multiple = FALSE)
+)
+# Optional factor picker reused for facets / colour / strata / group (nothing selected by default)
+pick_adsl_factor <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL, subset = fact_vars_adsl), selected = NULL, multiple = FALSE)
+)
+pick_adsl_multi <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL), selected = c("AGE", "BMRKR1"), multiple = TRUE)
+)
+
+# --- ADRS variable pickers (used together with the endpoint row-filter below) ---
+pick_adrs_response <- picks(
+  datasets("ADRS", "ADRS"),
+  variables(choices = variable_choices(ADRS, c("AVALC", "AVAL")), selected = "AVALC", multiple = FALSE)
+)
+pick_adrs_response_fct <- picks(
+  datasets("ADRS", "ADRS"),
+  variables(choices = variable_choices(ADRS, subset = fact_vars_adrs), selected = "AVALC", multiple = FALSE)
+)
+
+# --- ADLB variable pickers ---
+pick_adlb_aval <- picks(
+  datasets("ADLB", "ADLB"),
+  variables(choices = variable_choices(ADLB, c("AVAL", "CHG", "PCHG", "ANRIND", "BASE")), selected = "AVAL", multiple = FALSE)
+)
+pick_adlb_outlier <- picks(
+  datasets("ADLB", "ADLB"),
+  variables(choices = variable_choices(ADLB, c("AVAL", "CHG", "PCHG", "BASE")), selected = "AVAL", multiple = FALSE)
+)
+pick_adlb_categorical <- picks(
+  datasets("ADLB", "ADLB"),
+  variables(choices = variable_choices(ADLB, c("PARAM", "PARAMCD")), selected = NULL, multiple = FALSE)
+)
+
+# --- ADLBPCA variable picker ---
+pick_adlbpca <- picks(
+  datasets("ADLBPCA", "ADLBPCA"),
+  variables(
+    choices = variable_choices(ADLBPCA, subset = numeric_vars_adlbpca),
+    selected = c("ALT - WEEK 5 DAY 36", "CRP - WEEK 5 DAY 36", "IGA - WEEK 5 DAY 36"),
+    multiple = TRUE
+  )
+)
+
+# --- Row filters (replace the old `filter_spec`) ---
+# `teal_transform_filter()` builds a module transformator that filters rows by the
+# chosen values of a fixed variable - the picks-era equivalent of `filter_spec()`.
+adrs_endpoint_filter <- teal_transform_filter(
+  picks(
+    datasets("ADRS", "ADRS"),
+    variables(choices = "PARAMCD", selected = "PARAMCD", multiple = FALSE, fixed = TRUE),
+    values(choices = c("BESRSPI", "INVET"), selected = "BESRSPI", multiple = FALSE)
   ),
-  multiple = TRUE
+  label = "Choose endpoint"
+)
+adlb_lab_filter <- teal_transform_filter(
+  picks(
+    datasets("ADLB", "ADLB"),
+    variables(choices = "PARAMCD", selected = "PARAMCD", multiple = FALSE, fixed = TRUE),
+    values(selected = levels(ADLB$PARAMCD)[1], multiple = FALSE)
+  ),
+  label = "Select lab"
+)
+adlb_visit_filter <- teal_transform_filter(
+  picks(
+    datasets("ADLB", "ADLB"),
+    variables(choices = "AVISIT", selected = "AVISIT", multiple = FALSE, fixed = TRUE),
+    values(selected = levels(ADLB$AVISIT)[1], multiple = FALSE)
+  ),
+  label = "Select visit"
 )
 
 ## App header and footer ----
@@ -252,93 +204,65 @@ app <- init(
     tm_missing_data("Missing Data"),
     tm_g_distribution(
       "Distribution",
-      dist_var = adsl_extracted_numeric,
-      strata_var = data_extract_spec(
-        dataname = "ADSL",
-        filter = distr_filter_spec
-      ),
-      group_var = data_extract_spec(
-        dataname = "ADSL",
-        filter = distr_filter_spec
-      )
+      dist_var = pick_adsl_numeric_bmrkr1,
+      strata_var = pick_adsl_factor,
+      group_var = pick_adsl_factor
     ),
     tm_outliers(
       "Outliers",
-      outlier_var = data_extract_spec(
-        dataname = "ADLB",
-        select = select_spec(
-          choices = variable_choices(ADLB, c("AVAL", "CHG", "PCHG", "BASE")),
-          selected = "AVAL",
-          multiple = FALSE,
-          fixed = FALSE
-        )
-      ),
-      categorical_var = data_extract_spec(
-        dataname = "ADLB",
-        select = select_spec(
-          choices = variable_choices(ADLB, c("PARAM", "PARAMCD")),
-          selected = NULL,
-          multiple = FALSE,
-          fixed = FALSE
-        )
-      )
+      outlier_var = pick_adlb_outlier,
+      categorical_var = pick_adlb_categorical
     ),
     tm_g_association(
-      ref = adsl_extracted_num,
-      vars = adsl_extracted_fct3
+      ref = pick_adsl_age,
+      vars = pick_adsl_armcd_multi
     ),
     tm_g_bivariate(
-      x = adsl_extracted_num,
-      y = adlb_extracted_aval,
-      row_facet = adsl_extracted_factors,
-      col_facet = adsl_extracted_factors,
+      x = pick_adsl_age,
+      y = pick_adlb_aval,
+      row_facet = pick_adsl_factor,
+      col_facet = pick_adsl_factor,
       use_density = FALSE,
       plot_height = c(600L, 200L, 2000L),
-      ggtheme = "gray"
+      ggtheme = "gray",
+      transformators = list(adlb_lab_filter, adlb_visit_filter)
     ),
     tm_a_regression(
       label = "Regression",
-      response = adsl_extracted_numeric,
-      regressor = adrs_extracted_response
+      response = pick_adsl_numeric_bmrkr1,
+      regressor = pick_adrs_response,
+      transformators = list(adrs_endpoint_filter)
     ),
     tm_g_response(
-      response = adrs_extracted_response_fct,
-      x = adsl_extracted_fct2,
-      row_facet = adsl_extracted_factors,
-      col_facet = adsl_extracted_factors,
-      coord_flip = FALSE
+      response = pick_adrs_response_fct,
+      x = pick_adsl_strata2,
+      row_facet = pick_adsl_factor,
+      col_facet = pick_adsl_factor,
+      coord_flip = FALSE,
+      transformators = list(adrs_endpoint_filter)
     ),
     tm_g_scatterplotmatrix(
       label = "Scatterplot Matrix",
-      variables = adsl_extracted_multi
+      variables = list(pick_adsl_multi)
     ),
     tm_g_scatterplot(
       "Scatterplot",
-      x = adsl_extracted_num,
-      y = adsl_extracted_num2,
-      row_facet = adsl_extracted_factors,
-      col_facet = adsl_extracted_factors,
-      color_by = adsl_extracted_factors,
+      x = pick_adsl_age,
+      y = pick_adsl_bmrkr1,
+      row_facet = pick_adsl_factor,
+      col_facet = pick_adsl_factor,
+      color_by = pick_adsl_factor,
       size = 3, alpha = 1,
       plot_height = c(600L, 200L, 2000L)
     ),
     tm_t_crosstable(
       "Table Choices",
-      x = adsl_extracted_fct2,
-      y = adsl_extracted_fct
+      x = pick_adsl_strata2,
+      y = pick_adsl_armcd
     ),
     tm_a_pca(
       "Principal Component Analysis",
-      dat = data_extract_spec(
-        dataname = "ADLBPCA",
-        select = select_spec(
-          choices = variable_choices(ADLBPCA, numeric_vars_adlbpca),
-          selected = c("ALT - WEEK 5 DAY 36", "CRP - WEEK 5 DAY 36", "IGA - WEEK 5 DAY 36"),
-          multiple = TRUE,
-          fixed = FALSE,
-          label = "Variable"
-        ),
-      ),
+      dat = pick_adlbpca,
       plot_height = c(600L, 200L, 2000L),
       plot_width = c(600L, 200L, 2000L)
     )
