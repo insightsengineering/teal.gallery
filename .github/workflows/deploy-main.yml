@@ -1,0 +1,30 @@
+---
+name: Deploy to Main 🚀
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - RNA-seq/**
+      - basic-teal/**
+      - delayed-data/**
+      - teal-as-shiny-module/**
+      - custom-transform/**
+      - efficacy/**
+      - exploratory/**
+      - longitudinal/**
+      - early-dev/**
+      - patient-profile/**
+      - python/**
+      - safety/**
+  workflow_dispatch:
+  schedule:
+    - cron: "12 3 * * *"
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/deploy-reusable.yml
+    with:
+      channel: stable
+    secrets: inherit

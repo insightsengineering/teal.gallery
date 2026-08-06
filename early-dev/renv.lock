@@ -27,6 +27,10 @@
         "URL": "https://cloud.r-project.org"
       },
       {
+        "Name": "CRAN2",
+        "URL": "https://cran.rstudio.com"
+      },
+      {
         "Name": "BioC.BioCsoft",
         "URL": "https://bioconductor.org/packages/3.19/bioc"
       },
