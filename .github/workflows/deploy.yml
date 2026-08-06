@@ -153,8 +153,8 @@ jobs:
 
       - name: Install required R packages
         shell: Rscript {0}
-        R_REPOS: "CRAN=https://cloud.r-project.org:CRAN2=https://cran.rstudio.com"
         run: |
+          options(repos = c(CRAN = "https://cloud.r-project.org", CRAN2 = "https://cran.rstudio.com"))
           if (requireNamespace("pak", quietly = TRUE)) {
             pak::pak_update()
           } else {
