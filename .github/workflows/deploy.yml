@@ -9,6 +9,7 @@ on:
         required: true
         type: string
         description: "Deployment channel (stable or dev)"
+        default: dev
       target-branch:
         required: false
         type: string
@@ -61,6 +62,7 @@ jobs:
             exit 1
           fi
           echo "✓ Deployment channel validated: ${{ inputs.channel }}"
+          echo "branch: ${{ env.DEPLOY_BRANCH }}"
 
       - name: Disable pak for RNA-seq
         if: matrix.directory == 'RNA-seq'
