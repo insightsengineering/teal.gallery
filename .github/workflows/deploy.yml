@@ -153,7 +153,7 @@ jobs:
 
       - name: Install required R packages
         shell: Rscript {0}
-        R_REPOS: "CRAN=https://packagemanager.posit.co/cran/latest:BioCsoft=https://bioconductor.org/packages/release/bioc"
+        R_REPOS: "CRAN=https://cloud.r-project.org:CRAN2=https://cran.rstudio.com"
         run: |
           if (requireNamespace("pak", quietly = TRUE)) {
             pak::pak_update()
