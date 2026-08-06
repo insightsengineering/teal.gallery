@@ -98,7 +98,7 @@ jobs:
         shell: bash
 
       - name: Checkout repo 🛎
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: "${{ env.DEPLOY_BRANCH }}"
           token: "${{ steps.github-token.outputs.token }}"
@@ -153,13 +153,14 @@ jobs:
 
       - name: Install required R packages
         shell: Rscript {0}
+        R_REPOS: "CRAN=https://packagemanager.posit.co/cran/latest:BioCsoft=https://bioconductor.org/packages/release/bioc"
         run: |
           if (requireNamespace("pak", quietly = TRUE)) {
             pak::pak_update()
           } else {
             install.packages("pak")
           }
-          pak::pkg_install("cli", repos = c("https://cloud.r-project.org", "https://cran.rstudio.com"))
+          pak::pkg_install("cli")
 
       - name: Update renv.lock file with updated GitHub packages
         shell: Rscript {0}

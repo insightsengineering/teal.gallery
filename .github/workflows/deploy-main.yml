@@ -1,5 +1,5 @@
 ---
-name: Deploy Apps to Stable 🚀 (main)
+name: Deploy Apps to Stable 🚀
 
 on:
   push:
