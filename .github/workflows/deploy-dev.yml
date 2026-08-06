@@ -27,4 +27,5 @@ jobs:
     uses: ./.github/workflows/deploy-reusable.yml
     with:
       channel: dev
+      target-branch: refs/heads/dev
     secrets: inherit
