@@ -6,7 +6,7 @@ on:
   workflow_call:
     inputs:
       channel:
-        required: true
+        required: false
         type: string
         description: "Deployment channel (stable or dev)"
         default: dev
