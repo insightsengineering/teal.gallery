@@ -6632,6 +6632,12 @@
       "Author": "Dawid Kaledkowski [aut] (ORCID: <https://orcid.org/0000-0001-9533-457X>), Andre Verissimo [aut] (ORCID: <https://orcid.org/0000-0002-2212-339X>), Marcin Kosinski [aut], Lluís Revilla Sancho [aut] (ORCID: <https://orcid.org/0000-0001-9747-2570>), Oriol Senan [aut] (ORCID: <https://orcid.org/0000-0002-9621-3371>), Dony Unardi [rev, cre], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dony Unardi <unardid@gene.com>"
     },
+    "teal.picks": {
+      "Package": "teal.picks",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Repository": "CRAN"
+    },
     "teal.reporter": {
       "Package": "teal.reporter",
       "Version": "0.6.3.9000",
