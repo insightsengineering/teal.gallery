@@ -83,7 +83,7 @@ gh_issues_page <- "https://github.com/insightsengineering/teal.gallery/issues"
 
 header <- tags$span(
   style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-  tags$span("My first teal app", style = "font-size: 30px;"),
+  tags$span("Patient-profile teal app", style = "font-size: 30px;"),
   tags$span(
     style = "display: flex; align-items: center;",
     tags$img(src = nest_logo, alt = "NEST logo", height = "45px", style = "margin-right:10px;"),
