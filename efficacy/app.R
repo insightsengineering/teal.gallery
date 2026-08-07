@@ -6,12 +6,11 @@ options(shiny.useragg = FALSE)
 data <- teal_data()
 data <- within(data, {
   library(dplyr)
-  library(random.cdisc.data)
   library(nestcolor)
   # optional libraries
   library(sparkline)
 
-  ADSL <- radsl(seed = 1)
+  ADSL <- random.cdisc.data::cadsl
   .adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
 
   .char_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.character)))
@@ -31,14 +30,14 @@ data <- within(data, {
 
   teal.data::col_labels(ADSL) <- .adsl_labels
 
-  ADTTE <- radtte(ADSL, seed = 1)
+  ADTTE <- random.cdisc.data::cadtte
 
-  ADRS <- radrs(ADSL, seed = 1)
+  ADRS <- random.cdisc.data::cadrs
   .adrs_labels <- teal.data::col_labels(ADRS, fill = FALSE)
   ADRS <- filter(ADRS, PARAMCD == "BESRSPI" | AVISIT == "FOLLOW UP")
   teal.data::col_labels(ADRS) <- .adrs_labels
 
-  ADQS <- radqs(ADSL, seed = 1)
+  ADQS <- random.cdisc.data::cadqs
   .adqs_labels <- teal.data::col_labels(ADQS, fill = FALSE)
   ADQS <- ADQS %>%
     filter(ABLFL != "Y" & ABLFL2 != "Y") %>%
@@ -61,7 +60,7 @@ ADSL <- data[["ADSL"]]
 ADTTE <- data[["ADTTE"]]
 ADRS <- data[["ADRS"]]
 ADQS <- data[["ADQS"]]
-char_vars_asl <- data[["char_vars_asl"]]
+char_vars_asl <- data[[".char_vars_asl"]]
 
 arm_vars <- c("ARMCD", "ARM")
 strata_vars <- c("STRATA1", "STRATA2")
@@ -231,20 +230,8 @@ app <- init(
     ),
     tm_t_crosstable(
       "Cross Table",
-      x = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL, fact_vars_asl_orig),
-          selected = fact_vars_asl_orig[1]
-        )
-      ),
-      y = data_extract_spec(
-        dataname = "ADSL",
-        select = select_spec(
-          choices = variable_choices(ADSL, fact_vars_asl_orig),
-          selected = fact_vars_asl_orig[4]
-        )
-      )
+      x = picks(datasets("ADSL"), variables(fact_vars_asl_orig, 1L)),
+      y = picks(datasets("ADSL"), variables(fact_vars_asl_orig, 4L))
     ),
     tm_t_coxreg(
       label = "Cox Reg",
