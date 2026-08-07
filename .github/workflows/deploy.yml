@@ -46,7 +46,7 @@ jobs:
       !contains(github.event.commits[0].message, '[skip deploy]')
     env:
       DEPLOY_CHANNEL: ${{ inputs.channel || 'dev' }}
-      DEPLOY_BRANCH: ${{ inputs.target-branch || github.ref_name }}
+      DEPLOY_BRANCH: ${{ inputs.target-branch || github.ref }}
     strategy:
       fail-fast: false
       matrix:
