@@ -4,7 +4,6 @@ name: Deploy Apps to Stable and Dev 🚀
 on:
   push:
     branches:
-      - main
       - dev
     paths:
       - RNA-seq/**
@@ -24,13 +23,7 @@ on:
     - cron: "12 3 * * *"
 
 jobs:
-  deploy_main:
-    uses: ./.github/workflows/deploy.yml
-    with:
-      channel: stable
-      target-branch: refs/heads/main
-    secrets: inherit
-  deploy_dev:
+  deploy:
     uses: ./.github/workflows/deploy.yml
     with:
       channel: dev

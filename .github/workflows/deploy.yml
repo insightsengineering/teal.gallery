@@ -2,6 +2,15 @@
 name: Deploy Apps 🚀
 
 on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+    branches:
+      - main
+      - dev
   workflow_dispatch:
   workflow_call:
     inputs:
