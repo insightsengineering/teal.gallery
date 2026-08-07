@@ -74,9 +74,9 @@ jobs:
           echo "✓ Deployment channel validated: ${{ env.DEPLOY_CHANNEL }}"
           echo "branch: ${{ env.DEPLOY_BRANCH }}"
 
-      # - name: Disable pak for RNA-seq
-      #   if: matrix.directory == 'RNA-seq'
-      #   run: echo "RENV_CONFIG_PAK_ENABLED=FALSE" >> $GITHUB_ENV # https://github.com/rstudio/renv/issues/1628
+      - name: Disable pak for RNA-seq
+        if: matrix.directory == 'RNA-seq'
+        run: echo "RENV_CONFIG_PAK_ENABLED=FALSE" >> $GITHUB_ENV # https://github.com/rstudio/renv/issues/1628
 
       - name: Setup job token 🔑
         id: github-token
