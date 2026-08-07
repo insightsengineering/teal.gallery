@@ -24,6 +24,10 @@ on:
         type: string
         description: "Target branch to deploy (defaults to the branch that triggered the workflow)"
 
+concurrency:
+  group: deploy-${{ inputs.channel || 'dev' }}
+  cancel-in-progress: false
+
 env:
   SHINYAPPSIO_ACCOUNT: rinpharma
   APP_PREFIX: NEST
