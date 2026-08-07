@@ -203,6 +203,18 @@ cs_paramcd_tr <- choices_selected(
   selected = "SLDINV"
 )
 
+picks_paramcd_rsp <- picks(
+  variables("PARAMCD", "PARAMCD"),
+  values(c("BESRSPI", "INVET"), "BESRSPI", multiple = FALSE),
+  check_dataset = FALSE
+)
+
+picks_paramcd_tr <- picks(
+  variables("PARAMCD", "PARAMCD"),
+  values("SLDINV", "SLDINV", multiple = FALSE),
+  check_dataset = FALSE
+)
+
 ## App header and footer ----
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
 app_source <- "https://github.com/insightsengineering/teal.gallery/tree/main/early-dev"
@@ -307,8 +319,8 @@ app <- init(
     tm_t_summary(
       label = "Disposition Table",
       dataname = "ADSL",
-      arm_var = cs_arm_var,
-      summarize_vars = cs_ds_var,
+      arm_var = variables(arm_vars, "ARM"),
+      summarize_vars = variables(ds_vars, ds_vars),
       useNA = "no"
     ),
     tm_g_spiderplot(
