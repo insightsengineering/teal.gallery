@@ -58,18 +58,18 @@ jobs:
       fail-fast: false
       matrix:
         directory:
-          # - RNA-seq
+          - RNA-seq
           - basic-teal
-          # - delayed-data
-          # - custom-transform
-          # - teal-as-shiny-module
-          # - efficacy
-          # - exploratory
-          # - longitudinal
-          # - early-dev
-          # - patient-profile
-          # - python
-          # - safety
+          - delayed-data
+          - custom-transform
+          - teal-as-shiny-module
+          - efficacy
+          - exploratory
+          - longitudinal
+          - early-dev
+          - patient-profile
+          - python
+          - safety
     steps:
       - name: Validate deployment channel
         run: |
