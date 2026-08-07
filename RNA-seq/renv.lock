@@ -3658,7 +3658,7 @@
       "git_branch": "RELEASE_3_22",
       "git_last_commit": "af0343a",
       "git_last_commit_date": "2025-12-23",
-      "Repository": "BioCsoft",
+      "Repository": "BioCsoft"
     },
     "emmeans": {
       "Package": "emmeans",
