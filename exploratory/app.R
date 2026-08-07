@@ -53,68 +53,68 @@ fact_vars_adrs <- names(Filter(isTRUE, sapply(ADRS, is.factor)))
 numeric_vars_adlbpca <- names(Filter(isTRUE, sapply(ADLBPCA, is.numeric)))
 
 # --- ADSL variable pickers ---
-pick_adsl_age <- teal.picks::picks(
-  teal.picks::datasets("ADSL", "ADSL"),
-  teal.picks::variables(choices = variable_choices(ADSL), selected = "AGE", multiple = FALSE)
+pick_adsl_age <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL), selected = "AGE", multiple = FALSE)
 )
-pick_adsl_bmrkr1 <- teal.picks::picks(
-  teal.picks::datasets("ADSL", "ADSL"),
-  teal.picks::variables(choices = variable_choices(ADSL), selected = "BMRKR1", multiple = FALSE)
+pick_adsl_bmrkr1 <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL), selected = "BMRKR1", multiple = FALSE)
 )
-pick_adsl_armcd <- teal.picks::picks(
-  teal.picks::datasets("ADSL", "ADSL"),
-  teal.picks::variables(choices = variable_choices(ADSL), selected = "ARMCD", multiple = FALSE)
+pick_adsl_armcd <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL), selected = "ARMCD", multiple = FALSE)
 )
-pick_adsl_strata2 <- teal.picks::picks(
-  teal.picks::datasets("ADSL", "ADSL"),
-  teal.picks::variables(choices = variable_choices(ADSL, subset = fact_vars_adsl), selected = "STRATA2", multiple = FALSE)
+pick_adsl_strata2 <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL, subset = fact_vars_adsl), selected = "STRATA2", multiple = FALSE)
 )
-pick_adsl_armcd_multi <- teal.picks::picks(
-  teal.picks::datasets("ADSL", "ADSL"),
-  teal.picks::variables(choices = variable_choices(ADSL), selected = "ARMCD", multiple = TRUE)
+pick_adsl_armcd_multi <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL), selected = "ARMCD", multiple = TRUE)
 )
-pick_adsl_numeric_bmrkr1 <- teal.picks::picks(
-  teal.picks::datasets("ADSL", "ADSL"),
-  teal.picks::variables(choices = variable_choices(ADSL, subset = numeric_vars_adsl), selected = "BMRKR1", multiple = FALSE)
+pick_adsl_numeric_bmrkr1 <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL, subset = numeric_vars_adsl), selected = "BMRKR1", multiple = FALSE)
 )
 # Optional factor picker reused for facets / colour / strata / group (nothing selected by default)
-pick_adsl_factor <- teal.picks::picks(
-  teal.picks::datasets("ADSL", "ADSL"),
-  teal.picks::variables(choices = variable_choices(ADSL, subset = fact_vars_adsl), selected = NULL, multiple = FALSE)
+pick_adsl_factor <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL, subset = fact_vars_adsl), selected = NULL, multiple = FALSE)
 )
-pick_adsl_multi <- teal.picks::picks(
-  teal.picks::datasets("ADSL", "ADSL"),
-  teal.picks::variables(choices = variable_choices(ADSL), selected = c("AGE", "BMRKR1"), multiple = TRUE)
+pick_adsl_multi <- picks(
+  datasets("ADSL", "ADSL"),
+  variables(choices = variable_choices(ADSL), selected = c("AGE", "BMRKR1"), multiple = TRUE)
 )
 
 # --- ADRS variable pickers (used together with the endpoint row-filter below) ---
-pick_adrs_response <- teal.picks::picks(
-  teal.picks::datasets("ADRS", "ADRS"),
-  teal.picks::variables(choices = variable_choices(ADRS, c("AVALC", "AVAL")), selected = "AVALC", multiple = FALSE)
+pick_adrs_response <- picks(
+  datasets("ADRS", "ADRS"),
+  variables(choices = variable_choices(ADRS, c("AVALC", "AVAL")), selected = "AVALC", multiple = FALSE)
 )
-pick_adrs_response_fct <- teal.picks::picks(
-  teal.picks::datasets("ADRS", "ADRS"),
-  teal.picks::variables(choices = variable_choices(ADRS, subset = fact_vars_adrs), selected = "AVALC", multiple = FALSE)
+pick_adrs_response_fct <- picks(
+  datasets("ADRS", "ADRS"),
+  variables(choices = variable_choices(ADRS, subset = fact_vars_adrs), selected = "AVALC", multiple = FALSE)
 )
 
 # --- ADLB variable pickers ---
-pick_adlb_aval <- teal.picks::picks(
-  teal.picks::datasets("ADLB", "ADLB"),
-  teal.picks::variables(choices = variable_choices(ADLB, c("AVAL", "CHG", "PCHG", "ANRIND", "BASE")), selected = "AVAL", multiple = FALSE)
+pick_adlb_aval <- picks(
+  datasets("ADLB", "ADLB"),
+  variables(choices = variable_choices(ADLB, c("AVAL", "CHG", "PCHG", "ANRIND", "BASE")), selected = "AVAL", multiple = FALSE)
 )
-pick_adlb_outlier <- teal.picks::picks(
-  teal.picks::datasets("ADLB", "ADLB"),
-  teal.picks::variables(choices = variable_choices(ADLB, c("AVAL", "CHG", "PCHG", "BASE")), selected = "AVAL", multiple = FALSE)
+pick_adlb_outlier <- picks(
+  datasets("ADLB", "ADLB"),
+  variables(choices = variable_choices(ADLB, c("AVAL", "CHG", "PCHG", "BASE")), selected = "AVAL", multiple = FALSE)
 )
-pick_adlb_categorical <- teal.picks::picks(
-  teal.picks::datasets("ADLB", "ADLB"),
-  teal.picks::variables(choices = variable_choices(ADLB, c("PARAM", "PARAMCD")), selected = NULL, multiple = FALSE)
+pick_adlb_categorical <- picks(
+  datasets("ADLB", "ADLB"),
+  variables(choices = variable_choices(ADLB, c("PARAM", "PARAMCD")), selected = NULL, multiple = FALSE)
 )
 
 # --- ADLBPCA variable picker ---
-pick_adlbpca <- teal.picks::picks(
-  teal.picks::datasets("ADLBPCA", "ADLBPCA"),
-  teal.picks::variables(
+pick_adlbpca <- picks(
+  datasets("ADLBPCA", "ADLBPCA"),
+  variables(
     choices = variable_choices(ADLBPCA, subset = numeric_vars_adlbpca),
     selected = c("ALT - WEEK 5 DAY 36", "CRP - WEEK 5 DAY 36", "IGA - WEEK 5 DAY 36"),
     multiple = TRUE
@@ -124,27 +124,27 @@ pick_adlbpca <- teal.picks::picks(
 # --- Row filters (replace the old `filter_spec`) ---
 # `teal_transform_filter()` builds a module transformator that filters rows by the
 # chosen values of a fixed variable - the picks-era equivalent of `filter_spec()`.
-adrs_endpoint_filter <- teal.picks::teal_transform_filter(
-  teal.picks::picks(
-    teal.picks::datasets("ADRS", "ADRS"),
-    teal.picks::variables(choices = "PARAMCD", selected = "PARAMCD", multiple = FALSE, fixed = TRUE),
-    teal.picks::values(choices = c("BESRSPI", "INVET"), selected = "BESRSPI", multiple = FALSE)
+adrs_endpoint_filter <- teal_transform_filter(
+  picks(
+    datasets("ADRS", "ADRS"),
+    variables(choices = "PARAMCD", selected = "PARAMCD", multiple = FALSE, fixed = TRUE),
+    values(choices = c("BESRSPI", "INVET"), selected = "BESRSPI", multiple = FALSE)
   ),
   label = "Choose endpoint"
 )
-adlb_lab_filter <- teal.picks::teal_transform_filter(
-  teal.picks::picks(
-    teal.picks::datasets("ADLB", "ADLB"),
-    teal.picks::variables(choices = "PARAMCD", selected = "PARAMCD", multiple = FALSE, fixed = TRUE),
-    teal.picks::values(selected = levels(ADLB$PARAMCD)[1], multiple = FALSE)
+adlb_lab_filter <- teal_transform_filter(
+  picks(
+    datasets("ADLB", "ADLB"),
+    variables(choices = "PARAMCD", selected = "PARAMCD", multiple = FALSE, fixed = TRUE),
+    values(selected = levels(ADLB$PARAMCD)[1], multiple = FALSE)
   ),
   label = "Select lab"
 )
-adlb_visit_filter <- teal.picks::teal_transform_filter(
-  teal.picks::picks(
-    teal.picks::datasets("ADLB", "ADLB"),
-    teal.picks::variables(choices = "AVISIT", selected = "AVISIT", multiple = FALSE, fixed = TRUE),
-    teal.picks::values(selected = levels(ADLB$AVISIT)[1], multiple = FALSE)
+adlb_visit_filter <- teal_transform_filter(
+  picks(
+    datasets("ADLB", "ADLB"),
+    variables(choices = "AVISIT", selected = "AVISIT", multiple = FALSE, fixed = TRUE),
+    values(selected = levels(ADLB$AVISIT)[1], multiple = FALSE)
   ),
   label = "Select visit"
 )
@@ -179,7 +179,7 @@ app <- init(
     teal_slice(dataname = "ADSL", varname = "AGE")
   ),
   modules = modules(
-    teal.modules.general::tm_front_page(
+    tm_front_page(
       label = "App Info",
       header_text = c(
         "Info about input data source" =
@@ -189,7 +189,7 @@ app <- init(
         `NEST packages used in this demo app` = data.frame(Packages = c("teal.modules.general", "random.cdisc.data"))
       )
     ),
-    teal.modules.general::tm_file_viewer(
+    tm_file_viewer(
       label = "File viewer",
       input_path = list(
         png = "https://www.r-project.org/logo/Rlogo.png",
@@ -198,25 +198,25 @@ app <- init(
         "example directory" = "./packrat/desc/"
       )
     ),
-    teal.modules.general::tm_data_table("Data Table"),
-    teal.modules.general::tm_variable_browser("Variable Browser"),
-    teal.modules.general::tm_missing_data("Missing Data"),
-    teal.modules.general::tm_g_distribution(
+    tm_data_table("Data Table"),
+    tm_variable_browser("Variable Browser"),
+    tm_missing_data("Missing Data"),
+    tm_g_distribution(
       "Distribution",
       dist_var = pick_adsl_numeric_bmrkr1,
       strata_var = pick_adsl_factor,
       group_var = pick_adsl_factor
     ),
-    teal.modules.general::tm_outliers(
+    tm_outliers(
       "Outliers",
       outlier_var = pick_adlb_outlier,
       categorical_var = pick_adlb_categorical
     ),
-    teal.modules.general::tm_g_association(
+    tm_g_association(
       ref = pick_adsl_age,
       vars = pick_adsl_armcd_multi
     ),
-    teal.modules.general::tm_g_bivariate(
+    tm_g_bivariate(
       x = pick_adsl_age,
       y = pick_adlb_aval,
       row_facet = pick_adsl_factor,
@@ -226,13 +226,13 @@ app <- init(
       ggtheme = "gray",
       transformators = list(adlb_lab_filter, adlb_visit_filter)
     ),
-    teal.modules.general::tm_a_regression(
+    tm_a_regression(
       label = "Regression",
       response = pick_adsl_numeric_bmrkr1,
       regressor = pick_adrs_response,
       transformators = list(adrs_endpoint_filter)
     ),
-    teal.modules.general::tm_g_response(
+    tm_g_response(
       response = pick_adrs_response_fct,
       x = pick_adsl_strata2,
       row_facet = pick_adsl_factor,
@@ -240,11 +240,11 @@ app <- init(
       coord_flip = FALSE,
       transformators = list(adrs_endpoint_filter)
     ),
-    teal.modules.general::tm_g_scatterplotmatrix(
+    tm_g_scatterplotmatrix(
       label = "Scatterplot Matrix",
       variables = list(pick_adsl_multi)
     ),
-    teal.modules.general::tm_g_scatterplot(
+    tm_g_scatterplot(
       "Scatterplot",
       x = pick_adsl_age,
       y = pick_adsl_bmrkr1,
@@ -254,12 +254,12 @@ app <- init(
       size = 3, alpha = 1,
       plot_height = c(600L, 200L, 2000L)
     ),
-    teal.modules.general::tm_t_crosstable(
+    tm_t_crosstable(
       "Table Choices",
       x = pick_adsl_strata2,
       y = pick_adsl_armcd
     ),
-    teal.modules.general::tm_a_pca(
+    tm_a_pca(
       "Principal Component Analysis",
       dat = pick_adlbpca,
       plot_height = c(600L, 200L, 2000L),
