@@ -83,7 +83,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "c7dbd19",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "no"
     },
     "BH": {
@@ -139,7 +139,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "65ae7a9",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "yes",
       "Author": "R. Gentleman [aut], V. Carey [aut], M. Morgan [aut], S. Falcon [aut], Haleema Khan [ctb] ('esApply' and 'BiobaseDevelopment' vignette translation from Sweave to Rmarkdown / HTML), Bioconductor Package Maintainer [cre]",
       "Maintainer": "Bioconductor Package Maintainer <maintainer@bioconductor.org>"
@@ -177,7 +177,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "7b86ff9",
       "git_last_commit_date": "2026-05-26",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "no",
       "Author": "Marcel Ramos [aut, cre] (ORCID: <https://orcid.org/0000-0002-3242-0582>), Martin Morgan [ctb], Hervé Pagès [ctb]",
       "Maintainer": "Marcel Ramos <marcel.ramos@sph.cuny.edu>"
@@ -222,7 +222,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "6283a0f",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "no",
       "Author": "Lori Shepherd [aut, cre], Martin Morgan [aut]",
       "Maintainer": "Lori Shepherd <lori.shepherd@roswellpark.org>"
@@ -279,7 +279,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "995c7b3",
       "git_last_commit_date": "2026-05-14",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "no",
       "Author": "The Bioconductor Dev Team [aut], Hervé Pagès [aut, cre] (ORCID: <https://orcid.org/0009-0002-8272-4522>), Laurent Gatto [ctb] (ORCID: <https://orcid.org/0000-0002-1520-2268>), Nathaniel Hayden [ctb], James Hester [ctb], Wolfgang Huber [ctb], Michael Lawrence [ctb], Martin Morgan [ctb] (ORCID: <https://orcid.org/0000-0002-5874-8148>), Valerie Obenchain [ctb]",
       "Maintainer": "Hervé Pagès <hpages.on.github@gmail.com>"
@@ -373,7 +373,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "a331dfd",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "yes",
       "Author": "Jiefei Wang [aut, cre], Martin Morgan [aut], Valerie Obenchain [aut], Michel Lang [aut], Ryan Thompson [aut], Nitesh Turaga [aut], Aaron Lun [ctb], Henrik Bengtsson [ctb], Madelyn Carlson [ctb] (Translated 'Random Numbers' vignette from Sweave to RMarkdown / HTML.), Phylis Atieno [ctb] (Translated 'Introduction to BiocParallel' vignette from Sweave to Rmarkdown / HTML.), Sergio Oller [ctb] (Improved bpmapply() efficiency., ORCID: <https://orcid.org/0000-0002-8994-1549>)",
       "Maintainer": "Jiefei Wang <jiefei0804@gmail.com>"
@@ -396,7 +396,7 @@
       "git_branch": "devel",
       "git_last_commit": "252d7c8",
       "git_last_commit_date": "2025-10-30",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "no",
       "Author": "Martin Morgan [aut], Marcel Ramos [ctb], Bioconductor Package Maintainer [ctb, cre]",
       "Maintainer": "Bioconductor Package Maintainer <maintainer@bioconductor.org>"
@@ -459,7 +459,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "bc262d5",
       "git_last_commit_date": "2026-05-22",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "yes",
       "Author": "Hervé Pagès [aut, cre], Patrick Aboyoun [aut], Robert Gentleman [aut], Saikat DebRoy [aut], Vince Carey [ctb], Nicolas Delhomme [ctb], Felix Ernst [ctb], Wolfgang Huber [ctb] ('matchprobes' vignette), Beryl Kanali [ctb] (Converted 'MultipleAlignments' vignette from Sweave to RMarkdown), Haleema Khan [ctb] (Converted 'matchprobes' vignette from Sweave to RMarkdown), Aidan Lakshman [ctb], Kieran O'Neill [ctb], Valerie Obenchain [ctb], Marcel Ramos [ctb], Albert Vill [ctb], Jen Wokaty [ctb] (Converted 'matchprobes' vignette from Sweave to RMarkdown), Erik Wright [ctb]",
       "Maintainer": "Hervé Pagès <hpages.on.github@gmail.com>"
@@ -527,7 +527,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "ceecd5f",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "no",
       "Author": "Zuguang Gu [aut, cre] (ORCID: <https://orcid.org/0000-0002-7395-8709>)",
       "Maintainer": "Zuguang Gu <guzuguang@suat-sz.edu.cn>"
@@ -643,7 +643,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "16aeab6",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "yes",
       "Author": "Michael Love [aut, cre], Constantin Ahlmann-Eltze [ctb], Anqi Zhu [ctb], Nikolaos Ignatiadis [ctb], Raphael Rossellini [ctb], Kwame Forbes [ctb], Simon Anders [aut, ctb], Wolfgang Huber [aut, ctb], RADIANT EU FP7 [fnd], NIH NHGRI [fnd], CZI [fnd]"
     },
@@ -733,7 +733,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "63285a4",
       "git_last_commit_date": "2026-05-26",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "no",
       "Author": "Hervé Pagès [aut, cre] (ORCID: <https://orcid.org/0009-0002-8272-4522>), Aaron Lun [ctb], Peter Hickey [ctb]"
     },
@@ -896,7 +896,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "ac531f1",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "no",
       "Author": "Patrick Aboyoun [aut], Hervé Pagès [aut, cre], Michael Lawrence [aut], Sonali Arora [ctb], Martin Morgan [ctb], Kayla Morrell [ctb], Valerie Obenchain [ctb], Marcel Ramos [ctb], Lori Shepherd [ctb], Dan Tenenbaum [ctb], Daniel van Twisk [ctb]",
       "Maintainer": "Hervé Pagès <hpages.on.github@gmail.com>"
@@ -1009,7 +1009,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "db589cc",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "yes",
       "Author": "Hervé Pagès [aut, cre], Patrick Aboyoun [aut], Michael Lawrence [aut]",
       "Maintainer": "Hervé Pagès <hpages.on.github@gmail.com>"
@@ -1048,7 +1048,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "873423d",
       "git_last_commit_date": "2026-06-16",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "no",
       "Author": "Dan Tenenbaum [aut], Bioconductor Package Maintainer [aut, cre], Martin Morgan [ctb], Kozo Nishida [ctb], Marcel Ramos [ctb], Kristina Riemer [ctb], Lori Shepherd [ctb], Jeremy Volkening [ctb]",
       "Maintainer": "Bioconductor Package Maintainer <maintainer@bioconductor.org>"
@@ -1168,7 +1168,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "df68909",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "no",
       "Author": "Constantin Ahlmann-Eltze [aut] (ORCID: <https://orcid.org/0000-0002-3762-068X>), Peter Hickey [aut, cre] (ORCID: <https://orcid.org/0000-0002-8153-6258>), Hervé Pagès [aut]",
       "Maintainer": "Peter Hickey <peter.hickey@gmail.com>"
@@ -1256,7 +1256,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "497fcca",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "no",
       "Author": "Marcel Ramos [aut, cre] (ORCID: <https://orcid.org/0000-0002-3242-0582>), Martin Morgan [aut, ctb], Lori Shepherd [ctb], Hervé Pagès [ctb], Vincent J Carey [aut, ctb], Levi Waldron [aut], MultiAssay SIG [ctb], NCI [fnd] (GrantNo.: U24CA289073)",
       "Maintainer": "Marcel Ramos <marcel.ramos@sph.cuny.edu>"
@@ -1656,7 +1656,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "b1246fd",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "yes",
       "Author": "Hervé Pagès [aut, cre] (ORCID: <https://orcid.org/0009-0002-8272-4522>), Jacques Serizay [ctb]",
       "Maintainer": "Hervé Pagès <hpages.on.github@gmail.com>"
@@ -1700,7 +1700,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "dfc837c",
       "git_last_commit_date": "2026-05-03",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "yes",
       "Author": "Hervé Pagès [aut, cre], Michael Lawrence [aut], Patrick Aboyoun [aut], Aaron Lun [ctb], Beryl Kanali [ctb] (Converted vignettes from Sweave to RMarkdown)",
       "Maintainer": "Hervé Pagès <hpages.on.github@gmail.com>"
@@ -1785,7 +1785,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "345dd61",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "no",
       "Author": "Hervé Pagès [aut, cre] (ORCID: <https://orcid.org/0009-0002-8272-4522>)",
       "Maintainer": "Hervé Pagès <hpages.on.github@gmail.com>"
@@ -1837,7 +1837,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "dd96584",
       "git_last_commit_date": "2026-05-01",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "yes",
       "Author": "Hervé Pagès [aut, cre] (ORCID: <https://orcid.org/0009-0002-8272-4522>), Vince Carey [fnd] (ORCID: <https://orcid.org/0000-0003-4046-0063>), Rafael A. Irizarry [fnd] (ORCID: <https://orcid.org/0000-0002-3944-4309>), Jacques Serizay [ctb] (ORCID: <https://orcid.org/0000-0002-4295-0624>)",
       "Maintainer": "Hervé Pagès <hpages.on.github@gmail.com>"
@@ -1925,7 +1925,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "38d319f",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "no",
       "Author": "Martin Morgan [aut], Valerie Obenchain [aut], Jim Hester [aut], Hervé Pagès [aut, cre]",
       "Maintainer": "Hervé Pagès <hpages.on.github@gmail.com>"
@@ -2009,7 +2009,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "fa5f5a6",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "yes"
     },
     "abind": {
@@ -2197,7 +2197,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "ff93209",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "Author": "Steffen Durinck [aut], Wolfgang Huber [aut], Sean Davis [ctb], Francois Pepin [ctb], Vince S Buffalo [ctb], Mike Smith [ctb] (ORCID: <https://orcid.org/0000-0002-7800-3848>), Hugo Gruson [ctb, cre] (ORCID: <https://orcid.org/0000-0002-4094-1476>), German Network for Bioinformatics Infrastructure - de.NBI [fnd]",
       "Maintainer": "Hugo Gruson <hugo.gruson@embl.de>"
     },
@@ -3672,7 +3672,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "5a71e43",
       "git_last_commit_date": "2026-05-22",
-      "Repository": "Bioconductor 3.23"
+      "Repository": "BioCsoft"
     },
     "emmeans": {
       "Package": "emmeans",
@@ -5177,7 +5177,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "519b69e",
       "git_last_commit_date": "2026-04-28",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "no",
       "Author": "Daniel Sabanés Bové [aut, cre], Namrata Bhatia [aut], Stefanie Bienert [aut], Benoit Falquet [aut], Haocheng Li [aut], Jeff Luong [aut], Lyndsee Midori Zhang [aut], Alex Richardson [aut], Simona Rossomanno [aut], Tim Treis [aut], Mark Yan [aut], Naomi Chang [aut], Chendi Liao [aut], Carolyn Zhang [aut], Joseph N. Paulson [aut], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Daniel Sabanés Bové <daniel.sabanes_bove@rconis.com>"
@@ -5966,7 +5966,7 @@
       "git_branch": "RELEASE_3_23",
       "git_last_commit": "7c11dae",
       "git_last_commit_date": "2026-05-31",
-      "Repository": "Bioconductor 3.23",
+      "Repository": "BioCsoft",
       "NeedsCompilation": "yes",
       "Author": "Gordon Smyth [cre, aut] (ORCID: <https://orcid.org/0000-0001-9221-2892>), Yifang Hu [ctb], Matthew Ritchie [ctb], Jeremy Silver [ctb], James Wettenhall [ctb], Davis McCarthy [ctb], Di Wu [ctb], Wei Shi [ctb], Belinda Phipson [ctb], Aaron Lun [ctb], Natalie Thorne [ctb], Alicia Oshlack [ctb], Carolyn de Graaf [ctb], Yunshun Chen [ctb], Goknur Giner [ctb], Mette Langaas [ctb], Egil Ferkingstad [ctb], Marcus Davy [ctb], Francois Pepin [ctb], Dongseok Choi [ctb], Charity Law [ctb], Mengbo Li [ctb], Lizhong Chen [ctb] (ORCID: <https://orcid.org/0000-0002-8326-6781>)",
       "Maintainer": "Gordon Smyth <smyth@wehi.edu.au>"
