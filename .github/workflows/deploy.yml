@@ -198,8 +198,8 @@ jobs:
           lockfile_pkgs <- renv::lockfile_read()$Package
           print("lockfile_pkgs")
           github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
-          print("restoring renv")
-          renv::restore(clean = TRUE)
+          # print("restoring renv")
+          # renv::restore(clean = TRUE)
           print("updating renv")
           renv::update(exclude = github_pkgs)
           print("snapshotting renv")
