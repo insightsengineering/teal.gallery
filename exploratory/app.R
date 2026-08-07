@@ -39,9 +39,7 @@ data <- within(data, {
 
 join_keys(data) <- default_cdisc_join_keys[c("ADSL", "ADRS", "ADLB", "ADLBPCA")]
 
-## Reusable configuration for modules ----
-## teal.modules.general (>= 0.8.0) uses `teal.picks` (datasets/variables/values)
-## as the recommended way to select datasets, variables and values in modules.
+## Reusable Configuration For Modules
 ADSL <- data[["ADSL"]]
 ADRS <- data[["ADRS"]]
 ADLB <- data[["ADLB"]]
@@ -49,10 +47,7 @@ ADLBPCA <- data[["ADLBPCA"]]
 
 fact_vars_adsl <- names(Filter(isTRUE, sapply(ADSL, is.factor)))
 numeric_vars_adsl <- names(Filter(isTRUE, sapply(ADSL, is.numeric)))
-fact_vars_adrs <- names(Filter(isTRUE, sapply(ADRS, is.factor)))
-numeric_vars_adlbpca <- names(Filter(isTRUE, sapply(ADLBPCA, is.numeric)))
 
-# --- ADSL variable pickers ---
 pick_adsl_age <- picks(
   datasets("ADSL", "ADSL"),
   variables(choices = variable_choices(ADSL), selected = "AGE", multiple = FALSE)
@@ -77,7 +72,6 @@ pick_adsl_numeric_bmrkr1 <- picks(
   datasets("ADSL", "ADSL"),
   variables(choices = variable_choices(ADSL, subset = numeric_vars_adsl), selected = "BMRKR1", multiple = FALSE)
 )
-# Optional factor picker reused for facets / colour / strata / group (nothing selected by default)
 pick_adsl_factor <- picks(
   datasets("ADSL", "ADSL"),
   variables(choices = variable_choices(ADSL, subset = fact_vars_adsl), selected = NULL, multiple = FALSE)
@@ -87,17 +81,16 @@ pick_adsl_multi <- picks(
   variables(choices = variable_choices(ADSL), selected = c("AGE", "BMRKR1"), multiple = TRUE)
 )
 
-# --- ADRS variable pickers (used together with the endpoint row-filter below) ---
 pick_adrs_response <- picks(
   datasets("ADRS", "ADRS"),
   variables(choices = variable_choices(ADRS, c("AVALC", "AVAL")), selected = "AVALC", multiple = FALSE)
 )
+fact_vars_adrs <- names(Filter(isTRUE, sapply(ADRS, is.factor)))
 pick_adrs_response_fct <- picks(
   datasets("ADRS", "ADRS"),
   variables(choices = variable_choices(ADRS, subset = fact_vars_adrs), selected = "AVALC", multiple = FALSE)
 )
 
-# --- ADLB variable pickers ---
 pick_adlb_aval <- picks(
   datasets("ADLB", "ADLB"),
   variables(choices = variable_choices(ADLB, c("AVAL", "CHG", "PCHG", "ANRIND", "BASE")), selected = "AVAL", multiple = FALSE)
@@ -111,7 +104,7 @@ pick_adlb_categorical <- picks(
   variables(choices = variable_choices(ADLB, c("PARAM", "PARAMCD")), selected = NULL, multiple = FALSE)
 )
 
-# --- ADLBPCA variable picker ---
+numeric_vars_adlbpca <- names(Filter(isTRUE, sapply(ADLBPCA, is.numeric)))
 pick_adlbpca <- picks(
   datasets("ADLBPCA", "ADLBPCA"),
   variables(
@@ -121,9 +114,6 @@ pick_adlbpca <- picks(
   )
 )
 
-# --- Row filters (replace the old `filter_spec`) ---
-# `teal_transform_filter()` builds a module transformator that filters rows by the
-# chosen values of a fixed variable - the picks-era equivalent of `filter_spec()`.
 adrs_endpoint_filter <- teal_transform_filter(
   picks(
     datasets("ADRS", "ADRS"),
