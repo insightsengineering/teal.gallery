@@ -148,10 +148,7 @@ app <- init(
       label = "Demographic Table",
       dataname = "ADSL",
       arm_var = variables(arm_vars, "ARM"),
-      summarize_vars = choices_selected(
-        choices = variable_choices(ADSL, demog_vars_asl),
-        selected = c("SEX", "AGE", "RACE")
-      )
+      summarize_vars = variables(demog_vars_asl, c("SEX", "AGE", "RACE"), multiple = TRUE)
     ),
     modules(
       label = "Forest Plots",
@@ -231,13 +228,13 @@ app <- init(
     tm_a_mmrm(
       label = "MMRM",
       dataname = "ADQS",
-      aval_var = choices_selected(c("AVAL", "CHG"), "AVAL"),
-      id_var = choices_selected(c("USUBJID", "SUBJID"), "USUBJID"),
+      aval_var = variables(c("AVAL", "CHG"), "AVAL"),
+      id_var = variables(c("USUBJID", "SUBJID"), "USUBJID"),
       arm_var = variables(arm_vars, "ARM"),
       visit_var = variables(visit_vars, "AVISIT"),
       arm_ref_comp = arm_ref_comp,
       paramcd = picks_paramcd_qs,
-      cov_var = choices_selected(c("BASE", "AGE", "SEX", "BASE:AVISIT"), NULL),
+      cov_var = variables(c("BASE", "AGE", "SEX", interaction_vars("BASE", "AVISIT")), NULL),
       conf_level = values(c(0.95, 0.9, 0.8), 0.95)
     ),
     tm_t_binary_outcome(
@@ -250,11 +247,11 @@ app <- init(
     tm_t_ancova(
       label = "ANCOVA",
       dataname = "ADQS",
-      avisit = choices_selected(value_choices(ADQS, "AVISIT"), "WEEK 1 DAY 8"),
+      avisit = picks(variables("AVISIT", "AVISIT"), values(selected = "WEEK 1 DAY 8"), check_dataset = FALSE),,
       arm_var = variables(arm_vars, "ARM"),
       arm_ref_comp = arm_ref_comp,
-      aval_var = choices_selected(variable_choices(ADQS, c("AVAL", "CHG", "PCHG")), "CHG"),
-      cov_var = choices_selected(variable_choices(ADQS, c("BASE", "STRATA1", "SEX")), "STRATA1"),
+      aval_var = variables(c("AVAL", "CHG", "PCHG"), "CHG"),
+      cov_var = variables(c("BASE", "STRATA1", "SEX"), "STRATA1"),
       paramcd = picks(
         check_dataset = FALSE,
         variables("PARAMCD", "PARAMCD"),

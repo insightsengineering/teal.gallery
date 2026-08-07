@@ -328,6 +328,11 @@ demog_vars_asl <- function(data) {
   names(data)[!(names(data) %in% c("USUBJID", "STUDYID", date_vars_asl))]
 }
 
+demog_vars_asl_picks <- function(x) {
+  isFALSE(inherits(x, c("Date", "POSIXct", "POSIXlt"))) &&
+    !names(parent.frame()$X)[parent.frame()$i] %in% c("USUBJID", "STUDYID")
+}
+
 anl_vars1 <- c("AVAL", "BASE", "CHG", "PCHG", "AVALL2")
 anl_vars2 <- c("AVAL", "CHG", "PCHG", "AVALL2")
 box_xaxis_vars <- c("TRT01A", "TRT01P", "AVISITCD", "STUDYID")
@@ -659,8 +664,8 @@ app <- teal::init(
     tm_t_summary(
       label = "Demographics",
       dataname = "ADSL",
-      arm_var = cs_arm_vars,
-      summarize_vars = cs_dm_vars
+      arm_var = variables(arm_vars, "TRT01A"),
+      summarize_vars = variables(demog_vars_asl_picks, dm_vars, multiple = TRUE)
     ),
     modules(
       label = "Visualizations",

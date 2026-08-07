@@ -5,15 +5,14 @@ options(shiny.useragg = FALSE)
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
-  library(random.cdisc.data)
   library(nestcolor)
 
-  ADSL <- radsl(seed = 1)
-  ADMH <- radmh(ADSL, seed = 1)
-  ADAE <- radae(ADSL, seed = 1)
-  ADCM <- radcm(ADSL, seed = 1)
-  ADVS <- radvs(ADSL, seed = 1)
-  ADLB <- radlb(ADSL, seed = 1)
+  ADSL <- random.cdisc.data::cadsl
+  ADMH <- random.cdisc.data::cadmh
+  ADAE <- random.cdisc.data::cadae
+  ADCM <- random.cdisc.data::cadcm
+  ADVS <- random.cdisc.data::cadvs
+  ADLB <- random.cdisc.data::cadlb
 
   ## Modify ADCM
   ADCM$CMINDC <- paste0("Indication_", as.numeric(ADCM$CMDECOD))
