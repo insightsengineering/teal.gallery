@@ -5,15 +5,14 @@ options(shiny.useragg = FALSE)
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
-  library(random.cdisc.data)
   library(dplyr)
   library(nestcolor)
   # optional libraries
   library(sparkline)
 
-  ADSL <- radsl(seed = 1)
-  ADAE <- radae(ADSL, seed = 1)
-  ADAETTE <- radaette(ADSL, seed = 1)
+  ADSL <- random.cdisc.data::cadsl
+  ADAE <- random.cdisc.data::cadae
+  ADAETTE <- random.cdisc.data::cadaette
   ADAETTE <- ADAETTE %>%
     mutate(is_event = case_when(
       grepl("TOT", .data$PARAMCD, fixed = TRUE) ~ TRUE,
@@ -35,7 +34,7 @@ data <- within(data, {
   .ADAETTE_AE <- full_join(.ADAETTE_AE, .ADAETTE_TTE, by = c("USUBJID", "ARM", "ARMCD"))
   ADAETTE <- rbind(.ADAETTE_AE, .ADAETTE_OTH)
 
-  ADEX <- radex(ADSL, seed = 1)
+  ADEX <- random.cdisc.data::cadex
   .ADEX_labels <- teal.data::col_labels(ADEX, fill = FALSE)
   # Below steps are done to simulate data with TDURD parameter as it is not in the ADEX data from `random.cdisc.data` package
   set.seed(1, kind = "Mersenne-Twister")
@@ -58,12 +57,12 @@ data <- within(data, {
       PARAMCD %in% c("TDOSE", "TNDOSE", "TDURD"))
   teal.data::col_labels(ADEX) <- .ADEX_labels
 
-  ADLB <- radlb(ADSL, seed = 1)
+  ADLB <- random.cdisc.data::cadlb
 
-  ADEG <- radeg(ADSL, seed = 1)
+  ADEG <- random.cdisc.data::cadeg
 
   # For real data, ADVS needs some preprocessing like group different ANRIND and BNRIND into abnormal
-  ADVS <- radvs(ADSL, seed = 1) %>%
+  ADVS <- random.cdisc.data::cadvs %>%
     mutate(ONTRTFL = ifelse(AVISIT %in% c("SCREENING", "BASELINE"), "", "Y")) %>%
     teal.data::col_relabel(ONTRTFL = "On Treatment Record Flag") %>%
     mutate(ANRIND = as.character(ANRIND), BNRIND = as.character(BNRIND)) %>%
@@ -80,7 +79,7 @@ data <- within(data, {
       )
     )
 
-  ADCM <- radcm(ADSL, seed = 1) %>% mutate(CMSEQ = as.integer(CMSEQ))
+  ADCM <- random.cdisc.data::cadcm %>% mutate(CMSEQ = as.integer(CMSEQ))
 
   # Add study-specific pre-processing: convert arm, param and visit variables to factors
   # Sample code:

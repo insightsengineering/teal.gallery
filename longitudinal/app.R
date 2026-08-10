@@ -10,7 +10,6 @@ data <- within(data, {
   library(DescTools)
   library(magrittr)
   library(dplyr)
-  library(random.cdisc.data)
   library(stringr)
   # optional libraries
   library(sparkline)
@@ -21,8 +20,8 @@ data <- within(data, {
   # if for example outcome variables are added to ADSL then do also add them as columns to ADLB
   # this is needed to be able to use plot splitting by outcome functionality
   set.seed(1) # @linksto ADSL ADLB
-  ADSL <- radsl(seed = 1)
-  ADLB <- radlb(ADSL, seed = 1)
+  ADSL <- random.cdisc.data::cadsl
+  ADLB <- random.cdisc.data::cadlb
 
   ################################################################################
   # BEGIN: Analyst Input Required To Modify Values Below To Reflect Study Specifics
