@@ -10,7 +10,6 @@ data <- within(data, {
   library(DescTools)
   library(magrittr)
   library(dplyr)
-  library(random.cdisc.data)
   library(stringr)
   # optional libraries
   library(sparkline)
