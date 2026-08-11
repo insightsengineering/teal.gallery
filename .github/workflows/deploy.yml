@@ -24,6 +24,10 @@ on:
         type: string
         description: "Target branch to deploy (defaults to the branch that triggered the workflow)"
 
+concurrency:
+  group: deploy-${{ inputs.channel || 'dev' }}
+  cancel-in-progress: false
+
 env:
   SHINYAPPSIO_ACCOUNT: rinpharma
   APP_PREFIX: NEST
@@ -243,7 +247,11 @@ jobs:
           git config --global --add safe.directory /__w/teal.gallery/teal.gallery
           git fetch
           git stash
-          git checkout ${{ env.DEPLOY_BRANCH }}
+
+          # Extract branch name from ref
+          BRANCH_NAME=$(echo "${{ env.DEPLOY_BRANCH }}" | sed 's|refs/heads/||')
+
+          git checkout $BRANCH_NAME
           git pull
           if [ -n "$(git stash list)" ]; then
             git stash apply
