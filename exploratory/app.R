@@ -114,7 +114,7 @@ pick_adlb_outlier <- picks(
 )
 pick_adlb_categorical <- picks(
   datasets("ADLB_OUT", "ADLB_OUT"),
-  variables(choices = variable_choices(ADLB_OUT, c("PARAM", "PARAMCD")), selected = "PARAMCD", multiple = FALSE)
+  variables(choices = variable_choices(ADLB_OUT, c("PARAM", "PARAMCD")), selected = NULL, multiple = FALSE)
 )
 
 numeric_vars_adlbpca <- names(Filter(isTRUE, sapply(ADLBPCA, is.numeric)))
