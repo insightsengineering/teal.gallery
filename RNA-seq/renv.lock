@@ -3634,9 +3634,9 @@
     },
     "edgeR": {
       "Package": "edgeR",
-      "Version": "4.10.1",
+      "Version": "4.10.3",
       "Source": "Bioconductor",
-      "Date": "2026-05-23",
+      "Date": "2026-08-09",
       "Title": "Empirical Analysis of Digital Gene Expression Data in R",
       "Description": "Differential expression analysis of sequence count data. Implements a range of statistical methodology based on the negative binomial distributions, including empirical Bayes estimation, exact tests, generalized linear models, quasi-likelihood, and gene set enrichment. Can perform differential analyses of any type of omics data that produces read counts, including RNA-seq, ChIP-seq, ATAC-seq, Bisulfite-seq, SAGE, CAGE, metabolomics, or proteomics spectral counts. RNA-seq analyses can be conducted at the gene or isoform level, and tests can be conducted for differential exon or transcript usage.",
       "Author": "Yunshun Chen, Lizhong Chen, Aaron TL Lun, Davis J McCarthy, Pedro Baldoni, Matthew E Ritchie, Belinda Phipson, Yifang Hu, Xiaobei Zhou, Mark D Robinson, Gordon K Smyth",
@@ -3675,8 +3675,8 @@
       "NeedsCompilation": "yes",
       "git_url": "https://git.bioconductor.org/packages/edgeR",
       "git_branch": "RELEASE_3_23",
-      "git_last_commit": "5a71e43",
-      "git_last_commit_date": "2026-05-22",
+      "git_last_commit": "cb1d751",
+      "git_last_commit_date": "2026-08-09",
       "Repository": "Bioconductor 3.23"
     },
     "emmeans": {
@@ -5927,9 +5927,9 @@
     },
     "limma": {
       "Package": "limma",
-      "Version": "3.68.4",
+      "Version": "3.68.5",
       "Source": "Bioconductor",
-      "Date": "2026-05-31",
+      "Date": "2026-08-10",
       "Title": "Linear Models for Microarray and Omics Data",
       "Description": "Data analysis, linear models and differential expression for omics data.",
       "Authors@R": "c(person(given = \"Gordon\", family = \"Smyth\", role = c(\"cre\", \"aut\"), email = \"smyth@wehi.edu.au\", comment = c(ORCID = \"0000-0001-9221-2892\")), person(given = \"Yifang\", family = \"Hu\", role = \"ctb\"), person(given = \"Matthew\", family = \"Ritchie\", role = \"ctb\"), person(given = \"Jeremy\", family = \"Silver\", role = \"ctb\"), person(given = \"James\", family = \"Wettenhall\", role = \"ctb\"), person(given = \"Davis\", family = \"McCarthy\", role = \"ctb\"), person(given = \"Di\", family = \"Wu\", role = \"ctb\"), person(given = \"Wei\", family = \"Shi\", role = \"ctb\"), person(given = \"Belinda\", family = \"Phipson\", role = \"ctb\"), person(given = \"Aaron\", family = \"Lun\", role = \"ctb\"), person(given = \"Natalie\", family = \"Thorne\", role = \"ctb\"), person(given = \"Alicia\", family = \"Oshlack\", role = \"ctb\"), person(given = \"Carolyn\", family = \"de Graaf\", role = \"ctb\"), person(given = \"Yunshun\", family = \"Chen\", role = \"ctb\"), person(given = \"Goknur\", family = \"Giner\", role = \"ctb\"), person(given = \"Mette\", family = \"Langaas\", role = \"ctb\"), person(given = \"Egil\", family = \"Ferkingstad\", role = \"ctb\"), person(given = \"Marcus\", family = \"Davy\", role = \"ctb\"), person(given = \"Francois\", family = \"Pepin\", role = \"ctb\"), person(given = \"Dongseok\", family = \"Choi\", role = \"ctb\"), person(given = \"Charity\", family = \"Law\", role = \"ctb\"), person(given = \"Mengbo\", family = \"Li\", role = \"ctb\"), person(given = \"Lizhong\", family = \"Chen\", role = \"ctb\", comment = c(ORCID = \"0000-0002-8326-6781\")) )",
@@ -5967,8 +5967,8 @@
       "biocViews": "ExonArray, GeneExpression, Transcription, AlternativeSplicing, DifferentialExpression, DifferentialSplicing, GeneSetEnrichment, DataImport, Bayesian, Clustering, Regression, TimeCourse, Microarray, MicroRNAArray, mRNAMicroarray, OneChannel, ProprietaryPlatforms, TwoChannel, Sequencing, RNASeq, BatchEffect, MultipleComparison, Normalization, Preprocessing, QualityControl, BiomedicalInformatics, CellBiology, Cheminformatics, Epigenetics, FunctionalGenomics, Genetics, ImmunoOncology, Metabolomics, Proteomics, SystemsBiology, Transcriptomics",
       "git_url": "https://git.bioconductor.org/packages/limma",
       "git_branch": "RELEASE_3_23",
-      "git_last_commit": "7c11dae",
-      "git_last_commit_date": "2026-05-31",
+      "git_last_commit": "825d1c8",
+      "git_last_commit_date": "2026-08-09",
       "Repository": "Bioconductor 3.23",
       "NeedsCompilation": "yes",
       "Author": "Gordon Smyth [cre, aut] (ORCID: <https://orcid.org/0000-0001-9221-2892>), Yifang Hu [ctb], Matthew Ritchie [ctb], Jeremy Silver [ctb], James Wettenhall [ctb], Davis McCarthy [ctb], Di Wu [ctb], Wei Shi [ctb], Belinda Phipson [ctb], Aaron Lun [ctb], Natalie Thorne [ctb], Alicia Oshlack [ctb], Carolyn de Graaf [ctb], Yunshun Chen [ctb], Goknur Giner [ctb], Mette Langaas [ctb], Egil Ferkingstad [ctb], Marcus Davy [ctb], Francois Pepin [ctb], Dongseok Choi [ctb], Charity Law [ctb], Mengbo Li [ctb], Lizhong Chen [ctb] (ORCID: <https://orcid.org/0000-0002-8326-6781>)",
@@ -9193,11 +9193,11 @@
     },
     "teal.picks": {
       "Package": "teal.picks",
-      "Version": "0.3.0.9000",
+      "Version": "0.3.0.9001",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Dataset and Variable Picker and Merge Module for 'teal' Applications",
-      "Date": "2026-07-31",
+      "Date": "2026-08-12",
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Lluís\", \"Revilla Sancho\", , \"lluis.revilla_sancho@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-9747-2570\")), person(\"Oriol\", \"Senan\", , \"oriol.senan@external.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-9621-3371\")), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = c(\"rev\", \"cre\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Allows users to interactively select datasets, variables, and values within 'teal' applications using a 'tidyselect'-style interface. Selected picks can be merged and transformed into analysis-ready data within 'teal' modules.",
       "License": "Apache License 2.0",
@@ -9236,7 +9236,7 @@
       ],
       "VignetteBuilder": "knitr",
       "Config/Needs/website": "insightsengineering/nesttemplate",
-      "Config/roxygen2/version": "8.0.0",
+      "Config/roxygen2/version": "8.1.0",
       "Config/testthat/edition": "3",
       "Encoding": "UTF-8",
       "Language": "en-US",
@@ -9249,7 +9249,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.picks",
       "RemoteRef": "main",
-      "RemoteSha": "f3152ea8428d76fae4456ea7a324c788a607cad5"
+      "RemoteSha": "1e98a0e4cfa4e596783c1f3414f8a749ffc2d72a"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
