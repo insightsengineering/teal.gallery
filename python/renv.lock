@@ -6986,8 +6986,8 @@
       "Authors@R": "c( person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"Daniel\", \"Sabanés Bové\", , \"daniel.sabanes_bove@rconis.com\", role = \"aut\"), person(\"Jana\", \"Stoilova\", , \"stoilova@dnli.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emilydelarua@gmail.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"ayogasek@gmail.com\", role = \"aut\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Heng\", \"Wang\", , \"Heng.Wang21@gilead.com\", role = \"aut\"), person(\"Francois\", \"Collin\", role = \"aut\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gmail.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", role = \"aut\"), person(\"Jennifer\", \"Li\", role = \"aut\"), person(\"David\", \"Munoz Tord\", , \"david.munoztord@mailbox.org\", role = \"ctb\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Table, Listings, and Graphs (TLG) library for common outputs used in clinical trials.",
       "License": "Apache License 2.0",
-      "URL": "https://insightsengineering.github.io/tern/, https://github.com/insightsengineering/tern/",
-      "BugReports": "https://github.com/insightsengineering/tern/issues",
+      "URL": "https://pharmaverse.github.io/tern/, https://github.com/pharmaverse/tern/",
+      "BugReports": "https://github.com/pharmaverse/tern/issues",
       "Depends": [
         "R (>= 4.4.0)",
         "rtables (>= 0.6.15)"
@@ -7046,7 +7046,7 @@
       "RemoteUsername": "insightsengineering",
       "RemotePkgRef": "insightsengineering/tern",
       "RemoteRef": "HEAD",
-      "RemoteSha": "21b150c97a590536ecdc8ba6f147b5fca12d4a33",
+      "RemoteSha": "1cd41166ead7906b30859a521b941ac7dadef358",
       "NeedsCompilation": "no",
       "Author": "Joe Zhu [aut, cre] (ORCID: <https://orcid.org/0000-0001-7566-2787>), Daniel Sabanés Bové [aut], Jana Stoilova [aut], Davide Garolini [aut] (ORCID: <https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (ORCID: <https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [aut] (ORCID: <https://orcid.org/0009-0005-2083-1105>), Heng Wang [aut], Francois Collin [aut], Adrian Waddell [aut], Pawel Rucki [aut], Chendi Liao [aut], Jennifer Li [aut], David Munoz Tord [ctb], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Joe Zhu <joe.zhu@roche.com>"
