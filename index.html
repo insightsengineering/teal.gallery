@@ -233,9 +233,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="auto-deployment">Auto-deployment</h3>
 <p>All the sample apps are automatically deployed every day using the CI in two channels:</p>
 <ul>
-<li><code>stable</code> channel: The code for the Teal apps is taken from the <code>main</code> branch of <code>teal.gallery</code>, and the NEST packages are installed from the <code>main</code> branch of GitHub. This is done using the <code>deploy_stable.yaml</code>.</li>
-<li><code>dev</code> channel: The code for the Teal apps is taken from the <code>dev</code> branch of <code>teal.gallery</code> and the NEST packages are installed from the last <code>release tag</code> of GitHub. This is done using the <code>deploy_dev.yaml</code>.</li>
+<li><code>stable</code> channel: The code for the Teal apps is taken from the <code>main</code> branch of <code>teal.gallery</code>, and the NEST packages are installed from the <code>release tag</code> branch of GitHub. This is done using the <code>deploy_stable.yaml</code>.</li>
+<li><code>dev</code> channel: The code for the Teal apps is taken from the <code>dev</code> branch of <code>teal.gallery</code> and the NEST packages are installed from the last <code>main</code> of GitHub. This is done using the <code>deploy_dev.yaml</code>.</li>
 </ul>
+<p>The <code>deploy.yml</code> workflow automatically updates <code>renv.lock</code> files by:</p>
+<ol type="1">
+<li>Restoring packages from the current lockfile</li>
+<li>Updating packages to their latest versions</li>
+<li>Detecting GitHub-sourced packages (teal, osprey, hermes, etc.)</li>
+<li>Applying the appropriate reference strategy (dev vs.&nbsp;stable channel)</li>
+<li>Committing changes back to the repository</li>
+</ol>
 <p><em>IMPORTANT</em>: Although we can now test the unreleased features of the NEST packages in deployments, currently, the divergent <code>dev</code> and <code>main</code> branches must be managed and merged manually as needed to ensure that the apps work fine in both deployment channels, i.e., making sure to merge the app changes from <code>dev</code> to <code>main</code> by creating a PR.</p>
 </section>
 <section id="adding-a-sample-app-to-teal.gallery" class="level3">
@@ -255,6 +263,76 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>You can snapshot the teal app dependencies using <code>{renv}</code> but make sure to snapshot using GitHub references to the teal packages.</li>
 <li>Create a GIF recording (<a href="https://www.cockos.com/licecap/">LICEcap</a> is a good tool for this). Make sure that the dimensions of the GIF is 970x555 px and the size is about 1 MB. Place the GIF inside the <code>_internal/quarto/assets/img</code> directory. Also, make sure that the name of the GIF is <code>APP_NAME.gif</code>. Also, make sure to place a static image with the name dimention called <code>APP_NAME.png</code> that will be displayed in the demo page when the card is not hovered.</li>
 <li>Add front-end tests with the help of cypress. Copy the contents of the <code>js</code> directory within some other app’s directory inside your app directory to get the node dependencies. Place the cypress tests inside the <code>tests/cypress</code> inside your app’s directory. Please refer to an existing app’s tests so that the <code>.github/deploy.yaml</code> will automaticall run the cypress tests.</li>
+</ol>
+</section>
+</section>
+<section id="dependencies" class="level3">
+<h3 class="anchored" data-anchor-id="dependencies">Dependencies</h3>
+<section id="overview" class="level4">
+<h4 class="anchored" data-anchor-id="overview">Overview</h4>
+<p>Each app maintains its dependencies through a <code>renv.lock</code> file stored in the app’s directory. This ensures reproducible package installations across development and deployment environments.</p>
+<p><strong>Dependency reference strategies:</strong> - <code>&lt;organization&gt;/&lt;repository&gt;</code> — installs from the development branch (used in <code>dev</code> channel) - <code>&lt;organization&gt;/&lt;repository&gt;@*release</code> — installs the latest released version (used in <code>stable</code> channel)</p>
+</section>
+<section id="manual-dependency-updates" class="level4">
+<h4 class="anchored" data-anchor-id="manual-dependency-updates">Manual Dependency Updates</h4>
+<p>To manually update dependencies for an app, use the same R version and environment as the CI workflow. The recommended approach is to use the Docker image from <a href="https://github.com/insightsengineering/ci-images/pkgs/container/rstudio"><code>insightsengineering/ci-images</code></a>.</p>
+<p><strong>Script to update GitHub-sourced NEST packages:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>renv_read <span class="ot">&lt;-</span> renv<span class="sc">::</span><span class="fu">lockfile_read</span>()</span>
+<span id="cb3-2"><a href="#cb3-2"></a>ie <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">keep_at</span>(</span>
+<span id="cb3-3"><a href="#cb3-3"></a>  renv_read<span class="sc">$</span>Packages,</span>
+<span id="cb3-4"><a href="#cb3-4"></a>  \(x) <span class="fu">grepl</span>(</span>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="at">pattern =</span> <span class="st">"teal|rtables|rlistings|osprey|modules[.]hermes|goshawk|formatters|tern|mmrm|nestcolor"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6"></a>    <span class="at">x =</span> x</span>
+<span id="cb3-7"><a href="#cb3-7"></a>  )</span>
+<span id="cb3-8"><a href="#cb3-8"></a>)</span>
+<span id="cb3-9"><a href="#cb3-9"></a></span>
+<span id="cb3-10"><a href="#cb3-10"></a>packages_to_install <span class="ot">&lt;-</span> ie <span class="sc">|&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a>  purrr<span class="sc">::</span><span class="fu">map</span>(\(.x) {</span>
+<span id="cb3-12"><a href="#cb3-12"></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(.x<span class="sc">$</span>RemoteUsername) <span class="sc">||</span> <span class="fu">is.null</span>(.x<span class="sc">$</span>RemoteRepo)) {</span>
+<span id="cb3-13"><a href="#cb3-13"></a>      glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"insightsengineering/"</span>, .x<span class="sc">$</span>Package) <span class="co"># default to use insightsengineering</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a>    } <span class="cf">else</span> {</span>
+<span id="cb3-15"><a href="#cb3-15"></a>      glue<span class="sc">::</span><span class="fu">glue</span>(.x<span class="sc">$</span>RemoteUsername, <span class="st">"/"</span>, .x<span class="sc">$</span>RemoteRepo)</span>
+<span id="cb3-16"><a href="#cb3-16"></a>    }</span>
+<span id="cb3-17"><a href="#cb3-17"></a>  }) <span class="sc">|&gt;</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a>  <span class="fu">unlist</span>(<span class="at">use.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb3-19"><a href="#cb3-19"></a></span>
+<span id="cb3-20"><a href="#cb3-20"></a>renv<span class="sc">::</span><span class="fu">install</span>(packages_to_install, <span class="at">prompt =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="local-development-with-containers" class="level4">
+<h4 class="anchored" data-anchor-id="local-development-with-containers">Local Development with containers</h4>
+<p>Run apps locally using the same environment as CI with Podman/Docker Compose.</p>
+<p><strong>Setup:</strong></p>
+<ol type="1">
+<li><p>Create a <code>.env</code> file in the project root:</p>
+<pre><code>GITHUB_PAT=your_access_token_here</code></pre></li>
+<li><p>Use the compose file configuration below <em>(use the appropriate version and user password)</em>:</p></li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="at">  </span><span class="fu">rstudio</span><span class="kw">:</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> ghcr.io/insightsengineering/rstudio:&lt;version&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="st">"8787:8787"</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co">      # Project directories</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./RNA-seq:/workspace/RNA-seq</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./basic-teal:/workspace/basic-teal</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./custom-transform:/workspace/custom-transform</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./delayed-data:/workspace/delayed-data</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./early-dev:/workspace/early-dev</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./efficacy:/workspace/efficacy</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./exploratory:/workspace/exploratory</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./longitudinal:/workspace/longitudinal</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./patient-profile:/workspace/patient-profile</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./python:/workspace/python</span></span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./safety:/workspace/safety</span></span>
+<span id="cb5-19"><a href="#cb5-19"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./teal-as-shiny-module:/workspace/teal-as-shiny-module</span></span>
+<span id="cb5-20"><a href="#cb5-20"></a><span class="at">    </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb5-21"><a href="#cb5-21"></a><span class="at">      </span><span class="kw">-</span><span class="at"> PASSWORD=&lt;password&gt;</span></span>
+<span id="cb5-22"><a href="#cb5-22"></a><span class="at">      </span><span class="kw">-</span><span class="at"> GITHUB_PAT=${GITHUB_PAT}</span></span>
+<span id="cb5-23"><a href="#cb5-23"></a><span class="at">    </span><span class="fu">working_dir</span><span class="kw">:</span><span class="at"> /workspace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li><p>Start the container</p></li>
+<li><p>Access RStudio at <code>http://localhost:8787</code> (username: <code>rstudio</code>, password: <code>&lt;password&gt;</code>)</p></li>
 </ol>
 
 
@@ -550,13 +628,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">---</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="an">pagetitle:</span><span class="co"> "Teal Gallery"</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb3-4"><a href="#cb3-4"></a><span class="co">---</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a></span>
-<span id="cb3-6"><a href="#cb3-6"></a></span>
-<span id="cb3-7"><a href="#cb3-7"></a>{{&lt; include ../../README.md &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">---</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="an">pagetitle:</span><span class="co"> "Teal Gallery"</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co">---</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a></span>
+<span id="cb6-6"><a href="#cb6-6"></a></span>
+<span id="cb6-7"><a href="#cb6-7"></a>{{&lt; include ../../README.md &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
