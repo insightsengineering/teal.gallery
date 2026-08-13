@@ -6,9 +6,10 @@ options(shiny.useragg = FALSE)
 data <- teal_data()
 data <- within(data, {
   library(nestcolor)
+  library(random.cdisc.data)
 
-  ADSL <- random.cdisc.data::cadsl
-  ADTTE <- random.cdisc.data::cadtte %>%
+  ADSL <- radsl(seed = 1)
+  ADTTE <- radtte(ADSL, seed = 1) %>%
     dplyr::mutate(is_event = CNSR == 0)
   MAE <- hermes::multi_assay_experiment
 })
