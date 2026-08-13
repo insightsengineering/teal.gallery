@@ -6,13 +6,12 @@ options(shiny.useragg = FALSE)
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
-  library(random.cdisc.data)
   library(dplyr)
   library(nestcolor)
   # optional libraries
   library(sparkline)
 
-  ADSL <- radsl(seed = 1)
+  ADSL <- random.cdisc.data::cadsl
 
   # derive ADSL treatment duration
   .adsl_labels <- teal.data::col_labels(ADSL, fill = FALSE)
@@ -31,7 +30,7 @@ data <- within(data, {
     droplevels()
   teal.data::col_labels(ADSL)[c(names(.adsl_labels))] <- .adsl_labels
 
-  ADAE <- radae(ADSL, seed = 1)
+  ADAE <- random.cdisc.data::cadae
 
   # derive common flags for AEs
   ADAE <- ADAE %>%
@@ -63,7 +62,7 @@ data <- within(data, {
       AELLT = "Lowest Level Term"
     )
 
-  ADCM <- radcm(ADSL, seed = 1)
+  ADCM <- random.cdisc.data::cadcm
 
   # process ADCM
   ADCM <- ADCM %>%
@@ -76,7 +75,7 @@ data <- within(data, {
       AENDT = "Analysis End Date"
     )
 
-  ADEX <- radex(ADSL, seed = 1)
+  ADEX <- random.cdisc.data::cadex
 
   # process ADEX
   ADEX <- ADEX %>%
@@ -89,7 +88,7 @@ data <- within(data, {
       AENDT = "Analysis End Date"
     )
 
-  ADTR <- radtr(ADSL, seed = 1)
+  ADTR <- random.cdisc.data::cadtr
 
   # process ADTR
   .adtr_labels <- teal.data::col_labels(ADTR, fill = FALSE)
@@ -109,18 +108,18 @@ data <- within(data, {
 
 
   # process ADRS
-  ADRSSWIM <- radrs(ADSL, seed = 1) %>%
+  ADRSSWIM <- random.cdisc.data::cadrs %>%
     filter(PARAMCD == "OVRINV") %>%
     arrange(USUBJID)
 
-  ADRS <- radrs(ADSL, seed = 1)
+  ADRS <- random.cdisc.data::cadrs
   ADRS <- ADRS %>%
     filter(PARAMCD %in% c("BESRSPI", "INVET")) %>%
     mutate(ADT = as.Date(ADTM)) %>%
     droplevels()
   teal.data::col_labels(ADRS)["ADT"] <- "Analysis Date"
 
-  ADLB <- radlb(ADSL, seed = 1)
+  ADLB <- random.cdisc.data::cadlb
 
   # process ADLB
   ADLB <- ADLB %>%
@@ -156,7 +155,6 @@ ADCM <- data[["ADCM"]]
 ADTRWF <- data[["ADTRWF"]]
 ADRSSWIM <- data[["ADRSSWIM"]]
 ADLB <- data[["ADLB"]]
-
 
 fact_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.factor)))
 

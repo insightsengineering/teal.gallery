@@ -451,7 +451,7 @@ app <- teal::init(
     ),
     module(
       "User Guide",
-      server = function(input, output, session, datasets) {},
+      server = function(input, output, session, data) {},
       ui = function(id, ...) {
         div(
           h5(
@@ -604,7 +604,7 @@ app <- teal::init(
     ),
     module(
       "Example Info Page",
-      server = function(input, output, session, datasets) {},
+      server = function(input, output, session, data) {},
       ui = function(id, ...) {
         div(
           h5(strong("Molecule:"), MOLECULE),

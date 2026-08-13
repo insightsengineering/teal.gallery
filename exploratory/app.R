@@ -7,6 +7,7 @@ options(
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
+  library(random.cdisc.data)
   library(dplyr)
   library(tidyr)
   library(ggExtra)
@@ -25,9 +26,10 @@ data <- within(data, {
   library(colourpicker)
   library(sparkline)
 
-  ADSL <- random.cdisc.data::cadsl
-  ADRS <- random.cdisc.data::cadrs
-  ADLB <- random.cdisc.data::cadlb
+
+  ADSL <- radsl(seed = 1)
+  ADRS <- radrs(ADSL, seed = 1)
+  ADLB <- radlb(ADSL, seed = 1)
   ADLBPCA <- ADLB %>%
     dplyr::select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
     tidyr::pivot_wider(
