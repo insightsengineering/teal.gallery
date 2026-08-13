@@ -201,6 +201,7 @@ jobs:
         run: cat renv.lock
 
       - name: Front end test to check if the app works fine
+        id: frontend-test
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         uses: cypress-io/github-action@v7
         with:
@@ -209,6 +210,21 @@ jobs:
           start: npm run run-app
           wait-on: "http://localhost:3333"
           wait-on-timeout: 500
+
+      - name: Upload test artifacts on failure
+        if: failure() && steps.frontend-test.outcome == 'failure'
+        run: |
+          cd /__w/teal.gallery/teal.gallery
+          zip -r ${{ matrix.directory }}.zip ${{ matrix.directory }} -x "*/node_modules/*" "*/renv/library/*"
+          ls -lh ${{ matrix.directory }}.zip
+
+      - name: Upload failed test directory
+        if: failure() && steps.frontend-test.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-test-failure-${{ matrix.directory }}
+          path: /__w/teal.gallery/teal.gallery/${{ matrix.directory }}.zip
+          retention-days: 7
 
       - name: Install deployment-related R package dependencies
         shell: Rscript {0}
