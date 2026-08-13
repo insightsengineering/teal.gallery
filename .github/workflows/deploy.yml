@@ -25,7 +25,7 @@ on:
         description: "Target branch to deploy (defaults to the branch that triggered the workflow)"
 
 concurrency:
-  group: deploy-${{ inputs.channel || 'dev' }}
+  group: deploy-${{ inputs.channel || 'dev' }}-${{ github.ref }}
   cancel-in-progress: false
 
 env:
