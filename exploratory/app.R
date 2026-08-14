@@ -95,8 +95,6 @@ pick_adlb_aval <- picks(
   datasets("ADLB", "ADLB"),
   variables(choices = variable_choices(ADLB, c("AVAL", "CHG", "PCHG", "ANRIND", "BASE")), selected = "AVAL", multiple = FALSE)
 )
-# Outlier picks use ADLB directly; `outlier_adlb_transform` strips ADLB's foreign
-# key inside the outlier module so the picks child-dataset join bug can't fire.
 pick_adlb_outlier <- picks(
   datasets("ADLB", "ADLB"),
   variables(choices = variable_choices(ADLB, c("AVAL", "CHG", "PCHG", "BASE")), selected = "AVAL", multiple = FALSE)
@@ -139,37 +137,6 @@ adlb_visit_filter <- teal_transform_filter(
     values(selected = levels(ADLB$AVISIT)[1], multiple = FALSE)
   ),
   label = "Select visit"
-)
-
-# Module-local workaround for the tm_outliers() picks child-dataset join bug.
-#
-# tm_outliers' picks path rebuilds ANL_OUTLIER_EXTENDED by joining on the
-# dataset's FULL primary key, but teal.picks only carries a *child* dataset's
-# foreign key into the analysis data -> the join errors on the missing
-# PARAMCD/AVISIT ("Join columns in `x` must be present in the data").
-# See ISSUE_tm_outliers.md.
-#
-# The fix: within the outlier module ONLY, drop ADLB's foreign key to ADSL so
-# teal.picks treats ADLB as standalone and retains its full compound primary
-# key (STUDYID/USUBJID/PARAMCD/AVISIT), which makes the rebuild join succeed.
-# Because this runs in a transformator it is scoped to this module: the shared
-# `data` keeps ADLB as a normal child of ADSL, so tm_missing_data's
-# "Grouped by subject" tab, tm_variable_browser and tm_data_table are unaffected.
-outlier_adlb_transform <- teal_transform_module(
-  label = "Standalone ADLB for outliers",
-  datanames = "ADLB",
-  server = function(id, data) {
-    moduleServer(id, function(input, output, session) {
-      reactive({
-        data_out <- data()
-        jk <- teal.data::join_keys(data_out)
-        # Removing the pair also drops the symmetric key and clears the parent.
-        jk["ADLB", "ADSL"] <- NULL
-        teal.data::join_keys(data_out) <- jk
-        data_out
-      })
-    })
-  }
 )
 
 ## App header and footer ----
@@ -233,8 +200,7 @@ app <- init(
     tm_outliers(
       "Outliers",
       outlier_var = pick_adlb_outlier,
-      categorical_var = pick_adlb_categorical,
-      transformators = list(outlier_adlb_transform)
+      categorical_var = pick_adlb_categorical
     ),
     tm_g_association(
       ref = pick_adsl_age,
