@@ -67,7 +67,8 @@
       "URL": "https://github.com/HenrikBengtsson/R.methodsS3",
       "BugReports": "https://github.com/HenrikBengtsson/R.methodsS3/issues",
       "NeedsCompilation": "no",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "R.oo": {
       "Package": "R.oo",
@@ -94,7 +95,8 @@
       "URL": "https://henrikbengtsson.github.io/R.oo/, https://github.com/HenrikBengtsson/R.oo",
       "BugReports": "https://github.com/HenrikBengtsson/R.oo/issues",
       "NeedsCompilation": "no",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "R.utils": {
       "Package": "R.utils",
@@ -124,7 +126,8 @@
       "URL": "https://henrikbengtsson.github.io/R.utils/, https://github.com/HenrikBengtsson/R.utils",
       "BugReports": "https://github.com/HenrikBengtsson/R.utils/issues",
       "NeedsCompilation": "no",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "R6": {
       "Package": "R6",
@@ -167,7 +170,8 @@
       "Description": "Provides color schemes for maps (and other graphics) designed by Cynthia Brewer as described at http://colorbrewer2.org.",
       "License": "Apache License 2.0",
       "NeedsCompilation": "no",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "Rcpp": {
       "Package": "Rcpp",
@@ -321,7 +325,8 @@
       "NeedsCompilation": "no",
       "Author": "Hadley Wickham [aut, cre]",
       "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "backports": {
       "Package": "backports",
@@ -364,7 +369,8 @@
       "URL": "https://www.rforge.net/base64enc",
       "BugReports": "https://github.com/s-u/base64enc/issues",
       "NeedsCompilation": "yes",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "bigD": {
       "Package": "bigD",
@@ -408,7 +414,8 @@
       "NeedsCompilation": "yes",
       "Author": "Steve Dutky [aut] (S original; then (after MM's port) revised and modified), Martin Maechler [cre, aut] (Initial R port; tweaks, ORCID: <https://orcid.org/0000-0002-8685-9910>)",
       "Maintainer": "Martin Maechler <maechler@stat.math.ethz.ch>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "bsicons": {
       "Package": "bsicons",
@@ -1264,10 +1271,14 @@
       "Collate": "'data.R' 'format_value.R' 'matrix_form.R' 'generics.R' 'labels.R' 'mpf_exporters.R' 'package.R' 'page_size.R' 'pagination.R' 'tostring.R' 'utils.R' 'zzz.R'",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "formatters",
-      "RemoteRef": "main",
-      "RemoteSha": "2caeee154fe2bda9a4d7d0208b9674aca8b6a5dc"
+      "RemoteUsername": "insightsengineering",
+      "RemotePkgRef": "insightsengineering/formatters@2caeee154fe2bda9a4d7d0208b9674aca8b6a5dc",
+      "RemoteRef": "2caeee154fe2bda9a4d7d0208b9674aca8b6a5dc",
+      "RemoteSha": "2caeee154fe2bda9a4d7d0208b9674aca8b6a5dc",
+      "NeedsCompilation": "no",
+      "Author": "Gabriel Becker [aut] (original creator of the package), Adrian Waddell [aut], Davide Garolini [aut] (ORCID: <https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (ORCID: <https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [ctb] (ORCID: <https://orcid.org/0009-0005-2083-1105>), Joe Zhu [aut, cre] (ORCID: <https://orcid.org/0000-0001-7566-2787>), F. Hoffmann-La Roche AG [cph, fnd]",
+      "Maintainer": "Joe Zhu <joe.zhu@roche.com>"
     },
     "fs": {
       "Package": "fs",
@@ -2066,7 +2077,8 @@
         "stats",
         "graphics"
       ],
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "later": {
       "Package": "later",
@@ -2134,7 +2146,8 @@
       "NeedsCompilation": "yes",
       "Author": "Hadley Wickham [aut, cre], RStudio [cph]",
       "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "learnr": {
       "Package": "learnr",
@@ -3105,10 +3118,14 @@
       "Roxygen": "list(markdown = TRUE)",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rlistings",
-      "RemoteRef": "main",
-      "RemoteSha": "26f3a7dc4f6220beed0abff68543d5746ee8b911"
+      "RemoteUsername": "insightsengineering",
+      "RemotePkgRef": "insightsengineering/rlistings@26f3a7dc4f6220beed0abff68543d5746ee8b911",
+      "RemoteRef": "26f3a7dc4f6220beed0abff68543d5746ee8b911",
+      "RemoteSha": "26f3a7dc4f6220beed0abff68543d5746ee8b911",
+      "NeedsCompilation": "no",
+      "Author": "Gabriel Becker [aut] (original creator of the package), Adrian Waddell [aut], Joe Zhu [aut, cre] (ORCID: <https://orcid.org/0000-0001-7566-2787>), Davide Garolini [aut] (ORCID: <https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (ORCID: <https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [ctb] (ORCID: <https://orcid.org/0009-0005-2083-1105>), F. Hoffmann-La Roche AG [cph, fnd]",
+      "Maintainer": "Joe Zhu <joe.zhu@roche.com>"
     },
     "rmarkdown": {
       "Package": "rmarkdown",
@@ -3202,10 +3219,10 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.16.9005",
+      "Version": "0.6.16.9006",
       "Source": "GitHub",
       "Title": "Reporting Tables",
-      "Date": "2026-08-05",
+      "Date": "2026-08-17",
       "Authors@R": "c( person(\"Gabriel\", \"Becker\", , \"gabembecker@gmail.com\", role = \"aut\", comment = \"Original creator of the package\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gmail.com\", role = \"aut\"), person(\"Daniel\", \"Sabanés Bové\", , \"daniel.sabanes_bove@rconis.com\", role = \"ctb\"), person(\"Maximilian\", \"Mordig\", , \"maximilian_oliver.mordig@roche.com\", role = \"ctb\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-1445-1369\")), person(\"Emily\", \"de la Rua\", , \"emilydelarua@gmail.com\", role = \"aut\", comment = c(ORCID = \"0009-0000-8738-5561\")), person(\"Abinaya\", \"Yogasekaram\", , \"ayogasek@gmail.com\", role = \"ctb\", comment = c(ORCID = \"0009-0005-2083-1105\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"David\", \"Munoz Tord\", , \"david.munoztord@mailbox.org\", role = \"ctb\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Reporting tables often have structure that goes beyond simple rectangular data. The 'rtables' package provides a framework for declaring complex multi-level tabulations and then applying them to data. This framework models both tabulation and the resulting tables as hierarchical, tree-like objects which support sibling sub-tables, arbitrary splitting or grouping of data in row and column dimensions, cells containing multiple values, and the concept of contextual summary computations. A convenient pipe-able interface is provided for declaring table layouts and the corresponding computations, and then applying them to data.",
       "License": "Apache License 2.0 | file LICENSE",
@@ -3247,10 +3264,14 @@
       "Collate": "'00tabletrees.R' 'Viewer.R' 'argument_conventions.R' 'as_html.R' 'utils.R' 'colby_constructors.R' 'compare_rtables.R' 'format_rcell.R' 'indent.R' 'make_subset_expr.R' 'custom_split_funs.R' 'default_split_funs.R' 'make_split_fun.R' 'summary.R' 'package.R' 'tree_accessors.R' 'tt_afun_utils.R' 'tt_as_df.R' 'tt_compare_tables.R' 'tt_compatibility.R' 'tt_dotabulation.R' 'tt_paginate.R' 'tt_pos_and_access.R' 'tt_showmethods.R' 'tt_sort.R' 'tt_test_afuns.R' 'tt_toString.R' 'tt_export.R' 'index_footnotes.R' 'tt_from_df.R' 'validate_table_struct.R' 'zzz_constants.R'",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables",
-      "RemoteRef": "main",
-      "RemoteSha": "d32421413cde46719c8d532b8445eb05d1e4a6ed"
+      "RemoteUsername": "insightsengineering",
+      "RemotePkgRef": "insightsengineering/rtables@6ccd458fe98f71df969a2d068019e8bff78e2c8d",
+      "RemoteRef": "6ccd458fe98f71df969a2d068019e8bff78e2c8d",
+      "RemoteSha": "6ccd458fe98f71df969a2d068019e8bff78e2c8d",
+      "NeedsCompilation": "no",
+      "Author": "Gabriel Becker [aut] (Original creator of the package), Adrian Waddell [aut], Daniel Sabanés Bové [ctb], Maximilian Mordig [ctb], Davide Garolini [aut] (ORCID: <https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (ORCID: <https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [ctb] (ORCID: <https://orcid.org/0009-0005-2083-1105>), Joe Zhu [aut, cre] (ORCID: <https://orcid.org/0000-0001-7566-2787>), David Munoz Tord [ctb], F. Hoffmann-La Roche AG [cph, fnd]",
+      "Maintainer": "Joe Zhu <joe.zhu@roche.com>"
     },
     "rtables.officer": {
       "Package": "rtables.officer",
@@ -3300,10 +3321,14 @@
       "Collate": "'add_flextable_separators.R' 'as_flextable.R' 'export_as_docx.R' 'package.R' 'theme_defaults.R' 'apply_styling.R' 'extract_from_flx.R'",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "rtables.officer",
-      "RemoteRef": "main",
-      "RemoteSha": "64568b04edb0969c477aaa79bf3d14104b9674a9"
+      "RemoteUsername": "insightsengineering",
+      "RemotePkgRef": "insightsengineering/rtables.officer@64568b04edb0969c477aaa79bf3d14104b9674a9",
+      "RemoteRef": "64568b04edb0969c477aaa79bf3d14104b9674a9",
+      "RemoteSha": "64568b04edb0969c477aaa79bf3d14104b9674a9",
+      "NeedsCompilation": "no",
+      "Author": "Gabriel Becker [ctb], Davide Garolini [aut] (ORCID: <https://orcid.org/0000-0002-1445-1369>), Emily de la Rua [aut] (ORCID: <https://orcid.org/0009-0000-8738-5561>), Abinaya Yogasekaram [aut] (ORCID: <https://orcid.org/0009-0005-2083-1105>), Joe Zhu [aut, cre] (ORCID: <https://orcid.org/0000-0001-7566-2787>), F. Hoffmann-La Roche AG [cph, fnd]",
+      "Maintainer": "Joe Zhu <joe.zhu@roche.com>"
     },
     "rvest": {
       "Package": "rvest",
@@ -4000,10 +4025,14 @@
       "Collate": "'TealAppDriver.R' 'after.R' 'checkmate.R' 'decorators-helpers.R' 'dummy_functions.R' 'include_css_js.R' 'modules.R' 'init.R' 'module_bookmark_manager.R' 'module_data_summary.R' 'module_filter_data.R' 'module_filter_manager.R' 'module_nested_tabs.R' 'module_session_info.R' 'module_snapshot_manager.R' 'module_source_code.R' 'module_teal.R' 'module_teal_lockfile.R' 'module_teal_reporter.R' 'module_transform_data.R' 'module_validate_error.R' 'reporter_previewer_module.R' 'teal.R' 'teal_data_module.R' 'teal_data_module-eval_code.R' 'teal_data_module-within.R' 'teal_data_utils.R' 'teal_modifiers.R' 'teal_slices-store.R' 'teal_slices.R' 'teal_transform_module.R' 'utils.R' 'validate_inputs.R' 'validations.R' 'zzz.R'",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
-      "RemoteRef": "main",
-      "RemoteSha": "7b054f6e03bdcdead7e7360a5794045a244d31db"
+      "RemoteUsername": "insightsengineering",
+      "RemotePkgRef": "insightsengineering/teal@7b054f6e03bdcdead7e7360a5794045a244d31db",
+      "RemoteRef": "7b054f6e03bdcdead7e7360a5794045a244d31db",
+      "RemoteSha": "7b054f6e03bdcdead7e7360a5794045a244d31db",
+      "NeedsCompilation": "no",
+      "Author": "Dony Unardi [aut, cre], Dawid Kaledkowski [aut] (ORCID: <https://orcid.org/0000-0001-9533-457X>), Pawel Rucki [aut], Aleksander Chlebowski [aut] (ORCID: <https://orcid.org/0000-0001-5018-6294>), Andre Verissimo [aut] (ORCID: <https://orcid.org/0000-0002-2212-339X>), Kartikeya Kirar [aut], Vedha Viyash [aut], Marcin Kosinski [aut], Adrian Waddell [aut], Nina Qi [rev], Nikolas Burkoff [aut], Mahmoud Hallal [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], Tadeusz Lewandowski [aut], Chendi Liao [rev], F. Hoffmann-La Roche AG [cph, fnd], Maximilian Mordig [ctb]",
+      "Maintainer": "Dony Unardi <unardid@gene.com>"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -4049,10 +4078,14 @@
       "Collate": "'qenv-c.R' 'qenv-class.R' 'qenv-errors.R' 'qenv-concat.R' 'qenv-constructor.R' 'qenv-eval_code.R' 'qenv-extract.R' 'qenv-get_code.R' 'qenv-get_env.R' 'qenv-get_messages.r' 'qenv-get_outputs.R' 'qenv-get_var.R' 'qenv-get_warnings.R' 'qenv-join.R' 'qenv-length.R' 'qenv-show.R' 'qenv-within.R' 'teal.code-package.R' 'utils-get_code_dependency.R' 'utils.R'",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
-      "RemoteRef": "main",
-      "RemoteSha": "5ae5ec15f83bc140e93ec667d9971b8a4c4d3259"
+      "RemoteUsername": "insightsengineering",
+      "RemotePkgRef": "insightsengineering/teal.code@5ae5ec15f83bc140e93ec667d9971b8a4c4d3259",
+      "RemoteRef": "5ae5ec15f83bc140e93ec667d9971b8a4c4d3259",
+      "RemoteSha": "5ae5ec15f83bc140e93ec667d9971b8a4c4d3259",
+      "NeedsCompilation": "no",
+      "Author": "Dawid Kaledkowski [aut], Aleksander Chlebowski [aut], Marcin Kosinski [aut], Pawel Rucki [aut], Nikolas Burkoff [aut], Mahmoud Hallal [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], Chendi Liao [rev], Dony Unardi [rev, cre], F. Hoffmann-La Roche AG [cph, fnd]",
+      "Maintainer": "Dony Unardi <unardid@gene.com>"
     },
     "teal.data": {
       "Package": "teal.data",
@@ -4097,10 +4130,14 @@
       "Collate": "'cdisc_data.R' 'data.R' 'formatters_var_labels.R' 'deprecated.R' 'dummy_function.R' 'join_key.R' 'join_keys-c.R' 'join_keys-extract.R' 'join_keys-names.R' 'join_keys-parents.R' 'join_keys-print.R' 'join_keys-utils.R' 'join_keys.R' 'teal.data.R' 'teal_data-class.R' 'teal_data-constructor.R' 'teal_data-extract.R' 'teal_data-get_code.R' 'teal_data-names.R' 'teal_data-show.R' 'topological_sort.R' 'verify.R' 'zzz.R'",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
-      "RemoteRef": "main",
-      "RemoteSha": "95b9e2787da4ee1f0f232fa2561ac6b8f7a2e844"
+      "RemoteUsername": "insightsengineering",
+      "RemotePkgRef": "insightsengineering/teal.data@95b9e2787da4ee1f0f232fa2561ac6b8f7a2e844",
+      "RemoteRef": "95b9e2787da4ee1f0f232fa2561ac6b8f7a2e844",
+      "RemoteSha": "95b9e2787da4ee1f0f232fa2561ac6b8f7a2e844",
+      "NeedsCompilation": "no",
+      "Author": "Dawid Kaledkowski [aut] (ORCID: <https://orcid.org/0000-0001-9533-457X>), Aleksander Chlebowski [aut] (ORCID: <https://orcid.org/0000-0001-5018-6294>), Marcin Kosinski [aut], Andre Verissimo [aut] (ORCID: <https://orcid.org/0000-0002-2212-339X>), Pawel Rucki [aut], Mahmoud Hallal [aut], Nikolas Burkoff [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], Chendi Liao [rev], Dony Unardi [rev, cre], F. Hoffmann-La Roche AG [cph, fnd]",
+      "Maintainer": "Dony Unardi <unardid@gene.com>"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -4138,10 +4175,14 @@
       "Roxygen": "list(markdown = TRUE)",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.logger",
-      "RemoteRef": "main",
-      "RemoteSha": "6d8088ab58294443c4777272963033c12dd63cb6"
+      "RemoteUsername": "insightsengineering",
+      "RemotePkgRef": "insightsengineering/teal.logger@6d8088ab58294443c4777272963033c12dd63cb6",
+      "RemoteRef": "6d8088ab58294443c4777272963033c12dd63cb6",
+      "RemoteSha": "6d8088ab58294443c4777272963033c12dd63cb6",
+      "NeedsCompilation": "no",
+      "Author": "Dawid Kaledkowski [aut] (ORCID: <https://orcid.org/0000-0001-9533-457X>), Dony Unardi [rev, cre], Konrad Pagacz [aut], F. Hoffmann-La Roche AG [cph, fnd]",
+      "Maintainer": "Dony Unardi <unardid@gene.com>"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
@@ -4208,10 +4249,14 @@
       "Roxygen": "list(markdown = TRUE)",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
-      "RemoteRef": "main",
-      "RemoteSha": "38dfd9e6d23316bf81ae7f5528e0625809d8b63b"
+      "RemoteUsername": "insightsengineering",
+      "RemotePkgRef": "insightsengineering/teal.reporter@38dfd9e6d23316bf81ae7f5528e0625809d8b63b",
+      "RemoteRef": "38dfd9e6d23316bf81ae7f5528e0625809d8b63b",
+      "RemoteSha": "38dfd9e6d23316bf81ae7f5528e0625809d8b63b",
+      "NeedsCompilation": "no",
+      "Author": "Dawid Kaledkowski [aut] (ORCID: <https://orcid.org/0000-0001-9533-457X>), Kartikeya Kirar [aut] (ORCID: <https://orcid.org/0009-0005-1258-4757>), Marcin Kosinski [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Mahmoud Hallal [aut], Chendi Liao [rev], Dony Unardi [rev, cre], F. Hoffmann-La Roche AG [cph, fnd]",
+      "Maintainer": "Dony Unardi <unardid@gene.com>"
     },
     "teal.slice": {
       "Package": "teal.slice",
@@ -4270,10 +4315,14 @@
       "Roxygen": "list(markdown = TRUE)",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
-      "RemoteRef": "main",
-      "RemoteSha": "7732971c3cf971864e912a6d168faeb5b19e0d71"
+      "RemoteUsername": "insightsengineering",
+      "RemotePkgRef": "insightsengineering/teal.slice@7732971c3cf971864e912a6d168faeb5b19e0d71",
+      "RemoteRef": "7732971c3cf971864e912a6d168faeb5b19e0d71",
+      "RemoteSha": "7732971c3cf971864e912a6d168faeb5b19e0d71",
+      "NeedsCompilation": "no",
+      "Author": "Dawid Kaledkowski [aut] (ORCID: <https://orcid.org/0000-0001-9533-457X>), Pawel Rucki [aut], Aleksander Chlebowski [aut] (ORCID: <https://orcid.org/0000-0001-5018-6294>), Andre Verissimo [aut] (ORCID: <https://orcid.org/0000-0002-2212-339X>), Lluís Revilla Sancho [aut] (ORCID: <https://orcid.org/0000-0001-9747-2570>), Dony Unardi [rev, cre], Kartikeya Kirar [aut], Marcin Kosinski [aut], Chendi Liao [aut], Andrew Bates [aut], Mahmoud Hallal [aut], Nikolas Burkoff [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], F. Hoffmann-La Roche AG [cph, fnd]",
+      "Maintainer": "Dony Unardi <unardid@gene.com>"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
@@ -4331,10 +4380,14 @@
       "Roxygen": "list(markdown = TRUE)",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
-      "RemoteRef": "main",
-      "RemoteSha": "e6b9622c680b269c46e37755461a77b149c842e0"
+      "RemoteUsername": "insightsengineering",
+      "RemotePkgRef": "insightsengineering/teal.widgets@e6b9622c680b269c46e37755461a77b149c842e0",
+      "RemoteRef": "e6b9622c680b269c46e37755461a77b149c842e0",
+      "RemoteSha": "e6b9622c680b269c46e37755461a77b149c842e0",
+      "NeedsCompilation": "no",
+      "Author": "Dawid Kaledkowski [aut], Pawel Rucki [aut], Mahmoud Hallal [aut], Nikolas Burkoff [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], Junlue Zhao [aut], Dony Unardi [aut, cre], F. Hoffmann-La Roche AG [cph, fnd]",
+      "Maintainer": "Dony Unardi <unardid@gene.com>"
     },
     "textshaping": {
       "Package": "textshaping",
@@ -4611,7 +4664,8 @@
       "URL": "https://www.rforge.net/uuid",
       "BugReports": "https://github.com/s-u/uuid/issues",
       "NeedsCompilation": "yes",
-      "Repository": "CRAN"
+      "Repository": "RSPM",
+      "Encoding": "UTF-8"
     },
     "vctrs": {
       "Package": "vctrs",
@@ -4844,9 +4898,10 @@
         "R (>= 2.10.0)"
       ],
       "License": "GPL (>= 2)",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "NeedsCompilation": "no",
-      "Author": "David B. Dahl [aut], David Scott [aut, cre], Charles Roosen [aut], Arni Magnusson [aut], Jonathan Swinton [aut], Ajay Shah [ctb], Arne Henningsen [ctb], Benno Puetz [ctb], Bernhard Pfaff [ctb], Claudio Agostinelli [ctb], Claudius Loehnert [ctb], David Mitchell [ctb], David Whiting [ctb], Fernando da Rosa [ctb], Guido Gay [ctb], Guido Schulz [ctb], Ian Fellows [ctb], Jeff Laake [ctb], John Walker [ctb], Jun Yan [ctb], Liviu Andronic [ctb], Markus Loecher [ctb], Martin Gubri [ctb], Matthieu Stigler [ctb], Robert Castelo [ctb], Seth Falcon [ctb], Stefan Edwards [ctb], Sven Garbade [ctb], Uwe Ligges [ctb]"
+      "Author": "David B. Dahl [aut], David Scott [aut, cre], Charles Roosen [aut], Arni Magnusson [aut], Jonathan Swinton [aut], Ajay Shah [ctb], Arne Henningsen [ctb], Benno Puetz [ctb], Bernhard Pfaff [ctb], Claudio Agostinelli [ctb], Claudius Loehnert [ctb], David Mitchell [ctb], David Whiting [ctb], Fernando da Rosa [ctb], Guido Gay [ctb], Guido Schulz [ctb], Ian Fellows [ctb], Jeff Laake [ctb], John Walker [ctb], Jun Yan [ctb], Liviu Andronic [ctb], Markus Loecher [ctb], Martin Gubri [ctb], Matthieu Stigler [ctb], Robert Castelo [ctb], Seth Falcon [ctb], Stefan Edwards [ctb], Sven Garbade [ctb], Uwe Ligges [ctb]",
+      "Encoding": "UTF-8"
     },
     "yaml": {
       "Package": "yaml",
