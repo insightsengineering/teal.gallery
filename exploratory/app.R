@@ -41,76 +41,66 @@ data <- within(data, {
 
 join_keys(data) <- default_cdisc_join_keys[c("ADSL", "ADRS", "ADLB", "ADLBPCA")]
 
-## Reusable Configuration For Modules
-ADSL <- data[["ADSL"]]
-ADRS <- data[["ADRS"]]
-ADLB <- data[["ADLB"]]
-ADLBPCA <- data[["ADLBPCA"]]
-
-fact_vars_adsl <- names(Filter(isTRUE, sapply(ADSL, is.factor)))
-numeric_vars_adsl <- names(Filter(isTRUE, sapply(ADSL, is.numeric)))
-
 pick_adsl_age <- picks(
   datasets("ADSL", "ADSL"),
-  variables(choices = variable_choices(ADSL), selected = "AGE", multiple = FALSE)
+  variables(selected = "AGE", multiple = FALSE)
 )
 pick_adsl_bmrkr1 <- picks(
   datasets("ADSL", "ADSL"),
-  variables(choices = variable_choices(ADSL), selected = "BMRKR1", multiple = FALSE)
+  variables(selected = "BMRKR1", multiple = FALSE)
 )
 pick_adsl_armcd <- picks(
   datasets("ADSL", "ADSL"),
-  variables(choices = variable_choices(ADSL), selected = "ARMCD", multiple = FALSE)
+  variables(selected = "ARMCD", multiple = FALSE)
 )
 pick_adsl_strata2 <- picks(
   datasets("ADSL", "ADSL"),
-  variables(choices = variable_choices(ADSL, subset = fact_vars_adsl), selected = "STRATA2", multiple = FALSE)
+  variables(is.factor, selected = "STRATA2", multiple = FALSE)
 )
 pick_adsl_armcd_multi <- picks(
   datasets("ADSL", "ADSL"),
-  variables(choices = variable_choices(ADSL), selected = "ARMCD", multiple = TRUE)
+  variables(selected = "ARMCD", multiple = TRUE)
 )
 pick_adsl_numeric_bmrkr1 <- picks(
   datasets("ADSL", "ADSL"),
-  variables(choices = variable_choices(ADSL, subset = numeric_vars_adsl), selected = "BMRKR1", multiple = FALSE)
+  variables(is.numeric, selected = "BMRKR1", multiple = FALSE)
 )
 pick_adsl_factor <- picks(
   datasets("ADSL", "ADSL"),
-  variables(choices = variable_choices(ADSL, subset = fact_vars_adsl), selected = NULL, multiple = FALSE)
+  variables(is.factor, selected = NULL, multiple = FALSE)
 )
 pick_adsl_multi <- picks(
   datasets("ADSL", "ADSL"),
-  variables(choices = variable_choices(ADSL), selected = c("AGE", "BMRKR1"), multiple = TRUE)
+  variables(selected = c("AGE", "BMRKR1"), multiple = TRUE)
 )
 
 pick_adrs_response <- picks(
   datasets("ADRS", "ADRS"),
-  variables(choices = variable_choices(ADRS, c("AVALC", "AVAL")), selected = "AVALC", multiple = FALSE)
+  variables(choices = c("AVALC", "AVAL"), selected = "AVALC", multiple = FALSE)
 )
-fact_vars_adrs <- names(Filter(isTRUE, sapply(ADRS, is.factor)))
+
 pick_adrs_response_fct <- picks(
   datasets("ADRS", "ADRS"),
-  variables(choices = variable_choices(ADRS, subset = fact_vars_adrs), selected = "AVALC", multiple = FALSE)
+  variables(choices = is.factor, selected = "AVALC", multiple = FALSE)
 )
 
 pick_adlb_aval <- picks(
   datasets("ADLB", "ADLB"),
-  variables(choices = variable_choices(ADLB, c("AVAL", "CHG", "PCHG", "ANRIND", "BASE")), selected = "AVAL", multiple = FALSE)
+  variables(choices = c("AVAL", "CHG", "PCHG", "ANRIND", "BASE"), selected = "AVAL", multiple = FALSE)
 )
 pick_adlb_outlier <- picks(
   datasets("ADLB", "ADLB"),
-  variables(choices = variable_choices(ADLB, c("AVAL", "CHG", "PCHG", "BASE")), selected = "AVAL", multiple = FALSE)
+  variables(choices = c("AVAL", "CHG", "PCHG", "BASE"), selected = "AVAL", multiple = FALSE)
 )
 pick_adlb_categorical <- picks(
   datasets("ADLB", "ADLB"),
-  variables(choices = variable_choices(ADLB, c("PARAM", "PARAMCD")), selected = NULL, multiple = FALSE)
+  variables(choices = c("PARAM", "PARAMCD"), selected = NULL, multiple = FALSE)
 )
 
-numeric_vars_adlbpca <- names(Filter(isTRUE, sapply(ADLBPCA, is.numeric)))
 pick_adlbpca <- picks(
   datasets("ADLBPCA", "ADLBPCA"),
   variables(
-    choices = variable_choices(ADLBPCA, subset = numeric_vars_adlbpca),
+    choices = is.numeric,
     selected = c("ALT - WEEK 5 DAY 36", "CRP - WEEK 5 DAY 36", "IGA - WEEK 5 DAY 36"),
     multiple = TRUE
   )
@@ -128,7 +118,7 @@ adlb_lab_filter <- teal_transform_filter(
   picks(
     datasets("ADLB", "ADLB"),
     variables(choices = "PARAMCD", selected = "PARAMCD", multiple = FALSE, fixed = TRUE),
-    values(selected = levels(ADLB$PARAMCD)[1], multiple = FALSE)
+    values(selected = "ALT", multiple = FALSE)
   ),
   label = "Select lab"
 )
@@ -136,7 +126,7 @@ adlb_visit_filter <- teal_transform_filter(
   picks(
     datasets("ADLB", "ADLB"),
     variables(choices = "AVISIT", selected = "AVISIT", multiple = FALSE, fixed = TRUE),
-    values(selected = levels(ADLB$AVISIT)[1], multiple = FALSE)
+    values(selected = "SCREENING", multiple = FALSE)
   ),
   label = "Select visit"
 )
