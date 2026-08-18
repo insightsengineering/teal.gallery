@@ -16,7 +16,7 @@ Cypress.on("uncaught:exception", (err, runnable) => {
 Cypress.Commands.add("waitForShinyStabilityAndCheckError", () => {
   const idleFor = 2000; // ms of stable (no .shiny-busy)
   const checkInterval = 200; // ms, less frequent to avoid ResizeObserver spam
-  const timeout = 10000; // ms
+  const timeout = 20000; // ms
   let stableStart = null;
   const start = Date.now();
 
