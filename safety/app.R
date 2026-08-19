@@ -309,7 +309,7 @@ app <- teal::init(
         summarize_vars = variables("AVAL", "AVAL", fixed = TRUE),
         paramcd = picks(
           variables("PARAMCD", "PARAMCD"),
-          values(selected = "TDOSE"),
+          values(selected = "TDOSE", multiple = TRUE),
           check_dataset = FALSE
         ),
         denominator = values(c("n", "N", "omit"), "n")
@@ -319,7 +319,7 @@ app <- teal::init(
         dataname = "ADEX",
         paramcd = picks(
           variables("PARAMCD", "PARAMCD"),
-          values(selected = "TDURD"),
+          values(selected = "TDURD", multiple = FALSE),
           check_dataset = FALSE
         ),
         col_by_var = variables(c(arm_vars, "SEX"), "SEX"),
@@ -337,7 +337,7 @@ app <- teal::init(
       dataname = "ADVS",
       arm_var = variables(arm_vars, "ACTARM"),
       id_var = variables("USUBJID", "USUBJID", fixed = TRUE),
-      by_vars = variables(c("PARAM", "AVISIT"), "PARAM"),
+      by_vars = variables(c("PARAM", "AVISIT"), "PARAM", multiple = TRUE),
       grade = variables("ANRIND", "ANRIND", fixed = TRUE),
       abnormal = list(low = "LOW", high = "HIGH")
     ),
@@ -357,7 +357,7 @@ app <- teal::init(
       arm_var = variables(arm_vars, "ACTARM"),
       paramcd = picks(
         variables("PARAMCD", "PARAMCD"),
-        values(selected = "HR"),
+        values(selected = "HR", multiple = FALSE),
         check_dataset = FALSE
       ),
       visit_var = picks(
