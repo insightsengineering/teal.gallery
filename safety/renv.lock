@@ -7886,10 +7886,10 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.13.0.9001",
+      "Version": "0.13.0.9002",
       "Source": "GitHub",
       "Title": "'teal' Modules for Standard Clinical Outputs",
-      "Date": "2026-08-18",
+      "Date": "2026-08-19",
       "Authors@R": "c( person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = c(\"aut\", \"cre\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"Jana\", \"Stoilova\", , \"jana.stoilova@roche.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\"), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\"), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = \"aut\"), person(\"Rosemary\", \"Li\", , \"li.yaqiong@gene.com\", role = \"aut\"), person(\"Heng\", \"Wang\", , \"wang.heng@gene.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Vaakesan\", \"Sundrelingam\", role = \"ctb\"), person(\"Francois\", \"Collin\", role = \"ctb\"), person(\"Imanol\", \"Zubizarreta\", role = \"ctb\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Provides user-friendly tools for creating and customizing clinical trial reports. By leveraging the 'teal' framework, this package provides 'teal' modules to easily create an interactive panel that allows for seamless adjustments to data presentation, thereby streamlining the creation of detailed and accurate reports.",
       "License": "Apache License 2.0",
