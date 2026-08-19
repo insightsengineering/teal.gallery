@@ -137,14 +137,6 @@ date_vars_adsl <-
 demog_vars_adsl <-
   names(ADSL)[!(names(ADSL) %in% c("USUBJID", "STUDYID", date_vars_adsl))]
 
-
-
-cs_arm_var <-
-  choices_selected(
-    choices = variable_choices(ADSL, subset = arm_vars),
-    selected = "ACTARM"
-  )
-
 ae_anl_vars <- names(ADAE)[startsWith(names(ADAE), "TMPFL_")]
 # flag variables for AE baskets; set to NULL if not applicable to study
 aesi_vars <-
@@ -205,98 +197,65 @@ app <- teal::init(
     tm_t_summary(
       label = "Demographic Table",
       dataname = "ADSL",
-      arm_var = cs_arm_var,
-      summarize_vars = choices_selected(
-        choices = variable_choices(ADSL, demog_vars_adsl),
-        selected = c("SEX", "AGE", "RACE")
-      )
+      arm_var = variables(arm_vars, "ACTARM"),
+      summarize_vars = variables(demog_vars_adsl, c("SEX", "AGE", "RACE"))
     ),
     modules(
       label = "Adverse Events",
       tm_t_events_summary(
         label = "AE Summary",
         dataname = "ADAE",
-        arm_var = cs_arm_var,
-        flag_var_anl = choices_selected(
-          choices = variable_choices("ADAE", ae_anl_vars),
-          selected = ae_anl_vars,
-          keep_order = TRUE
-        ),
-        flag_var_aesi = choices_selected(
-          choices = variable_choices("ADAE", aesi_vars),
-          selected = aesi_vars,
-          keep_order = TRUE
-        ),
+        arm_var = variables(arm_vars, "ACTARM"),
+        flag_var_anl = variables(ae_anl_vars, ae_anl_vars, multiple = TRUE),
+        flag_var_aesi = variables(aesi_vars, aesi_vars, multiple = TRUE),
         add_total = TRUE
       ),
       tm_t_events(
         label = "AE by Term",
         dataname = "ADAE",
-        arm_var = cs_arm_var,
-        llt = choices_selected(
-          choices = variable_choices(ADAE, c("AETERM", "AEDECOD")),
-          selected = c("AEDECOD")
-        ),
-        hlt = choices_selected(
-          choices = variable_choices(ADAE, c("AEBODSYS", "AESOC")),
-          selected = "AEBODSYS"
-        ),
+        arm_var = variables(arm_vars, "ACTARM"),
+        llt = variables(c("AETERM", "AEDECOD"), "AEDECOD"),
+        hlt = variables(c("AEBODSYS", "AESOC"), "AEBODSYS"),
         add_total = TRUE,
         event_type = "adverse event"
       ),
       tm_t_events_by_grade(
         label = "AE Table by Grade",
         dataname = "ADAE",
-        arm_var = cs_arm_var,
-        llt = choices_selected(
-          choices = variable_choices(ADAE, c("AEDECOD")),
-          selected = c("AEDECOD")
-        ),
-        hlt = choices_selected(
-          choices = variable_choices(ADAE, c("AEBODSYS", "AESOC")),
-          selected = "AEBODSYS"
-        ),
-        grade = choices_selected(
-          choices = variable_choices(ADAE, c("AETOXGR")),
-          selected = "AETOXGR"
-        ),
+        arm_var = variables(arm_vars, "ACTARM"),
+        llt = variables("AEDECOD", "AEDECOD"),
+        hlt = variables(c("AEBODSYS", "AESOC"), "AEBODSYS"),
+        grade = variables("AETOXGR", "AETOXGR"),
         add_total = TRUE
       ),
       tm_t_events_patyear(
         label = "AE Rates Adjusted for Patient-Years at Risk",
         dataname = "ADAETTE",
-        arm_var = cs_arm_var,
-        paramcd = choices_selected(
-          choices = value_choices(ADAETTE, "PARAMCD", "PARAM"),
-          selected = "AETTE1"
+        arm_var = variables(arm_vars, "ACTARM"),
+        paramcd = picks(
+          variables("PARAMCD", "PARAMCD"),
+          values(selected = "AETTE1", multiple = FALSE),
+          check_dataset = FALSE
         ),
-        events_var = choices_selected(
-          choices = variable_choices(ADAETTE, "n_events"),
-          selected = "n_events",
-          fixed = TRUE
-        )
+        events_var = variables("n_events", "n_events")
       ),
       tm_t_smq(
         label = "Adverse Events by SMQ Table",
         dataname = "ADAE",
-        arm_var = choices_selected(
-          choices = variable_choices(ADSL, subset = c(arm_vars, "SEX")),
-          selected = "ACTARM"
-        ),
+        arm_var = variables(c(arm_vars, "SEX"), "ACTARM"),
         add_total = FALSE,
-        baskets = choices_selected(
-          choices = variable_choices(ADAE, subset = grep("^(SMQ|CQ).*NAM$", names(ADAE), value = TRUE)),
-          selected = grep("^(SMQ|CQ).*NAM$", names(ADAE), value = TRUE)
+        baskets = variables(
+          function(x) grepl("^(SMQ|CQ).*NAM$", names(parent.frame()$X)[[parent.frame()$i]], value = TRUE),
+          dplyr::everything(),
+          multiple = TRUE
         ),
-        scopes = choices_selected(
-          choices = variable_choices(ADAE, subset = grep("^SMQ.*SC$", names(ADAE), value = TRUE)),
-          selected = grep("^SMQ.*SC$", names(ADAE), value = TRUE),
+        scopes = variables(
+          function(x) grep("^SMQ.*SC$", names(parent.frame()$X)[[parent.frame()$i]], value = TRUE),
+          dplyr::everything(),
+          multiple = TRUE,
           fixed = TRUE
         ),
-        llt = choices_selected(
-          choices = variable_choices(ADAE, subset = c("AEDECOD")),
-          selected = "AEDECOD"
-        )
+        llt = variables("AEDECOD", "AEDECOD")
       )
     ),
     modules(
@@ -304,62 +263,38 @@ app <- teal::init(
       tm_t_summary_by(
         label = "Labs Summary",
         dataname = "ADLB",
-        arm_var = cs_arm_var,
-        by_vars = choices_selected(
-          choices = variable_choices(ADLB, c("PARAM", "AVISIT")),
-          selected = c("PARAM", "AVISIT"),
-          fixed = TRUE
-        ),
-        summarize_vars = choices_selected(
-          choices = variable_choices(ADLB, c("AVAL", "CHG")),
-          selected = c("AVAL")
-        ),
-        paramcd = choices_selected(
-          choices = value_choices(ADLB, "PARAMCD", "PARAM"),
-          selected = "ALT"
+        arm_var = variables(arm_vars, "ACTARM"),
+        by_vars = variables(c("PARAM", "AVISIT"), c("PARAM", "AVISIT"), multiple = TRUE, fixed = TRUE),
+        summarize_vars = variables(c("AVAL", "CHG"), "AVAL"),
+        paramcd = picks(
+          variables("PARAMCD", "PARAMCD"),
+          values(selected = "ALT", multiple = TRUE),
+          check_dataset = FALSE
         )
       ),
       tm_t_shift_by_grade(
         label = "Grade Laboratory Abnormality Table",
         dataname = "ADLB",
-        arm_var = cs_arm_var,
-        paramcd = choices_selected(
-          choices = value_choices(ADLB, "PARAMCD", "PARAM"),
-          selected = "ALT"
+        arm_var = variables(c("ACTARMCD", "ACTARM"), "ACTARM"),
+        paramcd = picks(
+          variables("PARAMCD", "PARAMCD"),
+          values(selected = "ALT", multiple = TRUE),
+          check_dataset = FALSE
         ),
-        worst_flag_var = choices_selected(
-          choices = variable_choices(ADLB, subset = c(
-            "WGRLOVFL", "WGRLOFL", "WGRHIVFL", "WGRHIFL"
-          )),
-          selected = c("WGRLOVFL")
-        ),
-        worst_flag_indicator = choices_selected(
-          value_choices(ADLB, "WGRLOVFL"),
-          selected = "Y",
-          fixed = TRUE
-        ),
-        anl_toxgrade_var = choices_selected(
-          choices = variable_choices(ADLB, subset = c("ATOXGR")),
-          selected = c("ATOXGR"),
-          fixed = TRUE
-        ),
-        base_toxgrade_var = choices_selected(
-          choices = variable_choices(ADLB, subset = c("BTOXGR")),
-          selected = c("BTOXGR"),
-          fixed = TRUE
-        ),
+        worst_flag_var = variables(c("WGRLOVFL", "WGRLOFL", "WGRHIVFL", "WGRHIFL"), "WGRLOVFL"),
+        worst_flag_indicator = teal.picks::values("Y", "Y", fixed = TRUE, multiple = FALSE),
+        anl_toxgrade_var = variables("ATOXGR", "ATOXGR"),
+        base_toxgrade_var = variables("BTOXGR", "BTOXGR"),
         add_total = FALSE
       ),
       tm_t_abnormality_by_worst_grade(
         label = "Laboratory test results with highest grade post-baseline",
         dataname = "ADLB",
-        arm_var = choices_selected(
-          choices = variable_choices(ADSL, subset = c("ARM", "ARMCD")),
-          selected = "ARM"
-        ),
-        paramcd = choices_selected(
-          choices = value_choices(ADLB, "PARAMCD", "PARAM"),
-          selected = c("ALT", "CRP", "IGA")
+        arm_var = variables(c("ARM", "ARMCD"), "ARM"),
+        paramcd = picks(
+          variables("PARAMCD", "PARAMCD"),
+          values(selected = c("ALT", "CRP", "IGA")),
+          check_dataset = FALSE
         ),
         add_total = FALSE
       )
@@ -369,48 +304,30 @@ app <- teal::init(
       tm_t_summary_by(
         label = "Exposure Summary",
         dataname = "ADEX",
-        arm_var = cs_arm_var,
-        by_vars = choices_selected(
-          choices = variable_choices(ADEX, c("PARCAT2", "PARAM")),
-          selected = c("PARCAT2", "PARAM"),
-          fixed = TRUE
+        arm_var = variables(arm_vars, "ACTARM"),
+        by_vars = variables(c("PARCAT2", "PARAM"), c("PARCAT2", "PARAM"), fixed = TRUE),
+        summarize_vars = variables("AVAL", "AVAL", fixed = TRUE),
+        paramcd = picks(
+          variables("PARAMCD", "PARAMCD"),
+          values(selected = "TDOSE", multiple = TRUE),
+          check_dataset = FALSE
         ),
-        summarize_vars = choices_selected(
-          choices = variable_choices(ADEX, "AVAL"),
-          selected = c("AVAL"),
-          fixed = TRUE
-        ),
-        paramcd = choices_selected(
-          choices = value_choices(ADEX, "PARAMCD", "PARAM"),
-          selected = "TDOSE"
-        ),
-        denominator = choices_selected(
-          choices = c("n", "N", "omit"),
-          selected = "n"
-        )
+        denominator = values(c("n", "N", "omit"), "n")
       ),
       tm_t_exposure(
         label = "Duration of Exposure Table",
         dataname = "ADEX",
-        paramcd = choices_selected(
-          choices = value_choices(ADEX, "PARAMCD", "PARAM"),
-          selected = "TDURD",
-          fixed = TRUE
+        paramcd = picks(
+          variables("PARAMCD", "PARAMCD"),
+          values(selected = "TDURD", multiple = FALSE),
+          check_dataset = FALSE
         ),
-        col_by_var = choices_selected(
-          choices = variable_choices(ADEX, subset = c(arm_vars, "SEX")),
-          selected = "SEX"
-        ),
-        row_by_var = choices_selected(
-          choices = variable_choices(
-            ADEX,
-            subset = c("RACE", "REGION1", "STRATA1", "SEX")
-          ),
-          selected = "RACE"
-        ),
-        parcat = choices_selected(
-          choices = value_choices(ADEX, "PARCAT2"),
-          selected = "Drug A"
+        col_by_var = variables(c(arm_vars, "SEX"), "SEX"),
+        row_by_var = variables(c("RACE", "REGION1", "STRATA1", "SEX"), "RACE"),
+        parcat = picks(
+          variables("PARCAT2", "PARCAT2"),
+          values(selected = "Drug A"),
+          check_dataset = FALSE
         ),
         add_total = FALSE
       )
@@ -418,75 +335,51 @@ app <- teal::init(
     tm_t_abnormality(
       label = "Vital Signs Abnormality",
       dataname = "ADVS",
-      arm_var = cs_arm_var,
-      id_var = choices_selected(
-        choices = variable_choices(ADSL, subset = "USUBJID"),
-        selected = "USUBJID",
-        fixed = TRUE
-      ),
-      by_vars = choices_selected(
-        choices = variable_choices(ADVS, subset = c("PARAM", "AVISIT")),
-        selected = c("PARAM"),
-        keep_order = TRUE
-      ),
-      grade = choices_selected(
-        choices = variable_choices(ADVS, subset = "ANRIND"),
-        selected = "ANRIND",
-        fixed = TRUE
-      ),
+      arm_var = variables(arm_vars, "ACTARM"),
+      id_var = variables("USUBJID", "USUBJID", fixed = TRUE),
+      by_vars = variables(c("PARAM", "AVISIT"), "PARAM", multiple = TRUE),
+      grade = variables("ANRIND", "ANRIND", fixed = TRUE),
       abnormal = list(low = "LOW", high = "HIGH")
     ),
     tm_t_mult_events(
       label = "Concomitant Medication",
       dataname = "ADCM",
-      arm_var = cs_arm_var,
-      seq_var = choices_selected("CMSEQ", selected = "CMSEQ", fixed = TRUE),
-      hlt = choices_selected(
-        choices = variable_choices(ADCM, c(
-          "ATC1", "ATC2", "ATC3", "ATC4"
-        )),
-        selected = "ATC2"
-      ),
-      llt = choices_selected(
-        choices = variable_choices(ADCM, c("CMDECOD")),
-        selected = "CMDECOD",
-        fixed = TRUE
-      ),
+      arm_var = variables(arm_vars, "ACTARM"),
+      seq_var = variables("CMSEQ", "CMSEQ", fixed = TRUE),
+      hlt = variables("ATC2", "ATC2", fixed = TRUE),
+      llt = variables("CMDECOD", "CMDECOD", fixed = TRUE),
       add_total = TRUE,
       event_type = "treatment"
     ),
     tm_t_shift_by_arm(
       label = "ECG Shift Table by Arm",
       dataname = "ADEG",
-      arm_var = cs_arm_var,
-      paramcd = choices_selected(value_choices(ADEG, "PARAMCD"),
-        selected = "HR"
+      arm_var = variables(arm_vars, "ACTARM"),
+      paramcd = picks(
+        variables("PARAMCD", "PARAMCD"),
+        values(selected = "HR", multiple = FALSE),
+        check_dataset = FALSE
       ),
-      visit_var = choices_selected(value_choices(ADEG, "AVISIT"),
-        selected = "POST-BASELINE MINIMUM"
+      visit_var = picks(
+        variables("AVISIT", "AVISIT"),
+        values(selected = "POST-BASELINE MINIMUM"),
+        check_dataset = FALSE
       ),
-      aval_var = choices_selected(
-        variable_choices(ADEG, subset = "ANRIND"),
-        selected = "ANRIND",
-        fixed = TRUE
-      ),
-      baseline_var = choices_selected(
-        variable_choices(ADEG, subset = "BNRIND"),
-        selected = "BNRIND",
-        fixed = TRUE
-      )
+      aval_var = variables("ANRIND", "ANRIND", fixed = TRUE),
+      baseline_var = variables("BNRIND", "BNRIND", fixed = TRUE)
     ),
     tm_g_lineplot(
       label = "Line Plot",
       dataname = "ADLB",
-      group_var = cs_arm_var,
-      x = choices_selected(variable_choices(ADLB, "AVISIT"), "AVISIT", fixed = TRUE),
-      y = choices_selected(variable_choices(ADLB, c(
-        "AVAL", "BASE", "CHG", "PCHG"
-      )), "AVAL"),
-      y_unit = choices_selected(variable_choices(ADLB, "AVALU"), "AVALU", fixed = TRUE),
-      paramcd = choices_selected(variable_choices(ADLB, "PARAMCD"), "PARAMCD", fixed = TRUE),
-      param = choices_selected(value_choices(ADLB, "PARAMCD", "PARAM"), "ALT"),
+      group_var = variables(arm_vars, "ACTARM"),
+      x = variables("AVISIT", "AVISIT", fixed = TRUE),
+      y = variables(c("AVAL", "BASE", "CHG", "PCHG"), "AVAL"),
+      y_unit = variables("AVALU", "AVALU", fixed = TRUE),
+      paramcd = picks(
+        variables("PARAMCD", "PARAMCD", fixed = TRUE),
+        values(selected = "ALT", multiple = FALSE),
+        check_dataset = FALSE
+      ),
       plot_height = c(1000L, 200L, 4000L)
     )
   )

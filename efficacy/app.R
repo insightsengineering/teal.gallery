@@ -68,44 +68,22 @@ facet_vars <- c("AGEGR1", "BMRKR2", "SEX", "COUNTRY")
 cov_vars <- c("AGE", "SEX", "BMRKR1", "BMRKR2", "REGION1")
 visit_vars <- c("AVISIT", "AVISITN")
 
-cs_arm_var <- choices_selected(
-  choices = variable_choices(ADSL, subset = arm_vars),
-  selected = "ARM"
+picks_paramcd_tte <- picks(
+  check_dataset = FALSE,
+  variables("PARAMCD", "PARAMCD"),
+  values(selected = "OS", multiple = FALSE)
 )
 
-cs_strata_var <- choices_selected(
-  choices = variable_choices(ADSL, subset = strata_vars),
-  selected = "STRATA1"
+picks_paramcd_rsp <- picks(
+  check_dataset = FALSE,
+  variables("PARAMCD", "PARAMCD"),
+  values(selected = "BESRSPI", multiple = FALSE),
 )
 
-cs_facet_var <- choices_selected(
-  choices = variable_choices(ADSL, subset = facet_vars),
-  selected = "AGEGR1"
-)
-
-cs_cov_var <- choices_selected(
-  choices = variable_choices(ADSL, subset = cov_vars),
-  selected = "AGE"
-)
-
-cs_paramcd_tte <- choices_selected(
-  choices = value_choices(ADTTE, "PARAMCD", "PARAM"),
-  selected = "OS"
-)
-
-cs_paramcd_rsp <- choices_selected(
-  choices = value_choices(ADRS, "PARAMCD", "PARAM"),
-  selected = "BESRSPI"
-)
-
-cs_paramcd_qs <- choices_selected(
-  choices = value_choices(ADQS, "PARAMCD", "PARAM"),
-  selected = "FKSI-FWB"
-)
-
-cs_visit_var_qs <- choices_selected(
-  choices = variable_choices(ADQS, subset = visit_vars),
-  selected = "AVISIT"
+picks_paramcd_qs <- picks(
+  check_dataset = FALSE,
+  variables("PARAMCD", "PARAMCD"),
+  values(selected = "FKSI-FWB", multiple = FALSE)
 )
 
 fact_vars_asl <- names(Filter(isTRUE, sapply(ADSL, is.factor)))
@@ -129,7 +107,7 @@ gh_issues_page <- "https://github.com/insightsengineering/teal.gallery/issues"
 
 header <- tags$span(
   style = "display: flex; align-items: center; justify-content: space-between; margin: 10px 0 10px 0;",
-  tags$span("My first teal app", style = "font-size: 30px;"),
+  tags$span("Efficacy Analysis Teal App", style = "font-size: 30px;"),
   tags$span(
     style = "display: flex; align-items: center;",
     tags$img(src = nest_logo, alt = "NEST logo", height = "45px", style = "margin-right:10px;"),
@@ -169,64 +147,57 @@ app <- init(
     tm_t_summary(
       label = "Demographic Table",
       dataname = "ADSL",
-      arm_var = cs_arm_var,
-      summarize_vars = choices_selected(
-        choices = variable_choices(ADSL, demog_vars_asl),
-        selected = c("SEX", "AGE", "RACE")
-      )
+      arm_var = variables(arm_vars, "ARM"),
+      summarize_vars = variables(demog_vars_asl, c("SEX", "AGE", "RACE"), multiple = TRUE)
     ),
     modules(
       label = "Forest Plots",
       tm_g_forest_tte(
         label = "Survival Forest Plot",
         dataname = "ADTTE",
-        arm_var = cs_arm_var,
-        strata_var = cs_strata_var,
-        subgroup_var = cs_facet_var,
-        paramcd = cs_paramcd_tte,
+        arm_var = variables(arm_vars, "ARM"),
+        strata_var = variables(strata_vars, "STRATA1", multiple = TRUE),
+        subgroup_var = variables(facet_vars, "AGEGR1", multiple = TRUE),
+        paramcd = picks_paramcd_tte,
         plot_height = c(800L, 200L, 4000L)
       ),
       tm_g_forest_rsp(
         label = "Response Forest Plot",
         dataname = "ADRS",
-        arm_var = cs_arm_var,
-        strata_var = cs_strata_var,
-        subgroup_var = cs_facet_var,
-        paramcd = cs_paramcd_rsp,
+        arm_var = variables(arm_vars, "ARM"),
+        strata_var = variables(strata_vars, "STRATA1", multiple = TRUE),
+        subgroup_var = variables(facet_vars, "AGEGR1", multiple = TRUE),
+        paramcd = picks_paramcd_rsp,
         plot_height = c(800L, 200L, 4000L)
       )
     ),
     tm_g_km(
       label = "Kaplan Meier Plot",
       dataname = "ADTTE",
-      arm_var = cs_arm_var,
+      arm_var = variables(arm_vars, "ARM"),
       arm_ref_comp = arm_ref_comp,
-      paramcd = cs_paramcd_tte,
-      facet_var = cs_facet_var,
-      strata_var = cs_strata_var,
+      paramcd = picks_paramcd_tte,
+      facet_var = variables(facet_vars, "AGEGR1"),
+      strata_var = variables(strata_vars, "STRATA1"),
       plot_height = c(1800L, 200L, 4000L)
     ),
     tm_t_binary_outcome(
       label = "Response Table",
       dataname = "ADRS",
-      arm_var = cs_arm_var,
+      arm_var = variables(arm_vars, "ARM"),
       arm_ref_comp = arm_ref_comp,
-      paramcd = cs_paramcd_rsp,
-      strata_var = cs_strata_var,
+      paramcd = picks_paramcd_rsp,
+      strata_var = variables(strata_vars, "STRATA1"),
       rsp_table = TRUE
     ),
     tm_t_tte(
       label = "Time To Event Table",
       dataname = "ADTTE",
-      arm_var = cs_arm_var,
-      paramcd = cs_paramcd_tte,
-      strata_var = cs_strata_var,
-      time_points = choices_selected(c(182, 365, 547), 182),
-      event_desc_var = choices_selected(
-        choices = variable_choices("ADTTE", "EVNTDESC"),
-        selected = "EVNTDESC",
-        fixed = TRUE
-      )
+      arm_var = variables(arm_vars, "ARM"),
+      paramcd = picks_paramcd_tte,
+      strata_var = variables(strata_vars, "STRATA1"),
+      time_points = values(c(182, 365, 547), 182),
+      event_desc_var = variables("EVNTDESC", "EVNTDESC")
     ),
     tm_t_crosstable(
       "Cross Table",
@@ -236,48 +207,52 @@ app <- init(
     tm_t_coxreg(
       label = "Cox Reg",
       dataname = "ADTTE",
-      arm_var = cs_arm_var,
+      arm_var = variables(arm_vars, "ARM"),
       arm_ref_comp = arm_ref_comp,
-      paramcd = cs_paramcd_tte,
-      strata_var = cs_strata_var,
-      cov_var = cs_cov_var
+      paramcd = picks_paramcd_tte,
+      strata_var = variables(strata_vars, "STRATA1"),
+      cov_var = variables(cov_vars, "AGE")
     ),
     tm_t_logistic(
       label = "Logistic Reg",
       dataname = "ADRS",
-      arm_var = cs_arm_var,
+      arm_var = variables(arm_vars, "ARM"),
       arm_ref_comp = NULL,
-      paramcd = cs_paramcd_rsp,
-      cov_var = cs_cov_var
+      paramcd = picks_paramcd_rsp,
+      cov_var = variables(cov_vars, "AGE")
     ),
     tm_a_mmrm(
       label = "MMRM",
       dataname = "ADQS",
-      aval_var = choices_selected(c("AVAL", "CHG"), "AVAL"),
-      id_var = choices_selected(c("USUBJID", "SUBJID"), "USUBJID"),
-      arm_var = cs_arm_var,
-      visit_var = cs_visit_var_qs,
+      aval_var = variables(c("AVAL", "CHG"), "AVAL"),
+      id_var = variables(c("USUBJID", "SUBJID"), "USUBJID"),
+      arm_var = variables(arm_vars, "ARM"),
+      visit_var = variables(visit_vars, "AVISIT"),
       arm_ref_comp = arm_ref_comp,
-      paramcd = cs_paramcd_qs,
-      cov_var = choices_selected(c("BASE", "AGE", "SEX", "BASE:AVISIT"), NULL),
-      conf_level = choices_selected(c(0.95, 0.9, 0.8), 0.95)
+      paramcd = picks_paramcd_qs,
+      cov_var = variables(c("BASE", "AGE", "SEX", interaction_vars("BASE", "AVISIT")), NULL),
+      conf_level = values(c(0.95, 0.9, 0.8), 0.95)
     ),
     tm_t_binary_outcome(
       label = "Binary Response",
       dataname = "ADRS",
-      arm_var = cs_arm_var,
-      paramcd = cs_paramcd_rsp,
-      strata_var = cs_strata_var
+      arm_var = variables(arm_vars, "ARM"),
+      paramcd = picks_paramcd_rsp,
+      strata_var = variables(strata_vars, "STRATA1")
     ),
     tm_t_ancova(
       label = "ANCOVA",
       dataname = "ADQS",
-      avisit = choices_selected(value_choices(ADQS, "AVISIT"), "WEEK 1 DAY 8"),
-      arm_var = cs_arm_var,
+      avisit = picks(variables("AVISIT", "AVISIT"), values(selected = "WEEK 1 DAY 8"), check_dataset = FALSE),,
+      arm_var = variables(arm_vars, "ARM"),
       arm_ref_comp = arm_ref_comp,
-      aval_var = choices_selected(variable_choices(ADQS, c("AVAL", "CHG", "PCHG")), "CHG"),
-      cov_var = choices_selected(variable_choices(ADQS, c("BASE", "STRATA1", "SEX")), "STRATA1"),
-      paramcd = cs_paramcd_qs
+      aval_var = variables(c("AVAL", "CHG", "PCHG"), "CHG"),
+      cov_var = variables(c("BASE", "STRATA1", "SEX"), "STRATA1"),
+      paramcd = picks(
+        check_dataset = FALSE,
+        variables("PARAMCD", "PARAMCD"),
+        values(selected = "FKSI-FWB", multiple = TRUE)
+      )
     )
   )
 ) |>
