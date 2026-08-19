@@ -196,12 +196,8 @@ app <- init(
       arm_var = variables(arm_vars, "ARM"),
       paramcd = picks_paramcd_tte,
       strata_var = variables(strata_vars, "STRATA1"),
-      time_points = choices_selected(c(182, 365, 547), 182),
-      event_desc_var = choices_selected(
-        choices = variable_choices("ADTTE", "EVNTDESC"),
-        selected = "EVNTDESC",
-        fixed = TRUE
-      )
+      time_points = values(c(182, 365, 547), 182),
+      event_desc_var = variables("EVNTDESC", "EVNTDESC")
     ),
     tm_t_crosstable(
       "Cross Table",
