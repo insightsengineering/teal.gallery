@@ -7,7 +7,6 @@ options(
 ## Data reproducible code ----
 data <- teal_data()
 data <- within(data, {
-  library(random.cdisc.data)
   library(dplyr)
   library(tidyr)
   library(ggExtra)
