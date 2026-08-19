@@ -26,12 +26,9 @@ data <- within(data, {
   library(colourpicker)
   library(sparkline)
 
-
-  ADSL <- radsl(seed = 1)
-  ADRS <- radrs(ADSL, seed = 1)
-ADSL <- random.cdisc.data::cadsl
-ADRS <- random.cdisc.data::cadrs
-ADLB <- random.cdisc.data::cadlb
+  ADSL <- random.cdisc.data::cadsl
+  ADRS <- random.cdisc.data::cadrs
+  ADLB <- random.cdisc.data::cadlb
   ADLBPCA <- ADLB %>%
     dplyr::select(USUBJID, STUDYID, SEX, ARMCD, AVAL, AVISIT, PARAMCD) %>%
     tidyr::pivot_wider(
