@@ -1,6 +1,6 @@
 {
   "bioconductor.enabled": true,
-  "bioconductor.version": "3.22",
+  "bioconductor.version": "3.23",
   "external.libraries": [],
   "ignored.packages": [],
   "lockfile.sanitize": true,
