@@ -8333,10 +8333,10 @@
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.13.0.9000",
+      "Version": "0.13.0.9002",
       "Source": "GitHub",
       "Title": "'teal' Modules for Standard Clinical Outputs",
-      "Date": "2026-07-03",
+      "Date": "2026-08-19",
       "Authors@R": "c( person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = c(\"aut\", \"cre\")), person(\"Joe\", \"Zhu\", , \"joe.zhu@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-7566-2787\")), person(\"Jana\", \"Stoilova\", , \"jana.stoilova@roche.com\", role = \"aut\"), person(\"Davide\", \"Garolini\", , \"davide.garolini@roche.com\", role = \"aut\"), person(\"Emily\", \"de la Rua\", , \"emily.de_la_rua@contractors.roche.com\", role = \"aut\"), person(\"Abinaya\", \"Yogasekaram\", , \"abinaya.yogasekaram@contractors.roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = \"aut\"), person(\"Rosemary\", \"Li\", , \"li.yaqiong@gene.com\", role = \"aut\"), person(\"Heng\", \"Wang\", , \"wang.heng@gene.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Vaakesan\", \"Sundrelingam\", role = \"ctb\"), person(\"Francois\", \"Collin\", role = \"ctb\"), person(\"Imanol\", \"Zubizarreta\", role = \"ctb\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Provides user-friendly tools for creating and customizing clinical trial reports. By leveraging the 'teal' framework, this package provides 'teal' modules to easily create an interactive panel that allows for seamless adjustments to data presentation, thereby streamlining the creation of detailed and accurate reports.",
       "License": "Apache License 2.0",
@@ -8345,6 +8345,7 @@
       "Depends": [
         "R (>= 4.4)",
         "teal (>= 1.2.0)",
+        "teal.picks (>= 0.1.0)",
         "teal.transform (>= 0.7.2)",
         "tern (>= 0.9.9)"
       ],
@@ -8376,6 +8377,7 @@
         "teal.widgets (>= 0.5.0)",
         "tern.gee (>= 0.1.5)",
         "tern.mmrm (>= 0.3.3)",
+        "tidyselect (>= 1.2.0)",
         "utils",
         "vistime (>= 1.2.3)"
       ],
@@ -8394,9 +8396,9 @@
         "withr (>= 3.0.0)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
-      "Config/Needs/verdepcheck": "insightsengineering/teal, insightsengineering/teal.slice, insightsengineering/teal.transform, insightsengineering/tern, tidymodels/broom, mllg/checkmate, wilkelab/cowplot, tidyverse/dplyr, rstudio/DT, insightsengineering/formatters, tidyverse/ggplot2, slowkow/ggrepel, r-lib/lifecycle, daroczig/logger, insightsengineering/rlistings, rstudio/rmarkdown, insightsengineering/rtables, r-lib/scales, rstudio/shiny, daattali/shinyjs, rstudio/shinyvalidate, dreamRs/shinyWidgets, insightsengineering/teal.code, insightsengineering/teal.data, insightsengineering/teal.logger, insightsengineering/teal.reporter, insightsengineering/teal.widgets, insightsengineering/tern.gee, insightsengineering/tern.mmrm, shosaco/vistime, tidyverse/forcats, yihui/knitr, tidyverse/lubridate, insightsengineering/nestcolor, r-lib/pkgload, insightsengineering/roxy.shinylive, tidyverse/rvest, rstudio/shinytest2, r-lib/styler, r-lib/testthat, r-lib/withr",
+      "Config/Needs/verdepcheck": "insightsengineering/teal, insightsengineering/teal.slice, insightsengineering/teal.transform, insightsengineering/tern, tidymodels/broom, mllg/checkmate, wilkelab/cowplot, tidyverse/dplyr, rstudio/DT, insightsengineering/formatters, tidyverse/ggplot2, slowkow/ggrepel, r-lib/lifecycle, daroczig/logger, insightsengineering/rlistings, rstudio/rmarkdown, insightsengineering/rtables, r-lib/scales, rstudio/shiny, daattali/shinyjs, rstudio/shinyvalidate, dreamRs/shinyWidgets, insightsengineering/teal.code, insightsengineering/teal.data, insightsengineering/teal.logger, insightsengineering/teal.reporter, insightsengineering/teal.widgets, insightsengineering/tern.gee, insightsengineering/tern.mmrm, shosaco/vistime, tidyverse/forcats, yihui/knitr, tidyverse/lubridate, insightsengineering/nestcolor, r-lib/pkgload, insightsengineering/roxy.shinylive, tidyverse/rvest, rstudio/shinytest2, r-lib/styler, r-lib/testthat, r-lib/tidyselect, r-lib/withr",
       "Config/Needs/website": "insightsengineering/nesttemplate",
-      "Config/roxygen2/version": "8.0.0",
+      "Config/roxygen2/version": "8.1.0",
       "Config/testthat/edition": "3",
       "Encoding": "UTF-8",
       "Language": "en-US",
@@ -8408,7 +8410,7 @@
       "RemoteUsername": "insightsengineering",
       "RemotePkgRef": "insightsengineering/teal.modules.clinical",
       "RemoteRef": "HEAD",
-      "RemoteSha": "1d6147a61fe76c872dd96aefaf9db2739dd7e862",
+      "RemoteSha": "b4ab2d9f93972166bbb6926f2a72dc7fd71fd6ea",
       "NeedsCompilation": "no",
       "Author": "Dony Unardi [aut, cre], Joe Zhu [aut] (ORCID: <https://orcid.org/0000-0001-7566-2787>), Jana Stoilova [aut], Davide Garolini [aut], Emily de la Rua [aut], Abinaya Yogasekaram [aut], Mahmoud Hallal [aut], Dawid Kaledkowski [aut], Rosemary Li [aut], Heng Wang [aut], Pawel Rucki [aut], Nikolas Burkoff [aut], Konrad Pagacz [aut], Vaakesan Sundrelingam [ctb], Francois Collin [ctb], Imanol Zubizarreta [ctb], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dony Unardi <unardid@gene.com>"
