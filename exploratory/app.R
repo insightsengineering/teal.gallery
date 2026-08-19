@@ -174,7 +174,7 @@ app <- init(
     tm_file_viewer(
       label = "File viewer",
       input_path = list(
-        png = "https://www.r-project.org/logo/Rlogo.png",
+        png = "https://r-project.org/logo/Rlogo.png",
         Rmd = "https://raw.githubusercontent.com/tidyverse/dplyr/master/README.Rmd",
         pdf = "https://cran.r-project.org/web/packages/shinyTree/shinyTree.pdf",
         "example directory" = "./packrat/desc/"
