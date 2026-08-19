@@ -7961,9 +7961,9 @@
       "RemoteHost": "api.github.com",
       "RemoteRepo": "teal.modules.clinical",
       "RemoteUsername": "insightsengineering",
-      "RemotePkgRef": "insightsengineering/teal.modules.clinical",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "cbd7e373ee9d742ce81af708fc54cfb50a37f27f",
+      "RemotePkgRef": "insightsengineering/teal.modules.clinical@fix-shift_by_grade",
+      "RemoteRef": "fix-shift_by_grade",
+      "RemoteSha": "15578f7418a2b692abb910d536e8cd82ae0863d8",
       "NeedsCompilation": "no",
       "Author": "Dony Unardi [aut, cre], Joe Zhu [aut] (ORCID: <https://orcid.org/0000-0001-7566-2787>), Jana Stoilova [aut], Davide Garolini [aut], Emily de la Rua [aut], Abinaya Yogasekaram [aut], Mahmoud Hallal [aut], Dawid Kaledkowski [aut], Rosemary Li [aut], Heng Wang [aut], Pawel Rucki [aut], Nikolas Burkoff [aut], Konrad Pagacz [aut], Vaakesan Sundrelingam [ctb], Francois Collin [ctb], Imanol Zubizarreta [ctb], F. Hoffmann-La Roche AG [cph, fnd]",
       "Maintainer": "Dony Unardi <unardid@gene.com>"
