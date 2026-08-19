@@ -275,7 +275,7 @@ app <- teal::init(
       tm_t_shift_by_grade(
         label = "Grade Laboratory Abnormality Table",
         dataname = "ADLB",
-        arm_var = variables(arm_vars, "ACTARM"),
+        arm_var = variables(c("ACTARMCD", "ACTARM"), "ACTARM"),
         paramcd = picks(
           variables("PARAMCD", "PARAMCD"),
           values(selected = "ALT", multiple = TRUE),
@@ -377,7 +377,7 @@ app <- teal::init(
       y_unit = variables("AVALU", "AVALU", fixed = TRUE),
       paramcd = picks(
         variables("PARAMCD", "PARAMCD", fixed = TRUE),
-        values(selected = "ALT"),
+        values(selected = "ALT", multiple = FALSE),
         check_dataset = FALSE
       ),
       plot_height = c(1000L, 200L, 4000L)
