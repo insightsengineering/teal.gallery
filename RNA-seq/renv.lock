@@ -177,15 +177,14 @@
       "VignetteBuilder": "knitr",
       "Date": "2026-05-08",
       "Config/roxygen2/version": "8.0.0",
+      "Author": "Marcel Ramos [aut, cre] (ORCID: <https://orcid.org/0000-0002-3242-0582>), Martin Morgan [ctb], Hervé Pagès [ctb]",
+      "Maintainer": "Marcel Ramos <marcel.ramos@sph.cuny.edu>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "BiocBaseUtils",
       "RemoteUsername": "Bioconductor",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "79c6f035cdbe36070ca03ec8c8a32e45e5bd9abb",
-      "NeedsCompilation": "no",
-      "Author": "Marcel Ramos [aut, cre] (ORCID: <https://orcid.org/0000-0002-3242-0582>), Martin Morgan [ctb], Hervé Pagès [ctb]",
-      "Maintainer": "Marcel Ramos <marcel.ramos@sph.cuny.edu>"
+      "RemoteRepo": "BiocBaseUtils",
+      "RemoteRef": "devel",
+      "RemoteSha": "79c6f035cdbe36070ca03ec8c8a32e45e5bd9abb"
     },
     "BiocFileCache": {
       "Package": "BiocFileCache",
