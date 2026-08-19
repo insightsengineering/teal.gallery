@@ -41,39 +41,17 @@ data <- within(data, {
 join_keys(data) <- default_cdisc_join_keys[c("ADSL", "ADMH", "ADAE", "ADCM", "ADVS", "ADLB")]
 
 ## App configuration ----
-ADSL <- data[["ADSL"]]
-ADMH <- data[["ADMH"]]
-ADAE <- data[["ADAE"]]
-ADCM <- data[["ADCM"]]
-ADVS <- data[["ADVS"]]
-ADLB <- data[["ADLB"]]
-
 
 ## Define variable inputs
-aeterm_input <- choices_selected(
-  choices = variable_choices(ADAE, "AETERM"),
-  selected = "AETERM"
-)
+aeterm_input <- variables("AETERM", "AETERM")
 
-cmtrt_input <- choices_selected(
-  choices = variable_choices(ADCM, "CMTRT"),
-  selected = "CMTRT"
-)
+cmtrt_input <- variables("CMTRT", "CMTRT")
 
-cmindc_input <- choices_selected(
-  choices = variable_choices(ADCM, "CMINDC"),
-  selected = "CMINDC"
-)
+cmindc_input <- variables("CMINDC", "CMINDC")
 
-atirel_input <- choices_selected(
-  choices = variable_choices(ADCM, "ATIREL"),
-  selected = "ATIREL"
-)
+atirel_input <- variables("ATIREL", "ATIREL")
 
-cmdecod_input <- choices_selected(
-  choices = variable_choices(ADCM, "CMDECOD"),
-  selected = "CMDECOD"
-)
+cmdecod_input <- variables("CMDECOD", "CMDECOD")
 
 ## App header and footer ----
 nest_logo <- "https://raw.githubusercontent.com/insightsengineering/hex-stickers/main/PNG/nest.png"
@@ -121,27 +99,16 @@ app <- init(
       label = "Basic Info",
       dataname = "ADSL",
       patient_col = "USUBJID",
-      vars = choices_selected(
-        choices = variable_choices(ADSL),
-        selected = c("ARM", "AGE", "SEX", "COUNTRY", "RACE", "EOSSTT")
-      )
+      vars = variables(selected = c("ARM", "AGE", "SEX", "COUNTRY", "RACE", "EOSSTT"), multiple = TRUE)
     ),
     tm_t_pp_medical_history(
       label = "Medical History",
       parentname = "ADSL",
+      dataname = "ADMH",
       patient_col = "USUBJID",
-      mhterm = choices_selected(
-        choices = variable_choices(ADMH, "MHTERM"),
-        selected = "MHTERM"
-      ),
-      mhbodsys = choices_selected(
-        choices = variable_choices(ADMH, "MHBODSYS"),
-        selected = "MHBODSYS"
-      ),
-      mhdistat = choices_selected(
-        choices = variable_choices(ADMH, "MHDISTAT"),
-        selected = "MHDISTAT"
-      )
+      mhterm = variables("MHTERM", "MHTERM"),
+      mhbodsys = variables("MHBODSYS", "MHBODSYS"),
+      mhdistat = variables("MHDISTAT", "MHDISTAT"),
     ),
     tm_t_pp_prior_medication(
       label = "Prior Medication",
@@ -150,28 +117,17 @@ app <- init(
       atirel = atirel_input,
       cmdecod = cmdecod_input,
       cmindc = cmindc_input,
-      cmstdy = choices_selected(
-        choices = variable_choices(ADCM, "ASTDY"),
-        selected = "ASTDY"
-      )
+      cmstdy = variables("ASTDY", "ASTDY")
     ),
     tm_g_pp_vitals(
       label = "Vitals",
       parentname = "ADSL",
+      dataname = "ADVS",
       patient_col = "USUBJID",
       plot_height = c(600L, 200L, 2000L),
-      paramcd = choices_selected(
-        choices = variable_choices(ADVS, "PARAMCD"),
-        selected = "PARAMCD"
-      ),
-      xaxis = choices_selected(
-        choices = variable_choices(ADVS, "ADY"),
-        selected = "ADY"
-      ),
-      aval_var = choices_selected(
-        choices = variable_choices(ADVS, "AVAL"),
-        selected = "AVAL"
-      )
+      paramcd = variables("PARAMCD", "PARAMCD"),
+      xaxis = variables("ADY", "ADY"),
+      aval_var = variables("AVAL", "AVAL")
     ),
     tm_g_pp_therapy(
       label = "Therapy",
@@ -181,129 +137,58 @@ app <- init(
       atirel = atirel_input,
       cmdecod = cmdecod_input,
       cmindc = cmindc_input,
-      cmdose = choices_selected(
-        choices = variable_choices(ADCM, "CMDOSE"),
-        selected = "CMDOSE"
-      ),
+      cmdose = variables("CMDOSE", "CMDOSE"),
       cmtrt = cmtrt_input,
-      cmdosu = choices_selected(
-        choices = variable_choices(ADCM, "CMDOSU"),
-        selected = "CMDOSU"
-      ),
-      cmroute = choices_selected(
-        choices = variable_choices(ADCM, "CMROUTE"),
-        selected = "CMROUTE"
-      ),
-      cmdosfrq = choices_selected(
-        choices = variable_choices(ADCM, "CMDOSFRQ"),
-        selected = "CMDOSFRQ"
-      ),
-      cmstdy = choices_selected(
-        choices = variable_choices(ADCM, "ASTDY"),
-        selected = "ASTDY"
-      ),
-      cmendy = choices_selected(
-        choices = variable_choices(ADCM, "AENDY"),
-        selected = "AENDY"
-      )
+      cmdosu = variables("CMDOSU", "CMDOSU"),
+      cmroute = variables("CMROUTE", "CMROUTE"),
+      cmdosfrq = variables("CMDOSFRQ", "CMDOSFRQ"),
+      cmstdy = variables("ASTDY", "ASTDY"),
+      cmendy = variables("AENDY", "AENDY")
     ),
     tm_g_pp_adverse_events(
       label = "Adverse Events",
       parentname = "ADSL",
+      dataname = "ADAE",
       patient_col = "USUBJID",
       plot_height = c(600L, 200L, 2000L),
       aeterm = aeterm_input,
-      tox_grade = choices_selected(
-        choices = variable_choices(ADAE, "AETOXGR"),
-        selected = "AETOXGR"
-      ),
-      causality = choices_selected(
-        choices = variable_choices(ADAE, "AEREL"),
-        selected = "AEREL"
-      ),
-      outcome = choices_selected(
-        choices = variable_choices(ADAE, "AEOUT"),
-        selected = "AEOUT"
-      ),
-      action = choices_selected(
-        choices = variable_choices(ADAE, "AEACN"),
-        selected = "AEACN"
-      ),
-      time = choices_selected(
-        choices = variable_choices(ADAE, "ASTDY"),
-        selected = "ASTDY"
-      ),
+      tox_grade = variables("AETOXGR", "AETOXGR"),
+      causality = variables("AEREL", "AEREL"),
+      outcome = variables("AEOUT", "AEOUT"),
+      action = variables("AEACN", "AEACN"),
+      time = variables("ASTDY", "ASTDY"),
       decod = NULL
     ),
     tm_t_pp_laboratory(
       label = "Lab Values",
       parentname = "ADSL",
+      dataname = "ADLB",
       patient_col = "USUBJID",
-      paramcd = choices_selected(
-        choices = variable_choices(ADLB, "PARAMCD"),
-        selected = "PARAMCD"
-      ),
-      param = choices_selected(
-        choices = variable_choices(ADLB, "PARAM"),
-        selected = "PARAM"
-      ),
-      timepoints = choices_selected(
-        choices = variable_choices(ADLB, "ADY"),
-        selected = "ADY"
-      ),
-      anrind = choices_selected(
-        choices = variable_choices(ADLB, "ANRIND"),
-        selected = "ANRIND"
-      ),
-      aval_var = choices_selected(
-        choices = variable_choices(ADLB, "AVAL"),
-        selected = "AVAL"
-      ),
-      avalu_var = choices_selected(
-        choices = variable_choices(ADLB, "AVALU"),
-        selected = "AVALU"
-      )
+      paramcd = variables("PARAMCD", "PARAMCD"),
+      param = variables("PARAM", "PARAM"),
+      time_points = variables("ADY", "ADY"),
+      anrind = variables("ANRIND", "ANRIND"),
+      aval_var = variables("AVAL", "AVAL"),
+      avalu_var = variables("AVALU", "AVALU")
     ),
     tm_g_pp_patient_timeline(
       label = "Patient Timeline",
       parentname = "ADSL",
+      dataname_adcm = "ADCM",
+      dataname_adae = "ADAE",
       patient_col = "USUBJID",
       plot_height = c(600L, 200L, 2000L),
       font_size = c(15L, 8L, 25L),
       cmdecod = cmdecod_input,
       aeterm = aeterm_input,
-      aetime_start = choices_selected(
-        choices = variable_choices(ADAE, "ASTDTM"),
-        selected = "ASTDTM"
-      ),
-      aetime_end = choices_selected(
-        choices = variable_choices(ADAE, "AENDTM"),
-        selected = "AENDTM"
-      ),
-      dstime_start = choices_selected(
-        choices = variable_choices(ADCM, "CMASTDTM"),
-        selected = "CMASTDTM"
-      ),
-      dstime_end = choices_selected(
-        choices = variable_choices(ADCM, "CMAENDTM"),
-        selected = "CMAENDTM"
-      ),
-      aerelday_start = choices_selected(
-        choices = variable_choices(ADAE, "ASTDY"),
-        selected = "ASTDY"
-      ),
-      aerelday_end = choices_selected(
-        choices = variable_choices(ADAE, "AENDY"),
-        selected = "AENDY"
-      ),
-      dsrelday_start = choices_selected(
-        choices = variable_choices(ADCM, "ASTDY"),
-        selected = "ASTDY"
-      ),
-      dsrelday_end = choices_selected(
-        choices = variable_choices(ADCM, "AENDY"),
-        selected = "AENDY"
-      ),
+      aetime_start = variables("ASTDTM", "ASTDTM"),
+      aetime_end = variables("AENDTM", "AENDTM"),
+      dstime_start = variables("CMASTDTM", "CMASTDTM"),
+      dstime_end = variables("CMAENDTM", "CMAENDTM"),
+      aerelday_start = variables("ASTDY", "ASTDY"),
+      aerelday_end = variables("AENDY", "AENDY"),
+      dsrelday_start = variables("ASTDY", "ASTDY"),
+      dsrelday_end = variables("AENDY", "AENDY")
     )
   )
 ) |>
