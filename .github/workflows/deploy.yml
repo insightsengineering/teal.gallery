@@ -49,7 +49,7 @@ jobs:
     if: >
       !contains(github.event.commits[0].message, '[skip deploy]')
     env:
-      DEPLOY_CHANNEL: ${{ inputs.channel || 'dev' }}
+      DEPLOY_CHANNEL: ${{ inputs.channel || github.base_ref == 'main' && 'stable' || 'dev' }}
       DEPLOY_BRANCH: ${{ inputs.target-branch || github.ref }}
     strategy:
       fail-fast: false
