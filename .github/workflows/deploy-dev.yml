@@ -1,0 +1,31 @@
+---
+name: Deploy Apps to Dev 🚀
+
+on:
+  push:
+    branches:
+      - dev
+    paths:
+      - RNA-seq/**
+      - basic-teal/**
+      - delayed-data/**
+      - teal-as-shiny-module/**
+      - custom-transform/**
+      - efficacy/**
+      - exploratory/**
+      - longitudinal/**
+      - early-dev/**
+      - patient-profile/**
+      - python/**
+      - safety/**
+  workflow_dispatch:
+  schedule:
+    - cron: "12 3 * * *"
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      channel: dev
+      target-branch: refs/heads/dev
+    secrets: inherit
