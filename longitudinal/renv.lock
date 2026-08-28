@@ -5,6 +5,10 @@
       {
         "Name": "CRAN",
         "URL": "https://cloud.r-project.org"
+      },
+      {
+        "Name": "CRAN2",
+        "URL": "https://cran.rstudio.com"
       }
     ]
   },
@@ -8320,7 +8324,7 @@
       "Type": "Package",
       "Title": "Longitudinal Visualization `teal` Modules",
       "Date": "2025-12-15",
-      "Authors@R": "c( person(\"Nick\", \"Paszty\", , \"nick.paszty@gene.com\", role = c(\"aut\", \"cre\")), person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Wenyi\", \"Liu\", , \"liu.wenyi@roche.com\", role = \"aut\"), person(\"Jeffrey\", \"Tomlinson\", , \"tomlinson.jeffrey@roche.com\", role = \"aut\"), person(\"Bali\", \"Toth\", , \"toth.balazs@gene.com\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Maximilian\", \"Mordig\", role = \"ctb\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
+      "Authors@R": "c( person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = c(\"aut\", \"cre\")), person(\"Nick\", \"Paszty\", , \"nick.paszty@gene.com\", role = \"aut\"), person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Wenyi\", \"Liu\", , \"liu.wenyi@roche.com\", role = \"aut\"), person(\"Jeffrey\", \"Tomlinson\", , \"tomlinson.jeffrey@roche.com\", role = \"aut\"), person(\"Bali\", \"Toth\", , \"toth.balazs@gene.com\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Maximilian\", \"Mordig\", role = \"ctb\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Modules that produce web interfaces through which longitudinal visualizations can be dynamically modified and displayed. These included box plot, correlation plot, density distribution plot, line plot, scatter plot and spaghetti plot with accompanying summary. Data are expected in ADaM structure. Requires analysis subject level (ADSL) and analysis laboratory (ADLB) data sets. Beyond core variables, Limit of Quantification flag variable (LOQFL) is expected with levels 'Y', 'N' or NA.",
       "License": "Apache License 2.0 | file LICENSE",
       "URL": "https://insightsengineering.github.io/teal.goshawk/, https://github.com/insightsengineering/teal.goshawk/",
@@ -8330,6 +8334,7 @@
         "R (>= 3.6)",
         "shiny (>= 1.8.1)",
         "teal (>= 1.1.0)",
+        "teal.picks (>= 0.3.0)",
         "teal.transform (>= 0.7.0)"
       ],
       "Imports": [
@@ -8340,6 +8345,7 @@
         "DT (>= 0.13)",
         "ggplot2 (>= 3.4.0)",
         "grDevices",
+        "lifecycle (>= 0.2.0)",
         "methods",
         "rlang (>= 1.0.0)",
         "shinyjs (>= 2.1.0)",
@@ -8351,7 +8357,9 @@
         "teal.widgets (>= 0.5.0)"
       ],
       "Suggests": [
+        "jsonlite (>= 2.0.0)",
         "knitr (>= 1.42)",
+        "logger (>= 0.4.0)",
         "nestcolor (>= 0.1.0)",
         "rmarkdown (>= 2.23)",
         "rvest (>= 1.0.0)",
@@ -8360,7 +8368,8 @@
         "teal.data (>= 0.8.0)",
         "tern (>= 0.9.7)",
         "testthat (>= 3.2.3)",
-        "utils"
+        "utils",
+        "withr (>= 3.0.0)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
       "Remotes": "insightsengineering/goshawk",
@@ -8370,17 +8379,17 @@
       "Encoding": "UTF-8",
       "Language": "en-US",
       "Roxygen": "list(markdown = TRUE)",
-      "RoxygenNote": "7.3.3",
+      "Config/roxygen2/version": "8.1.0",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "teal.goshawk",
       "RemoteUsername": "insightsengineering",
-      "RemotePkgRef": "insightsengineering/teal.goshawk@37a23d29408076c25a810d67bdf6dd42864929e5",
-      "RemoteRef": "37a23d29408076c25a810d67bdf6dd42864929e5",
-      "RemoteSha": "37a23d29408076c25a810d67bdf6dd42864929e5",
+      "RemotePkgRef": "insightsengineering/teal.goshawk@376-picks",
+      "RemoteRef": "376-picks",
+      "RemoteSha": "46a87269004468f0319ab755cfb10e29a8b722e6",
       "NeedsCompilation": "no",
-      "Author": "Nick Paszty [aut, cre], Dawid Kaledkowski [aut], Mahmoud Hallal [aut], Pawel Rucki [aut], Wenyi Liu [aut], Jeffrey Tomlinson [aut], Bali Toth [aut], Junlue Zhao [aut], Maciej Nasinski [aut], Maximilian Mordig [ctb], F. Hoffmann-La Roche AG [cph, fnd]",
-      "Maintainer": "Nick Paszty <nick.paszty@gene.com>"
+      "Author": "Dony Unardi [aut, cre], Nick Paszty [aut], Dawid Kaledkowski [aut], Mahmoud Hallal [aut], Pawel Rucki [aut], Wenyi Liu [aut], Jeffrey Tomlinson [aut], Bali Toth [aut], Junlue Zhao [aut], Maciej Nasinski [aut], Maximilian Mordig [ctb], F. Hoffmann-La Roche AG [cph, fnd]",
+      "Maintainer": "Dony Unardi <unardid@gene.com>"
     },
     "teal.logger": {
       "Package": "teal.logger",
