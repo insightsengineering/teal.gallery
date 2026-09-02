@@ -5695,8 +5695,8 @@
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "osprey",
-      "RemoteRef": "v0.1.18",
-      "RemoteSha": "e3ac29c876851000d89de4c3449edf9c119aed87"
+      "RemoteRef": "main",
+      "RemoteSha": "6c638c657dccbb137287f4d3f257407c1d18f5c0"
     },
     "otel": {
       "Package": "otel",
