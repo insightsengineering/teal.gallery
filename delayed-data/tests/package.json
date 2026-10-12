@@ -9,8 +9,8 @@
   },
   "devDependencies": {
     "cypress": "^16.1.1",
-    "cypress-real-events": "^1.14.0",
-    "start-server-and-test": "^2.0.3"
+    "cypress-real-events": "^1.15.1",
+    "start-server-and-test": "^2.1.5"
   },
   "allowScripts": {
     "cypress@16.1.1": true
