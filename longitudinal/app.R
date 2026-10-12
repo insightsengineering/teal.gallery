@@ -10,7 +10,6 @@ data <- within(data, {
   library(DescTools)
   library(magrittr)
   library(dplyr)
-  library(random.cdisc.data)
   library(stringr)
   # optional libraries
   library(sparkline)
@@ -21,8 +20,8 @@ data <- within(data, {
   # if for example outcome variables are added to ADSL then do also add them as columns to ADLB
   # this is needed to be able to use plot splitting by outcome functionality
   set.seed(1) # @linksto ADSL ADLB
-  ADSL <- radsl(seed = 1)
-  ADLB <- radlb(ADSL, seed = 1)
+  ADSL <- random.cdisc.data::cadsl
+  ADLB <- random.cdisc.data::cadlb
 
   ################################################################################
   # BEGIN: Analyst Input Required To Modify Values Below To Reflect Study Specifics
@@ -329,6 +328,11 @@ demog_vars_asl <- function(data) {
   names(data)[!(names(data) %in% c("USUBJID", "STUDYID", date_vars_asl))]
 }
 
+demog_vars_asl_picks <- function(x) {
+  isFALSE(inherits(x, c("Date", "POSIXct", "POSIXlt"))) &&
+    !names(parent.frame()$X)[parent.frame()$i] %in% c("USUBJID", "STUDYID")
+}
+
 anl_vars1 <- c("AVAL", "BASE", "CHG", "PCHG", "AVALL2")
 anl_vars2 <- c("AVAL", "CHG", "PCHG", "AVALL2")
 box_xaxis_vars <- c("TRT01A", "TRT01P", "AVISITCD", "STUDYID")
@@ -452,7 +456,7 @@ app <- teal::init(
     ),
     module(
       "User Guide",
-      server = function(input, output, session, datasets) {},
+      server = function(input, output, session, data) {},
       ui = function(id, ...) {
         div(
           h5(
@@ -605,7 +609,7 @@ app <- teal::init(
     ),
     module(
       "Example Info Page",
-      server = function(input, output, session, datasets) {},
+      server = function(input, output, session, data) {},
       ui = function(id, ...) {
         div(
           h5(strong("Molecule:"), MOLECULE),
@@ -660,8 +664,8 @@ app <- teal::init(
     tm_t_summary(
       label = "Demographics",
       dataname = "ADSL",
-      arm_var = cs_arm_vars,
-      summarize_vars = cs_dm_vars
+      arm_var = variables(arm_vars, "TRT01A"),
+      summarize_vars = variables(demog_vars_asl_picks, dm_vars, multiple = TRUE)
     ),
     modules(
       label = "Visualizations",
