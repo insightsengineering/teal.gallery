@@ -165,13 +165,16 @@ jobs:
         run: |
           setwd("${{ matrix.directory }}")
           lockfile <- renv::lockfile_read()
-          pkg_name_structure <- ifelse("${{ env.DEPLOY_CHANNEL }}" == "stable", "%s/%s@*release", "%s/%s")
+          pkg_ref <- if ("${{ env.DEPLOY_CHANNEL }}" == "stable") {
+            package$Package
+          } else {
+            sprintf("%s/%s", package$RemoteUsername, package$Package)
+          }
           unreleased_packages <- c(
             "osprey", "hermes", "goshawk", "teal.osprey", "teal.modules.hermes", "teal.goshawk"
           )
           recorded_packages <- vapply(lockfile$Packages, function(package) {
             if (package$Source == "GitHub") {
-              pkg_ref <- sprintf(pkg_name_structure, package$RemoteUsername, package$Package)
               pkg_extra <- "released"
               if (package$Package %in% unreleased_packages) { # exceptions
                 pkg_ref <- sprintf("%s/%s", package$RemoteUsername, package$Package)
