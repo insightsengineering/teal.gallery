@@ -165,23 +165,44 @@ jobs:
         run: |
           setwd("${{ matrix.directory }}")
           lockfile <- renv::lockfile_read()
-          pkg_ref <- if ("${{ env.DEPLOY_CHANNEL }}" == "stable") {
-            package$Package
-          } else {
-            sprintf("%s/%s", package$RemoteUsername, package$Package)
-          }
-          unreleased_packages <- c(
-            "osprey", "hermes", "goshawk", "teal.osprey", "teal.modules.hermes", "teal.goshawk"
+
+          released_packages <- c(
+            "insightsengineering/teal", "insightsengineering/teal.data", "insightsengineering/teal.code",
+            "insightsengineering/teal.slice", "pharmaverse/teal.logger", "insightsengineering/teal.widgets",
+            "insightsengineering/teal.reporter", "insightsengineering/teal.transform", "insightsengineering/teal.picks",
+            "insightsengineering/teal.modules.general", "insightsengineering/teal.modules.clinical",
+            "pharmaverse/formatters", "openpharma/mmrm", "pharmaverse/rlistings",
+            "pharmaverse/rtables", "insightsengineering/rtables.officer", "pharmaverse/tern",
+            "insightsengineering/tern.gee", "insightsengineering/tern.mmrm",
+            "insightsengineering/nestcolor"
           )
+          released_packages <- setNames(released_packages, gsub('^[a-zA-Z0-9]+/', '', released_packages))
+
+          unreleased_packages <- c(
+            "insightsengineering/osprey", "insightsengineering/hermes",
+            "insightsengineering/goshawk", "insightsengineering/teal.osprey",
+            "insightsengineering/teal.modules.hermes", "insightsengineering/teal.goshawk"
+          )
+          unreleased_packages <- setNames(unreleased_packages, gsub('^[a-zA-Z0-9]+/', '', unreleased_packages))
+          all_packages <- c(released_packages, unreleased_packages)
+
+          fmt <- list(
+            stable = "{package$Package}", dev = "{pkg_ref}", "stable_unreleased" = "{pkg_ref}@*release",
+            "dev_unreleased" = "{pkg_ref}"
+          )
+
           recorded_packages <- vapply(lockfile$Packages, function(package) {
-            if (package$Source == "GitHub") {
+            if (package$Package %in% names(all_packages)) {
+              pkg_ref <- all_packages[[package$Package]]
               pkg_extra <- "released"
-              if (package$Package %in% unreleased_packages) { # exceptions
-                pkg_ref <- sprintf("%s/%s", package$RemoteUsername, package$Package)
-                pkg_extra <- "unreleased"
+              channel_name <- "${{ env.DEPLOY_CHANNEL }}"
+              if (package$Package %in% names(unreleased_packages)) {
+                channel_name <- paste0(channel_name, "_unreleased")
+                pkg_extra <- paste0("un", pkg_extra)
               }
-              cli::cli_alert_info("Recording '{package$Package}' ({pkg_extra}) with reference: '{pkg_ref}'")
-              pkg_ref
+              pkg <- glue::glue(fmt[[channel_name]])
+              cli::cli_alert_info("Recording '{package$Package}' ({pkg_extra}) with reference: '{pkg}'")
+              pkg
             } else {
               NA_character_
             }
