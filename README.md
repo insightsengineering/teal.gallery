@@ -107,26 +107,24 @@ The recommended approach is to use the Docker image from [`insightsengineering/c
 **Script to update GitHub-sourced NEST packages:**
 
 ```r
-renv_read <- renv::lockfile_read()
-ie <- purrr::keep_at(
-  renv_read$Packages,
-  \(x) grepl(
-    pattern = "teal|rtables|rlistings|osprey|modules[.]hermes|goshawk|formatters|tern|mmrm|nestcolor",
-    x = x
-  )
+# update_renv
+deploy_channel <- "stable" # "dev"
+
+yml <- yaml::read_yaml("../.github/workflows/deploy.yml")
+
+step_names <- c(
+  "Install required R packages",
+  "Install R packages using renv and update the renv snapshot",
+  "Commit and push changes 📌"
 )
-
-packages_to_install <- ie |>
-  purrr::map(\(.x) {
-    if (is.null(.x$RemoteUsername) || is.null(.x$RemoteRepo)) {
-      glue::glue("insightsengineering/", .x$Package) # default to use insightsengineering
-    } else {
-      glue::glue(.x$RemoteUsername, "/", .x$RemoteRepo)
-    }
-  }) |>
-  unlist(use.names = FALSE)
-
-renv::install(packages_to_install, prompt = FALSE)
+steps <- yml$jobs$deploy$steps[which(sapply(yml$jobs$deploy$steps, function(x) x$name) %in% step_names)]
+lapply(steps, function(x) {
+  x$run |>
+    stringr::str_replace_all("\\$\\{\\{ env.DEPLOY_CHANNEL \\}\\}", deploy_channel) |>
+    stringr::str_replace_all("\\$\\{\\{ matrix.directory \\}\\}", getwd()) |>
+    str2expression() |>
+    eval()
+})
 ```
 
 #### Local Development with containers
