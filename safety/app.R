@@ -245,12 +245,12 @@ app <- teal::init(
         arm_var = variables(c(arm_vars, "SEX"), "ACTARM"),
         add_total = FALSE,
         baskets = variables(
-          function(x) grepl("^(SMQ|CQ).*NAM$", names(parent.frame()$X)[[parent.frame()$i]], value = TRUE),
+          function(x) grepl("^(SMQ|CQ).*NAM$", names(parent.frame()$X)[[parent.frame()$i]]),
           dplyr::everything(),
           multiple = TRUE
         ),
         scopes = variables(
-          function(x) grep("^SMQ.*SC$", names(parent.frame()$X)[[parent.frame()$i]], value = TRUE),
+          function(x) grepl("^SMQ.*SC$", names(parent.frame()$X)[[parent.frame()$i]]),
           dplyr::everything(),
           multiple = TRUE,
           fixed = TRUE
