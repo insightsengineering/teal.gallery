@@ -66,9 +66,10 @@ The `deploy.yml` workflow automatically updates `renv.lock` files by:
 
 1. Restoring packages from the current lockfile
 2. Updating packages to their latest versions
-3. Detecting GitHub-sourced packages (teal, osprey, hermes, etc.)
-4. Applying the appropriate reference strategy (dev vs. stable channel)
-5. Committing changes back to the repository
+3. Detecting packages in the framework (teal, osprey, hermes, etc.)
+4. Applying the appropriate reference strategy (dev/Github vs. stable/CRAN channel)
+5. Perform end-to-end tests
+6. Committing changes back to the repository
 
 _IMPORTANT_: Although we can now test the unreleased features of the NEST packages in deployments, currently, the divergent `dev` and `main` branches must be managed and merged manually as needed to ensure that the apps work fine in both deployment channels, i.e., making sure to merge the app changes from `dev` to `main` by creating a PR.
 
@@ -97,7 +98,7 @@ This ensures reproducible package installations across development and deploymen
 
 **Dependency reference strategies:**
 - `<organization>/<repository>` — installs from the development branch (used in `dev` channel)
-- `<organization>/<repository>@*release` — installs the latest released version (used in `stable` channel)
+- CRAN / `<organization>/<repository>@*release` — installs the latest released version (used in `stable` channel)
 
 #### Manual Dependency Updates
 
