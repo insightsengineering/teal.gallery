@@ -116,7 +116,7 @@ yml <- yaml::read_yaml("../.github/workflows/deploy.yml")
 step_names <- c(
   "Install required R packages",
   "Install R packages using renv and update the renv snapshot",
-  "Commit and push changes 📌"
+  "Update renv.lock file with updated GitHub packages"
 )
 steps <- yml$jobs$deploy$steps[which(sapply(yml$jobs$deploy$steps, function(x) x$name) %in% step_names)]
 lapply(steps, function(x) {
