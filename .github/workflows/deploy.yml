@@ -181,16 +181,26 @@ jobs:
             "insightsengineering/tern.gee", "insightsengineering/tern.mmrm",
             "insightsengineering/nestcolor"
           )
-          released_packages <- setNames(released_packages, gsub('^[a-zA-Z0-9]+/', '', released_packages))
+          released_packages <- setNames(
+            released_packages,
+            vapply(pkgdepends::parse_pkg_refs(released_packages), getElement, name = "package", FUN.VALUE = character(1L))
+          )
 
           unreleased_packages <- c(
             "insightsengineering/osprey",
             "insightsengineering/goshawk", "insightsengineering/teal.osprey",
             "insightsengineering/teal.modules.hermes", "insightsengineering/teal.goshawk"
           )
-          unreleased_packages <- setNames(unreleased_packages, gsub('^[a-zA-Z0-9]+/', '', unreleased_packages))
+          unreleased_packages <- setNames(
+            unreleased_packages,
+            vapply(pkgdepends::parse_pkg_refs(unreleased_packages), getElement, name = "package", FUN.VALUE = character(1L))
+          )
 
-          bioc_packages <- list("hermes" = "insightsengineering/hermes")
+          bioc_packages <- c("hermes=git::https://git.bioconductor.org/packages/hermes@devel")
+          bioc_packages <- setNames(
+            bioc_packages,
+            vapply(pkgdepends::parse_pkg_refs(bioc_packages), getElement, name = "package", FUN.VALUE = character(1L))
+          )
           all_packages <- c(released_packages, unreleased_packages, bioc_packages)
 
           fmt <- list(
@@ -204,22 +214,22 @@ jobs:
               pkg_extra <- "released"
               pkg_source <- switch(channel_name,
                 stable = if (package$Package %in% names(bioc_packages)) "Bioconductor" else "Repository",
-                dev = "GitHub"
+                dev = "git"
               )
               # Explicit use of source forces usage of Repository for stable packages, even if the lockfile has
               # github source.
               pkg_out <- list(Package = package$Package, Source = pkg_source)
 
-              if (package$Package %in% names(unreleased_packages)) { # Force source to GitHub for unreleased packages
+              if (package$Package %in% names(unreleased_packages)) { # Force source to git for unreleased packages
                 channel_name <- paste0(channel_name, "_unreleased")
                 pkg_extra <- paste0("un", pkg_extra)
-                pkg_out$Source <- "GitHub"
+                pkg_out$Source <- "git"
               }
 
               if (pkg_out$Source %in% c("Repository", "Bioconductor")) pkg_ref <- package$Package
               pkg_ref <- sprintf(fmt[[channel_name]], pkg_ref)
 
-              if (identical(pkg_out$Source, "GitHub")) { # easier to provide reference as string for Github packages
+              if (identical(pkg_out$Source, "git")) { # easier to provide reference as string for Github packages
                 pkg_out <- pkg_ref
               }
               cli::cli_alert_info("Recording '{package$Package}' ({pkg_extra}) with reference: '{pkg_ref}'")
