@@ -6,9 +6,6 @@
 #'
 #' @param app_name The name of the app to run.
 #' @param ref The reference (commit, branch, or tag) to download from the repository. (default: "HEAD")
-#' @param base_path The base path where the downloaded files will be stored. (default: a temporary directory)
-#' @param keep_files A logical value indicating whether to keep the downloaded files after running the app.
-#' (default: FALSE)
 #' @param ... Additional arguments passed to `shiny::runApp()`.
 #'
 #' @examples
