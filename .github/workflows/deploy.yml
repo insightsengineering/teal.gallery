@@ -235,7 +235,7 @@ jobs:
         working-directory: ${{ matrix.directory }}
         run: |
           renv::install("cli", repos = c(CRAN = "https://cloud.r-project.org", CRAN2 = "https://cran.rstudio.com"))
-          lockfile_pkgs <- renv::lockfile_read()$Package
+          lockfile_pkgs <- renv::lockfile_read()$Packages
           github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
           renv::restore(clean = TRUE, exclude = "pak")
           renv::update(exclude = github_pkgs)
