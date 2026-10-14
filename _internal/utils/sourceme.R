@@ -6,6 +6,9 @@
 #'
 #' @param app_name The name of the app to run.
 #' @param ref The reference (commit, branch, or tag) to download from the repository. (default: "HEAD")
+#' @param base_path The base path where the downloaded files will be stored. (default: a temporary directory)
+#' @param keep_files A logical value indicating whether to keep the downloaded files after running the app.
+#' (default: FALSE)
 #' @param ... Additional arguments passed to `shiny::runApp()`.
 #'
 #' @examples
@@ -13,6 +16,14 @@
 restore_and_run <- function(app_name, ref = "HEAD", ...) {
   owner <- "insightsengineering"
   repo <- "teal.gallery"
+
+  if (!requireNamespace("shiny", quietly = TRUE)) {
+    stop("The 'shiny' package is required to run this function. Please install it first.")
+  }
+  if (!requireNamespace("renv", quietly = TRUE)) {
+    stop("The 'renv' package is required to run this function. Please install it first.")
+  }
+
   #' Download a GitHub repository, unzip it, and return the repository directory.
   #'
   #' This function downloads a given GitHub repository as a tar.gz file, unzips it,
