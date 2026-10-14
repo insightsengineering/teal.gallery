@@ -8,7 +8,22 @@ options(
 data <- teal_data()
 data <- within(data, {
   library(dplyr)
+  library(tidyr)
+  library(ggExtra)
+  library(ggpmisc)
+  library(ggpp)
+  library(goftest)
   library(gridExtra)
+  library(htmlwidgets)
+  library(jsonlite)
+  library(lattice)
+  library(MASS)
+  library(rlang)
+  library(rtables)
+  library(nestcolor)
+  library(broom)
+  library(colourpicker)
+  library(sparkline)
 
   ADSL <- random.cdisc.data::cadsl
   ADRS <- random.cdisc.data::cadrs
