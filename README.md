@@ -67,7 +67,7 @@ The `deploy.yml` workflow automatically updates `renv.lock` files by:
 1. Restoring packages from the current lockfile
 2. Updating packages to their latest versions
 3. Detecting packages in the framework (teal, osprey, hermes, etc.)
-4. Applying the appropriate reference strategy (dev/Github vs. stable/CRAN channel)
+4. Applying the appropriate reference strategy (dev/GitHub vs. stable/CRAN channel)
 5. Perform end-to-end tests
 6. Committing changes back to the repository
 
