@@ -67,7 +67,7 @@ restore_and_run <- function(app_name, ref = "HEAD", ...) {
       }
     }
     source(".Rprofile")
-    renv::restore(prompt = FALSE)
+    renv::restore(prompt = FALSE, clean = TRUE)
     shiny::runApp(app_directory, ...)
   }
 
