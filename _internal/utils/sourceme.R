@@ -70,12 +70,13 @@ restore_and_run <- function(app_name, ref = "HEAD", ...) {
     lockfile <- renv::lockfile_read()
     source(".Rprofile")
     renv::restore(prompt = FALSE)
-    shiny::runApp(app_directory, ...)
+    renv::install("callr", "rlang") # run the app in a separate R process to avoid conflicts with the current R session.
+    callr::r_copycat(function(...) shiny::runApp(...) , args = c(app_directory, rlang::dots_list(...)), show = TRUE)
   }
 
-  file_path <- tempfile("shinyapp", fileext = ".tar.gz")
-  file_dir <- tempfile("shinyapp")
-  on.exit(unlink(file_path))
+  file_path <- tempfile("shinyapp-", fileext = ".tar.gz")
+  file_dir <- tempfile("shinyapp-")
+  on.exit(unlink(file_path), add = TRUE)
   on.exit(unlink(file_dir, recursive = TRUE), add = TRUE)
   repo_directory <- download_apps_repo(owner, repo, ref, file_dir, file_path)
   available_apps <- get_available_apps(file.path(file_dir, repo_directory))
@@ -88,6 +89,6 @@ restore_and_run <- function(app_name, ref = "HEAD", ...) {
     )
   }
   current_dir <- getwd()
-  on.exit(setwd(current_dir))
+  on.exit(setwd(current_dir), add = TRUE)
   load_and_run_app(file.path(file_dir, repo_directory, app_name), ...)
 }
