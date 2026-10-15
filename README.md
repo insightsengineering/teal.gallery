@@ -44,7 +44,7 @@ Sys.setenv(GITHUB_PAT = "your_access_token_here")
 Running the `restore_and_run("APP_NAME")` will run the `APP_NAME` by restoring the packages using [renv](https://rstudio.github.io/renv/)
 
 ```R
-source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
+source("https://raw.githubusercontent.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
 
 # Run the basic-teal app
 restore_and_run("basic-teal")
