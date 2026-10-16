@@ -13,6 +13,14 @@
 restore_and_run <- function(app_name, ref = "HEAD", ...) {
   owner <- "insightsengineering"
   repo <- "teal.gallery"
+
+  if (!requireNamespace("shiny", quietly = TRUE)) {
+    stop("The 'shiny' package is required to run this function. Please install it first.")
+  }
+  if (!requireNamespace("renv", quietly = TRUE)) {
+    stop("The 'renv' package is required to run this function. Please install it first.")
+  }
+
   #' Download a GitHub repository, unzip it, and return the repository directory.
   #'
   #' This function downloads a given GitHub repository as a tar.gz file, unzips it,
@@ -58,18 +66,28 @@ restore_and_run <- function(app_name, ref = "HEAD", ...) {
   #' @param app_directory The directory path of the Shiny app.
   #' @param ... Additional arguments passed to `shiny::runApp()`.
   load_and_run_app <- function(app_directory, ...) {
+    new_libpath <- tempfile("local_libpaths-")
+    on.exit(unlink(new_libpath, recursive = TRUE), add = TRUE)
+    dir.create(new_libpath, showWarnings = FALSE, recursive = TRUE)
+    new_libpath <- suppressWarnings(normalizePath(new_libpath))
+    renv::install("callr", library = new_libpath) # run the app in a separate R process to avoid conflicts with the current R session.
+
     setwd(app_directory)
-    lockfile <- renv::lockfile_read()
-    pkg_name_structure <- ifelse(ref %in% c("HEAD", "main"), "%s/%s@*release", "%s/%s")
-    for (package in lockfile$Packages) {
-      if (package$Source == "GitHub") {
-        renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
-      }
-    }
-    source(".Rprofile")
-    renv::restore(prompt = FALSE)
-    renv::install("callr", "rlang") # run the app in a separate R process to avoid conflicts with the current R session.
-    callr::r_copycat(function(...) shiny::runApp(...) , args = c(app_directory, rlang::dots_list(...)), show = TRUE)
+    dots <- rlang::dots_list(...)
+    # Should not use "shiny.launch.browser" option as it may be caught by IDE (VS Code, Positron)
+    # own shims that are not available in the R process launched by callr::r()
+    dots$launch.browser <- dots$launch.browser %||% TRUE
+    callr::r(
+      function(...) {
+        source(".Rprofile")
+        renv::restore(prompt = FALSE)
+        shiny::runApp(...)
+      },
+      args = c(app_directory, dots),
+      show = TRUE,
+      libpath = NULL,
+      env = c(R_BROWSER = Sys.getenv("R_BROWSER"))
+    )
   }
 
   file_path <- tempfile("shinyapp-", fileext = ".tar.gz")
