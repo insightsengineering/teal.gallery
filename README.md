@@ -44,7 +44,7 @@ Sys.setenv(GITHUB_PAT = "your_access_token_here")
 Running the `restore_and_run("APP_NAME")` will run the `APP_NAME` by restoring the packages using [renv](https://rstudio.github.io/renv/)
 
 ```R
-source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
+source("https://raw.githubusercontent.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
 
 # Run the basic-teal app
 restore_and_run("basic-teal")
@@ -66,9 +66,10 @@ The `deploy.yml` workflow automatically updates `renv.lock` files by:
 
 1. Restoring packages from the current lockfile
 2. Updating packages to their latest versions
-3. Detecting GitHub-sourced packages (teal, osprey, hermes, etc.)
-4. Applying the appropriate reference strategy (dev vs. stable channel)
-5. Committing changes back to the repository
+3. Detecting packages in the framework (teal, osprey, hermes, etc.)
+4. Applying the appropriate reference strategy (dev/Github vs. stable/CRAN channel)
+5. Perform end-to-end tests
+6. Committing changes back to the repository
 
 _IMPORTANT_: Although we can now test the unreleased features of the NEST packages in deployments, currently, the divergent `dev` and `main` branches must be managed and merged manually as needed to ensure that the apps work fine in both deployment channels, i.e., making sure to merge the app changes from `dev` to `main` by creating a PR.
 
@@ -97,7 +98,7 @@ This ensures reproducible package installations across development and deploymen
 
 **Dependency reference strategies:**
 - `<organization>/<repository>` — installs from the development branch (used in `dev` channel)
-- `<organization>/<repository>@*release` — installs the latest released version (used in `stable` channel)
+- CRAN / `<organization>/<repository>@*release` — installs the latest released version (used in `stable` channel)
 
 #### Manual Dependency Updates
 
@@ -107,26 +108,24 @@ The recommended approach is to use the Docker image from [`insightsengineering/c
 **Script to update GitHub-sourced NEST packages:**
 
 ```r
-renv_read <- renv::lockfile_read()
-ie <- purrr::keep_at(
-  renv_read$Packages,
-  \(x) grepl(
-    pattern = "teal|rtables|rlistings|osprey|modules[.]hermes|goshawk|formatters|tern|mmrm|nestcolor",
-    x = x
-  )
+# update_renv
+deploy_channel <- "stable" # "dev"
+
+yml <- yaml::read_yaml("../.github/workflows/deploy.yml")
+
+step_names <- c(
+  "Install required R packages",
+  "Install R packages using renv and update the renv snapshot",
+  "Commit and push changes 📌"
 )
-
-packages_to_install <- ie |>
-  purrr::map(\(.x) {
-    if (is.null(.x$RemoteUsername) || is.null(.x$RemoteRepo)) {
-      glue::glue("insightsengineering/", .x$Package) # default to use insightsengineering
-    } else {
-      glue::glue(.x$RemoteUsername, "/", .x$RemoteRepo)
-    }
-  }) |>
-  unlist(use.names = FALSE)
-
-renv::install(packages_to_install, prompt = FALSE)
+steps <- yml$jobs$deploy$steps[which(sapply(yml$jobs$deploy$steps, function(x) x$name) %in% step_names)]
+lapply(steps, function(x) {
+  x$run |>
+    stringr::str_replace_all("\\$\\{\\{ env.DEPLOY_CHANNEL \\}\\}", deploy_channel) |>
+    stringr::str_replace_all("\\$\\{\\{ matrix.directory \\}\\}", getwd()) |>
+    str2expression() |>
+    eval()
+})
 ```
 
 #### Local Development with containers

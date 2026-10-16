@@ -2,34 +2,39 @@
 name: Deploy Apps 🚀
 
 on:
-  push:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
     branches:
       - main
       - dev
-      - deploy
-    paths:
-      - RNA-seq/**
-      - basic-teal/**
-      - delayed-data/**
-      - teal-as-shiny-module/**
-      - custom-transform/**
-      - efficacy/**
-      - exploratory/**
-      - longitudinal/**
-      - early-dev/**
-      - patient-profile/**
-      - python/**
-      - safety/**
   workflow_dispatch:
-  schedule:
-    - cron: "12 3 * * *"
+  workflow_call:
+    inputs:
+      channel:
+        required: false
+        type: string
+        description: "Deployment channel (stable or dev)"
+        default: dev
+      target-branch:
+        required: false
+        type: string
+        description: "Target branch to deploy (defaults to the branch that triggered the workflow)"
+
+concurrency:
+  group: deploy-${{ inputs.channel || 'dev' }}-${{ github.ref }}
+  cancel-in-progress: false
 
 env:
   SHINYAPPSIO_ACCOUNT: rinpharma
   APP_PREFIX: NEST
   GITHUB_PAT: ${{ secrets.REPO_GITHUB_TOKEN }}
-  RENV_CONFIG_PAK_ENABLED: TRUE
+  RENV_CONFIG_PAK_ENABLED: FALSE
   RENV_CONFIG_CACHE_SYMLINKS: FALSE
+  RENV_CONFIG_INSTALL_REMOTES: FALSE
 
 jobs:
   deploy:
@@ -41,9 +46,12 @@ jobs:
     name: Publish 🗞
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/insightsengineering/rstudio:2024.10.15
+      image: ghcr.io/insightsengineering/rstudio:2026.08.11
     if: >
       !contains(github.event.commits[0].message, '[skip deploy]')
+    env:
+      DEPLOY_CHANNEL: ${{ inputs.channel || github.base_ref == 'main' && 'stable' || 'dev' }}
+      DEPLOY_BRANCH: ${{ inputs.target-branch || github.ref }}
     strategy:
       fail-fast: false
       matrix:
@@ -60,24 +68,16 @@ jobs:
           - patient-profile
           - python
           - safety
-        channel:
-          - stable
-          - dev
     steps:
-      - name: Set channel related constants
+      - name: Validate deployment channel
         run: |
-          if [ "${{ matrix.channel }}" == "stable" ]; then
-            if [ "${GITHUB_REF##*/}" == "dev" ]; then
-              echo "BRANCH_NAME=main" >> $GITHUB_ENV
-            else
-              echo "BRANCH_NAME=${GITHUB_REF##*/}" >> $GITHUB_ENV
-            fi
-          elif [ "${{ matrix.channel }}" == "dev" ]; then
-            echo "BRANCH_NAME=dev" >> $GITHUB_ENV
-          else
-            echo "Unknown channel: ${{ matrix.channel }}"
+          if [ "${{ env.DEPLOY_CHANNEL }}" != "stable" ] && [ "${{ env.DEPLOY_CHANNEL }}" != "dev" ]; then
+            echo "❌ Invalid deployment channel: ${{ env.DEPLOY_CHANNEL }}"
+            echo "Allowed channels: stable, dev"
             exit 1
           fi
+          echo "✓ Deployment channel validated: ${{ env.DEPLOY_CHANNEL }}"
+          echo "branch: ${{ env.DEPLOY_BRANCH }}"
 
       - name: Disable pak for RNA-seq
         if: matrix.directory == 'RNA-seq'
@@ -96,9 +96,9 @@ jobs:
         shell: bash
 
       - name: Checkout repo 🛎
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
-          ref: "${{ env.BRANCH_NAME }}"
+          ref: "${{ env.DEPLOY_BRANCH }}"
           token: "${{ steps.github-token.outputs.token }}"
 
       - name: Add safe directory in git config
@@ -122,7 +122,6 @@ jobs:
             libgtk2.0-0 \
             libgbm-dev \
             libnotify-dev \
-            libgconf-2-4 \
             libfreetype6-dev \
             libpng-dev \
             libtiff5-dev \
@@ -136,15 +135,15 @@ jobs:
           fi
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Restore renv from cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         env:
-          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ matrix.directory }}-${{ matrix.channel }}
+          CACHE_KEY: renv-${{ runner.arch }}-${{ runner.os }}-${{ matrix.directory }}-${{ env.DEPLOY_CHANNEL }}
         with:
           path: ${{ matrix.directory }}/renv/library
           key: ${{ env.CACHE_KEY }}-${{ hashFiles(format('{0}/renv.lock', matrix.directory)) }}
@@ -153,12 +152,15 @@ jobs:
       - name: Install required R packages
         shell: Rscript {0}
         run: |
+          options(repos = c(CRAN = "https://cloud.r-project.org", CRAN2 = "https://cran.rstudio.com"))
           if (requireNamespace("pak", quietly = TRUE)) {
             pak::pak_update()
           } else {
             install.packages("pak")
           }
           pak::pkg_install("cli")
+          pak::pkg_install("glue")
+          pak::pkg_install("pkgdepends")
 
       - name: Update renv.lock file with updated GitHub packages
         shell: Rscript {0}
@@ -166,32 +168,87 @@ jobs:
         run: |
           setwd("${{ matrix.directory }}")
           lockfile <- renv::lockfile_read()
-          pkg_name_structure <- ifelse("${{ matrix.channel }}" == "stable", "%s/%s@*release", "%s/%s")
-          unreleased_packages <- c(
-            "osprey", "hermes", "goshawk", "teal.osprey", "teal.modules.hermes", "teal.goshawk"
+          channel_name <- "${{ env.DEPLOY_CHANNEL }}"
+
+          # Explicit use of packages and github references  avoids depending on a correct lockfile.
+          released_packages <- c(
+            "insightsengineering/teal", "insightsengineering/teal.data", "insightsengineering/teal.code",
+            "insightsengineering/teal.slice", "pharmaverse/teal.logger", "insightsengineering/teal.widgets",
+            "insightsengineering/teal.reporter", "insightsengineering/teal.transform", "insightsengineering/teal.picks",
+            "insightsengineering/teal.modules.general", "insightsengineering/teal.modules.clinical",
+            "pharmaverse/formatters", "openpharma/mmrm", "pharmaverse/rlistings",
+            "pharmaverse/rtables", "insightsengineering/rtables.officer", "pharmaverse/tern",
+            "insightsengineering/tern.gee", "insightsengineering/tern.mmrm",
+            "insightsengineering/nestcolor"
           )
-          recorded_packages <- vapply(lockfile$Packages, function(package) {
-            if (package$Source == "GitHub") {
-              pkg_ref <- sprintf(pkg_name_structure, package$RemoteUsername, package$Package)
+          released_packages <- setNames(
+            released_packages,
+            vapply(pkgdepends::parse_pkg_refs(released_packages), getElement, name = "package", FUN.VALUE = character(1L))
+          )
+
+          unreleased_packages <- c(
+            "insightsengineering/osprey",
+            "insightsengineering/goshawk", "insightsengineering/teal.osprey",
+            "insightsengineering/teal.modules.hermes", "insightsengineering/teal.goshawk"
+          )
+          unreleased_packages <- setNames(
+            unreleased_packages,
+            vapply(pkgdepends::parse_pkg_refs(unreleased_packages), getElement, name = "package", FUN.VALUE = character(1L))
+          )
+
+          bioc_packages <- c("hermes=git::https://git.bioconductor.org/packages/hermes@devel")
+          bioc_packages <- setNames(
+            bioc_packages,
+            vapply(pkgdepends::parse_pkg_refs(bioc_packages), getElement, name = "package", FUN.VALUE = character(1L))
+          )
+          all_packages <- c(released_packages, unreleased_packages, bioc_packages)
+
+          fmt <- list(
+            stable = "%s", dev = "%s", "stable_unreleased" = "%s@*release",
+            "dev_unreleased" = "%s"
+          )
+
+          recorded_packages <- lapply(lockfile$Packages, function(package) {
+            if (package$Package %in% names(all_packages)) {
+              pkg_ref <- all_packages[[package$Package]]
               pkg_extra <- "released"
-              if (package$Package %in% unreleased_packages) { # exceptions
-                pkg_ref <- sprintf("%s/%s", package$RemoteUsername, package$Package)
-                pkg_extra <- "unreleased"
+              pkg_source <- switch(channel_name,
+                stable = if (package$Package %in% names(bioc_packages)) "Bioconductor" else "Repository",
+                dev = "git"
+              )
+              # Explicit use of source forces usage of Repository for stable packages, even if the lockfile has
+              # github source.
+              pkg_out <- list(Package = package$Package, Source = pkg_source)
+
+              if (package$Package %in% names(unreleased_packages)) { # Force source to git for unreleased packages
+                channel_name <- paste0(channel_name, "_unreleased")
+                pkg_extra <- paste0("un", pkg_extra)
+                pkg_out$Source <- "git"
+              }
+
+              if (pkg_out$Source %in% c("Repository", "Bioconductor")) pkg_ref <- package$Package
+              pkg_ref <- sprintf(fmt[[channel_name]], pkg_ref)
+
+              if (identical(pkg_out$Source, "git")) { # easier to provide reference as string for Github packages
+                pkg_out <- pkg_ref
               }
               cli::cli_alert_info("Recording '{package$Package}' ({pkg_extra}) with reference: '{pkg_ref}'")
-              pkg_ref
+              pkg_out
             } else {
-              NA_character_
+              NA
             }
-          }, character(1L), USE.NAMES = FALSE)
-          renv::record(recorded_packages[!is.na(recorded_packages)])
+          })
+          recorded_packages <- recorded_packages[!is.na(recorded_packages)]
+          renv::record(recorded_packages)
+
       - name: Install R packages using renv and update the renv snapshot
         shell: Rscript {0}
         working-directory: ${{ matrix.directory }}
         run: |
-          lockfile_pkgs <- renv::lockfile_read()$Package
+          renv::install("cli", repos = c(CRAN = "https://cloud.r-project.org", CRAN2 = "https://cran.rstudio.com"))
+          lockfile_pkgs <- renv::lockfile_read()$Packages
           github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
-          renv::restore(clean = TRUE)
+          renv::restore(clean = TRUE, exclude = "pak")
           renv::update(exclude = github_pkgs)
           renv::snapshot()
 
@@ -200,8 +257,9 @@ jobs:
         run: cat renv.lock
 
       - name: Front end test to check if the app works fine
+        id: frontend-test
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v7
         with:
           build: npm i
           working-directory: ${{ matrix.directory }}/tests
@@ -209,17 +267,32 @@ jobs:
           wait-on: "http://localhost:3333"
           wait-on-timeout: 500
 
+      - name: Upload test artifacts on failure
+        if: failure() && steps.frontend-test.outcome == 'failure'
+        run: |
+          cd /__w/teal.gallery/teal.gallery
+          zip -r ${{ matrix.directory }}.zip ${{ matrix.directory }} -x "*/node_modules/*" "*/renv/library/*"
+          ls -lh ${{ matrix.directory }}.zip
+
+      - name: Upload failed test directory
+        if: failure() && steps.frontend-test.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-test-failure-${{ matrix.directory }}
+          path: /__w/teal.gallery/teal.gallery/${{ matrix.directory }}.zip
+          retention-days: 7
+
       - name: Install deployment-related R package dependencies
         shell: Rscript {0}
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
         working-directory: ${{ matrix.directory }}
+        if: env.DEPLOY_BRANCH == 'refs/heads/main' || env.DEPLOY_BRANCH == 'refs/heads/dev'
         run: |
           install.packages(c("BiocManager", "rsconnect"))
 
       - name: Deploy 🖨 ${{ matrix.directory }} 🎨
         shell: Rscript {0}
         working-directory: ${{ matrix.directory }}
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
+        if: env.DEPLOY_BRANCH == 'refs/heads/main' || env.DEPLOY_BRANCH == 'refs/heads/dev'
         run: |
           rsconnect::setAccountInfo(
             name = "${{ env.SHINYAPPSIO_ACCOUNT }}",
@@ -229,8 +302,8 @@ jobs:
           )
           rsconnect::deployApp(
             appFiles = c("app.R"),
-            appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}"),
-            appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ matrix.channel }}",
+            appName = rsconnect::generateAppName("${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.DEPLOY_CHANNEL }}"),
+            appTitle = "${{ env.APP_PREFIX }}_${{ matrix.directory }}_${{ env.DEPLOY_CHANNEL }}",
             account = "${{ env.SHINYAPPSIO_ACCOUNT }}",
             upload = TRUE,
             logLevel = "normal",
@@ -239,14 +312,18 @@ jobs:
           )
 
       - name: Commit and push changes 📌
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
+        if: env.DEPLOY_BRANCH == 'refs/heads/main' || env.DEPLOY_BRANCH == 'refs/heads/dev'
         run: |
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions"
           git config --global --add safe.directory /__w/teal.gallery/teal.gallery
           git fetch
           git stash
-          git checkout ${{ env.BRANCH_NAME }}
+
+          # Extract branch name from ref
+          BRANCH_NAME=$(echo "${{ env.DEPLOY_BRANCH }}" | sed 's|refs/heads/||')
+
+          git checkout $BRANCH_NAME
           git pull
           if [ -n "$(git stash list)" ]; then
             git stash apply
@@ -257,7 +334,7 @@ jobs:
           git add ${{ matrix.directory }}/renv/activate.R
           if [ -n "$(git diff --staged)" ]; then
             git commit -m "[skip deploy] Update renv.lock file for ${{ matrix.directory }} app"
-            git push origin ${{ env.BRANCH_NAME }}
+            git push origin ${{ env.DEPLOY_BRANCH }}
           else
             echo "renv.lock was not modified. Nothing to commit."
           fi

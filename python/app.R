@@ -8,12 +8,19 @@ library(ggExtra)
 library(ggpmisc)
 library(sparkline)
 
-options(shiny.useragg = FALSE)
-
 data <- teal_data_module(
   ui = function(id) {
     ns <- NS(id)
-    actionButton(ns("submit"), label = "Load data")
+    tagList(
+      h5(
+        icon("fas fa-info-circle"),
+        "Click on the button below to load the IRIS dataset and run the Python code to generate the whitened dataset."
+      ),
+      p("This will take a few seconds to run the Python code and generate the whitened dataset."),
+      p("Once the data is loaded, you can explore the data using the modules on the teal app."),
+      hr(),
+      actionButton(ns("submit"), label = "Load data"),
+    )
   },
   server = function(id) {
     moduleServer(id, function(input, output, session, python_code) {
@@ -28,7 +35,7 @@ library(reticulate)
 .python_dependencies <- c(\"pip\", \"numpy\", \"pandas\") # @linksto .py_dict
 .virtualenv_dir <- Sys.getenv(\"VIRTUALENV_NAME\", \"example_env_name\") # @linksto .py_dict
 .python_path <- Sys.getenv(\"PYTHON_PATH\") # @linksto .py_dict
-if (.python_path == \"\") .python_path <- NULL
+if (is.null(.python_path) || !nzchar(.python_path) || !file.exists(.python_path)) .python_path <- NULL
 reticulate::virtualenv_create(
   envname = .virtualenv_dir, python = .python_path
 ) # @linksto .py_dict
@@ -38,7 +45,7 @@ reticulate::virtualenv_install(
   ignore_installed = TRUE
 ) # @linksto .py_dict
 reticulate::use_virtualenv(.virtualenv_dir, required = TRUE) # @linksto .py_dict
-iris_raw <- cbind(id = seq_len(nrow(iris)), iris) # @linksto .py_dict
+.iris_raw <- cbind(id = seq_len(nrow(iris)), iris) # @linksto .py_dict
           "
         )
 
@@ -49,7 +56,7 @@ iris_raw <- cbind(id = seq_len(nrow(iris)), iris) # @linksto .py_dict
             # python code needs to be un-indented
             .python_code <- "
 import pandas as pd
-data = r.iris_raw
+data = r['.iris_raw']
 def svd_whiten(dat):
   import numpy as np
   X = np.matrix(dat)
@@ -110,46 +117,31 @@ app <- teal::init(
     tm_variable_browser("Variable Browser"),
     tm_g_scatterplot(
       "Scatterplot",
-      x = data_extract_spec(
-        dataname = "IRIS",
-        select = select_spec(
-          label = "Select variable:",
-          choices = variable_choices("IRIS", c(
+      x = picks(
+        datasets("IRIS"),
+        variables(
+          c(
             "Sepal.Length", "Sepal.Width",
             "Petal.Length", "Petal.Width",
             "Sepal.Length.whiten", "Sepal.Width.whiten",
             "Petal.Length.whiten", "Petal.Width.whiten"
-          )),
-          selected = "Petal.Length.whiten",
-          multiple = FALSE,
-          fixed = FALSE
+          ),
+          "Petal.Length.whiten"
         )
       ),
-      y = data_extract_spec(
-        dataname = "IRIS",
-        select = select_spec(
-          label = "Select variable:",
-          choices = variable_choices("IRIS", c(
+      y = picks(
+        datasets("IRIS"),
+        variables(
+          c(
             "Sepal.Length", "Sepal.Width",
             "Petal.Length", "Petal.Width",
             "Sepal.Length.whiten", "Sepal.Width.whiten",
             "Petal.Length.whiten", "Petal.Width.whiten"
-          )),
-          selected = "Petal.Width.whiten",
-          multiple = FALSE,
-          fixed = FALSE
+          ),
+          "Petal.Width.whiten"
         )
       ),
-      color_by = data_extract_spec(
-        dataname = "IRIS",
-        select = select_spec(
-          label = "Select variable:",
-          choices = variable_choices("IRIS", c("Species")),
-          selected = "Species",
-          multiple = FALSE,
-          fixed = FALSE
-        )
-      )
+      color_by = picks(datasets("IRIS"), variables("Species", "Species", fixed = FALSE))
     )
   )
 ) |>

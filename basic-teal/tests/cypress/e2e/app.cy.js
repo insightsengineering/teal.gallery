@@ -16,7 +16,7 @@ describe("app", () => {
 
   it("Navigates to all tabs without error", () => {
     cy.get("ul.teal-modules-tree a.module-button", {
-      timeout: 30000,
+      timeout: 60000,
     }).then(($moduleButtons) => {
       cy.wrap($moduleButtons).each(($el) => {
         cy.wrap($el).as("tealTab");

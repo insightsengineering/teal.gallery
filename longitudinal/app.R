@@ -10,7 +10,6 @@ data <- within(data, {
   library(DescTools)
   library(magrittr)
   library(dplyr)
-  library(random.cdisc.data)
   library(stringr)
   # optional libraries
   library(sparkline)
@@ -21,8 +20,8 @@ data <- within(data, {
   # if for example outcome variables are added to ADSL then do also add them as columns to ADLB
   # this is needed to be able to use plot splitting by outcome functionality
   set.seed(1) # @linksto ADSL ADLB
-  ADSL <- radsl(seed = 1)
-  ADLB <- radlb(ADSL, seed = 1)
+  ADSL <- random.cdisc.data::cadsl
+  ADLB <- random.cdisc.data::cadlb
 
   ################################################################################
   # BEGIN: Analyst Input Required To Modify Values Below To Reflect Study Specifics
@@ -329,6 +328,11 @@ demog_vars_asl <- function(data) {
   names(data)[!(names(data) %in% c("USUBJID", "STUDYID", date_vars_asl))]
 }
 
+demog_vars_asl_picks <- function(x) {
+  isFALSE(inherits(x, c("Date", "POSIXct", "POSIXlt"))) &&
+    !names(parent.frame()$X)[parent.frame()$i] %in% c("USUBJID", "STUDYID")
+}
+
 anl_vars1 <- c("AVAL", "BASE", "CHG", "PCHG", "AVALL2")
 anl_vars2 <- c("AVAL", "CHG", "PCHG", "AVALL2")
 box_xaxis_vars <- c("TRT01A", "TRT01P", "AVISITCD", "STUDYID")
@@ -337,46 +341,11 @@ dm_vars <- c("SEX", "AGE", "RACE")
 # response variable menu controls. match with available response variables in ADLB
 box_facet_vars <- c("TRT01A", "TRT01P", "AVISITCD")
 line_splits <- c("SEX")
-cs_params <- choices_selected(choices = value_choices("ADLB", "PARAMCD", "PARAM"), selected = "ALT")
 
-cs_arm_vars <- choices_selected(
-  choices = variable_choices("ADSL", subset = arm_vars),
-  selected = "TRT01A"
-)
-
-cs_anl_vars1_1 <- choices_selected(
-  choices = variable_choices("ADLB", subset = anl_vars1),
-  selected = "BASE"
-)
-
-cs_anl_vars1_2 <- choices_selected(
-  choices = variable_choices("ADLB", subset = anl_vars1),
-  selected = "AVAL"
-)
-
-cs_anl_vars2 <- choices_selected(
-  choices = variable_choices("ADLB", subset = anl_vars2),
-  selected = "AVAL"
-)
-
-cs_dm_vars <- choices_selected(
-  choices = variable_choices("ADSL", demog_vars_asl),
-  selected = dm_vars
-)
-
-cs_box_facet_vars <- choices_selected(
-  choices = variable_choices("ADLB", subset = box_facet_vars),
-  selected = "AVISITCD"
-)
-
-cs_box_xaxis_vars <- choices_selected(
-  choices = variable_choices("ADLB", subset = box_xaxis_vars),
-  selected = "TRT01P"
-)
-
-cs_line_splits <- choices_selected(
-  choices = variable_choices("ADSL", subset = line_splits),
-  selected = NULL
+picks_params <- teal.picks::picks(
+  teal.picks::variables("PARAMCD", "PARAMCD"),
+  teal.picks::values(selected = "ALT", multiple = FALSE),
+  check_dataset = FALSE
 )
 
 # create ADSL metadata for Example Info Page tab
@@ -452,7 +421,7 @@ app <- teal::init(
     ),
     module(
       "User Guide",
-      server = function(input, output, session, datasets) {},
+      server = function(input, output, session, data) {},
       ui = function(id, ...) {
         div(
           h5(
@@ -605,7 +574,7 @@ app <- teal::init(
     ),
     module(
       "Example Info Page",
-      server = function(input, output, session, datasets) {},
+      server = function(input, output, session, data) {},
       ui = function(id, ...) {
         div(
           h5(strong("Molecule:"), MOLECULE),
@@ -660,21 +629,20 @@ app <- teal::init(
     tm_t_summary(
       label = "Demographics",
       dataname = "ADSL",
-      arm_var = cs_arm_vars,
-      summarize_vars = cs_dm_vars
+      arm_var = variables(arm_vars, "TRT01A"),
+      summarize_vars = variables(demog_vars_asl_picks, dm_vars, multiple = TRUE)
     ),
     modules(
       label = "Visualizations",
       tm_g_gh_boxplot(
         label = "Box Plot",
         dataname = "ADLB",
-        param_var = "PARAMCD",
-        param = cs_params,
-        facet_var = cs_box_facet_vars,
-        xaxis_var = cs_box_xaxis_vars,
-        yaxis_var = cs_anl_vars2,
+        param = picks_params,
+        facet_var = teal.picks::variables(box_facet_vars, "AVISITCD"),
+        xaxis_var = teal.picks::variables(box_xaxis_vars, "TRT01P"),
+        yaxis_var = teal.picks::variables(anl_vars2, "AVAL"),
         plot_height = c(500, 200, 2000),
-        trt_group = cs_arm_vars,
+        trt_group = teal.picks::variables(arm_vars, "TRT01A"),
         color_manual = color_manual,
         shape_manual = shape_manual,
         rotate_xlab = TRUE,
@@ -687,12 +655,11 @@ app <- teal::init(
       tm_g_gh_correlationplot(
         label = "Correlation Plot",
         dataname = "ADLB",
-        param_var = "PARAMCD",
-        xaxis_param = cs_params,
-        xaxis_var = cs_anl_vars1_1,
-        yaxis_param = cs_params,
-        yaxis_var = cs_anl_vars1_2,
-        trt_group = cs_arm_vars,
+        xaxis_param = picks_params,
+        xaxis_var = teal.picks::variables(anl_vars1, selected = "BASE"),
+        yaxis_param = picks_params,
+        yaxis_var = teal.picks::variables(anl_vars1, "AVAL"),
+        trt_group = teal.picks::variables(arm_vars, "TRT01A"),
         color_manual = color_manual,
         shape_manual = shape_manual,
         plot_height = c(500, 200, 2000),
@@ -719,10 +686,9 @@ app <- teal::init(
       tm_g_gh_density_distribution_plot(
         label = "Density Distribution Plot",
         dataname = "ADLB",
-        param_var = "PARAMCD",
-        param = cs_params,
-        xaxis_var = cs_anl_vars2,
-        trt_group = cs_arm_vars,
+        param = picks_params,
+        xaxis_var = teal.picks::variables(anl_vars2, "AVAL"),
+        trt_group = teal.picks::variables(arm_vars, "TRT01A"),
         color_manual = color_manual,
         color_comb = color_comb,
         rotate_xlab = TRUE,
@@ -736,12 +702,11 @@ app <- teal::init(
       tm_g_gh_lineplot(
         label = "Line Plot",
         dataname = "ADLB",
-        param_var = "PARAMCD",
-        param = cs_params,
-        shape_choices = cs_line_splits,
-        xaxis_var = choices_selected(variable_choices("ADLB", "AVISITCDN"), "AVISITCDN"),
-        yaxis_var = cs_anl_vars2,
-        trt_group = cs_arm_vars,
+        param = picks_params,
+        shape_choices = teal.picks::variables(line_splits, NULL, fixed = FALSE),
+        xaxis_var = teal.picks::variables("AVISITCDN", "AVISITCDN"),
+        yaxis_var = teal.picks::variables(anl_vars2, "AVAL"),
+        trt_group = teal.picks::variables(arm_vars, "TRT01A"),
         color_manual = color_manual,
         rotate_xlab = TRUE,
         plot_height = c(600, 200, 2000),
@@ -752,11 +717,10 @@ app <- teal::init(
         label = "Spaghetti Plot",
         dataname = "ADLB",
         idvar = "USUBJID",
-        param_var = "PARAMCD",
-        param = cs_params,
-        xaxis_var = choices_selected(variable_choices("ADLB", "AVISITCDN"), "AVISITCDN"),
-        yaxis_var = cs_anl_vars2,
-        trt_group = cs_arm_vars,
+        param = picks_params,
+        xaxis_var = teal.picks::variables("AVISITCDN", "AVISITCDN"),
+        yaxis_var = teal.picks::variables(anl_vars2, "AVAL"),
+        trt_group = teal.picks::variables(arm_vars, "TRT01A"),
         man_color = color_manual,
         color_comb = color_comb,
         rotate_xlab = TRUE,
