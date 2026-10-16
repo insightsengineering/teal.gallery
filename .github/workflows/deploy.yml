@@ -32,8 +32,9 @@ env:
   SHINYAPPSIO_ACCOUNT: rinpharma
   APP_PREFIX: NEST
   GITHUB_PAT: ${{ secrets.REPO_GITHUB_TOKEN }}
-  RENV_CONFIG_PAK_ENABLED: TRUE
+  RENV_CONFIG_PAK_ENABLED: FALSE
   RENV_CONFIG_CACHE_SYMLINKS: FALSE
+  RENV_CONFIG_INSTALL_REMOTES: FALSE
 
 jobs:
   deploy:
@@ -49,7 +50,7 @@ jobs:
     if: >
       !contains(github.event.commits[0].message, '[skip deploy]')
     env:
-      DEPLOY_CHANNEL: ${{ inputs.channel || 'dev' }}
+      DEPLOY_CHANNEL: ${{ inputs.channel || github.base_ref == 'main' && 'stable' || 'dev' }}
       DEPLOY_BRANCH: ${{ inputs.target-branch || github.ref }}
     strategy:
       fail-fast: false
@@ -137,7 +138,7 @@ jobs:
         uses: actions/setup-node@v7
         if: steps.find-cypress.outputs.has-cypress-tests == 'true'
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Restore renv from cache
         uses: actions/cache@v5
@@ -158,6 +159,8 @@ jobs:
             install.packages("pak")
           }
           pak::pkg_install("cli")
+          pak::pkg_install("glue")
+          pak::pkg_install("pkgdepends")
 
       - name: Update renv.lock file with updated GitHub packages
         shell: Rscript {0}
@@ -165,32 +168,85 @@ jobs:
         run: |
           setwd("${{ matrix.directory }}")
           lockfile <- renv::lockfile_read()
-          pkg_name_structure <- ifelse("${{ env.DEPLOY_CHANNEL }}" == "stable", "%s/%s@*release", "%s/%s")
-          unreleased_packages <- c(
-            "osprey", "hermes", "goshawk", "teal.osprey", "teal.modules.hermes", "teal.goshawk"
+          channel_name <- "${{ env.DEPLOY_CHANNEL }}"
+
+          # Explicit use of packages and github references  avoids depending on a correct lockfile.
+          released_packages <- c(
+            "insightsengineering/teal", "insightsengineering/teal.data", "insightsengineering/teal.code",
+            "insightsengineering/teal.slice", "pharmaverse/teal.logger", "insightsengineering/teal.widgets",
+            "insightsengineering/teal.reporter", "insightsengineering/teal.transform", "insightsengineering/teal.picks",
+            "insightsengineering/teal.modules.general", "insightsengineering/teal.modules.clinical",
+            "pharmaverse/formatters", "openpharma/mmrm", "pharmaverse/rlistings",
+            "pharmaverse/rtables", "insightsengineering/rtables.officer", "pharmaverse/tern",
+            "insightsengineering/tern.gee", "insightsengineering/tern.mmrm",
+            "insightsengineering/nestcolor"
           )
-          recorded_packages <- vapply(lockfile$Packages, function(package) {
-            if (package$Source == "GitHub") {
-              pkg_ref <- sprintf(pkg_name_structure, package$RemoteUsername, package$Package)
+          released_packages <- setNames(
+            released_packages,
+            vapply(pkgdepends::parse_pkg_refs(released_packages), getElement, name = "package", FUN.VALUE = character(1L))
+          )
+
+          unreleased_packages <- c(
+            "insightsengineering/osprey",
+            "insightsengineering/goshawk", "insightsengineering/teal.osprey",
+            "insightsengineering/teal.modules.hermes", "insightsengineering/teal.goshawk"
+          )
+          unreleased_packages <- setNames(
+            unreleased_packages,
+            vapply(pkgdepends::parse_pkg_refs(unreleased_packages), getElement, name = "package", FUN.VALUE = character(1L))
+          )
+
+          bioc_packages <- c("hermes=git::https://git.bioconductor.org/packages/hermes@devel")
+          bioc_packages <- setNames(
+            bioc_packages,
+            vapply(pkgdepends::parse_pkg_refs(bioc_packages), getElement, name = "package", FUN.VALUE = character(1L))
+          )
+          all_packages <- c(released_packages, unreleased_packages, bioc_packages)
+
+          fmt <- list(
+            stable = "%s", dev = "%s", "stable_unreleased" = "%s@*release",
+            "dev_unreleased" = "%s"
+          )
+
+          recorded_packages <- lapply(lockfile$Packages, function(package) {
+            if (package$Package %in% names(all_packages)) {
+              pkg_ref <- all_packages[[package$Package]]
               pkg_extra <- "released"
-              if (package$Package %in% unreleased_packages) { # exceptions
-                pkg_ref <- sprintf("%s/%s", package$RemoteUsername, package$Package)
-                pkg_extra <- "unreleased"
+              pkg_source <- switch(channel_name,
+                stable = if (package$Package %in% names(bioc_packages)) "Bioconductor" else "Repository",
+                dev = "git"
+              )
+              # Explicit use of source forces usage of Repository for stable packages, even if the lockfile has
+              # github source.
+              pkg_out <- list(Package = package$Package, Source = pkg_source)
+
+              if (package$Package %in% names(unreleased_packages)) { # Force source to git for unreleased packages
+                channel_name <- paste0(channel_name, "_unreleased")
+                pkg_extra <- paste0("un", pkg_extra)
+                pkg_out$Source <- "git"
+              }
+
+              if (pkg_out$Source %in% c("Repository", "Bioconductor")) pkg_ref <- package$Package
+              pkg_ref <- sprintf(fmt[[channel_name]], pkg_ref)
+
+              if (identical(pkg_out$Source, "git")) { # easier to provide reference as string for Github packages
+                pkg_out <- pkg_ref
               }
               cli::cli_alert_info("Recording '{package$Package}' ({pkg_extra}) with reference: '{pkg_ref}'")
-              pkg_ref
+              pkg_out
             } else {
-              NA_character_
+              NA
             }
-          }, character(1L), USE.NAMES = FALSE)
-          renv::record(recorded_packages[!is.na(recorded_packages)])
+          })
+          recorded_packages <- recorded_packages[!is.na(recorded_packages)]
+          renv::record(recorded_packages)
 
       - name: Install R packages using renv and update the renv snapshot
         shell: Rscript {0}
         working-directory: ${{ matrix.directory }}
         run: |
           renv::install("cli", repos = c(CRAN = "https://cloud.r-project.org", CRAN2 = "https://cran.rstudio.com"))
-          lockfile_pkgs <- renv::lockfile_read()$Package
+          lockfile_pkgs <- renv::lockfile_read()$Packages
           github_pkgs <- names(lockfile_pkgs)[sapply(lockfile_pkgs, function(x) x$Source == "GitHub")]
           renv::restore(clean = TRUE, exclude = "pak")
           renv::update(exclude = github_pkgs)
