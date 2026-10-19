@@ -79,7 +79,13 @@ restore_and_run <- function(app_name, ref = "HEAD", ...) {
     dots$launch.browser <- dots$launch.browser %||% TRUE
     callr::r(
       function(...) {
-        source(".Rprofile")
+        if (file.exists(".Rprofile")) {
+          source(".Rprofile")
+        } else if (requireNamespace("renv", quietly = TRUE)) {
+          renv::load()
+        } else {
+          stop("Failed to find .Rprofile or renv package. Please create issue in the teal.gallery repository.")
+        }
         renv::restore(prompt = FALSE)
         shiny::runApp(...)
       },
