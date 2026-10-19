@@ -13,6 +13,14 @@
 restore_and_run <- function(app_name, ref = "HEAD", ...) {
   owner <- "insightsengineering"
   repo <- "teal.gallery"
+
+  if (!requireNamespace("shiny", quietly = TRUE)) {
+    stop("The 'shiny' package is required to run this function. Please install it first.")
+  }
+  if (!requireNamespace("renv", quietly = TRUE)) {
+    stop("The 'renv' package is required to run this function. Please install it first.")
+  }
+
   #' Download a GitHub repository, unzip it, and return the repository directory.
   #'
   #' This function downloads a given GitHub repository as a tar.gz file, unzips it,
@@ -58,22 +66,40 @@ restore_and_run <- function(app_name, ref = "HEAD", ...) {
   #' @param app_directory The directory path of the Shiny app.
   #' @param ... Additional arguments passed to `shiny::runApp()`.
   load_and_run_app <- function(app_directory, ...) {
+    new_libpath <- tempfile("local_libpaths-")
+    on.exit(unlink(new_libpath, recursive = TRUE), add = TRUE)
+    dir.create(new_libpath, showWarnings = FALSE, recursive = TRUE)
+    new_libpath <- suppressWarnings(normalizePath(new_libpath))
+    renv::install("callr", library = new_libpath) # run the app in a separate R process to avoid conflicts with the current R session.
+
     setwd(app_directory)
-    lockfile <- renv::lockfile_read()
-    pkg_name_structure <- ifelse(ref %in% c("HEAD", "main"), "%s/%s@*release", "%s/%s")
-    for (package in lockfile$Packages) {
-      if (package$Source == "GitHub") {
-        renv::record(sprintf(pkg_name_structure, package$RemoteUsername, package$Package))
-      }
-    }
-    source(".Rprofile")
-    renv::restore(prompt = FALSE)
-    shiny::runApp(app_directory, ...)
+    dots <- rlang::dots_list(...)
+    # Should not use "shiny.launch.browser" option as it may be caught by IDE (VS Code, Positron)
+    # own shims that are not available in the R process launched by callr::r()
+    dots$launch.browser <- dots$launch.browser %||% TRUE
+    callr::r(
+      function(...) {
+        if (file.exists(".Rprofile")) {
+          source(".Rprofile")
+        } else if (requireNamespace("renv", quietly = TRUE)) {
+          renv::load()
+        } else {
+          # Very unlikely to happen, but just in case, we want to provide a clear error message.
+          stop("Failed to find .Rprofile or renv package. Please create issue in the teal.gallery repository.")
+        }
+        renv::restore(prompt = FALSE)
+        shiny::runApp(...)
+      },
+      args = c(app_directory, dots),
+      show = TRUE,
+      libpath = NULL,
+      env = c(R_BROWSER = Sys.getenv("R_BROWSER"))
+    )
   }
 
-  file_path <- tempfile("shinyapp", fileext = ".tar.gz")
-  file_dir <- tempfile("shinyapp")
-  on.exit(unlink(file_path))
+  file_path <- tempfile("shinyapp-", fileext = ".tar.gz")
+  file_dir <- tempfile("shinyapp-")
+  on.exit(unlink(file_path), add = TRUE)
   on.exit(unlink(file_dir, recursive = TRUE), add = TRUE)
   repo_directory <- download_apps_repo(owner, repo, ref, file_dir, file_path)
   available_apps <- get_available_apps(file.path(file_dir, repo_directory))
@@ -86,6 +112,6 @@ restore_and_run <- function(app_name, ref = "HEAD", ...) {
     )
   }
   current_dir <- getwd()
-  on.exit(setwd(current_dir))
+  on.exit(setwd(current_dir), add = TRUE)
   load_and_run_app(file.path(file_dir, repo_directory, app_name), ...)
 }

@@ -5,5 +5,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {},
     baseUrl: "http://localhost:3333",
     supportFile: "cypress/support/commands.js",
+    defaultBrowser: "chrome",
   },
 });
