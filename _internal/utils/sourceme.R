@@ -84,6 +84,7 @@ restore_and_run <- function(app_name, ref = "HEAD", ...) {
         } else if (requireNamespace("renv", quietly = TRUE)) {
           renv::load()
         } else {
+          # Very unlikely to happen, but just in case, we want to provide a clear error message.
           stop("Failed to find .Rprofile or renv package. Please create issue in the teal.gallery repository.")
         }
         renv::restore(prompt = FALSE)
