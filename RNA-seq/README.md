@@ -8,7 +8,7 @@
     source("https://raw.githubusercontent.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
 
     # Run the app
-    restore_and_run("RNA-seq", package_repo = "https://insightsengineering.r-universe.dev")
+    restore_and_run("RNA-seq")
 
 ### View the deployed app
 
