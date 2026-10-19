@@ -221,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Note: Make sure to install <a href="https://rstudio.github.io/renv/index.html">renv</a> before you do this. Also, it is recommended that you create and use a Github PAT. Once you have the PAT, run the following:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">Sys.setenv</span>(<span class="at">GITHUB_PAT =</span> <span class="st">"your_access_token_here"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Running the <code>restore_and_run("APP_NAME")</code> will run the <code>APP_NAME</code> by restoring the packages using <a href="https://rstudio.github.io/renv/">renv</a></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">source</span>(<span class="st">"https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R"</span>)</span>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">source</span>(<span class="st">"https://raw.githubusercontent.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2"></a></span>
 <span id="cb2-3"><a href="#cb2-3"></a><span class="co"># Run the basic-teal app</span></span>
 <span id="cb2-4"><a href="#cb2-4"></a><span class="fu">restore_and_run</span>(<span class="st">"basic-teal"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -240,8 +240,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>Restoring packages from the current lockfile</li>
 <li>Updating packages to their latest versions</li>
-<li>Detecting GitHub-sourced packages (teal, osprey, hermes, etc.)</li>
-<li>Applying the appropriate reference strategy (dev vs.&nbsp;stable channel)</li>
+<li>Detecting packages in the framework (teal, osprey, hermes, etc.)</li>
+<li>Applying the appropriate reference strategy (dev/Github vs.&nbsp;stable/CRAN channel)</li>
+<li>Perform end-to-end tests</li>
 <li>Committing changes back to the repository</li>
 </ol>
 <p><em>IMPORTANT</em>: Although we can now test the unreleased features of the NEST packages in deployments, currently, the divergent <code>dev</code> and <code>main</code> branches must be managed and merged manually as needed to ensure that the apps work fine in both deployment channels, i.e., making sure to merge the app changes from <code>dev</code> to <code>main</code> by creating a PR.</p>
@@ -271,32 +272,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="overview" class="level4">
 <h4 class="anchored" data-anchor-id="overview">Overview</h4>
 <p>Each app maintains its dependencies through a <code>renv.lock</code> file stored in the app’s directory. This ensures reproducible package installations across development and deployment environments.</p>
-<p><strong>Dependency reference strategies:</strong> - <code>&lt;organization&gt;/&lt;repository&gt;</code> — installs from the development branch (used in <code>dev</code> channel) - <code>&lt;organization&gt;/&lt;repository&gt;@*release</code> — installs the latest released version (used in <code>stable</code> channel)</p>
+<p><strong>Dependency reference strategies:</strong> - <code>&lt;organization&gt;/&lt;repository&gt;</code> — installs from the development branch (used in <code>dev</code> channel) - CRAN / <code>&lt;organization&gt;/&lt;repository&gt;@*release</code> — installs the latest released version (used in <code>stable</code> channel)</p>
 </section>
 <section id="manual-dependency-updates" class="level4">
 <h4 class="anchored" data-anchor-id="manual-dependency-updates">Manual Dependency Updates</h4>
 <p>To manually update dependencies for an app, use the same R version and environment as the CI workflow. The recommended approach is to use the Docker image from <a href="https://github.com/insightsengineering/ci-images/pkgs/container/rstudio"><code>insightsengineering/ci-images</code></a>.</p>
 <p><strong>Script to update GitHub-sourced NEST packages:</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>renv_read <span class="ot">&lt;-</span> renv<span class="sc">::</span><span class="fu">lockfile_read</span>()</span>
-<span id="cb3-2"><a href="#cb3-2"></a>ie <span class="ot">&lt;-</span> purrr<span class="sc">::</span><span class="fu">keep_at</span>(</span>
-<span id="cb3-3"><a href="#cb3-3"></a>  renv_read<span class="sc">$</span>Packages,</span>
-<span id="cb3-4"><a href="#cb3-4"></a>  \(x) <span class="fu">grepl</span>(</span>
-<span id="cb3-5"><a href="#cb3-5"></a>    <span class="at">pattern =</span> <span class="st">"teal|rtables|rlistings|osprey|modules[.]hermes|goshawk|formatters|tern|mmrm|nestcolor"</span>,</span>
-<span id="cb3-6"><a href="#cb3-6"></a>    <span class="at">x =</span> x</span>
-<span id="cb3-7"><a href="#cb3-7"></a>  )</span>
-<span id="cb3-8"><a href="#cb3-8"></a>)</span>
-<span id="cb3-9"><a href="#cb3-9"></a></span>
-<span id="cb3-10"><a href="#cb3-10"></a>packages_to_install <span class="ot">&lt;-</span> ie <span class="sc">|&gt;</span></span>
-<span id="cb3-11"><a href="#cb3-11"></a>  purrr<span class="sc">::</span><span class="fu">map</span>(\(.x) {</span>
-<span id="cb3-12"><a href="#cb3-12"></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(.x<span class="sc">$</span>RemoteUsername) <span class="sc">||</span> <span class="fu">is.null</span>(.x<span class="sc">$</span>RemoteRepo)) {</span>
-<span id="cb3-13"><a href="#cb3-13"></a>      glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"insightsengineering/"</span>, .x<span class="sc">$</span>Package) <span class="co"># default to use insightsengineering</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a>    } <span class="cf">else</span> {</span>
-<span id="cb3-15"><a href="#cb3-15"></a>      glue<span class="sc">::</span><span class="fu">glue</span>(.x<span class="sc">$</span>RemoteUsername, <span class="st">"/"</span>, .x<span class="sc">$</span>RemoteRepo)</span>
-<span id="cb3-16"><a href="#cb3-16"></a>    }</span>
-<span id="cb3-17"><a href="#cb3-17"></a>  }) <span class="sc">|&gt;</span></span>
-<span id="cb3-18"><a href="#cb3-18"></a>  <span class="fu">unlist</span>(<span class="at">use.names =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb3-19"><a href="#cb3-19"></a></span>
-<span id="cb3-20"><a href="#cb3-20"></a>renv<span class="sc">::</span><span class="fu">install</span>(packages_to_install, <span class="at">prompt =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># update_renv</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>deploy_channel <span class="ot">&lt;-</span> <span class="st">"stable"</span> <span class="co"># "dev"</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a>yml <span class="ot">&lt;-</span> yaml<span class="sc">::</span><span class="fu">read_yaml</span>(<span class="st">"../.github/workflows/deploy.yml"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5"></a></span>
+<span id="cb3-6"><a href="#cb3-6"></a>step_names <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb3-7"><a href="#cb3-7"></a>  <span class="st">"Install required R packages"</span>,</span>
+<span id="cb3-8"><a href="#cb3-8"></a>  <span class="st">"Install R packages using renv and update the renv snapshot"</span>,</span>
+<span id="cb3-9"><a href="#cb3-9"></a>  <span class="st">"Commit and push changes 📌"</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a>)</span>
+<span id="cb3-11"><a href="#cb3-11"></a>steps <span class="ot">&lt;-</span> yml<span class="sc">$</span>jobs<span class="sc">$</span>deploy<span class="sc">$</span>steps[<span class="fu">which</span>(<span class="fu">sapply</span>(yml<span class="sc">$</span>jobs<span class="sc">$</span>deploy<span class="sc">$</span>steps, <span class="cf">function</span>(x) x<span class="sc">$</span>name) <span class="sc">%in%</span> step_names)]</span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="fu">lapply</span>(steps, <span class="cf">function</span>(x) {</span>
+<span id="cb3-13"><a href="#cb3-13"></a>  x<span class="sc">$</span>run <span class="sc">|&gt;</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a>    stringr<span class="sc">::</span><span class="fu">str_replace_all</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">$</span><span class="sc">\\</span><span class="st">{</span><span class="sc">\\</span><span class="st">{ env.DEPLOY_CHANNEL </span><span class="sc">\\</span><span class="st">}</span><span class="sc">\\</span><span class="st">}"</span>, deploy_channel) <span class="sc">|&gt;</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a>    stringr<span class="sc">::</span><span class="fu">str_replace_all</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">$</span><span class="sc">\\</span><span class="st">{</span><span class="sc">\\</span><span class="st">{ matrix.directory </span><span class="sc">\\</span><span class="st">}</span><span class="sc">\\</span><span class="st">}"</span>, <span class="fu">getwd</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a>    <span class="fu">str2expression</span>() <span class="sc">|&gt;</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a>    <span class="fu">eval</span>()</span>
+<span id="cb3-18"><a href="#cb3-18"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="local-development-with-containers" class="level4">
 <h4 class="anchored" data-anchor-id="local-development-with-containers">Local Development with containers</h4>
