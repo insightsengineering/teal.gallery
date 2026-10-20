@@ -5,10 +5,10 @@
 
 ### Run the app yourself
 
-    source("https://raw.github.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
+    source("https://raw.githubusercontent.com/insightsengineering/teal.gallery/main/_internal/utils/sourceme.R")
 
     # Run the app
-    restore_and_run("teal-as-shiny-module", package_repo = "https://insightsengineering.r-universe.dev")
+    restore_and_run("teal-as-shiny-module")
 
 ### View the deployed app
 

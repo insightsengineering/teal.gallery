@@ -11,7 +11,7 @@ my_transformators <- list(
     },
     server = function(id, data) {
       moduleServer(id, function(input, output, session) {
-        eventReactive(input$check, {
+        reactive({
           req(data())
           if (input$check) {
             within(data(), iris <- head(iris, 6))
@@ -42,7 +42,7 @@ my_transformators <- list(
 
         reactive_datanames <- reactive({
           req(data())
-          teal.data::datanames(data())
+          names(data())
         })
         observeEvent(reactive_datanames(), {
           selected_a <- isolate(input$merge_a)
@@ -69,10 +69,9 @@ my_transformators <- list(
           new_data <- within(
             data(),
             ANL <- dplyr::left_join(merge_a, merge_b),
-            merge_a = as.name(input$merge_a),
-            merge_b = as.name(input$merge_b)
-          )
-          teal.data::datanames(new_data) <- c(teal.data::datanames(new_data), "ANL")
+              merge_a = as.name(input$merge_a),
+              merge_b = as.name(input$merge_b)
+            )
           new_data
         })
       })
