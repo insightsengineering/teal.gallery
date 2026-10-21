@@ -3637,9 +3637,9 @@
     },
     "edgeR": {
       "Package": "edgeR",
-      "Version": "4.10.6",
+      "Version": "4.10.7",
       "Source": "Bioconductor",
-      "Date": "2026-10-13",
+      "Date": "2026-10-17",
       "Title": "Empirical Analysis of Digital Gene Expression Data in R",
       "Description": "Differential expression analysis of sequence count data. Implements a range of statistical methodology based on the negative binomial distributions, including empirical Bayes estimation, exact tests, generalized linear models, quasi-likelihood, and gene set enrichment. Can perform differential analyses of any type of omics data that produces read counts, including RNA-seq, ChIP-seq, ATAC-seq, Bisulfite-seq, SAGE, CAGE, metabolomics, or proteomics spectral counts. RNA-seq analyses can be conducted at the gene or isoform level, and tests can be conducted for differential exon or transcript usage.",
       "Author": "Yunshun Chen, Lizhong Chen, Aaron TL Lun, Davis J McCarthy, Pedro Baldoni, Matthew E Ritchie, Belinda Phipson, Yifang Hu, Xiaobei Zhou, Mark D Robinson, Gordon K Smyth",
@@ -3678,8 +3678,8 @@
       "NeedsCompilation": "yes",
       "git_url": "https://git.bioconductor.org/packages/edgeR",
       "git_branch": "RELEASE_3_23",
-      "git_last_commit": "4861033",
-      "git_last_commit_date": "2026-10-13",
+      "git_last_commit": "27ba7b3",
+      "git_last_commit_date": "2026-10-17",
       "Repository": "Bioconductor 3.23"
     },
     "emmeans": {
