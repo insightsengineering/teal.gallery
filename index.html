@@ -160,56 +160,69 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="header">
 <th>Stable version</th>
 <th>Dev version</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><a href="https://rinpharma.shinyapps.io/NEST_basic-teal_stable/">basic-teal</a></td>
 <td><a href="https://rinpharma.shinyapps.io/NEST_basic-teal_dev/">basic-teal</a></td>
+<td>Minimal <code>teal</code> app with a simple custom module on the <code>iris</code> dataset.</td>
 </tr>
 <tr class="even">
 <td><a href="https://rinpharma.shinyapps.io/NEST_teal-as-shiny-module_stable/">teal-as-shiny-module</a></td>
 <td><a href="https://rinpharma.shinyapps.io/NEST_teal-as-shiny-module_dev/">teal-as-shiny-module</a></td>
+<td>Embeds <code>teal</code> as modules (<code>ui_teal()</code>/<code>srv_teal()</code>) inside a regular <code>shiny</code> app.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://rinpharma.shinyapps.io/NEST_delayed-data_stable/">delayed-data</a></td>
 <td><a href="https://rinpharma.shinyapps.io/NEST_delayed-data_dev/">delayed-data</a></td>
+<td>Loads data on demand with <code>teal_data_module()</code>, letting the user pick the datasets before the app starts.</td>
 </tr>
 <tr class="even">
 <td><a href="https://rinpharma.shinyapps.io/NEST_custom-transform_stable/">custom-transform</a></td>
 <td><a href="https://rinpharma.shinyapps.io/NEST_custom-transform_dev/">custom-transform</a></td>
+<td>Modifies module data with custom <code>teal_transform_module()</code> transformators.</td>
 </tr>
 <tr class="odd">
 <td><a href="https://rinpharma.shinyapps.io/NEST_exploratory_stable/">exploratory</a></td>
 <td><a href="https://rinpharma.shinyapps.io/NEST_exploratory_dev/">exploratory</a></td>
+<td>General exploratory analysis of ADaM data with <code>teal.modules.general</code> (distributions, outliers, associations, regression, …).</td>
 </tr>
 <tr class="even">
 <td><a href="https://rinpharma.shinyapps.io/NEST_safety_stable/">safety</a></td>
 <td><a href="https://rinpharma.shinyapps.io/NEST_safety_dev/">safety</a></td>
+<td>Safety analysis with <code>teal.modules.clinical</code> (adverse events, laboratory abnormalities, exposure, shift tables, …).</td>
 </tr>
 <tr class="odd">
 <td><a href="https://rinpharma.shinyapps.io/NEST_efficacy_stable/">efficacy</a></td>
 <td><a href="https://rinpharma.shinyapps.io/NEST_efficacy_dev/">efficacy</a></td>
+<td>Efficacy analysis with <code>teal.modules.clinical</code> (forest plots, Kaplan-Meier, time-to-event, Cox and logistic regression, MMRM, …).</td>
 </tr>
 <tr class="even">
 <td><a href="https://rinpharma.shinyapps.io/NEST_patient-profile_stable/">patient-profile</a></td>
 <td><a href="https://rinpharma.shinyapps.io/NEST_patient-profile_dev/">patient-profile</a></td>
+<td>Individual patient profiles (basic info, medical history, medications, vitals, adverse events, laboratory, timeline).</td>
 </tr>
 <tr class="odd">
 <td><a href="https://rinpharma.shinyapps.io/NEST_early-dev_stable/">early-dev</a></td>
 <td><a href="https://rinpharma.shinyapps.io/NEST_early-dev_dev/">early-dev</a></td>
+<td>Early development analysis with <code>teal.osprey</code> (adverse event overviews, butterfly, spider, swimlane and waterfall plots, …).</td>
 </tr>
 <tr class="even">
 <td><a href="https://rinpharma.shinyapps.io/NEST_longitudinal_stable/">longitudinal</a></td>
 <td><a href="https://rinpharma.shinyapps.io/NEST_longitudinal_dev/">longitudinal</a></td>
+<td>Longitudinal biomarker and laboratory analysis with <code>teal.goshawk</code> (box, correlation, density, line and spaghetti plots).</td>
 </tr>
 <tr class="odd">
 <td><a href="https://rinpharma.shinyapps.io/NEST_RNA-seq_stable/">RNA-seq</a></td>
 <td><a href="https://rinpharma.shinyapps.io/NEST_RNA-seq_dev/">RNA-seq</a></td>
+<td>RNA-seq analysis with <code>teal.modules.hermes</code> (quality control, PCA, volcano, Kaplan-Meier, …).</td>
 </tr>
 <tr class="even">
 <td><a href="https://rinpharma.shinyapps.io/NEST_python_stable/">python</a></td>
 <td><a href="https://rinpharma.shinyapps.io/NEST_python_dev/">python</a></td>
+<td>Builds a dataset with Python code via <code>reticulate</code> and explores it with <code>teal.modules.general</code>.</td>
 </tr>
 </tbody>
 </table>
