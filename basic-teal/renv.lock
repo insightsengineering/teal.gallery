@@ -4376,7 +4376,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "1e259ce3663f3875581dad9fcd700a26df216dfc"
+      "RemoteSha": "092e2a4df2c4a0fa62c03d71bda83bee3b2bcda5"
     },
     "textshaping": {
       "Package": "textshaping",
