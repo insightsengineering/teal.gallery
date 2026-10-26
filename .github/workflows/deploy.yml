@@ -172,9 +172,9 @@ jobs:
 
           # Explicit use of packages and github references  avoids depending on a correct lockfile.
           released_packages <- c(
-            "insightsengineering/teal", "insightsengineering/teal.data", "insightsengineering/teal.code",
-            "insightsengineering/teal.slice", "pharmaverse/teal.logger", "insightsengineering/teal.widgets",
-            "insightsengineering/teal.reporter", "insightsengineering/teal.transform", "insightsengineering/teal.picks",
+            "pharmaverse/teal", "pharmaverse/teal.data", "pharmaverse/teal.code",
+            "pharmaverse/teal.slice", "pharmaverse/teal.logger", "pharmaverse/teal.widgets",
+            "pharmaverse/teal.reporter", "insightsengineering/teal.transform", "pharmaverse/teal.picks",
             "insightsengineering/teal.modules.general", "insightsengineering/teal.modules.clinical",
             "pharmaverse/formatters", "openpharma/mmrm", "pharmaverse/rlistings",
             "pharmaverse/rtables", "insightsengineering/rtables.officer", "pharmaverse/tern",
