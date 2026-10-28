@@ -246,7 +246,7 @@
     },
     "V8": {
       "Package": "V8",
-      "Version": "8.2.0",
+      "Version": "8.2.1",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Embedded JavaScript and WebAssembly Engine for R",
@@ -278,7 +278,7 @@
       "Biarch": "true",
       "Author": "Jeroen Ooms [aut, cre] (ORCID: <https://orcid.org/0000-0002-4035-0289>), George Stagg [ctb] (ORCID: <https://orcid.org/0009-0006-3173-9846>), Jan Marvin Garbuszus [ctb]",
       "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
-      "Repository": "CRAN"
+      "Repository": "RSPM"
     },
     "askpass": {
       "Package": "askpass",
@@ -2375,14 +2375,14 @@
     },
     "markdown": {
       "Package": "markdown",
-      "Version": "2.0",
+      "Version": "2.1",
       "Source": "Repository",
       "Type": "Package",
-      "Title": "Render Markdown with 'commonmark'",
+      "Title": "A Thin Wrapper of 'litedown' to Render Markdown Documents",
       "Authors@R": "c( person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")), person(\"JJ\", \"Allaire\", role = \"aut\"), person(\"Jeffrey\", \"Horner\", role = \"aut\"), person(\"Henrik\", \"Bengtsson\", role = \"ctb\"), person(\"Jim\", \"Hester\", role = \"ctb\"), person(\"Yixuan\", \"Qiu\", role = \"ctb\"), person(\"Kohske\", \"Takahashi\", role = \"ctb\"), person(\"Adam\", \"November\", role = \"ctb\"), person(\"Nacho\", \"Caballero\", role = \"ctb\"), person(\"Jeroen\", \"Ooms\", role = \"ctb\"), person(\"Thomas\", \"Leeper\", role = \"ctb\"), person(\"Joe\", \"Cheng\", role = \"ctb\"), person(\"Andrzej\", \"Oles\", role = \"ctb\"), person(given = \"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
-      "Description": "Render Markdown to full and lightweight HTML/LaTeX documents with the 'commonmark' package. This package has been superseded by 'litedown'.",
+      "Description": "Render Markdown to HTML/LaTeX. This package has been superseded by 'litedown'. Please call 'litedown::mark()' directly.",
       "Depends": [
-        "R (>= 2.11.1)"
+        "R (>= 3.2.0)"
       ],
       "Imports": [
         "utils",
@@ -2398,10 +2398,10 @@
       "License": "MIT + file LICENSE",
       "URL": "https://github.com/rstudio/markdown",
       "BugReports": "https://github.com/rstudio/markdown/issues",
-      "RoxygenNote": "7.3.2",
       "Encoding": "UTF-8",
+      "Config/roxygen2/version": "8.1.1",
       "NeedsCompilation": "no",
-      "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>), JJ Allaire [aut], Jeffrey Horner [aut], Henrik Bengtsson [ctb], Jim Hester [ctb], Yixuan Qiu [ctb], Kohske Takahashi [ctb], Adam November [ctb], Nacho Caballero [ctb], Jeroen Ooms [ctb], Thomas Leeper [ctb], Joe Cheng [ctb], Andrzej Oles [ctb], Posit Software, PBC [cph, fnd]",
+      "Author": "Yihui Xie [aut, cre] (ORCID: <https://orcid.org/0000-0003-0645-5666>), JJ Allaire [aut], Jeffrey Horner [aut], Henrik Bengtsson [ctb], Jim Hester [ctb], Yixuan Qiu [ctb], Kohske Takahashi [ctb], Adam November [ctb], Nacho Caballero [ctb], Jeroen Ooms [ctb], Thomas Leeper [ctb], Joe Cheng [ctb], Andrzej Oles [ctb], Posit Software, PBC [cph, fnd]",
       "Maintainer": "Yihui Xie <xie@yihui.name>",
       "Repository": "CRAN"
     },
@@ -3968,8 +3968,8 @@
       "Authors@R": "c( person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = c(\"aut\", \"cre\")), person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\"), person(\"Vedha\", \"Viyash\", , \"vedha.viyash@roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Nina\", \"Qi\", , \"qi.ting@gene.com\", role = \"rev\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"Tadeusz\", \"Lewandowski\", role = \"aut\"), person(\"Chendi\", \"Liao\", role = \"rev\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")), person(\"Maximilian\", \"Mordig\", role = \"ctb\") )",
       "Description": "A 'shiny' based interactive exploration framework for analyzing clinical trials data. 'teal' currently provides a dynamic filtering facility and different data viewers. 'teal' 'shiny' applications are built using standard 'shiny' modules.",
       "License": "Apache License 2.0",
-      "URL": "https://insightsengineering.github.io/teal/, https://github.com/insightsengineering/teal/",
-      "BugReports": "https://github.com/insightsengineering/teal/issues",
+      "URL": "https://pharmaverse.github.io/teal/, https://github.com/pharmaverse/teal/",
+      "BugReports": "https://github.com/pharmaverse/teal/issues",
       "Depends": [
         "R (>= 4.1)",
         "shiny (>= 1.8.1)",
@@ -4014,7 +4014,7 @@
       ],
       "VignetteBuilder": "knitr, rmarkdown",
       "RdMacros": "lifecycle",
-      "Config/Needs/verdepcheck": "rstudio/shiny, insightsengineering/teal.data, insightsengineering/teal.slice, mllg/checkmate, jeroen/jsonlite, r-lib/lifecycle, daroczig/logger, r-lib/mirai, r-lib/cli, r-lib/nanonext, rstudio/renv, r-lib/rlang, daattali/shinyjs, insightsengineering/teal.code, pharmaverse/teal.logger, insightsengineering/teal.reporter, insightsengineering/teal.widgets, rstudio/bslib, yihui/knitr, bioc::MultiAssayExperiment, r-lib/R6, rstudio/rmarkdown, tidyverse/rvest, rstudio/shinytest2, rstudio/shinyvalidate, r-lib/testthat, r-lib/withr, yaml=vubiostat/r-yaml, rstudio/htmltools, bioc::matrixStats, insightsengineering/roxy.shinylive",
+      "Config/Needs/verdepcheck": "rstudio/shiny, pharmaverse/teal.data, pharmaverse/teal.slice, mllg/checkmate, jeroen/jsonlite, r-lib/lifecycle, daroczig/logger, r-lib/mirai, r-lib/cli, r-lib/nanonext, rstudio/renv, r-lib/rlang, daattali/shinyjs, pharmaverse/teal.code, pharmaverse/teal.logger, pharmaverse/teal.reporter, pharmaverse/teal.widgets, rstudio/bslib, yihui/knitr, bioc::MultiAssayExperiment, r-lib/R6, rstudio/rmarkdown, tidyverse/rvest, rstudio/shinytest2, rstudio/shinyvalidate, r-lib/testthat, r-lib/withr, yaml=vubiostat/r-yaml, rstudio/htmltools, bioc::matrixStats, insightsengineering/roxy.shinylive",
       "Config/Needs/website": "insightsengineering/nesttemplate",
       "Config/roxygen2/version": "8.1.1",
       "Encoding": "UTF-8",
@@ -4029,7 +4029,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "13931488251b7f9414d07debd9050f1fa9435fda"
+      "RemoteSha": "655744da2c5da0335920717bec0b88cd58da1ee6"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -4041,8 +4041,8 @@
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", , \"nikolas.burkoff@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", , \"maciej.nasinski@contractors.roche.com\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", , \"konrad.pagacz@contractors.roche.com\", role = \"aut\"), person(\"Junlue\", \"Zhao\", , \"zhaoj88@gene.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = c(\"rev\", \"cre\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Introduction of 'qenv' S4 class, that facilitates code execution and reproducibility in 'teal' applications.",
       "License": "Apache License 2.0",
-      "URL": "https://insightsengineering.github.io/teal.code/, https://github.com/insightsengineering/teal.code",
-      "BugReports": "https://github.com/insightsengineering/teal.code/issues",
+      "URL": "https://pharmaverse.github.io/teal.code/, https://github.com/pharmaverse/teal.code",
+      "BugReports": "https://github.com/pharmaverse/teal.code/issues",
       "Depends": [
         "methods",
         "R (>= 4.0)"
@@ -4068,7 +4068,7 @@
       "RdMacros": "lifecycle",
       "Config/Needs/verdepcheck": "mllg/checkmate, r-lib/cli, r-lib/lifecycle, r-lib/rlang, r-lib/cli, yihui/knitr, rstudio/rmarkdown, rstudio/shiny, r-lib/testthat, r-lib/withr",
       "Config/Needs/website": "insightsengineering/nesttemplate",
-      "Config/roxygen2/version": "8.1.0",
+      "Config/roxygen2/version": "8.1.1",
       "Encoding": "UTF-8",
       "Language": "en-US",
       "Roxygen": "list(markdown = TRUE)",
@@ -4080,7 +4080,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
       "RemoteRef": "main",
-      "RemoteSha": "e69106e81f0e2b8123dd45d40d511b2abc963f39"
+      "RemoteSha": "1b8749e69168c0a22300dd9a9d32f9f664925905"
     },
     "teal.data": {
       "Package": "teal.data",
@@ -4092,8 +4092,8 @@
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = c(\"rev\", \"cre\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Provides a 'teal_data' class as a unified data model for 'teal' applications focusing on reproducibility and relational data.",
       "License": "Apache License 2.0",
-      "URL": "https://insightsengineering.github.io/teal.data/, https://github.com/insightsengineering/teal.data/",
-      "BugReports": "https://github.com/insightsengineering/teal.data/issues",
+      "URL": "https://pharmaverse.github.io/teal.data/, https://github.com/pharmaverse/teal.data/",
+      "BugReports": "https://github.com/pharmaverse/teal.data/issues",
       "Depends": [
         "R (>= 4.0)",
         "teal.code (>= 0.7.0)"
@@ -4115,9 +4115,9 @@
       ],
       "VignetteBuilder": "knitr, rmarkdown",
       "RdMacros": "lifecycle",
-      "Config/Needs/verdepcheck": "insightsengineering/teal.code, mllg/checkmate, r-lib/lifecycle, r-lib/rlang, yihui/knitr, rstudio/rmarkdown, insightsengineering/random.cdisc.data, r-lib/testthat, r-lib/withr",
+      "Config/Needs/verdepcheck": "pharmaverse/teal.code, mllg/checkmate, r-lib/lifecycle, r-lib/rlang, yihui/knitr, rstudio/rmarkdown, insightsengineering/random.cdisc.data, r-lib/testthat, r-lib/withr",
       "Config/Needs/website": "insightsengineering/nesttemplate",
-      "Config/roxygen2/version": "8.1.0",
+      "Config/roxygen2/version": "8.1.1",
       "Encoding": "UTF-8",
       "Language": "en-US",
       "LazyData": "true",
@@ -4130,7 +4130,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.data",
       "RemoteRef": "main",
-      "RemoteSha": "60498f4acf2f450ff7ce6926c2513f5b128a0839"
+      "RemoteSha": "6d89900a3e692989a30d31a7ee994e7fcc34292e"
     },
     "teal.logger": {
       "Package": "teal.logger",
@@ -4185,8 +4185,8 @@
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\", comment = c(ORCID = \"0009-0005-1258-4757\")), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", , \"chendi.liao@roche.com\", role = \"rev\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = c(\"rev\", \"cre\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Prebuilt 'shiny' modules containing tools for the generation of 'rmarkdown' reports, supporting reproducible research and analysis.",
       "License": "Apache License 2.0",
-      "URL": "https://github.com/insightsengineering/teal.reporter, https://insightsengineering.github.io/teal.reporter/",
-      "BugReports": "https://github.com/insightsengineering/teal.reporter/issues",
+      "URL": "https://github.com/pharmaverse/teal.reporter, https://pharmaverse.github.io/teal.reporter/",
+      "BugReports": "https://github.com/pharmaverse/teal.reporter/issues",
       "Imports": [
         "bsicons",
         "bslib (>= 0.8.0)",
@@ -4232,9 +4232,9 @@
         "withr (>= 2.0.0)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
-      "Config/Needs/verdepcheck": "rstudio/bsicons,rstudio/bslib, mllg/checkmate, r-lib/commonmark, davidgohel/flextable, ddsjoberg/gtsummary, rstudio/htmltools, jeroen/jsonlite, yihui/knitr, r-lib/lifecycle, r-lib/R6, r-lib/rlang, insightsengineering/rlistings, rstudio/rmarkdown, insightsengineering/rtables, insightsengineering/rtables.officer, rstudio/shiny, dreamRs/shinybusy, daattali/shinyjs, dreamRs/shinyWidgets, rstudio/sortable, insightsengineering/teal.code, insightsengineering/teal.data, yaml=vubiostat/r-yaml, r-lib/zip, rstudio/DT, yihui/formatR, insightsengineering/formatters, tidyverse/ggplot2, deepayan/lattice, cran/png, rstudio/shinytest2, r-lib/testthat, rstudio/tinytex, r-lib/waldo, r-lib/withr",
+      "Config/Needs/verdepcheck": "rstudio/bsicons,rstudio/bslib, mllg/checkmate, r-lib/commonmark, davidgohel/flextable, ddsjoberg/gtsummary, rstudio/htmltools, jeroen/jsonlite, yihui/knitr, r-lib/lifecycle, r-lib/R6, r-lib/rlang, pharmaverse/rlistings, rstudio/rmarkdown, pharmaverse/rtables, insightsengineering/rtables.officer, rstudio/shiny, dreamRs/shinybusy, daattali/shinyjs, dreamRs/shinyWidgets, rstudio/sortable, pharmaverse/teal.code, pharmaverse/teal.data, yaml=vubiostat/r-yaml, r-lib/zip, rstudio/DT, yihui/formatR, pharmaverse/formatters, tidyverse/ggplot2, deepayan/lattice, cran/png, rstudio/shinytest2, r-lib/testthat, rstudio/tinytex, r-lib/waldo, r-lib/withr",
       "Config/Needs/website": "insightsengineering/nesttemplate",
-      "Config/roxygen2/version": "8.1.0",
+      "Config/roxygen2/version": "8.1.1",
       "Config/testthat/edition": "3",
       "Encoding": "UTF-8",
       "Language": "en-US",
@@ -4247,7 +4247,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.reporter",
       "RemoteRef": "main",
-      "RemoteSha": "95ab189d854bd8e99f5a9693f835499d1cb2499c"
+      "RemoteSha": "50dd2f1a049cac22cf23c2fb416e3ac7a26258c7"
     },
     "teal.slice": {
       "Package": "teal.slice",
@@ -4259,8 +4259,8 @@
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-9533-457X\")), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Aleksander\", \"Chlebowski\", , \"aleksander.chlebowski@contractors.roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-5018-6294\")), person(\"Andre\", \"Verissimo\", , \"andre.verissimo@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0002-2212-339X\")), person(\"Lluís\", \"Revilla Sancho\", , \"lluis.revilla_sancho@roche.com\", role = \"aut\", comment = c(ORCID = \"0000-0001-9747-2570\")), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = c(\"rev\", \"cre\")), person(\"Kartikeya\", \"Kirar\", , \"kartikeya.kirar@businesspartner.roche.com\", role = \"aut\"), person(\"Marcin\", \"Kosinski\", , \"marcin.kosinski.mk1@roche.com\", role = \"aut\"), person(\"Chendi\", \"Liao\", role = \"aut\"), person(\"Andrew\", \"Bates\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Data filtering module for 'teal' applications.  Allows for interactive filtering of data stored in 'data.frame' and 'MultiAssayExperiment' objects. Also displays filtered and unfiltered observation counts.",
       "License": "Apache License 2.0",
-      "URL": "https://insightsengineering.github.io/teal.slice/, https://github.com/insightsengineering/teal.slice/",
-      "BugReports": "https://github.com/insightsengineering/teal.slice/issues",
+      "URL": "https://pharmaverse.github.io/teal.slice/, https://github.com/pharmaverse/teal.slice/",
+      "BugReports": "https://github.com/pharmaverse/teal.slice/issues",
       "Depends": [
         "R (>= 4.0)"
       ],
@@ -4298,9 +4298,9 @@
         "withr (>= 3.0.2)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
-      "Config/Needs/verdepcheck": "rstudio/shiny, rstudio/bslib, mllg/checkmate, tidyverse/dplyr, rstudio/htmltools, jeroen/jsonlite, daroczig/logger, plotly/plotly, r-lib/R6, daattali/shinycssloaders, daattali/shinyjs, dreamRs/shinyWidgets, insightsengineering/teal.data, insightsengineering/teal.logger, insightsengineering/teal.widgets, rstudio/DT, yihui/knitr, bioc::MultiAssayExperiment, bioc::SummarizedExperiment, rstudio/rmarkdown, r-lib/testthat, r-lib/withr, bioc::matrixStats",
+      "Config/Needs/verdepcheck": "rstudio/shiny, rstudio/bslib, mllg/checkmate, tidyverse/dplyr, rstudio/htmltools, jeroen/jsonlite, daroczig/logger, plotly/plotly, r-lib/R6, daattali/shinycssloaders, daattali/shinyjs, dreamRs/shinyWidgets, pharmaverse/teal.data, pharmaverse/teal.logger, pharmaverse/teal.widgets, rstudio/DT, yihui/knitr, bioc::MultiAssayExperiment, bioc::SummarizedExperiment, rstudio/rmarkdown, r-lib/testthat, r-lib/withr, bioc::matrixStats",
       "Config/Needs/website": "insightsengineering/nesttemplate",
-      "Config/roxygen2/version": "8.1.0",
+      "Config/roxygen2/version": "8.1.1",
       "Encoding": "UTF-8",
       "Language": "en-US",
       "LazyData": "true",
@@ -4312,7 +4312,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.slice",
       "RemoteRef": "main",
-      "RemoteSha": "1a08e0dc595f8a8200ca99464efc004521da00b4"
+      "RemoteSha": "a3b7815d5e46c90de36ed8f85dca249e50d7f9f0"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
@@ -4323,8 +4323,8 @@
       "Authors@R": "c( person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Nikolas\", \"Burkoff\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = c(\"aut\", \"cre\")), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Collection of 'shiny' widgets to support 'teal' applications. Enables the manipulation of application layout and plot or table settings.",
       "License": "Apache License 2.0",
-      "URL": "https://insightsengineering.github.io/teal.widgets/, https://github.com/insightsengineering/teal.widgets",
-      "BugReports": "https://github.com/insightsengineering/teal.widgets/issues",
+      "URL": "https://pharmaverse.github.io/teal.widgets/, https://github.com/pharmaverse/teal.widgets",
+      "BugReports": "https://github.com/pharmaverse/teal.widgets/issues",
       "Depends": [
         "R (>= 3.6)"
       ],
@@ -4361,9 +4361,9 @@
         "withr (>= 2.1.0)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
-      "Config/Needs/verdepcheck": "rstudio/bslib, mllg/checkmate, tidyverse/ggplot2, rstudio/htmltools, r-lib/lifecycle, insightsengineering/rtables, rstudio/shiny, daattali/shinyjs, dreamRs/shinyWidgets, r-lib/styler, rstudio/webshot2, rstudio/DT, yihui/knitr, deepayan/lattice, tidyverse/magrittr, cran/png, tidyverse/rvest, rstudio/rmarkdown, rstudio/shinytest2, rstudio/shinyvalidate, r-lib/testthat, r-lib/withr",
+      "Config/Needs/verdepcheck": "rstudio/bslib, mllg/checkmate, tidyverse/ggplot2, rstudio/htmltools, r-lib/lifecycle, pharmaverse/rtables, rstudio/shiny, daattali/shinyjs, dreamRs/shinyWidgets, r-lib/styler, rstudio/webshot2, rstudio/DT, yihui/knitr, deepayan/lattice, tidyverse/magrittr, cran/png, tidyverse/rvest, rstudio/rmarkdown, rstudio/shinytest2, rstudio/shinyvalidate, r-lib/testthat, r-lib/withr",
       "Config/Needs/website": "insightsengineering/nesttemplate",
-      "Config/roxygen2/version": "8.1.0",
+      "Config/roxygen2/version": "8.1.1",
       "Config/testthat/edition": "3",
       "Encoding": "UTF-8",
       "Language": "en-US",
@@ -4376,7 +4376,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "092e2a4df2c4a0fa62c03d71bda83bee3b2bcda5"
+      "RemoteSha": "29b1a0f5a2cbea8512a3491b3098a52454890b41"
     },
     "textshaping": {
       "Package": "textshaping",
