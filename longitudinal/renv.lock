@@ -3700,11 +3700,11 @@
     },
     "glmnet": {
       "Package": "glmnet",
-      "Version": "5.1",
+      "Version": "5.2",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Lasso and Elastic-Net Regularized Generalized Linear Models",
-      "Date": "2026-09-23",
+      "Date": "2026-10-26",
       "Authors@R": "c(person(\"Jerome\", \"Friedman\", role=c(\"aut\")), person(\"Trevor\", \"Hastie\", role=c(\"aut\", \"cre\"), email = \"hastie@stanford.edu\"), person(\"Rob\", \"Tibshirani\", role=c(\"aut\")), person(\"Balasubramanian\", \"Narasimhan\", role=c(\"aut\")), person(\"Kenneth\",\"Tay\",role=c(\"aut\")), person(\"Noah\", \"Simon\", role=c(\"aut\")), person(\"Junyang\", \"Qian\", role=c(\"ctb\")), person(\"James\", \"Yang\", role=c(\"aut\")), person(\"Jonathan\",\"Taylor\", role=c(\"aut\")))",
       "Depends": [
         "R (>= 3.6.0)",
@@ -3732,11 +3732,11 @@
       "VignetteBuilder": "knitr",
       "Encoding": "UTF-8",
       "URL": "https://glmnet.stanford.edu",
-      "RoxygenNote": "7.3.3",
       "LinkingTo": [
         "RcppEigen",
         "Rcpp"
       ],
+      "Config/roxygen2/version": "8.1.0",
       "NeedsCompilation": "yes",
       "Author": "Jerome Friedman [aut], Trevor Hastie [aut, cre], Rob Tibshirani [aut], Balasubramanian Narasimhan [aut], Kenneth Tay [aut], Noah Simon [aut], Junyang Qian [ctb], James Yang [aut], Jonathan Taylor [aut]",
       "Maintainer": "Trevor Hastie <hastie@stanford.edu>",
@@ -7568,37 +7568,49 @@
     },
     "shinyTree": {
       "Package": "shinyTree",
-      "Version": "0.3.1",
+      "Version": "1.0.0",
       "Source": "Repository",
       "Type": "Package",
-      "Title": "jsTree Bindings for Shiny",
-      "Date": "2023-7-21",
-      "Authors@R": "c( person(family=\"Trestle Technology, LLC\", role=\"aut\", email=\"cran@trestletechnology.net\"), person(\"Jeff\", \"Allen\", role=\"aut\", email=\"cran@trestletechnology.net\"), person(family=\"Institut de Radioprotection et de Sûreté Nucléaire\", role=c(\"cph\"), email = \"yann.richet@irsn.fr\"), person(\"Ivan\", \"Bozhanov\", role=c(\"ctb\", \"cph\"), comment = \"jsTree\"), person(family=\"The Dojo Foundation\", role=c(\"ctb\", \"cph\"), comment=\"require.js\"), person(family=\"jQuery Foundation, Inc.\", role=c(\"ctb\", \"cph\")), person(\"Mike\", \"Schaffer\", role=c(\"ctb\"), email=\"mschaff@gmail.com\"), person(\"Timm\", \"Danker\", role=c(\"ctb\"), email=\"tidafr@carina.uberspace.de\"), person(\"Michael\", \"Bell\", role=c(\"cre\"), email=\"bell_michael_a@lilly.com\"), person(\"Sebastian\", \"Gatscha\", role=c(\"ctb\"), email=\"kona1@gmx.at\"), person(\"Thorn\", \"Thaler\", role = c(\"ctb\"), email = \"thorn.thaler@thothal.at\"))",
+      "Title": "'jsTree' Bindings for 'Shiny'",
+      "Authors@R": "c( person(family=\"Trestle Technology, LLC\", role=\"aut\", email=\"cran@trestletechnology.net\"), person(\"Jeff\", \"Allen\", role=\"aut\", email=\"cran@trestletechnology.net\"), person(family=\"Institut de Radioprotection et de Sûreté Nucléaire\", role=c(\"cph\"), email = \"yann.richet@irsn.fr\"), person(\"Ivan\", \"Bozhanov\", role=c(\"ctb\", \"cph\"), comment = \"jsTree\"), person(family=\"Orange Hill Development\", role=c(\"ctb\", \"cph\"), comment = \"jsTree Bootstrap (proton) theme\"), person(family=\"Accademia di Belle Arti di Urbino\", role=\"cph\", comment = \"Titillium Web font\"), person(\"Mike\", \"Schaffer\", role=c(\"ctb\"), email=\"mschaff@gmail.com\"), person(\"Timm\", \"Danker\", role=c(\"ctb\"), email=\"tidafr@carina.uberspace.de\"), person(\"Michael\", \"Bell\", role=c(\"cre\"), email=\"bell_michael_a@lilly.com\"), person(\"Sebastian\", \"Gatscha\", role=c(\"ctb\"), email=\"kona1@gmx.at\"), person(\"Thorn\", \"Thaler\", role = c(\"ctb\"), email = \"thorn.thaler@thothal.at\"))",
       "Maintainer": "Michael Bell <bell_michael_a@lilly.com>",
-      "Description": "Exposes bindings to jsTree -- a JavaScript library that supports interactive trees -- to enable a rich, editable trees in Shiny.",
+      "Description": "Bindings to 'jsTree' <https://www.jstree.com>, a 'JavaScript' library for interactive trees, to enable rich, editable trees in 'Shiny' applications. Trees can be searched, checked, rearranged, styled and remembered across visits, loaded lazily for very large hierarchies, and built from data frames, 'data.tree' objects or ontologies.",
       "License": "MIT + file LICENSE",
+      "Copyright": "See the file COPYRIGHTS.",
       "Depends": [
-        "R (>= 2.15.1)",
-        "methods"
+        "R (>= 3.3.0)"
       ],
       "Imports": [
-        "shiny (>= 0.9.0)",
-        "htmlwidgets",
+        "shiny (>= 1.6.0)",
+        "htmltools",
         "jsonlite",
-        "stringr",
-        "promises"
+        "promises",
+        "stats",
+        "tools",
+        "utils"
       ],
       "Suggests": [
         "testthat",
-        "shinytest",
-        "data.tree"
+        "shinytest2",
+        "covr",
+        "data.tree",
+        "mockery",
+        "withr",
+        "later",
+        "rmarkdown",
+        "xml2",
+        "future",
+        "shinyjs",
+        "tidyr"
       ],
+      "URL": "https://github.com/shinyTree/shinyTree",
       "BugReports": "https://github.com/shinyTree/shinyTree/issues",
-      "RoxygenNote": "7.2.3",
+      "RoxygenNote": "7.3.3",
       "Encoding": "UTF-8",
+      "Language": "en-GB",
       "NeedsCompilation": "no",
-      "Author": "Trestle Technology, LLC [aut], Jeff Allen [aut], Institut de Radioprotection et de Sûreté Nucléaire [cph], Ivan Bozhanov [ctb, cph] (jsTree), The Dojo Foundation [ctb, cph] (require.js), jQuery Foundation, Inc. [ctb, cph], Mike Schaffer [ctb], Timm Danker [ctb], Michael Bell [cre], Sebastian Gatscha [ctb], Thorn Thaler [ctb]",
-      "Repository": "RSPM"
+      "Author": "Trestle Technology, LLC [aut], Jeff Allen [aut], Institut de Radioprotection et de Sûreté Nucléaire [cph], Ivan Bozhanov [ctb, cph] (jsTree), Orange Hill Development [ctb, cph] (jsTree Bootstrap (proton) theme), Accademia di Belle Arti di Urbino [cph] (Titillium Web font), Mike Schaffer [ctb], Timm Danker [ctb], Michael Bell [cre], Sebastian Gatscha [ctb], Thorn Thaler [ctb]",
+      "Repository": "CRAN"
     },
     "shinyWidgets": {
       "Package": "shinyWidgets",
