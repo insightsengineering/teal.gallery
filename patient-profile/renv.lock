@@ -7744,7 +7744,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "38bd0da7b9ecd238ca1c7db0160d723142bfea71"
+      "RemoteSha": "3ded5a40657e3311c08cf91b0670999fb6dd9524"
     },
     "teal.code": {
       "Package": "teal.code",
