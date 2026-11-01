@@ -697,7 +697,7 @@
     },
     "V8": {
       "Package": "V8",
-      "Version": "8.2.0",
+      "Version": "8.2.1",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Embedded JavaScript and WebAssembly Engine for R",
@@ -3440,11 +3440,11 @@
     },
     "glmnet": {
       "Package": "glmnet",
-      "Version": "5.1",
+      "Version": "5.2",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Lasso and Elastic-Net Regularized Generalized Linear Models",
-      "Date": "2026-09-23",
+      "Date": "2026-10-26",
       "Authors@R": "c(person(\"Jerome\", \"Friedman\", role=c(\"aut\")), person(\"Trevor\", \"Hastie\", role=c(\"aut\", \"cre\"), email = \"hastie@stanford.edu\"), person(\"Rob\", \"Tibshirani\", role=c(\"aut\")), person(\"Balasubramanian\", \"Narasimhan\", role=c(\"aut\")), person(\"Kenneth\",\"Tay\",role=c(\"aut\")), person(\"Noah\", \"Simon\", role=c(\"aut\")), person(\"Junyang\", \"Qian\", role=c(\"ctb\")), person(\"James\", \"Yang\", role=c(\"aut\")), person(\"Jonathan\",\"Taylor\", role=c(\"aut\")))",
       "Depends": [
         "R (>= 3.6.0)",
@@ -3472,11 +3472,11 @@
       "VignetteBuilder": "knitr",
       "Encoding": "UTF-8",
       "URL": "https://glmnet.stanford.edu",
-      "RoxygenNote": "7.3.3",
       "LinkingTo": [
         "RcppEigen",
         "Rcpp"
       ],
+      "Config/roxygen2/version": "8.1.0",
       "NeedsCompilation": "yes",
       "Author": "Jerome Friedman [aut], Trevor Hastie [aut, cre], Rob Tibshirani [aut], Balasubramanian Narasimhan [aut], Kenneth Tay [aut], Noah Simon [aut], Junyang Qian [ctb], James Yang [aut], Jonathan Taylor [aut]",
       "Maintainer": "Trevor Hastie <hastie@stanford.edu>",
@@ -4579,7 +4579,7 @@
     },
     "lme4": {
       "Package": "lme4",
-      "Version": "2.0-6",
+      "Version": "2.1-0",
       "Source": "Repository",
       "Title": "Linear Mixed-Effects Models using 'Eigen' and S4",
       "Authors@R": "c(person(\"Douglas\", \"Bates\", role = \"aut\", comment = c(ORCID = \"0000-0001-8316-9503\")), person(\"Martin\", \"Maechler\", role = \"aut\", comment = c(ORCID = \"0000-0002-8685-9910\")), person(\"Ben\", \"Bolker\", role = c(\"cre\", \"aut\"), email = \"bbolker+lme4@gmail.com\", comment = c(ORCID = \"0000-0002-2127-0443\")), person(\"Steven\", \"Walker\", role = \"aut\", comment = c(ORCID = \"0000-0002-4394-9078\")), person(\"Anna\", \"Ly\", role = \"aut\", comment = c(ORCID = \"0000-0002-0210-0342\")), person(\"Mikael\", \"Jagan\", role = \"aut\", comment = c(ORCID = \"0000-0002-3542-2938\")), person(\"Rune Haubo Bojesen\", \"Christensen\", role = \"ctb\", comment = c(ORCID = \"0000-0002-4494-3399\")), person(\"Henrik\", \"Singmann\", role = \"ctb\", comment = c(ORCID = \"0000-0002-4842-3657\")), person(\"Bin\", \"Dai\", role = \"ctb\"), person(\"Fabian\", \"Scheipl\", role = \"ctb\", comment = c(ORCID = \"0000-0001-8172-3603\")), person(\"Gabor\", \"Grothendieck\", role = \"ctb\"), person(\"Peter\", \"Green\", role = \"ctb\", comment = c(ORCID = \"0000-0002-0238-9852\")), person(\"John\", \"Fox\", role = \"ctb\"), person(\"Alexander\", \"Bauer\", role = \"ctb\"), person(\"Pavel N.\", \"Krivitsky\", role = c(\"ctb\", \"cph\"), comment = c(ORCID = \"0000-0002-9101-3362\", \"shared copyright on simulate.formula\")), person(\"Emi\", \"Tanaka\", role = \"ctb\", comment = c(ORCID = \"0000-0002-1455-259X\")), person(\"Ross D.\", \"Boylan\", role = \"ctb\", comment = c(ORCID = \"0009-0003-4123-8090\")), person(\"Henrik\", \"Bengtsson\", role = \"ctb\", comment = c(ORCID = \"0000-0002-9280-4430\")))",
@@ -4818,14 +4818,14 @@
     },
     "markdown": {
       "Package": "markdown",
-      "Version": "2.0",
+      "Version": "2.1",
       "Source": "Repository",
       "Type": "Package",
-      "Title": "Render Markdown with 'commonmark'",
+      "Title": "A Thin Wrapper of 'litedown' to Render Markdown Documents",
       "Authors@R": "c( person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")), person(\"JJ\", \"Allaire\", role = \"aut\"), person(\"Jeffrey\", \"Horner\", role = \"aut\"), person(\"Henrik\", \"Bengtsson\", role = \"ctb\"), person(\"Jim\", \"Hester\", role = \"ctb\"), person(\"Yixuan\", \"Qiu\", role = \"ctb\"), person(\"Kohske\", \"Takahashi\", role = \"ctb\"), person(\"Adam\", \"November\", role = \"ctb\"), person(\"Nacho\", \"Caballero\", role = \"ctb\"), person(\"Jeroen\", \"Ooms\", role = \"ctb\"), person(\"Thomas\", \"Leeper\", role = \"ctb\"), person(\"Joe\", \"Cheng\", role = \"ctb\"), person(\"Andrzej\", \"Oles\", role = \"ctb\"), person(given = \"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
-      "Description": "Render Markdown to full and lightweight HTML/LaTeX documents with the 'commonmark' package. This package has been superseded by 'litedown'.",
+      "Description": "Render Markdown to HTML/LaTeX. This package has been superseded by 'litedown'. Please call 'litedown::mark()' directly.",
       "Depends": [
-        "R (>= 2.11.1)"
+        "R (>= 3.2.0)"
       ],
       "Imports": [
         "utils",
@@ -4841,10 +4841,10 @@
       "License": "MIT + file LICENSE",
       "URL": "https://github.com/rstudio/markdown",
       "BugReports": "https://github.com/rstudio/markdown/issues",
-      "RoxygenNote": "7.3.2",
       "Encoding": "UTF-8",
+      "Config/roxygen2/version": "8.1.1",
       "NeedsCompilation": "no",
-      "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>), JJ Allaire [aut], Jeffrey Horner [aut], Henrik Bengtsson [ctb], Jim Hester [ctb], Yixuan Qiu [ctb], Kohske Takahashi [ctb], Adam November [ctb], Nacho Caballero [ctb], Jeroen Ooms [ctb], Thomas Leeper [ctb], Joe Cheng [ctb], Andrzej Oles [ctb], Posit Software, PBC [cph, fnd]",
+      "Author": "Yihui Xie [aut, cre] (ORCID: <https://orcid.org/0000-0003-0645-5666>), JJ Allaire [aut], Jeffrey Horner [aut], Henrik Bengtsson [ctb], Jim Hester [ctb], Yixuan Qiu [ctb], Kohske Takahashi [ctb], Adam November [ctb], Nacho Caballero [ctb], Jeroen Ooms [ctb], Thomas Leeper [ctb], Joe Cheng [ctb], Andrzej Oles [ctb], Posit Software, PBC [cph, fnd]",
       "Maintainer": "Yihui Xie <xie@yihui.name>",
       "Repository": "CRAN"
     },
@@ -5197,9 +5197,9 @@
     },
     "nlme": {
       "Package": "nlme",
-      "Version": "3.1-171",
+      "Version": "3.1-172",
       "Source": "Repository",
-      "Date": "2026-09-01",
+      "Date": "2026-10-31",
       "Priority": "recommended",
       "Title": "Linear and Nonlinear Mixed Effects Models",
       "Authors@R": "c(person(\"José\", \"Pinheiro\", role = \"aut\", comment = \"S version\"), person(\"Douglas\", \"Bates\", role = \"aut\", comment = \"up to 2007\"), person(\"Saikat\", \"DebRoy\", role = \"ctb\", comment = \"up to 2002\"), person(\"Deepayan\", \"Sarkar\", role = \"ctb\", comment = \"up to 2005\"), person(\"EISPACK authors\", role = \"ctb\", comment = \"src/rs.f\"), person(\"Siem\", \"Heisterkamp\", role = \"ctb\", comment = \"Author fixed sigma\"), person(\"Bert\", \"Van Willigen\",role = \"ctb\", comment = \"Programmer fixed sigma\"), person(\"Johannes\", \"Ranke\", role = \"ctb\", comment = \"varConstProp()\"), person(\"R Core Team\", email = \"R-core@R-project.org\", role = c(\"aut\", \"cre\"), comment = c(ROR = \"02zz1nj61\")))",
@@ -5418,9 +5418,12 @@
     },
     "parallelly": {
       "Package": "parallelly",
-      "Version": "1.48.0",
+      "Version": "1.50.0",
       "Source": "Repository",
       "Title": "Enhancing the 'parallel' Package",
+      "Depends": [
+        "R (>= 3.3.0)"
+      ],
       "Imports": [
         "parallel",
         "tools",
@@ -5440,8 +5443,7 @@
       "BugReports": "https://github.com/futureverse/parallelly/issues",
       "Language": "en-US",
       "Encoding": "UTF-8",
-      "Config/roxygen2/version": "8.0.0",
-      "RoxygenNote": "7.3.3",
+      "Config/roxygen2/version": "8.1.1",
       "NeedsCompilation": "yes",
       "Author": "Henrik Bengtsson [aut, cre, cph] (ORCID: <https://orcid.org/0000-0002-7579-5165>), Mike Cheng [ctb]",
       "Maintainer": "Henrik Bengtsson <henrikb@braju.com>",
@@ -7044,37 +7046,49 @@
     },
     "shinyTree": {
       "Package": "shinyTree",
-      "Version": "0.3.1",
+      "Version": "1.0.0",
       "Source": "Repository",
       "Type": "Package",
-      "Title": "jsTree Bindings for Shiny",
-      "Date": "2023-7-21",
-      "Authors@R": "c( person(family=\"Trestle Technology, LLC\", role=\"aut\", email=\"cran@trestletechnology.net\"), person(\"Jeff\", \"Allen\", role=\"aut\", email=\"cran@trestletechnology.net\"), person(family=\"Institut de Radioprotection et de Sûreté Nucléaire\", role=c(\"cph\"), email = \"yann.richet@irsn.fr\"), person(\"Ivan\", \"Bozhanov\", role=c(\"ctb\", \"cph\"), comment = \"jsTree\"), person(family=\"The Dojo Foundation\", role=c(\"ctb\", \"cph\"), comment=\"require.js\"), person(family=\"jQuery Foundation, Inc.\", role=c(\"ctb\", \"cph\")), person(\"Mike\", \"Schaffer\", role=c(\"ctb\"), email=\"mschaff@gmail.com\"), person(\"Timm\", \"Danker\", role=c(\"ctb\"), email=\"tidafr@carina.uberspace.de\"), person(\"Michael\", \"Bell\", role=c(\"cre\"), email=\"bell_michael_a@lilly.com\"), person(\"Sebastian\", \"Gatscha\", role=c(\"ctb\"), email=\"kona1@gmx.at\"), person(\"Thorn\", \"Thaler\", role = c(\"ctb\"), email = \"thorn.thaler@thothal.at\"))",
+      "Title": "'jsTree' Bindings for 'Shiny'",
+      "Authors@R": "c( person(family=\"Trestle Technology, LLC\", role=\"aut\", email=\"cran@trestletechnology.net\"), person(\"Jeff\", \"Allen\", role=\"aut\", email=\"cran@trestletechnology.net\"), person(family=\"Institut de Radioprotection et de Sûreté Nucléaire\", role=c(\"cph\"), email = \"yann.richet@irsn.fr\"), person(\"Ivan\", \"Bozhanov\", role=c(\"ctb\", \"cph\"), comment = \"jsTree\"), person(family=\"Orange Hill Development\", role=c(\"ctb\", \"cph\"), comment = \"jsTree Bootstrap (proton) theme\"), person(family=\"Accademia di Belle Arti di Urbino\", role=\"cph\", comment = \"Titillium Web font\"), person(\"Mike\", \"Schaffer\", role=c(\"ctb\"), email=\"mschaff@gmail.com\"), person(\"Timm\", \"Danker\", role=c(\"ctb\"), email=\"tidafr@carina.uberspace.de\"), person(\"Michael\", \"Bell\", role=c(\"cre\"), email=\"bell_michael_a@lilly.com\"), person(\"Sebastian\", \"Gatscha\", role=c(\"ctb\"), email=\"kona1@gmx.at\"), person(\"Thorn\", \"Thaler\", role = c(\"ctb\"), email = \"thorn.thaler@thothal.at\"))",
       "Maintainer": "Michael Bell <bell_michael_a@lilly.com>",
-      "Description": "Exposes bindings to jsTree -- a JavaScript library that supports interactive trees -- to enable a rich, editable trees in Shiny.",
+      "Description": "Bindings to 'jsTree' <https://www.jstree.com>, a 'JavaScript' library for interactive trees, to enable rich, editable trees in 'Shiny' applications. Trees can be searched, checked, rearranged, styled and remembered across visits, loaded lazily for very large hierarchies, and built from data frames, 'data.tree' objects or ontologies.",
       "License": "MIT + file LICENSE",
+      "Copyright": "See the file COPYRIGHTS.",
       "Depends": [
-        "R (>= 2.15.1)",
-        "methods"
+        "R (>= 3.3.0)"
       ],
       "Imports": [
-        "shiny (>= 0.9.0)",
-        "htmlwidgets",
+        "shiny (>= 1.6.0)",
+        "htmltools",
         "jsonlite",
-        "stringr",
-        "promises"
+        "promises",
+        "stats",
+        "tools",
+        "utils"
       ],
       "Suggests": [
         "testthat",
-        "shinytest",
-        "data.tree"
+        "shinytest2",
+        "covr",
+        "data.tree",
+        "mockery",
+        "withr",
+        "later",
+        "rmarkdown",
+        "xml2",
+        "future",
+        "shinyjs",
+        "tidyr"
       ],
+      "URL": "https://github.com/shinyTree/shinyTree",
       "BugReports": "https://github.com/shinyTree/shinyTree/issues",
-      "RoxygenNote": "7.2.3",
+      "RoxygenNote": "7.3.3",
       "Encoding": "UTF-8",
+      "Language": "en-GB",
       "NeedsCompilation": "no",
-      "Author": "Trestle Technology, LLC [aut], Jeff Allen [aut], Institut de Radioprotection et de Sûreté Nucléaire [cph], Ivan Bozhanov [ctb, cph] (jsTree), The Dojo Foundation [ctb, cph] (require.js), jQuery Foundation, Inc. [ctb, cph], Mike Schaffer [ctb], Timm Danker [ctb], Michael Bell [cre], Sebastian Gatscha [ctb], Thorn Thaler [ctb]",
-      "Repository": "RSPM"
+      "Author": "Trestle Technology, LLC [aut], Jeff Allen [aut], Institut de Radioprotection et de Sûreté Nucléaire [cph], Ivan Bozhanov [ctb, cph] (jsTree), Orange Hill Development [ctb, cph] (jsTree Bootstrap (proton) theme), Accademia di Belle Arti di Urbino [cph] (Titillium Web font), Mike Schaffer [ctb], Timm Danker [ctb], Michael Bell [cre], Sebastian Gatscha [ctb], Thorn Thaler [ctb]",
+      "Repository": "CRAN"
     },
     "shinyWidgets": {
       "Package": "shinyWidgets",
