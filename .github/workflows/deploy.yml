@@ -174,7 +174,7 @@ jobs:
           released_packages <- c(
             "pharmaverse/teal", "pharmaverse/teal.data", "pharmaverse/teal.code",
             "pharmaverse/teal.slice", "pharmaverse/teal.logger", "pharmaverse/teal.widgets",
-            "pharmaverse/teal.reporter", "insightsengineering/teal.transform", "pharmaverse/teal.picks",
+            "pharmaverse/teal.reporter", "pharmaverse/teal.transform", "pharmaverse/teal.picks",
             "insightsengineering/teal.modules.general", "insightsengineering/teal.modules.clinical",
             "pharmaverse/formatters", "openpharma/mmrm", "pharmaverse/rlistings",
             "pharmaverse/rtables", "insightsengineering/rtables.officer", "pharmaverse/tern",
