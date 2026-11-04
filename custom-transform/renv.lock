@@ -4377,6 +4377,7 @@
       ],
       "Suggests": [
         "DT",
+        "grid",
         "knitr (>= 1.42)",
         "lattice (>= 0.18-4)",
         "magrittr (>= 1.5)",
@@ -4404,7 +4405,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.widgets",
       "RemoteRef": "main",
-      "RemoteSha": "0c5ce03ab960600b6c6984ac9135f3b53c523aec"
+      "RemoteSha": "7ad6766ee5223440b3dee8637066e84837d8f3a4"
     },
     "textshaping": {
       "Package": "textshaping",
