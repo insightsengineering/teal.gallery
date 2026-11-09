@@ -1062,7 +1062,7 @@
     },
     "flextable": {
       "Package": "flextable",
-      "Version": "0.10.3",
+      "Version": "0.10.4",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Functions for Tabular Reporting",
@@ -1073,13 +1073,13 @@
       "BugReports": "https://github.com/davidgohel/flextable/issues",
       "Imports": [
         "data.table (>= 1.13.0)",
-        "gdtools (>= 0.5.0)",
+        "gdtools (>= 0.5.3)",
         "graphics",
         "grDevices",
         "grid",
         "htmltools",
         "knitr",
-        "officer (>= 0.7.5)",
+        "officer (>= 0.7.8)",
         "ragg",
         "rlang",
         "rmarkdown (>= 2.0)",
@@ -1096,7 +1096,7 @@
         "cluster",
         "commonmark",
         "doconv (>= 0.3.0)",
-        "equatags",
+        "equatags (>= 0.3.0)",
         "formatters",
         "ggplot2",
         "gtable",
@@ -1119,13 +1119,13 @@
         "xtable"
       ],
       "VignetteBuilder": "knitr",
-      "Config/roxygen2/version": "8.1.0",
+      "Config/roxygen2/version": "8.1.1",
       "Config/testthat/edition": "3",
       "Encoding": "UTF-8",
       "NeedsCompilation": "no",
       "Author": "David Gohel [aut, cre], ArData [cph], Clementine Jager [ctb], Eli Daniels [ctb], Panagiotis Skintzos [aut], Quentin Fazilleau [ctb], Maxim Nazarov [ctb], Titouan Robert [ctb], Michael Barrowman [ctb], Atsushi Yasumoto [ctb], Paul Julian [ctb], Sean Browning [ctb], Rémi Thériault [ctb] (ORCID: <https://orcid.org/0000-0003-4315-6788>), Samuel Jobert [ctb], Keith Newman [ctb]",
       "Maintainer": "David Gohel <david.gohel@ardata.fr>",
-      "Repository": "RSPM"
+      "Repository": "CRAN"
     },
     "fontBitstreamVera": {
       "Package": "fontBitstreamVera",
