@@ -2503,7 +2503,7 @@
     },
     "openssl": {
       "Package": "openssl",
-      "Version": "2.5.0",
+      "Version": "2.6.0",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Toolkit for Encryption, Signatures and Certificates Based on OpenSSL",
@@ -3109,9 +3109,9 @@
         "withr (>= 3.0.2)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
-      "Config/Needs/verdepcheck": "insightsengineering/formatters, tidyverse/tibble, mllg/checkmate, tidyverse/dplyr, yihui/knitr, r-lib/lifecycle, rstudio/rmarkdown, gagolews/stringi, r-lib/testthat, r-lib/withr",
+      "Config/Needs/verdepcheck": "pharmaverse/formatters, tidyverse/tibble, mllg/checkmate, tidyverse/dplyr, yihui/knitr, r-lib/lifecycle, rstudio/rmarkdown, gagolews/stringi, r-lib/testthat, r-lib/withr",
       "Config/Needs/website": "insightsengineering/nesttemplate",
-      "Config/roxygen2/version": "8.0.0",
+      "Config/roxygen2/version": "8.1.1",
       "Config/testthat/edition": "3",
       "Encoding": "UTF-8",
       "Language": "en-US",
@@ -3123,7 +3123,7 @@
       "RemoteUsername": "pharmaverse",
       "RemoteRepo": "rlistings",
       "RemoteRef": "main",
-      "RemoteSha": "26f3a7dc4f6220beed0abff68543d5746ee8b911"
+      "RemoteSha": "5c2fe08b664e12dffb2d18c40150d9fd90f9f017"
     },
     "rmarkdown": {
       "Package": "rmarkdown",
@@ -4076,7 +4076,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.code",
       "RemoteRef": "main",
-      "RemoteSha": "aa818cdc99ff137b7aa59a1e18ba4c483fee8e2c"
+      "RemoteSha": "91831ce6ac4f7e06e4278f0ceddd4f82bc57bc5f"
     },
     "teal.data": {
       "Package": "teal.data",
