@@ -3816,12 +3816,12 @@
     },
     "goshawk": {
       "Package": "goshawk",
-      "Version": "0.1.19.9002",
+      "Version": "0.1.20.9000",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Longitudinal Visualization Functions",
-      "Date": "2026-11-16",
-      "Authors@R": "c( person(\"Nick\", \"Paszty\", , \"nick.paszty@gene.com\", role = c(\"aut\", \"cre\")), person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = \"aut\"), person(\"Ondrej\", \"Slama\", , \"ondrej.slama@roche.com\", role = \"aut\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Wenyi\", \"Liu\", , \"liu.wenyi@roche.com\", role = \"aut\"), person(\"Jeffrey\", \"Tomlinson\", , \"tomlinson.jeffrey@roche.com\", role = \"aut\"), person(\"Bali\", \"Toth\", , \"toth.balazs@gene.com\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
+      "Date": "2026-11-25",
+      "Authors@R": "c( person(\"Lluís\", \"Revilla Sancho\", , \"lluis.revilla_sancho@roche.com\", role = \"cre\", comment = c(ORCID = \"0000-0001-9747-2570\")), person(\"Nick\", \"Paszty\", , \"nick.paszty@gene.com\", role = \"aut\"), person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = \"aut\"), person(\"Ondrej\", \"Slama\", , \"ondrej.slama@roche.com\", role = \"aut\"), person(\"Adrian\", \"Waddell\", , \"adrian.waddell@gene.com\", role = \"aut\"), person(\"Wenyi\", \"Liu\", , \"liu.wenyi@roche.com\", role = \"aut\"), person(\"Jeffrey\", \"Tomlinson\", , \"tomlinson.jeffrey@roche.com\", role = \"aut\"), person(\"Bali\", \"Toth\", , \"toth.balazs@gene.com\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Konrad\", \"Pagacz\", role = \"aut\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Functions that plot and summarize biomarkers/labs of interest. Visualizations include: box plot, correlation plot, density distribution, line plot and spaghetti plot.  Data are expected in ADaM structure. Requires analysis subject level (ADSL) and analysis laboratory (ADLB) data sets. Beyond core variables, Limit of Quantification flag variable (LOQFL) is expected with levels 'Y', 'N' or NA.",
       "License": "Apache License 2.0 | file LICENSE",
       "URL": "https://insightsengineering.github.io/goshawk/, https://github.com/insightsengineering/goshawk/",
@@ -3860,14 +3860,14 @@
       "Language": "en-US",
       "LazyData": "true",
       "Roxygen": "list(markdown = TRUE)",
-      "Author": "Nick Paszty [aut, cre], Dawid Kaledkowski [aut], Ondrej Slama [aut], Adrian Waddell [aut], Wenyi Liu [aut], Jeffrey Tomlinson [aut], Bali Toth [aut], Junlue Zhao [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], F. Hoffmann-La Roche AG [cph, fnd]",
-      "Maintainer": "Nick Paszty <nick.paszty@gene.com>",
+      "Author": "Lluís Revilla Sancho [cre] (ORCID: <https://orcid.org/0000-0001-9747-2570>), Nick Paszty [aut], Dawid Kaledkowski [aut], Ondrej Slama [aut], Adrian Waddell [aut], Wenyi Liu [aut], Jeffrey Tomlinson [aut], Bali Toth [aut], Junlue Zhao [aut], Maciej Nasinski [aut], Konrad Pagacz [aut], F. Hoffmann-La Roche AG [cph, fnd]",
+      "Maintainer": "Lluís Revilla Sancho <lluis.revilla_sancho@roche.com>",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "0574c190fc1f04f0eeb843768ec6b00356f82638"
+      "RemoteSha": "f19bf1a8a1903543d6ddee48498b72e585b33b69"
     },
     "gridExtra": {
       "Package": "gridExtra",
@@ -8233,7 +8233,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "3ded5a40657e3311c08cf91b0670999fb6dd9524"
+      "RemoteSha": "5fafeb04d593227b27d73dcc3c427efd3eb36588"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -9457,7 +9457,7 @@
     },
     "tinytex": {
       "Package": "tinytex",
-      "Version": "0.61",
+      "Version": "0.62",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Helper Functions to Install and Maintain TeX Live, and Compile LaTeX Documents",
