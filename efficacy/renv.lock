@@ -7751,7 +7751,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "3ded5a40657e3311c08cf91b0670999fb6dd9524"
+      "RemoteSha": "5fafeb04d593227b27d73dcc3c427efd3eb36588"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -8902,7 +8902,7 @@
     },
     "tinytex": {
       "Package": "tinytex",
-      "Version": "0.61",
+      "Version": "0.62",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Helper Functions to Install and Maintain TeX Live, and Compile LaTeX Documents",
