@@ -3449,7 +3449,7 @@
     },
     "selectr": {
       "Package": "selectr",
-      "Version": "0.8-0",
+      "Version": "0.8-1",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Translate CSS Selectors to XPath Expressions",
