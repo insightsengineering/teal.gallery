@@ -3462,7 +3462,7 @@
     },
     "selectr": {
       "Package": "selectr",
-      "Version": "0.8-0",
+      "Version": "0.8-1",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Translate CSS Selectors to XPath Expressions",
@@ -3485,7 +3485,7 @@
       "NeedsCompilation": "no",
       "Author": "Simon Potter [aut, trl, cre], Simon Sapin [aut], Ian Bicking [aut]",
       "Maintainer": "Simon Potter <simon@sjp.co.nz>",
-      "Repository": "RSPM"
+      "Repository": "CRAN"
     },
     "shiny": {
       "Package": "shiny",
