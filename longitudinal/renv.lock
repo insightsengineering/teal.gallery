@@ -8233,7 +8233,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal",
       "RemoteRef": "main",
-      "RemoteSha": "5fafeb04d593227b27d73dcc3c427efd3eb36588"
+      "RemoteSha": "7acc832ee285c188e33248b4645767e7ff436c00"
     },
     "teal.code": {
       "Package": "teal.code",
@@ -8338,11 +8338,11 @@
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
-      "Version": "0.6.1.9001",
+      "Version": "0.6.1.9002",
       "Source": "GitHub",
       "Type": "Package",
       "Title": "Longitudinal Visualization `teal` Modules",
-      "Date": "2026-10-19",
+      "Date": "2026-11-27",
       "Authors@R": "c( person(\"Dony\", \"Unardi\", , \"unardid@gene.com\", role = c(\"aut\", \"cre\")), person(\"Nick\", \"Paszty\", , \"nick.paszty@gene.com\", role = \"aut\"), person(\"Dawid\", \"Kaledkowski\", , \"dawid.kaledkowski@roche.com\", role = \"aut\"), person(\"Mahmoud\", \"Hallal\", , \"mahmoud.hallal@roche.com\", role = \"aut\"), person(\"Pawel\", \"Rucki\", , \"pawel.rucki@roche.com\", role = \"aut\"), person(\"Wenyi\", \"Liu\", , \"liu.wenyi@roche.com\", role = \"aut\"), person(\"Jeffrey\", \"Tomlinson\", , \"tomlinson.jeffrey@roche.com\", role = \"aut\"), person(\"Bali\", \"Toth\", , \"toth.balazs@gene.com\", role = \"aut\"), person(\"Junlue\", \"Zhao\", role = \"aut\"), person(\"Maciej\", \"Nasinski\", role = \"aut\"), person(\"Maximilian\", \"Mordig\", role = \"ctb\"), person(\"F. Hoffmann-La Roche AG\", role = c(\"cph\", \"fnd\")) )",
       "Description": "Modules that produce web interfaces through which longitudinal visualizations can be dynamically modified and displayed. These included box plot, correlation plot, density distribution plot, line plot, scatter plot and spaghetti plot with accompanying summary. Data are expected in ADaM structure. Requires analysis subject level (ADSL) and analysis laboratory (ADLB) data sets. Beyond core variables, Limit of Quantification flag variable (LOQFL) is expected with levels 'Y', 'N' or NA.",
       "License": "Apache License 2.0 | file LICENSE",
@@ -8391,9 +8391,9 @@
         "withr (>= 3.0.0)"
       ],
       "VignetteBuilder": "knitr, rmarkdown",
-      "Config/Needs/verdepcheck": "insightsengineering/goshawk, rstudio/shiny, insightsengineering/teal, insightsengineering/teal.transform, rstudio/bslib, mllg/checkmate, daattali/colourpicker, tidyverse/dplyr, rstudio/DT, tidyverse/ggplot2, r-lib/rlang, daattali/shinyjs, rstudio/shinyvalidate, insightsengineering/teal.code, insightsengineering/teal.logger, insightsengineering/teal.reporter, insightsengineering/teal.widgets, yihui/knitr, insightsengineering/nestcolor, rstudio/rmarkdown, tidyverse/rvest, rstudio/shinytest2, tidyverse/stringr, insightsengineering/teal.data, insightsengineering/tern, r-lib/testthat",
+      "Config/Needs/verdepcheck": "insightsengineering/goshawk, rstudio/shiny, pharmaverse/teal, pharmaverse/teal.transform, rstudio/bslib, mllg/checkmate, daattali/colourpicker, tidyverse/dplyr, rstudio/DT, tidyverse/ggplot2, r-lib/rlang, daattali/shinyjs, rstudio/shinyvalidate, pharmaverse/teal.code, pharmaverse/teal.logger, pharmaverse/teal.reporter, pharmaverse/teal.widgets, yihui/knitr, insightsengineering/nestcolor, rstudio/rmarkdown, tidyverse/rvest, rstudio/shinytest2, tidyverse/stringr, pharmaverse/teal.data, pharmaverse/tern, r-lib/testthat",
       "Config/Needs/website": "insightsengineering/nesttemplate",
-      "Config/roxygen2/version": "8.1.0",
+      "Config/roxygen2/version": "8.1.1",
       "Config/testthat/edition": "3",
       "Encoding": "UTF-8",
       "Language": "en-US",
@@ -8407,7 +8407,7 @@
       "RemoteUsername": "insightsengineering",
       "RemoteRepo": "teal.goshawk",
       "RemoteRef": "main",
-      "RemoteSha": "15aac041180ed046615acdc718653f4ee7a13a69"
+      "RemoteSha": "136698fa980e2f9d8f0d9fb5664c5cee98499945"
     },
     "teal.logger": {
       "Package": "teal.logger",
